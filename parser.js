@@ -160,13 +160,13 @@ async function getDataJson(fileName, dir = 'custom', nullable = true) {
 }
 
 // Helper: 輸出Json檔案
-async function exportJson(data, fileName, postfix = '', dir = '') {
-    const filePath = path.join(DATA_PATH, dir, `${fileName}${postfix}.json`);
+async function exportJson(data, fileName, dir = '') {
+    const filePath = path.join(DATA_PATH, dir, `${fileName}.json`);
     try {
         await writeFile(filePath, JSON.stringify(data, null, 2));
-        writeLog('info', `"${fileName}${postfix}" exported successfully!`);
+        writeLog('info', `"${fileName}" exported successfully!`);
     } catch (err) {
-        writeLog('error', `"${fileName}${postfix}" exported failed.`, err.message);
+        writeLog('error', `"${fileName}" exported failed.`, err.message);
     }
 }
 
@@ -3791,7 +3791,7 @@ export async function buildBackRelation() {
 
     // 更新json檔案
     const exportCats = ['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'CHARACTER', 'LIBRARY', 'BOOK', 'EQUIP', 'TIME', 'MISSION', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
-    await Promise.all(exportCats.map((category => exportJson(CACHE[category], category.toLowerCase()))));
+    await Promise.all(exportCats.map((category => exportJson(CACHE[category], category.toLowerCase(), 'public'))));
 }
 
 // 收尾整理在地化用詞表
@@ -3961,9 +3961,9 @@ export async function parseLocalization() {
 
     // 並行輸出結果
     await Promise.all([
-        exportJson({ "zh-tw": zhtw }, 'zh-tw'),
-        exportJson({ "zh-cn": zhcn }, 'zh-cn'),
-        exportJson({ "kr": kr }, 'kr')
+        exportJson({ "zh-tw": zhtw }, 'zh-tw', 'public'),
+        exportJson({ "zh-cn": zhcn }, 'zh-cn', 'public'),
+        exportJson({ "kr": kr }, 'kr', 'public')
     ]);
 }
 

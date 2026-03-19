@@ -137,4 +137,5 @@ dist
 
 # Critical export data
 Data/*.json
+Data/public
 Game/
