@@ -3,7 +3,7 @@ import { readdir } from 'fs/promises';
 import { readFile } from 'fs/promises';
 import luaparse from 'luaparse';
 import path from 'path';
-import { createConverter } from "opencc-js";
+import * as OpenCC from "opencc-js";
 
 // 路徑常數
 const GAME_PATH = './Game';
@@ -3801,7 +3801,7 @@ export async function parseLocalization() {
     const regexHan = /\p{Script=Han}/u;
     const regexEnd = /\/_$/;
     const regexQuote = /(?<!\{)\{(\d+)\}(?!\})/g;
-    const converter = await createConverter({ from: 'twp', to: 'cn' });
+    const converter = OpenCC.Converter({ from: 'twp', to: 'cn' });
 
     // 讀取來源
     const [battleName, combatName, missionCustom, missionName, scriptCustom, scriptFree, scriptName, groupCustom, option, flag, term, termCustom] = await Promise.all([
