@@ -160,10 +160,10 @@ async function getDataJson(fileName, dir = 'custom', nullable = true) {
 }
 
 // Helper: 輸出Json檔案
-async function exportJson(data, fileName, dir = '') {
+async function exportJson(data, fileName, dir = '', minify = false) {
     const filePath = path.join(DATA_PATH, dir, `${fileName}.json`);
     try {
-        await writeFile(filePath, JSON.stringify(data, null, 2));
+        await writeFile(filePath, JSON.stringify(data, null, minify ? 0 : 2));
         writeLog('info', `"${fileName}" exported successfully!`);
     } catch (err) {
         writeLog('error', `"${fileName}" exported failed.`, err.message);
@@ -1230,7 +1230,7 @@ export async function parseBook(doExport = true) {
                     }
 
                     if (rule.length > 0) rules.push(rule.join('{@Custom.Or}'));
-            else writeLog('warn', `1 rule of Condition "${conditionName}" skipped.`);
+                    else writeLog('warn', `1 rule of Condition "${conditionName}" skipped.`);
                 }
 
                 // 無條件
@@ -3791,7 +3791,7 @@ export async function buildBackRelation() {
 
     // 更新json檔案
     const exportCats = ['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'CHARACTER', 'LIBRARY', 'BOOK', 'EQUIP', 'TIME', 'MISSION', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
-    await Promise.all(exportCats.map((category => exportJson(CACHE[category], category.toLowerCase(), 'public'))));
+    await Promise.all(exportCats.map((category => exportJson(CACHE[category], category.toLowerCase(), 'public', true))));
 }
 
 // 收尾整理在地化用詞表
@@ -3961,9 +3961,9 @@ export async function parseLocalization() {
 
     // 並行輸出結果
     await Promise.all([
-        exportJson({ "zh-tw": zhtw }, 'zh-tw', 'public'),
-        exportJson({ "zh-cn": zhcn }, 'zh-cn', 'public'),
-        exportJson({ "kr": kr }, 'kr', 'public')
+        exportJson({ "zh-tw": zhtw }, 'zh-tw', 'public', true),
+        exportJson({ "zh-cn": zhcn }, 'zh-cn', 'public', true),
+        exportJson({ "kr": kr }, 'kr', 'public', true)
     ]);
 }
 
