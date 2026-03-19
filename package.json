@@ -21,7 +21,19 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "node index.js test",
+    "all": "node index.js all",
+    "switch": "node index.js switch",
+    "condition": "node index.js condition",
+    "dice": "node index.js dice",
+    "flag": "node index.js flag",
+    "position": "node index.js position",
+    "mission": "node index.js mission",
+    "free": "node index.js free",
+    "combat": "node index.js combat",
+    "battle": "node index.js battle",
+    "term": "node index.js term",
+    "script": "node index.js script"
   },
   "dependencies": {
     "luaparse": "^0.3.1",

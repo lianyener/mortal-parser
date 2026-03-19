@@ -1,0 +1,362 @@
+{
+    "C210": {
+        "name": [],
+        "support": "嶺南大俠"
+    },
+    "C008_1": {
+        "name": [],
+        "support": "二煞"
+    },
+    "C007": {
+        "name": [],
+        "support": "千面人魔"
+    },
+    "C502": {
+        "name": [],
+        "support": "南宮家丁"
+    },
+    "C901": {
+        "name": [],
+        "support": "書生"
+    },
+    "C160": {
+        "name": [],
+        "support": "唐門女弟子"
+    },
+    "C919": {
+        "name": [],
+        "support": "鬼卒"
+    },
+    "C510": {
+        "name": [],
+        "support": "丐幫弟子"
+    },
+    "C928": {
+        "name": [],
+        "support": "鳥說髒話"
+    },
+    "C173": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C013": {
+        "name": [],
+        "support": "唐門女弟子"
+    },
+    "C512": {
+        "name": [],
+        "support": "路人俠"
+    },
+    "C514": {
+        "name": [],
+        "support": "青城弟子"
+    },
+    "C513": {
+        "name": [],
+        "support": "飛天弟子"
+    },
+    "C019": {
+        "name": [],
+        "support": "唐門女弟子"
+    },
+    "C151": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C001": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C020": {
+        "name": [],
+        "support": "江湖拳師"
+    },
+    "C523": {
+        "name": [],
+        "support": "錦香弟子"
+    },
+    "C504": {
+        "name": [],
+        "support": "飛天弟子"
+    },
+    "C508": {
+        "name": [],
+        "support": "鐵拳弟子"
+    },
+    "C507": {
+        "name": [],
+        "support": "玄功弟子"
+    },
+    "C518": {
+        "name": [],
+        "support": "點蒼弟子"
+    },
+    "C914": {
+        "name": [],
+        "support": "丐幫長老"
+    },
+    "C021": {
+        "name": [ "big_shock1" ],
+        "support": "許大鯨"
+    },
+    "C015": {
+        "name": [],
+        "support": "唐門女弟子"
+    },
+    "C554": {
+        "name": [ "special203", "special202" ],
+        "support": "點蒼雙尊"
+    },
+    "C251": {
+        "name": [],
+        "support": "滄幫弟子"
+    },
+    "C017_1": {
+        "name": [],
+        "support": "官差"
+    },
+    "C400": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C501": {
+        "name": [],
+        "support": "海盜"
+    },
+    "C211": {
+        "name": [],
+        "support": "襄陽大俠"
+    },
+    "C201": {
+        "name": [],
+        "support": "青城弟子"
+    },
+    "C008_2": {
+        "name": [],
+        "support": "三煞"
+    },
+    "C171": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C155": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C152": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C221": {
+        "name": [],
+        "support": "點蒼弟子"
+    },
+    "C002": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C505": {
+        "name": [],
+        "support": "奪魄弟子"
+    },
+    "C162": {
+        "name": [],
+        "support": "唐門女弟子"
+    },
+    "C251_2": {
+        "name": [],
+        "support": "滄幫弟子"
+    },
+    "C017_2": {
+        "name": [],
+        "support": "官差"
+    },
+    "C202": {
+        "name": [],
+        "support": "點蒼弟子"
+    },
+    "C918": {
+        "name": [],
+        "support": "蛇"
+    },
+    "C153": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C231": {
+        "name": [],
+        "support": "南宮家丁"
+    },
+    "C003": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C163": {
+        "name": [],
+        "support": "唐門女弟子"
+    },
+    "C251_3": {
+        "name": [],
+        "support": "滄幫弟子"
+    },
+    "C017_3": {
+        "name": [],
+        "support": "官差"
+    },
+    "C203": {
+        "name": [],
+        "support": "峨嵋弟子"
+    },
+    "C923": {
+        "name": [],
+        "support": "鬼卒"
+    },
+    "C926_1": {
+        "name": [],
+        "support": "青城弟子"
+    },
+    "C170": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C212": {
+        "name": [],
+        "support": "丐幫弟子"
+    },
+    "C150": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C916": {
+        "name": [],
+        "support": "狗"
+    },
+    "C911": {
+        "name": [ "special2" ],
+        "support": "黑衣人"
+    },
+    "C251_4": {
+        "name": [],
+        "support": "滄幫弟子"
+    },
+    "C004": {
+        "name": [ "big_shock1" ],
+        "support": "唐大鯨"
+    },
+    "C905": {
+        "name": [ "sister1", "girl2" ],
+        "support": "唐默鈴和葉雲裳"
+    },
+    "C204": {
+        "name": [],
+        "support": "丐幫弟子"
+    },
+    "C506": {
+        "name": [ "special999" ],
+        "support": "？？？"
+    },
+    "C920": {
+        "name": [],
+        "support": "山賊"
+    },
+    "C926_2": {
+        "name": [],
+        "support": "青城弟子"
+    },
+    "C172": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C542": {
+        "name": [],
+        "support": "嵩山弟子"
+    },
+    "C161": {
+        "name": [],
+        "support": "唐門女弟子"
+    },
+    "C205": {
+        "name": [],
+        "support": "飛石幫弟子"
+    },
+    "C241": {
+        "name": [],
+        "support": "全真弟子眾"
+    },
+    "C902": {
+        "name": [],
+        "support": "全真弟子"
+    },
+    "C912": {
+        "name": [ "special2" ],
+        "support": "黑衣人"
+    },
+    "C154": {
+        "name": [],
+        "support": "唐門弟子"
+    },
+    "C922_1": {
+        "name": [],
+        "support": "峨嵋弟子"
+    },
+    "C921_1": {
+        "name": [],
+        "support": "鐵拳弟子"
+    },
+    "C922_2": {
+        "name": [],
+        "support": "峨嵋弟子"
+    },
+    "C174_2": {
+        "name": [],
+        "support": "唐門女弟子"
+    },
+    "C921_2": {
+        "name": [],
+        "support": "鐵拳弟子"
+    },
+    "C922_3": {
+        "name": [],
+        "support": "峨嵋弟子"
+    },
+    "C174_1": {
+        "name": [],
+        "support": "唐門女弟子"
+    },
+    "C921_3": {
+        "name": [],
+        "support": "鐵拳弟子"
+    },
+    "C922_4": {
+        "name": [],
+        "support": "峨嵋弟子"
+    },
+    "C023": {
+        "name": [ "dio1" ],
+        "support": "唐嬌嬌"
+    },
+    "C004_2": {
+        "name": [ "big_shock1" ],
+        "support": "唐大鯨"
+    },
+    "C922_5": {
+        "name": [],
+        "support": "峨嵋弟子"
+    },
+    "C175_1": {
+        "name": [],
+        "support": "唐門女弟子"
+    },
+    "C175_2": {
+        "name": [],
+        "support": "唐門女弟子"
+    },
+    "C910": {
+        "name": [],
+        "support": "木仙姑"
+    },
+    "C543": {
+        "name": [],
+        "support": "嵩山弟子"
+    }
+}

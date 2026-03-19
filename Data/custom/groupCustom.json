@@ -1,0 +1,446 @@
+{
+    "好感度_劉顎_趙逵_車軒轅_王二壯": {
+        "rel": {
+            "Character": [
+                "special1",
+                "special403",
+                "special409",
+                "special401"
+            ]
+        },
+        "name": "{@Character.special1}+{@Character.special403}+{@Character.special409}+{@Character.special401}",
+        "type": "Relationship"
+    },
+    "好感度_劉顎_趙逵_車軒轅_王二壯_最高": {
+        "rel": {
+            "Character": [
+                "special1",
+                "special403",
+                "special409",
+                "special401"
+            ]
+        },
+        "name": "{@Custom.Max}({@Character.special1},{@Character.special403},{@Character.special409},{@Character.special401})",
+        "type": "Relationship"
+    },
+    "好感度_李富貴_樊嘯天": {
+        "rel": {
+            "Character": [
+                "special809",
+                "special4"
+            ]
+        },
+        "name": "{@Character.special809}+{@Character.special4}",
+        "type": "Relationship"
+    },
+    "好感度_崆峒四姝": {
+        "rel": {
+            "Character": [
+                "girl5",
+                "girl6",
+                "girl7",
+                "girl8"
+            ]
+        },
+        "name": "{@Custom.Max}({@Character.girl5},{@Character.girl6},{@Character.girl7},{@Character.girl8})",
+        "type": "Relationship"
+    },
+    "好感度_最高唐門師兄": {
+        "rel": {
+            "Character": [
+                "brother1",
+                "brother2",
+                "brother3",
+                "brother4"
+            ]
+        },
+        "name": "{@Custom.Max}({@Character.brother1},{@Character.brother2},{@Character.brother3},{@Character.brother4})",
+        "type": "Relationship"
+    },
+    "技能_任何音波功": {
+        "rel": {
+            "Talent": [
+                "1105",
+                "1107"
+            ]
+        },
+        "name": "{@System.Talent}❮{@PlayerTalent.Name.1105}❯+{@System.Talent}❮{@PlayerTalent.Name.1107}❯",
+        "type": "Talent"
+    },
+    "技能_佛學_道學": {
+        "rel": {
+            "Talent": [
+                "9502",
+                "9501"
+            ]
+        },
+        "name": "{@System.Talent}❮{@PlayerTalent.Name.9502}❯+{@System.Talent}❮{@PlayerTalent.Name.9501}❯",
+        "type": "Talent"
+    },
+    "技能_戰術x44": {
+        "rel": {
+            "Talent": [
+                "9100"
+            ]
+        },
+        "name": "{@System.Talent}❮{@PlayerTalent.Name.9100}❯×44",
+        "type": "Talent"
+    },
+    "技能_戰術x10": {
+        "rel": {
+            "Talent": [
+                "9100"
+            ]
+        },
+        "name": "{@System.Talent}❮{@PlayerTalent.Name.9100}❯×44",
+        "type": "Talent"
+    },
+    "數值_修養x2": {
+        "rel": {},
+        "name": "{@PlayerStat.training}×2",
+        "type": "PlayerStat"
+    },
+    "數值_命運x20": {
+        "rel": {},
+        "name": "{@PlayerStat.fate}×20",
+        "type": "PlayerStat"
+    },
+    "數值_南宮世家_錦香宮_上官世家": {
+        "rel": {
+            "Flag": [
+                "H01001",
+                "H01002",
+                "H01003"
+            ]
+        },
+        "name": "{@Flag.H01001}+{@Flag.H01002}+{@Flag.H01003}",
+        "type": "Relationship"
+    },
+    "數值_學問_廚藝": {
+        "rel": {},
+        "name": "{@PlayerStat.literacy}+{@PlayerStat.cook}",
+        "type": "PlayerStat"
+    },
+    "數值_學問x2": {
+        "rel": {},
+        "name": "{@PlayerStat.literacy}×2",
+        "type": "PlayerStat"
+    },
+    "數值_學問+嘴力": {
+        "rel": {},
+        "name": "{@PlayerStat.literacy}+{@PlayerStat.talking}",
+        "type": "PlayerStat"
+    },
+    "數值_抗毒_抗麻": {
+        "rel": {},
+        "name": "{@PlayerStat.paralysis-resistance}+{@PlayerStat.poison-resistance}",
+        "type": "PlayerStat",
+        "text": "{@PlayerStat.paralysis-resistance}+{@PlayerStat.poison-resistance}"
+    },
+    "數值_輕功_暗器": {
+        "rel": {},
+        "name": "{@PlayerStat.dexterity}+{@PlayerStat.m-projectile}",
+        "type": "PlayerStat"
+    },
+    "數值_棋力": {
+        "rel": {
+            "Talent": [
+                "9100"
+            ]
+        },
+        "name": "{@PlayerStat.mental}+{@PlayerStat.literacy}×2+{@PlayerStat.training}×2+{@System.Talent}❮{@PlayerTalent.Name.9100}❯×44",
+        "type": "PlayerStat"
+    },
+    "旗標_H01001_x10": {
+        "rel": {
+            "Flag": [
+                "H01001"
+            ]
+        },
+        "name": "{@Flag.H01001}×10",
+        "type": "Relationship"
+    },
+    "旗標_H02001_x10": {
+        "rel": {
+            "Flag": [
+                "H02001"
+            ]
+        },
+        "name": "{@Flag.H02001}×10",
+        "type": "Relationship"
+    },
+    "旗標_交戰門派_無飛石幫": {
+        "rel": {
+            "Flag": [
+                "M40002",
+                "M40003",
+                "M40004",
+                "M40035"
+            ]
+        },
+        "name": "{@Flag.M40002}+{@Flag.M40003}+{@Flag.M40004}+{@Flag.M40035}",
+        "type": "GroupFlag",
+        "id": "WarExcludeStone",
+        "text": "飛石幫以外交戰門派數"
+    },
+    "旗標_攻略人數_三個高手_排除龍湘": {
+        "rel": {
+            "Flag": [
+                "G11000",
+                "G11001",
+                "G11004",
+                "G11006"
+            ]
+        },
+        "name": "{@Flag.G11000}+{@Flag.G11001}+{@Flag.G11004}+{@Flag.G11006}",
+        "type": "GroupFlag",
+        "id": "BondGirl0346",
+        "text": "鈴螢梅竹結緣數"
+    },
+    "旗標_交戰門派": {
+        "rel": {
+            "Flag": [
+                "M40001",
+                "M40002",
+                "M40003",
+                "M40004",
+                "M40035"
+            ]
+        },
+        "name": "{@Flag.M40001}+{@Flag.M40002}+{@Flag.M40003}+{@Flag.M40004}+{@Flag.M40035}",
+        "type": "GroupFlag",
+        "id": "War",
+        "text": "交戰門派數"
+    },
+    "旗標_攻略人數_排除小師妹": {
+        "rel": {
+            "Flag": [
+                "G11001",
+                "G11002",
+                "G11004",
+                "G11005",
+                "G11006",
+                "G11007",
+                "G11008"
+            ]
+        },
+        "name": "{@Flag.G11001}+{@Flag.G11002}+{@Flag.G11004}+{@Flag.G11005}+{@Flag.G11006}+{@Flag.G11007}+{@Flag.G11008}",
+        "type": "GroupFlag",
+        "id": "BondExclude0",
+        "text": "唐默鈴以外結緣數"
+    },
+    "旗標_攻略人數_梅竹菊": {
+        "rel": {
+            "Flag": [
+                "G11004",
+                "G11006",
+                "G11007"
+            ]
+        },
+        "name": "{@Flag.G11004}+{@Flag.G11006}+{@Flag.G11007}",
+        "type": "GroupFlag",
+        "id": "BondGirl367",
+        "text": "梅竹菊結緣數"
+    },
+    "旗標_攻略人數_排除梅竹菊": {
+        "rel": {
+            "Flag": [
+                "G11000",
+                "G11001",
+                "G11002",
+                "G11003",
+                "G11005"
+            ]
+        },
+        "name": "{@Flag.G11000}+{@Flag.G11001}+{@Flag.G11002}+{@Flag.G11003}+{@Flag.G11005}",
+        "type": "GroupFlag",
+        "id": "BondExclude367",
+        "text": "梅竹菊以外結緣數"
+    },
+    "旗標_六道總點數": {
+        "rel": {
+            "Flag": [
+                "H03001",
+                "H03002",
+                "H03003",
+                "H03004",
+                "H03005",
+                "H03006"
+            ]
+        },
+        "name": "{@Flag.H03001}+{@Flag.H03002}+{@Flag.H03003}+{@Flag.H03004}+{@Flag.H03005}+{@Flag.H03006}",
+        "type": "Relationship",
+        "id": "SixTaoism",
+        "text": "六道"
+    },
+    "旗標_攻略人數": {
+        "rel": {
+            "Flag": [
+                "G11000",
+                "G11001",
+                "G11002",
+                "G11003",
+                "G11004",
+                "G11005",
+                "G11006",
+                "G11007",
+                "G11008"
+            ]
+        },
+        "name": "{@Flag.G11000}+{@Flag.G11001}+{@Flag.G11002}+{@Flag.G11003}+{@Flag.G11004}+{@Flag.G11005}+{@Flag.G11006}+{@Flag.G11007}+{@Flag.G11008}",
+        "type": "GroupFlag",
+        "id": "BondGirl",
+        "text": "結緣數"
+    },
+    "旗標_攻略人數_排除龍湘": {
+        "rel": {
+            "Flag": [
+                "G11000",
+                "G11001",
+                "G11002",
+                "G11004",
+                "G11005",
+                "G11006",
+                "G11007",
+                "G11008"
+            ]
+        },
+        "name": "{@Flag.G11000}+{@Flag.G11001}+{@Flag.G11002}+{@Flag.G11004}+{@Flag.G11005}+{@Flag.G11006}+{@Flag.G11007}+{@Flag.G11008}",
+        "type": "GroupFlag",
+        "id": "BondExclude8",
+        "text": "龍湘以外結緣數"
+    },
+    "旗標_贖回任何資產": {
+        "rel": {
+            "Flag": [
+                "Facility_001",
+                "Facility_002",
+                "Facility_003",
+                "Facility_004",
+                "Facility_005",
+                "Facility_006"
+            ]
+        },
+        "name": "{@Flag.Facility_001}+{@Flag.Facility_002}+{@Flag.Facility_003}+{@Flag.Facility_004}+{@Flag.Facility_005}+{@Flag.Facility_006}",
+        "type": "GroupFlag",
+        "id": "Facility",
+        "text": "贖回資產數"
+    },
+    "貴重品_持有江湖快報": {
+        "rel": {
+            "Special": [
+                "3104",
+                "3105",
+                "3106",
+                "3107",
+                "3108",
+                "3109",
+                "3110",
+                "3111",
+                "3112",
+                "3201",
+                "3202",
+                "3203",
+                "3204",
+                "3205",
+                "3206",
+                "3207",
+                "3208",
+                "3209",
+                "3210",
+                "3211",
+                "3212",
+                "3301",
+                "3302",
+                "3303",
+                "3304",
+                "3305",
+                "3306",
+                "3307",
+                "3308",
+                "3309",
+                "3310",
+                "3311",
+                "3312"
+            ]
+        },
+        "name": "{@System.Special}❮{@Special.Name.3104}❯+{@System.Special}❮{@Special.Name.3105}❯+{@System.Special}❮{@Special.Name.3106}❯+{@System.Special}❮{@Special.Name.3107}❯+{@System.Special}❮{@Special.Name.3108}❯+{@System.Special}❮{@Special.Name.3109}❯+{@System.Special}❮{@Special.Name.3110}❯+{@System.Special}❮{@Special.Name.3111}❯+{@System.Special}❮{@Special.Name.3112}❯+{@System.Special}❮{@Special.Name.3201}❯+{@System.Special}❮{@Special.Name.3202}❯+{@System.Special}❮{@Special.Name.3203}❯+{@System.Special}❮{@Special.Name.3204}❯+{@System.Special}❮{@Special.Name.3205}❯+{@System.Special}❮{@Special.Name.3206}❯+{@System.Special}❮{@Special.Name.3207}❯+{@System.Special}❮{@Special.Name.3208}❯+{@System.Special}❮{@Special.Name.3209}❯+{@System.Special}❮{@Special.Name.3210}❯+{@System.Special}❮{@Special.Name.3211}❯+{@System.Special}❮{@Special.Name.3212}❯+{@System.Special}❮{@Special.Name.3301}❯+{@System.Special}❮{@Special.Name.3302}❯+{@System.Special}❮{@Special.Name.3303}❯+{@System.Special}❮{@Special.Name.3304}❯+{@System.Special}❮{@Special.Name.3305}❯+{@System.Special}❮{@Special.Name.3306}❯+{@System.Special}❮{@Special.Name.3307}❯+{@System.Special}❮{@Special.Name.3308}❯+{@System.Special}❮{@Special.Name.3309}❯+{@System.Special}❮{@Special.Name.3310}❯+{@System.Special}❮{@Special.Name.3311}❯+{@System.Special}❮{@Special.Name.3312}❯",
+        "type": "Special",
+        "id": "SpecialNews",
+        "text": "寶物❮江湖快報❯數量"
+    },
+    "雜物_任何酒": {
+        "rel": {
+            "Misc": [
+                "2001",
+                "2005",
+                "2004",
+                "2003",
+                "2002",
+                "2006"
+            ]
+        },
+        "name": "{@System.Misc}❮{@Misc.Name.2001}❯+{@System.Misc}❮{@Misc.Name.2005}❯+{@System.Misc}❮{@Misc.Name.2004}❯+{@System.Misc}❮{@Misc.Name.2003}❯+{@System.Misc}❮{@Misc.Name.2002}❯+{@System.Misc}❮{@Misc.Name.2006}❯",
+        "type": "Misc",
+        "id": "MiscWine",
+        "text": "❮任意酒類❯"
+    },
+    "雜物_任意飲食物品": {
+        "rel": {
+            "Misc": [
+                "2003",
+                "2004",
+                "2005",
+                "3001",
+                "3002",
+                "3003",
+                "5003",
+                "5004",
+                "5005",
+                "5006",
+                "5001",
+                "4101",
+                "4102",
+                "4103",
+                "4104",
+                "4500",
+                "5007",
+                "5008",
+                "5009",
+                "4106"
+            ]
+        },
+        "name": "{@System.Misc}❮{@Misc.Name.2003}❯+{@System.Misc}❮{@Misc.Name.2004}❯+{@System.Misc}❮{@Misc.Name.2005}❯+{@System.Misc}❮{@Misc.Name.3001}❯+{@System.Misc}❮{@Misc.Name.3002}❯+{@System.Misc}❮{@Misc.Name.3003}❯+{@System.Misc}❮{@Misc.Name.5003}❯+{@System.Misc}❮{@Misc.Name.5004}❯+{@System.Misc}❮{@Misc.Name.5005}❯+{@System.Misc}❮{@Misc.Name.5006}❯+{@System.Misc}❮{@Misc.Name.5001}❯+{@System.Misc}❮{@Misc.Name.4101}❯+{@System.Misc}❮{@Misc.Name.4102}❯+{@System.Misc}❮{@Misc.Name.4103}❯+{@System.Misc}❮{@Misc.Name.4104}❯+{@System.Misc}❮{@Misc.Name.4500}❯+{@System.Misc}❮{@Misc.Name.5007}❯+{@System.Misc}❮{@Misc.Name.5008}❯+{@System.Misc}❮{@Misc.Name.5009}❯+{@System.Misc}❮{@Misc.Name.4106}❯",
+        "type": "Misc",
+        "id": "MiscFood",
+        "text": "❮任意食物❯"
+    },
+    "數值_Ch_3_6_4_3_001": {
+        "rel": {
+            "Talent": [
+                "9100"
+            ]
+        },
+        "name": "{@PlayerStat.literacy}+{@System.Talent}❮{@PlayerTalent.Name.9100}❯×44",
+        "type": "PlayerStat"
+    },
+    "數值_Max_道德_性情_命運x20": {
+        "rel": {},
+        "name": "{@Custom.Max}({@PlayerStat.karma},{@PlayerStat.disposition},{@PlayerStat.fate}×20)",
+        "type": "PlayerStat"
+    },
+    "數值_丐幫談判": {
+        "rel": {
+            "Character": [
+                "special103",
+                "special4"
+            ],
+            "Flag": [
+                "H01001",
+                "H02001"
+            ]
+        },
+        "name": "{@Character.special103}+{@Character.special4}+{@Flag.H01001}×10+{@Flag.H02001}×10",
+        "type": "Relationship"
+    }
+}

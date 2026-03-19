@@ -1,0 +1,2473 @@
+{
+    "CL_0001_01": {
+        "name": "和三師兄過招",
+        "desc": "無可救藥線，兩年後醒來，三師兄要求和你過幾招",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother3}",
+        "ref": "兩年後醒來 戰唐陞",
+        "keywords": ""
+    },
+    "CL_0001_02": {
+        "name": "接續過招",
+        "desc": "無可救藥線，恢復一點記憶後，繼續和三師兄過招",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother3}",
+        "ref": "兩年後醒來 覺醒 戰唐陞",
+        "keywords": ""
+    },
+    "CL_1001_1": {
+        "name": "死守船艙",
+        "desc": "俠影寄雲舟事件，瞞不過去後決定死守船艙",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.badguy1}",
+        "ref": "閻關三煞 一般路線 戰歹人",
+        "keywords": ""
+    },
+    "CL_1001_2": {
+        "name": "怒戰三煞",
+        "desc": "俠影寄雲舟事件，你成功騙過三煞，但被小師妹的話題激怒",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.badguy1}",
+        "ref": "閻關三煞 高智能路線分歧 戰歹人",
+        "keywords": ""
+    },
+    "CL_1001_3": {
+        "name": "激怒三煞",
+        "desc": "俠影寄雲舟事件，你沒唬住三煞",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.badguy1}",
+        "ref": "閻關三煞 抓包 戰歹人",
+        "keywords": ""
+    },
+    "CL_S0100_01": {
+        "name": "反抗師姐們",
+        "desc": "假趙活風聲事件，你拒絕幫師姐挑柴",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee_girl1}",
+        "ref": "風聲 與女弟子吵架 戰唐門女弟子",
+        "keywords": ""
+    },
+    "CL_S2001_01": {
+        "name": "決定滅口",
+        "desc": "欠債還錢事件，決定滅口帳房先生",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.sir1}",
+        "ref": "欠債還錢1 想幹掉先生的念頭 戰先生",
+        "keywords": ""
+    },
+    "CL_S2001_02": {
+        "name": "追殺呂翁",
+        "desc": "欠債還錢事件，因小師妹暴怒想殺了呂翁，帳房先生出面阻擋",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.sir1}",
+        "ref": "欠債還錢1 追殺呂翁 戰先生",
+        "keywords": ""
+    },
+    "CL_S8400_01": {
+        "name": "跟師兄們拚了",
+        "desc": "霸凌事件，選擇跟你們拚了",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "霸凌 選擇跟你們拼了 戰唐門弟子",
+        "keywords": ""
+    },
+    "CL_S9903_01": {
+        "name": "被師兄們教訓",
+        "desc": "貢獻點評，選擇好啦又我啦",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "唐門會議前置 好啦好啦都我啦 戰唐門弟子",
+        "keywords": ""
+    },
+    "CL_S9904_01_01": {
+        "name": "打劫山賊",
+        "desc": "大師兄玩樂事件，骰到吃喝嫖賭，大師兄帶你打劫山賊",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.bandit1}",
+        "ref": "大師兄打劫山賊 選到吃喝嫖賭 戰山賊",
+        "keywords": ""
+    },
+    "CL_S9904_01_02": {
+        "name": "跟大師兄拚了",
+        "desc": "大師兄玩樂事件，骰到鬧小師妹，故作鎮定後跟大師兄拚了",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother1}",
+        "ref": "大師兄打劫山賊 鬧小師妹後故作鎮定 戰唐布衣",
+        "keywords": ""
+    },
+    "CL_T0001": {
+        "name": "三師兄指導",
+        "desc": "決鬥教學",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother3}",
+        "ref": "決鬥教學 戰唐陞",
+        "keywords": ""
+    },
+    "CL_T0002_01": {
+        "name": "戰霸凌師兄",
+        "desc": "段考，難度0",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "主線段考 決鬥 戰唐門弟子",
+        "keywords": ""
+    },
+    "CL_T0002_02": {
+        "name": "戰霸凌師兄",
+        "desc": "段考，難度1",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "主線段考 決鬥 戰唐門弟子",
+        "keywords": ""
+    },
+    "CL_T0002_03": {
+        "name": "戰霸凌師兄",
+        "desc": "段考，難度2",
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "主線段考 決鬥 戰唐門弟子",
+        "keywords": ""
+    },
+    "CL_0000_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special203}",
+        "ref": "測試 戰聽海生",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_0000_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother1}",
+        "ref": "測試 戰唐布衣",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_0000": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.bandit1}",
+        "ref": "測試關卡 戰山賊",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_0002": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.sister1}",
+        "ref": "小師妹歸來 決鬥 戰唐默鈴",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_0003_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee201}",
+        "ref": "DEMO尾聲 100個人 戰飛天弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_0003_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special6}",
+        "ref": "DEMO尾聲 絕頂高手 戰萬里鵬程",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_0003_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special801}",
+        "ref": "DEMO尾聲 3個高手 戰譚霸刀",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1003": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "已廢棄 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1004_1": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger2}",
+        "ref": "已廢棄 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1006": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "已廢棄 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1005_2": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.big_trainee1}",
+        "ref": "已廢棄 戰undefined",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1007": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother1}",
+        "ref": "煎藥 決鬥大師兄 已廢棄 戰唐布衣",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1004_2": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger2}",
+        "ref": "已廢棄 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1008": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.mask1}",
+        "ref": "已廢棄 戰蒙面人",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1009_1": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special4}",
+        "ref": "已廢棄 戰樊嘯天",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1009_2": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special4}",
+        "ref": "已廢棄 戰樊嘯天",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1010_1": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special6}",
+        "ref": "已廢棄 戰萬里鵬程",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1009_3": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special4}",
+        "ref": "已廢棄 戰樊嘯天",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1011_2": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special2}",
+        "ref": "已廢棄 戰龍淵",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1010_2": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special6}",
+        "ref": "已廢棄 戰萬里鵬程",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1011_1": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.waiter1}",
+        "ref": "已廢棄 戰店小二",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1010_3": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special6}",
+        "ref": "已廢棄 戰萬里鵬程",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1100_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.mask1}",
+        "ref": "討伐譚霸刀 戰蒙面人",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1102_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.scholar1}",
+        "ref": "提早至江陵。偷偷跟隨毒打書生 戰書生",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1101_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special801}",
+        "ref": "討伐譚霸刀 戰譚霸刀",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1103_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.beggar1}",
+        "ref": "提早至江陵，遇見辛儒師姐 戰乞丐",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1104_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.pirate1}",
+        "ref": "提早至江陵，遇見白鯊幫 戰海盜",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1201_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee331}",
+        "ref": "南宮家宴與嵩山弟子搶座位 戰嵩山弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1202_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee101}",
+        "ref": "南宮家宴 幫助南宮淺 戰南宮家丁",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1203_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.beggar1}",
+        "ref": "崆峒擂臺 難度2 戰乞丐",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1203_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.beggar1}",
+        "ref": "崆峒擂臺 難度1 戰乞丐",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1203_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.artist1}",
+        "ref": "崆峒擂臺 難度1 戰武師",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1203_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "崆峒擂臺 難度1 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1203_05": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.artist1}",
+        "ref": "崆峒擂臺 難度2 戰武師",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1203_06": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "崆峒擂臺 難度2 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1203_07": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.beggar1}",
+        "ref": "崆峒擂臺 難度3 戰乞丐",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1203_08": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.artist1}",
+        "ref": "崆峒擂臺 難度3 戰武師",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1203_09": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "崆峒擂臺 難度3 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1005_1": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.big_trainee1}",
+        "ref": "已廢棄 戰undefined",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1204_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee221}",
+        "ref": "崆峒鐵拳門 介入小竹糾紛 戰奪魄弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1206_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.waiter1}",
+        "ref": "客棧線 選擇對決千面人魔 戰店小二",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1205_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger_girl1}",
+        "ref": "唐門留學期間得知小師妹被糾纏選擇出手 戰女俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1208_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee321}",
+        "ref": "離開唐門 改投峨嵋派 戰峨嵋弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1206_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special2}",
+        "ref": "客棧線 選擇對決龍淵 戰龍淵",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1207_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special1}",
+        "ref": "客棧線 綁架小師妹 最終對決 戰劉顎",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1209_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee301}",
+        "ref": "破廟 點蒼弟子 戰點蒼弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1210_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ghost1}",
+        "ref": "破廟 鬼卒1 戰鬼卒",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1210_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ghost1}",
+        "ref": "破廟 鬼卒2 戰鬼卒",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1211_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother2}",
+        "ref": "攻打唐門 二師兄 戰唐錚",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1212_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.hero1}",
+        "ref": "跑路 江湖少俠 戰少俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1211_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special832}",
+        "ref": "攻打唐門 唐芳 戰唐芳",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1213_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.bandit1}",
+        "ref": "報訊 山賊 戰山賊",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1214_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.big_trainee1}",
+        "ref": "報訊 唐大鯨2 戰undefined",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1213_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.pig1}",
+        "ref": "報訊 山豬 戰野豬",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1214_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.big_trainee1}",
+        "ref": "報訊 唐大鯨1 戰undefined",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1215_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee331}",
+        "ref": "唐門大亂鬥 伙房 嵩山弟子 戰嵩山弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1215_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee_girl1}",
+        "ref": "唐門大亂鬥 伙房 女弟子 戰唐門女弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1218_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee341}",
+        "ref": "唐門大亂鬥 煉丹房 全真弟子 戰全真弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1217_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee_girl1}",
+        "ref": "唐門大亂鬥 女弟子房 女弟子 戰唐門女弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1216_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee211}",
+        "ref": "唐門大亂鬥 鍛冶場 鐵拳弟子 戰鐵拳弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1219_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee321}",
+        "ref": "唐門大亂鬥 講經堂 峨嵋弟子 戰峨嵋弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1301_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee_group_211}",
+        "ref": "崆峒留學 小梅逃脫後 崆峒戰隊 戰undefined",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1302_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee231}",
+        "ref": "崆峒留學玄功門 早點名切磋 戰玄功弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1304_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special4}",
+        "ref": "前往江陵大戰 坐診遇見樊嘯天 戰樊嘯天",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1303_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "前往江陵大戰 住宿與師弟切磋 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1304_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special4}",
+        "ref": "用阿牛的性命威脅樊嘯天 戰樊嘯天",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1305_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee321}",
+        "ref": "江陵閒逛 戰峨嵋弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1306_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee101}",
+        "ref": "江陵大戰與丐幫在客棧僵持不下 戰南宮家丁",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1309_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl5_3}",
+        "ref": "江陵大戰 野外散心打拳 女飛賊 戰女飛賊",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1307_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special401}",
+        "ref": "江陵大戰見面毛二壯 戰王二壯",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1310_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee231}",
+        "ref": "江陵大戰後 獲得鐵琵琶功 戰玄功弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1305_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.artist1}",
+        "ref": "江陵閒逛 戰武師",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1308_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother1}",
+        "ref": "江陵大戰 野外散心打拳 思想戰 戰唐布衣",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1312_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special103}",
+        "ref": "院中練武 南宮淺 戰南宮淺",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1311_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother2}",
+        "ref": "回唐門後 被二師兄找 戰唐錚",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1312_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee101}",
+        "ref": "院中練武 南宮家丁 戰南宮家丁",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1313_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special102}",
+        "ref": "院中練武 不友善對決南宮深 戰南宮深",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1313_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special102}",
+        "ref": "院中練武 南宮深 戰南宮深",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1313_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special102}",
+        "ref": "院中練武 友善對決南宮深 戰南宮深",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1314_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special101}",
+        "ref": "院中練武 南宮遠 戰南宮遠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1318_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee311}",
+        "ref": "留學青城 青城弟子 戰青城弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1316_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.pig1}",
+        "ref": "留學青城 野豬 戰野豬",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1317_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "留學青城 武林人 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1319_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special834}",
+        "ref": "留學青城 段智秀 戰段智秀",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1321_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee311}",
+        "ref": "青城段考 停風子 戰青城弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1320_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.artist1}",
+        "ref": "留學青城 武師 戰武師",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1321_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee311}",
+        "ref": "青城段考 高和子 戰青城弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1324_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.bandit1}",
+        "ref": "逃離青城 站哨 狼 戰山賊",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1322_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ghost1}",
+        "ref": "趙逵上山 鬼卒 戰鬼卒",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1323_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.cow_horse}",
+        "ref": "趙逵上山 鬼卒 戰undefined",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1324_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.wolf1}",
+        "ref": "逃離青城 站哨 狼 戰狼",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1326_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.pig1}",
+        "ref": "逃離青城 山豬跟鸚鵡 戰野豬",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1325_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.fairy1}",
+        "ref": "逃離青城 仙姑 戰仙姑",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1327_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "逃離青城 唐門弟子 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1315_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special405}",
+        "ref": "留學青城 申屠龍 戰申屠龍",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1328_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special835}",
+        "ref": "拷問 南宮己 戰南宮己",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1329_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.pig1}",
+        "ref": "青城道長的地位 山豬 戰野豬",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1330_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.wolf1}",
+        "ref": "葉雲舟從江陵回唐門 狼1 戰狼",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1330_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special3}",
+        "ref": "葉雲舟從江陵回唐門 葉雲舟 戰葉雲舟",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1401_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee321}",
+        "ref": "下山找人 揍峨嵋弟子 戰峨嵋弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1401_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "下山找人 揍師兄 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1401_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee321}",
+        "ref": "下山找人 揍峨嵋弟子 戰峨嵋弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1402_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special811}",
+        "ref": "唐門內戰 決鬥唐衫 戰唐衫",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1402_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.master}",
+        "ref": "唐門內戰 決鬥掌門人 戰唐中翎",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1403_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "決戰飛石幫 客棧休息 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1402_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.sister1}",
+        "ref": "唐門內戰 決鬥小師妹 戰唐默鈴",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1403_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "決戰飛石幫 客棧休息 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1403_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "決戰飛石幫 客棧休息 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1403_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.hero1}",
+        "ref": "決戰飛石幫 客棧休息第二戰 戰少俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1405_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "返回唐門途中遇敵 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1404_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl4}",
+        "ref": "決鬥飛石幫 返回唐門 客房修練 戰龍湘",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1404_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special206}",
+        "ref": "決鬥飛石幫 返回唐門 客房修練 戰福韞",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1405_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger_girl1}",
+        "ref": "返回唐門途中遇敵 戰女俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1406_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.blacksmith1}",
+        "ref": "返回唐門 遇鐵匠 戰鐵匠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1407_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special207}",
+        "ref": "返回唐門 決鬥金烏上人 戰金烏上人",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1407_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl5_3}",
+        "ref": "返回唐門 決鬥女飛賊 戰女飛賊",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1407_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl5}",
+        "ref": "返回唐門 決鬥小梅 戰虞小梅",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1409_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee201}",
+        "ref": "治療大師兄 遇見崆峒弟子 戰飛天弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1409_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee311}",
+        "ref": "治療大師兄 遇見殺手 戰青城弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1408_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee121}",
+        "ref": "不跟隨大師兄去臥雲岡 遇見泥教弟子 戰泥教弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1409_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee201}",
+        "ref": "治療大師兄 遇見殺手 戰飛天弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1501_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother3}",
+        "ref": "談論小師妹婚事 與三師兄吵架 戰唐陞",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1409_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special207}",
+        "ref": "治療大師兄 遇見金烏上人 戰金烏上人",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1502_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "守夜換班 跟師弟要錢 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1503_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special808}",
+        "ref": "小師妹出嫁 拜訪解無塵 戰解無塵",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1504_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee211}",
+        "ref": "金烏上人鬧場 戰役勝利後逃亡 四大護法第一關 戰鐵拳弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1504_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee221}",
+        "ref": "金烏上人鬧場 戰役勝利後逃亡 四大護法第三關 戰奪魄弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1504_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee201}",
+        "ref": "金烏上人鬧場 戰役勝利後逃亡 四大護法第二關 戰飛天弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1504_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee231}",
+        "ref": "金烏上人鬧場 戰役勝利後逃亡 四大護法第四關 戰玄功弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1505_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special207}",
+        "ref": "金烏上人鬧場 第一次決鬥金烏上人 戰金烏上人",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1505_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special207}",
+        "ref": "金烏上人鬧場 第二次決鬥金烏上人 戰金烏上人",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1506_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "唐門女婿 被弟子們圍攻 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1507_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special808}",
+        "ref": "屠滅崆峒 修練 戰解無塵",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1507_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl6}",
+        "ref": "屠滅崆峒 修練 戰夏侯蘭",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1507_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special207}",
+        "ref": "屠滅崆峒 決鬥金烏上人 戰金烏上人",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1611_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special808}",
+        "ref": "前往武林大會路途 遇見峨嵋派 戰解無塵",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1612_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special201}",
+        "ref": "前往武林大會路途 遇見青城派 戰鄒博",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1616_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee491}",
+        "ref": "拜訪錦香宮 武英殿對手 戰錦香弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1616_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee491}",
+        "ref": "拜訪錦香宮 武英殿對手 戰錦香弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1614_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee301}",
+        "ref": "前往武林大會路途 遇見點蒼派 戰點蒼弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1616_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl5}",
+        "ref": "拜訪錦香宮 武英殿決鬥 小梅病嬌 戰虞小梅",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1615_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.daoshi341}",
+        "ref": "前往武林大會路途 遇見全真派 戰全真長老",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1617_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special402}",
+        "ref": "在錦香宮賴著不走 戰溫夫人",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1616_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl7}",
+        "ref": "拜訪錦香宮 武英殿決鬥 小竹吃醋 戰郁竹",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1618_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special813}",
+        "ref": "千面傳承 選擇領教 戰畫中仙",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1617_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special402}",
+        "ref": "離開錦香宮被溫夫人留住 戰溫夫人",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1619_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special407}",
+        "ref": "武林大會 挑戰上官隼 戰上官隼",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1619_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special999}",
+        "ref": "武林大會 遇見瑞笙 戰瑞笙",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1619_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special999}",
+        "ref": "武林大會 遇見瑞笙 戰瑞笙",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1620_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "武林大會 武林交際時清理門戶 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1621_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special102}",
+        "ref": "武林大會 幫助錦香宮 對決南宮深 戰南宮深",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1622_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special407}",
+        "ref": "武林大會 幫助錦香宮 對決上官隼 戰上官隼",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1623_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special103}",
+        "ref": "武林大會 追南宮淺 戰南宮淺",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1624_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special823}",
+        "ref": "武林大會 追南宮淺 戰袁無憲",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1701_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "正常路線 弟子離開唐門  戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1625_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother3}",
+        "ref": "壞結局路線 三師兄 戰唐陞",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1702_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother4}",
+        "ref": "段考 四師兄 戰唐惟元",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1702_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.big_trainee1}",
+        "ref": "段考 唐大驚 戰undefined",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1702_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "段考 唐門弟子 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1702_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special811}",
+        "ref": "段考 唐衫 戰唐衫",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1702_05": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.big_trainee_girl_1}",
+        "ref": "段考 唐嬌嬌 戰唐嬌嬌",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1702_06": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl5}",
+        "ref": "段考 小梅 戰虞小梅",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1703_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special3}",
+        "ref": "訪問葉雲舟 決鬥 戰葉雲舟",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1702_07": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother3}",
+        "ref": "段考 三師兄 戰唐陞",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1704_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother3}",
+        "ref": "唐門大對決 三師兄 戰唐陞",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1705_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl4}",
+        "ref": "決裂 龍湘 戰龍湘",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1706_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl9}",
+        "ref": "收買滄幫 上官螢 戰上官螢",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1708_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl6}",
+        "ref": "修羅場 小蘭 戰夏侯蘭",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1706_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "收買滄幫 唐門弟子 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1707_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special811}",
+        "ref": "出使峨嵋派 唐衫 戰唐衫",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1708_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl4}",
+        "ref": "修羅場 龍湘 戰龍湘",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1708_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl9}",
+        "ref": "修羅場 上官螢 戰上官螢",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1708_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.sister1}",
+        "ref": "修羅場 小師妹 戰唐默鈴",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1802_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special801}",
+        "ref": "護衛三師兄 譚霸刀 戰譚霸刀",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1801_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother1}",
+        "ref": "小梅 大師兄 戰唐布衣",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1802_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.hero1}",
+        "ref": "護衛三師兄 方震天 戰少俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1802_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special811}",
+        "ref": "護衛三師兄 唐衫 戰唐衫",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1803_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special207}",
+        "ref": "護衛三師兄 金烏上人 戰金烏上人",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1803_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special204}",
+        "ref": "護衛三師兄 火龍仙君 戰火龍仙君",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1803_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special826}",
+        "ref": "護衛三師兄 釋明 戰釋明",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1803_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.waiter1}",
+        "ref": "護衛三師兄 店小二 戰店小二",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1804_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special6}",
+        "ref": "唐門出擊 萬里鵬程 戰萬里鵬程",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1805_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger_group}",
+        "ref": "圍攻唐門 武林盟群俠 戰武林盟群俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1806_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special801}",
+        "ref": "圍攻唐門 譚霸刀 戰譚霸刀",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1806_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special828}",
+        "ref": "圍攻唐門 余公子 戰余公子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1806_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.fairy1}",
+        "ref": "圍攻唐門 木仙姑 戰仙姑",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1807_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special6}",
+        "ref": "圍攻唐門 萬里鵬程 戰萬里鵬程",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1810_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special407}",
+        "ref": "在山上等 上官隼 戰上官隼",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1808_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger_group}",
+        "ref": "刺殺盟主 武林群俠 戰武林盟群俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1809_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special999}",
+        "ref": "刺殺盟主 瑞笙 戰瑞笙",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1811_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special408}",
+        "ref": "在山上等 向無憂 戰向無憂",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1812_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special102}",
+        "ref": "趕回山上 南宮深 戰南宮深",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1813_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special999}",
+        "ref": "眉山之顛 瑞笙 戰瑞笙",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1812_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special407}",
+        "ref": "趕回山上 上官隼 戰上官隼",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1814_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special212_1}",
+        "ref": "護衛三師兄 無相祖師 戰無相祖師",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_1814_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special212_1}",
+        "ref": "護衛三師兄 無相祖師 戰無相祖師",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_2002_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl5}",
+        "ref": "練武場 小梅亂入 戰虞小梅",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_2003_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl5}",
+        "ref": "小梅事件 關於四師兄 戰虞小梅",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_3002": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special7}",
+        "ref": "DEMO 找石公遠 戰石公遠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_2001_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.artist1}",
+        "ref": "釣魚事件 戰武師",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_3003_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother4}",
+        "ref": "DEMO 舉行段考的對手 戰唐惟元",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_3001_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother3}",
+        "ref": "與三師兄切磋 戰唐陞",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_3001": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother3}",
+        "ref": "DEMO閒聊 與三師兄切磋 戰唐陞",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5000_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee341}",
+        "ref": "崆峒留學 休息 和別派打架 難度1 戰全真弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_3003_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother3}",
+        "ref": "DEMO 舉行段考的對手 戰唐陞",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_3004_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother4}",
+        "ref": "四師兄切磋 全力 戰唐惟元",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_3004_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother4}",
+        "ref": "四師兄切磋 戰唐惟元",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5000_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee301}",
+        "ref": "崆峒留學 休息 和別派打架 難度1 戰點蒼弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5000_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.beggar1}",
+        "ref": "崆峒留學 休息 和別派打架 難度1 戰乞丐",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5000_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee201}",
+        "ref": "崆峒留學 休息 和別派打架 難度1 戰飛天弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5000_05": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee331}",
+        "ref": "崆峒留學 休息 和別派打架 難度2 戰嵩山弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5000_06": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee311}",
+        "ref": "崆峒留學 休息 和別派打架 難度2 戰青城弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5000_07": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee221}",
+        "ref": "崆峒留學 休息 和別派打架 難度2 戰奪魄弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5000_08": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee321}",
+        "ref": "崆峒留學 休息 和別派打架 難度2 戰峨嵋弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5000_50": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.hero1}",
+        "ref": "崆峒留學 休息 和別派打架 難度3 戰少俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5000_52": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee_group_211}",
+        "ref": "崆峒留學 休息 和別派打架 難度3 戰undefined",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5001_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.stone1}",
+        "ref": "大門 門市 遇見飛石幫 戰undefined",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5002_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee491}",
+        "ref": "大門 門市 遇見錦香宮 戰錦香弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5000_51": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.soldier1}",
+        "ref": "崆峒留學 休息 和別派打架 難度3 戰官兵",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5005_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "茶舖 被挑釁 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5004_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "外堡 被襲擊 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5003_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.artist1}",
+        "ref": "大門 門市 看武師表演 戰武師",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5006_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.artist1}",
+        "ref": "姜記肉包 砸店 江湖拳師 戰武師",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5100_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee221}",
+        "ref": "崆峒 與小梅跑步 遇敵 戰奪魄弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5100_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee211}",
+        "ref": "崆峒 與小梅跑步 遇敵 戰鐵拳弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5100_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee201}",
+        "ref": "崆峒 與小梅跑步 遇敵 戰飛天弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5101_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee211}",
+        "ref": "崆峒 賭博被搶 戰鐵拳弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5102_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl4}",
+        "ref": "後山挑戰龍湘 戰龍湘",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5101_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee201}",
+        "ref": "崆峒 賭博被搶 戰飛天弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5103_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.snake1}",
+        "ref": "馬富貴 弄蛇失敗 戰蛇",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5101_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee221}",
+        "ref": "崆峒 賭博被搶 戰奪魄弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5103_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.snake1}",
+        "ref": "馬富貴 弄蛇失敗 戰蛇",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5104_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special206}",
+        "ref": "福韞 化緣 戰福韞",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_5103_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.snake1}",
+        "ref": "馬富貴 弄蛇失敗 戰蛇",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_9000_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.bandit1}",
+        "ref": "外出路途 遇見綠林好漢 戰山賊",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_A0001_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee_girl1}",
+        "ref": "活動 練功塔挑戰方第一關 戰唐門女弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_A0002_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother2}",
+        "ref": "活動 練功塔挑戰方第二關 戰唐錚",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_A0002_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother1}",
+        "ref": "活動 練功塔挑戰方第二關 戰唐布衣",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_A0003_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.big_trainee1}",
+        "ref": "活動 練功塔防守方第一關 戰undefined",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_A0002_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.sister1}",
+        "ref": "活動 練功塔挑戰方第二關 戰唐默鈴",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_A0003_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special811}",
+        "ref": "活動 練功塔防守方第一關 戰唐衫",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_A0003_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl5}",
+        "ref": "活動 練功塔防守方第一關 戰虞小梅",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_B0001_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "後山 挑柴遇敵 第一年上半 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_B0001_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "後山 挑柴遇敵 第一年下半 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_B0001_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "後山 挑柴遇敵 第二年下半 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_B0001_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "後山 挑柴遇敵 第二年上半 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_B0001_06": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.hero1}",
+        "ref": "後山 挑柴遇敵 第三年下半 戰少俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_B0001_05": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.hero1}",
+        "ref": "後山 挑柴遇敵 第三年上半 戰少俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_G0005_02_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl6}",
+        "ref": "閒聊 小蘭 捍衛魏掌門 戰夏侯蘭",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_G0005_02_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special4}",
+        "ref": "閒聊 小蘭 綁架樊嘯天 戰樊嘯天",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_G0005_02_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl6}",
+        "ref": "閒聊 小蘭 綁架上官螢 戰夏侯蘭",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_G0005_10_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl6}",
+        "ref": "閒聊 小蘭 切磋武功1 戰夏侯蘭",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_G0005_11_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl6}",
+        "ref": "閒聊 小蘭 切磋武功2 戰夏侯蘭",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0014_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee321}",
+        "ref": "稻草人 被峨嵋弟子偷襲 戰峨嵋弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_PV_002": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.sister1}",
+        "ref": "PV002 戰唐默鈴",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0014_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee321}",
+        "ref": "稻草人 被峨嵋弟子追殺 戰峨嵋弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0017_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee_girl1}",
+        "ref": "惜花令 師姐過招 戰唐門女弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0017_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger4}",
+        "ref": "惜花令 幫助小道長 戰公子俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0017_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee341}",
+        "ref": "惜花令 幫助公子 戰全真弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0014_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee321}",
+        "ref": "稻草人 被小蘭指導後 戰峨嵋弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0017_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee341}",
+        "ref": "惜花令 巴結南宮世家 戰全真弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0018_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "藏寶圖 選擇上樓後 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0018_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee301}",
+        "ref": "藏寶圖 幫助葉雲裳 戰點蒼弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0020_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl4}",
+        "ref": "龍之覺醒 龍湘 戰龍湘",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0021_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl4}",
+        "ref": "龍之團聚 龍湘 戰龍湘",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0021_03_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special2}",
+        "ref": "龍之團聚 全力龍淵 戰龍淵",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0021_03_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special2_1}",
+        "ref": "龍之團聚 全力龍淵 戰？？？",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0021_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.mask1}",
+        "ref": "龍之團聚 黑衣人 戰蒙面人",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0022_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl4}",
+        "ref": "龍之挑戰 龍湘 戰龍湘",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0023_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.beggar1}",
+        "ref": "龍之反省 乞丐 戰乞丐",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0026_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special206}",
+        "ref": "上街偶遇 福韞 戰福韞",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0026_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.big_shock1}",
+        "ref": "上街偶遇 許大鯨 戰許大鯨",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0026_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.big_shock1}",
+        "ref": "上街偶遇 許大鯨 戰許大鯨",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0105_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special208}",
+        "ref": "假趙活審判 揍晁和 戰晁和",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0106_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "假趙活乾娘 與師弟對練 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0202_02_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl9}",
+        "ref": "葉雲裳下山 上官螢 戰上官螢",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0105_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "假趙活審判 揍晁和後 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0121_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.dio1}",
+        "ref": "唐嬌嬌加入唐門 狄傲 戰狄傲",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0204_01_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special3}",
+        "ref": "葉家兄妹的去留 葉雲舟 戰葉雲舟",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0208_02_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special212}",
+        "ref": "無相祖師 鐵冠道人 戰鐵冠道人",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0208_02_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special834}",
+        "ref": "無相祖師 段智秀 戰段智秀",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0208_05_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special201}",
+        "ref": "訣別時 鄒博 戰鄒博",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0208_05_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special834}",
+        "ref": "訣別時 段智秀 戰段智秀",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0208_05_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special203}",
+        "ref": "訣別時 點蒼雙尊 戰聽海生",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0209_01_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special101}",
+        "ref": "訣別時 南宮遠 戰南宮遠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0209_01_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special201}",
+        "ref": "雲裳之死 鄒博 戰鄒博",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0209_01_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special834}",
+        "ref": "訣別時 段智秀 戰段智秀",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0208_05_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special101}",
+        "ref": "訣別時 南宮遠 戰南宮遠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0209_01_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special203}",
+        "ref": "訣別時 點蒼雙尊 戰聽海生",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0301_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special103}",
+        "ref": "黑衣人VS黑衣人 南宮淺切磋 戰南宮淺",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0301_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special401}",
+        "ref": "黑衣人VS黑衣人 毛二壯開扁 戰王二壯",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0302_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother1}",
+        "ref": "飛俠千里行 與大師兄切磋 戰唐布衣",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0603_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.soldier1}",
+        "ref": "武林大會邀請葉雲舟 惹怒葉雲裳 戰官兵",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0604_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl6}",
+        "ref": "武林大會邀請小蘭 選擇襲擊 戰夏侯蘭",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0701_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.sister1}",
+        "ref": "小師妹歸來 決鬥 戰唐默鈴",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0702_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special999}",
+        "ref": "瑞笙來訪 圍毆瑞笙 戰瑞笙",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_01_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.sister1}",
+        "ref": "決戰前後山 小師妹1 戰唐默鈴",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother1}",
+        "ref": "決戰前後山 大師兄 戰唐布衣",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_03_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl4}",
+        "ref": "決戰前後山 龍湘1 戰龍湘",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_03_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl4}",
+        "ref": "決戰前後山 龍湘2 戰龍湘",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl6}",
+        "ref": "決戰前後山 小蘭 戰夏侯蘭",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_01_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.sister1}",
+        "ref": "決戰前後山 小師妹2 戰唐默鈴",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_03_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl4}",
+        "ref": "決戰前後山 龍湘3 戰龍湘",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_06": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special829}",
+        "ref": "決戰前後山 南溪 戰南溪",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_05": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special3}",
+        "ref": "決戰前後山 葉雲舟 戰葉雲舟",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_07": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special201}",
+        "ref": "決戰前後山 鄒博 戰鄒博",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_09": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special408}",
+        "ref": "決戰前後山 向無憂 戰向無憂",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_08": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special808}",
+        "ref": "決戰前後山 解無塵 戰解無塵",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S0802_02_10": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special405}",
+        "ref": "決戰前後山 申屠龍 戰申屠龍",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2002_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "欠債還錢2 與弟子決鬥 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2002_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl9}",
+        "ref": "欠債還錢2 知道香方選擇威脅 戰上官螢",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2100_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "段考 第一關 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2100_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee_girl1}",
+        "ref": "段考 第二關 戰唐門女弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2100_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "段考 第一關弱化 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2100_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee_girl1}",
+        "ref": "段考 第二關弱化 戰唐門女弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2200_02_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special103}",
+        "ref": "崆峒大試 南宮淺的勝利 戰南宮淺",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2100_05": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "段考 第三關 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2200_02_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee311}",
+        "ref": "崆峒大試 南宮淺戰敗 戰青城弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2200_03_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee331}",
+        "ref": "崆峒大試 第二場 戰嵩山弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2200_03_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee301}",
+        "ref": "崆峒大試 第二場 戰點蒼弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2200_03_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee491}",
+        "ref": "崆峒大試 第二場 戰錦香弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2200_04_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special4}",
+        "ref": "崆峒大試 第三場 戰樊嘯天",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2200_03_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee321}",
+        "ref": "崆峒大試 第二場 戰峨嵋弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2200_04_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl9}",
+        "ref": "崆峒大試 第三場 戰上官螢",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2200_04_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special999}",
+        "ref": "崆峒大試 第三場 戰瑞笙",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2501_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger_girl1}",
+        "ref": "雪山行 回程 遇見情敵 戰女俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2501_05": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger4}",
+        "ref": "雪山行 回程 遇見少俠 戰公子俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2501_03": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.ranger1}",
+        "ref": "雪山行 回程 遇見強姦犯 戰路人俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2501_04": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.hero1}",
+        "ref": "雪山行 回程 遇見少俠 戰少俠",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2502_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.pig1}",
+        "ref": "雪山行 野豬 戰野豬",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2501_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee491}",
+        "ref": "雪山行 回程 遇見情敵 戰錦香弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2504_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.special820}",
+        "ref": "雪山行 主動請纓 戰第三香",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S2504_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.girl6}",
+        "ref": "雪山行 攻略小蘭 戰夏侯蘭",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S3004_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.brother4}",
+        "ref": "青城留學 四師兄 戰唐惟元",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S9905_01_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "情書 蝴蝶雙雄 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S9905_01_02": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.trainee1}",
+        "ref": "情書 蝴蝶雙雄 戰唐門弟子",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "CL_S9906_01": {
+        "ori": "{@System.Combat}-{@CombatCharacter.Name.beggar1}",
+        "ref": "丐幫搶菜 切磋 戰乞丐",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    }
+}
