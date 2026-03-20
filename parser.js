@@ -1,6 +1,9 @@
 import { writeFile } from 'fs/promises';
 import { readdir } from 'fs/promises';
 import { readFile } from 'fs/promises';
+import { mkdir } from 'fs/promises';
+import { access } from 'fs/promises';
+import { constants } from 'node:fs';
 import luaparse from 'luaparse';
 import path from 'path';
 import * as OpenCC from "opencc-js";
@@ -159,12 +162,24 @@ async function getDataJson(fileName, dir = 'custom', nullable = true) {
     return await loadJson(path.join(DATA_PATH, dir, `${fileName}.json`)) ?? (nullable ? {} : null);
 }
 
+// Helper: 建立缺少的資料夾
+async function createFolder(dir) {
+    const dirPath = path.join(DATA_PATH, dir);
+    try {
+        await mkdir(dirPath, { recursive: true });
+    }
+    catch (err) {
+        writeLog('error', `Creating folder "${dir}" failed.`, err.message);
+    }
+}
+
 // Helper: 輸出Json檔案
-async function exportJson(data, fileName, dir = '', minify = false) {
+async function exportJson(data, fileName, dir = '', minify = false, log = true) {
     const filePath = path.join(DATA_PATH, dir, `${fileName}.json`);
     try {
+        await createFolder(dir);
         await writeFile(filePath, JSON.stringify(data, null, minify ? 0 : 2));
-        writeLog('info', `"${fileName}" exported successfully!`);
+        if (log) writeLog('info', `"${fileName}" exported successfully!`);
     } catch (err) {
         writeLog('error', `"${fileName}" exported failed.`, err.message);
     }
@@ -3791,7 +3806,15 @@ export async function buildBackRelation() {
 
     // 更新json檔案
     const exportCats = ['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'CHARACTER', 'LIBRARY', 'BOOK', 'EQUIP', 'TIME', 'MISSION', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
-    await Promise.all(exportCats.map((category => exportJson(CACHE[category], category.toLowerCase(), 'public', true))));
+    const exportPromises = [];
+    for (const category of exportCats) {
+        const catName = category.toLowerCase();
+        exportPromises.push(exportJson(CACHE[category], catName, 'public', true));
+        for (const [itemId, itemData] of Object.entries(CACHE[category] ?? {})) {
+            exportPromises.push(exportJson(itemData, itemId, `public/${catName}`, true, false));
+        }
+    }
+    await Promise.all(exportPromises);
 }
 
 // 收尾整理在地化用詞表
@@ -3961,9 +3984,9 @@ export async function parseLocalization() {
 
     // 並行輸出結果
     await Promise.all([
-        exportJson({ "zh-tw": zhtw }, 'zh-tw', 'public', true),
-        exportJson({ "zh-cn": zhcn }, 'zh-cn', 'public', true),
-        exportJson({ "kr": kr }, 'kr', 'public', true)
+        exportJson({ "zh-tw": zhtw }, 'zh-tw', 'public/locales', true),
+        exportJson({ "zh-cn": zhcn }, 'zh-cn', 'publi/locales', true),
+        exportJson({ "kr": kr }, 'kr', 'public/locales', true)
     ]);
 }
 
