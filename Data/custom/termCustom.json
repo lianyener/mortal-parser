@@ -5,13 +5,13 @@
         "Dice": "🎲轉盤",
         "Talk": "💬議題",
         "Position": "🗺️地點指令",
-        "Unknown": "$t(Custom.Unknown)"
+        "Unknown": "❔{@Custom.Unknown}"
     },
     "Custom": {
         "True": "是",
         "False": "否",
-        "Win": "$t(System.BattleVictory)",
-        "Loss": "$t(System.BattleLose)",
+        "Win": "{@System.BattleVictory}",
+        "Loss": "{@System.BattleLose}",
         "Own": "有",
         "Other": "其他",
         "Or": "或",
@@ -27,8 +27,8 @@
         "Buff": "增益",
         "Debuff": "減益",
         "Support": "輔助",
-        "Enemy": "t{System.BattleEnemy}方",
-        "Player": "t{System.BattleFriend}方",
+        "Enemy": "敵方",
+        "Player": "我方",
         "Init": "初始",
         "MainMission": "主線",
         "SubMission": "支線",
@@ -44,9 +44,9 @@
         "MultiCheck": "複合檢定",
         "GameTime": "時間",
         "GameStart": "遊戲開始",
-        "TriggerSet": "$t(Custom.{{0}}Mission)觸發設定",
+        "TriggerSet": "{@Custom.{0}Mission}觸發設定",
         "TriggerTime": "觸發時間",
-        "TriggerPriority": "觸發優先權$t(Custom.{{0}})$t(Custom.MainMission)",
+        "TriggerPriority": "觸發優先權{@Custom.{0}}{@Custom.MainMission}",
         "TriggerDisable": "觸發未啟用",
         "SpecificTime": "特定時間",
         "SpecificPeriod": "特定期間",
@@ -60,7 +60,7 @@
         "RelationshipAttack": "依好感度攻擊",
         "Remove": "移除",
         "Add": "新增",
-        "RemoveAllState": "$t(Custom.Remove)所有狀態",
+        "RemoveAllState": "{@Custom.Remove}所有狀態",
         "BanAction": "無法動作",
         "Use": "使用",
         "Have": "存在",
@@ -89,7 +89,7 @@
         "SetTriggerTime": "設定觸發時間",
         "SetTrigger": "設定觸發",
         "SetClear": "設定結束",
-        "SetBattleSkill": "$t(System.Battle)$t(System.BattleSkillSetting)",
+        "SetBattleSkill": "{@System.Battle}{@System.BattleSkillSetting}",
         "SetTitlePartner": "設定標題畫面",
         "AddStory": "添加傳記",
         "ShowPicture": "顯示插圖",
@@ -111,99 +111,114 @@
         "HideCharacter": "隱藏角色"
     },
     "Character": {
-        "playerLeft": "$t(Character.player)",
-        "playerRight": "$t(Character.player)",
-        "brother1_upper": "$t(Character.brother1)",
-        "brother1_lower": "$t(Character.brother1)",
+        "playerLeft": "{@Character.player}",
+        "playerRight": "{@Character.player}",
+        "brother1_upper": "{@Character.brother1}",
+        "brother1_lower": "{@Character.brother1}",
         "special213": "李元棄"
     },
     "CombatAction": {
-        "none": "$t(System.NA)",
-        "talk": "$t(CombatAction.curse)"
+        "none": "{@System.NA}",
+        "talk": "{@CombatAction.curse}"
     },
     "CombatSkill": {
-        "Unknown": "$t(Custom.Unknown)"
+        "Unknown": "{@Custom.Unknown}"
     },
     "DialogType": {
         "character": "說",
         "think": "想",
         "narrative": "旁白",
         "center": "過場",
-        "unknown": "$t(Custom.Unknown)"
+        "unknown": "{@Custom.Unknown}"
     },
     "EnemyTeam": {
-        "-20": "$t(Custom.Unknown)",
-        "-50": "$t(Custom.Unknown)"
+        "-20": "{@Custom.Unknown}",
+        "-50": "{@Custom.Unknown}"
     },
     "Flag": {
         "YesNo": {
-            "0": "$t(Custom.False)",
-            "1": "$t(Custom.True)"
+            "0": "{@Custom.False}",
+            "1": "{@Custom.True}"
         },
         "Own": {
-            "0": "$t(System.NA)",
-            "1": "$t(Custom.Own)"
+            "0": "{@System.NA}",
+            "1": "{@Custom.Own}"
         },
         "Match": {
             "0": "不符",
             "1": "符合"
         }
     },
+    "Label": {
+        "Achievement": "🏆{@Library.Name.{0}}",
+        "Dead": "💀{@Library.Name.{0}}",
+        "End": "🗃️{@Library.Name.{0}}",
+        "Talent": "✨{@Talent.Name.{0}}",
+        "Book": "📕{@Book.Name.{0}}",
+        "Special": "👑{@Special.Name.{0}}",
+        "Equip": "🛡️{@Equip.Name.{0}}",
+        "Misc": "💊{@Misc.Name.{0}}",
+        "Flag": "🚩{@Flag.{0}}",
+        "Character": "👤{@Character.{0}}",
+        "Relationship": "❤️{@Character.{0}}",
+        "RelationshipFlag": "❤️{@Flag.{0}}",
+        "Position": "📍{@Position.Name.{0}}",
+        "Mission": "📜{@Mission.{0}}",
+        "Trigger": "⚡{@Trigger.{0}}",
+        "Time": "⚡{@Time.{0}}",
+        "Script": "📃{@Script.{0}}",
+        "Free": "👣{@Free.{0}}",
+        "Combat": "⚔️{@System.Combat}{@Combat.{0}}",
+        "Battle": "⚔️{@System.Battle}{@Battle.{0}}",
+        "Buff": "⤴️{@CombatSkill.Name.{0}}",
+        "Debuff": "⤵️{@CombatSkill.Name.{0}}",
+        "Support": "🚹{@CombatSkill.Name.{0}}"
+    },
     "MapPosition": {
         "Name": {
-            "901": "$t(Script.ch2_4_3_break_start_01.name)",
-            "902": "$t(Trigger.ch2_2_3_1_travel.name)",
-            "903": "$t(Trigger.ch2_2_4_1_travel.name)",
-            "904": "$t(Trigger.ch3_2_3_1_travel.name)",
-            "905": "$t(Trigger.ch3_6_1_break_01.name)",
-            "906": "$t(Trigger.ch3_15_travel.name)",
-            "907": "$t(Trigger.ch3_1_7_2_01.name)",
-            "908": "$t(Trigger.ch3_1_ch4_7_6_travel7_2_01.name)",
-            "909": "$t(Trigger.S2501_01_travel.name)",
-            "910": "$t(Trigger.S2503_break_01.name)",
-            "911": "$t(Trigger.ch6_3_2_travel.name)",
-            "912": "$t(Trigger.ch6_4_3_break_01.name)"
+            "901": "{@Script.ch2_4_3_break_start_01.name}",
+            "902": "{@Trigger.ch2_2_3_1_travel.name}",
+            "903": "{@Trigger.ch2_2_4_1_travel.name}",
+            "904": "{@Trigger.ch3_2_3_1_travel.name}",
+            "905": "{@Trigger.ch3_6_1_break_01.name}",
+            "906": "{@Trigger.ch3_15_travel.name}",
+            "907": "{@Trigger.ch3_1_7_2_01.name}",
+            "908": "{@Trigger.ch3_1_ch4_7_6_travel7_2_01.name}",
+            "909": "{@Trigger.S2501_01_travel.name}",
+            "910": "{@Trigger.S2503_break_01.name}",
+            "911": "{@Trigger.ch6_3_2_travel.name}",
+            "912": "{@Trigger.ch6_4_3_break_01.name}"
         }
     },
     "Middle": {
-        "exit": "$t(Middle.quit)"
-    },
-    "Name": {
-        "Achievement": "$t(System.Menu.LibraryAchievement)｢$t(Library.Name.{{0}})｣",
-        "Dead": "$t(System.Menu.LibraryDead)｢$t(Library.Name.{{0}})｣",
-        "End": "$t(System.Menu.LibraryEnd)｢$t(Library.Name.{{0}})｣",
-        "Talent": "$t(System.Title.Talent)❮$t(Talent.Name.{{0}})❯",
-        "Book": "$t(System.Title.Book)❮$t(Book.Name.{{0}})❯",
-        "Special": "$t(System.Title.Special)❮$t(Special.Name.{{0}})❯",
-        "Equip": "$t(System.Title.Develop)❮$t(Equip.Name.{{0}})❯",
-        "Misc": "$t(System.Title.Misc)❮$t(Misc.Name.{{0}})❯"
+        "exit": "{@Middle.quit}"
     },
     "PlayerStat": {
         "cook": "廚藝",
-        "level": "$t(PlayerStat.faction)",
+        "level": "{@PlayerStat.faction}",
         "title": "稱號",
-        "total-martial-point": "$t(Custom.Total)$t(PlayerStat.martial-point)",
-        "total-poison-point": "$t(Custom.Total)$t(PlayerStat.poison)",
-        "total-weapon-point": "$t(Custom.Total)$t(PlayerStat.weapon)",
-        "total-contribution": "$t(Custom.Total)$t(PlayerStat.contribution)",
-        "action-count": "$t(PlayerStat.action)",
+        "total-martial-point": "{@Custom.Total}{@PlayerStat.martial-point}",
+        "total-poison-point": "{@Custom.Total}{@PlayerStat.poison}",
+        "total-weapon-point": "{@Custom.Total}{@PlayerStat.weapon}",
+        "total-contribution": "{@Custom.Total}{@PlayerStat.contribution}",
+        "action-count": "{@PlayerStat.action}",
         "hp": "血量",
         "sp": "氣力"
     },
     "Position": {
         "Name": {
             "Map": "大地圖",
-            "Run": "$t(Story.O_Door_Girl_03_01_001)"
+            "Run": "{@Story.O_Door_Girl_03_01_001}"
         },
         "title": {
-            "before-pickwood": "挑柴前",
-            "before-training": "修練前",
-            "fish": "$t(Story.O_2_4_3_Break_01_003)",
-            "casino2": "$t(Story.O_2_4_3_Break_01_005)",
-            "sleep2": "$t(Story.O_Section_01_Free_Start_02_001)",
-            "sleep3": "$t(Story.O_Section_02_Free_Start_02_001)",
-            "walk3": "$t(Story.O_2_4_3_Break_01_004)",
-            "walk4": "$t(Story.O_3_6_1_Break_Start_01_001)",
+            "before-pickwood": "{@Position.title.pickwood}前",
+            "before-training": "{@Position.title.training}前",
+            "fish": "{@Story.O_2_4_3_Break_01_003}",
+            "casino2": "{@Story.O_2_4_3_Break_01_005}",
+            "sleep2": "{@Story.O_Section_01_Free_Start_02_001}",
+            "sleep3": "{@Story.O_Section_02_Free_Start_02_001}",
+            "walk3": "{@Story.O_2_4_3_Break_01_004}",
+            "walk4": "{@Story.O_3_6_1_Break_Start_01_001}",
             "robbed": "再次被搶",
             "run": "跑步",
             "rival": "遭遇情敵",
@@ -211,7 +226,7 @@
             "travel2": "前半移動",
             "travel3": "後半移動",
             "night": "守夜",
-            "music": "$t(Story.O_6_4_3_Break_01_003)"
+            "music": "{@Story.O_6_4_3_Break_01_003}"
         },
         "Remark": {
             "Common": {
@@ -220,6 +235,6 @@
         }
     },
     "Story": {
-        "A": "$t(Custom.InvalidOption)"
+        "A": "{@Custom.InvalidOption}"
     }
 }
