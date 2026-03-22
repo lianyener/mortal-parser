@@ -616,7 +616,7 @@ async function getStat(statItem) {
                 case '好感度': {
                     const subId = key.toLowerCase().replace(REGEX_RELATIONSHIP, '$1');
                     return {
-                        name: `{@Label.Relationship,${subId}`,
+                        name: `{@Label.Relationship,${subId}}`,
                         type: 'Relationship',
                         rel: { Character: [subId] }
                     };

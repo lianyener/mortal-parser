@@ -15,8 +15,8 @@
         ],
         "name": "暫存:不識閻關三煞",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "俠影寄雲舟事件，不認識閻關三煞"
       },
@@ -26,8 +26,8 @@
         ],
         "name": "暫存:讓三師兄療傷",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "運功療傷事件，讓三師兄幫你療傷"
       },
@@ -38,7 +38,7 @@
         ],
         "name": "暫存:考官",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "唐中翎",
           "2": "唐陞",
           "3": "唐錚",
@@ -308,8 +308,8 @@
         "script": [],
         "name": "測試用",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -323,8 +323,8 @@
         "script": [],
         "name": "觸發小梅下藥",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否已觸發事件：小梅下藥"
       }
@@ -398,8 +398,8 @@
         "script": [],
         "name": "觸發小梅亂入",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否已觸發事件：小梅亂入"
       }
@@ -413,8 +413,8 @@
         "script": [],
         "name": "觸發雙妹摺船",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否已觸發事件：無敵號與一團廢紙"
       }
@@ -428,8 +428,8 @@
         "script": [],
         "name": "決鬥結果",
         "value": {
-          "0": "$t(Custom.Lost)",
-          "1": "$t(Custom.Win)"
+          "0": "{@Custom.Lost}",
+          "1": "{@Custom.Win}"
         },
         "desc": "決鬥結果"
       }
@@ -443,8 +443,8 @@
         "script": [],
         "name": "觸發登崖眺望",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否已觸發事件：登崖眺望"
       }
@@ -458,8 +458,8 @@
         "script": [],
         "name": "戰役結果",
         "value": {
-          "0": "$t(Custom.Lost)",
-          "1": "$t(Custom.Win)"
+          "0": "{@Custom.Lost}",
+          "1": "{@Custom.Win}"
         },
         "desc": "戰役結果"
       }
@@ -473,8 +473,8 @@
         "script": [],
         "name": "戰龍淵結果",
         "value": {
-          "0": "$t(Custom.Lost)",
-          "1": "$t(Custom.Win)"
+          "0": "{@Custom.Lost}",
+          "1": "{@Custom.Win}"
         },
         "desc": "戰龍淵結果"
       }
@@ -504,8 +504,8 @@
         "script": [],
         "name": "煎藥戰唐布衣結果",
         "value": {
-          "0": "$t(Custom.Lost)",
-          "1": "$t(Custom.Win)"
+          "0": "{@Custom.Lost}",
+          "1": "{@Custom.Win}"
         },
         "desc": "煎藥戰大師兄結果"
       }
@@ -531,8 +531,8 @@
         "script": [],
         "name": "戰王二壯結果",
         "value": {
-          "0": "$t(Custom.Lost)",
-          "1": "$t(Custom.Win)"
+          "0": "{@Custom.Lost}",
+          "1": "{@Custom.Win}"
         },
         "desc": "戰王二壯結果"
       }
@@ -588,9 +588,9 @@
         "script": [],
         "name": "戰閻關三煞結果",
         "value": {
-          "0": "$t(System.NA)",
-          "1": "$t(Custom.Win)",
-          "2": "$t(Custom.Lost)"
+          "0": "{@System.NA}",
+          "1": "{@Custom.Win}",
+          "2": "{@Custom.Lost}"
         },
         "desc": "戰閻關三煞結果"
       }
@@ -619,8 +619,8 @@
         "script": [],
         "name": "參觀錦香宮",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "前往武林大會路過錦香宮時，是否參觀錦香宮"
       }
@@ -634,8 +634,8 @@
         "script": [],
         "name": "假扮葉雲舟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "遇閻關三煞時，是否假扮葉雲舟"
       }
@@ -649,8 +649,8 @@
         "script": [],
         "name": "試玩版",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "試玩版"
       }
@@ -700,8 +700,8 @@
         "script": [],
         "name": "招募被飛石幫搶劫",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "第一章招募弟子，被飛石幫毆打一頓"
       }
@@ -715,8 +715,8 @@
         "script": [],
         "name": "暴怒殺死三煞",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "俠影寄雲舟事件，暴怒殺死閻關三煞"
       }
@@ -742,8 +742,8 @@
         "script": [],
         "name": "與飛石幫和解",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與飛石幫和解"
       }
@@ -757,8 +757,8 @@
         "script": [],
         "name": "點蒼劍鬼前提",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "點蒼劍鬼前提"
       }
@@ -772,8 +772,8 @@
         "script": [],
         "name": "與劉顎襲擊南嵩山",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "曾跟劉顎一起襲擊南嵩山"
       }
@@ -799,8 +799,8 @@
         "script": [],
         "name": "招待飛石幫",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "飛石幫來訪時選擇招待"
       }
@@ -814,8 +814,8 @@
         "script": [],
         "name": "被嵩山派抓走",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "曾經被嵩山派抓走"
       }
@@ -829,8 +829,8 @@
         "script": [],
         "name": "辣眼郎中",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "辣眼郎中"
       }
@@ -844,8 +844,8 @@
         "script": [],
         "name": "李大夫友善",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "李大夫對你友善"
       }
@@ -859,8 +859,8 @@
         "script": [],
         "name": "打算還龍湘錢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "打算還龍湘錢"
       }
@@ -874,8 +874,8 @@
         "script": [],
         "name": "告訴葉雲舟免還錢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "俠影寄雲舟事件，告訴葉雲舟不用還錢"
       }
@@ -889,8 +889,8 @@
         "script": [],
         "name": "龍湘請客約定",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘欠你一頓飯"
       }
@@ -904,8 +904,8 @@
         "script": [],
         "name": "觸發二師兄團練",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發過二師兄團練"
       }
@@ -919,8 +919,8 @@
         "script": [],
         "name": "唐布衣在唐門",
         "value": {
-          "0": "$t(Custom.True)",
-          "1": "$t(Custom.False)"
+          "0": "{@Custom.True}",
+          "1": "{@Custom.False}"
         },
         "desc": "大師兄是否在唐門"
       }
@@ -934,8 +934,8 @@
         "script": [],
         "name": "醫治葉雲裳",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發過醫治葉雲裳"
       }
@@ -949,8 +949,8 @@
         "script": [],
         "name": "少俠替葉雲舟還錢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "藏寶圖事件，江湖少俠已經還過錢了"
       }
@@ -964,8 +964,8 @@
         "script": [],
         "name": "唐錚在唐門",
         "value": {
-          "0": "$t(Custom.True)",
-          "1": "$t(Custom.False)"
+          "0": "{@Custom.True}",
+          "1": "{@Custom.False}"
         },
         "desc": "二師兄是否在唐門"
       }
@@ -979,8 +979,8 @@
         "script": [],
         "name": "唐陞代掌門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "三師兄為代掌門"
       }
@@ -994,8 +994,8 @@
         "script": [],
         "name": "唐中翎在唐門",
         "value": {
-          "0": "$t(Custom.True)",
-          "1": "$t(Custom.False)"
+          "0": "{@Custom.True}",
+          "1": "{@Custom.False}"
         },
         "desc": "掌門人是否在唐門，臥病視為不在"
       }
@@ -1009,8 +1009,8 @@
         "script": [],
         "name": "唐默鈴在唐門",
         "value": {
-          "0": "$t(Custom.True)",
-          "1": "$t(Custom.False)"
+          "0": "{@Custom.True}",
+          "1": "{@Custom.False}"
         },
         "desc": "小師妹是否在唐門"
       }
@@ -1024,8 +1024,8 @@
         "script": [],
         "name": "唐惟元在唐門",
         "value": {
-          "0": "$t(Custom.True)",
-          "1": "$t(Custom.False)"
+          "0": "{@Custom.True}",
+          "1": "{@Custom.False}"
         },
         "desc": "四師兄是否在唐門"
       }
@@ -1039,8 +1039,8 @@
         "script": [],
         "name": "唐陞在唐門",
         "value": {
-          "0": "$t(Custom.True)",
-          "1": "$t(Custom.False)"
+          "0": "{@Custom.True}",
+          "1": "{@Custom.False}"
         },
         "desc": "三師兄是否在唐門"
       }
@@ -1054,8 +1054,8 @@
         "script": [],
         "name": "趙活在唐門",
         "value": {
-          "0": "$t(Custom.True)",
-          "1": "$t(Custom.False)"
+          "0": "{@Custom.True}",
+          "1": "{@Custom.False}"
         },
         "desc": "主角是否在唐門"
       }
@@ -1069,8 +1069,8 @@
         "script": [],
         "name": "葉雲裳在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲裳在唐門"
       }
@@ -1084,8 +1084,8 @@
         "script": [],
         "name": "上官螢在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "上官螢在唐門"
       }
@@ -1099,8 +1099,8 @@
         "script": [],
         "name": "魏菊在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小菊在唐門"
       }
@@ -1114,8 +1114,8 @@
         "script": [],
         "name": "虞小梅在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅在唐門"
       }
@@ -1129,8 +1129,8 @@
         "script": [],
         "name": "郁竹在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小竹在唐門"
       }
@@ -1144,8 +1144,8 @@
         "script": [],
         "name": "龍湘在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘在唐門"
       }
@@ -1159,8 +1159,8 @@
         "script": [],
         "name": "夏侯蘭在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小蘭在唐門"
       }
@@ -1174,8 +1174,8 @@
         "script": [],
         "name": "葉雲舟在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲舟在唐門"
       }
@@ -1189,8 +1189,8 @@
         "script": [],
         "name": "晁和在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "假趙活在唐門"
       }
@@ -1204,8 +1204,8 @@
         "script": [],
         "name": "福韞在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "福韞在唐門"
       }
@@ -1219,8 +1219,8 @@
         "script": [],
         "name": "李富貴在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "李富貴在唐門"
       }
@@ -1234,8 +1234,8 @@
         "script": [],
         "name": "畫中仙在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "畫中仙在唐門"
       }
@@ -1249,8 +1249,8 @@
         "script": [],
         "name": "唐衫在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐衫在唐門"
       }
@@ -1264,8 +1264,8 @@
         "script": [],
         "name": "唐大鯨加入唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐大鯨加入唐門"
       }
@@ -1279,8 +1279,8 @@
         "script": [],
         "name": "葉雲裳曾在唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲裳曾經在唐門"
       }
@@ -1294,8 +1294,8 @@
         "script": [],
         "name": "唐芳歸來",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐芳歸來"
       }
@@ -1309,8 +1309,8 @@
         "script": [],
         "name": "收留虞小梅",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "收留小梅"
       }
@@ -1324,8 +1324,8 @@
         "script": [],
         "name": "唐嬌嬌加入唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐嬌嬌加入唐門"
       }
@@ -1339,8 +1339,8 @@
         "script": [],
         "name": "收留郁竹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "收留小竹"
       }
@@ -1354,8 +1354,8 @@
         "script": [],
         "name": "唐衫正式加入唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐衫正式加入唐門"
       }
@@ -1369,8 +1369,8 @@
         "script": [],
         "name": "唐杉加入唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐杉加入唐門"
       }
@@ -1384,8 +1384,8 @@
         "script": [],
         "name": "樊嘯天加入唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "樊嘯天加入唐門"
       }
@@ -1399,8 +1399,8 @@
         "script": [],
         "name": "龍湘加入唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘加入唐門"
       }
@@ -1414,8 +1414,8 @@
         "script": [],
         "name": "葉雲舟加入唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲舟加入唐門"
       }
@@ -1429,8 +1429,8 @@
         "script": [],
         "name": "福韞加入唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "福韞加入唐門"
       }
@@ -1444,8 +1444,8 @@
         "script": [],
         "name": "李富貴加入唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "李富貴加入唐門"
       }
@@ -1459,8 +1459,8 @@
         "script": [],
         "name": "解無塵加入唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "解無塵加入唐門"
       }
@@ -1474,8 +1474,8 @@
         "script": [],
         "name": "丹霞子加入唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "丹霞子加入唐門"
       }
@@ -1489,8 +1489,8 @@
         "script": [],
         "name": "葉雲裳死亡",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲裳死亡"
       }
@@ -1504,8 +1504,8 @@
         "script": [],
         "name": "福韞死亡",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "福韞死亡"
       }
@@ -1519,8 +1519,8 @@
         "script": [],
         "name": "釋明死亡",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "釋明死亡"
       }
@@ -1534,8 +1534,8 @@
         "script": [],
         "name": "夏侯蘭死亡",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小蘭死亡"
       }
@@ -1549,8 +1549,8 @@
         "script": [],
         "name": "活捉譚霸刀",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否有捉譚霸刀"
       }
@@ -1564,8 +1564,8 @@
         "script": [],
         "name": "解釋口嚼茶",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "和魏菊解釋口嚼茶"
       }
@@ -1579,8 +1579,8 @@
         "script": [],
         "name": "揍過方震天",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "揍過方震天"
       }
@@ -1594,8 +1594,8 @@
         "script": [],
         "name": "觸發乞丐與和尚",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否觸發事件：乞丐與和尚"
       }
@@ -1609,8 +1609,8 @@
         "script": [],
         "name": "樊嘯天拜師夏侯蘭",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "樊嘯天拜師夏侯蘭"
       }
@@ -1624,8 +1624,8 @@
         "script": [],
         "name": "揍過福韞",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "揍福韞"
       }
@@ -1639,8 +1639,8 @@
         "script": [],
         "name": "觸發萬壽屍心丹完成",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否觸發事件：萬壽屍心丹完成"
       }
@@ -1654,8 +1654,8 @@
         "script": [],
         "name": "畜生道之緣",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "六道之緣・畜生"
       }
@@ -1669,8 +1669,8 @@
         "script": [],
         "name": "觸發郁竹回家",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否觸發事件：郁竹回家"
       }
@@ -1684,8 +1684,8 @@
         "script": [],
         "name": "外堡追加1",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -1699,8 +1699,8 @@
         "script": [],
         "name": "抓到迷魂大盜",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "抓到迷魂大盜"
       }
@@ -1714,8 +1714,8 @@
         "script": [],
         "name": "茶肆追加1",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -1729,8 +1729,8 @@
         "script": [],
         "name": "茶肆追加果子",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "虞小梅發明果子"
       }
@@ -1744,8 +1744,8 @@
         "script": [],
         "name": "藥鋪追加1",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -1759,8 +1759,8 @@
         "script": [],
         "name": "義田追加1",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -1774,8 +1774,8 @@
         "script": [],
         "name": "練功塔追加1",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -1789,8 +1789,8 @@
         "script": [],
         "name": "溫泉追加1",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -1972,8 +1972,8 @@
         "script": [],
         "name": "向龍湘告白",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "向龍湘告白"
       }
@@ -1987,8 +1987,8 @@
         "script": [],
         "name": "認識上官螢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識上官螢"
       }
@@ -2002,8 +2002,8 @@
         "script": [],
         "name": "認識葉雲裳",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識葉雲裳"
       }
@@ -2017,8 +2017,8 @@
         "script": [],
         "name": "認識龍湘",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識龍湘"
       }
@@ -2032,8 +2032,8 @@
         "script": [],
         "name": "認識夏侯蘭",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識小蘭"
       }
@@ -2047,8 +2047,8 @@
         "script": [],
         "name": "認識虞小梅",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識小梅"
       }
@@ -2062,8 +2062,8 @@
         "script": [],
         "name": "認識郁竹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識小竹"
       }
@@ -2077,8 +2077,8 @@
         "script": [],
         "name": "認識魏菊",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識小菊"
       }
@@ -2092,8 +2092,8 @@
         "script": [],
         "name": "和上官螢結緣",
         "value": {
-          "0": "$t(System.NA)",
-          "1": "$t(Custom.True)",
+          "0": "{@System.NA}",
+          "1": "{@Custom.True}",
           "2": "斷"
         },
         "desc": "和上官螢結緣"
@@ -2108,8 +2108,8 @@
         "script": [],
         "name": "和唐默鈴結緣",
         "value": {
-          "0": "$t(System.NA)",
-          "1": "$t(Custom.True)",
+          "0": "{@System.NA}",
+          "1": "{@Custom.True}",
           "2": "斷"
         },
         "desc": "和唐默鈴結緣"
@@ -2124,8 +2124,8 @@
         "script": [],
         "name": "和葉雲裳結緣",
         "value": {
-          "0": "$t(System.NA)",
-          "1": "$t(Custom.True)",
+          "0": "{@System.NA}",
+          "1": "{@Custom.True}",
           "2": "斷"
         },
         "desc": "和葉雲裳結緣"
@@ -2140,8 +2140,8 @@
         "script": [],
         "name": "認識瑞杏",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識瑞杏"
       }
@@ -2155,8 +2155,8 @@
         "script": [],
         "name": "和龍湘結緣",
         "value": {
-          "0": "$t(System.NA)",
-          "1": "$t(Custom.True)",
+          "0": "{@System.NA}",
+          "1": "{@Custom.True}",
           "2": "斷"
         },
         "desc": "和龍湘結緣"
@@ -2171,8 +2171,8 @@
         "script": [],
         "name": "和虞小梅結緣",
         "value": {
-          "0": "$t(System.NA)",
-          "1": "$t(Custom.True)",
+          "0": "{@System.NA}",
+          "1": "{@Custom.True}",
           "2": "斷"
         },
         "desc": "和虞小梅結緣"
@@ -2187,8 +2187,8 @@
         "script": [],
         "name": "和夏侯蘭結緣",
         "value": {
-          "0": "$t(System.NA)",
-          "1": "$t(Custom.True)",
+          "0": "{@System.NA}",
+          "1": "{@Custom.True}",
           "2": "斷"
         },
         "desc": "和夏侯蘭結緣"
@@ -2203,8 +2203,8 @@
         "script": [],
         "name": "和郁竹結緣",
         "value": {
-          "0": "$t(System.NA)",
-          "1": "$t(Custom.True)",
+          "0": "{@System.NA}",
+          "1": "{@Custom.True}",
           "2": "斷"
         },
         "desc": "和郁竹結緣"
@@ -2219,8 +2219,8 @@
         "script": [],
         "name": "和魏菊結緣",
         "value": {
-          "0": "$t(System.NA)",
-          "1": "$t(Custom.True)",
+          "0": "{@System.NA}",
+          "1": "{@Custom.True}",
           "2": "斷"
         },
         "desc": "和魏菊結緣"
@@ -2235,8 +2235,8 @@
         "script": [],
         "name": "和瑞杏結緣",
         "value": {
-          "0": "$t(System.NA)",
-          "1": "$t(Custom.True)",
+          "0": "{@System.NA}",
+          "1": "{@Custom.True}",
           "2": "斷"
         },
         "desc": "和瑞杏結緣"
@@ -2263,8 +2263,8 @@
         "script": [],
         "name": "認識瑞笙",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識瑞笙"
       }
@@ -2278,8 +2278,8 @@
         "script": [],
         "name": "認識劉顎",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識劉顎"
       }
@@ -2293,8 +2293,8 @@
         "script": [],
         "name": "認識解無塵",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識解無塵"
       }
@@ -2308,8 +2308,8 @@
         "script": [],
         "name": "認識申屠龍",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識申屠龍"
       }
@@ -2323,8 +2323,8 @@
         "script": [],
         "name": "認識千面人魔",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識千面人魔"
       }
@@ -2338,8 +2338,8 @@
         "script": [],
         "name": "認識葉雲舟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識葉雲舟"
       }
@@ -2353,8 +2353,8 @@
         "script": [],
         "name": "認識宋悲",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識宋悲"
       }
@@ -2368,8 +2368,8 @@
         "script": [],
         "name": "認識龍淵",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識龍淵"
       }
@@ -2383,8 +2383,8 @@
         "script": [],
         "name": "認識丹霞子",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識丹霞子"
       }
@@ -2398,8 +2398,8 @@
         "script": [],
         "name": "認識樊嘯天",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識樊嘯天"
       }
@@ -2413,8 +2413,8 @@
         "script": [],
         "name": "認識王二壯",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識王二壯"
       }
@@ -2428,8 +2428,8 @@
         "script": [],
         "name": "認識萬里鵬程",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識萬里鵬程"
       }
@@ -2443,8 +2443,8 @@
         "script": [],
         "name": "認識福韞",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識福韞"
       }
@@ -2458,8 +2458,8 @@
         "script": [],
         "name": "認識李富貴",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識李富貴"
       }
@@ -2473,8 +2473,8 @@
         "script": [],
         "name": "認識趙逵",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "認識趙逵"
       }
@@ -2488,8 +2488,8 @@
         "script": [],
         "name": "解鎖護衛工作",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "解鎖護衛工作"
       }
@@ -2763,8 +2763,8 @@
         "script": [],
         "name": "天武門加入唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -2778,8 +2778,8 @@
         "script": [],
         "name": "觸發小梅果子",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否觸發事件：小梅果子"
       }
@@ -2793,8 +2793,8 @@
         "script": [],
         "name": "觸發晁和請客",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否觸發事件：晁和請客"
       }
@@ -2808,8 +2808,8 @@
         "script": [],
         "name": "觸發俠影寄雲舟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否觸發事件：俠影寄雲舟"
       }
@@ -2823,8 +2823,8 @@
         "script": [],
         "name": "向石公遠辯護大師兄",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "見石公遠，幫大師兄說話"
       }
@@ -2838,8 +2838,8 @@
         "script": [],
         "name": "與三師兄提樊嘯天",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "提及過樊嘯天"
       }
@@ -2853,8 +2853,8 @@
         "script": [],
         "name": "打劫山賊",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "和大師兄打劫山賊"
       }
@@ -2868,8 +2868,8 @@
         "script": [],
         "name": "字畫被調包",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "亂畫圖賣給耕陽讀書齋"
       }
@@ -2919,8 +2919,8 @@
         "script": [],
         "name": "夏侯蘭綁架上官螢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "上官螢曾被夏侯蘭綁架"
       }
@@ -2934,8 +2934,8 @@
         "script": [],
         "name": "雪山飛鴻爪前提",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "雪山飛鴻爪"
       }
@@ -2949,8 +2949,8 @@
         "script": [],
         "name": "前次段考結果",
         "value": {
-          "0": "$t(Custom.Win)",
-          "1": "$t(Custom.Lost)"
+          "0": "{@Custom.Win}",
+          "1": "{@Custom.Lost}"
         },
         "desc": "上次段考決鬥敗北"
       }
@@ -2964,8 +2964,8 @@
         "script": [],
         "name": "揍過晁和",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "揍假趙活"
       }
@@ -2979,8 +2979,8 @@
         "script": [],
         "name": "戰勝過龍湘",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "曾戰勝過龍湘"
       }
@@ -2994,8 +2994,8 @@
         "script": [],
         "name": "戰勝過解無塵",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "曾戰勝過解無塵"
       }
@@ -3009,8 +3009,8 @@
         "script": [],
         "name": "亂丟垃圾",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "亂丟垃圾"
       }
@@ -3024,8 +3024,8 @@
         "script": [],
         "name": "屍弟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "屍弟"
       }
@@ -3051,8 +3051,8 @@
         "script": [],
         "name": "輸過解無塵",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "曾被解無塵打敗過"
       }
@@ -3078,8 +3078,8 @@
         "script": [],
         "name": "觸發龍湘炒菜",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否觸發事件：龍湘炒菜"
       }
@@ -3093,8 +3093,8 @@
         "script": [],
         "name": "龍湘中石灰粉",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘被石灰粉弄眼"
       }
@@ -3149,8 +3149,8 @@
         "script": [],
         "name": "揍過上官螢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "毆打上官螢"
       }
@@ -3164,8 +3164,8 @@
         "script": [],
         "name": "晁和被上官螢抓",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "晁和被上官螢抓"
       }
@@ -3179,8 +3179,8 @@
         "script": [],
         "name": "禁入客棧強詞奪理",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "離家出走入住客棧，因葉雲裳被通緝，選擇強詞奪理"
       }
@@ -3194,8 +3194,8 @@
         "script": [],
         "name": "聽過嶺南派事情",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "聽三師兄說過嶺南派的事情"
       }
@@ -3224,8 +3224,8 @@
         "script": [],
         "name": "與葉雲舟對立",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與葉雲舟對立"
       }
@@ -3239,8 +3239,8 @@
         "script": [],
         "name": "收留葉家兄妹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐門收留葉式兄妹"
       }
@@ -3254,8 +3254,8 @@
         "script": [],
         "name": "被劉顎綁架",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "曾被劉顎綁架"
       }
@@ -3269,8 +3269,8 @@
         "script": [],
         "name": "大師兄會喇逼雕",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "大師兄學會喇逼雕"
       }
@@ -3284,8 +3284,8 @@
         "script": [],
         "name": "首次段考",
         "value": {
-          "0": "$t(Custom.Lost)",
-          "1": "$t(Custom.Win)"
+          "0": "{@Custom.Lost}",
+          "1": "{@Custom.Win}"
         },
         "desc": "段考勝利"
       }
@@ -3299,8 +3299,8 @@
         "script": [],
         "name": "護送上官螢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "護送上官螢"
       }
@@ -3314,7 +3314,7 @@
         "script": [],
         "name": "後山發言",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "自強",
           "2": "糾正"
         },
@@ -3330,7 +3330,7 @@
         "script": [],
         "name": "首次段考考官",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "唐中翎",
           "2": "唐陞",
           "3": "唐錚",
@@ -3348,8 +3348,8 @@
         "script": [],
         "name": "獲龍吟功秘笈",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "獲得龍吟功秘笈"
       }
@@ -3363,8 +3363,8 @@
         "script": [],
         "name": "龍湘落水",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘落水沒死被河水沖走"
       }
@@ -3378,7 +3378,7 @@
         "script": [],
         "name": "對大師兄惜花令",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "辯護",
           "2": "造謠"
         },
@@ -3394,8 +3394,8 @@
         "script": [],
         "name": "焚香接待上官螢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "初見焚香"
       }
@@ -3409,8 +3409,8 @@
         "script": [],
         "name": "閻關三煞時逃跑",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "曾在閻關三煞時選擇逃跑"
       }
@@ -3424,8 +3424,8 @@
         "script": [],
         "name": "趕走上官螢僕人",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "趕走了上官螢的僕人"
       }
@@ -3439,8 +3439,8 @@
         "script": [],
         "name": "與龍湘姊弟相稱",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與龍湘姊弟相稱"
       }
@@ -3454,8 +3454,8 @@
         "script": [],
         "name": "觸發雪山行",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否觸發：雪山行"
       }
@@ -3493,8 +3493,8 @@
         "script": [],
         "name": "追加夏侯蘭敵人事件(蘭死亡)",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "追加遭遇事件：夏侯蘭的敵人(小蘭死亡)"
       }
@@ -3508,8 +3508,8 @@
         "script": [],
         "name": "唐默鈴參加南宮家宴",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小師妹參加南宮家宴"
       }
@@ -3523,8 +3523,8 @@
         "script": [],
         "name": "支持自己當掌門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "支持自己當掌門"
       }
@@ -3538,8 +3538,8 @@
         "script": [],
         "name": "追加夏侯蘭敵人事件(蘭存活)",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "追加遭遇事件：夏侯蘭的敵人(小蘭存活)"
       }
@@ -3553,8 +3553,8 @@
         "script": [],
         "name": "知杏花仙存在",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "已經知曉了杏花仙的存在"
       }
@@ -3568,8 +3568,8 @@
         "script": [],
         "name": "天王座來訪",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "天王座來訪"
       }
@@ -3583,7 +3583,7 @@
         "script": [],
         "name": "壽禮方案",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "仇人",
           "2": "丹藥",
           "3": "字畫"
@@ -3600,7 +3600,7 @@
         "script": [],
         "name": "萬壽屍心丹",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "成功",
           "-1": "失敗"
         },
@@ -3616,8 +3616,8 @@
         "script": [],
         "name": "接受陰陽調和治法",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "陰陽調和治法"
       }
@@ -3631,8 +3631,8 @@
         "script": [],
         "name": "辛儒回歸",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "辛儒回歸唐門"
       }
@@ -3646,7 +3646,7 @@
         "script": [],
         "name": "留學",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "青城",
           "2": "崆峒"
         },
@@ -3662,8 +3662,8 @@
         "script": [],
         "name": "壽禮字畫有貢獻",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "三師兄字畫，你也有貢獻"
       }
@@ -3703,8 +3703,8 @@
         "script": [],
         "name": "觸發小梅邀請",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否觸發事件：小梅邀請"
       }
@@ -3718,7 +3718,7 @@
         "script": [],
         "name": "崆峒門派",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "飛天",
           "2": "奪魄",
           "3": "玄功",
@@ -3736,8 +3736,8 @@
         "script": [],
         "name": "聽擂台解說",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "死亡擂台解說"
       }
@@ -3775,8 +3775,8 @@
         "script": [],
         "name": "和小梅吃燒烤",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "燒烤山味"
       }
@@ -3838,8 +3838,8 @@
         "script": [],
         "name": "初入奪魄森林",
         "value": {
-          "0": "$t(Custom.True)",
-          "1": "$t(Custom.False)"
+          "0": "{@Custom.True}",
+          "1": "{@Custom.False}"
         },
         "desc": "造訪奪魄森林"
       }
@@ -3865,8 +3865,8 @@
         "script": [],
         "name": "崆峒被搶過",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "第一次遇到搶劫"
       }
@@ -3880,8 +3880,8 @@
         "script": [],
         "name": "見過大師兄絕招威力",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "捉捕譚霸刀時曾見過大師兄用飛燕流星翎粉碎畫舫"
       }
@@ -3895,8 +3895,8 @@
         "script": [],
         "name": "小師妹守護者",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小師妹守護者"
       }
@@ -3910,8 +3910,8 @@
         "script": [],
         "name": "離家出走前提",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐門留學 離家出走"
       }
@@ -3937,7 +3937,7 @@
         "script": [],
         "name": "離家出走",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "破廟",
           "2": "客棧"
         },
@@ -3965,8 +3965,8 @@
         "script": [],
         "name": "和魏菊下棋",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "和小菊下過棋"
       }
@@ -4016,8 +4016,8 @@
         "script": [],
         "name": "被灌酒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "被灌酒"
       }
@@ -4031,7 +4031,7 @@
         "script": [],
         "name": "戰唐大鯨後續",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "自力勝",
           "2": "唐錚罩",
           "3": "雲裳罩"
@@ -4048,8 +4048,8 @@
         "script": [],
         "name": "三師兄資助",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "離家出走時三師兄有下山送錢"
       }
@@ -4063,7 +4063,7 @@
         "script": [],
         "name": "回程遭遇",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "山豬",
           "2": "山賊",
           "3": "唐默鈴"
@@ -4080,8 +4080,8 @@
         "script": [],
         "name": "被客棧通緝",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "被葉雲裳張貼通緝令"
       }
@@ -4095,8 +4095,8 @@
         "script": [],
         "name": "唐門迎敵",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐門迎敵"
       }
@@ -4110,8 +4110,8 @@
         "script": [],
         "name": "南宮家宴同桌閒聊",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "南宮家宴同桌閒聊"
       }
@@ -4125,8 +4125,8 @@
         "script": [],
         "name": "唐默鈴覺醒醫術",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小師妹覺醒技能[醫術]"
       }
@@ -4140,8 +4140,8 @@
         "script": [],
         "name": "幫南宮己求情",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "有幫南宮己求情"
       }
@@ -4155,8 +4155,8 @@
         "script": [],
         "name": "與南宮淺對練",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與南宮淺對練"
       }
@@ -4206,8 +4206,8 @@
         "script": [],
         "name": "郁竹攜帶虎戰車",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小竹攜帶虎戰車"
       }
@@ -4221,8 +4221,8 @@
         "script": [],
         "name": "救樊嘯天的狗",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "救樊嘯天的狗"
       }
@@ -4236,7 +4236,7 @@
         "script": [],
         "name": "樊嘯天被關狀況",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "看診時",
           "2": "戰役時",
           "3": "看診與戰役時"
@@ -4253,7 +4253,7 @@
         "script": [],
         "name": "江陵優勢方",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "官兵",
           "2": "丐幫",
           "3": "別派"
@@ -4270,8 +4270,8 @@
         "script": [],
         "name": "唐門有功",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐門丐幫戰役獲得勝利"
       }
@@ -4285,7 +4285,7 @@
         "script": [],
         "name": "抓獲丐幫",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "兩成",
           "2": "五成"
         },
@@ -4301,8 +4301,8 @@
         "script": [],
         "name": "被丐幫綁架",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "被丐幫綁架"
       }
@@ -4340,8 +4340,8 @@
         "script": [],
         "name": "可召喚葉雲舟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰役追加葉雲舟召喚技"
       }
@@ -4355,7 +4355,7 @@
         "script": [],
         "name": "虎戰車命名",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "霹靂車",
           "2": "趙活蹂躪者"
         },
@@ -4371,8 +4371,8 @@
         "script": [],
         "name": "上官螢江陵參戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "上官螢參戰江陵大戰"
       }
@@ -4386,8 +4386,8 @@
         "script": [],
         "name": "接受玄功傳承",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "玄功傳承"
       }
@@ -4401,8 +4401,8 @@
         "script": [],
         "name": "瑞笙強化",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "瑞笙全屬性強化"
       }
@@ -4416,8 +4416,8 @@
         "script": [],
         "name": "知王二壯策略",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "聽聞毛二壯的策略"
       }
@@ -4431,8 +4431,8 @@
         "script": [],
         "name": "解無塵強化",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "解無塵全屬性強化"
       }
@@ -4446,8 +4446,8 @@
         "script": [],
         "name": "魏菊出戰王二壯",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "魏菊出戰王二壯"
       }
@@ -4461,8 +4461,8 @@
         "script": [],
         "name": "觸發飛俠千里行",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發大師兄前往金國刺殺皇帝"
       }
@@ -4476,8 +4476,8 @@
         "script": [],
         "name": "魏菊的悲劇",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "魏菊的悲劇"
       }
@@ -4491,8 +4491,8 @@
         "script": [],
         "name": "隨南宮恆訪丐幫",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "隨南宮恆訪問丐幫"
       }
@@ -4506,8 +4506,8 @@
         "script": [],
         "name": "知崆峒秘聞",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "已知崆峒秘聞"
       }
@@ -4521,8 +4521,8 @@
         "script": [],
         "name": "A書獲大師兄幫助",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "A書事件得到大師兄幫助"
       }
@@ -4536,8 +4536,8 @@
         "script": [],
         "name": "獲鐵琵琶功拒入崆峒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "身有鐵琵琶功，卻在江陵大戰後拒絕加入崆峒派"
       }
@@ -4551,8 +4551,8 @@
         "script": [],
         "name": "縱放丐幫",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "縱放丐幫"
       }
@@ -4566,8 +4566,8 @@
         "script": [],
         "name": "觸發笙活雙俠",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發笙活雙俠分支"
       }
@@ -4581,8 +4581,8 @@
         "script": [],
         "name": "王二壯用金剛神槍指",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "王二壯曾經在江陵大戰使用過金剛神槍指"
       }
@@ -4596,8 +4596,8 @@
         "script": [],
         "name": "飛俠千里行前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "飛俠千里行"
       }
@@ -4611,8 +4611,8 @@
         "script": [],
         "name": "聽尹志平提靈丹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -4626,8 +4626,8 @@
         "script": [],
         "name": "向瑞杏許願",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "向瑞杏許願"
       }
@@ -4641,8 +4641,8 @@
         "script": [],
         "name": "江陵參戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "主角參戰江陵大戰"
       }
@@ -4656,8 +4656,8 @@
         "script": [],
         "name": "聽鄒博提靈丹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -4671,8 +4671,8 @@
         "script": [],
         "name": "聽火龍仙君提靈丹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -4686,8 +4686,8 @@
         "script": [],
         "name": "南宮淺打通經脈",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "王二壯幫南宮淺打通任督二脈"
       }
@@ -4701,8 +4701,8 @@
         "script": [],
         "name": "聽趙逵提靈丹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -4716,8 +4716,8 @@
         "script": [],
         "name": "救過上官螢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "上官螢的救命恩人"
       }
@@ -4731,8 +4731,8 @@
         "script": [],
         "name": "上官螢在江陵",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "上官螢來到江陵"
       }
@@ -4746,8 +4746,8 @@
         "script": [],
         "name": "觸發瑞笙江陵劇情",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "江陵大戰觸發瑞笙劇情"
       }
@@ -4761,8 +4761,8 @@
         "script": [],
         "name": "記得碧潤糕",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲裳閒談：碧潤糕開啟"
       }
@@ -4800,8 +4800,8 @@
         "script": [],
         "name": "青城特殊遭遇",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 特殊遭遇"
       }
@@ -4815,8 +4815,8 @@
         "script": [],
         "name": "觸發青城舊識",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 觸發舊識"
       }
@@ -4830,8 +4830,8 @@
         "script": [],
         "name": "觸發鄒掌門嘉勉",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 觸發嘉勉"
       }
@@ -4845,8 +4845,8 @@
         "script": [],
         "name": "勒索青城弟子",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 勒索過青城弟子"
       }
@@ -4860,8 +4860,8 @@
         "script": [],
         "name": "觸發鬼神之相",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 觸發鬼神之相"
       }
@@ -4875,8 +4875,8 @@
         "script": [],
         "name": "鄒博歸來",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 觸發鄒博歸來"
       }
@@ -4890,8 +4890,8 @@
         "script": [],
         "name": "觸發庸才",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 觸發庸才"
       }
@@ -4917,8 +4917,8 @@
         "script": [],
         "name": "申屠龍贈秘笈",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 申屠龍送主角秘笈"
       }
@@ -4944,7 +4944,7 @@
         "script": [],
         "name": "雲裳贈申屠龍秘笈",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "雪球",
           "2": "盤古",
           "3": "斬天"
@@ -4961,8 +4961,8 @@
         "script": [],
         "name": "觸發申屠龍散步遇襲",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 申屠龍散步遭遇襲擊"
       }
@@ -4976,8 +4976,8 @@
         "script": [],
         "name": "葉雲裳離開青城",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 葉雲裳回唐門"
       }
@@ -4991,8 +4991,8 @@
         "script": [],
         "name": "聽段氏世系譜表",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 聽段氏世系譜表"
       }
@@ -5006,8 +5006,8 @@
         "script": [],
         "name": "申屠龍提多散步",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 散步遭遇申屠龍機率上升"
       }
@@ -5021,8 +5021,8 @@
         "script": [],
         "name": "青城與段智秀決鬥",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 與段智秀打架過"
       }
@@ -5036,8 +5036,8 @@
         "script": [],
         "name": "段智秀提到幕後主使",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 幕後主使"
       }
@@ -5051,8 +5051,8 @@
         "script": [],
         "name": "冒充大宋趙氏",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "你冒充大宋趙氏宗親"
       }
@@ -5066,8 +5066,8 @@
         "script": [],
         "name": "贊同趙逵",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "你贊同了趙逵"
       }
@@ -5081,8 +5081,8 @@
         "script": [],
         "name": "青城比試人選申屠龍在場",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 比試人選中，申屠龍在場"
       }
@@ -5096,8 +5096,8 @@
         "script": [],
         "name": "趙逵上青城山",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學 趙逵上山"
       }
@@ -5111,8 +5111,8 @@
         "script": [],
         "name": "觸發道長的地位",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城道長的地位"
       }
@@ -5126,8 +5126,8 @@
         "script": [],
         "name": "青城戰牛頭馬面",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城留學跟牛頭馬面打過"
       }
@@ -5141,8 +5141,8 @@
         "script": [],
         "name": "逃離青城遇木仙姑",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城歸來邂逅木仙姑"
       }
@@ -5156,8 +5156,8 @@
         "script": [],
         "name": "聽趙逵鄒博論道",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "在青城聽趙逵跟鄒博論道"
       }
@@ -5171,8 +5171,8 @@
         "script": [],
         "name": "與飛石幫交戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與飛石幫進入交戰"
       }
@@ -5186,8 +5186,8 @@
         "script": [],
         "name": "與崆峒交戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與崆峒派進入交戰"
       }
@@ -5201,8 +5201,8 @@
         "script": [],
         "name": "與點蒼交戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與點蒼派進入交戰"
       }
@@ -5216,8 +5216,8 @@
         "script": [],
         "name": "與丐幫交戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與丐幫進入交戰"
       }
@@ -5231,8 +5231,8 @@
         "script": [],
         "name": "觸發假趙活",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "假趙活事件"
       }
@@ -5258,8 +5258,8 @@
         "script": [],
         "name": "提案與飛石幫和解",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "曾經提案嚐試與飛石幫和解"
       }
@@ -5273,8 +5273,8 @@
         "script": [],
         "name": "唐杉心冷",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐杉心冷"
       }
@@ -5288,8 +5288,8 @@
         "script": [],
         "name": "大師兄痊癒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "大師兄痊癒"
       }
@@ -5303,8 +5303,8 @@
         "script": [],
         "name": "觸發接掌練丹房",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發接掌練丹房事件"
       }
@@ -5318,8 +5318,8 @@
         "script": [],
         "name": "知大師兄負傷",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "知道大師兄有受傷"
       }
@@ -5333,8 +5333,8 @@
         "script": [],
         "name": "知石公遠過往",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "知道石公遠以前是山賊"
       }
@@ -5348,8 +5348,8 @@
         "script": [],
         "name": "朱嬸包子外堡開張",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "朱嬸蔥肉包子"
       }
@@ -5363,7 +5363,7 @@
         "script": [],
         "name": "臥雲岡回程同行",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "龍湘",
           "2": "福韞"
         },
@@ -5379,8 +5379,8 @@
         "script": [],
         "name": "唐布衣模仿金剛神槍指",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決戰臥雲崗大師兄施展金剛神槍指"
       }
@@ -5394,8 +5394,8 @@
         "script": [],
         "name": "龍湘強化",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘全屬性強化"
       }
@@ -5409,8 +5409,8 @@
         "script": [],
         "name": "觸發千面店小二",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發店小二事件"
       }
@@ -5424,8 +5424,8 @@
         "script": [],
         "name": "小梅同行回唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅與主角們同行回唐門"
       }
@@ -5439,8 +5439,8 @@
         "script": [],
         "name": "觸發女飛賊追殺",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發女飛賊追殺事件"
       }
@@ -5454,7 +5454,7 @@
         "script": [],
         "name": "臥雲崗回程遭受",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "敲頭",
           "2": "吸內力"
         },
@@ -5470,8 +5470,8 @@
         "script": [],
         "name": "戰勝金烏",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰勝金烏上人"
       }
@@ -5497,8 +5497,8 @@
         "script": [],
         "name": "申屠龍內力縮減",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "申屠龍內力大幅縮減"
       }
@@ -5512,8 +5512,8 @@
         "script": [],
         "name": "申屠龍屬性變陽",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "申屠龍屬性變為陽"
       }
@@ -5527,8 +5527,8 @@
         "script": [],
         "name": "虞小梅內力降低",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅內力大幅下降"
       }
@@ -5542,8 +5542,8 @@
         "script": [],
         "name": "見成吉思汗",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "見過成吉思汗"
       }
@@ -5581,8 +5581,8 @@
         "script": [],
         "name": "小梅給解藥",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅給解藥"
       }
@@ -5596,8 +5596,8 @@
         "script": [],
         "name": "說服唐守鴻",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "說得唐守鴻"
       }
@@ -5628,8 +5628,8 @@
         "script": [],
         "name": "煉丹房解毒前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "開啟煉丹房治癒判斷"
       }
@@ -5655,8 +5655,8 @@
         "script": [],
         "name": "大師兄倖存",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "大師兄倖存"
       }
@@ -5670,8 +5670,8 @@
         "script": [],
         "name": "與青城派交戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與青城派進入交戰"
       }
@@ -5685,8 +5685,8 @@
         "script": [],
         "name": "隨大師兄下山",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥臥雲崗路線｜1 不跟隨大師兄｜2 跟隨大師兄"
       }
@@ -5700,8 +5700,8 @@
         "script": [],
         "name": "煉丹房小梅退敵",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "發生三門會談且小梅幫忙趕走敵人"
       }
@@ -5715,8 +5715,8 @@
         "script": [],
         "name": "龍湘免死金牌",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘的免死金牌"
       }
@@ -5730,8 +5730,8 @@
         "script": [],
         "name": "葉雲裳病情加重",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "雲裳病情"
       }
@@ -5745,8 +5745,8 @@
         "script": [],
         "name": "唐布衣臥雲崗結果",
         "value": {
-          "0": "$t(Custom.Lost)",
-          "1": "$t(Custom.Win)"
+          "0": "{@Custom.Lost}",
+          "1": "{@Custom.Win}"
         },
         "desc": "決戰臥雲崗大師兄勝敗"
       }
@@ -5760,8 +5760,8 @@
         "script": [],
         "name": "幫大師兄療傷",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "幫大師兄療傷"
       }
@@ -5775,8 +5775,8 @@
         "script": [],
         "name": "小梅贈刀",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅贈刀"
       }
@@ -5790,8 +5790,8 @@
         "script": [],
         "name": "知猴兒酒位置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "天命-是你藏起來不讓喝的猴兒酒"
       }
@@ -5805,8 +5805,8 @@
         "script": [],
         "name": "唐牛回歸",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "4-2中辦菜的那個師兄被招回唐門"
       }
@@ -5820,8 +5820,8 @@
         "script": [],
         "name": "煉丹房與金烏交手",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "三門會談與金烏上人交手過"
       }
@@ -5835,8 +5835,8 @@
         "script": [],
         "name": "和小師妹約定",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發小師妹約束分支"
       }
@@ -5850,8 +5850,8 @@
         "script": [],
         "name": "唐門內戰上官螢幫助唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "內戰時上官螢有幫助唐門"
       }
@@ -5865,8 +5865,8 @@
         "script": [],
         "name": "崆峒地牢救小梅",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "崆峒地牢救小梅"
       }
@@ -5880,8 +5880,8 @@
         "script": [],
         "name": "庇護泥教弟子",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "請泥教弟子來唐門避難"
       }
@@ -5895,8 +5895,8 @@
         "script": [],
         "name": "助石幫主夫婦和好",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "幫石公遠和石夫人和好"
       }
@@ -5910,8 +5910,8 @@
         "script": [],
         "name": "唐衫隨大師兄下山",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "派遣唐衫陪同大師兄"
       }
@@ -5925,8 +5925,8 @@
         "script": [],
         "name": "取走猴兒酒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "拿走大師兄的猴兒酒"
       }
@@ -5940,8 +5940,8 @@
         "script": [],
         "name": "對唐衫友善",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "主角對唐衫友善"
       }
@@ -5955,8 +5955,8 @@
         "script": [],
         "name": "知寂滅三摩地",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "聽說了寂滅三摩地"
       }
@@ -5970,8 +5970,8 @@
         "script": [],
         "name": "唐芳贈丹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐芳贈丹"
       }
@@ -5985,8 +5985,8 @@
         "script": [],
         "name": "知葉雲舟被招婿過往",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "聽說過葉雲舟曾經被吐蕃公主招婿"
       }
@@ -6000,8 +6000,8 @@
         "script": [],
         "name": "捉住唐守鴻",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "捉住唐守鴻"
       }
@@ -6015,8 +6015,8 @@
         "script": [],
         "name": "跟鐵冠道人動手",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "跟鐵冠道人動手"
       }
@@ -6030,8 +6030,8 @@
         "script": [],
         "name": "葉雲舟金國求醫",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲舟去金國求醫"
       }
@@ -6061,8 +6061,8 @@
         "script": [],
         "name": "崆峒行前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐門會議追加選項：前往崆峒 "
       }
@@ -6088,8 +6088,8 @@
         "script": [],
         "name": "招親與三師兄決鬥",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小師妹出嫁與三師兄決鬥"
       }
@@ -6103,8 +6103,8 @@
         "script": [],
         "name": "南宮深幹話",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "南宮深的幹話"
       }
@@ -6118,8 +6118,8 @@
         "script": [],
         "name": "追加少俠追殺事件",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "大地圖事件追加江湖少俠追殺"
       }
@@ -6133,8 +6133,8 @@
         "script": [],
         "name": "與南宮家結盟前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐門會議選項：與南宮世家結盟"
       }
@@ -6163,8 +6163,8 @@
         "script": [],
         "name": "南宮淺拜師夏侯蘭",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "南宮淺拜師夏侯蘭"
       }
@@ -6178,8 +6178,8 @@
         "script": [],
         "name": "迎戰崆峒唐默鈴參戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "迎戰崆峒 小師妹參戰"
       }
@@ -6193,8 +6193,8 @@
         "script": [],
         "name": "迎戰崆峒瑞笙參戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "迎戰崆峒 瑞笙參戰"
       }
@@ -6208,8 +6208,8 @@
         "script": [],
         "name": "迎戰崆峒葉雲舟參戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "迎戰崆峒 葉雲舟參戰"
       }
@@ -6223,8 +6223,8 @@
         "script": [],
         "name": "口嚼茶魏菊被燙",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "口嚼茶事件中小菊被燙"
       }
@@ -6253,8 +6253,8 @@
         "script": [],
         "name": "被金烏敲頭",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "被金烏上人敲頭"
       }
@@ -6268,8 +6268,8 @@
         "script": [],
         "name": "顏疆死亡",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "飛天弟子顏疆死亡"
       }
@@ -6283,8 +6283,8 @@
         "script": [],
         "name": "金烏死亡",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "金烏上人死亡"
       }
@@ -6298,9 +6298,9 @@
         "script": [],
         "name": "初戰金烏結果",
         "value": {
-          "0": "$t(System.NA)",
-          "1": "$t(Custom.Win)",
-          "2": "$t(Custom.Lost)"
+          "0": "{@System.NA}",
+          "1": "{@Custom.Win}",
+          "2": "{@Custom.Lost}"
         },
         "desc": "第一次決鬥金烏上人結果｜1. 勝｜2. 敗"
       }
@@ -6314,8 +6314,8 @@
         "script": [],
         "name": "瑞笙好感大降",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "瑞笙好感度-20"
       }
@@ -6329,8 +6329,8 @@
         "script": [],
         "name": "地獄道來訪",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": " 地獄道來訪"
       }
@@ -6344,8 +6344,8 @@
         "script": [],
         "name": "小師妹飛踢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小師妹飛踢"
       }
@@ -6359,8 +6359,8 @@
         "script": [],
         "name": "雪山行前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "開啟唐門會議提案 雪山行"
       }
@@ -6374,8 +6374,8 @@
         "script": [],
         "name": "金烏成為掌派人",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "金烏上人成為掌派人"
       }
@@ -6404,8 +6404,8 @@
         "script": [],
         "name": "葉雲裳結緣前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲裳結緣前置"
       }
@@ -6419,8 +6419,8 @@
         "script": [],
         "name": "腿傷",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "腿傷"
       }
@@ -6434,8 +6434,8 @@
         "script": [],
         "name": "知劍聖極招",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "劍聖極招"
       }
@@ -6461,8 +6461,8 @@
         "script": [],
         "name": "記住羅世巒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "記住了羅世巒"
       }
@@ -6476,8 +6476,8 @@
         "script": [],
         "name": "第二柄傳承小劍",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "第二柄傳承小劍"
       }
@@ -6491,8 +6491,8 @@
         "script": [],
         "name": "葉雲裳用劍聖極招",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲裳有使用劍聖極招"
       }
@@ -6506,8 +6506,8 @@
         "script": [],
         "name": "谷底吃到毒菇",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "在谷底吃到毒菇"
       }
@@ -6536,8 +6536,8 @@
         "script": [],
         "name": "與南宮家結盟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與南宮世家結盟"
       }
@@ -6551,8 +6551,8 @@
         "script": [],
         "name": "唐默鈴同行武林大會",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小師妹同行武林大會"
       }
@@ -6566,8 +6566,8 @@
         "script": [],
         "name": "虞小梅同行武林大會",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅同行武林大會"
       }
@@ -6581,8 +6581,8 @@
         "script": [],
         "name": "郁竹同行武林大會",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小竹同行武林大會"
       }
@@ -6596,8 +6596,8 @@
         "script": [],
         "name": "葉雲舟同行武林大會",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲舟同行武林大會"
       }
@@ -6611,8 +6611,8 @@
         "script": [],
         "name": "葉雲裳同行武林大會",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲裳同行武林大會"
       }
@@ -6626,8 +6626,8 @@
         "script": [],
         "name": "觸發葉雲舟煎藥俠",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲舟煎藥俠曾觸發"
       }
@@ -6641,8 +6641,8 @@
         "script": [],
         "name": "追加新通緝犯事件",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "大地圖追加遭遇事件：新通緝犯"
       }
@@ -6656,8 +6656,8 @@
         "script": [],
         "name": "福韞同行武林大會",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "福韞同行武林大會"
       }
@@ -6671,8 +6671,8 @@
         "script": [],
         "name": "宋悲同行武林大會",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "宋悲同行武林大會"
       }
@@ -6686,8 +6686,8 @@
         "script": [],
         "name": "嵩山派同行武林大會",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "嵩山派同行武林大會"
       }
@@ -6701,8 +6701,8 @@
         "script": [],
         "name": "龍湘同行武林大會",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘同行武林大會"
       }
@@ -6716,8 +6716,8 @@
         "script": [],
         "name": "樊嘯天同行武林大會",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "樊嘯天同行武林大會"
       }
@@ -6758,8 +6758,8 @@
         "script": [],
         "name": "成為崆峒掌派人",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "成為崆峒掌派人"
       }
@@ -6773,8 +6773,8 @@
         "script": [],
         "name": "解鎖正心堂葉雲裳彈琴",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "開啟正心堂養成：葉雲裳彈琴"
       }
@@ -6788,8 +6788,8 @@
         "script": [],
         "name": "知畫中仙即仙兒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "開啟中間階段選項：挑戰畫中仙"
       }
@@ -6803,8 +6803,8 @@
         "script": [],
         "name": "解除經脈或失魂狀態",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "解除金烏上人或申屠龍的DEBUFF"
       }
@@ -6818,8 +6818,8 @@
         "script": [],
         "name": "與畫中仙決鬥",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與畫中仙決鬥"
       }
@@ -6833,8 +6833,8 @@
         "script": [],
         "name": "觸發大漠行",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發大漠行"
       }
@@ -6848,8 +6848,8 @@
         "script": [],
         "name": "虞小梅弱化",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅全屬性弱化"
       }
@@ -6863,8 +6863,8 @@
         "script": [],
         "name": "虞小梅練玄燭心經",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅練玄燭心經"
       }
@@ -6878,8 +6878,8 @@
         "script": [],
         "name": "虞小梅強化學會一趾神通",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅屬性提升，學會一趾神通"
       }
@@ -6893,8 +6893,8 @@
         "script": [],
         "name": "上官螢遠嫁日本",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "上官螢遠嫁日本"
       }
@@ -6908,8 +6908,8 @@
         "script": [],
         "name": "南功淺獲六戒刀",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "六戒刀"
       }
@@ -6923,8 +6923,8 @@
         "script": [],
         "name": "知溫夫人身份",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "知道溫夫人是人間道法王"
       }
@@ -6938,8 +6938,8 @@
         "script": [],
         "name": "挑戰上官隼",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "挑戰上官隼"
       }
@@ -6953,8 +6953,8 @@
         "script": [],
         "name": "葉雲舟代表唐門出戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲舟代表唐門出戰"
       }
@@ -6980,8 +6980,8 @@
         "script": [],
         "name": "武林大會揍瑞笙",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "主角打瑞笙"
       }
@@ -6995,9 +6995,9 @@
         "script": [],
         "name": "挑戰上官隼結果",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.Win)",
-          "2": "$t(Custom.Lost)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.Win}",
+          "2": "{@Custom.Lost}"
         },
         "desc": "挑戰上官隼勝敗｜1. 勝利｜2. 失敗"
       }
@@ -7011,8 +7011,8 @@
         "script": [],
         "name": "丘真人召喚",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "前往終南山"
       }
@@ -7026,8 +7026,8 @@
         "script": [],
         "name": "聽龍湘心事",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍之憂鬱中觸發龍湘的心事"
       }
@@ -7041,8 +7041,8 @@
         "script": [],
         "name": "唐門收容龍湘",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐門收容龍湘"
       }
@@ -7056,8 +7056,8 @@
         "script": [],
         "name": "帶小梅拜見錦香宮",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "帶小梅拜見錦香宮"
       }
@@ -7086,8 +7086,8 @@
         "script": [],
         "name": "武林大會對戰南宮深",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "武林大會決鬥南宮深"
       }
@@ -7101,8 +7101,8 @@
         "script": [],
         "name": "武林大會拜訪錦香宮",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "武林大會拜訪錦香宮"
       }
@@ -7116,8 +7116,8 @@
         "script": [],
         "name": "被趕出錦香宮",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "錦香宮行被趕出來"
       }
@@ -7131,8 +7131,8 @@
         "script": [],
         "name": "龍湘天罡伏魔劍前提",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘 天罡伏魔劍"
       }
@@ -7146,8 +7146,8 @@
         "script": [],
         "name": "龍湘龍淵七絕前提",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘 龍淵七絕"
       }
@@ -7161,8 +7161,8 @@
         "script": [],
         "name": "對戰袁無憲",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥袁無憲"
       }
@@ -7176,8 +7176,8 @@
         "script": [],
         "name": "對戰袁無憲結果",
         "value": {
-          "0": "$t(Custom.Lost)",
-          "1": "$t(Custom.Win)"
+          "0": "{@Custom.Lost}",
+          "1": "{@Custom.Win}"
         },
         "desc": "戰勝袁無憲與荊紅"
       }
@@ -7191,8 +7191,8 @@
         "script": [],
         "name": "致哀與南宮深談話",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "致哀中與南宮深談話"
       }
@@ -7218,8 +7218,8 @@
         "script": [],
         "name": "全真支持",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "全真支持"
       }
@@ -7249,8 +7249,8 @@
         "script": [],
         "name": "青城支持",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "青城支持"
       }
@@ -7264,8 +7264,8 @@
         "script": [],
         "name": "點蒼支持",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "點蒼支持"
       }
@@ -7279,8 +7279,8 @@
         "script": [],
         "name": "崆峒支持",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "崆峒支持"
       }
@@ -7294,8 +7294,8 @@
         "script": [],
         "name": "南宮支持",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "南宮支持"
       }
@@ -7309,8 +7309,8 @@
         "script": [],
         "name": "峨嵋支持",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "峨嵋支持"
       }
@@ -7340,8 +7340,8 @@
         "script": [],
         "name": "飛石幫支持",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "飛石幫支持"
       }
@@ -7355,8 +7355,8 @@
         "script": [],
         "name": "地獄道行",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "地獄道行"
       }
@@ -7370,8 +7370,8 @@
         "script": [],
         "name": "晁和死亡",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "晁和死亡"
       }
@@ -7385,8 +7385,8 @@
         "script": [],
         "name": "投降正派",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "投降正派"
       }
@@ -7416,8 +7416,8 @@
         "script": [],
         "name": "與上官螢有約",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與上官螢有約"
       }
@@ -7431,8 +7431,8 @@
         "script": [],
         "name": "選擇投降",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "選擇投降"
       }
@@ -7446,8 +7446,8 @@
         "script": [],
         "name": "下樓喝酒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "下樓喝酒"
       }
@@ -7461,8 +7461,8 @@
         "script": [],
         "name": "魏菊喝醉",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小菊喝醉"
       }
@@ -7476,8 +7476,8 @@
         "script": [],
         "name": "有人幫忙備馬",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "有任何人幫忙備馬"
       }
@@ -7507,8 +7507,8 @@
         "script": [],
         "name": "要求土特產",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "向四師兄要求土特產"
       }
@@ -7522,8 +7522,8 @@
         "script": [],
         "name": "向鄒博指控申屠龍",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "向鄒博指控申屠龍"
       }
@@ -7537,8 +7537,8 @@
         "script": [],
         "name": "武林大會唐默鈴與瑞笙碰面",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小師妹有同行風雨山並跟瑞笙見過面"
       }
@@ -7552,8 +7552,8 @@
         "script": [],
         "name": "武林大會接納唐衫",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "武林大會選擇接納唐衫"
       }
@@ -7567,8 +7567,8 @@
         "script": [],
         "name": "武林大會對飛石幫友善",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "武林大會對飛石幫友善"
       }
@@ -7582,8 +7582,8 @@
         "script": [],
         "name": "武林大會支持錦香宮",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "主角在武林大會支持錦香宮與上官隼對抗"
       }
@@ -7597,8 +7597,8 @@
         "script": [],
         "name": "武林大會為上官螢出戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "主角在武林大會為上官螢出戰"
       }
@@ -7624,8 +7624,8 @@
         "script": [],
         "name": "向鄒博指控鐵冠道人",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "向鄒博指控鐵冠道人"
       }
@@ -7639,8 +7639,8 @@
         "script": [],
         "name": "受覺慧傳那由他劫指",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "曾受覺慧傳那由他劫指"
       }
@@ -7654,8 +7654,8 @@
         "script": [],
         "name": "葉雲舟離開武林大會",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲舟從武林大會離開"
       }
@@ -7684,8 +7684,8 @@
         "script": [],
         "name": "小梅村曝光",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅村曝光"
       }
@@ -7699,8 +7699,8 @@
         "script": [],
         "name": "西武林盟前提",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "可成立西武林盟"
       }
@@ -7714,8 +7714,8 @@
         "script": [],
         "name": "觸發四師兄歸來",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發四師兄歸來"
       }
@@ -7729,8 +7729,8 @@
         "script": [],
         "name": "與泥教結盟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與泥教結盟"
       }
@@ -7744,8 +7744,8 @@
         "script": [],
         "name": "和平之路",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "和平之路"
       }
@@ -7759,8 +7759,8 @@
         "script": [],
         "name": "暗殺盟主前提",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐門會議選項開啟：暗殺盟主"
       }
@@ -7774,8 +7774,8 @@
         "script": [],
         "name": "訪問魏菊",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "訪問小菊"
       }
@@ -7789,8 +7789,8 @@
         "script": [],
         "name": "王幫主遺策",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "遺策"
       }
@@ -7816,8 +7816,8 @@
         "script": [],
         "name": "圍攻泥教",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "圍攻泥教"
       }
@@ -7888,8 +7888,8 @@
         "script": [],
         "name": "小師妹跟票",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小師妹的票"
       }
@@ -7903,8 +7903,8 @@
         "script": [],
         "name": "同票決鬥結果",
         "value": {
-          "1": "$t(Custom.Lost)",
-          "2": "$t(Custom.Win)"
+          "1": "{@Custom.Lost}",
+          "2": "{@Custom.Win}"
         },
         "desc": "票數相同決鬥勝敗｜1. 敗｜2. 勝"
       }
@@ -7918,8 +7918,8 @@
         "script": [],
         "name": "退隱江湖",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "退隱江湖"
       }
@@ -7949,8 +7949,8 @@
         "script": [],
         "name": "小梅提兇殘意見",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅提出兇殘的意見"
       }
@@ -7964,8 +7964,8 @@
         "script": [],
         "name": "答應去嵩山",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "曾經在前往武林大會的旅途中答應老僧人去嵩山"
       }
@@ -7979,8 +7979,8 @@
         "script": [],
         "name": "唐惟元出資上官螢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "四師兄出資上官螢"
       }
@@ -8006,8 +8006,8 @@
         "script": [],
         "name": "出使青城",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "已派人至青城派"
       }
@@ -8021,8 +8021,8 @@
         "script": [],
         "name": "出使崆峒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "已派人至崆峒派"
       }
@@ -8036,8 +8036,8 @@
         "script": [],
         "name": "出使峨嵋",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "已派人至峨嵋派"
       }
@@ -8051,8 +8051,8 @@
         "script": [],
         "name": "出使丐幫",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "已派人至丐幫"
       }
@@ -8066,8 +8066,8 @@
         "script": [],
         "name": "福韞出使峨嵋",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "福韞出使峨嵋派"
       }
@@ -8081,7 +8081,7 @@
         "script": [],
         "name": "讓四師兄出使",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "青城",
           "2": "崆峒",
           "3": "丐幫",
@@ -8099,8 +8099,8 @@
         "script": [],
         "name": "小梅出使崆峒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅出使崆峒派"
       }
@@ -8114,8 +8114,8 @@
         "script": [],
         "name": "郁竹出使崆峒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小竹出使崆峒派"
       }
@@ -8129,8 +8129,8 @@
         "script": [],
         "name": "魏菊出使崆峒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小菊出使崆峒派"
       }
@@ -8144,8 +8144,8 @@
         "script": [],
         "name": "上官螢寫信崆峒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "上官螢寫信至崆峒派"
       }
@@ -8159,7 +8159,7 @@
         "script": [],
         "name": "趙活打算出使",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "青城",
           "2": "峨嵋",
           "3": "丐幫"
@@ -8176,8 +8176,8 @@
         "script": [],
         "name": "唐門弟子出使崆峒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐門弟子出使崆峒派"
       }
@@ -8191,8 +8191,8 @@
         "script": [],
         "name": "唐門弟子出使青城",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐門弟子出使青城派"
       }
@@ -8206,8 +8206,8 @@
         "script": [],
         "name": "唐陞出使峨嵋",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "三師兄出使峨嵋派"
       }
@@ -8221,8 +8221,8 @@
         "script": [],
         "name": "唐衫出使峨嵋",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐衫出使峨嵋派"
       }
@@ -8236,8 +8236,8 @@
         "script": [],
         "name": "暫獲掌門令牌",
         "value": {
-          "0": "$t(System.NA)",
-          "1": "$t(Custom.True)"
+          "0": "{@System.NA}",
+          "1": "{@Custom.True}"
         },
         "desc": "暫時獲得掌門令牌"
       }
@@ -8251,8 +8251,8 @@
         "script": [],
         "name": "特訓-龍湘敵對",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "練武場特訓：龍湘加入敵對陣營"
       }
@@ -8266,8 +8266,8 @@
         "script": [],
         "name": "助上官螢收買滄幫",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "成功幫助上官螢收買滄幫"
       }
@@ -8281,8 +8281,8 @@
         "script": [],
         "name": "特訓-葉雲舟敵對",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "練武場特訓：葉雲舟加入敵對陣營"
       }
@@ -8296,8 +8296,8 @@
         "script": [],
         "name": "特訓-唐惟元敵對",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "練武場特訓：四師兄加入敵方陣營"
       }
@@ -8327,8 +8327,8 @@
         "script": [],
         "name": "觸發極端揍狗拳",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "支線：極端揍狗拳"
       }
@@ -8390,8 +8390,8 @@
         "script": [],
         "name": "唐衫分擔庶務",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐衫的支援"
       }
@@ -8405,8 +8405,8 @@
         "script": [],
         "name": "東西大戰設陷阱",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "設陷阱"
       }
@@ -8435,8 +8435,8 @@
         "script": [],
         "name": "滅門線",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "頑抗路線"
       }
@@ -8450,8 +8450,8 @@
         "script": [],
         "name": "發生修羅場",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "發生修羅場事件"
       }
@@ -8465,8 +8465,8 @@
         "script": [],
         "name": "飛石幫支持西盟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "飛石幫支持西武林盟"
       }
@@ -8480,8 +8480,8 @@
         "script": [],
         "name": "瑞笙弱化",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "瑞笙弱化"
       }
@@ -8495,8 +8495,8 @@
         "script": [],
         "name": "提西盟時學問60且道德中庸以上",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "應對之策提出西武林盟時(學問>60)&&(道德>中庸)"
       }
@@ -8510,8 +8510,8 @@
         "script": [],
         "name": "陪葉雲裳前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "開啟陪葉雲裳"
       }
@@ -8525,8 +8525,8 @@
         "script": [],
         "name": "唐芳出使青城",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐芳出使青城派"
       }
@@ -8540,8 +8540,8 @@
         "script": [],
         "name": "陪小師妹前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "開啟陪小師妹"
       }
@@ -8555,8 +8555,8 @@
         "script": [],
         "name": "狂劍客出沒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "狂劍客出沒"
       }
@@ -8570,8 +8570,8 @@
         "script": [],
         "name": "陪上官螢前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "開啟陪上官螢"
       }
@@ -8585,8 +8585,8 @@
         "script": [],
         "name": "觸發修羅場",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "啟動修羅場事件"
       }
@@ -8600,8 +8600,8 @@
         "script": [],
         "name": "陪龍湘前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "開啟陪龍湘"
       }
@@ -8615,8 +8615,8 @@
         "script": [],
         "name": "陪夏侯蘭前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "開啟陪小蘭"
       }
@@ -8642,8 +8642,8 @@
         "script": [],
         "name": "葉雲裳設陷阱",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲裳設陷阱"
       }
@@ -8673,8 +8673,8 @@
         "script": [],
         "name": "申屠龍支援西盟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "申屠龍支援西武林盟"
       }
@@ -8690,7 +8690,7 @@
         "value": {
           "1": "福韞",
           "2": "趙活",
-          "3": "$t(System.NA)"
+          "3": "{@System.NA}"
         },
         "desc": "8-1 你的對策｜1. 福韞｜2. 反論｜3. 沒什麼好說"
       }
@@ -8704,8 +8704,8 @@
         "script": [],
         "name": "已有守山對策",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "對策"
       }
@@ -8719,8 +8719,8 @@
         "script": [],
         "name": "唐默鈴守山",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小師妹的保護"
       }
@@ -8734,8 +8734,8 @@
         "script": [],
         "name": "雪山派加入西盟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "上官衰弱"
       }
@@ -8765,8 +8765,8 @@
         "script": [],
         "name": "小梅改邪歸正",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅改邪歸正"
       }
@@ -8797,8 +8797,8 @@
         "script": [],
         "name": "和小師妹一起守山",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "護衛三師兄 小師妹同行"
       }
@@ -8812,8 +8812,8 @@
         "script": [],
         "name": "錦香宮支援唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "錦香宮支援唐門"
       }
@@ -8883,8 +8883,8 @@
         "script": [],
         "name": "錦香宮失望",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "錦香宮失望"
       }
@@ -8898,8 +8898,8 @@
         "script": [],
         "name": "正道圍攻唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "發生圍攻唐門"
       }
@@ -8946,8 +8946,8 @@
         "script": [],
         "name": "夏侯蘭出戰向無憂",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小蘭VS向無憂"
       }
@@ -8961,8 +8961,8 @@
         "script": [],
         "name": "龍湘出戰向無憂",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘VS向無憂"
       }
@@ -8976,8 +8976,8 @@
         "script": [],
         "name": "向無憂戰唐陞",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "向無憂戰三師兄"
       }
@@ -8991,8 +8991,8 @@
         "script": [],
         "name": "葉雲裳勸退向無憂",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "葉雲裳勸退向無憂"
       }
@@ -9006,8 +9006,8 @@
         "script": [],
         "name": "上官隼敗",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "上官隼敗"
       }
@@ -9021,8 +9021,8 @@
         "script": [],
         "name": "知山上情況",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "已知山上情況"
       }
@@ -9036,8 +9036,8 @@
         "script": [],
         "name": "夏侯蘭出戰上官隼",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小蘭VS上官隼"
       }
@@ -9051,8 +9051,8 @@
         "script": [],
         "name": "龍湘出戰上官隼",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘VS上官隼"
       }
@@ -9066,8 +9066,8 @@
         "script": [],
         "name": "唐默鈴出戰上官隼",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小師妹VS上官隼"
       }
@@ -9081,8 +9081,8 @@
         "script": [],
         "name": "南宮深敗",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "南宮深敗"
       }
@@ -9096,8 +9096,8 @@
         "script": [],
         "name": "唐門大勢已去",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "唐門大勢已去"
       }
@@ -9111,8 +9111,8 @@
         "script": [],
         "name": "龍湘覺醒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍湘覺醒"
       }
@@ -9126,8 +9126,8 @@
         "script": [],
         "name": "唐陞重傷",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "三師兄重傷"
       }
@@ -9141,8 +9141,8 @@
         "script": [],
         "name": "唐布衣歸來",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)",
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}",
           "2": "最後關頭"
         },
         "desc": "大師兄歸來"
@@ -9157,8 +9157,8 @@
         "script": [],
         "name": "瑞笙來訪",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "瑞笙來訪 大俠的意思"
       }
@@ -9172,8 +9172,8 @@
         "script": [],
         "name": "武林群俠投降",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "武林群俠投降"
       }
@@ -9187,8 +9187,8 @@
         "script": [],
         "name": "需尋找龍湘",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "尋找龍湘"
       }
@@ -9202,8 +9202,8 @@
         "script": [],
         "name": "需尋找夏侯蘭",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "尋找小蘭"
       }
@@ -9217,8 +9217,8 @@
         "script": [],
         "name": "知大師兄復活原因",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "大師兄復活的原因"
       }
@@ -9232,8 +9232,8 @@
         "script": [],
         "name": "需問大師兄復活原因",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "大師兄你是怎麼回事"
       }
@@ -9247,8 +9247,8 @@
         "script": [],
         "name": "丹霞子退隱",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "丹霞子退隱"
       }
@@ -9262,8 +9262,8 @@
         "script": [],
         "name": "需關心小師妹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "關心小師妹"
       }
@@ -9277,8 +9277,8 @@
         "script": [],
         "name": "趕走來訪的瑞笙",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "瑞笙來訪時把瑞笙趕走"
       }
@@ -9292,8 +9292,8 @@
         "script": [],
         "name": "進入最後決戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "進入最後決戰"
       }
@@ -9307,8 +9307,8 @@
         "script": [],
         "name": "捅死瑞笙",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "捅死瑞笙"
       }
@@ -9322,8 +9322,8 @@
         "script": [],
         "name": "無相祖師死亡",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "無相祖師死亡"
       }
@@ -9337,8 +9337,8 @@
         "script": [],
         "name": "南溪出戰向無憂",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "南溪vs向無憂"
       }
@@ -9352,8 +9352,8 @@
         "script": [],
         "name": "南溪支援",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "南溪支援"
       }
@@ -9367,8 +9367,8 @@
         "script": [],
         "name": "不殺店小二",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "不殺店小二"
       }
@@ -9382,8 +9382,8 @@
         "script": [],
         "name": "南溪出戰南宮深",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "南溪VS南宮深"
       }
@@ -9397,7 +9397,7 @@
         "script": [],
         "name": "劍聖極招",
         "value": {
-          "0": "$t(System.NA)",
+          "0": "{@System.NA}",
           "1": "前置",
           "2": "結束"
         },
@@ -9413,8 +9413,8 @@
         "script": [],
         "name": "雲裳找你",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "雲裳找你"
       }
@@ -9428,8 +9428,8 @@
         "script": [],
         "name": "領悟劍聖極招",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "領悟劍聖極招"
       }
@@ -9443,8 +9443,8 @@
         "script": [],
         "name": "決戰前下山前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決戰前下山"
       }
@@ -9458,8 +9458,8 @@
         "script": [],
         "name": "決戰前後山前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決戰前後山"
       }
@@ -9473,8 +9473,8 @@
         "script": [],
         "name": "與葉雲舟出公差",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "劍聖傳承與葉雲舟出公差"
       }
@@ -9488,8 +9488,8 @@
         "script": [],
         "name": "有人可切磋",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "與任意人切磋"
       }
@@ -9503,8 +9503,8 @@
         "script": [],
         "name": "決戰前後山初次切磋",
         "value": {
-          "0": "$t(Custom.True)",
-          "1": "$t(Custom.False)"
+          "0": "{@Custom.True}",
+          "1": "{@Custom.False}"
         },
         "desc": "第一次觸發決戰前後山"
       }
@@ -9518,8 +9518,8 @@
         "script": [],
         "name": "段智秀支援葉雲舟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "東西武林盟段智秀支援葉雲舟"
       }
@@ -9533,8 +9533,8 @@
         "script": [],
         "name": "戰勝唐默鈴",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰勝小師妹"
       }
@@ -9548,8 +9548,8 @@
         "script": [],
         "name": "戰勝鄒博",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰勝鄒博"
       }
@@ -9563,8 +9563,8 @@
         "script": [],
         "name": "戰勝解無塵",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰勝解無塵"
       }
@@ -9578,8 +9578,8 @@
         "script": [],
         "name": "戰勝唐布衣",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰勝大師兄"
       }
@@ -9593,8 +9593,8 @@
         "script": [],
         "name": "戰勝龍湘",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰勝龍湘"
       }
@@ -9608,8 +9608,8 @@
         "script": [],
         "name": "戰勝夏侯蘭",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰勝夏侯蘭"
       }
@@ -9623,8 +9623,8 @@
         "script": [],
         "name": "戰勝葉雲舟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰勝葉雲舟"
       }
@@ -9638,8 +9638,8 @@
         "script": [],
         "name": "戰勝丹霞子",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰勝丹霞子"
       }
@@ -9653,8 +9653,8 @@
         "script": [],
         "name": "戰勝南溪",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰勝南溪"
       }
@@ -9668,8 +9668,8 @@
         "script": [],
         "name": "戰勝向無憂",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰勝向無憂"
       }
@@ -9683,8 +9683,8 @@
         "script": [],
         "name": "戰勝申屠龍",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "戰勝申屠龍"
       }
@@ -9698,8 +9698,8 @@
         "script": [],
         "name": "可與鄒博切磋",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "可與鄒博切磋"
       }
@@ -9713,8 +9713,8 @@
         "script": [],
         "name": "可與解無塵切磋",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "可與解無塵切磋"
       }
@@ -9728,8 +9728,8 @@
         "script": [],
         "name": "可與向無憂切磋",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "可與向無憂切磋"
       }
@@ -9743,8 +9743,8 @@
         "script": [],
         "name": "西盟有丐幫及李富貴",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "西武林盟 丐幫 馬富貴"
       }
@@ -9758,8 +9758,8 @@
         "script": [],
         "name": "西盟有丐幫 ",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "西武林盟 丐幫 "
       }
@@ -9773,8 +9773,8 @@
         "script": [],
         "name": "可與申屠龍切磋",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "可與申屠龍切磋"
       }
@@ -9788,8 +9788,8 @@
         "script": [],
         "name": "西盟有青城及鄒博",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "西武林盟 青城 鄒博"
       }
@@ -9803,8 +9803,8 @@
         "script": [],
         "name": "西盟有青城部分",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "西武林盟 青城 部分"
       }
@@ -9818,8 +9818,8 @@
         "script": [],
         "name": "西盟有峨嵋",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "西武林盟 峨嵋派"
       }
@@ -9833,8 +9833,8 @@
         "script": [],
         "name": "西盟有錦香宮",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "西武林盟 錦香宮"
       }
@@ -9848,8 +9848,8 @@
         "script": [],
         "name": "西盟有十八銅人",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "西武林盟 嵩山十八銅人"
       }
@@ -9863,8 +9863,8 @@
         "script": [],
         "name": "有連環火箭",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "連環火箭"
       }
@@ -9878,8 +9878,8 @@
         "script": [],
         "name": "滄幫背叛",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "滄幫的背叛"
       }
@@ -9893,8 +9893,8 @@
         "script": [],
         "name": "四師兄陰損伎倆",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "四師兄的陰損伎倆"
       }
@@ -9908,8 +9908,8 @@
         "script": [],
         "name": "西盟有鄒博",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "鄒博"
       }
@@ -9923,8 +9923,8 @@
         "script": [],
         "name": "西盟有畫中仙",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "畫中仙"
       }
@@ -9938,8 +9938,8 @@
         "script": [],
         "name": "西盟有虞小梅",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "小梅 守護唐門"
       }
@@ -9953,8 +9953,8 @@
         "script": [],
         "name": "東盟有丐幫及李富貴",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "東武林盟 丐幫 馬富貴"
       }
@@ -9968,8 +9968,8 @@
         "script": [],
         "name": "東盟有上官家",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "東武林盟 上官世家"
       }
@@ -9983,8 +9983,8 @@
         "script": [],
         "name": "東盟有丐幫 ",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "東武林盟 丐幫 "
       }
@@ -9998,8 +9998,8 @@
         "script": [],
         "name": "東盟有崆峒及金烏",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "東武林盟 崆峒派 金烏上人"
       }
@@ -10013,8 +10013,8 @@
         "script": [],
         "name": "東盟有嵩山",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "東武林盟 嵩山派"
       }
@@ -10028,8 +10028,8 @@
         "script": [],
         "name": "東盟有南宮家",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "東武林盟 南宮世家"
       }
@@ -10043,8 +10043,8 @@
         "script": [],
         "name": "東盟有崆峒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "東武林盟 崆峒派"
       }
@@ -10058,8 +10058,8 @@
         "script": [],
         "name": "東盟有全真",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "東武林盟 全真派"
       }
@@ -10073,8 +10073,8 @@
         "script": [],
         "name": "東盟有點蒼",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "東武林盟 點蒼派"
       }
@@ -10088,8 +10088,8 @@
         "script": [],
         "name": "東盟有錦香宮",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "東武林盟 錦香宮"
       }
@@ -10103,8 +10103,8 @@
         "script": [],
         "name": "觸發殺人撲滿",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10118,8 +10118,8 @@
         "script": [],
         "name": "觸發機關馬桶",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10133,8 +10133,8 @@
         "script": [],
         "name": "觸發變重石鎖",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10148,8 +10148,8 @@
         "script": [],
         "name": "觸發唐門牙粉",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10163,8 +10163,8 @@
         "script": [],
         "name": "觸發偷油婆藥",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10178,8 +10178,8 @@
         "script": [],
         "name": "觸發殺人毛筆",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10193,8 +10193,8 @@
         "script": [],
         "name": "觸發反攻飛石幫",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10208,8 +10208,8 @@
         "script": [],
         "name": "觸發四師兄遠行",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10223,8 +10223,8 @@
         "script": [],
         "name": "觸發被通緝",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10238,8 +10238,8 @@
         "script": [],
         "name": "觸發特訓段考",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10253,8 +10253,8 @@
         "script": [],
         "name": "觸發狂劍客出沒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10268,8 +10268,8 @@
         "script": [],
         "name": "贖回外堡",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "已贖回外堡"
       }
@@ -10283,8 +10283,8 @@
         "script": [],
         "name": "周回",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "二週目"
       }
@@ -10298,8 +10298,8 @@
         "script": [],
         "name": "贖回練功塔",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "已贖回練功塔"
       }
@@ -10388,8 +10388,8 @@
         "script": [],
         "name": "無可救藥線",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "序章旗標"
       }
@@ -10415,8 +10415,8 @@
         "script": [],
         "name": "被關次數",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "被關次數"
       }
@@ -10607,8 +10607,8 @@
         "script": [],
         "name": "煎藥決鬥勝敗",
         "value": {
-          "0": "$t(Custom.Lost)",
-          "1": "$t(Custom.Win)"
+          "0": "{@Custom.Lost}",
+          "1": "{@Custom.Win}"
         },
         "desc": "煎藥保存成敗"
       }
@@ -10622,8 +10622,8 @@
         "script": [],
         "name": "觸發稻草人",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發稻草人支線"
       }
@@ -10637,8 +10637,8 @@
         "script": [],
         "name": "觸發反間諜",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "完成支線任務-反間諜"
       }
@@ -10652,8 +10652,8 @@
         "script": [],
         "name": "拜夏侯蘭為師",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "拜夏侯蘭為師"
       }
@@ -10667,8 +10667,8 @@
         "script": [],
         "name": "觸發靈光乍現",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "煉丹房支線成功"
       }
@@ -10682,8 +10682,8 @@
         "script": [],
         "name": "觸發捨身忘我",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "煉丹房支線成功"
       }
@@ -10697,8 +10697,8 @@
         "script": [],
         "name": "龍湘父女相認",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "龍之團圓中父女相認"
       }
@@ -10712,8 +10712,8 @@
         "script": [],
         "name": "觸發龍之憂鬱",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發龍之憂鬱"
       }
@@ -10727,8 +10727,8 @@
         "script": [],
         "name": "觸發龍之挑戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發龍之憂鬱"
       }
@@ -10742,8 +10742,8 @@
         "script": [],
         "name": "觸發龍之反省",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -10757,8 +10757,8 @@
         "script": [],
         "name": "觸發市街遇李富貴",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10772,8 +10772,8 @@
         "script": [],
         "name": "觸發假趙活風聲",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10787,8 +10787,8 @@
         "script": [],
         "name": "觸發假趙活借錢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10802,8 +10802,8 @@
         "script": [],
         "name": "觸發假趙活審判",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10817,8 +10817,8 @@
         "script": [],
         "name": "觸發唐芳歸來",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10832,8 +10832,8 @@
         "script": [],
         "name": "觸發黑衣人對決",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10847,8 +10847,8 @@
         "script": [],
         "name": "觸發四師兄勸離",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發勸離事件"
       }
@@ -10862,8 +10862,8 @@
         "script": [],
         "name": "觸發邀師傅同行",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10877,8 +10877,8 @@
         "script": [],
         "name": "滅口帳務先生",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "帳務先生"
       }
@@ -10892,8 +10892,8 @@
         "script": [],
         "name": "觸發上官螢訪唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "觸發上官螢在唐門支線"
       }
@@ -10907,8 +10907,8 @@
         "script": [],
         "name": "觸發絕世雞腿",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "絕世雞腿事件"
       }
@@ -10922,8 +10922,8 @@
         "script": [],
         "name": "絕世雞腿完結篇前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "開啟絕世雞腿完結篇"
       }
@@ -10937,8 +10937,8 @@
         "script": [],
         "name": "關心夏侯蘭",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10952,8 +10952,8 @@
         "script": [],
         "name": "觸發S3001_01",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -10967,8 +10967,8 @@
         "script": [],
         "name": "觸發煉丹房支線",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "煉丹房支線成功"
       }
@@ -10982,8 +10982,8 @@
         "script": [],
         "name": "觸發霸凌",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "已觸發霸凌1"
       }
@@ -10997,8 +10997,8 @@
         "script": [],
         "name": "觸發偷懶怪",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "已觸發偷懶怪1"
       }
@@ -11012,8 +11012,8 @@
         "script": [],
         "name": "觸發同門關懷",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "已觸發同門關懷"
       }
@@ -11027,8 +11027,8 @@
         "script": [],
         "name": "是否下雨",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否下雨"
       }
@@ -11058,8 +11058,8 @@
         "script": [],
         "name": "唐布衣談南宮家",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "大師兄談論南宮世家"
       }
@@ -11073,8 +11073,8 @@
         "script": [],
         "name": "觸發決戰菜市場",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11088,8 +11088,8 @@
         "script": [],
         "name": "閒聊新任幫主",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11103,8 +11103,8 @@
         "script": [],
         "name": "閒聊襄陽戰線",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11118,8 +11118,8 @@
         "script": [],
         "name": "閒聊樊嘯天",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11133,8 +11133,8 @@
         "script": [],
         "name": "觸發丐幫切磋",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11160,8 +11160,8 @@
         "script": [],
         "name": "觸發通緝葉雲舟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "是否觸發通緝葉雲舟"
       }
@@ -11175,8 +11175,8 @@
         "script": [],
         "name": "Shop_01",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -11214,8 +11214,8 @@
         "script": [],
         "name": "和二師兄閒聊過",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11229,8 +11229,8 @@
         "script": [],
         "name": "和三師兄閒聊過",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11244,8 +11244,8 @@
         "script": [],
         "name": "唐陞聊點蒼一",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11259,8 +11259,8 @@
         "script": [],
         "name": "唐陞聊點蒼二",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11274,8 +11274,8 @@
         "script": [],
         "name": "唐陞聊點蒼三",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11289,8 +11289,8 @@
         "script": [],
         "name": "唐陞聊青城一",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11304,8 +11304,8 @@
         "script": [],
         "name": "唐陞聊青城二",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11319,8 +11319,8 @@
         "script": [],
         "name": "唐陞聊青城三",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11334,8 +11334,8 @@
         "script": [],
         "name": "唐陞聊極樂左使",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -11349,8 +11349,8 @@
         "script": [],
         "name": "唐陞聊峨嵋一",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11364,8 +11364,8 @@
         "script": [],
         "name": "唐陞聊峨嵋二",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11379,8 +11379,8 @@
         "script": [],
         "name": "唐陞聊峨嵋三",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11394,8 +11394,8 @@
         "script": [],
         "name": "唐陞聊全真一",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11409,8 +11409,8 @@
         "script": [],
         "name": "唐陞聊全真二",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11424,8 +11424,8 @@
         "script": [],
         "name": "唐陞聊全真三",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11439,8 +11439,8 @@
         "script": [],
         "name": "唐陞聊崆峒一",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11454,8 +11454,8 @@
         "script": [],
         "name": "唐陞聊崆峒二",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11469,8 +11469,8 @@
         "script": [],
         "name": "唐陞聊崆峒三",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11484,8 +11484,8 @@
         "script": [],
         "name": "唐陞聊三大家一",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -11499,8 +11499,8 @@
         "script": [],
         "name": "唐陞聊三大家二",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -11514,8 +11514,8 @@
         "script": [],
         "name": "唐陞聊泥教一",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -11529,8 +11529,8 @@
         "script": [],
         "name": "唐陞聊萬靈油",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -11544,8 +11544,8 @@
         "script": [],
         "name": "唐陞聊嶺南一",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -11559,8 +11559,8 @@
         "script": [],
         "name": "唐陞聊天下最毒",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -11574,8 +11574,8 @@
         "script": [],
         "name": "唐陞聊千面人魔",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -11589,8 +11589,8 @@
         "script": [],
         "name": "Talk_Brother3",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11604,8 +11604,8 @@
         "script": [],
         "name": "唐陞聊嶺南二",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -11619,8 +11619,8 @@
         "script": [],
         "name": "閒聊掌門情況",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11634,8 +11634,8 @@
         "script": [],
         "name": "唐陞聊嶺南三",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -11649,8 +11649,8 @@
         "script": [],
         "name": "閒聊代掌門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11664,8 +11664,8 @@
         "script": [],
         "name": "閒聊忘記的事",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11679,8 +11679,8 @@
         "script": [],
         "name": "閒聊江湖",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11694,8 +11694,8 @@
         "script": [],
         "name": "閒聊氣色",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11709,8 +11709,8 @@
         "script": [],
         "name": "觸發切磋三師兄",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11724,8 +11724,8 @@
         "script": [],
         "name": "閒聊臭奸商",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11739,8 +11739,8 @@
         "script": [],
         "name": "閒聊打聽的事",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11754,8 +11754,8 @@
         "script": [],
         "name": "和四師兄閒聊過",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "弟子房四師兄閒聊"
       }
@@ -11769,8 +11769,8 @@
         "script": [],
         "name": "閒聊色紙",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11784,8 +11784,8 @@
         "script": [],
         "name": "閒聊後路",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11799,8 +11799,8 @@
         "script": [],
         "name": "閒聊趙活實力",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11814,8 +11814,8 @@
         "script": [],
         "name": "知四師兄往事",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11829,8 +11829,8 @@
         "script": [],
         "name": "觸發四師兄實力",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11844,8 +11844,8 @@
         "script": [],
         "name": "觸發四師兄真實力",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11859,8 +11859,8 @@
         "script": [],
         "name": "閒聊四師兄實力",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11874,8 +11874,8 @@
         "script": [],
         "name": "可和四師兄閒聊",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "弟子房四師兄閒聊"
       }
@@ -11889,8 +11889,8 @@
         "script": [],
         "name": "無藥線閒聊打聽的事",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11904,8 +11904,8 @@
         "script": [],
         "name": "無藥線閒聊後路",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11931,8 +11931,8 @@
         "script": [],
         "name": "無藥線閒聊趙活實力",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11946,8 +11946,8 @@
         "script": [],
         "name": "閒聊滄幫動向",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11961,8 +11961,8 @@
         "script": [],
         "name": "夏侯蘭聊唐布衣前提",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11976,8 +11976,8 @@
         "script": [],
         "name": "閒聊住所",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -11991,8 +11991,8 @@
         "script": [],
         "name": "閒聊大師兄",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12006,8 +12006,8 @@
         "script": [],
         "name": "師傅想辦法前提",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12021,8 +12021,8 @@
         "script": [],
         "name": "閒聊師傅想辦法",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12036,8 +12036,8 @@
         "script": [],
         "name": "閒聊小竹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12051,8 +12051,8 @@
         "script": [],
         "name": "閒聊三國夏侯蘭",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12066,8 +12066,8 @@
         "script": [],
         "name": "閒聊小梅",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12081,8 +12081,8 @@
         "script": [],
         "name": "師傅聊二師妹前提",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12096,8 +12096,8 @@
         "script": [],
         "name": "閒聊二師妹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12111,8 +12111,8 @@
         "script": [],
         "name": "閒聊小菊",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12126,8 +12126,8 @@
         "script": [],
         "name": "觸發請教武功一",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12141,8 +12141,8 @@
         "script": [],
         "name": "請教武功二前置",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -12156,8 +12156,8 @@
         "script": [],
         "name": "觸發請教武功二",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12171,8 +12171,8 @@
         "script": [],
         "name": "師傅聊雪山派前提",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12186,8 +12186,8 @@
         "script": [],
         "name": "閒聊雪山派",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12201,8 +12201,8 @@
         "script": [],
         "name": "師傅聊武功前提",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12216,8 +12216,8 @@
         "script": [],
         "name": "閒聊話題01",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12227,8 +12227,8 @@
         ],
         "name": "思考唐門",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12238,8 +12238,8 @@
         ],
         "name": "思考葉雲舟",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12249,8 +12249,8 @@
         ],
         "name": "閒聊還錢",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12264,8 +12264,8 @@
         "script": [],
         "name": "和夏侯蘭閒聊過",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12279,8 +12279,8 @@
         "script": [],
         "name": "閒聊趙活武功",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12294,8 +12294,8 @@
         "script": [],
         "name": "閒聊雨傘",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12309,8 +12309,8 @@
         "script": [],
         "name": "閒聊話題02",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12320,8 +12320,8 @@
         ],
         "name": "思考小師妹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12331,8 +12331,8 @@
         ],
         "name": "思考葉妹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12342,8 +12342,8 @@
         ],
         "name": "閒聊名號",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12357,8 +12357,8 @@
         "script": [],
         "name": "閒聊話題03",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12368,8 +12368,8 @@
         ],
         "name": "思考江湖",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12379,8 +12379,8 @@
         ],
         "name": "閒聊野味",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12394,8 +12394,8 @@
         "script": [],
         "name": "閒聊話題05",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12405,8 +12405,8 @@
         ],
         "name": "觸發照鏡子",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12416,8 +12416,8 @@
         ],
         "name": "閒聊小師妹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12431,8 +12431,8 @@
         "script": [],
         "name": "閒聊話題04",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12442,8 +12442,8 @@
         ],
         "name": "思考段考",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12453,8 +12453,8 @@
         ],
         "name": "閒聊病況",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12468,8 +12468,8 @@
         "script": [],
         "name": "閒聊話題07",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12483,8 +12483,8 @@
         "script": [],
         "name": "閒聊話題06",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       },
@@ -12494,8 +12494,8 @@
         ],
         "name": "閒聊兄妹",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12509,8 +12509,8 @@
         "script": [],
         "name": "閒聊話題08",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12524,8 +12524,8 @@
         "script": [],
         "name": "閒聊話題11",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12539,8 +12539,8 @@
         "script": [],
         "name": "閒聊話題09",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12554,8 +12554,8 @@
         "script": [],
         "name": "閒聊話題12",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12569,8 +12569,8 @@
         "script": [],
         "name": "閒聊話題10",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12584,8 +12584,8 @@
         "script": [],
         "name": "和小師妹閒聊過",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
@@ -12599,8 +12599,8 @@
         "script": [],
         "name": "決鬥暫存01",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥暫存1"
       },
@@ -12611,8 +12611,8 @@
         ],
         "name": "決鬥:三師兄參戰",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "假趙活風聲事件反抗師姐時三師兄是否參戰幫助主角"
       }
@@ -12626,8 +12626,8 @@
         "script": [],
         "name": "決鬥暫存03",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥暫存1"
       }
@@ -12641,8 +12641,8 @@
         "script": [],
         "name": "決鬥暫存02",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥暫存1"
       }
@@ -12656,8 +12656,8 @@
         "script": [],
         "name": "決鬥暫存04",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥暫存1"
       }
@@ -12671,8 +12671,8 @@
         "script": [],
         "name": "決鬥暫存05",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥暫存1"
       }
@@ -12686,8 +12686,8 @@
         "script": [],
         "name": "決鬥暫存06",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥暫存1"
       }
@@ -12701,8 +12701,8 @@
         "script": [],
         "name": "決鬥暫存08",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥暫存1"
       }
@@ -12716,8 +12716,8 @@
         "script": [],
         "name": "決鬥暫存07",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥暫存1"
       }
@@ -12731,8 +12731,8 @@
         "script": [],
         "name": "決鬥暫存09",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥暫存1"
       }
@@ -12746,8 +12746,8 @@
         "script": [],
         "name": "決鬥暫存10",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥暫存1"
       }
@@ -12761,8 +12761,8 @@
         "script": [],
         "name": "決鬥暫存11",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥暫存1"
       }
@@ -12776,8 +12776,8 @@
         "script": [],
         "name": "決鬥暫存12",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "決鬥暫存1"
       }
@@ -12791,8 +12791,8 @@
         "script": [],
         "name": "困難模式",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": "一般暫存1"
       }
@@ -12806,8 +12806,8 @@
         "script": [],
         "name": "測試用",
         "value": {
-          "0": "$t(Custom.False)",
-          "1": "$t(Custom.True)"
+          "0": "{@Custom.False}",
+          "1": "{@Custom.True}"
         },
         "desc": ""
       }
