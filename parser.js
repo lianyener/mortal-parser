@@ -886,6 +886,9 @@ export async function parseTerm(doExport = true) {
                     if (['Header', 'Start'].includes(type)) break;
                     safeAssign(term, [category, type, id], val);
                 }
+                else {
+                    safeAssign(term, [category, id], val);
+                }
                 break;
             case 'Special':
             case 'Position':

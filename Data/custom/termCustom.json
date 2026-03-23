@@ -1,7 +1,7 @@
 {
     "BranchType": {
         "Switch": "🔎檢定",
-        "Options": "🗳️選項",
+        "Option": "🗳️選項",
         "Dice": "🎲轉盤",
         "Talk": "💬議題",
         "Position": "🗺️地點指令",
@@ -11,7 +11,7 @@
         "True": "是",
         "False": "否",
         "Win": "[*System.BattleVictory*]",
-        "Loss": "[*System.BattleLose*]",
+        "Lost": "[*System.BattleLose*]",
         "Own": "有",
         "Other": "其他",
         "Or": "或",
@@ -108,7 +108,8 @@
         "ArtChange": "立繪調整",
         "ShowCharacter": "顯示角色",
         "MoveCharacter": "移動角色",
-        "HideCharacter": "隱藏角色"
+        "HideCharacter": "隱藏角色",
+        "OnlyPerform": "僅演出變化"
     },
     "Character": {
         "playerLeft": "[*Character.player*]",
@@ -150,9 +151,9 @@
         }
     },
     "Label": {
-        "Achievement": "🏆[*Library.Name.{0}*]",
-        "Dead": "💀[*Library.Name.{0}*]",
-        "End": "🗃️[*Library.Name.{0}*]",
+        "Achievement": "🏆[*Library.Title.{0}*]",
+        "Dead": "💀[*Library.Title.{0}*]",
+        "End": "🗃️[*Library.Title.{0}*]",
         "Talent": "✨❮[*Talent.Name.{0}*]❯",
         "Book": "📕❮[*Book.Name.{0}*]❯",
         "Special": "👑❮[*Special.Name.{0}*]❯",
@@ -163,13 +164,13 @@
         "Relationship": "❤️[*Character.{0}*]",
         "RelationshipFlag": "❤️[*Flag.{0}*]",
         "Position": "📍[*Position.Name.{0}*]",
-        "Mission": "📜[*Mission.{0}*]",
-        "Trigger": "⚡[*Trigger.{0}*]",
+        "Mission": "📜[*Mission.Name.{0}*]",
+        "Trigger": "⚡[*Trigger.Name.{0}*]",
         "Time": "⚡[*Time.{0}*]",
-        "Script": "📃[*Script.{0}*]",
+        "Script": "📃{0}",
         "Free": "👣[*Free.{0}*]",
-        "Combat": "⚔️[*System.Combat*][*Combat.{0}*]",
-        "Battle": "⚔️[*System.Battle*][*Battle.{0}*]",
+        "Combat": "⚔️[*System.Combat*]:{0}",
+        "Battle": "⚔️[*System.Battle*]:{0}",
         "Buff": "⤴️[*CombatSkill.Name.{0}*]",
         "Debuff": "⤵️[*CombatSkill.Name.{0}*]",
         "Support": "🚹[*CombatSkill.Name.{0}*]"

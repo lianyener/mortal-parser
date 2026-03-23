@@ -2,523 +2,523 @@
     "BL_1000": {
         "name": "報復飛石幫",
         "desc": "戰役教學",
-        "ori": "{@System.Battle}-{@EnemyTeam.001}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
         "keywords": ""
     },
     "BL_0000_2": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+崆峒派+點蒼派+南宮世家 vs 丐幫+官兵",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_0000": {
-        "ori": "{@System.Battle}-{@EnemyTeam.001}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_0000_4": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 天武門+飛石幫+丐幫+崆峒派+嵩山派+點蒼派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_0001": {
-        "ori": "{@System.Battle}-{@EnemyTeam.001}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_0000_3": {
-        "ori": "{@System.Battle}-{@EnemyTeam.001}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1201_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "全真派+崆峒派+峨嵋派+嵩山派+點蒼派 vs 丐幫+白鯊幫+地獄道",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1202_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+地獄道+丐幫+白鯊幫 vs 全真派+嵩山派+峨嵋派+峨嵋派+崆峒派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1202_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 全真派+嵩山派+峨嵋派+峨嵋派+崆峒派+地獄道+丐幫+白鯊幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1305_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.200}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.200*]",
         "ref": "唐門 vs 天武門",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1401_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.006}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.006*]",
         "ref": "唐門 vs 青城派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1306_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.010}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "青城派 vs 地獄道",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1307_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.201}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.201*]",
         "ref": "唐門 vs 山賊",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1305_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.200}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.200*]",
         "ref": "唐門 vs 天武門",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1401_03": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 青城派+崆峒派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1601_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.010}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "唐門 vs 地獄道",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1401_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.100}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.100*]",
         "ref": "唐門 vs 崆峒派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1501_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.100}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.100*]",
         "ref": "唐門 vs 崆峒派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1601_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.010}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "唐門 vs 地獄道",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1602_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.002}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1603_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.003}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.003*]",
         "ref": "唐門 vs 白鯊幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1603_03": {
-        "ori": "{@System.Battle}-{@EnemyTeam.003}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.003*]",
         "ref": "唐門 vs 白鯊幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1603_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.003}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.003*]",
         "ref": "唐門 vs 白鯊幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1602_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.002}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1613_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.100}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.100*]",
         "ref": "唐門 vs 崆峒派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1611_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.009}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.009*]",
         "ref": "唐門 vs 峨嵋派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1614_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.004}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.004*]",
         "ref": "唐門 vs 點蒼派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1615_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+崆峒派 vs 點蒼派+青城派+全真派+峨嵋派+嵩山派+丐幫+南宮世家+官兵+飛石幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1615_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 點蒼派+峨嵋派+丐幫+青城派+嵩山派+崆峒派+全真派+南宮世家+官兵+飛石幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1616_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.010}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "唐門+飛石幫+崆峒派 vs 地獄道+白鯊幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1615_03": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+青城派+點蒼派+全真派+峨嵋派+嵩山派+崆峒派+飛石幫+丐幫+南宮世家 vs 錦香宮",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1616_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.010}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "唐門+飛石幫 vs 地獄道+白鯊幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1616_04": {
-        "ori": "{@System.Battle}-{@EnemyTeam.010}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "唐門 vs 地獄道+白鯊幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1702_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 廣州唐門",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1701_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.001}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1616_03": {
-        "ori": "{@System.Battle}-{@EnemyTeam.010}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "唐門+崆峒派 vs 地獄道+白鯊幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1801_03": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": " vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+天武門+峨嵋派+青城派+崆峒派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1802_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+天武門+峨嵋派+青城派+崆峒派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1803_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+飛石幫+錦香宮 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+峨嵋派+青城派+崆峒派+官兵",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1803_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+天武門+峨嵋派+青城派+崆峒派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_2000": {
-        "ori": "{@System.Battle}-{@EnemyTeam.003}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.003*]",
         "ref": "飛石幫 vs 白鯊幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1804_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1801_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+峨嵋派+青城派+丐幫+飛石幫 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+天武門+峨嵋派+青城派+崆峒派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_1801_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+峨嵋派+青城派+丐幫+飛石幫 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+天武門+峨嵋派+青城派+崆峒派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_2002": {
-        "ori": "{@System.Battle}-{@EnemyTeam.100}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.100*]",
         "ref": "點蒼派+青城派+全真派+峨嵋派 vs 崆峒派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_3001": {
-        "ori": "{@System.Battle}-{@EnemyTeam.002}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_2001": {
-        "ori": "{@System.Battle}-{@EnemyTeam.300}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.300*]",
         "ref": "丐幫+白鯊幫 vs 官兵",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_3002": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 丐幫+官兵",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_3005": {
-        "ori": "{@System.Battle}-{@EnemyTeam.002}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_3004": {
-        "ori": "{@System.Battle}-{@EnemyTeam.002}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫+官兵",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_3003": {
-        "ori": "{@System.Battle}-{@EnemyTeam.002}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_3101": {
-        "ori": "{@System.Battle}-{@EnemyTeam.002}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_3100": {
-        "ori": "{@System.Battle}-{@EnemyTeam.002}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_3300": {
-        "ori": "{@System.Battle}-{@EnemyTeam.001}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_3200": {
-        "ori": "{@System.Battle}-{@EnemyTeam.002}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_4001": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 嵩山派+廣州唐門",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_5001": {
-        "ori": "{@System.Battle}-{@EnemyTeam.002}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_5002": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+飛石幫+丐幫+點蒼派 vs 丐幫+飛石幫+崆峒派+官兵",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_5003_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "崆峒派 vs 飛石幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_5003_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.001}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_5003_03": {
-        "ori": "{@System.Battle}-{@EnemyTeam.002}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_A0001_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.008}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.008*]",
         "ref": "唐門 vs 嵩山派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_A0001_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.004}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.004*]",
         "ref": "唐門 vs 點蒼派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_A0001_03": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 錦香宮+唐門",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_A0002_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.500}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.500*]",
         "ref": "唐門 vs 唐門",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_S0012_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 崆峒派+點蒼派+青城派+峨嵋派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_S0018_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "丐幫 vs 崆峒派+點蒼派+嵩山派+全真派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_3102": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+崆峒派+點蒼派+南宮世家+嵩山派+全真派+青城派 vs 丐幫+官兵",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_S0024_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 丐幫+嵩山派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_S0018_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 崆峒派+嵩山派+全真派+青城派",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_S0024_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "丐幫+嵩山派 vs 唐門",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_S0210_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.500}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.500*]",
         "ref": "唐門 vs 廣州唐門",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_S0106_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 廣州唐門",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_S0106_02": {
-        "ori": "{@System.Battle}-{@EnemyTeam.000}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 廣州唐門",
         "name": "",
         "desc": "",
         "keywords": ""
     },
     "BL_S9906_01": {
-        "ori": "{@System.Battle}-{@EnemyTeam.002}",
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
         "name": "",
         "desc": "",
