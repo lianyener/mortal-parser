@@ -330,7 +330,7 @@ function convertComparison(operator, inverse = false) {
 
 // Helper: 轉換邏輯運算符
 function convertLogic(operator, inverse = false) {
-    return (operator === 'OR') === inverse ? '{@Custom.And}' : '{@Custom.Or}';
+    return (operator === 'OR') === inverse ? '[*Custom.And*]' : '[*Custom.Or*]';
 }
 
 // Helper: 計算機率
@@ -338,7 +338,7 @@ function calcProbability(statment) {
 
     // 例外處理
     const setError = () => {
-        statment.left = '{@Custom.Probability}';
+        statment.left = '[*Custom.Probability*]';
         statment.right = '0%';
         statment.symbol = ':';
     };
@@ -386,7 +386,7 @@ function calcProbability(statment) {
     }
 
     // 修正範圍外數值並回存
-    statment.left = '{@Custom.Probability}';
+    statment.left = '[*Custom.Probability*]';
     statment.right = `${Math.min(100, Math.round((Math.max(0, count) / total) * 100))}%`;
     statment.symbol = ':';
 }
@@ -396,23 +396,23 @@ function handleFlagStatement(flagId, val, script, symbol = '=', isEffect = false
 
     // 初始化變數
     const statment = {
-        left: `{@Label.Flag,${flagId}.0}`,
+        left: `[*Label.Flag,${flagId}.0*]`,
         right: val,
         symbol,
-        brackets: { left: '{#', right: '}' }
+        brackets: { left: '[%', right: '%]' }
     };
 
     // Helper: 調整旗標格式
     const formatFlag = (flagItem, index) => {
         const type = flagItem.type ?? '';
-        statment.left = `{@Label.${type}Flag,${flagId}.${index}}`;
+        statment.left = `[*Label.${type}Flag,${flagId}.${index}*]`;
 
         // 效果不加括號
         if (isEffect) statment.brackets = { left: '', right: '' };
 
         // 判斷旗標是否設定對應值
         if (flagItem?.value?.[val]) {
-            statment.right = `{@Flag.${flagId}.${index}.${val}}`;
+            statment.right = `[*Flag.${flagId}.${index}.${val}*]`;
 
             // 對應遊戲中幾個在Flag預設為0時把Flag=1寫成Flag+1的狀況
             if (symbol == '+' && val == 1) statment.symbol = '=';
@@ -437,8 +437,8 @@ function handleFlagStatement(flagId, val, script, symbol = '=', isEffect = false
         }
         // 劇本特殊設定未確認標記
         else if (flagItems.length > 1) {
-            statment.left = `{@Flag.${flagId}.X}`;
-            statment.right = `{@Flag.${flagId}.X.${val}}`;
+            statment.left = `[*Flag.${flagId}.X*]`;
+            statment.right = `[*Flag.${flagId}.X.${val}*]`;
         }
     }
     else {
@@ -460,7 +460,7 @@ function handleStatement(var1, operator, var2, script, inverse = false) {
         left: var1.name,
         right: val,
         symbol,
-        brackets: { left: '{#', right: '}' },
+        brackets: { left: '[%', right: '%]' },
         rel: {}
     };
 
@@ -470,14 +470,12 @@ function handleStatement(var1, operator, var2, script, inverse = false) {
             calcProbability(statment);
             break;
         case 'Condition':
-            statment.right = `{@Flag.Match.${val}}`;
-            statment.brackets = { left: '{#', right: '}' };
+            statment.right = `[*Flag.Match.${val}*]`;
             break;
         case 'Develop':
         case 'Book':
         case 'Achievement':
-            statment.right = `{@Flag.Own.${val}}`;
-            statment.brackets = { left: '{#', right: '}' };
+            statment.right = `[*Flag.Own.${val}*]`;
             break;
         case 'Flag':
             statment = handleFlagStatement(var1?.flag, val, script, symbol);
@@ -486,8 +484,8 @@ function handleStatement(var1, operator, var2, script, inverse = false) {
         case 'PlayerStat':
 
             // 判斷屬性值是否為心上人
-            if (var1.name == '{@PlayerStat.lover}') {
-                statment.right = `{@PlayerInfo.Lover.${val}}`;
+            if (var1.name == '[*PlayerStat.lover*]') {
+                statment.right = `[*PlayerInfo.Lover.${val}*]`;
 
                 // 增加關聯角色
                 const loverId = LOVER_MAP[val];
@@ -532,7 +530,7 @@ async function getCondition(conditionData, name, inverse = false) {
     }
 
     // 無效條件
-    if (rules.length === 0) return { name: '{@Custom.InvalidCondition}', rel: {} };
+    if (rules.length === 0) return { name: '[*Custom.InvalidCondition*]', rel: {} };
 
     // 複數條件(遊戲中理論上沒有)
     if (rules.length > 1) writeLog('warn', `Multi-Condition on "${name}".`);
@@ -619,7 +617,7 @@ async function getStat(statItem) {
                 case '好感度': {
                     const subId = key.toLowerCase().replace(REGEX_RELATIONSHIP, '$1');
                     return {
-                        name: `{@Label.Relationship,${subId}}`,
+                        name: `[*Label.Relationship,${subId}*]`,
                         type: 'Relationship',
                         rel: { Character: [subId] }
                     };
@@ -627,7 +625,7 @@ async function getStat(statItem) {
                 case '風雲史': {
                     const subId = removeUid(key);
                     return {
-                        name: `{@Label.Achievement,${subId}}`,
+                        name: `[*Label.Achievement,${subId}*]`,
                         type: 'Achievement',
                         rel: { Library: [subId] }
                     };
@@ -636,7 +634,7 @@ async function getStat(statItem) {
                 case '技能': {
                     const subId = await queryItemId(key, REF_MAP.TALENT, 'PlayerTalentData');
                     return {
-                        name: `{@Label.Talent,${subId}}`,
+                        name: `[*Label.Talent,${subId}*]`,
                         type: 'Talent',
                         rel: { Talent: [subId] }
                     };
@@ -646,7 +644,7 @@ async function getStat(statItem) {
 
                     // 遊戲目前時間
                     if (subId === 'PlayerGameTime') {
-                        return { name: `{@Custom.GameTime}`, type: 'GameTime' };
+                        return { name: `[*Custom.GameTime*]`, type: 'GameTime' };
                     }
 
                     // 時間常數
@@ -654,7 +652,7 @@ async function getStat(statItem) {
                         const data = await getGameJson(key, 'GameTimeData');
                         const { Year, Month, Stage } = data?.GameTime ?? { Year: 0, Month: 0, Stage: 0 };
                         return {
-                            name: `{@System.GameTimeText,${Year},${Month},${STAGE_MAP[Stage] ?? '0'}}`,
+                            name: `[*System.GameTimeText,${Year},${Month},${STAGE_MAP[Stage] ?? '0'}*]`,
                             type: 'TimeData'
                         };
                     }
@@ -662,7 +660,7 @@ async function getStat(statItem) {
                     // 時間變數
                     CACHE.TIME[subId] = {};
                     return {
-                        name: `{@Label.Time,${subId}}`,
+                        name: `[*Label.Time,${subId}*]`,
                         type: 'TimeVar',
                         rel: { Time: [subId] }
                     };
@@ -670,7 +668,7 @@ async function getStat(statItem) {
                 case '書籍': {
                     const subId = await queryItemId(key, REF_MAP.BOOK, 'Book');
                     return {
-                        name: `{@Label.Book,${subId}}`,
+                        name: `[*Label.Book,${subId}*]`,
                         type: 'Book',
                         rel: { Book: [subId] }
                     };
@@ -678,7 +676,7 @@ async function getStat(statItem) {
                 case '秘笈等級': {
                     const subId = await queryItemId(key, REF_MAP.BOOK, 'Book');
                     return {
-                        name: `{@Label.Book,${subId}}LV`,
+                        name: `[*Label.Book,${subId}*]LV`,
                         type: 'BookLevel',
                         rel: { Book: [subId] }
                     };
@@ -688,7 +686,7 @@ async function getStat(statItem) {
                 case '貴重品': {
                     const subId = await queryItemId(key, REF_MAP.SPECIAL, 'SpecialItem');
                     return {
-                        name: `{@Label.Special,${subId}}`,
+                        name: `[*Label.Special,${subId}*]`,
                         type: 'Special',
                         rel: { Special: [subId] }
                     };
@@ -696,7 +694,7 @@ async function getStat(statItem) {
                 case '已開發項目': {
                     const subId = await queryItemId(key, REF_MAP.EQUIP, 'UpgradeItemData');
                     return {
-                        name: `{@Label.Equip,${subId}}`,
+                        name: `[*Label.Equip,${subId}*]`,
                         type: 'Equip',
                         rel: { Equip: [subId] }
                     };
@@ -704,7 +702,7 @@ async function getStat(statItem) {
                 case '開發項目等級': {
                     const subId = await queryItemId(key, REF_MAP.EQUIP, 'UpgradeItemData');
                     return {
-                        name: `{@Label.Equip,${subId}}LV`,
+                        name: `[*Label.Equip,${subId}*]LV`,
                         type: 'EquipLevel',
                         rel: { Equip: [subId] }
                     };
@@ -712,7 +710,7 @@ async function getStat(statItem) {
                 case '旗標': {
                     const subId = removeUid(key);
                     return {
-                        name: `{@Label.Flag,${subId}}`,
+                        name: `[*Label.Flag,${subId}*]`,
                         type: 'Flag',
                         flag: subId,
                         rel: { Flag: [subId] }
@@ -722,14 +720,14 @@ async function getStat(statItem) {
                     const data = await getGameJson(key, 'ConditionResultData');
                     if (!isValidJson(data, key)) {
                         return {
-                            name: '{@Custom.InvalidCondition}',
+                            name: '[*Custom.InvalidCondition*]',
                             type: 'Condition',
                             rel: {}
                         };
                     }
                     const condition = await getCondition(data, key);
                     return {
-                        name: `{@Custom.Condition}:${condition.name}`,
+                        name: `[*Custom.Condition*]:${condition.name}`,
                         type: 'Condition',
                         rel: condition.rel
                     };
@@ -741,14 +739,14 @@ async function getStat(statItem) {
                     const matched = subId.match(REGEX_ENEMY_STAT);
                     if (matched) {
                         return {
-                            name: `{@EnemyTeam.${matched[1]}}{@PlayerStat.${toKebab(matched[2])}}`,
+                            name: `[*EnemyTeam.${matched[1]}*][*PlayerStat.${toKebab(matched[2])}*]`,
                             type: 'EnemyStat'
                         };
                     }
 
                     // 主角屬性值
                     return {
-                        name: `{@PlayerStat.${toKebab(subId.replace(REGEX_STAT_PREFIX, ''))}}`,
+                        name: `[*PlayerStat.${toKebab(subId.replace(REGEX_STAT_PREFIX, ''))}*]`,
                         type: 'PlayerStat'
                     };
                 }
@@ -757,7 +755,7 @@ async function getStat(statItem) {
                 case '雜物': {
                     const subId = await queryItemId(key, REF_MAP.MISC, 'Misc');
                     return {
-                        name: `{@Label.Misc,${subId}}`,
+                        name: `[*Label.Misc,${subId}*]`,
                         type: 'Misc',
                         rel: { Misc: [subId] }
                     };
@@ -813,7 +811,7 @@ async function getStatGroup(fileName) {
                 break;
             case 'Max':
             case 'Min':
-                result.name = `{@Custom.${groupType}}(${names.join(',')})`;
+                result.name = `[*Custom.${groupType}*](${names.join(',')})`;
                 break;
             case 'Multiply':
                 result.name = names.join('×');
@@ -939,7 +937,7 @@ export async function parseTerm(doExport = true) {
                 if (keys[1] === 'Name') term.Facility.Name[id] = val;
                 break;
             case 'Story': {
-                const text = val.replace(regexNewLine, '').replace(regexVoice, '({@Custom.Voice$1})$2');
+                const text = val.replace(regexNewLine, '').replace(regexVoice, '([*Custom.Voice$1*])$2');
                 if (id.startsWith('O_')) option.Story[id] = { _: text, short: optionCustom?.Story?.[id]?.short ?? text };
                 else dialog.Story[id] = text;
                 break;
@@ -999,7 +997,7 @@ export async function parseFlag() {
     const emptyFlagItem = {
         script: [],
         name: '',
-        value: { 0: '{@Custom.False}', 1: '{@Custom.True}' },
+        value: { 0: '[*Custom.False*]', 1: '[*Custom.True*]' },
         desc: ''
     };
 
@@ -1028,7 +1026,7 @@ export async function parseFlag() {
             (custom?.[id]?.data ?? []).forEach((flagItem, index) => {
                 const valueName = {};
                 for (const key in flagItem.value ?? {}) {
-                    valueName[key] = `{@Flag.${id}.${index}.${key}}`;
+                    valueName[key] = `[*Flag.${id}.${index}.${key}*]`;
                 }
                 result[id].data.push({
                     script: flagItem.script,
@@ -1041,7 +1039,7 @@ export async function parseFlag() {
             if (result[id].data.length === 0) {
                 result[id].data.push({
                     script: [],
-                    value: { 0: `{@Flag.${id}.0.0}`, 1: `{@Flag.${id}.0.1}` },
+                    value: { 0: `[*Flag.${id}.0.0*]`, 1: `[*Flag.${id}.0.1*]` },
                 });
             }
         }
@@ -1170,7 +1168,7 @@ export async function parseTalent(doExport = true) {
             // 紀錄下位技能
             for (const item of data._lowLevelTalent ?? []) {
                 const lowId = await queryItemId(item._name, ref, 'PlayerTalentData');
-                result[id].low.push(`{@Talent.Name.${lowId}`);
+                result[id].low.push(`[*Talent.Name.${lowId}*]`);
             }
         }
         catch (err) {
@@ -1259,13 +1257,13 @@ export async function parseBook(doExport = true) {
                         mergeRelation(result[id].rel.pre, stat.rel);
                     }
 
-                    if (rule.length > 0) rules.push(rule.join('{@Custom.Or}'));
+                    if (rule.length > 0) rules.push(rule.join('[*Custom.Or*]'));
                     else writeLog('warn', `1 rule of Condition "${conditionName}" skipped.`);
                 }
 
                 // 無條件
-                if (rules.length === 0) result[id].condition.push('{@System.NA}')
-                else result[id].condition.push(rules.join('{@Custom.And}'));
+                if (rules.length === 0) result[id].condition.push('[*System.NA*]')
+                else result[id].condition.push(rules.join('[*Custom.And*]'));
 
                 // 紀錄其他影響
                 for (const statItem of levelData._levelupStats ?? []) {
@@ -1331,12 +1329,12 @@ export async function parseEquip(doExport = true) {
             // 記錄可轉換開發項目
             for (const item of data._evolutionItems ?? []) {
                 const evoId = await queryItemId(item._nextItem._name, ref, 'UpgradeItemData');
-                const evoItem = { name: `{@Equip.Name.${evoId}}`, condition: [] };
+                const evoItem = { name: `[*Equip.Name.${evoId}*]`, condition: [] };
                 mergeRelation(result[id].rel.post, { Equip: [evoId] });
 
                 // 等級要求
                 const evoLevel = item._requiredLevel;
-                if (evoLevel) evoItem.condition.push(`{#{@Label.Equip,${id}}LV≥${evoLevel}}`);
+                if (evoLevel) evoItem.condition.push(`[%[*Label.Equip,${id}*]LV≥${evoLevel}%]`);
 
                 // 其他條件
                 if (item._conditions.length) {
@@ -1393,7 +1391,7 @@ export async function parseStatGroup() {
 
                 // 檢查是否設定別名
                 if (custom[id].id) {
-                    result[id].name = `{@GroupStat.${custom[id].id}}`;
+                    result[id].name = `[*GroupStat.${custom[id].id}*]`;
                     group[custom[id].id] = {
                         name: result[id].name,
                         content: custom[id].name
@@ -1495,7 +1493,7 @@ export async function parseSwitch() {
 
             // 以檢定次數分歧
             if (data._useCount) {
-                switchObj.check = '{@Custom.CheckTimes}';
+                switchObj.check = '[*Custom.CheckTimes*]';
                 for (const item of data._countItems ?? []) {
                     switchObj.switch.push(`=${item._value}`);
                 }
@@ -1518,7 +1516,7 @@ export async function parseSwitch() {
                 }
 
                 // 調整表示格式
-                if (rules.length == 0) switchObj.check = '{@Custom.InvalidCondition}';
+                if (rules.length == 0) switchObj.check = '[*Custom.InvalidCondition*]';
                 else if (rules.length == 1) switchObj.check = rules[0].rule.map(r => r.text).join(rules[0].op);
                 else {
                     // 如果式子左邊全部相同則簡化表示
@@ -1529,7 +1527,7 @@ export async function parseSwitch() {
                     }
                     // 完整表示所有條件式
                     else {
-                        switchObj.check = '{@Custom.MultiCheck}';
+                        switchObj.check = '[*Custom.MultiCheck*]';
                         switchObj.switch = rules.map(g => g.rule.map(r => r.text).join(g.op));
                     }
                 }
@@ -1617,7 +1615,7 @@ function updateNameDraftItem(draft, id, ref = '', ori = id) {
 export async function parseMission() {
 
     // 常數
-    const regexTime = /\{@Custom\.GameTime\}([=≥≤])\{@System\.GameTimeText,(\d),(\d{1,2}),(\d)\}/;
+    const regexTime = /\[\*Custom\.GameTime\*\]([=≥≤])\[\*System\.GameTimeText,(\d),(\d{1,2}),(\d)\*\]/;
     const regexMinTime = /[=≥]/;
     const regexMaxTime = /[=≤]/;
     const regexPrefix = /^.+?_/;
@@ -1664,10 +1662,10 @@ export async function parseMission() {
         active: true,
         minTime: { year: '1', month: '4', stage: '1' },
         maxTime: { year: '1', month: '4', stage: '1' },
-        condition: ['※{@Custom.GameStart}'],
+        condition: ['※[*Custom.GameStart*]'],
         script: 'ch1_1',
         content: [],
-        remark: Array.from(custom?.['M0000']?.remark ?? [], (_, i) => `{@Trigger.Remark.M0000.${i}}`),
+        remark: Array.from(custom?.['M0000']?.remark ?? [], (_, i) => `[*Trigger.Remark.M0000.${i}*]`),
         rel: { pre: {}, post: {}, intra: {} },
         type: 'Main',
         orderKey: '1-04-1-1-M0000'
@@ -1677,7 +1675,7 @@ export async function parseMission() {
 
     // Helper: 生成時間字串
     const toTimeText = (timeObj) => {
-        return `{@System.GameTimeText,${timeObj.Year},${timeObj.Month},${STAGE_MAP[timeObj.Stage] ?? '0'}}`;
+        return `[*System.GameTimeText,${timeObj.Year},${timeObj.Month},${STAGE_MAP[timeObj.Stage] ?? '0'}*]`;
     };
 
     // 一般任務主流程
@@ -1708,16 +1706,16 @@ export async function parseMission() {
                     condition: [],
                     script: triggerData._startScript,
                     content: [],
-                    remark: Array.from(custom?.[triggerId]?.remark ?? [], (_, i) => `{@Trigger.Remark.${triggerId}.${i}}`),
+                    remark: Array.from(custom?.[triggerId]?.remark ?? [], (_, i) => `[*Trigger.Remark.${triggerId}.${i}*]`),
                     rel: { pre: {}, post: {} }
                 };
-                if (!mission.active) mission.remark.unshift('※{@Custom.TriggerDisable}');
+                if (!mission.active) mission.remark.unshift('※[*Custom.TriggerDisable*]');
                 updateNameDraftItem(nameDraft.trigger, triggerId, (triggerData._desc ?? '').trim());
 
                 // 判斷主支線
                 const type = id == 'main' ? 'Main' : 'Sub';
                 mission.type = type;
-                if (triggerId != data._initKey) mission.condition.push(`{@Custom.TriggerSet,${type}}`);
+                if (triggerId != data._initKey) mission.condition.push(`[*Custom.TriggerSet,${type}*]`);
 
                 // 確認是否有特定時間條件
                 if (triggerData._dayCheck) {
@@ -1726,7 +1724,7 @@ export async function parseMission() {
                     if (triggerData._timeCheckType == '特定') {
                         const time = triggerData._specificTime;
                         mission.minTime = mission.maxTime = { year: time.Year.toString(), month: time.Month.toString(), stage: STAGE_MAP[time.Stage] ?? '0' };
-                        mission.condition.push(`{@Custom.SpecificTime}: ${toTimeText(time)}`);
+                        mission.condition.push(`[*Custom.SpecificTime*]: ${toTimeText(time)}`);
                     }
                     // 條件為時間區間
                     else {
@@ -1734,7 +1732,7 @@ export async function parseMission() {
                         const maxTime = triggerData._maxTime;
                         mission.minTime = { year: minTime.Year.toString(), month: minTime.Month.toString(), stage: STAGE_MAP[minTime.Stage] ?? '0' };
                         mission.maxTime = { year: maxTime.Year.toString(), month: maxTime.Month.toString(), stage: STAGE_MAP[maxTime.Stage] ?? '0' };
-                        mission.condition.push(`{@Custom.SpecificPeriod}: ${toTimeText(minTime)}~${toTimeText(maxTime)}`);
+                        mission.condition.push(`[*Custom.SpecificPeriod*]: ${toTimeText(minTime)}~${toTimeText(maxTime)}`);
                     }
                 }
 
@@ -1758,7 +1756,7 @@ export async function parseMission() {
 
                     // 加入條件
                     if (rules.length > 0) {
-                        if (condition._logicOp == 'OR') mission.condition.push(rules.join('{@Custom.Or}'));
+                        if (condition._logicOp == 'OR') mission.condition.push(rules.join('[*Custom.Or*]'));
                         else mission.condition.push(...rules);
                     }
                 }
@@ -1767,19 +1765,19 @@ export async function parseMission() {
                 const position = triggerData._position;
                 const priority = type == 'Main' ? 1 : triggerData._beforeMainMission ? 0 : 2;
                 if (position != '無') {
-                    mission.condition.push(`{@Custom.GoTo}{@Label.Position,${positionMap[position] ?? 'Unknown'}}`);
+                    mission.condition.push(`[*Custom.GoTo*][*Label.Position,${positionMap[position] ?? 'Unknown'}*]`);
                 }
                 else if (priority != 1) {
-                    mission.condition.push(`※{@Custom.TriggerPriority,${priority ? 'LowerThan' : 'HigherThan'}}`);
+                    mission.condition.push(`※[*Custom.TriggerPriority,${priority ? 'LowerThan' : 'HigherThan'}*]`);
                 }
 
                 // 是否有設定接續觸發
                 const nextState = triggerData._nextStateName;
                 if (nextState) {
                     let text;
-                    if (nextState == 'clear') text = `◎{@Label.Mission,${id}}{@Custom.SetClear}`;
+                    if (nextState == 'clear') text = `◎[*Label.Mission,${id}*][*Custom.SetClear*]`;
                     else {
-                        text = `◎{@Label.Mission,${id}}{@Custom.SetTrigger}:{@Label.Trigger,${nextState}}`;
+                        text = `◎[*Label.Mission,${id}*][*Custom.SetTrigger*]:[*Label.Trigger,${nextState}*]`;
                         mergeRelation(mission.rel.post, { Mission: [nextState] });
                     }
                     mission.content.push({ form: 'effect', type: 'system', text });
@@ -1814,7 +1812,7 @@ export async function parseMission() {
                 script: data._defaultScript,
                 content: [],
                 remark: [],
-                condition: [`{@Custom.GoTo}{@Label.Position,${id}}`],
+                condition: [`[*Custom.GoTo*][*Label.Position,${id}*]`],
                 rel: { pre: {}, post: { Script: [data._defaultScript] } },
                 type: 'Free',
                 minTime: { year: '1', month: '4', stage: '1' },
@@ -1851,7 +1849,7 @@ export async function parseMission() {
                     rules.push(statment.text);
                     mergeRelation(mission.rel.pre, statment.rel);
                 }
-                branch.text = `{@BranchType.Switch}：${rules.join(convertLogic(condition._condition._logicOp))}`;
+                branch.text = `[*BranchType.Switch*]：${rules.join(convertLogic(condition._condition._logicOp))}`;
 
                 // 解析影響旗標
                 for (const item of condition._flagItem ?? []) {
@@ -1864,8 +1862,8 @@ export async function parseMission() {
                 }
 
                 // 設定旗標內容
-                if (trueSet.length > 0) branch.branches.push({ index: branch.branches.length + 1, text: '{@Custom.True}', content: trueSet });
-                if (falseSet.length > 0) branch.branches.push({ index: branch.branches.length + 1, text: '{@Custom.False}', content: falseSet });
+                if (trueSet.length > 0) branch.branches.push({ index: branch.branches.length + 1, text: '[*Custom.True*]', content: trueSet });
+                if (falseSet.length > 0) branch.branches.push({ index: branch.branches.length + 1, text: '[*Custom.False*]', content: falseSet });
 
                 mission.content.push(branch);
             }
@@ -1987,9 +1985,9 @@ export async function parsePosition() {
             const info = infoMap[key] ?? { index: 999, period: '', position: '', action: '' };
             const prefix = data._scriptPrefix;
             result[key] = {
-                period: `{@MapPosition.Name.${info.period}}`,
-                position: info.position ? `{@Position.Name.${info.position}}` : '',
-                action: info.action ? `{@Position.title.${info.action}}` : '',
+                period: `[*MapPosition.Name.${info.period}*]`,
+                position: info.position ? `[*Position.Name.${info.position}*]` : '',
+                action: info.action ? `[*Position.title.${info.action}*]` : '',
                 prefix: data._scriptPrefix,
                 event: {},
                 orderKey: info.index
@@ -2037,13 +2035,13 @@ export async function parsePosition() {
                         rules.push(statment.text);
                         mergeRelation(event.rel.pre, statment.rel);
                     }
-                    event.rate.push(`${rules.join('{@Custom.And}')} +${subItem._rate ?? '?'}`);
+                    event.rate.push(`${rules.join('[*Custom.And*]')} +${subItem._rate ?? '?'}`);
                 }
 
                 // 清單重複處理
                 if (result[key].event[id]) {
                     writeLog('warn', `"${key}"-"${id}" duplicated.`);
-                    event.remark.push('※{@Position.Remark.Common.0}');
+                    event.remark.push('※[*Position.Remark.Common.0*]');
                 }
 
                 // 回存結果
@@ -2073,7 +2071,7 @@ function buildLogicView(content) {
 
     // 空白分歧
     if (!content || content.length === 0) {
-        return [{ form: 'effect', type: 'remark', text: '※{@System.NA}' }];
+        return [{ form: 'effect', type: 'remark', text: '※[*System.NA*]' }];
     }
 
     // 初始化
@@ -2124,7 +2122,7 @@ function buildLogicView(content) {
 
     // 處理僅演出變化分岐
     if (result.length === 0) {
-        return [{ form: 'effect', type: 'remark', text: '※{@Custom.OnlyPerform}' }];
+        return [{ form: 'effect', type: 'remark', text: '※[*Custom.OnlyPerform*]' }];
     }
 
     return result;
@@ -2159,7 +2157,7 @@ export async function parseCombat() {
     };
 
     // Helper: 轉換詞語
-    const getTerm = (type, term, parent = 'Custom') => `{@${parent}.${termMap?.[type]?.[term] ?? 'Unknown'}}`;
+    const getTerm = (type, term, parent = 'Custom') => `[*${parent}.${termMap?.[type]?.[term] ?? 'Unknown'}*]`;
 
     // Helper: 輔助技能轉換角色
     const queryCharacterIds = (supportId) => {
@@ -2185,10 +2183,10 @@ export async function parseCombat() {
 
         // 讀取資料
         const data = await getGameJson(name, 'CombatStateEffectScriptable');
-        if (!isValidJson(data, name)) effect = { key: '{@CombatSkill.Name.Unknown}', type: '{@Custom.Unknown}', show: false };
+        if (!isValidJson(data, name)) effect = { key: '[*CombatSkill.Name.Unknown*]', type: '[*Custom.Unknown*]', show: false };
         else {
             const type = data._stateType;
-            effect = { key: `{@Label.${type},${data._key}}`, type: `{@Custom.${type}}`, show: data._show ? '' : '*' };
+            effect = { key: `[*Label.${type},${data._key}*]`, type: `[*Custom.${type}*]`, show: data._show ? '' : '*' };
             if (type === 'Support') {
                 const charIds = queryCharacterIds(data._key);
                 if (charIds) effect.rel = { Character: charIds };
@@ -2226,7 +2224,7 @@ export async function parseCombat() {
                 // 載入行動
                 const data = await getGameJson(key, type);
                 if (!isValidJson(data, key)) {
-                    return { content: [{ form: 'effect', type: 'system', text: '※{@Custom.Unknown}' }] };
+                    return { content: [{ form: 'effect', type: 'system', text: '※[*Custom.Unknown*]' }] };
                 }
 
                 // 解析行動
@@ -2234,12 +2232,12 @@ export async function parseCombat() {
 
                     // 強制指令
                     case 'CombatEventActionCrazyMode': {
-                        const text = `${getTerm('char', data._character)}{@Custom.ForceAction}:{@CombatAction.${data._mode.toLowerCase()}}`;
+                        const text = `${getTerm('char', data._character)}[*Custom.ForceAction*]:[*CombatAction.${data._mode.toLowerCase()}*]`;
                         return { content: [{ form: 'effect', type: 'action', text }] };
                     }
                     // 事件對話
                     case 'CombatEventActionDialog': {
-                        const content = [{ form: 'effect', type: 'dialog', text: '◇{@Custom.EventDialog}' }];
+                        const content = [{ form: 'effect', type: 'dialog', text: '◇[*Custom.EventDialog*]' }];
                         for (const dialogItem of data._dialogs) {
 
                             // 記錄資料
@@ -2247,34 +2245,34 @@ export async function parseCombat() {
                             const dialog = {
                                 char: '',
                                 type: 'character',
-                                lines: `{@CombatTalking.${dialogItem._key}}`
+                                lines: `[*CombatTalking.${dialogItem._key}*]`
                             };
 
                             // 記錄說話角色
                             if (dialogChar.startsWith('第三者', 2)) {
                                 const charId = await queryItemId(dialogItem._characterKey._name, cache.character, 'StoryMappingItem');
-                                dialog.char = `{@CombatCharacter.Name.${charId}}`;
+                                dialog.char = `[*CombatCharacter.Name.${charId}*]`;
                             }
-                            else if (dialogChar.startsWith('我方')) dialog.char = '{@CombatCharacter.Name.player}';
+                            else if (dialogChar.startsWith('我方')) dialog.char = '[*CombatCharacter.Name.player*]';
                             else if (dialogChar.startsWith('敵方')) dialog.char = enemyName;
 
                             // 記錄說話類別
                             if (dialogChar.endsWith('心想')) dialog.type = 'think';
                             else if (dialogChar.endsWith('旁白')) dialog.type = 'narration';
 
-                            const text = `${dialog.char}{@DialogType.${dialog.type}}「${dialog.lines}」`;
+                            const text = `${dialog.char}[*DialogType.${dialog.type}*]「${dialog.lines}」`;
                             content.push({ form: 'perform', type: 'story', text })
                         }
                         return { content };
                     }
                     // 記錄回合數
                     case 'CombatEventActionFlagRound': {
-                        const text = `{@Label.Flag,${removeUid(data._flag._name)}.0}={@Custom.Round}+${data._add}`;
+                        const text = `[*Label.Flag,${removeUid(data._flag._name)}.0*]=[*Custom.Round*]+${data._add}`;
                         return { content: [{ form: 'effect', type: 'stat', text }] };
                     }
                     // 結束戰鬥
                     case 'CombatEventActionLoadScene': {
-                        return { content: [{ form: 'effect', type: 'system', text: '◎{@Custom.EndCombat}' }] };
+                        return { content: [{ form: 'effect', type: 'system', text: '◎[*Custom.EndCombat*]' }] };
                     }
                     // 設定旗標
                     case 'CombatEventActionModifyFlag': {
@@ -2289,7 +2287,7 @@ export async function parseCombat() {
                     case 'CombatEventActionModifyStat':
                     case 'CombatEventActionModifyWeaponValue': {
                         const unit = data._valueType == '百分比' ? '%' : '';
-                        const vfx = data._useVFX ? '({@Custom.VFX})' : '';
+                        const vfx = data._useVFX ? '([*Custom.VFX*])' : '';
                         const sign = data._value >= 0 ? '+' : '';
                         const text = `${getTerm('char', data._character)}${getTerm('stat', data._type, 'PlayerStat')}${sign}${data._value}${unit}${vfx}`;
                         return { content: [{ form: 'effect', type: 'stat', text }] };
@@ -2297,14 +2295,14 @@ export async function parseCombat() {
                     // 輔助角色被攻擊
                     case 'CombatEventActionPunchSupport': {
                         const effect = await getCombatEffect(data._support._name);
-                        const text = `${effect.key}{@Custom.Attacked}`
+                        const text = `${effect.key}[*Custom.Attacked*]`
                         return { content: [{ form: 'effect', type: 'action', text }] };
                     }
                     // 依好感度攻擊
                     case 'CombatEventActionRelationshipAttack': {
                         const charId = data._relationshipData._name.toLowerCase().replace(REGEX_RELATIONSHIP, '$1');
-                        const vfx = data._useVFX ? '({@Custom.VFX})' : '';
-                        const text = `{@Label.Character,${charId}}{@Custom.RelationshipAttack}${vfx}`;
+                        const vfx = data._useVFX ? '([*Custom.VFX*])' : '';
+                        const text = `[*Label.Character,${charId}*][*Custom.RelationshipAttack*]${vfx}`;
                         return {
                             content: [{ form: 'effect', type: 'action', text }],
                             rel: { intra: { Character: [charId] } }
@@ -2312,12 +2310,12 @@ export async function parseCombat() {
                     }
                     // 移除所有狀態
                     case 'CombatEventActionRemoveAllStateEffect': {
-                        const text = `${getTerm('char', data._character)}{@Custom.RemoveAllState}`;
+                        const text = `${getTerm('char', data._character)}[*Custom.RemoveAllState*]`;
                         return { content: [{ form: 'effect', type: 'stat', text }] };
                     }
                     // 設定戰鬥後接續劇本
                     case 'CombatEventActionSetStoryScript': {
-                        return { content: [{ form: 'effect', type: 'system', text: `◎{@Custom.CombatNextScript}{@Label.Script,${data._name}}` }] };
+                        return { content: [{ form: 'effect', type: 'system', text: `◎[*Custom.CombatNextScript*][*Label.Script,${data._name}*]` }] };
                     }
                     // 異動角色狀態
                     case 'CombatEventActionStateEffect': {
@@ -2330,7 +2328,7 @@ export async function parseCombat() {
                     }
                     // 顯示特效
                     case 'CombatEventActionVFX': {
-                        return { content: [{ form: 'effect', type: 'system', text: '◇{@Custom.VFX}' }] };
+                        return { content: [{ form: 'effect', type: 'system', text: '◇[*Custom.VFX*]' }] };
                     }
                     // 無對應
                     default:
@@ -2364,27 +2362,27 @@ export async function parseCombat() {
             try {
                 // 讀取檔案
                 const data = await getGameJson(key, type);
-                if (!isValidJson(data, key)) return '{@Custom.InvalidCondition}';
+                if (!isValidJson(data, key)) return '[*Custom.InvalidCondition*]';
 
                 switch (type) {
 
                     // 檢定行動結果
                     case 'CombatEventConditionActionResult': {
-                        const text = `{#${getTerm('char', data._character)}${getTerm('type', data._type)}}`;
+                        const text = `[%${getTerm('char', data._character)}${getTerm('type', data._type)}%]`;
                         return { text };
                     }
                     // 檢定行動種類
                     case 'CombatEventConditionActionType': {
-                        const typesText = [...new Set(data._typeList.map(a => getTerm('action', a, 'CombatAction')))].join('{@Custom.Or}');
-                        const actionResult = data._checkHit ? data._hit ? '{@Custom.Hit}' : '{@Custom.NotHit}' :
-                            data._checkSuccess ? data._success ? '{@Custom.Success}' : '{@Custom.Failed}' : '';
-                        const text = `{#${getTerm('char', data._character)}{@Custom.Use}${typesText}${actionResult}}`;
+                        const typesText = [...new Set(data._typeList.map(a => getTerm('action', a, 'CombatAction')))].join('[*Custom.Or*]');
+                        const actionResult = data._checkHit ? data._hit ? '[*Custom.Hit*]' : '[*Custom.NotHit*]' :
+                            data._checkSuccess ? data._success ? '[*Custom.Success*]' : '[*Custom.Failed*]' : '';
+                        const text = `[%${getTerm('char', data._character)}[*Custom.Use*]${typesText}${actionResult}%]`;
                         return { text };
                     }
                     // 檢定狀態
                     case 'CombatEventConditionEffectState': {
                         const effect = await getCombatEffect(data._effectState._name);
-                        const text = `{#${getTerm('char', data._character)}{@Custom.Have}${effect.key}}`;
+                        const text = `[%${getTerm('char', data._character)}[*Custom.Have*]${effect.key}%]`;
                         return { text };
                     }
                     // 檢定數值
@@ -2395,13 +2393,13 @@ export async function parseCombat() {
                     }
                     // 檢定回合
                     case 'CombatEventConditionRound': {
-                        const text = `{#{@Custom.Round}${convertComparison(data._op)}${data._round}}`;
+                        const text = `[%[*Custom.Round*]${convertComparison(data._op)}${data._round}%]`;
                         return { text };
                     }
                     // 檢定回合旗標
                     case 'CombatEventConditionRoundFlag': {
                         const flagId = removeUid(data._flagData._name);
-                        const text = `{#{@Custom.Round}${convertComparison(data._op)}{@Label.Flag,${flagId}}}`;
+                        const text = `[%[*Custom.Round*]${convertComparison(data._op)}[*Label.Flag,${flagId}*]%]`;
                         return { text, rel: { Flag: [flagId] } };
                     }
                     // 檢定戰鬥數值
@@ -2409,7 +2407,7 @@ export async function parseCombat() {
                         const match = data._type.match(regexPct);
                         const stat = getTerm('stat', match[1]);
                         const unit = match[2] ? '%' : '';
-                        const text = `{#${getTerm('char', data._character)}${stat}${convertComparison(data._op)}${data._value}${unit}}`;
+                        const text = `[%${getTerm('char', data._character)}${stat}${convertComparison(data._op)}${data._value}${unit}%]`;
                         return { text };
                     }
                     // 無對應
@@ -2443,7 +2441,7 @@ export async function parseCombat() {
 
             // 記錄資訊
             const id = removeUid(file);
-            const enemyName = `{@CombatCharacter.Name.${enemyData.Name}}`;
+            const enemyName = `[*CombatCharacter.Name.${enemyData.Name}*]`;
             const branch = {
                 form: 'branch',
                 type: 'Combat',
@@ -2456,7 +2454,7 @@ export async function parseCombat() {
                 rel: { pre: {}, post: {}, intra: {} }
             };
             mergeCharacterRelation(combat.rel.intra, enemyData.Name);
-            updateNameDraftItem(nameDraft, id, `${data._desc} 戰${CACHE.TERM.CHARACTER?.[enemyData.Name]}`, `{@System.Combat}-${enemyName}`);
+            updateNameDraftItem(nameDraft, id, `${data._desc} 戰${CACHE.TERM.CHARACTER?.[enemyData.Name]}`, `[*System.Combat*]-${enemyName}`);
 
             // 解析戰鬥中事件
             for (const item of data.Events ?? []) {
@@ -2470,7 +2468,7 @@ export async function parseCombat() {
                 for (const subItem of eventData._initAction ?? []) {
                     initActions.push(...await processAction(subItem, enemyName, combat.rel, id));
                 }
-                if (initActions.length > 0) branch.branches.push({ index: 0, text: '{@Custom.Init}', content: initActions });
+                if (initActions.length > 0) branch.branches.push({ index: 0, text: '[*Custom.Init*]', content: initActions });
 
                 // 解析條件觸發事件
                 for (const subItem of eventData._conditionAction ?? []) {
@@ -2498,17 +2496,17 @@ export async function parseCombat() {
 
             // 解析勝利影響
             const winResults = processResult(data._winResult, combat.rel, id);
-            branch.branches.push({ index: 0, text: '{@Custom.Win}', content: winResults });
+            branch.branches.push({ index: 0, text: '[*Custom.Win*]', content: winResults });
 
             // 解析戰敗影響
             const loseResults = processResult(data._loseResult, combat.rel, id);
             if (data._deadEnd && data._deadLibrary) {
                 const libraryId = removeUid(data._deadLibrary._name);
-                const deadEndName = `{@Label.Dead,${libraryId}}`;
+                const deadEndName = `[*Label.Dead,${libraryId}*]`;
                 loseResults.push({ form: 'effect', type: 'stat', text: deadEndName });
                 mergeRelation(combat.rel.post, { Library: [libraryId] });
             }
-            branch.branches.push({ index: 0, text: '{@Custom.Loss}', content: loseResults });
+            branch.branches.push({ index: 0, text: '[*Custom.Loss*]', content: loseResults });
 
             result[id] = combat;
             logicResult[id] = {
@@ -2559,11 +2557,11 @@ export async function parseBattle() {
 
         // 取得NPC設定
         const configData = await getGameJson(name, 'BattleNpcConfigData');
-        if (!isValidJson(configData, name)) return { id: '', name: '{@EnemyTeam.Unknown}', people: '0×0%' };
+        if (!isValidJson(configData, name)) return { id: '', name: '[*EnemyTeam.Unknown*]', people: '0×0%' };
 
         // 取得NPC勢力別
         const statData = await getGameJson(configData._teamStat._name, 'BattleTeamStat');
-        if (!isValidJson(statData, configData._teamStat._name)) return { id: '', name: '{@EnemyTeam.Unknown}', people: '0×0%' };
+        if (!isValidJson(statData, configData._teamStat._name)) return { id: '', name: '[*EnemyTeam.Unknown*]', people: '0×0%' };
 
         // 取得NPC門人數及向心值
         const [peopleData, teamData] = await Promise.all([
@@ -2575,7 +2573,7 @@ export async function parseBattle() {
 
         // 紀錄資訊
         const id = statData._id == '000' ? '500' : statData._id;
-        npc = { id, name: `{@EnemyTeam.${id}}`, people: `${people}×${team}%` };
+        npc = { id, name: `[*EnemyTeam.${id}*]`, people: `${people}×${team}%` };
 
         // 寫入Cache並回傳
         return cache.npc[name] = npc;
@@ -2596,7 +2594,7 @@ export async function parseBattle() {
                 friend: {},
                 enemy: {},
                 neutral: {},
-                end: ['{@Custom.PlayerDie}'],
+                end: ['[*Custom.PlayerDie*]'],
                 rel: { pre: {} }
             };
 
@@ -2612,17 +2610,17 @@ export async function parseBattle() {
             if (data._friendUsePeople) {
                 if (data._friendPeopleFlag) {
                     const flag = removeUid(data._friendPeopleFlag._name);
-                    result[id].friend.people = `{@Flag.${flag}.0}`;
+                    result[id].friend.people = `[*Flag.${flag}.0*]`;
                     mergeRelation(result[id].rel.pre, { Flag: [flag] });
                 }
                 else result[id].friend.people = data._friendPeople;
             }
             else {
-                result[id].friend.people = '{@PlayerStat.people}×{@PlayerStat.team}%';
+                result[id].friend.people = '[*PlayerStat.people*]×[*PlayerStat.team*]%';
 
                 // 非單獨唐門提供初始值
-                if (friends.length > 1 || friends[0]?.name != '{@EnemyTeam.500}') {
-                    result[id].friend.people += ` ({@Custom.Init}:${friends.map(f => f.people).join('+')})`;
+                if (friends.length > 1 || friends[0]?.name != '[*EnemyTeam.500*]') {
+                    result[id].friend.people += ` ([*Custom.Init*]:${friends.map(f => f.people).join('+')})`;
                 }
             }
 
@@ -2631,12 +2629,12 @@ export async function parseBattle() {
             if (data._enemyUsePeople) {
                 if (data._enemyPeopleFlag) {
                     const flag = removeUid(data._enemyPeopleFlag._name);
-                    result[id].enemy.people = `{@Flag.${flag}.0}`;
+                    result[id].enemy.people = `[*Flag.${flag}.0*]`;
                     mergeRelation(result[id].rel.pre, { Flag: [flag] });
                 }
                 else result[id].enemy.people = data._enemyPeople;
             }
-            else result[id].enemy.people = `{@PlayerStat.people}×{@PlayerStat.team}% ({@Custom.Init}:${enemies.map(f => f.people).join('+')})`;
+            else result[id].enemy.people = `[*PlayerStat.people*]×[*PlayerStat.team*]% ([*Custom.Init*]:${enemies.map(f => f.people).join('+')})`;
 
             // 記錄中立方陣容及人數
             result[id].neutral.name = neutrals.map(c => c.name);
@@ -2644,22 +2642,22 @@ export async function parseBattle() {
                 if (data._neutralUsePeople) {
                     if (data._neutralPeopleFlag) {
                         const flag = removeUid(data._neutralPeopleFlag._name);
-                        result[id].neutral.people = `{@Flag.${flag}.0}`;
+                        result[id].neutral.people = `[*Flag.${flag}.0*]`;
                         mergeRelation(result[id].rel.pre, { Flag: [flag] });
                     } else result[id].neutral.people = data._neutralPeople;
                 }
-                else result[id].neutral.people = `{@PlayerStat.people}×{@PlayerStat.team}% ({@Custom.Init}:${neutrals.map(f => f.people).join('+')})`;
+                else result[id].neutral.people = `[*PlayerStat.people*]×[*PlayerStat.team*]% ([*Custom.Init*]:${neutrals.map(f => f.people).join('+')})`;
             }
             else result[id].neutral.people = '';
 
             // 結束條件
-            if (data._victoryDefeat) result[id].end.unshift('{@Custom.Defeat}');
-            if (data._victoryTimeout) result[id].end.unshift(`{@Custom.Timeout}(${data._time} {@Custom.Second})`);
+            if (data._victoryDefeat) result[id].end.unshift('[*Custom.Defeat*]');
+            if (data._victoryTimeout) result[id].end.unshift(`[*Custom.Timeout*](${data._time} [*Custom.Second*])`);
 
             // 處理命名草稿
             const friendsName = friends.map(f => CACHE.TERM.TEAM?.[f.id]).join('+');
             const enemiesName = enemies.map(f => CACHE.TERM.TEAM?.[f.id]).join('+');
-            updateNameDraftItem(nameDraft, id, `${friendsName} vs ${enemiesName}`, `{@System.Battle}-{@EnemyTeam.${type}}`);
+            updateNameDraftItem(nameDraft, id, `${friendsName} vs ${enemiesName}`, `[*System.Battle*]-[*EnemyTeam.${type}*]`);
         }
         catch (err) {
             writeLog('error', `Parsing battle "${file}" failed.`, err.stack);
@@ -2714,9 +2712,9 @@ export async function parseScript() {
     const regexDice = /^"(\w+)\|([=><]+)(\d+)"$/;
     const regexGE = /^>=$/;
     const regexLE = /^<=$/;
-    const regexXFull = /{#{@Flag\.(\w+)\.X}([<>=≤≥≠]){@Flag\.\w+\.X\.(-?\d+)}}/g;
-    const regexXName = /{@Flag\.(\w+)\.X}/g;
-    const regexXValue = /{@Flag\.(\w+)\.X\.(-?\d+)}/g;
+    const regexXFull = /\[%\[\*Flag\.(\w+)\.X\*\]([<>=≤≥≠])\[\*Flag\.\w+\.X\.(-?\d+)\*\]%\]/g;
+    const regexXName = /\[\*Flag\.(\w+)\.X\*\]/g;
+    const regexXValue = /\[\*Flag\.(\w+)\.X\.(-?\d+)\*\]/g;
     const positionList = [
         'Alchemy',
         'Center',
@@ -2745,79 +2743,79 @@ export async function parseScript() {
         content: [{
             form: 'branch',
             type: 'Position',
-            text: '{@BranchType.Position}：',
+            text: '[*BranchType.Position*]：',
             branches: [
                 {
                     index: 1,
-                    text: '{@Middle.move}｜{@Position.Name.Mall}',
-                    condition: '{#{@Label.Flag,P_Mall_01.0}≠{@Flag.P_Mall_01.0.1}}',
+                    text: '[*Middle.move*]｜[*Position.Name.Mall*]',
+                    condition: '[%[*Label.Flag,P_Mall_01.0*]≠[*Flag.P_Mall_01.0.1*]%]',
                     content: [
                         {
                             form: 'branch',
                             type: 'Switch',
-                            text: '{@BranchType.Position}：{@BranchType.Switch}：({@Custom.GameTime}≥{@System.GameTimeText,3,10,1})}',
+                            text: '[*BranchType.Position*]：[*BranchType.Switch*]：([*Custom.GameTime*]≥[*System.GameTimeText,3,10,1*])}',
                             branches: [{
                                 index: 1,
-                                text: '{@Custom.True}',
-                                content: [{ form: 'effect', type: 'merge', text: '{@Label.Flag,Talk_Brother3.0}={@Flag.Talk_Brother3.0.1}' }]
+                                text: '[*Custom.True*]',
+                                content: [{ form: 'effect', type: 'merge', text: '[*Label.Flag,Talk_Brother3.0*]=[*Flag.Talk_Brother3.0.1*]' }]
                             }]
                         },
-                        { form: 'effect', type: 'merge', text: '◎{@Custom.NextScript}{@Label.Script,mall_001}' }
+                        { form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,mall_001*]' }
                     ]
                 },
                 {
                     index: 2,
-                    text: '{@Middle.move}｜{@Position.Name.Center}',
-                    condition: '{#{@Label.Flag,P_Center_01.0}≠{@Flag.P_Center_01.0.1}}',
-                    content: [{ form: 'effect', type: 'merge', text: '◎{@Custom.NextScript}{@Label.Script,center_001}' }]
+                    text: '[*Middle.move*]｜[*Position.Name.Center*]',
+                    condition: '[%[*Label.Flag,P_Center_01.0*]≠[*Flag.P_Center_01.0.1*]%]',
+                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,center_001*]' }]
                 },
                 {
                     index: 3,
-                    text: '{@Middle.move}｜{@Position.Name.Room1}',
-                    condition: '{#{@Label.Flag,P_Room_01.0}≠{@Flag.P_Room_01.0.1}}',
-                    content: [{ form: 'effect', type: 'merge', text: '{@Label.Flag,Talk_Brother4.0}={@Flag.Talk_Brother4.0.1} / ◎{@Custom.NextScript}{@Label.Script,room_001}' }]
+                    text: '[*Middle.move*]｜[*Position.Name.Room1*]',
+                    condition: '[%[*Label.Flag,P_Room_01.0*]≠[*Flag.P_Room_01.0.1*]%]',
+                    content: [{ form: 'effect', type: 'merge', text: '[*Label.Flag,Talk_Brother4.0*]=[*Flag.Talk_Brother4.0.1*] / ◎[*Custom.NextScript*][*Label.Script,room_001*]' }]
                 },
                 {
                     index: 4,
-                    text: '{@Middle.move}｜{@Position.Name.Room2}',
-                    condition: '{#{@Label.Flag,P_GirlRoom_01.0}≠{@Flag.P_GirlRoom_01.0.1}}',
-                    content: [{ form: 'effect', type: 'merge', text: '◎{@Custom.NextScript}{@Label.Script,girlroom_001}' }]
+                    text: '[*Middle.move*]｜[*Position.Name.Room2*]',
+                    condition: '[%[*Label.Flag,P_GirlRoom_01.0*]≠[*Flag.P_GirlRoom_01.0.1*]%]',
+                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,girlroom_001*]' }]
                 },
                 {
                     index: 5,
-                    text: '{@Middle.move}｜{@Position.Name.Alchemy}',
-                    condition: '{#{@Label.Flag,P_Alchemy_01.0}≠{@Flag.P_Alchemy_01.0.1}}',
-                    content: [{ form: 'effect', type: 'merge', text: '◎{@Custom.NextScript}{@Label.Script,alchemy_001}' }]
+                    text: '[*Middle.move*]｜[*Position.Name.Alchemy*]',
+                    condition: '[%[*Label.Flag,P_Alchemy_01.0*]≠[*Flag.P_Alchemy_01.0.1*]%]',
+                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,alchemy_001*]' }]
                 },
                 {
                     index: 6,
-                    text: '{@Middle.move}｜{@Position.Name.Forge}',
-                    condition: '{#{@Label.Flag,P_Forge_01.0}≠{@Flag.P_Forge_01.0.1}}',
-                    content: [{ form: 'effect', type: 'merge', text: '◎{@Custom.NextScript}{@Label.Script,forge_001}' }]
+                    text: '[*Middle.move*]｜[*Position.Name.Forge*]',
+                    condition: '[%[*Label.Flag,P_Forge_01.0*]≠[*Flag.P_Forge_01.0.1*]%]',
+                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,forge_001*]' }]
                 },
                 {
                     index: 7,
-                    text: '{@Middle.move}｜{@Position.Name.Kitchen}',
-                    condition: '{#{@Label.Flag,P_Kitchen_01.0}≠{@Flag.P_Kitchen_01.0.1}}',
-                    content: [{ form: 'effect', type: 'merge', text: '◎{@Custom.NextScript}{@Label.Script,kitchen_001}' }]
+                    text: '[*Middle.move*]｜[*Position.Name.Kitchen*]',
+                    condition: '[%[*Label.Flag,P_Kitchen_01.0*]≠[*Flag.P_Kitchen_01.0.1*]%]',
+                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,kitchen_001*]' }]
                 },
                 {
                     index: 8,
-                    text: '{@Middle.move}｜{@Position.Name.Door}',
-                    condition: '{#{@Label.Flag,P_Door_01.0}≠{@Flag.P_Door_01.0.1}}',
-                    content: [{ form: 'effect', type: 'merge', text: '◎{@Custom.NextScript}{@Label.Script,door_001}' }]
+                    text: '[*Middle.move*]｜[*Position.Name.Door*]',
+                    condition: '[%[*Label.Flag,P_Door_01.0*]≠[*Flag.P_Door_01.0.1*]%]',
+                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,door_001*]' }]
                 },
                 {
                     index: 9,
-                    text: '{@Middle.move}｜{@Position.Name.BackMountain}',
-                    condition: '{#{@Label.Flag,P_Back_01.0}≠{@Flag.P_Back_01.0.1}}',
-                    content: [{ form: 'effect', type: 'merge', text: '◎{@Custom.NextScript}{@Label.Script,back_001}' }]
+                    text: '[*Middle.move*]｜[*Position.Name.BackMountain*]',
+                    condition: '[%[*Label.Flag,P_Back_01.0*]≠[*Flag.P_Back_01.0.1*]%]',
+                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,back_001*]' }]
                 },
                 {
                     index: 10,
-                    text: '{@Middle.move}｜{@Position.Name.Study}',
-                    condition: '{#{@Label.Flag,P_Study_01.0}≠{@Flag.P_Study_01.0.1}}',
-                    content: [{ form: 'effect', type: 'merge', text: '◎{@Custom.NextScript}{@Label.Script,study_001}' }]
+                    text: '[*Middle.move*]｜[*Position.Name.Study*]',
+                    condition: '[%[*Label.Flag,P_Study_01.0*]≠[*Flag.P_Study_01.0.1*]%]',
+                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,study_001*]' }]
                 },
             ]
         }],
@@ -2826,7 +2824,7 @@ export async function parseScript() {
             intra: {},
             post: { Script: ['mall_001', 'center_001', 'room_001', 'girlroom_001', 'alchemy_001', 'forge_001', 'kitchen_001', 'door_001', 'back_001', 'study_001'] }
         },
-        remark: Array.from(custom?.free?.remark ?? [], (_, i) => `{@Remark.free.${i}}`)
+        remark: Array.from(custom?.free?.remark ?? [], (_, i) => `[*Remark.free.${i}*]`)
     };
     updateNameDraftItem(nameDraft, 'free');
 
@@ -2834,7 +2832,7 @@ export async function parseScript() {
     const removeQuote = (raw) => raw.replace(regexQuote, '$1');
 
     // Helper: 加入標籤
-    const addLabel = (text) => text ? `{@Label.Script,${text}}` : null;
+    const addLabel = (text) => text ? `[*Label.Script,${text}*]` : null;
 
     // Helper: 取得參數值
     const getArgumentValue = (argument, cache) => {
@@ -2850,8 +2848,8 @@ export async function parseScript() {
         const checkFlag = (flagData, index, id, val, symbol) => {
 
             // 處理資料
-            const name = `{@Label.Flag,${id}.${index}}`;
-            const value = val && flagData?.value?.[val] ? `{@Flag.${id}.${index}.${val}}` : val;
+            const name = `[*Label.Flag,${id}.${index}*]`;
+            const value = val && flagData?.value?.[val] ? `[*Flag.${id}.${index}.${val}*]` : val;
 
             // 僅旗標名稱
             if (!val) return name;
@@ -2860,7 +2858,7 @@ export async function parseScript() {
             if (!symbol) return value;
 
             // 完整式子
-            return `{#${name}${symbol}${value}}`;
+            return `[%${name}${symbol}${value}%]`;
         };
 
         // 取代X旗標值(完整式子)
@@ -2936,14 +2934,14 @@ export async function parseScript() {
                     // 預設自由行動
                     case 'Free': {
                         mergeRelation(rel.post, { Script: ['free'] });
-                        content.push({ form: 'effect', type: 'system', text: '◎{@Custom.Free}:{@Label.Free,free}' });
+                        content.push({ form: 'effect', type: 'system', text: '◎[*Custom.Free*]:[*Label.Free,free*]' });
                         break;
                     }
                     // 特定自由行動
                     case 'Story': {
                         const script = cache?.temp.story ?? 'Unknown';
                         mergeRelation(rel.post, { Script: [script] });
-                        content.push({ form: 'effect', type: 'system', text: `◎{@Custom.Free}:{@Label.Free,${script}}` });
+                        content.push({ form: 'effect', type: 'system', text: `◎[*Custom.Free*]:[*Label.Free,${script}*]` });
                         break;
                     }
                     // 戰役
@@ -2951,8 +2949,8 @@ export async function parseScript() {
                         const name = `BL_${removeQuote(node.arguments[1].raw)}`;
                         const script = cache?.temp?.story ?? 'Unknown';
                         mergeRelation(rel.post, { Script: [script], Battle: [name] });
-                        content.push({ form: 'effect', type: 'combat', text: `{@System.Battle}{@Label.Battle,${name}}` });
-                        content.push({ form: 'effect', type: 'system', text: `◎{@Custom.CombatNextScript}{@Label.Script,${script}}` });
+                        content.push({ form: 'effect', type: 'combat', text: `[*System.Battle*][*Label.Battle,${name}*]` });
+                        content.push({ form: 'effect', type: 'system', text: `◎[*Custom.CombatNextScript*][*Label.Script,${script}*]` });
                         break;
                     }
                     // 決鬥
@@ -2960,21 +2958,21 @@ export async function parseScript() {
                         const name = `CL_${removeQuote(node.arguments[1].raw)}`;
                         const script = cache?.temp?.story ?? 'Unknown';
                         mergeRelation(rel.post, { Script: [script], Combat: [name] });
-                        content.push({ form: 'effect', type: 'combat', text: `{@System.Combat}{@Label.Combat,${name}}` });
-                        content.push({ form: 'effect', type: 'system', text: `◎{@Custom.CombatNextScript}{@Label.Script,${script}}` });
+                        content.push({ form: 'effect', type: 'combat', text: `[*System.Combat*][*Label.Combat,${name}*]` });
+                        content.push({ form: 'effect', type: 'system', text: `◎[*Custom.CombatNextScript*][*Label.Script,${script}*]` });
                         break;
                     }
                     // 生死簿結局
                     case 'GameOver': {
                         const libraryId = removeQuote(node.arguments[1].raw);
-                        const name = `{@Label.Dead,${libraryId}}`;
+                        const name = `[*Label.Dead,${libraryId}*]`;
                         mergeRelation(rel.post, { Library: [libraryId] });
                         content.push({ form: 'effect', type: 'library', text: name });
                         break;
                     }
                     // 試玩版結局
                     case 'DemoEnd':
-                        content.push({ form: 'effect', type: 'system', text: '◎{@Custom.DemoEnd}' });
+                        content.push({ form: 'effect', type: 'system', text: '◎[*Custom.DemoEnd*]' });
                         break;
                     // 忽略場景
                     case 'Title':
@@ -2991,12 +2989,12 @@ export async function parseScript() {
                 if (node.arguments[0].type == 'StringLiteral') {
                     const name = removeQuote(node.arguments[0].raw);
                     mergeRelation(rel.post, { Script: [name] });
-                    content.push({ form: 'effect', type: 'system', text: `◎{@Custom.NextScript}{@Label.Script,${name}}` });
+                    content.push({ form: 'effect', type: 'system', text: `◎[*Custom.NextScript*][*Label.Script,${name}*]` });
                 }
                 // 使用變數
                 else {
                     const name = cache?.var?.[node.arguments[0].name] ?? node.arguments[0].name;
-                    content.push({ form: 'effect', type: 'system', text: `◎{@Custom.NextScript}${name}` });
+                    content.push({ form: 'effect', type: 'system', text: `◎[*Custom.NextScript*]${name}` });
                 }
                 break;
             }
@@ -3006,7 +3004,7 @@ export async function parseScript() {
                 const index = node.arguments[0].value;
                 cache.temp[index] = name;
                 mergeRelation(rel.post, { Script: [name] });
-                content.push({ form: 'effect', type: 'system', text: `◎{@Custom.TempScript}${index}:{@Label.Script,${name}}` });
+                content.push({ form: 'effect', type: 'system', text: `◎[*Custom.TempScript*]${index}:[*Label.Script,${name}*]` });
                 break;
             }
             // 預存地圖移動變數
@@ -3014,7 +3012,7 @@ export async function parseScript() {
                 const name = removeQuote(node.arguments[0].raw);
                 cache.temp.travel = name;
                 mergeRelation(rel.post, { Script: [name] });
-                content.push({ form: 'effect', type: 'system', text: `◎{@Custom.TravelScript}:{@Label.Script,${name}}` });
+                content.push({ form: 'effect', type: 'system', text: `◎[*Custom.TravelScript*]:[*Label.Script,${name}*]` });
                 break;
             }
             // 預存接續劇本變數 (不輸出)
@@ -3026,28 +3024,28 @@ export async function parseScript() {
             }
             // 設定遊戲時間
             case 'luamanager.SetGameTime': {
-                const time = `{@System.GameTimeText,${node.arguments[0].value},${node.arguments[1].value},${STAGE_MAP[node.arguments[2].value] ?? '0'}}`;
-                content.push({ form: 'effect', type: 'system', text: `◎{@Custom.SetTime}:${time}` });
+                const time = `[*System.GameTimeText,${node.arguments[0].value},${node.arguments[1].value},${STAGE_MAP[node.arguments[2].value] ?? '0'}*]`;
+                content.push({ form: 'effect', type: 'system', text: `◎[*Custom.SetTime*]:${time}` });
                 break;
             }
             // 設定遊戲時間增加一個月
             case 'luamanager.NextMonth': {
-                content.push({ form: 'effect', type: 'system', text: `◎{@Custom.SetTime}:1{@Custom.Month}{@Custom.After}` });
+                content.push({ form: 'effect', type: 'system', text: `◎[*Custom.SetTime*]:1[*Custom.Month*][*Custom.After*]` });
                 break;
             }
             // 設定遊戲時間增加一旬
             case 'luamanager.NextRound': {
-                content.push({ form: 'effect', type: 'system', text: `◎{@Custom.SetTime}:1{@Custom.Stage}{@Custom.After}` });
+                content.push({ form: 'effect', type: 'system', text: `◎[*Custom.SetTime*]:1[*Custom.Stage*][*Custom.After*]` });
                 break;
             }
             // 設定任務觸發時間
             case 'luamanager.SetMissionTime': {
                 const trigger = removeQuote(node.arguments[0].raw);
-                const year = node.arguments[1].value ? `${node.arguments[1].value}{@Custom.Year}` : '';
-                const month = node.arguments[2].value ? `${node.arguments[2].value}{@Custom.Month}` : '';
-                const round = node.arguments[3].value ? `${node.arguments[3].value}{@Custom.Stage}` : '';
-                const time = `${year}${month}${round}` || '{@Custom.Now}';
-                const text = `◎{@Label.Time,${trigger}}{@Custom.SetTriggerTime}:${time}{@Custom.After}`;
+                const year = node.arguments[1].value ? `${node.arguments[1].value}[*Custom.Year*]` : '';
+                const month = node.arguments[2].value ? `${node.arguments[2].value}[*Custom.Month*]` : '';
+                const round = node.arguments[3].value ? `${node.arguments[3].value}[*Custom.Stage*]` : '';
+                const time = `${year}${month}${round}` || '[*Custom.Now*]';
+                const text = `◎[*Label.Time,${trigger}*][*Custom.SetTriggerTime*]:${time}[*Custom.After*]`;
                 content.push({ form: 'effect', type: 'system', text });
                 mergeRelation(rel.post, { Time: [trigger] });
                 break;
@@ -3055,13 +3053,13 @@ export async function parseScript() {
             // 設定戰役技能 (同分岐重複設定只輸出一次)
             case 'luamanager.SetBattleSkillActive':
             case 'luamanager.SetPlayerBattleSkill': {
-                const text = `◎{@Custom.SetBattleSkill}❮{@BattleSkill.${removeQuote(node.arguments[0].raw)}}❯`;
+                const text = `◎[*Custom.SetBattleSkill*]❮[*BattleSkill.${removeQuote(node.arguments[0].raw)}*]❯`;
                 if (content.every(c => c.text != text)) content.push({ form: 'effect', type: 'system', text });
                 break;
             }
             // 設定標題畫面人物
             case 'luamanager.SetTitlePartner': {
-                content.push({ form: 'effect', type: 'system', text: '◎{@Custom.SetTitlePartner}' });
+                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.SetTitlePartner*]' });
                 break;
             }
             // 增減玩家屬性
@@ -3070,7 +3068,7 @@ export async function parseScript() {
                 // 記錄資訊
                 const val = getArgumentValue(node.arguments[1], cache);
                 const hide = node.arguments[3]?.value ? '' : '*';
-                const name = `{@PlayerStat.${removeQuote(node.arguments[0].raw)}}`;
+                const name = `[*PlayerStat.${removeQuote(node.arguments[0].raw)}*]`;
                 const extra = node.arguments[2]?.raw;
                 const sign = extra == '"center"' ? '±' : (!Number.isNaN(val) && val < 0) ? '' : '+';
                 const mental = extra == '"mental"' ? `(☹︎${val - 1})` : '';
@@ -3084,19 +3082,19 @@ export async function parseScript() {
 
                 // 記錄資訊
                 let val = getArgumentValue(node.arguments[1], cache);
-                const name = `{@PlayerStat.${removeQuote(node.arguments[0].raw)}}`;
+                const name = `[*PlayerStat.${removeQuote(node.arguments[0].raw)}*]`;
 
                 // 屬性值心上人額外處理
-                if (name == '{@PlayerStat.lover}' && !Number.isNaN(val)) {
-                    val = `{@PlayerInfo.Lover.${val}}`;
+                if (name == '[*PlayerStat.lover*]' && !Number.isNaN(val)) {
+                    val = `[*PlayerInfo.Lover.${val}*]`;
 
                     // 增加關聯角色
                     const loverId = LOVER_MAP[val];
                     if (loverId) mergeRelation(rel.post, { Character: [loverId] });
                 }
                 // 屬性值稱號額外處理
-                else if (name == '{@PlayerStat.title}' && !Number.isNaN(val)) {
-                    val = `{@PlayerInfo.Title.${val}}`;
+                else if (name == '[*PlayerStat.title*]' && !Number.isNaN(val)) {
+                    val = `[*PlayerInfo.Title.${val}*]`;
                 }
 
                 // 回存內容
@@ -3110,7 +3108,7 @@ export async function parseScript() {
                 const val = getArgumentValue(node.arguments[1], cache);
                 const hide = node.arguments[2]?.value ? '' : '*';
                 const character = removeQuote(node.arguments[0].raw);
-                const name = `{@Label.Relationship,${character}}`;
+                const name = `[*Label.Relationship,${character}*]`;
                 const sign = val < 0 ? '' : '+';
 
                 // 回存內容
@@ -3124,7 +3122,7 @@ export async function parseScript() {
                 // 記錄資訊
                 const val = getArgumentValue(node.arguments[1], cache);
                 const character = removeQuote(node.arguments[0].raw);
-                const name = `{@Label.Relationship,${character}}`;
+                const name = `[*Label.Relationship,${character}*]`;
 
                 // 回存內容
                 mergeRelation(rel.post, { Character: [character] });
@@ -3160,7 +3158,7 @@ export async function parseScript() {
             }
             // 重置對話旗標
             case 'statmodifymanager.ResetTalkFlag': {
-                content.push({ form: 'effect', type: 'system', text: '◎{@Custom.ResetTalkFlag}' });
+                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.ResetTalkFlag*]' });
                 break;
             }
             // 獲得雜物 (只有正數)
@@ -3172,7 +3170,7 @@ export async function parseScript() {
 
                 // 回存內容
                 mergeRelation(rel.post, { Misc: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `{@Label.Misc,${id}}+${val}` });
+                content.push({ form: 'effect', type: 'stat', text: `[*Label.Misc,${id}*]+${val}` });
                 break;
             }
             // 移除雜物 (固定1個)
@@ -3180,7 +3178,7 @@ export async function parseScript() {
 
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Misc: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `{@Label.Misc,${id}}-1` });
+                content.push({ form: 'effect', type: 'stat', text: `[*Label.Misc,${id}*]-1` });
                 break;
             }
             // 獲得寶物
@@ -3188,7 +3186,7 @@ export async function parseScript() {
 
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Special: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `{@Custom.Get}{@Label.Special,${id}}` });
+                content.push({ form: 'effect', type: 'stat', text: `[*Custom.Get*][*Label.Special,${id}*]` });
                 break;
             }
             // 失去寶物
@@ -3196,7 +3194,7 @@ export async function parseScript() {
 
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Special: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `{@Custom.Lose}{@Label.Special,${id}}` });
+                content.push({ form: 'effect', type: 'stat', text: `[*Custom.Lose*][*Label.Special,${id}*]` });
                 break;
             }
             // 獲得書籍
@@ -3204,7 +3202,7 @@ export async function parseScript() {
 
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Book: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `{@Custom.Get}{@Label.Book,${id}}` });
+                content.push({ form: 'effect', type: 'stat', text: `[*Custom.Get*][*Label.Book,${id}*]` });
                 break;
             }
             // 失去書籍
@@ -3212,7 +3210,7 @@ export async function parseScript() {
 
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Book: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `{@Custom.Lose}{@Label.Book,${id}}` });
+                content.push({ form: 'effect', type: 'stat', text: `[*Custom.Lose*][*Label.Book,${id}*]` });
                 break;
             }
             // 增減技能
@@ -3225,7 +3223,7 @@ export async function parseScript() {
 
                 // 回存內容
                 mergeRelation(rel.post, { Talent: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `{@Label.Talent,${id}}❯${sign}${val}` });
+                content.push({ form: 'effect', type: 'stat', text: `[*Label.Talent,${id}*]❯${sign}${val}` });
                 break;
             }
             // 獲得成就
@@ -3233,14 +3231,14 @@ export async function parseScript() {
 
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Library: [id] });
-                content.push({ form: 'effect', type: 'library', text: `{@Label.Achievement,${id}}` });
+                content.push({ form: 'effect', type: 'library', text: `[*Label.Achievement,${id}*]` });
                 break;
             }
             // 添加傳記
             case 'statmodifymanager.AddStory': {
 
-                const text = `{@Custom.Story}「{@LegendInfo.${removeQuote(node.arguments[0].raw)}}」`;
-                content.push({ form: 'effect', type: 'dialog', text: '◇{@Custom.AddStory}' });
+                const text = `[*Custom.Story*]「[*LegendInfo.${removeQuote(node.arguments[0].raw)}*]」`;
+                content.push({ form: 'effect', type: 'dialog', text: '◇[*Custom.AddStory*]' });
                 content.push({ form: 'perform', type: 'story', text });
                 break;
             }
@@ -3251,11 +3249,11 @@ export async function parseScript() {
                 let text;
                 const mission = removeQuote(node.arguments[0].raw);
                 const trigger = removeQuote(node.arguments[1].raw);
-                const label = mission == 'Main' ? '{@Custom.Main}' : `{@Label.Mission,${removeQuote(node.arguments[0].raw)}}`;
-                if (trigger == 'M0000') text = `◎${label}{@Custom.SetTrigger}:{@System.NA}`;
-                else if (trigger == 'clear') text = `◎${label}{@Custom.SetClear}`;
+                const label = mission == 'Main' ? '[*Custom.Main*]' : `[*Label.Mission,${removeQuote(node.arguments[0].raw)}*]`;
+                if (trigger == 'M0000') text = `◎${label}[*Custom.SetTrigger*]:[*System.NA*]`;
+                else if (trigger == 'clear') text = `◎${label}[*Custom.SetClear*]`;
                 else {
-                    text = `◎${label}{@Custom.SetTrigger}:{@Label.Trigger,${trigger}}`;
+                    text = `◎${label}[*Custom.SetTrigger*]:[*Label.Trigger,${trigger}*]`;
                     mergeRelation(rel.post, { Mission: [trigger] });
                 }
 
@@ -3267,7 +3265,7 @@ export async function parseScript() {
             case 'statmodifymanager.ModifyEnemyTeam': {
 
                 // 記錄資訊
-                const name = `{@EnemyTeam.${removeQuote(node.arguments[0].raw)}}{@PlayerStat.team}`;
+                const name = `[*EnemyTeam.${removeQuote(node.arguments[0].raw)}*][*PlayerStat.team*]`;
                 const val = getArgumentValue(node.arguments[1], cache);
                 const hide = node.arguments[2]?.value ? '' : '*';
                 const sign = val < 0 ? '' : '+';
@@ -3280,7 +3278,7 @@ export async function parseScript() {
             case 'statmodifymanager.ModifyEnemyPeople': {
 
                 // 記錄資訊
-                const name = `{@EnemyTeam.${removeQuote(node.arguments[0].raw)}}{@PlayerStat.people}`;
+                const name = `[*EnemyTeam.${removeQuote(node.arguments[0].raw)}*][*PlayerStat.people*]`;
                 const val = getArgumentValue(node.arguments[1], cache);
                 const hide = node.arguments[2]?.value ? '' : '*';
                 const sign = val < 0 ? '' : '+';
@@ -3291,79 +3289,79 @@ export async function parseScript() {
             }
             // 顯示圖片
             case 'mainui.ShowPicture': {
-                content.push({ form: 'effect', type: 'perform', text: '◇{@Custom.ShowPicture}' });
+                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowPicture*]' });
                 break;
             }
             // 顯示CG
             case 'mainui.ShowBigPicture': {
-                content.push({ form: 'effect', type: 'perform', text: '◇{@Custom.ShowCG}' });
+                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowCG*]' });
                 break;
             }
             // 顯示系譜表
             case 'mainui.ShowFamilyTree': {
-                content.push({ form: 'effect', type: 'perform', text: '◇{@Custom.ShowTree}' });
+                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowTree*]' });
                 break;
             }
             // 顯示大地圖移動
             case 'mainui.ShowMap': {
-                content.push({ form: 'effect', type: 'perform', text: '◇{@Custom.ShowMap}' });
+                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowMap*]' });
                 break;
             }
             // 汗青書結局
             case 'endgamepanel.Open': {
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Library: [id] });
-                content.push({ form: 'effect', type: 'library', text: `{@Label.End,${id}}` });
+                content.push({ form: 'effect', type: 'library', text: `[*Label.End,${id}*]` });
                 break;
             }
             // 顯示結局CG
             case 'cgpanel.Open': {
-                content.push({ form: 'effect', type: 'perform', text: '◇{@Custom.ShowEndCG}' });
+                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowEndCG*]' });
                 break;
             }
             // 顯示動畫CG
             case 'cgvideopanel.Open': {
-                content.push({ form: 'effect', type: 'perform', text: '◇{@Custom.ShowVideoCG}' });
+                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowVideoCG*]' });
                 break;
             }
             // 顯示動畫
             case 'anim.Play': {
-                content.push({ form: 'effect', type: 'perform', text: '◇{@Custom.ShowVideo}' });
+                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowVideo*]' });
                 break;
             }
             // 顯示開發者名單
             case 'creditpanel.Open': {
-                content.push({ form: 'effect', type: 'system', text: '◎{@Custom.ShowCredit}' });
+                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.ShowCredit*]' });
                 break;
             }
             // 開啟繼承面板
             case 'fatebonuspanel.Open': {
-                content.push({ form: 'effect', type: 'system', text: '◎{@Custom.BonusPanel}' });
+                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.BonusPanel*]' });
                 break;
             }
             // 開啟商店面板
             case 'shoppanel.Open': {
-                content.push({ form: 'effect', type: 'system', text: '◎{@Custom.ShopPanel}' });
+                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.ShopPanel*]' });
                 break;
             }
             // 開啟修練面板
             case 'martialpanel.Open': {
-                content.push({ form: 'effect', type: 'system', text: '◎{@Custom.MartialPanel}' });
+                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.MartialPanel*]' });
                 break;
             }
             // 開啟鍛造面板
             case 'weaponupgradepanel.Open': {
-                content.push({ form: 'effect', type: 'system', text: '◎{@Custom.WeaponPanel}' });
+                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.WeaponPanel*]' });
                 break;
             }
             // 開啟煉丹面板
             case 'poisonupgradepanel.Open': {
-                content.push({ form: 'effect', type: 'system', text: '◎{@Custom.PoisonPanel}' });
+                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.PoisonPanel*]' });
                 break;
             }
             // 立繪調整
             case 'characters.UnloadCharacterAsset': {
-                content.push({ form: 'effect', type: 'remark', text: '※{@Custom.ArtChange}' });
+                content.push({ form: 'effect', type: 'remark', text: '※[*Custom.ArtChange*]' });
                 break;
             }
             // 解析子函式
@@ -3377,8 +3375,8 @@ export async function parseScript() {
                 // 記錄資訊
                 const id = removeQuote(node.arguments[0]?.arguments[0].raw ?? node.arguments[0].raw);
                 const type = cache?.say?.type ?? 'unknown';
-                const character = cache?.say?.character ?? '{@Character.Name.unknown}';
-                const text = `${character}{@DialogType.${type}}「{@Story.${id}}」`;
+                const character = cache?.say?.character ?? '[*Character.Name.unknown*]';
+                const text = `${character}[*DialogType.${type}*]「[*Story.${id}*]」`;
 
                 // 回存內容
                 content.push({ form: 'perform', type: 'say', text });
@@ -3396,7 +3394,7 @@ export async function parseScript() {
                 if (id == 'narrative') cache.say.character = '';
                 else {
                     const character = removeQuote(id);
-                    cache.say.character = `{@Character.Name.${character}}`;
+                    cache.say.character = `[*Character.Name.${character}*]`;
                     mergeCharacterRelation(rel.intra, character);
                 }
                 break;
@@ -3438,9 +3436,9 @@ export async function parseScript() {
                 // 回存內容
                 if (toPosition) {
                     mergeCharacterRelation(rel.intra, name);
-                    name = `{@Character.${name}}`;
-                    if (fromPosition == toPosition) text = `※{@Custom.ShowCharacter}:${name}`;
-                    else text = `※{@Custom.MoveCharacter}:${name}`;
+                    name = `[*Character.${name}*]`;
+                    if (fromPosition == toPosition) text = `※[*Custom.ShowCharacter*]:${name}`;
+                    else text = `※[*Custom.MoveCharacter*]:${name}`;
                     content.push({ form: 'perform', type: 'stage', text });
                 }
                 break;
@@ -3454,7 +3452,7 @@ export async function parseScript() {
                         break;
                     }
                 }
-                content.push({ form: 'perform', type: 'stage', text: `※{@Custom.HideCharacter}:{@Character.${name}}` });
+                content.push({ form: 'perform', type: 'stage', text: `※[*Custom.HideCharacter*]:[*Character.${name}*]` });
                 break;
             }
             // 忽略函式
@@ -3542,24 +3540,24 @@ export async function parseScript() {
                                 if (name == 'faction-contribution') {
                                     cache.var[varName] = 50 * (initNode.arguments[1].value ?? initNode.arguments[1].argument.value * -1);
                                 }
-                                else cache.var[varName] = `{@PlayerStat.${name}}`;
+                                else cache.var[varName] = `[*PlayerStat.${name}*]`;
                                 break;
                             }
                             // 記錄取得預存事件
                             case 'luamanager.GetTempScript': {
                                 const index = initNode.arguments[0].value;
-                                cache.var[varName] = addLabel(cache.temp?.[index]) ?? `{@Custom.TempScript}${index}`;
+                                cache.var[varName] = addLabel(cache.temp?.[index]) ?? `[*Custom.TempScript*]${index}`;
                                 break;
                             }
                             // 記錄取得地圖預存事件
                             case 'luamanager.GetCurrentTravelScript': {
-                                cache.var[varName] = addLabel(cache.temp?.travel) ?? `{@Custom.TravelScript}`;
+                                cache.var[varName] = addLabel(cache.temp?.travel) ?? `[*Custom.TravelScript*]`;
                                 break;
                             }
                             // 記錄選項有效條件
                             case 'checkpointmanager.Condition': {
                                 const id = removeQuote(initNode.arguments[0].raw);
-                                const obj = CACHE.CONDITION?.[id] ?? { name: '{@Custom.InvalidCondition}' };
+                                const obj = CACHE.CONDITION?.[id] ?? { name: '[*Custom.InvalidCondition*]' };
                                 mergeRelation(rel.pre, obj?.rel?.pre ?? {});
                                 cache.condition[varName] = convertXFlag(obj.name, script);
                                 break;
@@ -3575,7 +3573,7 @@ export async function parseScript() {
                             // 記錄分岐資訊
                             case 'checkpointmanager.Switch': {
                                 const id = removeQuote(initNode.arguments[0].raw);
-                                const obj = CACHE.SWITCH?.[id] ?? { check: '{@Custom.InvalidCondition}', switch: [] };
+                                const obj = CACHE.SWITCH?.[id] ?? { check: '[*Custom.InvalidCondition*]', switch: [] };
                                 mergeRelation(rel.pre, obj?.rel?.pre ?? {});
                                 cache.branch = {
                                     type: 'Switch',
@@ -3590,7 +3588,7 @@ export async function parseScript() {
                             case 'checkpointmanager.Position': {
                                 const id = removeQuote(initNode.arguments[0].raw);
                                 mergeRelation(rel.post, { Position: [id] });
-                                cache.var[varName] = `{@Custom.Random}{@Label.Position,${id}}{@System.StoryEvent}`;
+                                cache.var[varName] = `[*Custom.Random*][*Label.Position,${id}*][*System.StoryEvent*]`;
                                 break;
                             }
                             // 記錄隨機值
@@ -3598,7 +3596,7 @@ export async function parseScript() {
                                 // 記錄骰子上限
                                 if (varName.includes('dice')) cache.branch.diceMax = initNode.arguments[0].value;
                                 // 記錄通用變數
-                                else if (varName.includes('var')) cache.var[varName] = `{@Custom.Random}1~${initNode.arguments[0].value}`;
+                                else if (varName.includes('var')) cache.var[varName] = `[*Custom.Random*]1~${initNode.arguments[0].value}`;
                                 break;
                             }
                             // 忽略函式
@@ -3632,14 +3630,14 @@ export async function parseScript() {
                 // 記錄分歧標籤及額外條件
                 switch (cache?.branch?.type) {
                     case 'Option': {
-                        cache.branch.label[index] = `{@Story.${removeQuote(raw)}}`;
+                        cache.branch.label[index] = `[*Story.${removeQuote(raw)}*]`;
                         break;
                     }
                     case 'Dice': {
                         const matched = raw.match(regexDice);
                         if (matched) {
                             const symbol = matched[2].replace(regexGE, '≥').replace(regexLE, '≤');
-                            cache.branch.label[index] = `${symbol}${matched[3]} {@Story.${matched[1]}}`;
+                            cache.branch.label[index] = `${symbol}${matched[3]} [*Story.${matched[1]}*]`;
                         }
                         break;
                     }
@@ -3647,17 +3645,17 @@ export async function parseScript() {
                     case 'Position': {
                         const term = removeQuote(raw).split('+');
                         if (term.length === 4) {
-                            cache.branch.label[index] = `{@Middle.${term[0]}}｜{@Story.${term[1]}}`;
+                            cache.branch.label[index] = `[*Middle.${term[0]}*]｜[*Story.${term[1]}*]`;
                         }
                         else {
-                            cache.branch.label[index] = `{@Position.type.${term[1]}}｜{@Position.title.${term[2]}}`;
+                            cache.branch.label[index] = `[*Position.type.${term[1]}*]｜[*Position.title.${term[2]}*]`;
                         }
                         break;
                     }
                     default:
                         writeLog('warn', `AssignmentStatement - branch type "${cache?.branch?.type}" skipped.`);
                 }
-                cache.branch.condition[index] = condition ? cache.condition?.[condition] ?? '{@Custom.InvalidCondition}' : null;
+                cache.branch.condition[index] = condition ? cache.condition?.[condition] ?? '[*Custom.InvalidCondition*]' : null;
                 break;
             }
             case 'MemberExpression':
@@ -3671,7 +3669,7 @@ export async function parseScript() {
 
         // 記錄資訊
         const type = cache?.branch?.type ?? 'Unknown';
-        const text = `{@BranchType.${type}}：${cache?.branch?.text ?? ''}`;
+        const text = `[*BranchType.${type}*]：${cache?.branch?.text ?? ''}`;
         const branch = { form: 'branch', type, text, branches: [] };
 
         // 遍歷分歧項目
@@ -3683,7 +3681,7 @@ export async function parseScript() {
 
             // 記錄資訊
             const index = clause?.condition?.right?.value ?? 0;
-            const label = cache.branch.label[index] ?? (index == 1 ? '{@Custom.True}' : index == 2 ? '{@Custom.False}' : '{@Custom.Other}');
+            const label = cache.branch.label[index] ?? (index == 1 ? '[*Custom.True*]' : index == 2 ? '[*Custom.False*]' : '[*Custom.Other*]');
 
             // 遞迴解析分歧
             walk(clause.body, subContent, subCache);
@@ -3720,7 +3718,7 @@ export async function parseScript() {
                     intra: custom?.[id]?.rel?.intra ?? {},
                     post: custom?.[id]?.rel?.post ?? {}
                 },
-                remark: Array.from(custom?.[id]?.remark ?? [], (_, i) => `{@Remark.${id}.${i}}`)
+                remark: Array.from(custom?.[id]?.remark ?? [], (_, i) => `[*Remark.${id}.${i}*]`)
             };
             updateNameDraftItem(nameDraft, id);
 
@@ -3946,6 +3944,7 @@ export async function parseLocalization() {
 
     // 處理旗標
     for (const key in flagCustom) {
+        zhtw.Flag[key] = {};
         flagCustom[key].data.forEach((flagData, index) => {
             zhtw.Flag[key][index] = {
                 _: flagData.name,

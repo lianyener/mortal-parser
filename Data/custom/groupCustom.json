@@ -8,7 +8,7 @@
         "special401"
       ]
     },
-    "name": "{@Label.Relationship,special1}+{@Label.Relationship,special403}+{@Label.Relationship,special409}+{@Label.Relationship,special401}",
+    "name": "[*Label.Relationship,special1*]+[*Label.Relationship,special403*]+[*Label.Relationship,special409*]+[*Label.Relationship,special401*]",
     "type": "Relationship"
   },
   "好感度_劉顎_趙逵_車軒轅_王二壯_最高": {
@@ -20,7 +20,7 @@
         "special401"
       ]
     },
-    "name": "{@Custom.Max}({@Label.Relationship,special1},{@Label.Relationship,special403},{@Label.Relationship,special409},{@Label.Relationship,special401})",
+    "name": "[*Custom.Max*]([*Label.Relationship,special1*],[*Label.Relationship,special403*],[*Label.Relationship,special409*],[*Label.Relationship,special401*])",
     "type": "Relationship"
   },
   "好感度_李富貴_樊嘯天": {
@@ -30,7 +30,7 @@
         "special4"
       ]
     },
-    "name": "{@Label.Relationship,special809}+{@Label.Relationship,special4}",
+    "name": "[*Label.Relationship,special809*]+[*Label.Relationship,special4*]",
     "type": "Relationship"
   },
   "好感度_崆峒四姝": {
@@ -42,7 +42,7 @@
         "girl8"
       ]
     },
-    "name": "{@Custom.Max}({@Label.Relationship,girl5},{@Label.Relationship,girl6},{@Label.Relationship,girl7},{@Label.Relationship,girl8})",
+    "name": "[*Custom.Max*]([*Label.Relationship,girl5*],[*Label.Relationship,girl6*],[*Label.Relationship,girl7*],[*Label.Relationship,girl8*])",
     "type": "Relationship"
   },
   "好感度_最高唐門師兄": {
@@ -54,7 +54,7 @@
         "brother4"
       ]
     },
-    "name": "{@Custom.Max}({@Label.Relationship,brother1},{@Label.Relationship,brother2},{@Label.Relationship,brother3},{@Label.Relationship,brother4})",
+    "name": "[*Custom.Max*]([*Label.Relationship,brother1*],[*Label.Relationship,brother2*],[*Label.Relationship,brother3*],[*Label.Relationship,brother4*])",
     "type": "Relationship"
   },
   "技能_任何音波功": {
@@ -64,7 +64,7 @@
         "1107"
       ]
     },
-    "name": "{@Label.Talent,1105}+{@Label.Talent,1107}",
+    "name": "[*Label.Talent,1105*]+[*Label.Talent,1107*]",
     "type": "Talent"
   },
   "技能_佛學_道學": {
@@ -74,7 +74,7 @@
         "9501"
       ]
     },
-    "name": "{@Label.Talent,9502}+{@Label.Talent,9501}",
+    "name": "[*Label.Talent,9502*]+[*Label.Talent,9501*]",
     "type": "Talent"
   },
   "技能_戰術x44": {
@@ -83,7 +83,7 @@
         "9100"
       ]
     },
-    "name": "{@Label.Talent,9100}×44",
+    "name": "[*Label.Talent,9100*]×44",
     "type": "Talent"
   },
   "技能_戰術x10": {
@@ -92,17 +92,17 @@
         "9100"
       ]
     },
-    "name": "{@Label.Talent,9100}×44",
+    "name": "[*Label.Talent,9100*]×44",
     "type": "Talent"
   },
   "數值_修養x2": {
     "rel": {},
-    "name": "{@PlayerStat.training}×2",
+    "name": "[*PlayerStat.training*]×2",
     "type": "PlayerStat"
   },
   "數值_命運x20": {
     "rel": {},
-    "name": "{@PlayerStat.fate}×20",
+    "name": "[*PlayerStat.fate*]×20",
     "type": "PlayerStat"
   },
   "數值_南宮世家_錦香宮_上官世家": {
@@ -113,33 +113,33 @@
         "H01003"
       ]
     },
-    "name": "{@Label.Flag,H01001}+{@Label.Flag,H01002}+{@Label.Flag,H01003}",
+    "name": "[*Label.Flag,H01001*]+[*Label.Flag,H01002*]+[*Label.Flag,H01003*]",
     "type": "Relationship"
   },
   "數值_學問_廚藝": {
     "rel": {},
-    "name": "{@PlayerStat.literacy}+{@PlayerStat.cook}",
+    "name": "[*PlayerStat.literacy*]+[*PlayerStat.cook*]",
     "type": "PlayerStat"
   },
   "數值_學問x2": {
     "rel": {},
-    "name": "{@PlayerStat.literacy}×2",
+    "name": "[*PlayerStat.literacy*]×2",
     "type": "PlayerStat"
   },
   "數值_學問+嘴力": {
     "rel": {},
-    "name": "{@PlayerStat.literacy}+{@PlayerStat.talking}",
+    "name": "[*PlayerStat.literacy*]+[*PlayerStat.talking*]",
     "type": "PlayerStat"
   },
   "數值_抗毒_抗麻": {
     "rel": {},
-    "name": "{@PlayerStat.paralysis-resistance}+{@PlayerStat.poison-resistance}",
+    "name": "[*PlayerStat.paralysis-resistance*]+[*PlayerStat.poison-resistance*]",
     "type": "PlayerStat",
-    "text": "{@PlayerStat.paralysis-resistance}+{@PlayerStat.poison-resistance}"
+    "text": "[*PlayerStat.paralysis-resistance*]+[*PlayerStat.poison-resistance*]"
   },
   "數值_輕功_暗器": {
     "rel": {},
-    "name": "{@PlayerStat.dexterity}+{@PlayerStat.m-projectile}",
+    "name": "[*PlayerStat.dexterity*]+[*PlayerStat.m-projectile*]",
     "type": "PlayerStat"
   },
   "數值_棋力": {
@@ -148,7 +148,7 @@
         "9100"
       ]
     },
-    "name": "{@PlayerStat.mental}+{@PlayerStat.literacy}×2+{@PlayerStat.training}×2+{@Label.Talent,9100}×44",
+    "name": "[*PlayerStat.mental*]+[*PlayerStat.literacy*]×2+[*PlayerStat.training*]×2+[*Label.Talent,9100*]×44",
     "type": "PlayerStat"
   },
   "旗標_H01001_x10": {
@@ -157,7 +157,7 @@
         "H01001"
       ]
     },
-    "name": "{@Label.Flag,H01001}×10",
+    "name": "[*Label.Flag,H01001*]×10",
     "type": "Relationship"
   },
   "旗標_H02001_x10": {
@@ -166,7 +166,7 @@
         "H02001"
       ]
     },
-    "name": "{@Label.Flag,H02001}×10",
+    "name": "[*Label.Flag,H02001*]×10",
     "type": "Relationship"
   },
   "旗標_交戰門派_無飛石幫": {
@@ -178,7 +178,7 @@
         "M40035"
       ]
     },
-    "name": "{@Label.Flag,M40002}+{@Label.Flag,M40003}+{@Label.Flag,M40004}+{@Label.Flag,M40035}",
+    "name": "[*Label.Flag,M40002*]+[*Label.Flag,M40003*]+[*Label.Flag,M40004*]+[*Label.Flag,M40035*]",
     "type": "GroupFlag",
     "id": "WarExcludeStone",
     "text": "飛石幫以外交戰門派數"
@@ -192,7 +192,7 @@
         "G11006"
       ]
     },
-    "name": "{@Label.Flag,G11000}+{@Label.Flag,G11001}+{@Label.Flag,G11004}+{@Label.Flag,G11006}",
+    "name": "[*Label.Flag,G11000*]+[*Label.Flag,G11001*]+[*Label.Flag,G11004*]+[*Label.Flag,G11006*]",
     "type": "GroupFlag",
     "id": "BondGirl0346",
     "text": "鈴螢梅竹結緣數"
@@ -207,7 +207,7 @@
         "M40035"
       ]
     },
-    "name": "{@Label.Flag,M40001}+{@Label.Flag,M40002}+{@Label.Flag,M40003}+{@Label.Flag,M40004}+{@Label.Flag,M40035}",
+    "name": "[*Label.Flag,M40001*]+[*Label.Flag,M40002*]+[*Label.Flag,M40003*]+[*Label.Flag,M40004*]+[*Label.Flag,M40035*]",
     "type": "GroupFlag",
     "id": "War",
     "text": "交戰門派數"
@@ -224,7 +224,7 @@
         "G11008"
       ]
     },
-    "name": "{@Label.Flag,G11001}+{@Label.Flag,G11002}+{@Label.Flag,G11004}+{@Label.Flag,G11005}+{@Label.Flag,G11006}+{@Label.Flag,G11007}+{@Label.Flag,G11008}",
+    "name": "[*Label.Flag,G11001*]+[*Label.Flag,G11002*]+[*Label.Flag,G11004*]+[*Label.Flag,G11005*]+[*Label.Flag,G11006*]+[*Label.Flag,G11007*]+[*Label.Flag,G11008*]",
     "type": "GroupFlag",
     "id": "BondExclude0",
     "text": "唐默鈴以外結緣數"
@@ -237,7 +237,7 @@
         "G11007"
       ]
     },
-    "name": "{@Label.Flag,G11004}+{@Label.Flag,G11006}+{@Label.Flag,G11007}",
+    "name": "[*Label.Flag,G11004*]+[*Label.Flag,G11006*]+[*Label.Flag,G11007*]",
     "type": "GroupFlag",
     "id": "BondGirl367",
     "text": "梅竹菊結緣數"
@@ -252,7 +252,7 @@
         "G11005"
       ]
     },
-    "name": "{@Label.Flag,G11000}+{@Label.Flag,G11001}+{@Label.Flag,G11002}+{@Label.Flag,G11003}+{@Label.Flag,G11005}",
+    "name": "[*Label.Flag,G11000*]+[*Label.Flag,G11001*]+[*Label.Flag,G11002*]+[*Label.Flag,G11003*]+[*Label.Flag,G11005*]",
     "type": "GroupFlag",
     "id": "BondExclude367",
     "text": "梅竹菊以外結緣數"
@@ -268,7 +268,7 @@
         "H03006"
       ]
     },
-    "name": "{@Label.Flag,H03001}+{@Label.Flag,H03002}+{@Label.Flag,H03003}+{@Label.Flag,H03004}+{@Label.Flag,H03005}+{@Label.Flag,H03006}",
+    "name": "[*Label.Flag,H03001*]+[*Label.Flag,H03002*]+[*Label.Flag,H03003*]+[*Label.Flag,H03004*]+[*Label.Flag,H03005*]+[*Label.Flag,H03006*]",
     "type": "Relationship",
     "id": "SixTaoism",
     "text": "六道"
@@ -287,7 +287,7 @@
         "G11008"
       ]
     },
-    "name": "{@Label.Flag,G11000}+{@Label.Flag,G11001}+{@Label.Flag,G11002}+{@Label.Flag,G11003}+{@Label.Flag,G11004}+{@Label.Flag,G11005}+{@Label.Flag,G11006}+{@Label.Flag,G11007}+{@Label.Flag,G11008}",
+    "name": "[*Label.Flag,G11000*]+[*Label.Flag,G11001*]+[*Label.Flag,G11002*]+[*Label.Flag,G11003*]+[*Label.Flag,G11004*]+[*Label.Flag,G11005*]+[*Label.Flag,G11006*]+[*Label.Flag,G11007*]+[*Label.Flag,G11008*]",
     "type": "GroupFlag",
     "id": "BondGirl",
     "text": "結緣數"
@@ -305,7 +305,7 @@
         "G11008"
       ]
     },
-    "name": "{@Label.Flag,G11000}+{@Label.Flag,G11001}+{@Label.Flag,G11002}+{@Label.Flag,G11004}+{@Label.Flag,G11005}+{@Label.Flag,G11006}+{@Label.Flag,G11007}+{@Label.Flag,G11008}",
+    "name": "[*Label.Flag,G11000*]+[*Label.Flag,G11001*]+[*Label.Flag,G11002*]+[*Label.Flag,G11004*]+[*Label.Flag,G11005*]+[*Label.Flag,G11006*]+[*Label.Flag,G11007*]+[*Label.Flag,G11008*]",
     "type": "GroupFlag",
     "id": "BondExclude8",
     "text": "龍湘以外結緣數"
@@ -321,7 +321,7 @@
         "Facility_006"
       ]
     },
-    "name": "{@Label.Flag,Facility_001}+{@Label.Flag,Facility_002}+{@Label.Flag,Facility_003}+{@Label.Flag,Facility_004}+{@Label.Flag,Facility_005}+{@Label.Flag,Facility_006}",
+    "name": "[*Label.Flag,Facility_001*]+[*Label.Flag,Facility_002*]+[*Label.Flag,Facility_003*]+[*Label.Flag,Facility_004*]+[*Label.Flag,Facility_005*]+[*Label.Flag,Facility_006*]",
     "type": "GroupFlag",
     "id": "Facility",
     "text": "贖回資產數"
@@ -364,7 +364,7 @@
         "3312"
       ]
     },
-    "name": "{@Label.Special,3104}+{@Label.Special,3105}+{@Label.Special,3106}+{@Label.Special,3107}+{@Label.Special,3108}+{@Label.Special,3109}+{@Label.Special,3110}+{@Label.Special,3111}+{@Label.Special,3112}+{@Label.Special,3201}+{@Label.Special,3202}+{@Label.Special,3203}+{@Label.Special,3204}+{@Label.Special,3205}+{@Label.Special,3206}+{@Label.Special,3207}+{@Label.Special,3208}+{@Label.Special,3209}+{@Label.Special,3210}+{@Label.Special,3211}+{@Label.Special,3212}+{@Label.Special,3301}+{@Label.Special,3302}+{@Label.Special,3303}+{@Label.Special,3304}+{@Label.Special,3305}+{@Label.Special,3306}+{@Label.Special,3307}+{@Label.Special,3308}+{@Label.Special,3309}+{@Label.Special,3310}+{@Label.Special,3311}+{@Label.Special,3312}",
+    "name": "[*Label.Special,3104*]+[*Label.Special,3105*]+[*Label.Special,3106*]+[*Label.Special,3107*]+[*Label.Special,3108*]+[*Label.Special,3109*]+[*Label.Special,3110*]+[*Label.Special,3111*]+[*Label.Special,3112*]+[*Label.Special,3201*]+[*Label.Special,3202*]+[*Label.Special,3203*]+[*Label.Special,3204*]+[*Label.Special,3205*]+[*Label.Special,3206*]+[*Label.Special,3207*]+[*Label.Special,3208*]+[*Label.Special,3209*]+[*Label.Special,3210*]+[*Label.Special,3211*]+[*Label.Special,3212*]+[*Label.Special,3301*]+[*Label.Special,3302*]+[*Label.Special,3303*]+[*Label.Special,3304*]+[*Label.Special,3305*]+[*Label.Special,3306*]+[*Label.Special,3307*]+[*Label.Special,3308*]+[*Label.Special,3309*]+[*Label.Special,3310*]+[*Label.Special,3311*]+[*Label.Special,3312*]",
     "type": "Special",
     "id": "SpecialNews",
     "text": "👑❮江湖快報❯數量"
@@ -380,7 +380,7 @@
         "2006"
       ]
     },
-    "name": "{@Label.Misc,2001}+{@Label.Misc,2005}+{@Label.Misc,2004}+{@Label.Misc,2003}+{@Label.Misc,2002}+{@Label.Misc,2006}",
+    "name": "[*Label.Misc,2001*]+[*Label.Misc,2005*]+[*Label.Misc,2004*]+[*Label.Misc,2003*]+[*Label.Misc,2002*]+[*Label.Misc,2006*]",
     "type": "Misc",
     "id": "MiscWine",
     "text": "💊❮任意酒類❯"
@@ -410,7 +410,7 @@
         "4106"
       ]
     },
-    "name": "{@Label.Misc,2003}+{@Label.Misc,2004}+{@Label.Misc,2005}+{@Label.Misc,3001}+{@Label.Misc,3002}+{@Label.Misc,3003}+{@Label.Misc,5003}+{@Label.Misc,5004}+{@Label.Misc,5005}+{@Label.Misc,5006}+{@Label.Misc,5001}+{@Label.Misc,4101}+{@Label.Misc,4102}+{@Label.Misc,4103}+{@Label.Misc,4104}+{@Label.Misc,4500}+{@Label.Misc,5007}+{@Label.Misc,5008}+{@Label.Misc,5009}+{@Label.Misc,4106}",
+    "name": "[*Label.Misc,2003*]+[*Label.Misc,2004*]+[*Label.Misc,2005*]+[*Label.Misc,3001*]+[*Label.Misc,3002*]+[*Label.Misc,3003*]+[*Label.Misc,5003*]+[*Label.Misc,5004*]+[*Label.Misc,5005*]+[*Label.Misc,5006*]+[*Label.Misc,5001*]+[*Label.Misc,4101*]+[*Label.Misc,4102*]+[*Label.Misc,4103*]+[*Label.Misc,4104*]+[*Label.Misc,4500*]+[*Label.Misc,5007*]+[*Label.Misc,5008*]+[*Label.Misc,5009*]+[*Label.Misc,4106*]",
     "type": "Misc",
     "id": "MiscFood",
     "text": "💊❮任意食物❯"
@@ -421,12 +421,12 @@
         "9100"
       ]
     },
-    "name": "{@PlayerStat.literacy}+{@Label.Talent,9100}×44",
+    "name": "[*PlayerStat.literacy*]+[*Label.Talent,9100*]×44",
     "type": "PlayerStat"
   },
   "數值_Max_道德_性情_命運x20": {
     "rel": {},
-    "name": "{@Custom.Max}({@PlayerStat.karma},{@PlayerStat.disposition},{@PlayerStat.fate}×20)",
+    "name": "[*Custom.Max*]([*PlayerStat.karma*],[*PlayerStat.disposition*],[*PlayerStat.fate*]×20)",
     "type": "PlayerStat"
   },
   "數值_丐幫談判": {
@@ -440,7 +440,7 @@
         "H02001"
       ]
     },
-    "name": "{@Label.Relationship,special103}+{@Label.Relationship,special4}+{@Label.Flag,H01001}×10+{@Label.Flag,H02001}×10",
+    "name": "[*Label.Relationship,special103*]+[*Label.Relationship,special4*]+[*Label.Flag,H01001*]×10+[*Label.Flag,H02001*]×10",
     "type": "Relationship"
   }
 }
