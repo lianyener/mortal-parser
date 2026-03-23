@@ -428,9 +428,12 @@ function handleFlagStatement(flagId, val, script, symbol = '=', isEffect = false
 
         // 確認劇本特殊設定
         if (script) {
-            flagItems.forEach((item, i) => {
-                if (item.script.includes(script)) return formatFlag(item, i);
-            });
+            for (let i = 0; i < flagItems.length; i++) {
+                if (flagItems[i].script.includes(script)) {
+                    formatFlag(flagItems[i], i);
+                    break;
+                }
+            }
         }
         // 劇本特殊設定未確認標記
         else if (flagItems.length > 1) {
@@ -457,7 +460,7 @@ function handleStatement(var1, operator, var2, script, inverse = false) {
         left: var1.name,
         right: val,
         symbol,
-        brackets: { left: '{$', right: '}' },
+        brackets: { left: '{#', right: '}' },
         rel: {}
     };
 
@@ -936,7 +939,7 @@ export async function parseTerm(doExport = true) {
                 if (keys[1] === 'Name') term.Facility.Name[id] = val;
                 break;
             case 'Story': {
-                const text = val.replace(regexNewLine, '').replace(regexVoice, '($t(Custom.Voice$1))$2');
+                const text = val.replace(regexNewLine, '').replace(regexVoice, '({@Custom.Voice$1})$2');
                 if (id.startsWith('O_')) option.Story[id] = { _: text, short: optionCustom?.Story?.[id]?.short ?? text };
                 else dialog.Story[id] = text;
                 break;
@@ -996,7 +999,7 @@ export async function parseFlag() {
     const emptyFlagItem = {
         script: [],
         name: '',
-        value: { 0: '$t(Custom.False)', 1: '$t(Custom.True)' },
+        value: { 0: '{@Custom.False}', 1: '{@Custom.True}' },
         desc: ''
     };
 
@@ -1848,7 +1851,7 @@ export async function parseMission() {
                     rules.push(statment.text);
                     mergeRelation(mission.rel.pre, statment.rel);
                 }
-                branch.text = `{@BranchType.Switch}：${rules.join(convertLogic(condition._condition._logicOp))}}`;
+                branch.text = `{@BranchType.Switch}：${rules.join(convertLogic(condition._condition._logicOp))}`;
 
                 // 解析影響旗標
                 for (const item of condition._flagItem ?? []) {
@@ -2367,7 +2370,7 @@ export async function parseCombat() {
 
                     // 檢定行動結果
                     case 'CombatEventConditionActionResult': {
-                        const text = `{${getTerm('char', data._character)}${getTerm('type', data._type)}}`;
+                        const text = `{#${getTerm('char', data._character)}${getTerm('type', data._type)}}`;
                         return { text };
                     }
                     // 檢定行動種類
@@ -2375,13 +2378,13 @@ export async function parseCombat() {
                         const typesText = [...new Set(data._typeList.map(a => getTerm('action', a, 'CombatAction')))].join('{@Custom.Or}');
                         const actionResult = data._checkHit ? data._hit ? '{@Custom.Hit}' : '{@Custom.NotHit}' :
                             data._checkSuccess ? data._success ? '{@Custom.Success}' : '{@Custom.Failed}' : '';
-                        const text = `{${getTerm('char', data._character)}{@Custom.Use}${typesText}${actionResult}}`;
+                        const text = `{#${getTerm('char', data._character)}{@Custom.Use}${typesText}${actionResult}}`;
                         return { text };
                     }
                     // 檢定狀態
                     case 'CombatEventConditionEffectState': {
                         const effect = await getCombatEffect(data._effectState._name);
-                        const text = `{${getTerm('char', data._character)}{@Custom.Have}${effect.key}`;
+                        const text = `{#${getTerm('char', data._character)}{@Custom.Have}${effect.key}}`;
                         return { text };
                     }
                     // 檢定數值
@@ -2392,13 +2395,13 @@ export async function parseCombat() {
                     }
                     // 檢定回合
                     case 'CombatEventConditionRound': {
-                        const text = `{@Custom.Round}${convertComparison(data._op)}${data._round}`;
+                        const text = `{#{@Custom.Round}${convertComparison(data._op)}${data._round}}`;
                         return { text };
                     }
                     // 檢定回合旗標
                     case 'CombatEventConditionRoundFlag': {
                         const flagId = removeUid(data._flagData._name);
-                        const text = `{#{@Custom.Round}${convertComparison(data._op)}${`{@Label.Flag,${flagId}}}`}`;
+                        const text = `{#{@Custom.Round}${convertComparison(data._op)}{@Label.Flag,${flagId}}}`;
                         return { text, rel: { Flag: [flagId] } };
                     }
                     // 檢定戰鬥數值
@@ -2406,7 +2409,7 @@ export async function parseCombat() {
                         const match = data._type.match(regexPct);
                         const stat = getTerm('stat', match[1]);
                         const unit = match[2] ? '%' : '';
-                        const text = `${getTerm('char', data._character)}${stat}${convertComparison(data._op)}${data._value}${unit}`;
+                        const text = `{#${getTerm('char', data._character)}${stat}${convertComparison(data._op)}${data._value}${unit}}`;
                         return { text };
                     }
                     // 無對應
@@ -2847,17 +2850,17 @@ export async function parseScript() {
         const checkFlag = (flagData, index, id, val, symbol) => {
 
             // 處理資料
-            const name = `@Label.Flag,${id}.${index}`;
-            const value = val && flagData?.value?.[val] ? `{${name}.${val}}` : val;
+            const name = `{@Label.Flag,${id}.${index}}`;
+            const value = val && flagData?.value?.[val] ? `{@Flag.${id}.${index}.${val}}` : val;
 
             // 僅旗標名稱
-            if (!val) return `{${name}}`;
+            if (!val) return name;
 
             // 僅旗標值
             if (!symbol) return value;
 
             // 完整式子
-            return `{{${name}}${symbol}${value}}`;
+            return `{#${name}${symbol}${value}}`;
         };
 
         // 取代X旗標值(完整式子)
@@ -2865,9 +2868,11 @@ export async function parseScript() {
             return text.replace(regexXFull, (match, id, symbol, val) => {
                 const flagItems = CACHE.FLAG?.[id].data;
                 if (flagItems && flagItems.length > 0) {
-                    flagItems.forEach((data, i) => {
-                        if (data.script.includes(script)) return checkFlag(data, i, id, val, symbol);
-                    });
+                    for (let i = 0; i < flagItems.length; i++) {
+                        if (flagItems[i].script.includes(script)) {
+                            return checkFlag(flagItems[i], i, id, val, symbol);
+                        }
+                    }
                     return checkFlag(flagItems[0], 0, id, val, symbol);
                 }
                 return match;
@@ -2879,9 +2884,11 @@ export async function parseScript() {
             return text.replace(regexXName, (match, id) => {
                 const flagItems = CACHE.FLAG?.[id].data;
                 if (flagItems && flagItems.length > 0) {
-                    flagItems.forEach((data, i) => {
-                        if (data.script.includes(script)) return checkFlag(data, i, id);
-                    });
+                    for (let i = 0; i < flagItems.length; i++) {
+                        if (flagItems[i].script.includes(script)) {
+                            return checkFlag(flagItems[i], i, id);
+                        }
+                    }
                     return checkFlag(flagItems[0], 0, id);
                 }
                 return match;
@@ -2893,9 +2900,11 @@ export async function parseScript() {
             return text.replace(regexXValue, (match, id, val) => {
                 const flagItems = CACHE.FLAG?.[id].data;
                 if (flagItems && flagItems.length > 0) {
-                    flagItems.forEach((data, i) => {
-                        if (data.script.includes(script)) return checkFlag(data, i, id, val);
-                    });
+                    for (let i = 0; i < flagItems.length; i++) {
+                        if (flagItems[i].script.includes(script)) {
+                            return checkFlag(flagItems[i], i, id, val);
+                        }
+                    }
                     return checkFlag(flagItems[0], 0, id, val);
                 }
                 return match;
@@ -3937,19 +3946,7 @@ export async function parseLocalization() {
 
     // 處理旗標
     for (const key in flagCustom) {
-        const flagItems = flagCustom[key].data;
-
-        // 通用值
-        zhtw.Flag[key] = {
-            _: flagItems[0].name || flagItems[0].ori,
-            Desc: flagItems[0].desc
-        };
-        Object.assign(zhtw.Flag[key], flagItems[0].value);
-
-        // 特定值
-        flagItems.forEach((flagData, index) => {
-            if (index === 0) return;
-
+        flagCustom[key].data.forEach((flagData, index) => {
             zhtw.Flag[key][index] = {
                 _: flagData.name,
                 Desc: flagData.desc
