@@ -475,7 +475,14 @@ function handleStatement(var1, operator, var2, script, inverse = false) {
         case 'Develop':
         case 'Book':
         case 'Achievement':
-            statment.right = `[*Flag.Own.${val}*]`;
+            if ((['≥', '='].includes(symbol) && val == 1) || (symbol == '>' && val == 0)) {
+                statment.symbol = '=';
+                statment.right = `[*Flag.Own.1*]`;
+            }
+            else if ((['≤', '='].includes(symbol) && val == 0) || (symbol == '<' && val == 1)) {
+                statment.symbol = '=';
+                statment.right = `[*Flag.Own.0*]`;
+            }
             break;
         case 'Flag':
             statment = handleFlagStatement(var1?.flag, val, script, symbol);
@@ -652,7 +659,7 @@ async function getStat(statItem) {
                         const data = await getGameJson(key, 'GameTimeData');
                         const { Year, Month, Stage } = data?.GameTime ?? { Year: 0, Month: 0, Stage: 0 };
                         return {
-                            name: `[*System.GameTimeText,${Year},${Month},${STAGE_MAP[Stage] ?? '0'}*]`,
+                            name: `[*Custom.GameTimeText,${Year},${Month},${STAGE_MAP[Stage] ?? '0'}*]`,
                             type: 'TimeData'
                         };
                     }
@@ -1618,7 +1625,7 @@ function updateNameDraftItem(draft, id, ref = '', ori = id) {
 export async function parseMission() {
 
     // 常數
-    const regexTime = /\[\*Custom\.GameTime\*\]([=≥≤])\[\*System\.GameTimeText,(\d),(\d{1,2}),(\d)\*\]/;
+    const regexTime = /\[\*Custom\.GameTime\*\]([=≥≤])\[\*Custom\.GameTimeText,(\d),(\d{1,2}),(\d)\*\]/;
     const regexMinTime = /[=≥]/;
     const regexMaxTime = /[=≤]/;
     const regexPrefix = /^.+?_/;
@@ -1678,7 +1685,7 @@ export async function parseMission() {
 
     // Helper: 生成時間字串
     const toTimeText = (timeObj) => {
-        return `[*System.GameTimeText,${timeObj.Year},${timeObj.Month},${STAGE_MAP[timeObj.Stage] ?? '0'}*]`;
+        return `[*Custom.GameTimeText,${timeObj.Year},${timeObj.Month},${STAGE_MAP[timeObj.Stage] ?? '0'}*]`;
     };
 
     // 一般任務主流程
@@ -1778,7 +1785,7 @@ export async function parseMission() {
                 const nextState = triggerData._nextStateName;
                 if (nextState) {
                     let text;
-                    if (nextState == 'clear') text = `◎[*Label.Mission,${id}*][*Custom.SetClear*]`;
+                    if (nextState == 'clear') text = `◎[*Custom.SetClear*]:[*Label.Mission,${id}*]`;
                     else {
                         text = `◎[*Label.Mission,${id}*][*Custom.SetTrigger*]:[*Label.Trigger,${nextState}*]`;
                         mergeRelation(mission.rel.post, { Mission: [nextState] });
@@ -1905,7 +1912,7 @@ export async function parsePosition() {
         Mall_Free_001: { index: 122, period: '001', position: 'Mall', action: 'meditate' },
         Study_Work_001: { index: 131, period: '001', position: 'Study', action: 'book' },
         Alchemy_Work_001: { index: 141, period: '001', position: 'Alchemy', action: 'alchemy' },
-        Forge_01: { index: 150, period: '001', position: 'Forge', action: '' },
+        Forge_01: { index: 150, period: '001', position: 'Forge', action: 'before-forge' },
         Forge_Work_001: { index: 151, period: '001', position: 'Forge', action: 'forge' },
         Center_Work_001: { index: 161, period: '001', position: 'Center', action: 'sweep' },
         Center_Free_001: { index: 162, period: '001', position: 'Center', action: 'practice' },
@@ -1913,10 +1920,10 @@ export async function parsePosition() {
         GirlRoom_Free_001: { index: 181, period: '001', position: 'Room2', action: 'voyeur' },
         GirlRoom_Work_001: { index: 182, period: '001', position: 'Room2', action: 'origami' },
         Room_Work_001: { index: 191, period: '001', position: 'Room1', action: 'sleep' },
-        Door_02: { index: 210, period: '001', position: 'Door', action: '' },
+        Door_02: { index: 210, period: '001', position: 'Door', action: 'door' },
         Door_Work_001: { index: 211, period: '001', position: 'Door', action: 'transaction' },
         Door_Free_001: { index: 221, period: '001', position: 'Downtown', action: 'walk' },
-        Fortress_02: { index: 230, period: '001', position: 'Fortress', action: '' },
+        Fortress_02: { index: 230, period: '001', position: 'Fortress', action: 'fortress' },
         Fortress_Work_001: { index: 231, period: '001', position: 'Fortress', action: 'housekeeper' },
         Teashop_Work_001: { index: 241, period: '001', position: 'Teashop', action: 'teashop' },
         Pharmacy_Work_001: { index: 251, period: '001', position: 'Pharmacy', action: 'doctor' },
@@ -2756,7 +2763,7 @@ export async function parseScript() {
                         {
                             form: 'branch',
                             type: 'Switch',
-                            text: '[*BranchType.Position*]：[*BranchType.Switch*]：([*Custom.GameTime*]≥[*System.GameTimeText,3,10,1*])}',
+                            text: '[*BranchType.Switch*]：[%[*Custom.GameTime*]≥[*Custom.GameTimeText,3,10,1*]%]',
                             branches: [{
                                 index: 1,
                                 text: '[*Custom.True*]',
@@ -2827,7 +2834,7 @@ export async function parseScript() {
             intra: {},
             post: { Script: ['mall_001', 'center_001', 'room_001', 'girlroom_001', 'alchemy_001', 'forge_001', 'kitchen_001', 'door_001', 'back_001', 'study_001'] }
         },
-        remark: Array.from(custom?.free?.remark ?? [], (_, i) => `[*Remark.free.${i}*]`)
+        remark: Array.from(custom?.free?.remark ?? [], (_, i) => `[*Script.Remark.free.${i}*]`)
     };
     updateNameDraftItem(nameDraft, 'free');
 
@@ -3027,7 +3034,7 @@ export async function parseScript() {
             }
             // 設定遊戲時間
             case 'luamanager.SetGameTime': {
-                const time = `[*System.GameTimeText,${node.arguments[0].value},${node.arguments[1].value},${STAGE_MAP[node.arguments[2].value] ?? '0'}*]`;
+                const time = `[*Custom.GameTimeText,${node.arguments[0].value},${node.arguments[1].value},${node.arguments[2].value}*]`;
                 content.push({ form: 'effect', type: 'system', text: `◎[*Custom.SetTime*]:${time}` });
                 break;
             }
@@ -3056,8 +3063,13 @@ export async function parseScript() {
             // 設定戰役技能 (同分岐重複設定只輸出一次)
             case 'luamanager.SetBattleSkillActive':
             case 'luamanager.SetPlayerBattleSkill': {
-                const text = `◎[*Custom.SetBattleSkill*]❮[*BattleSkill.${removeQuote(node.arguments[0].raw)}*]❯`;
-                if (content.every(c => c.text != text)) content.push({ form: 'effect', type: 'system', text });
+                const id = removeQuote(node.arguments[0].raw);
+                const charId = extractMainCharacter(id);
+                const text = `◎[*Custom.SetBattleSkill*][*Label.BattleSkill,${id},${charId}*]`;
+                if (content.every(c => c.text != text)) {
+                    content.push({ form: 'effect', type: 'system', text });
+                    mergeCharacterRelation(rel.post, charId);
+                }
                 break;
             }
             // 設定標題畫面人物
@@ -3226,7 +3238,7 @@ export async function parseScript() {
 
                 // 回存內容
                 mergeRelation(rel.post, { Talent: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `[*Label.Talent,${id}*]❯${sign}${val}` });
+                content.push({ form: 'effect', type: 'stat', text: `[*Label.Talent,${id}*]${sign}${val}` });
                 break;
             }
             // 獲得成就
@@ -3252,7 +3264,7 @@ export async function parseScript() {
                 let text;
                 const mission = removeQuote(node.arguments[0].raw);
                 const trigger = removeQuote(node.arguments[1].raw);
-                const label = mission == 'Main' ? '[*Custom.Main*]' : `[*Label.Mission,${removeQuote(node.arguments[0].raw)}*]`;
+                const label = mission == 'Main' ? '[*Custom.MainMission*]' : `[*Label.Mission,${removeQuote(node.arguments[0].raw)}*]`;
                 if (trigger == 'M0000') text = `◎${label}[*Custom.SetTrigger*]:[*System.NA*]`;
                 else if (trigger == 'clear') text = `◎${label}[*Custom.SetClear*]`;
                 else {
@@ -3721,7 +3733,7 @@ export async function parseScript() {
                     intra: custom?.[id]?.rel?.intra ?? {},
                     post: custom?.[id]?.rel?.post ?? {}
                 },
-                remark: Array.from(custom?.[id]?.remark ?? [], (_, i) => `[*Remark.${id}.${i}*]`)
+                remark: Array.from(custom?.[id]?.remark ?? [], (_, i) => `[*Script.Remark.${id}.${i}*]`)
             };
             updateNameDraftItem(nameDraft, id);
 
@@ -3845,7 +3857,7 @@ export async function parseLocalization() {
     const converter = OpenCC.Converter({ from: 'twp', to: 'cn' });
 
     // 讀取來源
-    const [battleName, combatName, missionCustom, missionName, scriptCustom, scriptFree, scriptName, groupCustom, option, flagCustom, termCustom, term] = await Promise.all([
+    const [battleName, combatName, missionCustom, missionName, scriptCustom, scriptFree, scriptName, groupCustom, option, flagCustom, termCustom, term, position] = await Promise.all([
         getDataJson('battleName'),
         getDataJson('combatName'),
         getDataJson('missionCustom'),
@@ -3858,6 +3870,7 @@ export async function parseLocalization() {
         getDataJson('flagCustom'),
         getDataJson('termCustom'),
         getDataJson('term', ''),
+        getDataJson('position', ''),
     ]);
 
     // Helper: 檢查物件
@@ -3940,6 +3953,11 @@ export async function parseLocalization() {
         }
     }
 
+    zhtw.Position.Action = {};
+    for (const key in position) {
+        zhtw.Position.Action[key] = position[key].action;
+    }
+
     for (const key in groupCustom) {
         const id = groupCustom[key].id;
         if (id) zhtw.GroupStat[groupCustom[key].id] = groupCustom[key].text;
@@ -3947,7 +3965,10 @@ export async function parseLocalization() {
 
     // 處理旗標
     for (const key in flagCustom) {
-        zhtw.Flag[key] = {};
+        zhtw.Flag[key] = {
+            _: flagCustom[key].data[0].name,
+            Desc: flagCustom[key].data[0].desc
+        };
         flagCustom[key].data.forEach((flagData, index) => {
             zhtw.Flag[key][index] = {
                 _: flagData.name,
