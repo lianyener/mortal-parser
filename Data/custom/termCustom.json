@@ -178,6 +178,33 @@
         "Debuff": "⤵️[*CombatSkill.Name.{0}*]",
         "Support": "🚹[*CombatSkill.Name.{0}*]"
     },
+    "LabelIcon": {
+        "Achievement": "🏆",
+        "Dead": "💀",
+        "End": "🗃️",
+        "Library": "📚",
+        "Talent": "✨",
+        "Book": "📕",
+        "Special": "👑",
+        "Equip": "🛡️",
+        "Misc": "💊",
+        "Flag": "🚩",
+        "Character": "👤",
+        "Relationship": "💕",
+        "RelationshipFlag": "💕",
+        "Position": "📍",
+        "Mission": "📜",
+        "Trigger": "⚡",
+        "Time": "⚡",
+        "Script": "📃",
+        "Free": "👣",
+        "Combat": "⚔️",
+        "Battle": "🏹",
+        "BattleSkill": "💥",
+        "Buff": "⤴️",
+        "Debuff": "⤵️",
+        "Support": "🚹"
+    },
     "MapPosition": {
         "Name": {
             "901": "[*Script.ch2_4_3_break_start_01.name*]",

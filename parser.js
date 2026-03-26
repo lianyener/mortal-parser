@@ -1536,7 +1536,7 @@ export async function parseSwitch() {
 
                 // 調整表示格式
                 if (rules.length == 0) switchObj.check = '[*Custom.InvalidCondition*]';
-                else if (rules.length == 1) switchObj.check = rules[0].rule.map(r => r.text).join(rules[0].op);
+                // else if (rules.length == 1) switchObj.check = rules[0].rule.map(r => r.text).join(rules[0].op);
                 else {
                     // 如果式子左邊全部相同則簡化表示
                     const firstRule = rules[0].rule[0];
@@ -2090,11 +2090,15 @@ function buildLogicView(content) {
 
     // 空白分歧
     if (!content || content.length === 0) {
-        return [{ form: 'effect', type: 'remark', text: '※[*System.NA*]' }];
+        return {
+            content: [{ form: 'effect', type: 'remark', text: '※[*System.NA*]' }],
+            effects: []
+        };
     }
 
     // 初始化
     const result = [];
+    const currentEffects = new Set();
     let effectBuffer = [];
 
     // Helper: 將當前收集到的 effect 合併推入 result
@@ -2112,6 +2116,7 @@ function buildLogicView(content) {
     for (const node of content) {
         if (node.form === 'effect') {
             effectBuffer.push(node.text);
+            currentEffects.add(node.type);
         }
         else if (node.form === 'perform') {
             flushEffects();
@@ -2120,13 +2125,25 @@ function buildLogicView(content) {
             flushEffects();
 
             // 遞迴處理子分支
-            const newBranch = { ...node, branches: [] };
+            const newBranch = { ...node, branches: [], effects: [] };
+            const branchEffects = new Set();
+
             for (const b of node.branches) {
+                const sub = buildLogicView(b.content);
+
                 newBranch.branches.push({
                     ...b,
-                    content: buildLogicView(b.content)
+                    content: sub.content,
+                    effects: sub.effects
+                });
+
+                sub.effects.forEach(t => {
+                    branchEffects.add(t);
+                    currentEffects.add(t);
                 });
             }
+
+            newBranch.effects = Array.from(branchEffects);
             result.push(newBranch);
         }
         else {
@@ -2141,10 +2158,13 @@ function buildLogicView(content) {
 
     // 處理僅演出變化分岐
     if (result.length === 0) {
-        return [{ form: 'effect', type: 'remark', text: '※[*Custom.OnlyPerform*]' }];
+        return {
+            content: [{ form: 'effect', type: 'remark', text: '※[*Custom.OnlyPerform*]' }],
+            effects: []
+        }
     }
 
-    return result;
+    return { content: result, effects: Array.from(currentEffects) };
 }
 
 // 解析戰鬥事件
@@ -2527,10 +2547,12 @@ export async function parseCombat() {
             }
             branch.branches.push({ index: 0, text: '[*Custom.Loss*]', content: loseResults });
 
+            const logic = buildLogicView(combat.content);
             result[id] = combat;
             logicResult[id] = {
                 ...combat,
-                content: buildLogicView(combat.content)
+                content: logic.content,
+                effects: logic.effects
             };
         }
         catch (err) {
@@ -3706,7 +3728,8 @@ export async function parseScript() {
 
             // 記錄資訊
             const index = clause?.condition?.right?.value ?? 0;
-            const label = cache.branch.label[index] ?? (index == 1 ? '[*Custom.True*]' : index == 2 ? '[*Custom.False*]' : '[*Custom.Other*]');
+            // const label = cache.branch.label[index] ?? (index == 1 ? '[*Custom.True*]' : index == 2 ? '[*Custom.False*]' : '[*Custom.Other*]');
+            const label = cache.branch.label[index] ?? '[*Custom.Other*]';
 
             // 遞迴解析分歧
             walk(clause.body, subContent, subCache);
@@ -3784,10 +3807,12 @@ export async function parseScript() {
             walk(ast.body, script.content, initCache);
 
             // 回存結果
+            const logic = buildLogicView(script.content);
             result[id] = script;
             logicResult[id] = {
                 ...script,
-                content: buildLogicView(script.content)
+                content: logic.content,
+                effects: logic.effects
             };
         }
         catch (err) {
