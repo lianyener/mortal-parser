@@ -24,9 +24,11 @@ const CACHE = {
     DICE: null,
     MISSION: null,
     COMBAT: null,
+    COMBAT_FULL: null,
     BATTLE: null,
     POSITION: null,
     SCRIPT: null,
+    SCRIPT_FULL: null,
     STAT: {},
     TIME: {},
     LIBRARY: {},
@@ -140,13 +142,13 @@ async function getJsonList(dir) {
 }
 
 // Helper: 讀取Json檔案
-async function loadJson(filePath) {
+async function loadJson(filePath, errMsg = true) {
     try {
         const dataRaw = await readFile(filePath, 'utf-8');
         return JSON.parse(dataRaw);
     }
     catch (err) {
-        writeLog('error', `Loading or parsing "${path.basename(filePath)}" failed.`, err.message);
+        if (errMsg) writeLog('error', `Loading or parsing "${path.basename(filePath)}" failed.`, err.message);
     }
 }
 
@@ -157,7 +159,7 @@ async function getGameJson(fileName, dir) {
 
 // Helper: 讀取自訂資料Json檔案
 async function getDataJson(fileName, dir = 'custom', nullable = true) {
-    return await loadJson(path.join(DATA_PATH, dir, `${fileName}.json`)) ?? (nullable ? {} : null);
+    return await loadJson(path.join(DATA_PATH, dir, `${fileName}.json`), !nullable) ?? (nullable ? {} : null);
 }
 
 // Helper: 建立缺少的資料夾
@@ -207,6 +209,13 @@ async function executeOptionally(parseFn, type, doUpdate) {
         if (data) {
             CACHE[type] = data;
             CACHE_FULFILL[type] = true;
+
+            // 確認一併讀取完整版
+            const dataFull = await getDataJson(`${type.toLowerCase()}Full`, '', true);
+            if (Object.keys(dataFull).length > 0) {
+                CACHE[`${type}_FULL`] = dataFull;
+            }
+
             return;
         }
     }
@@ -2540,7 +2549,8 @@ export async function parseCombat() {
         exportJson(nameDraft, 'combatName'),
         exportJson(supportCustom, 'supportCustom')
     ]);
-    CACHE.COMBAT = result;
+    CACHE.COMBAT = logicResult;
+    CACHE.COMBAT_FULL = result;
     CACHE_FULFILL.COMBAT = true;
 }
 
@@ -3796,6 +3806,7 @@ export async function parseScript() {
         exportJson(nameDraft, 'scriptName')
     ]);
     CACHE.SCRIPT = logicResult;
+    CACHE.SCRIPT_FULL = result;
     CACHE_FULFILL.SCRIPT = true;
 }
 
@@ -3817,6 +3828,15 @@ export async function buildBackRelation() {
             target.backRel ??= {};
             target.backRel[type] ??= {};
             mergeRelation(target.backRel[type], { [sourceCat]: [sourceId] });
+
+            // 一併更新完整版
+            targetCat = `${targetCat}_FULL`;
+            const targetFull = CACHE?.[targetCat]?.[targetId];
+            if (targetFull) {
+                targetFull.backRel ??= {};
+                targetFull.backRel[type] ??= {};
+                mergeRelation(targetFull.backRel[type], { [sourceCat]: [sourceId] });
+            }
         }
         else writeLog('warn', `${sourceCat} - ${sourceId} - ${targetCat} - ${targetId} not found.`);
     };
@@ -3844,6 +3864,15 @@ export async function buildBackRelation() {
         for (const [itemId, itemData] of Object.entries(CACHE[category] ?? {})) {
             exportPromises.push(exportJson(itemData, itemId, `public/data/${catName}`, true, false));
         }
+
+        // 一併輸出完整版
+        const categoryFull = `${category}_FULL`;
+        if (CACHE[categoryFull]) {
+            exportPromises.push(exportJson(CACHE[categoryFull], catName, 'public/full/data', true));
+            for (const [itemId, itemData] of Object.entries(CACHE[categoryFull])) {
+                exportPromises.push(exportJson(itemData, itemId, `public/full/data/${catName}`, true, false));
+            }
+        }
     }
     await Promise.all(exportPromises);
 }
@@ -3857,7 +3886,7 @@ export async function parseLocalization() {
     const converter = OpenCC.Converter({ from: 'twp', to: 'cn' });
 
     // 讀取來源
-    const [battleName, combatName, missionCustom, missionName, scriptCustom, scriptFree, scriptName, groupCustom, option, flagCustom, termCustom, term, position] = await Promise.all([
+    const [battleName, combatName, missionCustom, missionName, scriptCustom, scriptFree, scriptName, groupCustom, option, dialog, flagCustom, termCustom, term, position] = await Promise.all([
         getDataJson('battleName'),
         getDataJson('combatName'),
         getDataJson('missionCustom'),
@@ -3867,10 +3896,11 @@ export async function parseLocalization() {
         getDataJson('scriptName'),
         getDataJson('groupCustom'),
         getDataJson('option'),
+        getDataJson('dialog', ''),
         getDataJson('flagCustom'),
         getDataJson('termCustom'),
         getDataJson('term', ''),
-        getDataJson('position', ''),
+        getDataJson('position', '')
     ]);
 
     // Helper: 檢查物件
@@ -3897,17 +3927,23 @@ export async function parseLocalization() {
 
     // 基礎用詞表
     const zhtw = {
+        Mission: { Name: {}, Desc: {}, Keywords: {}, Remark: {} },
+        Trigger: { Name: {}, Desc: {}, Keywords: {}, Remark: {} },
         Battle: { Name: {}, Desc: {}, Keywords: {}, Remark: {} },
         Combat: { Name: {}, Desc: {}, Keywords: {}, Remark: {} },
         Script: { Name: {}, Desc: {}, Keywords: {}, Remark: {} },
-        Mission: { Name: {}, Desc: {}, Keywords: {}, Remark: {} },
-        Trigger: { Name: {}, Desc: {}, Keywords: {}, Remark: {} },
+        Position: { Action: {} },
+        Free: {},
         GroupStat: {},
         Flag: {},
-        Free: {}
+        Story: {}
     };
-    deepMerge(zhtw, term, termCustom, option);
+    deepMerge(zhtw, term, termCustom);
     Object.assign(zhtw.Free, scriptFree);
+
+    for (const key in option.Story) {
+        zhtw.Story[key] = option.Story[key].short;
+    }
 
     for (const key in battleName) {
         zhtw.Battle.Name[key] = battleName[key].name || battleName[key].ori;
@@ -3953,7 +3989,6 @@ export async function parseLocalization() {
         }
     }
 
-    zhtw.Position.Action = {};
     for (const key in position) {
         zhtw.Position.Action[key] = position[key].action;
     }
@@ -4014,6 +4049,13 @@ export async function parseLocalization() {
         exportJson(zhcn, 'zh-cn', 'public/locales', true),
         exportJson(kr, 'kr', 'public/locales', true)
     ]);
+
+    // 額外生成完整版本
+    for (const key in option.Story) {
+        zhtw.Story[key] = option.Story[key];
+    }
+    deepMerge(zhtw, dialog);
+    await exportJson(zhtw, 'zh-tw', 'public/full/locales', true);
 }
 
 export async function parser(method) {
