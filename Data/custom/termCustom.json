@@ -156,7 +156,7 @@
         "Dead": "💀[*Library.Title.{0}*]",
         "End": "🗃️[*Library.Title.{0}*]",
         "Library": "📚[*Library.Title.{0}*]",
-        "Talent": "✨❮[*PlayerTalent.Name.{0}*]❯",
+        "Talent": "🪄❮[*PlayerTalent.Name.{0}*]❯",
         "Book": "📕❮[*Book.Name.{0}*]❯",
         "Special": "👑❮[*Special.Name.{0}*]❯",
         "Equip": "🛡️❮[*Equip.Name.{0}*]❯",
@@ -174,16 +174,18 @@
         "Combat": "⚔️{0}",
         "Battle": "🏹{0}",
         "BattleSkill": "💥❮[*Character.{1}*]:[*BattleSkill.Name.{0}*]❯",
-        "Buff": "⤴️[*CombatSkill.Name.{0}*]",
-        "Debuff": "⤵️[*CombatSkill.Name.{0}*]",
-        "Support": "🚹[*CombatSkill.Name.{0}*]"
+        "Buff": "💉[*CombatSkill.Name.{0}*]",
+        "Debuff": "🦠[*CombatSkill.Name.{0}*]",
+        "Support": "⚕️[*CombatSkill.Name.{0}*]",
+        "Stat": "💪[*PlayerStat.{0}*]",
+        "Story": "✒️[*Custom.AddStory*]"
     },
     "LabelIcon": {
         "Achievement": "🏆",
         "Dead": "💀",
         "End": "🗃️",
         "Library": "📚",
-        "Talent": "✨",
+        "Talent": "🪄",
         "Book": "📕",
         "Special": "👑",
         "Equip": "🛡️",
@@ -201,9 +203,14 @@
         "Combat": "⚔️",
         "Battle": "🏹",
         "BattleSkill": "💥",
-        "Buff": "⤴️",
-        "Debuff": "⤵️",
-        "Support": "🚹"
+        "Buff": "💉",
+        "Debuff": "🦠",
+        "Support": "⚕️",
+        "Stat": "💪",
+        "Story": "✒️",
+        "Say": "🗣️",
+        "System": "⚙️",
+        "Perform": "✨"
     },
     "MapPosition": {
         "Name": {

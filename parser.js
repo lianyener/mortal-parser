@@ -1541,8 +1541,8 @@ export async function parseSwitch() {
                     // 如果式子左邊全部相同則簡化表示
                     const firstRule = rules[0].rule[0];
                     if (firstRule && rules.every(g => g.rule.every(r => r.left === firstRule.left))) {
-                        switchObj.check = `${firstRule.brackets.left}${firstRule.left}${firstRule.brackets.right}`;
-                        switchObj.switch = rules.map(g => g.rule.map(r => `${r.symbol}${r.right}`).join(g.op));
+                        switchObj.check = `[%${firstRule.left}%]`;
+                        switchObj.switch = rules.map(g => g.rule.map(r => `${r.symbol == '=' ? '' : r.symbol}${r.right}`).join(g.op));
                     }
                     // 完整表示所有條件式
                     else {
@@ -2106,7 +2106,6 @@ function buildLogicView(content) {
         if (effectBuffer.length > 0) {
             result.push({
                 form: 'effect',
-                type: 'merge',
                 text: effectBuffer.join(' / ')
             });
             effectBuffer = [];
@@ -2754,6 +2753,8 @@ export async function parseScript() {
     const regexDice = /^"(\w+)\|([=><]+)(\d+)"$/;
     const regexGE = /^>=$/;
     const regexLE = /^<=$/;
+    const regexFlagName = /\[\*Flag\.(\w+)\.(\d+)\*\]/;
+    const regexFlagValue = /\[\*Flag\.(\w+)\.(\d+)\.(-?\d+)\*\]/;
     const regexXFull = /\[%\[\*Flag\.(\w+)\.X\*\]([<>=≤≥≠])\[\*Flag\.\w+\.X\.(-?\d+)\*\]%\]/g;
     const regexXName = /\[\*Flag\.(\w+)\.X\*\]/g;
     const regexXValue = /\[\*Flag\.(\w+)\.X\.(-?\d+)\*\]/g;
@@ -2962,6 +2963,40 @@ export async function parseScript() {
         }
     };
 
+    // Helper: 檢查是否有Switch潛在旗標名稱
+    const getPotentialSwitchLabel = (check, labels) => {
+
+        // 檢查是否為旗標
+        const match = check.match(regexFlagName);
+        if (match) {
+            const flagId = match[1];
+            const flagIndex = match[2];
+            const flagValueCount = Object.keys(CACHE.FLAG[flagId].data[flagIndex].value).length;
+            
+            // 至少設定2個值才繼續
+            if (flagValueCount < 2) return null;
+
+            // 標籤轉成旗標值索引
+            const labelIndex = labels.map(label => {
+                const matchVal = label.match(regexFlagValue);
+                if (matchVal) return matchVal[3];
+                return '';
+            });
+            const unusedValue = [];
+
+            // 找出未設定值
+            for (let i = 0; i < flagValueCount; i++) {
+                if (!labelIndex.includes(i.toString())) {
+                    unusedValue.push(i);
+                }
+            }
+
+            // 確認潛在旗標名稱
+            if (unusedValue.length === 1) return `[*Flag.${flagId}.${flagIndex}.${unusedValue[0]}*]`;
+        }
+        return null;
+    };
+
     // 處理函數呼叫
     const handleCallExpression = (node, content, rel, cache, script) => {
 
@@ -2976,14 +3011,14 @@ export async function parseScript() {
                     // 預設自由行動
                     case 'Free': {
                         mergeRelation(rel.post, { Script: ['free'] });
-                        content.push({ form: 'effect', type: 'system', text: '◎[*Custom.Free*]:[*Label.Free,free*]' });
+                        content.push({ form: 'effect', type: 'Free', text: '◎[*Custom.Free*]:[*Label.Free,free*]' });
                         break;
                     }
                     // 特定自由行動
                     case 'Story': {
                         const script = cache?.temp.story ?? 'Unknown';
                         mergeRelation(rel.post, { Script: [script] });
-                        content.push({ form: 'effect', type: 'system', text: `◎[*Custom.Free*]:[*Label.Free,${script}*]` });
+                        content.push({ form: 'effect', type: 'Free', text: `◎[*Custom.Free*]:[*Label.Free,${script}*]` });
                         break;
                     }
                     // 戰役
@@ -2991,8 +3026,8 @@ export async function parseScript() {
                         const name = `BL_${removeQuote(node.arguments[1].raw)}`;
                         const script = cache?.temp?.story ?? 'Unknown';
                         mergeRelation(rel.post, { Script: [script], Battle: [name] });
-                        content.push({ form: 'effect', type: 'combat', text: `[*System.Battle*][*Label.Battle,${name}*]` });
-                        content.push({ form: 'effect', type: 'system', text: `◎[*Custom.CombatNextScript*][*Label.Script,${script}*]` });
+                        content.push({ form: 'effect', type: 'Battle', text: `★[*System.Battle*][*Label.Battle,${name}*]` });
+                        content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.CombatNextScript*][*Label.Script,${script}*]` });
                         break;
                     }
                     // 決鬥
@@ -3000,8 +3035,8 @@ export async function parseScript() {
                         const name = `CL_${removeQuote(node.arguments[1].raw)}`;
                         const script = cache?.temp?.story ?? 'Unknown';
                         mergeRelation(rel.post, { Script: [script], Combat: [name] });
-                        content.push({ form: 'effect', type: 'combat', text: `[*System.Combat*][*Label.Combat,${name}*]` });
-                        content.push({ form: 'effect', type: 'system', text: `◎[*Custom.CombatNextScript*][*Label.Script,${script}*]` });
+                        content.push({ form: 'effect', type: 'Combat', text: `★[*System.Combat*][*Label.Combat,${name}*]` });
+                        content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.CombatNextScript*][*Label.Script,${script}*]` });
                         break;
                     }
                     // 生死簿結局
@@ -3009,12 +3044,12 @@ export async function parseScript() {
                         const libraryId = removeQuote(node.arguments[1].raw);
                         const name = `[*Label.Dead,${libraryId}*]`;
                         mergeRelation(rel.post, { Library: [libraryId] });
-                        content.push({ form: 'effect', type: 'library', text: name });
+                        content.push({ form: 'effect', type: 'Dead', text: name });
                         break;
                     }
                     // 試玩版結局
                     case 'DemoEnd':
-                        content.push({ form: 'effect', type: 'system', text: '◎[*Custom.DemoEnd*]' });
+                        content.push({ form: 'effect', type: 'System', text: '◎[*Custom.DemoEnd*]' });
                         break;
                     // 忽略場景
                     case 'Title':
@@ -3031,12 +3066,12 @@ export async function parseScript() {
                 if (node.arguments[0].type == 'StringLiteral') {
                     const name = removeQuote(node.arguments[0].raw);
                     mergeRelation(rel.post, { Script: [name] });
-                    content.push({ form: 'effect', type: 'system', text: `◎[*Custom.NextScript*][*Label.Script,${name}*]` });
+                    content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*][*Label.Script,${name}*]` });
                 }
                 // 使用變數
                 else {
                     const name = cache?.var?.[node.arguments[0].name] ?? node.arguments[0].name;
-                    content.push({ form: 'effect', type: 'system', text: `◎[*Custom.NextScript*]${name}` });
+                    content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*]${name}` });
                 }
                 break;
             }
@@ -3046,7 +3081,7 @@ export async function parseScript() {
                 const index = node.arguments[0].value;
                 cache.temp[index] = name;
                 mergeRelation(rel.post, { Script: [name] });
-                content.push({ form: 'effect', type: 'system', text: `◎[*Custom.TempScript*]${index}:[*Label.Script,${name}*]` });
+                content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.TempScript*]${index}:[*Label.Script,${name}*]` });
                 break;
             }
             // 預存地圖移動變數
@@ -3054,7 +3089,7 @@ export async function parseScript() {
                 const name = removeQuote(node.arguments[0].raw);
                 cache.temp.travel = name;
                 mergeRelation(rel.post, { Script: [name] });
-                content.push({ form: 'effect', type: 'system', text: `◎[*Custom.TravelScript*]:[*Label.Script,${name}*]` });
+                content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.TravelScript*]:[*Label.Script,${name}*]` });
                 break;
             }
             // 預存接續劇本變數 (不輸出)
@@ -3067,17 +3102,17 @@ export async function parseScript() {
             // 設定遊戲時間
             case 'luamanager.SetGameTime': {
                 const time = `[*Custom.GameTimeText,${node.arguments[0].value},${node.arguments[1].value},${node.arguments[2].value}*]`;
-                content.push({ form: 'effect', type: 'system', text: `◎[*Custom.SetTime*]:${time}` });
+                content.push({ form: 'effect', type: 'System', text: `◎[*Custom.SetTime*]:${time}` });
                 break;
             }
             // 設定遊戲時間增加一個月
             case 'luamanager.NextMonth': {
-                content.push({ form: 'effect', type: 'system', text: `◎[*Custom.SetTime*]:1[*Custom.Month*][*Custom.After*]` });
+                content.push({ form: 'effect', type: 'System', text: `◎[*Custom.SetTime*]:1[*Custom.Month*][*Custom.After*]` });
                 break;
             }
             // 設定遊戲時間增加一旬
             case 'luamanager.NextRound': {
-                content.push({ form: 'effect', type: 'system', text: `◎[*Custom.SetTime*]:1[*Custom.Stage*][*Custom.After*]` });
+                content.push({ form: 'effect', type: 'System', text: `◎[*Custom.SetTime*]:1[*Custom.Stage*][*Custom.After*]` });
                 break;
             }
             // 設定任務觸發時間
@@ -3088,7 +3123,7 @@ export async function parseScript() {
                 const round = node.arguments[3].value ? `${node.arguments[3].value}[*Custom.Stage*]` : '';
                 const time = `${year}${month}${round}` || '[*Custom.Now*]';
                 const text = `◎[*Label.Time,${trigger}*][*Custom.SetTriggerTime*]:${time}[*Custom.After*]`;
-                content.push({ form: 'effect', type: 'system', text });
+                content.push({ form: 'effect', type: 'Trigger', text });
                 mergeRelation(rel.post, { Time: [trigger] });
                 break;
             }
@@ -3099,14 +3134,14 @@ export async function parseScript() {
                 const charId = extractMainCharacter(id);
                 const text = `◎[*Custom.SetBattleSkill*][*Label.BattleSkill,${id},${charId}*]`;
                 if (content.every(c => c.text != text)) {
-                    content.push({ form: 'effect', type: 'system', text });
+                    content.push({ form: 'effect', type: 'BattleSkill', text });
                     mergeCharacterRelation(rel.post, charId);
                 }
                 break;
             }
             // 設定標題畫面人物
             case 'luamanager.SetTitlePartner': {
-                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.SetTitlePartner*]' });
+                content.push({ form: 'effect', type: 'System', text: '◎[*Custom.SetTitlePartner*]' });
                 break;
             }
             // 增減玩家屬性
@@ -3115,13 +3150,13 @@ export async function parseScript() {
                 // 記錄資訊
                 const val = getArgumentValue(node.arguments[1], cache);
                 const hide = node.arguments[3]?.value ? '' : '*';
-                const name = `[*PlayerStat.${removeQuote(node.arguments[0].raw)}*]`;
+                const name = `[*Label.Stat,${removeQuote(node.arguments[0].raw)}*]`;
                 const extra = node.arguments[2]?.raw;
                 const sign = extra == '"center"' ? '±' : (!Number.isNaN(val) && val < 0) ? '' : '+';
                 const mental = extra == '"mental"' ? `(☹︎${val - 1})` : '';
 
                 // 回存內容
-                content.push({ form: 'effect', type: 'stat', text: `${hide}${name}${sign}${val}${mental}` });
+                content.push({ form: 'effect', type: 'Stat', text: `${hide}${name}${sign}${val}${mental}` });
                 break;
             }
             // 設定玩家屬性
@@ -3129,23 +3164,26 @@ export async function parseScript() {
 
                 // 記錄資訊
                 let val = getArgumentValue(node.arguments[1], cache);
-                const name = `[*PlayerStat.${removeQuote(node.arguments[0].raw)}*]`;
+                const name = `[*Label.Stat,${removeQuote(node.arguments[0].raw)}*]`;
 
                 // 屬性值心上人額外處理
-                if (name == '[*PlayerStat.lover*]' && !Number.isNaN(val)) {
+                if (name == '[*Label.Stat,lover*]' && !Number.isNaN(val)) {
                     val = `[*PlayerInfo.Lover.${val}*]`;
 
                     // 增加關聯角色
                     const loverId = LOVER_MAP[val];
-                    if (loverId) mergeRelation(rel.post, { Character: [loverId] });
+                    if (loverId) {
+                        val = `[*Label.Character,${loverId}*]`;
+                        mergeRelation(rel.post, { Character: [loverId] });
+                    }
                 }
                 // 屬性值稱號額外處理
-                else if (name == '[*PlayerStat.title*]' && !Number.isNaN(val)) {
+                else if (name == '[*Label.Stat,title*]' && !Number.isNaN(val)) {
                     val = `[*PlayerInfo.Title.${val}*]`;
                 }
 
                 // 回存內容
-                content.push({ form: 'effect', type: 'stat', text: `${name}=${val}` });
+                content.push({ form: 'effect', type: 'Stat', text: `${name}=${val}` });
                 break;
             }
             // 增減好感度
@@ -3160,7 +3198,7 @@ export async function parseScript() {
 
                 // 回存內容
                 mergeRelation(rel.post, { Character: [character] });
-                content.push({ form: 'effect', type: 'stat', text: `${hide}${name}${sign}${val}` });
+                content.push({ form: 'effect', type: 'Relationship', text: `${hide}${name}${sign}${val}` });
                 break;
             }
             // 設定好感度
@@ -3173,7 +3211,7 @@ export async function parseScript() {
 
                 // 回存內容
                 mergeRelation(rel.post, { Character: [character] });
-                content.push({ form: 'effect', type: 'stat', text: `${name}=${val}` });
+                content.push({ form: 'effect', type: 'Relationship', text: `${name}=${val}` });
                 break;
             }
             // 增減旗標
@@ -3187,7 +3225,7 @@ export async function parseScript() {
 
                 // 回存內容
                 mergeRelation(rel.post, { Flag: [flag] });
-                content.push({ form: 'effect', type: 'stat', text: statment.text });
+                content.push({ form: 'effect', type: 'Flag', text: statment.text });
                 break;
             }
             // 設定旗標
@@ -3200,12 +3238,12 @@ export async function parseScript() {
 
                 // 回存內容
                 mergeRelation(rel.post, { Flag: [flag] });
-                content.push({ form: 'effect', type: 'stat', text: statment.text });
+                content.push({ form: 'effect', type: 'Flag', text: statment.text });
                 break;
             }
             // 重置對話旗標
             case 'statmodifymanager.ResetTalkFlag': {
-                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.ResetTalkFlag*]' });
+                content.push({ form: 'effect', type: 'Flag', text: '◎[*Custom.ResetTalkFlag*]' });
                 break;
             }
             // 獲得雜物 (只有正數)
@@ -3217,7 +3255,7 @@ export async function parseScript() {
 
                 // 回存內容
                 mergeRelation(rel.post, { Misc: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `[*Label.Misc,${id}*]+${val}` });
+                content.push({ form: 'effect', type: 'Misc', text: `[*Label.Misc,${id}*]+${val}` });
                 break;
             }
             // 移除雜物 (固定1個)
@@ -3225,7 +3263,7 @@ export async function parseScript() {
 
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Misc: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `[*Label.Misc,${id}*]-1` });
+                content.push({ form: 'effect', type: 'Misc', text: `[*Label.Misc,${id}*]-1` });
                 break;
             }
             // 獲得寶物
@@ -3233,7 +3271,7 @@ export async function parseScript() {
 
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Special: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `[*Custom.Get*][*Label.Special,${id}*]` });
+                content.push({ form: 'effect', type: 'Special', text: `[*Custom.Get*][*Label.Special,${id}*]` });
                 break;
             }
             // 失去寶物
@@ -3241,7 +3279,7 @@ export async function parseScript() {
 
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Special: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `[*Custom.Lose*][*Label.Special,${id}*]` });
+                content.push({ form: 'effect', type: 'Special', text: `[*Custom.Lose*][*Label.Special,${id}*]` });
                 break;
             }
             // 獲得書籍
@@ -3249,7 +3287,7 @@ export async function parseScript() {
 
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Book: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `[*Custom.Get*][*Label.Book,${id}*]` });
+                content.push({ form: 'effect', type: 'Book', text: `[*Custom.Get*][*Label.Book,${id}*]` });
                 break;
             }
             // 失去書籍
@@ -3257,7 +3295,7 @@ export async function parseScript() {
 
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Book: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `[*Custom.Lose*][*Label.Book,${id}*]` });
+                content.push({ form: 'effect', type: 'Book', text: `[*Custom.Lose*][*Label.Book,${id}*]` });
                 break;
             }
             // 增減技能
@@ -3270,7 +3308,7 @@ export async function parseScript() {
 
                 // 回存內容
                 mergeRelation(rel.post, { Talent: [id] });
-                content.push({ form: 'effect', type: 'stat', text: `[*Label.Talent,${id}*]${sign}${val}` });
+                content.push({ form: 'effect', type: 'Talent', text: `[*Label.Talent,${id}*]${sign}${val}` });
                 break;
             }
             // 獲得成就
@@ -3278,15 +3316,15 @@ export async function parseScript() {
 
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Library: [id] });
-                content.push({ form: 'effect', type: 'library', text: `[*Label.Achievement,${id}*]` });
+                content.push({ form: 'effect', type: 'Achievement', text: `[*Label.Achievement,${id}*]` });
                 break;
             }
             // 添加傳記
             case 'statmodifymanager.AddStory': {
 
                 const text = `[*Custom.Story*]「[*LegendInfo.${removeQuote(node.arguments[0].raw)}*]」`;
-                content.push({ form: 'effect', type: 'dialog', text: '◇[*Custom.AddStory*]' });
-                content.push({ form: 'perform', type: 'story', text });
+                content.push({ form: 'effect', type: 'Story', text: '[*Label.Story*]' });
+                content.push({ form: 'perform', type: 'Story', text });
                 break;
             }
             // 設定任務觸發
@@ -3305,7 +3343,7 @@ export async function parseScript() {
                 }
 
                 // 回存內容
-                content.push({ form: 'effect', type: 'system', text });
+                content.push({ form: 'effect', type: 'Trigger', text });
                 break;
             }
             // 增減其他陣營向心力
@@ -3318,7 +3356,7 @@ export async function parseScript() {
                 const sign = val < 0 ? '' : '+';
 
                 // 回存內容
-                content.push({ form: 'effect', type: 'stat', text: `${hide}${name}${sign}${val}` });
+                content.push({ form: 'effect', type: 'Stat', text: `${hide}${name}${sign}${val}` });
                 break;
             }
             // 增減其他陣營人數
@@ -3331,84 +3369,84 @@ export async function parseScript() {
                 const sign = val < 0 ? '' : '+';
 
                 // 回存內容
-                content.push({ form: 'effect', type: 'stat', text: `${hide}${name}${sign}${val}` });
+                content.push({ form: 'effect', type: 'Stat', text: `${hide}${name}${sign}${val}` });
                 break;
             }
             // 顯示圖片
             case 'mainui.ShowPicture': {
-                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowPicture*]' });
+                content.push({ form: 'effect', type: 'Perform', text: '◇[*Custom.ShowPicture*]' });
                 break;
             }
             // 顯示CG
             case 'mainui.ShowBigPicture': {
-                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowCG*]' });
+                content.push({ form: 'effect', type: 'Perform', text: '◇[*Custom.ShowCG*]' });
                 break;
             }
             // 顯示系譜表
             case 'mainui.ShowFamilyTree': {
-                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowTree*]' });
+                content.push({ form: 'effect', type: 'Perform', text: '◇[*Custom.ShowTree*]' });
                 break;
             }
             // 顯示大地圖移動
             case 'mainui.ShowMap': {
-                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowMap*]' });
+                content.push({ form: 'effect', type: 'Perform', text: '◇[*Custom.ShowMap*]' });
                 break;
             }
             // 汗青書結局
             case 'endgamepanel.Open': {
                 const id = removeQuote(node.arguments[0].raw);
                 mergeRelation(rel.post, { Library: [id] });
-                content.push({ form: 'effect', type: 'library', text: `[*Label.End,${id}*]` });
+                content.push({ form: 'effect', type: 'End', text: `[*Label.End,${id}*]` });
                 break;
             }
             // 顯示結局CG
             case 'cgpanel.Open': {
-                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowEndCG*]' });
+                content.push({ form: 'effect', type: 'Perform', text: '◇[*Custom.ShowEndCG*]' });
                 break;
             }
             // 顯示動畫CG
             case 'cgvideopanel.Open': {
-                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowVideoCG*]' });
+                content.push({ form: 'effect', type: 'Perform', text: '◇[*Custom.ShowVideoCG*]' });
                 break;
             }
             // 顯示動畫
             case 'anim.Play': {
-                content.push({ form: 'effect', type: 'perform', text: '◇[*Custom.ShowVideo*]' });
+                content.push({ form: 'effect', type: 'Perform', text: '◇[*Custom.ShowVideo*]' });
                 break;
             }
             // 顯示開發者名單
             case 'creditpanel.Open': {
-                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.ShowCredit*]' });
+                content.push({ form: 'effect', type: 'System', text: '◎[*Custom.ShowCredit*]' });
                 break;
             }
             // 開啟繼承面板
             case 'fatebonuspanel.Open': {
-                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.BonusPanel*]' });
+                content.push({ form: 'effect', type: 'System', text: '◎[*Custom.BonusPanel*]' });
                 break;
             }
             // 開啟商店面板
             case 'shoppanel.Open': {
-                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.ShopPanel*]' });
+                content.push({ form: 'effect', type: 'System', text: '◎[*Custom.ShopPanel*]' });
                 break;
             }
             // 開啟修練面板
             case 'martialpanel.Open': {
-                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.MartialPanel*]' });
+                content.push({ form: 'effect', type: 'System', text: '◎[*Custom.MartialPanel*]' });
                 break;
             }
             // 開啟鍛造面板
             case 'weaponupgradepanel.Open': {
-                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.WeaponPanel*]' });
+                content.push({ form: 'effect', type: 'System', text: '◎[*Custom.WeaponPanel*]' });
                 break;
             }
             // 開啟煉丹面板
             case 'poisonupgradepanel.Open': {
-                content.push({ form: 'effect', type: 'system', text: '◎[*Custom.PoisonPanel*]' });
+                content.push({ form: 'effect', type: 'System', text: '◎[*Custom.PoisonPanel*]' });
                 break;
             }
             // 立繪調整
             case 'characters.UnloadCharacterAsset': {
-                content.push({ form: 'effect', type: 'remark', text: '※[*Custom.ArtChange*]' });
+                content.push({ form: 'effect', type: 'Remark', text: '※[*Custom.ArtChange*]' });
                 break;
             }
             // 解析子函式
@@ -3426,7 +3464,7 @@ export async function parseScript() {
                 const text = `${character}[*DialogType.${type}*]「[*Story.${id}*]」`;
 
                 // 回存內容
-                content.push({ form: 'perform', type: 'say', text });
+                content.push({ form: 'perform', type: 'Say', text });
                 cache.say = {};
                 break;
             }
@@ -3486,7 +3524,7 @@ export async function parseScript() {
                     name = `[*Character.${name}*]`;
                     if (fromPosition == toPosition) text = `※[*Custom.ShowCharacter*]:${name}`;
                     else text = `※[*Custom.MoveCharacter*]:${name}`;
-                    content.push({ form: 'perform', type: 'stage', text });
+                    content.push({ form: 'perform', type: 'Character', text });
                 }
                 break;
             }
@@ -3499,7 +3537,7 @@ export async function parseScript() {
                         break;
                     }
                 }
-                content.push({ form: 'perform', type: 'stage', text: `※[*Custom.HideCharacter*]:[*Character.${name}*]` });
+                content.push({ form: 'perform', type: 'Character', text: `※[*Custom.HideCharacter*]:[*Character.${name}*]` });
                 break;
             }
             // 忽略函式
@@ -3729,7 +3767,7 @@ export async function parseScript() {
             // 記錄資訊
             const index = clause?.condition?.right?.value ?? 0;
             // const label = cache.branch.label[index] ?? (index == 1 ? '[*Custom.True*]' : index == 2 ? '[*Custom.False*]' : '[*Custom.Other*]');
-            const label = cache.branch.label[index] ?? '[*Custom.Other*]';
+            const label = cache.branch.label[index] ?? getPotentialSwitchLabel(cache.branch?.text ?? '', cache.branch.label) ?? '[*Custom.Other*]';
 
             // 遞迴解析分歧
             walk(clause.body, subContent, subCache);
