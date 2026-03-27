@@ -1535,7 +1535,7 @@ export async function parseSwitch() {
                 }
 
                 // 調整表示格式
-                if (rules.length == 0) switchObj.check = '[*Custom.InvalidCondition*]';
+                if (rules.length === 0) switchObj.check = '[*Custom.InvalidCondition*]';
                 // else if (rules.length == 1) switchObj.check = rules[0].rule.map(r => r.text).join(rules[0].op);
                 else {
                     // 如果式子左邊全部相同則簡化表示
@@ -1543,6 +1543,10 @@ export async function parseSwitch() {
                     if (firstRule && rules.every(g => g.rule.every(r => r.left === firstRule.left))) {
                         switchObj.check = `[%${firstRule.left}%]`;
                         switchObj.switch = rules.map(g => g.rule.map(r => `${r.symbol == '=' ? '' : r.symbol}${r.right}`).join(g.op));
+                    }
+                    // 單一複雜條件
+                    else if (rules.length === 1) {
+                        switchObj.check = rules[0].rule.map(r => r.text).join(rules[0].op);
                     }
                     // 完整表示所有條件式
                     else {
@@ -2753,7 +2757,7 @@ export async function parseScript() {
     const regexDice = /^"(\w+)\|([=><]+)(\d+)"$/;
     const regexGE = /^>=$/;
     const regexLE = /^<=$/;
-    const regexFlagName = /\[\*Flag\.(\w+)\.(\d+)\*\]/;
+    const regexFlagLabel = /\[%\[\*Label\.Flag,(\w+)\.(\d+)\*\]%\]/;
     const regexFlagValue = /\[\*Flag\.(\w+)\.(\d+)\.(-?\d+)\*\]/;
     const regexXFull = /\[%\[\*Flag\.(\w+)\.X\*\]([<>=≤≥≠])\[\*Flag\.\w+\.X\.(-?\d+)\*\]%\]/g;
     const regexXName = /\[\*Flag\.(\w+)\.X\*\]/g;
@@ -2959,15 +2963,15 @@ export async function parseScript() {
             case 'switch':
                 return replaceValue(replaceFull(ori));
             default:
-                return replaceFull(ori)
+                return replaceFull(ori);
         }
     };
 
     // Helper: 檢查是否有Switch潛在旗標名稱
-    const getPotentialSwitchLabel = (check, labels) => {
+    const getPotentialBranchLabel = (check, labels, index) => {
 
         // 檢查是否為旗標
-        const match = check.match(regexFlagName);
+        const match = check.match(regexFlagLabel);
         if (match) {
             const flagId = match[1];
             const flagIndex = match[2];
@@ -2978,6 +2982,7 @@ export async function parseScript() {
 
             // 標籤轉成旗標值索引
             const labelIndex = labels.map(label => {
+                if (!label) return '';
                 const matchVal = label.match(regexFlagValue);
                 if (matchVal) return matchVal[3];
                 return '';
@@ -2994,7 +2999,7 @@ export async function parseScript() {
             // 確認潛在旗標名稱
             if (unusedValue.length === 1) return `[*Flag.${flagId}.${flagIndex}.${unusedValue[0]}*]`;
         }
-        return null;
+        return index == 1 ? '[*Custom.True*]' : index == 2 ? '[*Custom.False*]' : null;
     };
 
     // 處理函數呼叫
@@ -3767,7 +3772,7 @@ export async function parseScript() {
             // 記錄資訊
             const index = clause?.condition?.right?.value ?? 0;
             // const label = cache.branch.label[index] ?? (index == 1 ? '[*Custom.True*]' : index == 2 ? '[*Custom.False*]' : '[*Custom.Other*]');
-            const label = cache.branch.label[index] ?? getPotentialSwitchLabel(cache.branch?.text ?? '', cache.branch.label) ?? '[*Custom.Other*]';
+            const label = cache.branch.label[index] ?? getPotentialBranchLabel(cache.branch?.text ?? '', cache.branch.label, index) ?? '[*Custom.Other*]';
 
             // 遞迴解析分歧
             walk(clause.body, subContent, subCache);
