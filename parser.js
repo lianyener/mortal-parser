@@ -3966,10 +3966,68 @@ export async function buildBackRelation() {
         else writeLog('warn', `${sourceCat} - ${sourceId} - ${targetCat} - ${targetId} not found.`);
     };
 
-    // 遍歷各類資料
-    const scurceCats = ['BOOK', 'EQUIP', 'MISSION', 'TRIGGER', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
+    // 處理劇本
+    const processedScript = new Set();
+    const processScript = (scriptId, triggerId, missionId, processedScriptOfTrigger) => {
+
+        // 此任務觸發已處理過此劇本則跳過避免無限迴圈
+        if (processedScriptOfTrigger.includes(scriptId)) return;
+
+        // 遍歷各類關聯
+        for (const type of ['pre', 'intra', 'post', 'inter', 'from', 'to']) {
+            for (const [targetCat, targetIds] of Object.entries(CACHE.SCRIPT?.[scriptId]?.rel?.[type] ?? {})) {
+                for (const targetId of targetIds) {
+                    addBackRelation('SCRIPT', scriptId, targetCat, targetId, reverseType[type]);
+                    if (type === 'to' && targetCat === 'Script') {
+
+                        // 補充來源關聯
+                        addBackRelation('TRIGGER', triggerId, 'Script', targetId, 'from');
+                        addBackRelation('MISSION', missionId, 'Script', targetId, 'from');
+
+                        // 處理派生劇本
+                        processedScript.add(targetId);
+                        processedScriptOfTrigger.push(targetId);
+                        processScript(targetId, triggerId, missionId, processedScriptOfTrigger);
+                    }
+                }
+            }
+        }
+    };
+
+    // 遍歷任務觸發
+    for (const [triggerId, triggerData] of Object.entries(CACHE.TRIGGER)) {
+        const processedScriptOfTrigger = [];
+
+        // 遍歷各類關聯
+        for (const type of ['pre', 'intra', 'post', 'inter', 'from', 'to']) {
+            for (const [targetCat, targetIds] of Object.entries(triggerData?.rel?.[type] ?? {})) {
+                for (const targetId of targetIds) {
+                    addBackRelation('TRIGGER', triggerId, targetCat, targetId, reverseType[type]);
+                    if (type === 'to' && targetCat === 'Script') {
+
+                        // 補充來源關聯
+                        const missionId = triggerData.mission;
+                        addBackRelation('MISSION', missionId, 'Script', targetId, 'from');
+
+                        // 處理派生劇本
+                        processedScript.add(targetId);
+                        processedScriptOfTrigger.push(targetId);
+                        processScript(targetId, triggerId, missionId, processedScriptOfTrigger);
+                    }
+                }
+            }
+        }
+    }
+
+    // 遍歷其他各類資料
+    const scurceCats = ['BOOK', 'EQUIP', 'MISSION', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
     for (const sourceCat of scurceCats) {
         for (const [sourceId, data] of Object.entries(CACHE[sourceCat])) {
+
+            // 跳過已處理劇本
+            if (sourceCat === 'SCRIPT' && processedScript.has(sourceId)) continue;
+
+            // 遍歷各類關聯
             for (const type of ['pre', 'intra', 'post', 'inter', 'from', 'to']) {
                 for (const [targetCat, targetIds] of Object.entries(data?.rel?.[type] ?? {})) {
                     for (const targetId of targetIds) {
