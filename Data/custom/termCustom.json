@@ -300,13 +300,14 @@
         "Mission": "任務",
         "Script": "劇本",
         "Content": "劇本內容",
+        "Relations": "關聯項目",
         "Rel": {
-            "Pre": "關聯項目 - 受到影響",
-            "Post": "關聯項目 - 造成影響",
-            "Intra": "關聯項目 - 登場",
-            "Inter": "關聯項目 - 登場於",
-            "To": "關聯項目 - 後續",
-            "From": "關聯項目 - 來源"
+            "Pre": "受到影響",
+            "Post": "造成影響",
+            "Intra": "登場",
+            "Inter": "登場於",
+            "To": "後續",
+            "From": "來源"
         },
         "ExpandAll": "全部展開",
         "CollapseAll": "全部收合"
