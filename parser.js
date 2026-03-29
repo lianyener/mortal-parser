@@ -5,6 +5,7 @@ import { mkdir } from 'fs/promises';
 import luaparse from 'luaparse';
 import path from 'path';
 import * as OpenCC from "opencc-js";
+import { stat } from 'fs';
 
 // 路徑常數
 const GAME_PATH = './Game';
@@ -23,6 +24,7 @@ const CACHE = {
     SWITCH: null,
     DICE: null,
     MISSION: null,
+    TRIGGER: null,
     COMBAT: null,
     COMBAT_FULL: null,
     BATTLE: null,
@@ -47,6 +49,7 @@ const CACHE_FULFILL = {
     SWITCH: false,
     DICE: false,
     MISSION: false,
+    TRIGGER: false,
     COMBAT: false,
     BATTLE: false,
     POSITION: false,
@@ -91,7 +94,7 @@ const CACHE_PRIORITY = [
     ['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'TERM'],
     ['BOOK', 'EQUIP'],
     ['GROUP'],
-    ['MISSION', 'POSITION', 'CONDITION', 'SWITCH', 'DICE', 'COMBAT', 'BATTLE'],
+    ['MISSION', 'TRIGGER', 'POSITION', 'CONDITION', 'SWITCH', 'DICE', 'COMBAT', 'BATTLE'],
     ['SCRIPT']
 ];
 
@@ -202,6 +205,10 @@ async function executeDirectly(parseFn, _, doUpdate) {
 
 // Helper: 非強制解析
 async function executeOptionally(parseFn, type, doUpdate) {
+
+    // 再次檢查
+    if (CACHE_FULFILL[type]) return;
+
     if (!doUpdate) {
 
         // 嘗試讀取檔案
@@ -215,7 +222,6 @@ async function executeOptionally(parseFn, type, doUpdate) {
             if (Object.keys(dataFull).length > 0) {
                 CACHE[`${type}_FULL`] = dataFull;
             }
-
             return;
         }
     }
@@ -243,6 +249,7 @@ async function loadCache(inputTypes, doUpdate = false) {
         FLAG: [executeOptionally, parseFlag],
         GROUP: [executeOptionally, parseStatGroup],
         MISSION: [executeOptionally, parseMission],
+        TRIGGER: [executeOptionally, parseMission],
         POSITION: [executeOptionally, parsePosition],
         CONDITION: [executeOptionally, parseCondition],
         SWITCH: [executeOptionally, parseSwitch],
@@ -500,12 +507,15 @@ function handleStatement(var1, operator, var2, script, inverse = false) {
         case 'PlayerStat':
 
             // 判斷屬性值是否為心上人
-            if (var1.name == '[*PlayerStat.lover*]') {
+            if (var1.name == '[*Label.Stat,lover*]') {
                 statment.right = `[*PlayerInfo.Lover.${val}*]`;
 
                 // 增加關聯角色
                 const loverId = LOVER_MAP[val];
-                if (loverId) mergeRelation(statment.rel, { Character: [loverId] });
+                if (loverId) {
+                    statment.right = `[*Label.Character,${loverId}*]`;
+                    mergeRelation(statment.rel, { Character: [loverId] });
+                }
             }
             break;
     }
@@ -643,7 +653,7 @@ async function getStat(statItem) {
                     return {
                         name: `[*Label.Achievement,${subId}*]`,
                         type: 'Achievement',
-                        rel: { Library: [subId] }
+                        rel: { Achievement: [subId] }
                     };
                 }
                 case '天賦':
@@ -755,14 +765,14 @@ async function getStat(statItem) {
                     const matched = subId.match(REGEX_ENEMY_STAT);
                     if (matched) {
                         return {
-                            name: `[*EnemyTeam.${matched[1]}*][*PlayerStat.${toKebab(matched[2])}*]`,
+                            name: `[*Label.Enemy,${matched[1]}*][*PlayerStat.${toKebab(matched[2])}*]`,
                             type: 'EnemyStat'
                         };
                     }
 
                     // 主角屬性值
                     return {
-                        name: `[*PlayerStat.${toKebab(subId.replace(REGEX_STAT_PREFIX, ''))}*]`,
+                        name: `[*Label.Stat,${toKebab(subId.replace(REGEX_STAT_PREFIX, ''))}*]`,
                         type: 'PlayerStat'
                     };
                 }
@@ -1674,14 +1684,18 @@ export async function parseMission() {
     ]);
 
     // 解析結果參數
-    const result = {};
+    const trigger = {};
+    const mission = {};
     nameDraft.mission ??= {};
     nameDraft.trigger ??= {};
 
     // 追加自訂觸發
-    result['M0000'] = {
+    mission['free'] = {
+        trigger: [],
+        init: ''
+    };
+    trigger['M0000'] = {
         mission: 'main',
-        trigger: 'M0000',
         active: true,
         minTime: { year: '1', month: '4', stage: '1' },
         maxTime: { year: '1', month: '4', stage: '1' },
@@ -1689,7 +1703,7 @@ export async function parseMission() {
         script: 'ch1_1',
         content: [],
         remark: Array.from(custom?.['M0000']?.remark ?? [], (_, i) => `[*Trigger.Remark.M0000.${i}*]`),
-        rel: { pre: {}, post: {}, intra: {} },
+        rel: { pre: {}, to: { Script: ['ch1_1'] }, from: { Mission: ['main'] } },
         type: 'Main',
         orderKey: '1-04-1-1-M0000'
     };
@@ -1709,8 +1723,12 @@ export async function parseMission() {
             if (!isValidJson(data, file)) return;
 
             // 記錄任務資料
-            const id = data._name;
-            updateNameDraftItem(nameDraft.mission, id, (data._desc ?? '').trim());
+            const missionId = data._name;
+            mission[missionId] = {
+                trigger: [],
+                init: data._initKey
+            };
+            updateNameDraftItem(nameDraft.mission, missionId, (data._desc ?? '').trim());
 
             for (const trigger of data._missions) {
 
@@ -1720,9 +1738,9 @@ export async function parseMission() {
 
                 // 記錄觸發資料
                 const triggerId = triggerData._key;
-                const mission = {
-                    mission: id,
-                    trigger: triggerId,
+                mission[missionId].trigger.push(triggerId);
+                const triggerObj = {
+                    mission: missionId,
                     active: triggerData._active,
                     minTime: custom?.[triggerId]?.time ?? { year: '1', month: '4', stage: '1' },
                     maxTime: { year: '', month: '', stage: '' },
@@ -1730,15 +1748,15 @@ export async function parseMission() {
                     script: triggerData._startScript,
                     content: [],
                     remark: Array.from(custom?.[triggerId]?.remark ?? [], (_, i) => `[*Trigger.Remark.${triggerId}.${i}*]`),
-                    rel: { pre: {}, post: {} }
+                    rel: { pre: {}, to: { Script: [triggerData._startScript] }, from: { Mission: [missionId] } }
                 };
-                if (!mission.active) mission.remark.unshift('※[*Custom.TriggerDisable*]');
+                if (!triggerObj.active) triggerObj.remark.unshift('※[*Custom.TriggerDisable*]');
                 updateNameDraftItem(nameDraft.trigger, triggerId, (triggerData._desc ?? '').trim());
 
                 // 判斷主支線
-                const type = id == 'main' ? 'Main' : 'Sub';
-                mission.type = type;
-                if (triggerId != data._initKey) mission.condition.push(`[*Custom.TriggerSet,${type}*]`);
+                const type = missionId == 'main' ? 'Main' : 'Sub';
+                triggerObj.type = type;
+                if (triggerId != data._initKey) triggerObj.condition.push(`[*Custom.TriggerSet,${type}*]`);
 
                 // 確認是否有特定時間條件
                 if (triggerData._dayCheck) {
@@ -1746,16 +1764,16 @@ export async function parseMission() {
                     // 條件為特定時間
                     if (triggerData._timeCheckType == '特定') {
                         const time = triggerData._specificTime;
-                        mission.minTime = mission.maxTime = { year: time.Year.toString(), month: time.Month.toString(), stage: STAGE_MAP[time.Stage] ?? '0' };
-                        mission.condition.push(`[*Custom.SpecificTime*]: ${toTimeText(time)}`);
+                        triggerObj.minTime = triggerObj.maxTime = { year: time.Year.toString(), month: time.Month.toString(), stage: STAGE_MAP[time.Stage] ?? '0' };
+                        triggerObj.condition.push(`[*Custom.SpecificTime*]: ${toTimeText(time)}`);
                     }
                     // 條件為時間區間
                     else {
                         const minTime = triggerData._minTime;
                         const maxTime = triggerData._maxTime;
-                        mission.minTime = { year: minTime.Year.toString(), month: minTime.Month.toString(), stage: STAGE_MAP[minTime.Stage] ?? '0' };
-                        mission.maxTime = { year: maxTime.Year.toString(), month: maxTime.Month.toString(), stage: STAGE_MAP[maxTime.Stage] ?? '0' };
-                        mission.condition.push(`[*Custom.SpecificPeriod*]: ${toTimeText(minTime)}~${toTimeText(maxTime)}`);
+                        triggerObj.minTime = { year: minTime.Year.toString(), month: minTime.Month.toString(), stage: STAGE_MAP[minTime.Stage] ?? '0' };
+                        triggerObj.maxTime = { year: maxTime.Year.toString(), month: maxTime.Month.toString(), stage: STAGE_MAP[maxTime.Stage] ?? '0' };
+                        triggerObj.condition.push(`[*Custom.SpecificPeriod*]: ${toTimeText(minTime)}~${toTimeText(maxTime)}`);
                     }
                 }
 
@@ -1769,18 +1787,18 @@ export async function parseMission() {
                         const var2 = await getStatGroup(item._value2._name);
                         const statment = handleStatement(var1, item._compareOp, var2);
                         rules.push(statment.text);
-                        mergeRelation(mission.rel.pre, statment.rel);
+                        mergeRelation(triggerObj.rel.pre, statment.rel);
 
                         // 有時間條件則更新最早最晚觸發時間
                         const match = statment.text.match(regexTime);
-                        if (match && regexMinTime.test(match[1])) mission.minTime = { year: match[2], month: match[3], stage: match[4] };
-                        if (match && regexMaxTime.test(match[1])) mission.maxTime = { year: match[2], month: match[3], stage: match[4] };
+                        if (match && regexMinTime.test(match[1])) triggerObj.minTime = { year: match[2], month: match[3], stage: match[4] };
+                        if (match && regexMaxTime.test(match[1])) triggerObj.maxTime = { year: match[2], month: match[3], stage: match[4] };
                     }
 
                     // 加入條件
                     if (rules.length > 0) {
-                        if (condition._logicOp == 'OR') mission.condition.push(rules.join('[*Custom.Or*]'));
-                        else mission.condition.push(...rules);
+                        if (condition._logicOp == 'OR') triggerObj.condition.push(rules.join('[*Custom.Or*]'));
+                        else triggerObj.condition.push(...rules);
                     }
                 }
 
@@ -1788,29 +1806,29 @@ export async function parseMission() {
                 const position = triggerData._position;
                 const priority = type == 'Main' ? 1 : triggerData._beforeMainMission ? 0 : 2;
                 if (position != '無') {
-                    mission.condition.push(`[*Custom.GoTo*][*Label.Position,${positionMap[position] ?? 'Unknown'}*]`);
+                    triggerObj.condition.push(`[*Custom.GoTo*][*Label.Position,${positionMap[position] ?? 'Unknown'}*]`);
                 }
                 else if (priority != 1) {
-                    mission.condition.push(`※[*Custom.TriggerPriority,${priority ? 'LowerThan' : 'HigherThan'}*]`);
+                    triggerObj.condition.push(`※[*Custom.TriggerPriority,${priority ? 'LowerThan' : 'HigherThan'}*]`);
                 }
 
                 // 是否有設定接續觸發
                 const nextState = triggerData._nextStateName;
                 if (nextState) {
                     let text;
-                    if (nextState == 'clear') text = `◎[*Custom.SetClear*]:[*Label.Mission,${id}*]`;
+                    if (nextState == 'clear') text = `◎[*Custom.SetClear*]:[*Label.Mission,${missionId}*]`;
                     else {
-                        text = `◎[*Label.Mission,${id}*][*Custom.SetTrigger*]:[*Label.Trigger,${nextState}*]`;
-                        mergeRelation(mission.rel.post, { Mission: [nextState] });
+                        text = `◎[*Label.Mission,${missionId}*][*Custom.SetTrigger*]:[*Label.Trigger,${nextState}*]`;
+                        mergeRelation(triggerObj.rel.to, { Trigger: [nextState] });
                     }
-                    mission.content.push({ form: 'effect', type: 'system', text });
+                    triggerObj.content.push({ form: 'effect', type: 'System', text });
                 }
 
                 // 設定排序值
-                mission.orderKey = `${mission.minTime.year}-${mission.minTime.month.padStart(2, '0')}-${mission.minTime.stage}-${priority}-${triggerId}`;
+                triggerObj.orderKey = `${triggerObj.minTime.year}-${triggerObj.minTime.month.padStart(2, '0')}-${triggerObj.minTime.stage}-${priority}-${triggerId}`;
 
                 // 回存結果
-                result[triggerId] = mission;
+                trigger[triggerId] = triggerObj;
             }
         }
         catch (err) {
@@ -1828,15 +1846,15 @@ export async function parseMission() {
             // 記錄資訊
             const name = removeUid(file).replace(regexPrefix, '');
             const id = positionMap[name] ?? name;
-            const mission = {
+            mission['free'].trigger.push(id);
+            const triggerObj = {
                 mission: 'free',
-                trigger: id,
                 active: true,
                 script: data._defaultScript,
                 content: [],
                 remark: [],
                 condition: [`[*Custom.GoTo*][*Label.Position,${id}*]`],
-                rel: { pre: {}, post: { Script: [data._defaultScript] } },
+                rel: { pre: {}, post: {}, to: { Script: [data._defaultScript] }, from: { Mission: ['free'] } },
                 type: 'Free',
                 minTime: { year: '1', month: '4', stage: '1' },
                 maxTime: { year: '1', month: '4', stage: '1' },
@@ -1850,8 +1868,8 @@ export async function parseMission() {
                 const disableData = await getGameJson(disableKey, 'ConditionResultData');
                 if (isValidJson(disableData, disableKey)) {
                     const disable = await getCondition(disableData, disableKey, true);
-                    mission.condition.unshift(disable.name);
-                    mergeRelation(mission.rel.pre, disable.rel);
+                    triggerObj.condition.unshift(disable.name);
+                    mergeRelation(triggerObj.rel.pre, disable.rel);
                 }
             }
 
@@ -1870,7 +1888,7 @@ export async function parseMission() {
                     const var2 = await getStatGroup(item._value2._name);
                     const statment = handleStatement(var1, item._compareOp, var2);
                     rules.push(statment.text);
-                    mergeRelation(mission.rel.pre, statment.rel);
+                    mergeRelation(triggerObj.rel.pre, statment.rel);
                 }
                 branch.text = `[*BranchType.Switch*]：${rules.join(convertLogic(condition._condition._logicOp))}`;
 
@@ -1879,20 +1897,20 @@ export async function parseMission() {
                     const flag = removeUid(item._flagData._name);
                     const trueState = item._trueState;
                     const falseState = item._falseState;
-                    mergeRelation(mission.rel.post, { Flag: [flag] });
-                    if (trueState) trueSet.push({ form: 'effect', type: 'stat', text: handleFlagStatement(flag, trueState, null, '=', true).text });
-                    if (falseState) falseSet.push({ form: 'effect', type: 'stat', text: handleFlagStatement(flag, falseState, null, '=', true).text });
+                    mergeRelation(triggerObj.rel.post, { Flag: [flag] });
+                    if (trueState) trueSet.push({ form: 'effect', type: 'Flag', text: handleFlagStatement(flag, trueState, null, '=', true).text });
+                    if (falseState) falseSet.push({ form: 'effect', type: 'Flag', text: handleFlagStatement(flag, falseState, null, '=', true).text });
                 }
 
                 // 設定旗標內容
                 if (trueSet.length > 0) branch.branches.push({ index: branch.branches.length + 1, text: '[*Custom.True*]', content: trueSet });
                 if (falseSet.length > 0) branch.branches.push({ index: branch.branches.length + 1, text: '[*Custom.False*]', content: falseSet });
 
-                mission.content.push(branch);
+                triggerObj.content.push(branch);
             }
 
             // 回存結果
-            result[id] = mission;
+            trigger[id] = triggerObj;
         }
         catch (err) {
             writeLog('error', `Processing file "${file}" failed.`, err.stack);
@@ -1901,15 +1919,19 @@ export async function parseMission() {
 
     // 並行處理主流程
     await Promise.all(freeFiles.map(processFree).concat(missionFiles.map(processMission)));
+    mission['main'].trigger.unshift('M0000');
     writeLog('log', '"Mission" parsed successfully!');
 
     // 並行輸出結果
     await Promise.all([
-        exportJson(result, 'mission'),
+        exportJson(trigger, 'trigger'),
+        exportJson(mission, 'mission'),
         exportJson(nameDraft, 'missionName')
     ]);
-    CACHE.MISSION = result;
+    CACHE.TRIGGER = trigger;
+    CACHE.MISSION = mission;
     CACHE_FULFILL.MISSION = true;
+    CACHE_FULFILL.TRIGGER = true;
 }
 
 // 解析地點隨機事件資料
@@ -2013,6 +2035,7 @@ export async function parsePosition() {
                 action: info.action ? `[*Position.title.${info.action}*]` : '',
                 prefix: data._scriptPrefix,
                 event: {},
+                rel: { pre: {}, to: {} },
                 orderKey: info.index
             };
 
@@ -2032,9 +2055,9 @@ export async function parsePosition() {
                     condition: [],
                     rate: [eventData._defaultRate.toString()],
                     script,
-                    remark: [],
-                    rel: { pre: {}, post: {}, intra: {} }
+                    remark: []
                 };
+                mergeRelation(result[key].rel.to, { Script: [script] });
                 updateNameDraftItem(nameDraft, script, (eventData._devNote ?? '').trim());
 
                 // 記錄觸發條件
@@ -2044,7 +2067,7 @@ export async function parsePosition() {
                         const var2 = await getStatGroup(subItem._value2._name);
                         const statment = handleStatement(var1, subItem._compareOp, var2, script);
                         event.condition.push(statment.text);
-                        mergeRelation(event.rel.pre, statment.rel);
+                        mergeRelation(result[key].rel.pre, statment.rel);
                     }
                 }
 
@@ -2056,7 +2079,7 @@ export async function parsePosition() {
                         const var2 = await getStatGroup(infraItem._value2._name);
                         const statment = handleStatement(var1, infraItem._compareOp, var2, script);
                         rules.push(statment.text);
-                        mergeRelation(event.rel.pre, statment.rel);
+                        mergeRelation(result[key].rel.pre, statment.rel);
                     }
                     event.rate.push(`${rules.join('[*Custom.And*]')} +${subItem._rate ?? '?'}`);
                 }
@@ -2095,7 +2118,7 @@ function buildLogicView(content) {
     // 空白分歧
     if (!content || content.length === 0) {
         return {
-            content: [{ form: 'effect', type: 'remark', text: '※[*System.NA*]' }],
+            content: [{ form: 'effect', type: 'Remark', text: '※[*System.NA*]' }],
             effects: []
         };
     }
@@ -2162,7 +2185,7 @@ function buildLogicView(content) {
     // 處理僅演出變化分岐
     if (result.length === 0) {
         return {
-            content: [{ form: 'effect', type: 'remark', text: '※[*Custom.OnlyPerform*]' }],
+            content: [{ form: 'effect', type: 'Remark', text: '※[*Custom.OnlyPerform*]' }],
             effects: []
         }
     }
@@ -2247,7 +2270,7 @@ export async function parseCombat() {
             const state = item._state || 0;
             const text = handleFlagStatement(flagId, state, combatId);
             mergeRelation(rel.post, { Flag: [flagId] });
-            content.push({ form: 'effect', type: 'stat', text });
+            content.push({ form: 'effect', type: 'Flag', text });
         }
         return content;
     };
@@ -2266,7 +2289,7 @@ export async function parseCombat() {
                 // 載入行動
                 const data = await getGameJson(key, type);
                 if (!isValidJson(data, key)) {
-                    return { content: [{ form: 'effect', type: 'system', text: '※[*Custom.Unknown*]' }] };
+                    return { content: [{ form: 'effect', type: 'System', text: '※[*Custom.Unknown*]' }] };
                 }
 
                 // 解析行動
@@ -2275,11 +2298,11 @@ export async function parseCombat() {
                     // 強制指令
                     case 'CombatEventActionCrazyMode': {
                         const text = `${getTerm('char', data._character)}[*Custom.ForceAction*]:[*CombatAction.${data._mode.toLowerCase()}*]`;
-                        return { content: [{ form: 'effect', type: 'action', text }] };
+                        return { content: [{ form: 'effect', type: 'Action', text }] };
                     }
                     // 事件對話
                     case 'CombatEventActionDialog': {
-                        const content = [{ form: 'effect', type: 'dialog', text: '◇[*Custom.EventDialog*]' }];
+                        const content = [{ form: 'effect', type: 'Dialog', text: '◇[*Custom.EventDialog*]' }];
                         for (const dialogItem of data._dialogs) {
 
                             // 記錄資料
@@ -2303,25 +2326,29 @@ export async function parseCombat() {
                             else if (dialogChar.endsWith('旁白')) dialog.type = 'narration';
 
                             const text = `${dialog.char}[*DialogType.${dialog.type}*]「${dialog.lines}」`;
-                            content.push({ form: 'perform', type: 'story', text })
+                            content.push({ form: 'perform', type: 'Say', text })
                         }
                         return { content };
                     }
                     // 記錄回合數
                     case 'CombatEventActionFlagRound': {
-                        const text = `[*Label.Flag,${removeUid(data._flag._name)}.0*]=[*Custom.Round*]+${data._add}`;
-                        return { content: [{ form: 'effect', type: 'stat', text }] };
+                        const flagId = removeUid(data._flag._name);
+                        const text = `[*Label.Flag,${flagId}.0*]=[*Custom.Round*]+${data._add}`;
+                        return {
+                            content: [{ form: 'effect', type: 'Flag', text }],
+                            rel: { Flag: [flagId] }
+                        };
                     }
                     // 結束戰鬥
                     case 'CombatEventActionLoadScene': {
-                        return { content: [{ form: 'effect', type: 'system', text: '◎[*Custom.EndCombat*]' }] };
+                        return { content: [{ form: 'effect', type: 'System', text: '◎[*Custom.EndCombat*]' }] };
                     }
                     // 設定旗標
                     case 'CombatEventActionModifyFlag': {
                         const flagId = removeUid(data._flag._name);
                         const text = handleFlagStatement(flagId, data._state, combatId);
                         return {
-                            content: [{ form: 'effect', type: 'stat', text }],
+                            content: [{ form: 'effect', type: 'Flag', text }],
                             rel: { post: { Flag: [flagId] } }
                         };
                     }
@@ -2332,13 +2359,13 @@ export async function parseCombat() {
                         const vfx = data._useVFX ? '([*Custom.VFX*])' : '';
                         const sign = data._value >= 0 ? '+' : '';
                         const text = `${getTerm('char', data._character)}${getTerm('stat', data._type, 'PlayerStat')}${sign}${data._value}${unit}${vfx}`;
-                        return { content: [{ form: 'effect', type: 'stat', text }] };
+                        return { content: [{ form: 'effect', type: 'Stat', text }] };
                     }
                     // 輔助角色被攻擊
                     case 'CombatEventActionPunchSupport': {
                         const effect = await getCombatEffect(data._support._name);
                         const text = `${effect.key}[*Custom.Attacked*]`
-                        return { content: [{ form: 'effect', type: 'action', text }] };
+                        return { content: [{ form: 'effect', type: 'Action', text }] };
                     }
                     // 依好感度攻擊
                     case 'CombatEventActionRelationshipAttack': {
@@ -2346,31 +2373,34 @@ export async function parseCombat() {
                         const vfx = data._useVFX ? '([*Custom.VFX*])' : '';
                         const text = `[*Label.Character,${charId}*][*Custom.RelationshipAttack*]${vfx}`;
                         return {
-                            content: [{ form: 'effect', type: 'action', text }],
+                            content: [{ form: 'effect', type: 'Action', text }],
                             rel: { intra: { Character: [charId] } }
                         };
                     }
                     // 移除所有狀態
                     case 'CombatEventActionRemoveAllStateEffect': {
                         const text = `${getTerm('char', data._character)}[*Custom.RemoveAllState*]`;
-                        return { content: [{ form: 'effect', type: 'stat', text }] };
+                        return { content: [{ form: 'effect', type: 'State', text }] };
                     }
                     // 設定戰鬥後接續劇本
                     case 'CombatEventActionSetStoryScript': {
-                        return { content: [{ form: 'effect', type: 'system', text: `◎[*Custom.CombatNextScript*][*Label.Script,${data._name}*]` }] };
+                        return {
+                            content: [{ form: 'effect', type: 'System', text: `◎[*Custom.CombatNextScript*][*Label.Script,${data._name}*]` }],
+                            rel: { to: { Script: [data._name] } }
+                        };
                     }
                     // 異動角色狀態
                     case 'CombatEventActionStateEffect': {
                         const effect = await getCombatEffect(data._effect._name);
                         const text = `${effect.show}${getTerm('char', data._character)}${getTerm('type', data._type)}${effect.key}`;
                         return {
-                            content: [{ form: 'effect', type: 'stat', text }],
+                            content: [{ form: 'effect', type: 'State', text }],
                             rel: data._type === '新增' ? { intra: effect.rel } : null
                         };
                     }
                     // 顯示特效
                     case 'CombatEventActionVFX': {
-                        return { content: [{ form: 'effect', type: 'system', text: '◇[*Custom.VFX*]' }] };
+                        return { content: [{ form: 'effect', type: 'Perform', text: '◇[*Custom.VFX*]' }] };
                     }
                     // 無對應
                     default:
@@ -2388,6 +2418,7 @@ export async function parseCombat() {
         cache.action[cacheId] ??= subResult;
         if (subResult?.rel?.intra) mergeRelation(rel.intra, subResult.rel.intra);
         if (subResult?.rel?.post) mergeRelation(rel.post, subResult.rel.post);
+        if (subResult?.rel?.to) mergeRelation(rel.to, subResult.rel.to);
         return subResult.content;
     };
 
@@ -2493,7 +2524,7 @@ export async function parseCombat() {
             const combat = {
                 enemy: enemyName,
                 content: [branch],
-                rel: { pre: {}, post: {}, intra: {} }
+                rel: { pre: {}, post: {}, intra: {}, to: {} }
             };
             mergeCharacterRelation(combat.rel.intra, enemyData.Name);
             updateNameDraftItem(nameDraft, id, `${data._desc} 戰${CACHE.TERM.CHARACTER?.[enemyData.Name]}`, `[*System.Combat*]-${enemyName}`);
@@ -2545,8 +2576,8 @@ export async function parseCombat() {
             if (data._deadEnd && data._deadLibrary) {
                 const libraryId = removeUid(data._deadLibrary._name);
                 const deadEndName = `[*Label.Dead,${libraryId}*]`;
-                loseResults.push({ form: 'effect', type: 'stat', text: deadEndName });
-                mergeRelation(combat.rel.post, { Library: [libraryId] });
+                loseResults.push({ form: 'effect', type: 'Dead', text: deadEndName });
+                mergeRelation(combat.rel.post, { Dead: [libraryId] });
             }
             branch.branches.push({ index: 0, text: '[*Custom.Loss*]', content: loseResults });
 
@@ -2602,11 +2633,11 @@ export async function parseBattle() {
 
         // 取得NPC設定
         const configData = await getGameJson(name, 'BattleNpcConfigData');
-        if (!isValidJson(configData, name)) return { id: '', name: '[*EnemyTeam.Unknown*]', people: '0×0%' };
+        if (!isValidJson(configData, name)) return { id: '', name: '[*Label.Enemy,Unknown*]', people: '0×0%' };
 
         // 取得NPC勢力別
         const statData = await getGameJson(configData._teamStat._name, 'BattleTeamStat');
-        if (!isValidJson(statData, configData._teamStat._name)) return { id: '', name: '[*EnemyTeam.Unknown*]', people: '0×0%' };
+        if (!isValidJson(statData, configData._teamStat._name)) return { id: '', name: '[*Label.Enemy,Unknown*]', people: '0×0%' };
 
         // 取得NPC門人數及向心值
         const [peopleData, teamData] = await Promise.all([
@@ -2618,7 +2649,7 @@ export async function parseBattle() {
 
         // 紀錄資訊
         const id = statData._id == '000' ? '500' : statData._id;
-        npc = { id, name: `[*EnemyTeam.${id}*]`, people: `${people}×${team}%` };
+        npc = { id, name: `[*Label.Enemy,${id}*]`, people: `${people}×${team}%` };
 
         // 寫入Cache並回傳
         return cache.npc[name] = npc;
@@ -2655,16 +2686,17 @@ export async function parseBattle() {
             if (data._friendUsePeople) {
                 if (data._friendPeopleFlag) {
                     const flag = removeUid(data._friendPeopleFlag._name);
-                    result[id].friend.people = `[*Flag.${flag}.0*]`;
+                    const statment = handleFlagStatement(flag, undefined, id);
+                    result[id].friend.people = statment.left;
                     mergeRelation(result[id].rel.pre, { Flag: [flag] });
                 }
                 else result[id].friend.people = data._friendPeople;
             }
             else {
-                result[id].friend.people = '[*PlayerStat.people*]×[*PlayerStat.team*]%';
+                result[id].friend.people = '[*Label.Stat,people*]×[*Label.Stat,team*]%';
 
                 // 非單獨唐門提供初始值
-                if (friends.length > 1 || friends[0]?.name != '[*EnemyTeam.500*]') {
+                if (friends.length > 1 || friends[0]?.name != '[*Label.Enemy,500*]') {
                     result[id].friend.people += ` ([*Custom.Init*]:${friends.map(f => f.people).join('+')})`;
                 }
             }
@@ -2674,12 +2706,13 @@ export async function parseBattle() {
             if (data._enemyUsePeople) {
                 if (data._enemyPeopleFlag) {
                     const flag = removeUid(data._enemyPeopleFlag._name);
-                    result[id].enemy.people = `[*Flag.${flag}.0*]`;
+                    const statment = handleFlagStatement(flag, undefined, id);
+                    result[id].enemy.people = statment.left;
                     mergeRelation(result[id].rel.pre, { Flag: [flag] });
                 }
                 else result[id].enemy.people = data._enemyPeople;
             }
-            else result[id].enemy.people = `[*PlayerStat.people*]×[*PlayerStat.team*]% ([*Custom.Init*]:${enemies.map(f => f.people).join('+')})`;
+            else result[id].enemy.people = `[*Label.Stat,people*]×[*Label.Stat,team*]% ([*Custom.Init*]:${enemies.map(f => f.people).join('+')})`;
 
             // 記錄中立方陣容及人數
             result[id].neutral.name = neutrals.map(c => c.name);
@@ -2687,11 +2720,12 @@ export async function parseBattle() {
                 if (data._neutralUsePeople) {
                     if (data._neutralPeopleFlag) {
                         const flag = removeUid(data._neutralPeopleFlag._name);
-                        result[id].neutral.people = `[*Flag.${flag}.0*]`;
+                        const statment = handleFlagStatement(flag, undefined, id);
+                        result[id].neutral.people = statment.left;
                         mergeRelation(result[id].rel.pre, { Flag: [flag] });
                     } else result[id].neutral.people = data._neutralPeople;
                 }
-                else result[id].neutral.people = `[*PlayerStat.people*]×[*PlayerStat.team*]% ([*Custom.Init*]:${neutrals.map(f => f.people).join('+')})`;
+                else result[id].neutral.people = `[*Label.Stat,people*]×[*Label.Stat,team*]% ([*Custom.Init*]:${neutrals.map(f => f.people).join('+')})`;
             }
             else result[id].neutral.people = '';
 
@@ -2786,7 +2820,7 @@ export async function parseScript() {
     const logicResult = {};
 
     // 額外自訂
-    logicResult.free = result.free = {
+    result.free = {
         content: [{
             form: 'branch',
             type: 'Position',
@@ -2794,7 +2828,7 @@ export async function parseScript() {
             branches: [
                 {
                     index: 1,
-                    text: '[*Middle.move*]｜[*Position.Name.Mall*]',
+                    text: '[*Middle.move*]｜[*Label.Position,Mall*]',
                     condition: '[%[*Label.Flag,P_Mall_01.0*]≠[*Flag.P_Mall_01.0.1*]%]',
                     content: [
                         {
@@ -2804,74 +2838,83 @@ export async function parseScript() {
                             branches: [{
                                 index: 1,
                                 text: '[*Custom.True*]',
-                                content: [{ form: 'effect', type: 'merge', text: '[*Label.Flag,Talk_Brother3.0*]=[*Flag.Talk_Brother3.0.1*]' }]
+                                content: [{ form: 'effect', type: 'Flag', text: '[*Label.Flag,Talk_Brother3.0*]=[*Flag.Talk_Brother3.0.1*]' }]
                             }]
                         },
-                        { form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,mall_001*]' }
+                        { form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,mall_001*]' }
                     ]
                 },
                 {
                     index: 2,
                     text: '[*Middle.move*]｜[*Position.Name.Center*]',
                     condition: '[%[*Label.Flag,P_Center_01.0*]≠[*Flag.P_Center_01.0.1*]%]',
-                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,center_001*]' }]
+                    content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,center_001*]' }]
                 },
                 {
                     index: 3,
                     text: '[*Middle.move*]｜[*Position.Name.Room1*]',
                     condition: '[%[*Label.Flag,P_Room_01.0*]≠[*Flag.P_Room_01.0.1*]%]',
-                    content: [{ form: 'effect', type: 'merge', text: '[*Label.Flag,Talk_Brother4.0*]=[*Flag.Talk_Brother4.0.1*] / ◎[*Custom.NextScript*][*Label.Script,room_001*]' }]
+                    content: [
+                        { form: 'effect', type: 'Flag', text: '[*Label.Flag,Talk_Brother4.0*]=[*Flag.Talk_Brother4.0.1*]' },
+                        { form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,room_001*]' }
+                    ]
                 },
                 {
                     index: 4,
                     text: '[*Middle.move*]｜[*Position.Name.Room2*]',
                     condition: '[%[*Label.Flag,P_GirlRoom_01.0*]≠[*Flag.P_GirlRoom_01.0.1*]%]',
-                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,girlroom_001*]' }]
+                    content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,girlroom_001*]' }]
                 },
                 {
                     index: 5,
                     text: '[*Middle.move*]｜[*Position.Name.Alchemy*]',
                     condition: '[%[*Label.Flag,P_Alchemy_01.0*]≠[*Flag.P_Alchemy_01.0.1*]%]',
-                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,alchemy_001*]' }]
+                    content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,alchemy_001*]' }]
                 },
                 {
                     index: 6,
                     text: '[*Middle.move*]｜[*Position.Name.Forge*]',
                     condition: '[%[*Label.Flag,P_Forge_01.0*]≠[*Flag.P_Forge_01.0.1*]%]',
-                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,forge_001*]' }]
+                    content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,forge_001*]' }]
                 },
                 {
                     index: 7,
                     text: '[*Middle.move*]｜[*Position.Name.Kitchen*]',
                     condition: '[%[*Label.Flag,P_Kitchen_01.0*]≠[*Flag.P_Kitchen_01.0.1*]%]',
-                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,kitchen_001*]' }]
+                    content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,kitchen_001*]' }]
                 },
                 {
                     index: 8,
                     text: '[*Middle.move*]｜[*Position.Name.Door*]',
                     condition: '[%[*Label.Flag,P_Door_01.0*]≠[*Flag.P_Door_01.0.1*]%]',
-                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,door_001*]' }]
+                    content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,door_001*]' }]
                 },
                 {
                     index: 9,
                     text: '[*Middle.move*]｜[*Position.Name.BackMountain*]',
                     condition: '[%[*Label.Flag,P_Back_01.0*]≠[*Flag.P_Back_01.0.1*]%]',
-                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,back_001*]' }]
+                    content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,back_001*]' }]
                 },
                 {
                     index: 10,
                     text: '[*Middle.move*]｜[*Position.Name.Study*]',
                     condition: '[%[*Label.Flag,P_Study_01.0*]≠[*Flag.P_Study_01.0.1*]%]',
-                    content: [{ form: 'effect', type: 'merge', text: '◎[*Custom.NextScript*][*Label.Script,study_001*]' }]
+                    content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,study_001*]' }]
                 },
             ]
         }],
         rel: {
             pre: { Flag: ['P_Mall_01', 'P_Center_01', 'P_Room_01', 'P_GirlRoom_01', 'P_Alchemy_01', 'P_Forge_01', 'P_Kitchen_01', 'P_Door_01', 'P_Back_01', 'P_Study_01', 'Talk_Brother3', 'Talk_Brother4'] },
             intra: {},
-            post: { Script: ['mall_001', 'center_001', 'room_001', 'girlroom_001', 'alchemy_001', 'forge_001', 'kitchen_001', 'door_001', 'back_001', 'study_001'] }
+            to: { Script: ['mall_001', 'center_001', 'room_001', 'girlroom_001', 'alchemy_001', 'forge_001', 'kitchen_001', 'door_001', 'back_001', 'study_001'] }
         },
         remark: Array.from(custom?.free?.remark ?? [], (_, i) => `[*Script.Remark.free.${i}*]`)
+    };
+    const tmpLogic = buildLogicView(result.free.content);
+    logicResult.free = {
+        ...result.free,
+        content: tmpLogic.content,
+        effects: tmpLogic.effects
     };
     updateNameDraftItem(nameDraft, 'free');
 
@@ -2976,7 +3019,7 @@ export async function parseScript() {
             const flagId = match[1];
             const flagIndex = match[2];
             const flagValueCount = Object.keys(CACHE.FLAG[flagId].data[flagIndex].value).length;
-            
+
             // 至少設定2個值才繼續
             if (flagValueCount < 2) return null;
 
@@ -2998,6 +3041,7 @@ export async function parseScript() {
 
             // 確認潛在旗標名稱
             if (unusedValue.length === 1) return `[*Flag.${flagId}.${flagIndex}.${unusedValue[0]}*]`;
+            else if (unusedValue.length > 1) return null;
         }
         return index == 1 ? '[*Custom.True*]' : index == 2 ? '[*Custom.False*]' : null;
     };
@@ -3015,14 +3059,14 @@ export async function parseScript() {
 
                     // 預設自由行動
                     case 'Free': {
-                        mergeRelation(rel.post, { Script: ['free'] });
+                        mergeRelation(rel.to, { Script: ['free'] });
                         content.push({ form: 'effect', type: 'Free', text: '◎[*Custom.Free*]:[*Label.Free,free*]' });
                         break;
                     }
                     // 特定自由行動
                     case 'Story': {
                         const script = cache?.temp.story ?? 'Unknown';
-                        mergeRelation(rel.post, { Script: [script] });
+                        mergeRelation(rel.to, { Script: [script] });
                         content.push({ form: 'effect', type: 'Free', text: `◎[*Custom.Free*]:[*Label.Free,${script}*]` });
                         break;
                     }
@@ -3030,7 +3074,7 @@ export async function parseScript() {
                     case 'Battle': {
                         const name = `BL_${removeQuote(node.arguments[1].raw)}`;
                         const script = cache?.temp?.story ?? 'Unknown';
-                        mergeRelation(rel.post, { Script: [script], Battle: [name] });
+                        mergeRelation(rel.to, { Script: [script], Battle: [name] });
                         content.push({ form: 'effect', type: 'Battle', text: `★[*System.Battle*][*Label.Battle,${name}*]` });
                         content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.CombatNextScript*][*Label.Script,${script}*]` });
                         break;
@@ -3039,7 +3083,7 @@ export async function parseScript() {
                     case 'Combat': {
                         const name = `CL_${removeQuote(node.arguments[1].raw)}`;
                         const script = cache?.temp?.story ?? 'Unknown';
-                        mergeRelation(rel.post, { Script: [script], Combat: [name] });
+                        mergeRelation(rel.to, { Script: [script], Combat: [name] });
                         content.push({ form: 'effect', type: 'Combat', text: `★[*System.Combat*][*Label.Combat,${name}*]` });
                         content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.CombatNextScript*][*Label.Script,${script}*]` });
                         break;
@@ -3048,7 +3092,7 @@ export async function parseScript() {
                     case 'GameOver': {
                         const libraryId = removeQuote(node.arguments[1].raw);
                         const name = `[*Label.Dead,${libraryId}*]`;
-                        mergeRelation(rel.post, { Library: [libraryId] });
+                        mergeRelation(rel.post, { Dead: [libraryId] });
                         content.push({ form: 'effect', type: 'Dead', text: name });
                         break;
                     }
@@ -3070,7 +3114,7 @@ export async function parseScript() {
                 // 指定劇本
                 if (node.arguments[0].type == 'StringLiteral') {
                     const name = removeQuote(node.arguments[0].raw);
-                    mergeRelation(rel.post, { Script: [name] });
+                    mergeRelation(rel.to, { Script: [name] });
                     content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*][*Label.Script,${name}*]` });
                 }
                 // 使用變數
@@ -3085,7 +3129,7 @@ export async function parseScript() {
                 const name = removeQuote(node.arguments[1].raw);
                 const index = node.arguments[0].value;
                 cache.temp[index] = name;
-                mergeRelation(rel.post, { Script: [name] });
+                mergeRelation(rel.to, { Script: [name] });
                 content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.TempScript*]${index}:[*Label.Script,${name}*]` });
                 break;
             }
@@ -3093,7 +3137,7 @@ export async function parseScript() {
             case 'luamanager.SetCurrentTravelScript': {
                 const name = removeQuote(node.arguments[0].raw);
                 cache.temp.travel = name;
-                mergeRelation(rel.post, { Script: [name] });
+                mergeRelation(rel.to, { Script: [name] });
                 content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.TravelScript*]:[*Label.Script,${name}*]` });
                 break;
             }
@@ -3101,7 +3145,7 @@ export async function parseScript() {
             case 'luamanager.SetCurrentStoryScript': {
                 const name = removeQuote(node.arguments[0].raw);
                 cache.temp.story = name;
-                mergeRelation(rel.post, { Script: [name] });
+                mergeRelation(rel.to, { Script: [name] });
                 break;
             }
             // 設定遊戲時間
@@ -3112,24 +3156,26 @@ export async function parseScript() {
             }
             // 設定遊戲時間增加一個月
             case 'luamanager.NextMonth': {
-                content.push({ form: 'effect', type: 'System', text: `◎[*Custom.SetTime*]:1[*Custom.Month*][*Custom.After*]` });
+                content.push({ form: 'effect', type: 'System', text: `◎[*Custom.SetTime*]:[*Custom.After,System.Number_1,Custom.Month*]` });
                 break;
             }
             // 設定遊戲時間增加一旬
             case 'luamanager.NextRound': {
-                content.push({ form: 'effect', type: 'System', text: `◎[*Custom.SetTime*]:1[*Custom.Stage*][*Custom.After*]` });
+                content.push({ form: 'effect', type: 'System', text: `◎[*Custom.SetTime*]:[*Custom.After,System.Number_1,Custom.Stage*]` });
                 break;
             }
             // 設定任務觸發時間
             case 'luamanager.SetMissionTime': {
-                const trigger = removeQuote(node.arguments[0].raw);
+                const timeId = removeQuote(node.arguments[0].raw);
                 const year = node.arguments[1].value ? `${node.arguments[1].value}[*Custom.Year*]` : '';
                 const month = node.arguments[2].value ? `${node.arguments[2].value}[*Custom.Month*]` : '';
                 const round = node.arguments[3].value ? `${node.arguments[3].value}[*Custom.Stage*]` : '';
-                const time = `${year}${month}${round}` || '[*Custom.Now*]';
-                const text = `◎[*Label.Time,${trigger}*][*Custom.SetTriggerTime*]:${time}[*Custom.After*]`;
+                let time = `${year}${month}${round}`;
+                if (!time) time = '[*Custom.Now*]';
+                else time = `[*Custom.AfterTime,${time}*]`;
+                const text = `◎[*Label.Time,${timeId}*][*Custom.SetTriggerTime*]:${time}`;
                 content.push({ form: 'effect', type: 'Trigger', text });
-                mergeRelation(rel.post, { Time: [trigger] });
+                mergeRelation(rel.post, { Time: [timeId] });
                 break;
             }
             // 設定戰役技能 (同分岐重複設定只輸出一次)
@@ -3320,7 +3366,7 @@ export async function parseScript() {
             case 'statmodifymanager.AddAchievementLib': {
 
                 const id = removeQuote(node.arguments[0].raw);
-                mergeRelation(rel.post, { Library: [id] });
+                mergeRelation(rel.post, { Achievement: [id] });
                 content.push({ form: 'effect', type: 'Achievement', text: `[*Label.Achievement,${id}*]` });
                 break;
             }
@@ -3339,12 +3385,12 @@ export async function parseScript() {
                 let text;
                 const mission = removeQuote(node.arguments[0].raw);
                 const trigger = removeQuote(node.arguments[1].raw);
-                const label = mission == 'Main' ? '[*Custom.MainMission*]' : `[*Label.Mission,${removeQuote(node.arguments[0].raw)}*]`;
+                const label = mission == 'Main' ? '[*Custom.MainMission*]' : `[*Label.Mission,${mission}*]`;
                 if (trigger == 'M0000') text = `◎${label}[*Custom.SetTrigger*]:[*System.NA*]`;
                 else if (trigger == 'clear') text = `◎${label}[*Custom.SetClear*]`;
                 else {
                     text = `◎${label}[*Custom.SetTrigger*]:[*Label.Trigger,${trigger}*]`;
-                    mergeRelation(rel.post, { Mission: [trigger] });
+                    mergeRelation(rel.to, { Trigger: [trigger] });
                 }
 
                 // 回存內容
@@ -3355,26 +3401,26 @@ export async function parseScript() {
             case 'statmodifymanager.ModifyEnemyTeam': {
 
                 // 記錄資訊
-                const name = `[*EnemyTeam.${removeQuote(node.arguments[0].raw)}*][*PlayerStat.team*]`;
+                const name = `[*Label.Enemy,${removeQuote(node.arguments[0].raw)}*][*PlayerStat.team*]`;
                 const val = getArgumentValue(node.arguments[1], cache);
                 const hide = node.arguments[2]?.value ? '' : '*';
                 const sign = val < 0 ? '' : '+';
 
                 // 回存內容
-                content.push({ form: 'effect', type: 'Stat', text: `${hide}${name}${sign}${val}` });
+                content.push({ form: 'effect', type: 'Enemy', text: `${hide}${name}${sign}${val}` });
                 break;
             }
             // 增減其他陣營人數
             case 'statmodifymanager.ModifyEnemyPeople': {
 
                 // 記錄資訊
-                const name = `[*EnemyTeam.${removeQuote(node.arguments[0].raw)}*][*PlayerStat.people*]`;
+                const name = `[*Label.Enemy,${removeQuote(node.arguments[0].raw)}*][*PlayerStat.people*]`;
                 const val = getArgumentValue(node.arguments[1], cache);
                 const hide = node.arguments[2]?.value ? '' : '*';
                 const sign = val < 0 ? '' : '+';
 
                 // 回存內容
-                content.push({ form: 'effect', type: 'Stat', text: `${hide}${name}${sign}${val}` });
+                content.push({ form: 'effect', type: 'Enemy', text: `${hide}${name}${sign}${val}` });
                 break;
             }
             // 顯示圖片
@@ -3400,7 +3446,7 @@ export async function parseScript() {
             // 汗青書結局
             case 'endgamepanel.Open': {
                 const id = removeQuote(node.arguments[0].raw);
-                mergeRelation(rel.post, { Library: [id] });
+                mergeRelation(rel.post, { End: [id] });
                 content.push({ form: 'effect', type: 'End', text: `[*Label.End,${id}*]` });
                 break;
             }
@@ -3630,7 +3676,7 @@ export async function parseScript() {
                                 if (name == 'faction-contribution') {
                                     cache.var[varName] = 50 * (initNode.arguments[1].value ?? initNode.arguments[1].argument.value * -1);
                                 }
-                                else cache.var[varName] = `[*PlayerStat.${name}*]`;
+                                else cache.var[varName] = `[*Label.Stat,${name}*]`;
                                 break;
                             }
                             // 記錄取得預存事件
@@ -3807,7 +3853,8 @@ export async function parseScript() {
                 rel: {
                     pre: custom?.[id]?.rel?.pre ?? {},
                     intra: custom?.[id]?.rel?.intra ?? {},
-                    post: custom?.[id]?.rel?.post ?? {}
+                    post: custom?.[id]?.rel?.post ?? {},
+                    to: custom?.[id]?.rel?.to ?? {}
                 },
                 remark: Array.from(custom?.[id]?.remark ?? [], (_, i) => `[*Script.Remark.${id}.${i}*]`)
             };
@@ -3882,7 +3929,17 @@ export async function parseScript() {
 export async function buildBackRelation() {
 
     // 載入Cache
-    await loadCache(['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'TERM', 'BOOK', 'EQUIP', 'GROUP', 'MISSION', 'POSITION', 'CONDITION', 'SWITCH', 'DICE', 'COMBAT', 'BATTLE', 'SCRIPT']);
+    await loadCache(['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'TERM', 'BOOK', 'EQUIP', 'GROUP', 'MISSION', 'TRIGGER', 'POSITION', 'CONDITION', 'SWITCH', 'DICE', 'COMBAT', 'BATTLE', 'SCRIPT']);
+
+    // 類別對應
+    const reverseType = {
+        post: 'pre',
+        pre: 'post',
+        intra: 'inter',
+        inter: 'intra',
+        from: 'to',
+        to: 'from'
+    };
 
     // Helper: 首字大寫
     const capitalize = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1).toLowerCase()}`;
@@ -3893,30 +3950,30 @@ export async function buildBackRelation() {
         sourceCat = capitalize(sourceCat);
         const target = CACHE[targetCat]?.[targetId] ?? CACHE[targetCat]?.[targetId.toLowerCase()];
         if (target) {
-            target.backRel ??= {};
-            target.backRel[type] ??= {};
-            mergeRelation(target.backRel[type], { [sourceCat]: [sourceId] });
+            target.rel ??= {};
+            target.rel[type] ??= {};
+            mergeRelation(target.rel[type], { [sourceCat]: [sourceId] });
 
             // 一併更新完整版
             targetCat = `${targetCat}_FULL`;
             const targetFull = CACHE?.[targetCat]?.[targetId];
             if (targetFull) {
-                targetFull.backRel ??= {};
-                targetFull.backRel[type] ??= {};
-                mergeRelation(targetFull.backRel[type], { [sourceCat]: [sourceId] });
+                targetFull.rel ??= {};
+                targetFull.rel[type] ??= {};
+                mergeRelation(targetFull.rel[type], { [sourceCat]: [sourceId] });
             }
         }
         else writeLog('warn', `${sourceCat} - ${sourceId} - ${targetCat} - ${targetId} not found.`);
     };
 
     // 遍歷各類資料
-    const scurceCats = ['BOOK', 'EQUIP', 'MISSION', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
+    const scurceCats = ['BOOK', 'EQUIP', 'MISSION', 'TRIGGER', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
     for (const sourceCat of scurceCats) {
         for (const [sourceId, data] of Object.entries(CACHE[sourceCat])) {
-            for (const type of ['pre', 'intra', 'post']) {
+            for (const type of ['pre', 'intra', 'post', 'inter', 'from', 'to']) {
                 for (const [targetCat, targetIds] of Object.entries(data?.rel?.[type] ?? {})) {
                     for (const targetId of targetIds) {
-                        addBackRelation(sourceCat, sourceId, targetCat, targetId, type);
+                        addBackRelation(sourceCat, sourceId, targetCat, targetId, reverseType[type]);
                     }
                 }
             }
@@ -3924,7 +3981,7 @@ export async function buildBackRelation() {
     }
 
     // 更新json檔案
-    const exportCats = ['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'CHARACTER', 'LIBRARY', 'BOOK', 'EQUIP', 'TIME', 'MISSION', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
+    const exportCats = ['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'CHARACTER', 'LIBRARY', 'BOOK', 'EQUIP', 'TIME', 'MISSION', 'TRIGGER', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
     const exportPromises = [];
     for (const category of exportCats) {
         const catName = category.toLowerCase();
