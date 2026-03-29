@@ -1,4 +1,11 @@
 {
+    "free": {
+        "ori": "free",
+        "name": "唐門自由行動",
+        "ref": "",
+        "desc": "你可以自由選擇在唐門幹活、修練或摸魚",
+        "keywords": "養成"
+    },
     "act1": {
         "ori": "act1",
         "name": "act1",

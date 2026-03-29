@@ -37,8 +37,8 @@
         "Voice40": "高聲",
         "Voice50": "大聲",
         "Condition": "條件",
-        "InvalidCheck": "無效檢定",
-        "InvalidCondition": "無效條件",
+        "InvalidCheck": "未知檢定({0})",
+        "InvalidCondition": "未知條件({0})",
         "InvalidOption": "無效選項",
         "CheckTimes": "檢定次數",
         "MultiCheck": "複合檢定",
@@ -282,6 +282,13 @@
         "A": "[*Custom.InvalidOption*]"
     },
     "Web": {
+        "SiteTitle": "活俠傳事件分岐資料庫",
+        "SiteDescription": "提供檢視遊戲劇本、事件、分歧與其關聯資訊的資料庫",
+        "Id": "索引代碼",
+        "Name": "名稱",
+        "Desc": "描述",
+        "keywords": "關鍵字",
+        "Remark": "備註",
         "Flag": "旗標",
         "Character": "角色",
         "Book": "[*System.Title.Book*]",
@@ -299,6 +306,7 @@
         "Trigger": "任務觸發",
         "Mission": "任務",
         "Script": "劇本",
+        "Position": "地點",
         "Content": "劇本內容",
         "Relations": "關聯項目",
         "Rel": {

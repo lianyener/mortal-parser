@@ -558,7 +558,7 @@ async function getCondition(conditionData, name, inverse = false) {
     }
 
     // 無效條件
-    if (rules.length === 0) return { name: '[*Custom.InvalidCondition*]', rel: {} };
+    if (rules.length === 0) return { name: `[*Custom.InvalidCondition,${name}*]`, rel: {} };
 
     // 複數條件(遊戲中理論上沒有)
     if (rules.length > 1) writeLog('warn', `Multi-Condition on "${name}".`);
@@ -748,7 +748,7 @@ async function getStat(statItem) {
                     const data = await getGameJson(key, 'ConditionResultData');
                     if (!isValidJson(data, key)) {
                         return {
-                            name: '[*Custom.InvalidCondition*]',
+                            name: `[*Custom.InvalidCondition,${key}*]`,
                             type: 'Condition',
                             rel: {}
                         };
@@ -1549,7 +1549,7 @@ export async function parseSwitch() {
                 }
 
                 // 調整表示格式
-                if (rules.length === 0) switchObj.check = '[*Custom.InvalidCondition*]';
+                if (rules.length === 0) switchObj.check = `[*Custom.InvalidCheck,${id}*]`;
                 // else if (rules.length == 1) switchObj.check = rules[0].rule.map(r => r.text).join(rules[0].op);
                 else {
                     // 如果式子左邊全部相同則簡化表示
@@ -2440,7 +2440,7 @@ export async function parseCombat() {
             try {
                 // 讀取檔案
                 const data = await getGameJson(key, type);
-                if (!isValidJson(data, key)) return '[*Custom.InvalidCondition*]';
+                if (!isValidJson(data, key)) return `[*Custom.InvalidCondition,${key}*]`;
 
                 switch (type) {
 
@@ -2833,7 +2833,7 @@ export async function parseScript() {
             branches: [
                 {
                     index: 1,
-                    text: '[*Middle.move*]｜[*Label.Position,Mall*]',
+                    text: '[*Middle.move*]｜[*Position.Name.Mall*]',
                     condition: '[%[*Label.Flag,P_Mall_01.0*]≠[*Flag.P_Mall_01.0.1*]%]',
                     content: [
                         {
@@ -3698,9 +3698,14 @@ export async function parseScript() {
                             // 記錄選項有效條件
                             case 'checkpointmanager.Condition': {
                                 const id = removeQuote(initNode.arguments[0].raw);
-                                const obj = CACHE.CONDITION?.[id] ?? { name: '[*Custom.InvalidCondition*]' };
-                                mergeRelation(rel.pre, obj?.rel?.pre ?? {});
-                                cache.condition[varName] = convertXFlag(obj.name, script);
+                                if (id === 'XXX') {
+                                    cache.condition[varName] = '[*Custom.InvalidOption*]';
+                                }
+                                else {
+                                    const obj = CACHE.CONDITION?.[id] ?? { name: `[*Custom.InvalidCondition,${id}*]` };
+                                    mergeRelation(rel.pre, obj?.rel?.pre ?? {});
+                                    cache.condition[varName] = convertXFlag(obj.name, script);
+                                }
                                 break;
                             }
                             // 記錄骰子資訊
@@ -3714,7 +3719,7 @@ export async function parseScript() {
                             // 記錄分岐資訊
                             case 'checkpointmanager.Switch': {
                                 const id = removeQuote(initNode.arguments[0].raw);
-                                const obj = CACHE.SWITCH?.[id] ?? { check: '[*Custom.InvalidCondition*]', switch: [] };
+                                const obj = CACHE.SWITCH?.[id] ?? { check: `[*Custom.InvalidCheck,${id}*]`, switch: [] };
                                 mergeRelation(rel.pre, obj?.rel?.pre ?? {});
                                 cache.branch = {
                                     type: 'Switch',
@@ -3796,7 +3801,7 @@ export async function parseScript() {
                     default:
                         writeLog('warn', `AssignmentStatement - branch type "${cache?.branch?.type}" skipped.`);
                 }
-                cache.branch.condition[index] = condition ? cache.condition?.[condition] ?? '[*Custom.InvalidCondition*]' : null;
+                cache.branch.condition[index] = condition ? cache.condition?.[condition] ?? `[*Custom.InvalidCondition,${condition}*]` : null;
                 break;
             }
             case 'MemberExpression':
