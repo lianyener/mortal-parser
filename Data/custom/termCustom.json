@@ -303,10 +303,11 @@
         "Dead": "[*System.Menu.LibraryDead*]",
         "End": "[*System.Menu.LibraryEnd*]",
         "Story": "[*System.Title.Legend*]",
+        "Free": "[*Custom.Free*]",
         "Trigger": "任務觸發",
         "Mission": "任務",
         "Script": "劇本",
-        "Position": "地點",
+        "Position": "隨機事件",
         "Content": "劇本內容",
         "Relations": "關聯項目",
         "Rel": {
@@ -318,6 +319,26 @@
             "From": "來源"
         },
         "ExpandAll": "全部展開",
-        "CollapseAll": "全部收合"
+        "CollapseAll": "全部收合",
+        "Event": "事件",
+        "Item": "參照項目",
+        "About": "關於",
+        "Introduce": "網站說明",
+        "UpdateLog": "更新紀錄",
+        "Data": "資訊",
+        "ScriptData": "[*Web.Script*][*Web.Data*]",
+        "PositionData": "[*Web.Position*][*Web.Data*]",
+        "TriggerData": "[*Web.Trigger*][*Web.Data*]",
+        "MissionData": "[*Web.Mission*][*Web.Data*]",
+        "BookData": "[*Web.Book*][*Web.Data*]",
+        "EquipData": "[*Web.Equip*][*Web.Data*]",
+        "SpecialData": "[*Web.Special*][*Web.Data*]",
+        "MiscData": "[*Web.Misc*][*Web.Data*]",
+        "TalentData": "[*Web.Talent*][*Web.Data*]",
+        "BattleData": "[*Web.Battle*][*Web.Data*]",
+        "CombatData": "[*Web.Combat*][*Web.Data*]",
+        "AchievementData": "[*Web.Achievement*][*Web.Data*]",
+        "DeadData": "[*Web.Dead*][*Web.Data*]",
+        "EndData": "[*Web.End*][*Web.Data*]"
     }
 }
