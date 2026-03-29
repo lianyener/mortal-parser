@@ -33,7 +33,9 @@ const CACHE = {
     SCRIPT_FULL: null,
     STAT: {},
     TIME: {},
-    LIBRARY: {},
+    DEAD: {},
+    END: {},
+    ACHIEVEMENT: {},
     CHARACTER: {},
     TERM: { COMBAT_SKILL: {}, CHARACTER: {}, TEAM: {} }
 };
@@ -942,7 +944,7 @@ export async function parseTerm(doExport = true) {
             case 'Library':
                 if (keys.length >= 3) {
                     safeAssign(term, [category, type, id], val);
-                    if (type == 'Title') CACHE.LIBRARY[id] = { type: libraryMap[id[0]] };
+                    if (type == 'Title') CACHE[libraryMap[id[0]].toUpperCase()][id] = {};
                 }
                 else writeLog('warn', `"${category}/${id}" has skipped (insufficient depth).`);
                 break;
@@ -1006,7 +1008,9 @@ export async function parseTerm(doExport = true) {
         exportJson(dialog, 'dialog'),
         exportJson(option, 'option'),
         exportJson(CACHE.CHARACTER, 'character'),
-        exportJson(CACHE.LIBRARY, 'library')
+        exportJson(CACHE.DEAD, 'dead'),
+        exportJson(CACHE.ACHIEVEMENT, 'achievement'),
+        exportJson(CACHE.END, 'end')
     ]);
 }
 
@@ -1678,7 +1682,7 @@ export async function parseMission() {
     const [missionFiles, freeFiles, custom, nameDraft] = await Promise.all([
         getJsonList('MissionData'),
         getJsonList('FreePositionData'),
-        getDataJson('missionCustom'),
+        getDataJson('triggerCustom'),
         getDataJson('missionName'),
         loadCache(['GROUP', 'FLAG'])
     ]);
@@ -1694,7 +1698,7 @@ export async function parseMission() {
         trigger: [],
         init: ''
     };
-    trigger['M0000'] = {
+    trigger['M0000_00'] = {
         mission: 'main',
         active: true,
         minTime: { year: '1', month: '4', stage: '1' },
@@ -1702,12 +1706,12 @@ export async function parseMission() {
         condition: ['※[*Custom.GameStart*]'],
         script: 'ch1_1',
         content: [],
-        remark: Array.from(custom?.['M0000']?.remark ?? [], (_, i) => `[*Trigger.Remark.M0000.${i}*]`),
+        remark: Array.from(custom?.['M0000_00']?.remark ?? [], (_, i) => `[*Trigger.Remark.M0000_00.${i}*]`),
         rel: { pre: {}, to: { Script: ['ch1_1'] }, from: { Mission: ['main'] } },
         type: 'Main',
-        orderKey: '1-04-1-1-M0000'
+        orderKey: '1-04-1-1-M0000_00'
     };
-    updateNameDraftItem(nameDraft.trigger, 'M0000');
+    updateNameDraftItem(nameDraft.trigger, 'M0000_00');
     updateNameDraftItem(nameDraft.mission, 'free');
 
     // Helper: 生成時間字串
@@ -1719,22 +1723,22 @@ export async function parseMission() {
     const processMission = async (file) => {
         try {
             // 讀取任務資料
-            const data = await getGameJson(file, 'MissionData');
-            if (!isValidJson(data, file)) return;
+            const missionData = await getGameJson(file, 'MissionData');
+            if (!isValidJson(missionData, file)) return;
 
             // 記錄任務資料
-            const missionId = data._name;
+            const missionId = missionData._name;
             mission[missionId] = {
                 trigger: [],
-                init: data._initKey
+                init: missionData._initKey
             };
-            updateNameDraftItem(nameDraft.mission, missionId, (data._desc ?? '').trim());
+            updateNameDraftItem(nameDraft.mission, missionId, (missionData._desc ?? '').trim());
 
-            for (const trigger of data._missions) {
+            for (const triggerItem of missionData._missions) {
 
                 // 讀取觸發資料
-                const triggerData = await getGameJson(trigger._name, 'MissionCheckData');
-                if (!isValidJson(triggerData, trigger._name)) continue;
+                const triggerData = await getGameJson(triggerItem._name, 'MissionCheckData');
+                if (!isValidJson(triggerData, triggerItem._name)) continue;
 
                 // 記錄觸發資料
                 const triggerId = triggerData._key;
@@ -1748,15 +1752,16 @@ export async function parseMission() {
                     script: triggerData._startScript,
                     content: [],
                     remark: Array.from(custom?.[triggerId]?.remark ?? [], (_, i) => `[*Trigger.Remark.${triggerId}.${i}*]`),
-                    rel: { pre: {}, to: { Script: [triggerData._startScript] }, from: { Mission: [missionId] } }
+                    rel: { pre: {}, to: {}, from: { Mission: [missionId] } }
                 };
+                if (triggerObj.script) mergeRelation(triggerObj.rel.to, { Script: [triggerObj.script] });
                 if (!triggerObj.active) triggerObj.remark.unshift('※[*Custom.TriggerDisable*]');
                 updateNameDraftItem(nameDraft.trigger, triggerId, (triggerData._desc ?? '').trim());
 
                 // 判斷主支線
                 const type = missionId == 'main' ? 'Main' : 'Sub';
                 triggerObj.type = type;
-                if (triggerId != data._initKey) triggerObj.condition.push(`[*Custom.TriggerSet,${type}*]`);
+                if (triggerId != missionData._initKey) triggerObj.condition.push(`[*Custom.TriggerSet,${type}*]`);
 
                 // 確認是否有特定時間條件
                 if (triggerData._dayCheck) {
@@ -4039,7 +4044,7 @@ export async function buildBackRelation() {
     }
 
     // 更新json檔案
-    const exportCats = ['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'CHARACTER', 'LIBRARY', 'BOOK', 'EQUIP', 'TIME', 'MISSION', 'TRIGGER', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
+    const exportCats = ['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'CHARACTER', 'END', 'ACHIEVEMENT', 'DEAD', 'BOOK', 'EQUIP', 'TIME', 'MISSION', 'TRIGGER', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
     const exportPromises = [];
     for (const category of exportCats) {
         const catName = category.toLowerCase();
