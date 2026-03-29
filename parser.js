@@ -1511,6 +1511,7 @@ export async function parseSwitch() {
     ]);
 
     // 初始化參數
+    const regexNumber = /^\d+$/;
     const result = {};
 
     // 主流程
@@ -1556,7 +1557,7 @@ export async function parseSwitch() {
                     const firstRule = rules[0].rule[0];
                     if (firstRule && rules.every(g => g.rule.every(r => r.left === firstRule.left))) {
                         switchObj.check = `[%${firstRule.left}%]`;
-                        switchObj.switch = rules.map(g => g.rule.map(r => `${r.symbol == '=' ? '' : r.symbol}${r.right}`).join(g.op));
+                        switchObj.switch = rules.map(g => g.rule.map(r => `${r.symbol == '=' && !regexNumber.test(r.right) ? '' : r.symbol}${r.right}`).join(g.op));
                     }
                     // 單一複雜條件
                     else if (rules.length === 1) {
@@ -3048,7 +3049,10 @@ export async function parseScript() {
             if (unusedValue.length === 1) return `[*Flag.${flagId}.${flagIndex}.${unusedValue[0]}*]`;
             else if (unusedValue.length > 1) return null;
         }
-        return index == 1 ? '[*Custom.True*]' : index == 2 ? '[*Custom.False*]' : null;
+        else if (labels.length === 0) {
+            return index == 1 ? '[*Custom.True*]' : index == 2 ? '[*Custom.False*]' : null;
+        }
+        return null;
     };
 
     // 處理函數呼叫
