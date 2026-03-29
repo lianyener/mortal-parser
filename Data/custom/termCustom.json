@@ -296,7 +296,8 @@
         "Dead": "[*System.Menu.LibraryDead*]",
         "End": "[*System.Menu.LibraryEnd*]",
         "Story": "[*System.Title.Legend*]",
-        "Mission": "任務觸發",
+        "Trigger": "任務觸發",
+        "Mission": "任務",
         "Script": "劇本",
         "Content": "劇本內容",
         "Rel": {
