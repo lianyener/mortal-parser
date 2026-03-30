@@ -4035,14 +4035,14 @@ export async function organizeOutputData() {
 
             // 擷取內容關鍵字
             if (data.content) {
-                const contentStr = stringify(data.content);
+                const contentStr = JSON.stringify(data.content);
                 const contentTerms = contentStr.match(regexTerm);
                 for (const term of contentTerms ?? []) keywords.add(term);
             }
 
             // 擷取登場角色關鍵字
             for (const characterId of data?.rel?.intra?.Character ?? []) {
-                keywords.add(`[*Character.${characterId}*]`);
+                keywords.add(`[*Label.Character,${characterId}*]`);
             }
 
             CACHE[`${cat}_INDEX`][sourceId] = { searchText: Array.from(keywords).join(',') };

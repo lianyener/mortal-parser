@@ -339,6 +339,9 @@
         "CombatData": "[*Web.Combat*][*Web.Data*]",
         "AchievementData": "[*Web.Achievement*][*Web.Data*]",
         "DeadData": "[*Web.Dead*][*Web.Data*]",
-        "EndData": "[*Web.End*][*Web.Data*]"
+        "EndData": "[*Web.End*][*Web.Data*]",
+        "Loading": "{0}資料載入中...",
+        "LoadError": "{0}資料載入失敗",
+        "ReturnList": "返回清單"
     }
 }
