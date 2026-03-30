@@ -6,6 +6,7 @@ import luaparse from 'luaparse';
 import path from 'path';
 import * as OpenCC from "opencc-js";
 import { stat } from 'fs';
+import { stringify } from 'querystring';
 
 // 路徑常數
 const GAME_PATH = './Game';
@@ -31,6 +32,7 @@ const CACHE = {
     POSITION: null,
     SCRIPT: null,
     SCRIPT_FULL: null,
+    SCRIPT_INDEX: {},
     STAT: {},
     TIME: {},
     DEAD: {},
@@ -3945,7 +3947,8 @@ export async function organizeOutputData() {
     // 載入Cache
     await loadCache(['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'TERM', 'BOOK', 'EQUIP', 'GROUP', 'MISSION', 'TRIGGER', 'POSITION', 'CONDITION', 'SWITCH', 'DICE', 'COMBAT', 'BATTLE', 'SCRIPT']);
 
-    // 類別對應
+    // 初始化
+    const regexTerm = /\[\*[\s\S]+?\*\]/g;
     const reverseType = {
         post: 'pre',
         pre: 'post',
@@ -4024,6 +4027,28 @@ export async function organizeOutputData() {
         }
     }
 
+    // 製作輕量化索引檔案
+    const indexCats = ['SCRIPT'];
+    for (const cat of indexCats) {
+        for (const [sourceId, data] of Object.entries(CACHE[cat])) {
+            const keywords = new Set();
+
+            // 擷取內容關鍵字
+            if (data.content) {
+                const contentStr = stringify(data.content);
+                const contentTerms = contentStr.match(regexTerm);
+                for (const term of contentTerms ?? []) keywords.add(term);
+            }
+
+            // 擷取登場角色關鍵字
+            for (const characterId of data?.rel?.intra?.Character ?? []) {
+                keywords.add(`[*Character.${characterId}*]`);
+            }
+
+            CACHE[`${cat}_INDEX`][sourceId] = { searchText: Array.from(keywords).join(',') };
+        }
+    }
+
     // 更新json檔案
     const exportCats = ['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'CHARACTER', 'END', 'ACHIEVEMENT', 'DEAD', 'BOOK', 'EQUIP', 'TIME', 'MISSION', 'TRIGGER', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
     const exportPromises = [];
@@ -4034,13 +4059,19 @@ export async function organizeOutputData() {
             exportPromises.push(exportJson(itemData, itemId, `public/data/${catName}`, true, false));
         }
 
-        // 一併輸出完整版
+        // 嘗試輸出完整版
         const categoryFull = `${category}_FULL`;
         if (CACHE[categoryFull]) {
             exportPromises.push(exportJson(CACHE[categoryFull], catName, 'public/full/data', true));
             for (const [itemId, itemData] of Object.entries(CACHE[categoryFull])) {
                 exportPromises.push(exportJson(itemData, itemId, `public/full/data/${catName}`, true, false));
             }
+        }
+
+        // 嘗試輸出索引版
+        const categoryIndex = `${category}_INDEX`;
+        if (CACHE[categoryIndex]) {
+            exportPromises.push(exportJson(CACHE[categoryIndex], 'index', `public/data/${catName}`, true));
         }
     }
     await Promise.all(exportPromises);
