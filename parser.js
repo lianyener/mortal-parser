@@ -1619,7 +1619,7 @@ export async function parseDice() {
                 const stat = await getStat(item);
                 const rate = item._rate == 1.0 ? '' : `×${item._rate}`;
                 const op = item._negative ? '-' : '+';
-                result[id].bonus.push(`${op}${stat.name}${rate}`);
+                result[id].bonus.push(`[%${op}${stat.name}${rate}%]`);
                 mergeRelation(result[id].rel.pre, stat.rel);
             }
 
