@@ -2127,7 +2127,7 @@ function buildLogicView(content) {
     if (!content || content.length === 0) {
         return {
             content: [{ form: 'effect', type: 'Remark', text: '※[*System.NA*]' }],
-            effects: []
+            effects: ['Remark']
         };
     }
 
@@ -2194,7 +2194,7 @@ function buildLogicView(content) {
     if (result.length === 0) {
         return {
             content: [{ form: 'effect', type: 'Remark', text: '※[*Custom.OnlyPerform*]' }],
-            effects: []
+            effects: ['Remark']
         }
     }
 
