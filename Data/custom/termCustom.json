@@ -217,7 +217,7 @@
         "Dead": "💀",
         "End": "🔖",
         "Library": "📚",
-        "Talent": "🪄",
+        "Talent": "✨",
         "Book": "📕",
         "Special": "🗝️",
         "Equip": "🛡️",
@@ -237,14 +237,14 @@
         "Battle": "🏹",
         "BattleSkill": "💥",
         "Buff": "💉",
-        "Debuff": "🦠",
-        "Support": "⚕️",
+        "Debuff": "💫",
+        "Support": "💪",
         "Stat": "🧬",
         "Story": "✒️",
         "Say": "🗣️",
         "System": "⚙️",
-        "Remark": "🪧",
-        "Perform": "✨"
+        "Remark": "💡",
+        "Perform": "🎨"
     },
     "MapPosition": {
         "Name": {
