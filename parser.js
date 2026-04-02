@@ -2126,8 +2126,8 @@ function buildLogicView(content) {
     // 空白分歧
     if (!content || content.length === 0) {
         return {
-            content: [{ form: 'effect', type: 'Remark', text: '※[*System.NA*]' }],
-            effects: ['Remark']
+            content: [{ form: 'effect', type: 'Info', text: '※[*System.NA*]' }],
+            effects: ['Info']
         };
     }
 
@@ -2193,8 +2193,8 @@ function buildLogicView(content) {
     // 處理僅演出變化分岐
     if (result.length === 0) {
         return {
-            content: [{ form: 'effect', type: 'Remark', text: '※[*Custom.OnlyPerform*]' }],
-            effects: ['Remark']
+            content: [{ form: 'effect', type: 'Info', text: '※[*Custom.OnlyPerform*]' }],
+            effects: ['Info']
         }
     }
 
@@ -3508,7 +3508,7 @@ export async function parseScript() {
             }
             // 立繪調整
             case 'characters.UnloadCharacterAsset': {
-                content.push({ form: 'effect', type: 'Remark', text: '※[*Custom.ArtChange*]' });
+                content.push({ form: 'effect', type: 'Info', text: '※[*Custom.ArtChange*]' });
                 break;
             }
             // 解析子函式
