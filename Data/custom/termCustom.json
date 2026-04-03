@@ -248,18 +248,18 @@
     },
     "MapPosition": {
         "Name": {
-            "901": "[*Script.ch2_4_3_break_start_01.name*]",
-            "902": "[*Trigger.ch2_2_3_1_travel.name*]",
-            "903": "[*Trigger.ch2_2_4_1_travel.name*]",
-            "904": "[*Trigger.ch3_2_3_1_travel.name*]",
-            "905": "[*Trigger.ch3_6_1_break_01.name*]",
-            "906": "[*Trigger.ch3_15_travel.name*]",
-            "907": "[*Trigger.ch3_1_7_2_01.name*]",
-            "908": "[*Trigger.ch3_1_ch4_7_6_travel7_2_01.name*]",
-            "909": "[*Trigger.S2501_01_travel.name*]",
-            "910": "[*Trigger.S2503_break_01.name*]",
-            "911": "[*Trigger.ch6_3_2_travel.name*]",
-            "912": "[*Trigger.ch6_4_3_break_01.name*]"
+            "901": "[*Script.Name.ch2_4_3_break_start_01*]",
+            "902": "[*Script.Name.ch2_2_3_1_travel*]",
+            "903": "[*Script.Name.ch2_2_4_1_travel*]",
+            "904": "[*Script.Name.ch3_2_3_1_travel*]",
+            "905": "[*Script.Name.ch3_6_1_break_01*]",
+            "906": "[*Script.Name.ch3_15_travel*]",
+            "907": "[*Script.Name.ch3_1_7_2_01*]",
+            "908": "[*Script.Name.ch3_1_ch4_7_6_travel7_2_01*]",
+            "909": "[*Script.Name.S2501_01_travel*]",
+            "910": "[*Script.Name.S2503_break_01*]",
+            "911": "[*Script.Name.ch6_3_2_travel*]",
+            "912": "[*Script.Name.ch6_4_3_break_01*]"
         }
     },
     "Middle": {
