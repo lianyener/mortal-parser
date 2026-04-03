@@ -28,8 +28,10 @@ const CACHE = {
     TRIGGER: null,
     COMBAT: null,
     COMBAT_FULL: null,
+    COMBAT_INDEX: {},
     BATTLE: null,
     POSITION: null,
+    POSITION_INDEX: {},
     SCRIPT: null,
     SCRIPT_FULL: null,
     SCRIPT_INDEX: {},
@@ -4029,7 +4031,7 @@ export async function organizeOutputData() {
     }
 
     // 製作輕量化索引檔案
-    const indexCats = ['SCRIPT'];
+    const indexCats = ['SCRIPT', 'POSITION', 'COMBAT'];
     for (const cat of indexCats) {
         for (const [sourceId, data] of Object.entries(CACHE[cat])) {
             const keywords = new Set();
@@ -4037,6 +4039,18 @@ export async function organizeOutputData() {
             // 擷取內容關鍵字
             if (data.content) {
                 const contentStr = JSON.stringify(data.content);
+                const contentTerms = contentStr.match(regexTerm);
+                for (const term of contentTerms ?? []) keywords.add(term);
+            }
+
+            // 擷取事件關鍵字
+            if (data.event) {
+                for (const eventData of Object.values(data.event) ?? []) {
+                    keywords.add(eventData.script);
+                    keywords.add(`[*Script.Name.${eventData.script}*]`);
+                }
+
+                const contentStr = JSON.stringify(data.event);
                 const contentTerms = contentStr.match(regexTerm);
                 for (const term of contentTerms ?? []) keywords.add(term);
             }
@@ -4055,7 +4069,7 @@ export async function organizeOutputData() {
     const exportPromises = [];
     for (const category of exportCats) {
         const catName = category.toLowerCase();
-        exportPromises.push(exportJson(CACHE[category], catName, 'public/data', true));
+        exportPromises.push(exportJson(CACHE[category], 'all', `public/data/${catName}`, true, false));
         for (const [itemId, itemData] of Object.entries(CACHE[category] ?? {})) {
             exportPromises.push(exportJson(itemData, itemId, `public/data/${catName}`, true, false));
         }
@@ -4063,7 +4077,7 @@ export async function organizeOutputData() {
         // 嘗試輸出完整版
         const categoryFull = `${category}_FULL`;
         if (CACHE[categoryFull]) {
-            exportPromises.push(exportJson(CACHE[categoryFull], catName, 'public/full/data', true));
+            exportPromises.push(exportJson(CACHE[categoryFull], 'all', `public/full/data/${catName}`, true, false));
             for (const [itemId, itemData] of Object.entries(CACHE[categoryFull])) {
                 exportPromises.push(exportJson(itemData, itemId, `public/full/data/${catName}`, true, false));
             }
@@ -4072,10 +4086,11 @@ export async function organizeOutputData() {
         // 嘗試輸出索引版
         const categoryIndex = `${category}_INDEX`;
         if (CACHE[categoryIndex]) {
-            exportPromises.push(exportJson(CACHE[categoryIndex], 'index', `public/data/${catName}`, true));
+            exportPromises.push(exportJson(CACHE[categoryIndex], 'index', `public/data/${catName}`, true, false));
         }
     }
     await Promise.all(exportPromises);
+    writeLog('log', '"Data" organized successfully!');
 }
 
 // 收尾整理在地化用詞表
