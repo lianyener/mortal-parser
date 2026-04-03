@@ -2799,8 +2799,8 @@ export async function parseScript() {
     const regexDice = /^"(\w+)\|([=><]+)(\d+)"$/;
     const regexGE = /^>=$/;
     const regexLE = /^<=$/;
-    const regexFlagLabel = /\[%\[\*Label\.Flag,(\w+)\.(\d+)\*\]%\]/;
-    const regexFlagValue = /\[\*Flag\.(\w+)\.(\d+)\.(-?\d+)\*\]/;
+    const regexFlagCheck = /^\[%\[\*Label\.Flag,(\w+)\.(\d+)\*\]%\]$/;
+    const regexFlagValue = /^\[\*Flag\.(\w+)\.(\d+)\.(-?\d+)\*\]$/;
     const regexXFull = /\[%\[\*Flag\.(\w+)\.X\*\]([<>=≤≥≠])\[\*Flag\.\w+\.X\.(-?\d+)\*\]%\]/g;
     const regexXName = /\[\*Flag\.(\w+)\.X\*\]/g;
     const regexXValue = /\[\*Flag\.(\w+)\.X\.(-?\d+)\*\]/g;
@@ -3021,8 +3021,10 @@ export async function parseScript() {
     // Helper: 檢查是否有Switch潛在旗標名稱
     const getPotentialBranchLabel = (check, labels, index) => {
 
+        const cleanLabels = labels.filter(Boolean);
+
         // 檢查是否為旗標
-        const match = check.match(regexFlagLabel);
+        const match = check.match(regexFlagCheck);
         if (match) {
             const flagId = match[1];
             const flagIndex = match[2];
@@ -3032,8 +3034,7 @@ export async function parseScript() {
             if (flagValueCount < 2) return null;
 
             // 標籤轉成旗標值索引
-            const labelIndex = labels.map(label => {
-                if (!label) return '';
+            const labelIndex = cleanLabels.map(label => {
                 const matchVal = label.match(regexFlagValue);
                 if (matchVal) return matchVal[3];
                 return '';
@@ -3051,8 +3052,8 @@ export async function parseScript() {
             if (unusedValue.length === 1) return `[*Flag.${flagId}.${flagIndex}.${unusedValue[0]}*]`;
             else if (unusedValue.length > 1) return null;
         }
-        else if (labels.length === 0) {
-            return index == 1 ? '[*Custom.True*]' : index == 2 ? '[*Custom.False*]' : null;
+        else if (cleanLabels.length === 0) {
+            return index === 1 ? '[*Custom.True*]' : index === 2 ? '[*Custom.False*]' : null;
         }
         return null;
     };
@@ -3522,7 +3523,7 @@ export async function parseScript() {
                 // 記錄資訊
                 const id = removeQuote(node.arguments[0]?.arguments[0].raw ?? node.arguments[0].raw);
                 const type = cache?.say?.type ?? 'unknown';
-                const character = cache?.say?.character ?? '[*Character.Name.unknown*]';
+                const character = cache?.say?.character ?? '[*Character.unknown*]';
                 const text = `${character}[*DialogType.${type}*]「[*Story.${id}*]」`;
 
                 // 回存內容
@@ -3541,7 +3542,7 @@ export async function parseScript() {
                 if (id == 'narrative') cache.say.character = '';
                 else {
                     const character = removeQuote(id);
-                    cache.say.character = `[*Character.Name.${character}*]`;
+                    cache.say.character = `[*Character.${character}*]`;
                     mergeCharacterRelation(rel.intra, character);
                 }
                 break;

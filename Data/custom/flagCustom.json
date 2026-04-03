@@ -5685,8 +5685,8 @@
         "script": [],
         "name": "隨大師兄下山",
         "value": {
-          "0": "[*Custom.False*]",
-          "1": "[*Custom.True*]"
+          "1": "[*Custom.False*]",
+          "2": "[*Custom.True*]"
         },
         "desc": "決鬥臥雲崗路線｜1 不跟隨大師兄｜2 跟隨大師兄"
       }
