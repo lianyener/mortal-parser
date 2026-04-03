@@ -2060,7 +2060,7 @@ export async function parsePosition() {
                 const event = {
                     name: mapData.Key,
                     condition: [],
-                    rate: [eventData._defaultRate.toString()],
+                    rate: [`[#${eventData._defaultRate}#]`],
                     script,
                     remark: []
                 };
@@ -2088,7 +2088,7 @@ export async function parsePosition() {
                         rules.push(statment.text);
                         mergeRelation(result[key].rel.pre, statment.rel);
                     }
-                    event.rate.push(`${rules.join('[*Custom.And*]')} +${subItem._rate ?? '?'}`);
+                    event.rate.push(`${rules.join('[*Custom.And*]')}[#${subItem._rate >= 0 ? '+' : ''}${subItem._rate ?? '?'}#]`);
                 }
 
                 // 清單重複處理

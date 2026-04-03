@@ -170,7 +170,7 @@
         "Position": "[*LabelIcon.Position*][*Position.Action.{0}*]",
         "Mission": "[*LabelIcon.Mission*][*Mission.Name.{0}*]",
         "Trigger": "[*LabelIcon.Trigger*][*Trigger.Name.{0}*]",
-        "Time": "[*LabelIcon.Time*][*Time.{0}*]",
+        "Time": "[*LabelIcon.Time*]{0}",
         "Script": "[*LabelIcon.Script*]{0}",
         "Free": "[*LabelIcon.Free*][*Free.{0}*]",
         "Combat": "[*LabelIcon.Combat*]{0}",
@@ -255,7 +255,7 @@
             "905": "[*Script.Name.ch3_6_1_break_01*]",
             "906": "[*Script.Name.ch3_15_travel*]",
             "907": "[*Script.Name.ch3_1_7_2_01*]",
-            "908": "[*Script.Name.ch3_1_ch4_7_6_travel7_2_01*]",
+            "908": "[*Script.Name.ch4_7_6_travel*]",
             "909": "[*Script.Name.S2501_01_travel*]",
             "910": "[*Script.Name.S2503_break_01*]",
             "911": "[*Script.Name.ch6_3_2_travel*]",
@@ -307,6 +307,15 @@
             "Common": {
                 "0": "觸發清單列了2次，實際權重應視為2倍"
             }
+        },
+        "Class": {
+            "0": "正常",
+            "1": "失敗",
+            "2": "大失敗",
+            "3": "成功",
+            "4": "大成功",
+            "5": "特殊",
+            "9": "其他"
         }
     },
     "Story": {
@@ -352,7 +361,8 @@
             "Say": "對話",
             "Info": "註記",
             "System": "系統",
-            "Perform": "圖片特效"
+            "Perform": "圖片特效",
+            "Event": "[*Web.Event*]"
         },
         "Msg": {
             "NotFound": "找不到{0}",
@@ -371,6 +381,9 @@
         "Period": "時期",
         "Position": "地點",
         "Action": "動作",
+        "Class": "類別",
+        "Condition": "條件",
+        "Rate": "權重",
         "Init": "初始值",
         "Event": "事件",
         "Item": "參照項目",
