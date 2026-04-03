@@ -5,8 +5,6 @@ import { mkdir } from 'fs/promises';
 import luaparse from 'luaparse';
 import path from 'path';
 import * as OpenCC from "opencc-js";
-import { stat } from 'fs';
-import { stringify } from 'querystring';
 
 // 路徑常數
 const GAME_PATH = './Game';
@@ -31,7 +29,6 @@ const CACHE = {
     COMBAT_INDEX: {},
     BATTLE: null,
     POSITION: null,
-    POSITION_INDEX: {},
     SCRIPT: null,
     SCRIPT_FULL: null,
     SCRIPT_INDEX: {},
@@ -4031,8 +4028,9 @@ export async function organizeOutputData() {
     }
 
     // 製作輕量化索引檔案
-    const indexCats = ['SCRIPT', 'POSITION', 'COMBAT'];
-    for (const cat of indexCats) {
+    const indexCats = ['SCRIPT', 'COMBAT'];
+    const searchCats = ['POSITION'];
+    for (const cat of indexCats.concat(searchCats)) {
         for (const [sourceId, data] of Object.entries(CACHE[cat])) {
             const keywords = new Set();
 
@@ -4060,7 +4058,10 @@ export async function organizeOutputData() {
                 keywords.add(`[*Label.Character,${characterId}*]`);
             }
 
-            CACHE[`${cat}_INDEX`][sourceId] = { searchText: Array.from(keywords).join(',') };
+            // 回存檢索用字串
+            const searchText = Array.from(keywords).join(',');
+            if (indexCats.includes(cat)) CACHE[`${cat}_INDEX`][sourceId] = { searchText };
+            else CACHE[cat][sourceId].searchText = searchText;
         }
     }
 
