@@ -2152,7 +2152,7 @@ function buildLogicView(content) {
             currentEffects.add(node.type);
         }
         else if (node.form === 'perform') {
-            flushEffects();
+            if (node.type === 'Say') flushEffects();
         }
         else if (node.form === 'branch') {
             flushEffects();
@@ -2275,9 +2275,9 @@ export async function parseCombat() {
         for (const item of results ?? []) {
             const flagId = removeUid(item._flag._name);
             const state = item._state || 0;
-            const text = handleFlagStatement(flagId, state, combatId);
+            const stat = handleFlagStatement(flagId, state, combatId);
             mergeRelation(rel.post, { Flag: [flagId] });
-            content.push({ form: 'effect', type: 'Flag', text });
+            content.push({ form: 'effect', type: 'Flag', text: stat.text });
         }
         return content;
     };
@@ -2333,7 +2333,7 @@ export async function parseCombat() {
                             else if (dialogChar.endsWith('旁白')) dialog.type = 'narration';
 
                             const text = `${dialog.char}[*DialogType.${dialog.type}*]「${dialog.lines}」`;
-                            content.push({ form: 'perform', type: 'Say', text })
+                            content.push({ form: 'perform', type: 'Dialog', text })
                         }
                         return { content };
                     }
@@ -2586,7 +2586,7 @@ export async function parseCombat() {
                 loseResults.push({ form: 'effect', type: 'Dead', text: deadEndName });
                 mergeRelation(combat.rel.post, { Dead: [libraryId] });
             }
-            branch.branches.push({ index: 0, text: '[*Custom.Loss*]', content: loseResults });
+            branch.branches.push({ index: 0, text: '[*Custom.Lost*]', content: loseResults });
 
             const logic = buildLogicView(combat.content);
             result[id] = combat;
@@ -4028,8 +4028,8 @@ export async function organizeOutputData() {
     }
 
     // 製作輕量化索引檔案
-    const indexCats = ['SCRIPT', 'COMBAT'];
-    const searchCats = ['POSITION'];
+    const indexCats = ['SCRIPT'];
+    const searchCats = ['POSITION', 'COMBAT', 'BATTLE'];
     for (const cat of indexCats.concat(searchCats)) {
         for (const [sourceId, data] of Object.entries(CACHE[cat])) {
             const keywords = new Set();
@@ -4049,6 +4049,13 @@ export async function organizeOutputData() {
                 }
 
                 const contentStr = JSON.stringify(data.event);
+                const contentTerms = contentStr.match(regexTerm);
+                for (const term of contentTerms ?? []) keywords.add(term);
+            }
+
+            // 擷取陣容關鍵字
+            if (data.friend) {
+                const contentStr = JSON.stringify(data.friend) + JSON.stringify(data.enemy) + JSON.stringify(data.neutral);
                 const contentTerms = contentStr.match(regexTerm);
                 for (const term of contentTerms ?? []) keywords.add(term);
             }

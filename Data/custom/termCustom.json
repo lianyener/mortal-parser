@@ -327,7 +327,8 @@
         "Term": {
             "Info": "資訊",
             "Data": "資料",
-            "List": "清單"
+            "List": "清單",
+            "All": "全部"
         },
         "Label": {
             "Achievement": "[*System.Menu.LibraryAchievement*]",
@@ -365,7 +366,7 @@
             "Event": "[*Web.Event*]"
         },
         "Msg": {
-            "NotFound": "找不到{0}",
+            "NotFound": "找不到[*Web.Label.{0}*]",
             "Loading": "[*Web.Label.{0}*]資料載入中...",
             "LoadError": "[*Web.Label.{0}*]資料載入失敗",
             "BuildingCache": "索引建立中...",
@@ -385,6 +386,13 @@
         "Condition": "條件",
         "Rate": "權重",
         "Init": "初始值",
+        "Enemy": "敵方",
+        "Friend": "我方",
+        "Neutral": "中立",
+        "Type": "類型",
+        "End": "結束條件",
+        "People": "人數",
+        "Team": "陣容",
         "Event": "事件",
         "Item": "參照項目",
         "ItemInfo": "[*LabelIcon.{0}*][*Web.Label.{0}*][*Web.Item*]",
@@ -399,6 +407,7 @@
         "List": "[*Web.Label.{0}*][*Web.Term.List*]",
         "Data": "[*Web.Label.{0}*][*Web.Term.Data*]",
         "Content": "分岐內容",
+        "BattleContent": "戰役內容",
         "Relations": "關聯項目",
         "Rel": {
             "pre": "受到影響",
