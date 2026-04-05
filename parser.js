@@ -2677,7 +2677,10 @@ export async function parseBattle() {
                 friend: {},
                 enemy: {},
                 neutral: {},
-                end: ['[*Custom.PlayerDie*]'],
+                end: [
+                    { condition: '[%[*Custom.GiveUp*]%]', result: '[*Label.Flag,BattleResult_001.0*]=[*Flag.BattleResult_001.0.0*]' },
+                    { condition: '[%[*Custom.PlayerDie*]%]', result: '[*Custom.BattleDie*]' }
+                ],
                 rel: { pre: {} }
             };
 
@@ -2737,8 +2740,20 @@ export async function parseBattle() {
             else result[id].neutral.people = '';
 
             // 結束條件
-            if (data._victoryDefeat) result[id].end.unshift('[*Custom.Defeat*]');
-            if (data._victoryTimeout) result[id].end.unshift(`[*Custom.Timeout*](${data._time} [*Custom.Second*])`);
+            if (data._victoryDefeat) {
+                result[id].end.unshift({ condition: '[%[*Custom.FriendDefeat*]%]', result: '[*Label.Flag,BattleResult_001.0*]=[*Flag.BattleResult_001.0.0*]' });
+                result[id].end.unshift({ condition: '[%[*Custom.EnemyDefeat*]%]', result: '[*Label.Flag,BattleResult_001.0*]=[*Flag.BattleResult_001.0.1*]' });
+            }
+            if (data._victoryTimeout) {
+                result[id].end.unshift({ 
+                    condition: `[%[*Custom.Timeout,${data._time}*]%][*Custom.And*][%[*Custom.Player*][*PlayerStat.npcs*]<[*Custom.Enemy*][*PlayerStat.npcs*]%]`, 
+                    result: '[*Label.Flag,BattleResult_001.0*]=[*Flag.BattleResult_001.0.0*]'
+                });
+                result[id].end.unshift({ 
+                    condition: `[%[*Custom.Timeout,${data._time}*]%][*Custom.And*][%[*Custom.Player*][*PlayerStat.npcs*]≥[*Custom.Enemy*][*PlayerStat.npcs*]%]`, 
+                    result: '[*Label.Flag,BattleResult_001.0*]=[*Flag.BattleResult_001.0.1*]'
+                });
+            }
 
             // 處理命名草稿
             const friendsName = friends.map(f => CACHE.TERM.TEAM?.[f.id]).join('+');

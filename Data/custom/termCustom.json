@@ -69,9 +69,12 @@
         "NotHit": "未命中",
         "Success": "成功",
         "Failed": "失敗",
-        "Timeout": "時間結束",
-        "Defeat": "一方全滅",
-        "PlayerDie": "主角死亡(遊戲結束)",
+        "GiveUp": "投降",
+        "Timeout": "時間結束({0}[*Custom.Second*])",
+        "EnemyDefeat": "[*Custom.Enemy*]全滅",
+        "FriendDefeat": "[*Custom.Player*]全滅",
+        "PlayerDie": "[*Character.Player*]死亡",
+        "BattleDie": "[*LabelIcon.Dead*]戰死 (不計入[*System.Menu.LibraryDead*])",
         "Second": "秒",
         "ResetTalkFlag": "重置對話旗標",
         "Get": "獲得",
@@ -275,7 +278,8 @@
         "total-contribution": "[*Custom.Total*][*PlayerStat.contribution*]",
         "action-count": "[*PlayerStat.action*]",
         "hp": "血量",
-        "sp": "氣力"
+        "sp": "氣力",
+        "npcs": "人數"
     },
     "Position": {
         "Name": {
