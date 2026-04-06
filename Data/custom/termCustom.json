@@ -375,7 +375,7 @@
             "Story": "[*System.Title.Legend*]",
             "Say": "對話",
             "Info": "註記",
-            "System": "系統",
+            "System": "[*System.System*]",
             "Perform": "圖片特效",
             "Event": "[*Web.Event*]"
         },
@@ -385,7 +385,7 @@
             "LoadError": "[*Web.Label.{0}*]資料載入失敗",
             "BuildingCache": "索引建立中...",
             "SearchPlaceholder": "ID, 名稱, 關鍵字...",
-            "NoData": "無符合資料",
+            "NoData": "[*System.NoData*]",
             "FilterSwitch": "僅顯示有影響勾選類別的檢定"
         },
         "Id": "索引代碼",
@@ -411,6 +411,10 @@
         "MaxTime": "最晚觸發時間",
         "Active": "有效",
         "InitTrigger": "起始觸發",
+        "Cost": "價格",
+        "Level": "[*System.Level*]",
+        "Faction": "[*PlayerStat.faction*]",
+        "Learned": "學習效果",
         "Item": "參照項目",
         "ItemInfo": "[*LabelIcon.{0}*][*Web.Label.{0}*][*Web.Item*]",
         "About": "關於",
@@ -452,6 +456,7 @@
         "ActiveOnly": "僅有效",
         "UnknownNode": "未知節點",
         "OpenInMainPage": "於主頁面開啟",
-        "Close": "關閉"
+        "Close": "關閉",
+        "NotMartial": "非武學"
     }
 }

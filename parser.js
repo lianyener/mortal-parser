@@ -1334,12 +1334,12 @@ export async function parseEquip(doExport = true) {
     const result = {};
     const ref = {};
     const typeMap = {
-        靈丹: 'Medi',
-        毒藥: 'Poison',
+        煉丹: 'Medi',
+        毒術: 'Poison',
         陷阱: 'Trap',
         拋射: 'Projectile',
         平射: 'Dart',
-        裝備: 'Equip',
+        防具: 'Equip',
         武器: 'Melee'
     }
 
