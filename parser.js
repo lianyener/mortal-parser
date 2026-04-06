@@ -955,6 +955,11 @@ export async function parseTerm(doExport = true) {
             case 'Middle':
             case 'CombatAction':
             case 'CharacterTitle':
+            case 'CharacterIntro0':
+            case 'CharacterIntro1':
+            case 'CharacterIntro2':
+            case 'CharacterIntro3':
+            case 'CharacterIntro4':
                 safeAssign(term, [category, id.toLowerCase()], val);
                 break;
             case 'Character':
@@ -976,11 +981,6 @@ export async function parseTerm(doExport = true) {
             }
             case 'LegendInfo':
             case 'CombatTalking':
-            case 'CharacterIntro0':
-            case 'CharacterIntro1':
-            case 'CharacterIntro2':
-            case 'CharacterIntro3':
-            case 'CharacterIntro4':
             case 'BattleDialog':
                 safeAssign(dialog, [category, id], val.replace(regexNewLine, ''));
                 break;
@@ -2353,9 +2353,9 @@ export async function parseCombat() {
                     // 設定旗標
                     case 'CombatEventActionModifyFlag': {
                         const flagId = removeUid(data._flag._name);
-                        const text = handleFlagStatement(flagId, data._state, combatId);
+                        const stat = handleFlagStatement(flagId, data._state, combatId);
                         return {
-                            content: [{ form: 'effect', type: 'Flag', text }],
+                            content: [{ form: 'effect', type: 'Flag', text: stat.text }],
                             rel: { post: { Flag: [flagId] } }
                         };
                     }

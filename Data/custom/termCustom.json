@@ -331,6 +331,7 @@
         "SiteTitle": "活俠傳事件分岐資料庫",
         "SiteDescription": "提供檢視遊戲劇本、事件、分歧與其關聯資訊的資料庫",
         "Term": {
+            "Content": "內容",
             "Info": "資訊",
             "Data": "資料",
             "List": "清單",
@@ -422,10 +423,8 @@
         "Info": "[*Web.Label.{0}*][*Web.Term.Info*]",
         "List": "[*Web.Label.{0}*][*Web.Term.List*]",
         "Data": "[*Web.Label.{0}*][*Web.Term.Data*]",
-        "Content": "分岐內容",
-        "BattleContent": "戰役內容",
-        "TriggerContent": "任務觸發內容",
-        "MissionContent": "任務內容",
+        "Content": "[*Web.Label.{0}*][*Web.Term.Content*]",
+        "BranchContent": "分岐內容",
         "End": "結束分岐",
         "Relations": "關聯項目",
         "Rel": {
@@ -451,6 +450,8 @@
         "ShowInactive": "顯示無效",
         "HideInactive": "隱藏無效",
         "ActiveOnly": "僅有效",
-        "UnknownNode": "未知節點"
+        "UnknownNode": "未知節點",
+        "OpenInMainPage": "於主頁面開啟",
+        "Close": "關閉"
     }
 }
