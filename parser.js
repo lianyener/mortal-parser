@@ -1363,7 +1363,7 @@ export async function parseEquip(doExport = true) {
             // 記錄可轉換開發項目
             for (const item of data._evolutionItems ?? []) {
                 const evoId = await queryItemId(item._nextItem._name, ref, 'UpgradeItemData');
-                const evoItem = { name: `[*Equip.Name.${evoId}*]`, condition: [] };
+                const evoItem = { name: `[*Label.Equip,${evoId}*]`, condition: [] };
                 mergeRelation(result[id].rel.post, { Equip: [evoId] });
 
                 // 等級要求

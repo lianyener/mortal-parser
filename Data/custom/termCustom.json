@@ -415,6 +415,7 @@
         "Level": "[*System.Level*]",
         "Faction": "[*PlayerStat.faction*]",
         "Learned": "學習效果",
+        "Evolution": "變化項目",
         "Item": "參照項目",
         "ItemInfo": "[*LabelIcon.{0}*][*Web.Label.{0}*][*Web.Item*]",
         "About": "關於",
