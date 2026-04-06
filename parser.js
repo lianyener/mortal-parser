@@ -1813,7 +1813,7 @@ export async function parseMission() {
                 const position = triggerData._position;
                 const priority = type == 'Main' ? 1 : triggerData._beforeMainMission ? 0 : 2;
                 if (position != '無') {
-                    triggerObj.condition.push(`[*Custom.GoTo*][*Label.Position,${positionMap[position] ?? 'Unknown'}*]`);
+                    triggerObj.condition.push(`[*Custom.GoTo*][*Label.Place,${positionMap[position] ?? 'Unknown'}*]`);
                 }
                 else if (priority != 1) {
                     triggerObj.condition.push(`※[*Custom.TriggerPriority,${priority ? 'LowerThan' : 'HigherThan'}*]`);
@@ -1860,7 +1860,7 @@ export async function parseMission() {
                 script: data._defaultScript,
                 content: [],
                 remark: [],
-                condition: [`[*Custom.GoTo*][*Label.Position,${id}*]`],
+                condition: [`[*Custom.GoTo*][*Label.Place,${id}*]`],
                 rel: { pre: {}, post: {}, to: { Script: [data._defaultScript] }, from: { Mission: ['free'] } },
                 type: 'Free',
                 minTime: { year: '1', month: '4', stage: '1' },
@@ -2745,12 +2745,12 @@ export async function parseBattle() {
                 result[id].end.unshift({ condition: '[%[*Custom.EnemyDefeat*]%]', result: '[*Label.Flag,BattleResult_001.0*]=[*Flag.BattleResult_001.0.1*]' });
             }
             if (data._victoryTimeout) {
-                result[id].end.unshift({ 
-                    condition: `[%[*Custom.Timeout,${data._time}*]%][*Custom.And*][%[*Custom.Player*][*PlayerStat.npcs*]<[*Custom.Enemy*][*PlayerStat.npcs*]%]`, 
+                result[id].end.unshift({
+                    condition: `[%[*Custom.Timeout,${data._time}*]%][*Custom.And*][%[*Custom.Player*][*PlayerStat.npcs*]<[*Custom.Enemy*][*PlayerStat.npcs*]%]`,
                     result: '[*Label.Flag,BattleResult_001.0*]=[*Flag.BattleResult_001.0.0*]'
                 });
-                result[id].end.unshift({ 
-                    condition: `[%[*Custom.Timeout,${data._time}*]%][*Custom.And*][%[*Custom.Player*][*PlayerStat.npcs*]≥[*Custom.Enemy*][*PlayerStat.npcs*]%]`, 
+                result[id].end.unshift({
+                    condition: `[%[*Custom.Timeout,${data._time}*]%][*Custom.And*][%[*Custom.Player*][*PlayerStat.npcs*]≥[*Custom.Enemy*][*PlayerStat.npcs*]%]`,
                     result: '[*Label.Flag,BattleResult_001.0*]=[*Flag.BattleResult_001.0.1*]'
                 });
             }
@@ -4042,21 +4042,30 @@ export async function organizeOutputData() {
         }
     }
 
-    // 製作輕量化索引檔案
+    // 製作輕量化索引
     const indexCats = ['SCRIPT'];
-    const searchCats = ['POSITION', 'COMBAT', 'BATTLE'];
+    const searchCats = ['TRIGGER', 'POSITION', 'COMBAT', 'BATTLE'];
     for (const cat of indexCats.concat(searchCats)) {
         for (const [sourceId, data] of Object.entries(CACHE[cat])) {
             const keywords = new Set();
 
             // 擷取內容關鍵字
-            if (data.content) {
-                const contentStr = JSON.stringify(data.content);
-                const contentTerms = contentStr.match(regexTerm);
-                for (const term of contentTerms ?? []) keywords.add(term);
+            const contents = ['content', 'friend', 'enemy', 'neutral', 'condition'];
+            for (const content of contents) {
+                if (data[content]) {
+                    const contentStr = JSON.stringify(data[content]);
+                    const contentTerms = contentStr.match(regexTerm);
+                    for (const term of contentTerms ?? []) keywords.add(term);
+                }
             }
 
             // 擷取事件關鍵字
+            if (data.mission) {
+                keywords.add(`[*Mission.Name.${data.mission}*]`);
+            }
+            if (data.script) {
+                keywords.add(`[*Script.Name.${data.script}*]`);
+            }
             if (data.event) {
                 for (const eventData of Object.values(data.event) ?? []) {
                     keywords.add(eventData.script);
@@ -4064,13 +4073,6 @@ export async function organizeOutputData() {
                 }
 
                 const contentStr = JSON.stringify(data.event);
-                const contentTerms = contentStr.match(regexTerm);
-                for (const term of contentTerms ?? []) keywords.add(term);
-            }
-
-            // 擷取陣容關鍵字
-            if (data.friend) {
-                const contentStr = JSON.stringify(data.friend) + JSON.stringify(data.enemy) + JSON.stringify(data.neutral);
                 const contentTerms = contentStr.match(regexTerm);
                 for (const term of contentTerms ?? []) keywords.add(term);
             }
