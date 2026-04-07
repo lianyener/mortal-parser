@@ -1237,7 +1237,74 @@ export async function parseBook(doExport = true) {
         拳掌: 'Fist',
         刀劍: 'Sword',
         暗器: 'Weapon'
-    }
+    };
+
+    // Helper: 銀行家捨入法 (四捨六入五成雙)
+    const bankersRound = (num) => {
+        const m = num % 1;
+        if (m === 0.5 || m === -0.5) {
+            const floorStr = Math.floor(num);
+            return (floorStr % 2 === 0) ? floorStr : floorStr + 1;
+        }
+        return Math.round(num);
+    };
+
+    // Helper: 泛用型曲線解析器
+    const evaluateCurve = (curve, time) => {
+        if (!curve || curve.length === 0) return 0;
+        if (time <= curve[0].time) return curve[0].value;
+        if (time >= curve[curve.length - 1].time) return curve[curve.length - 1].value;
+
+        for (let i = 0; i < curve.length - 1; i++) {
+            let k0 = curve[i];
+            let k1 = curve[i + 1];
+
+            if (time >= k0.time && time < k1.time) {
+                if (k0.outTangent === "Infinity" || k1.inTangent === "Infinity") {
+                    return k0.value;
+                }
+
+                let dt = k1.time - k0.time;
+                let t_norm = (time - k0.time) / dt;
+
+                let t2 = t_norm * t_norm;
+                let t3 = t2 * t_norm;
+
+                let m0 = k0.outTangent * dt;
+                let m1 = k1.inTangent * dt;
+
+                let h00 = 2 * t3 - 3 * t2 + 1;
+                let h10 = t3 - 2 * t2 + t_norm;
+                let h01 = -2 * t3 + 3 * t2;
+                let h11 = t3 - t2;
+
+                return h00 * k0.value + h10 * m0 + h01 * k1.value + h11 * m1;
+            }
+        }
+        return 0;
+    };
+
+    // Helper: 產生完整的各等級提升數值陣列
+    const generateLevelData = (target, statName, curveData, maxLevel) => {
+        let currentTotal = 0;
+
+        // 等級從 1 開始遍歷到上限
+        for (let level = 1; level <= maxLevel; level++) {
+            const time = level / maxLevel;
+            const rawValue = evaluateCurve(curveData, time);
+            const roundedValue = bankersRound(rawValue);
+            const gain = roundedValue - currentTotal;
+
+            // 紀錄提升量
+            if (gain !== 0) {
+                const sign = gain < 0 ? '' : '+';
+                target[level - 1].effect.push(`${statName}${sign}${gain}`);
+            }
+
+            // 更新當前總和供下一輪計算
+            currentTotal = roundedValue;
+        }
+    };
 
     // 主要處理流程
     const process = async (file) => {
@@ -1253,32 +1320,28 @@ export async function parseBook(doExport = true) {
                 martial: data._martial,
                 type: data._martial ? typeMap?.[data._martialType] : '',
                 level: data._martialLevelData.length,
-                condition: [],
-                learned: [],
+                levels: [],
                 rel: { pre: {}, post: {} }
             };
             ref[removeExt(file)] = id;
 
-            // 紀錄影響
-            for (const statItem of data._relationStatConvert ?? []) {
-                const statName = statItem._name;
-                const statData = await getGameJson(statName, statItem._type);
-                if (!isValidJson(statData, statName)) continue;
-
-                const stat = await getStat(statData._relationStat);
-                result[id].learned.push(stat.name);
-                mergeRelation(result[id].rel.post, stat.rel);
-            }
-
             // 紀錄等級資料
-            for (const levelItem of data._martialLevelData ?? []) {
-                const levelName = levelItem._name;
-                const levelData = await getGameJson(levelItem._name, 'MartialLevelData');
-                if (!isValidJson(levelData, levelName)) continue;
+            for (let i = 0; i < data._martialLevelData.length; i++) {
 
-                const conditionName = levelData?._condition._name;
-                const conditionData = await getGameJson(conditionName, 'MartialLearnCondition');
-                if (!isValidJson(conditionData, conditionName)) continue;
+                const levelItem = data._martialLevelData[i];
+                const levelFile = levelItem._name;
+                const levelData = await getGameJson(levelFile, 'MartialLevelData');
+                if (!isValidJson(levelData, levelFile)) continue;
+
+                const conditionFile = levelData?._condition._name;
+                const conditionData = await getGameJson(conditionFile, 'MartialLearnCondition');
+                if (!isValidJson(conditionData, conditionFile)) continue;
+
+                result[id].levels[i] = {
+                    point: levelData._points,
+                    condition: '',
+                    effect: [],
+                };
 
                 // 紀錄條件
                 const rules = [];
@@ -1286,25 +1349,40 @@ export async function parseBook(doExport = true) {
                     const rule = [];
                     for (const subItem of item._itemList) {
                         const stat = await getStat(subItem._stat);
-                        const statment = `${stat.name}${convertComparison(subItem._compareOp)}${subItem._value}`;
+                        const statment = `[%${stat.name}${convertComparison(subItem._compareOp)}${subItem._value}%]`;
                         rule.push(statment);
                         mergeRelation(result[id].rel.pre, stat.rel);
                     }
 
                     if (rule.length > 0) rules.push(rule.join('[*Custom.Or*]'));
-                    else writeLog('warn', `1 rule of Condition "${conditionName}" skipped.`);
+                    else writeLog('warn', `1 rule of Condition "${conditionFile}" skipped.`);
                 }
+                if (rules.length === 0) result[id].levels[i].condition = '[*System.NA*]';
+                else result[id].levels[i].condition = rules.join('[*Custom.And*]');
 
-                // 無條件
-                if (rules.length === 0) result[id].condition.push('[*System.NA*]')
-                else result[id].condition.push(rules.join('[*Custom.And*]'));
-
-                // 紀錄其他影響
+                // 紀錄額外影響
                 for (const statItem of levelData._levelupStats ?? []) {
                     const stat = await getStat(statItem._stat);
-                    if (!result[id].learned.includes(stat.name)) result[id].learned.push(stat.name);
+                    const val = statItem._value;
+                    const sign = statItem?._center ? '±' : (!Number.isNaN(val) && val < 0) ? '' : '+';
+                    result[id].levels[i].effect.push(`${stat.name}${sign}${val}`);
                     mergeRelation(result[id].rel.post, stat.rel);
                 }
+            }
+
+            // 紀錄影響
+            for (const statItem of data._relationStatConvert ?? []) {
+                const statFile = statItem._name;
+                const statData = await getGameJson(statFile, statItem._type);
+                if (!isValidJson(statData, statFile)) continue;
+
+                const stat = await getStat(statData._relationStat);
+
+                // 等級資料重複紀錄，這邊跳過
+                if (stat.type == 'Talent') continue;
+
+                generateLevelData(result[id].levels, stat.name, statData._curve, result[id].level);
+                mergeRelation(result[id].rel.post, stat.rel);
             }
         }
         catch (err) {
