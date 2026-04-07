@@ -1681,10 +1681,11 @@ export async function parseMission() {
     }
 
     // 讀取檔案清單、自訂資料、前置Cache
-    const [missionFiles, freeFiles, custom, nameDraft] = await Promise.all([
+    const [missionFiles, freeFiles, triggerCustom, missionCustom, nameDraft] = await Promise.all([
         getJsonList('MissionData'),
         getJsonList('FreePositionData'),
         getDataJson('triggerCustom'),
+        getDataJson('missionCustom'),
         getDataJson('missionName'),
         loadCache(['GROUP', 'FLAG'])
     ]);
@@ -1698,7 +1699,8 @@ export async function parseMission() {
     // 追加自訂觸發
     mission['free'] = {
         trigger: [],
-        init: ''
+        init: '',
+        remark: Array.from(missionCustom?.free?.remark ?? [], (_, i) => `[*Mission.Remark.free.${i}*]`),
     };
     trigger['M0000_00'] = {
         mission: 'main',
@@ -1708,7 +1710,7 @@ export async function parseMission() {
         condition: ['※[*Custom.GameStart*]'],
         script: 'ch1_1',
         content: [],
-        remark: Array.from(custom?.['M0000_00']?.remark ?? [], (_, i) => `[*Trigger.Remark.M0000_00.${i}*]`),
+        remark: Array.from(triggerCustom?.['M0000_00']?.remark ?? [], (_, i) => `[*Trigger.Remark.M0000_00.${i}*]`),
         rel: { pre: {}, to: { Script: ['ch1_1'] }, from: { Mission: ['main'] } },
         type: 'Main',
         orderKey: '1-04-1-1-M0000_00'
@@ -1732,7 +1734,8 @@ export async function parseMission() {
             const missionId = missionData._name;
             mission[missionId] = {
                 trigger: [],
-                init: missionData._initKey
+                init: missionData._initKey,
+                remark: Array.from(missionCustom?.[missionId]?.remark ?? [], (_, i) => `[*Mission.Remark.${missionId}.${i}*]`),
             };
             updateNameDraftItem(nameDraft.mission, missionId, (missionData._desc ?? '').trim());
 
@@ -1748,12 +1751,12 @@ export async function parseMission() {
                 const triggerObj = {
                     mission: missionId,
                     active: triggerData._active,
-                    minTime: custom?.[triggerId]?.time ?? { year: '1', month: '4', stage: '1' },
+                    minTime: triggerCustom?.[triggerId]?.time ?? { year: '1', month: '4', stage: '1' },
                     maxTime: { year: '', month: '', stage: '' },
                     condition: [],
                     script: triggerData._startScript,
                     content: [],
-                    remark: Array.from(custom?.[triggerId]?.remark ?? [], (_, i) => `[*Trigger.Remark.${triggerId}.${i}*]`),
+                    remark: Array.from(triggerCustom?.[triggerId]?.remark ?? [], (_, i) => `[*Trigger.Remark.${triggerId}.${i}*]`),
                     rel: { pre: {}, to: {}, from: { Mission: [missionId] } }
                 };
                 if (triggerObj.script) mergeRelation(triggerObj.rel.to, { Script: [triggerObj.script] });
@@ -2279,7 +2282,7 @@ export async function parseCombat() {
             mergeRelation(rel.post, { Flag: [flagId] });
             content.push({ form: 'effect', type: 'Flag', text: stat.text });
         }
-        return content;
+        return content.length > 0 ? content : [{ form: 'effect', type: 'Remark', text: '※[*System.NA*]' }];
     };
 
     // 行動處理流程
@@ -3245,13 +3248,15 @@ export async function parseScript() {
 
                 // 屬性值心上人額外處理
                 if (name == '[*Label.Stat,lover*]' && !Number.isNaN(val)) {
-                    val = `[*PlayerInfo.Lover.${val}*]`;
 
                     // 增加關聯角色
                     const loverId = LOVER_MAP[val];
                     if (loverId) {
                         val = `[*Label.Character,${loverId}*]`;
                         mergeRelation(rel.post, { Character: [loverId] });
+                    }
+                    else {
+                        val = `[*PlayerInfo.Lover.${val}*]`;
                     }
                 }
                 // 屬性值稱號額外處理
@@ -4127,9 +4132,10 @@ export async function parseLocalization() {
     const converter = OpenCC.Converter({ from: 'twp', to: 'cn' });
 
     // 讀取來源
-    const [battleName, combatName, missionCustom, missionName, scriptCustom, scriptFree, scriptName, groupCustom, option, dialog, flagCustom, termCustom, term, position] = await Promise.all([
+    const [battleName, combatName, triggerCustom, missionCustom, missionName, scriptCustom, scriptFree, scriptName, groupCustom, option, dialog, flagCustom, termCustom, term, position] = await Promise.all([
         getDataJson('battleName'),
         getDataJson('combatName'),
+        getDataJson('triggerCustom'),
         getDataJson('missionCustom'),
         getDataJson('missionName'),
         getDataJson('scriptCustom'),
@@ -4216,10 +4222,17 @@ export async function parseLocalization() {
         zhtw.Trigger.Keywords[key] = missionName.trigger[key].keywords;
     }
 
+    for (const key in triggerCustom) {
+        if (triggerCustom[key]?.remark?.length) {
+            zhtw.Trigger.Remark[key] = {};
+            triggerCustom[key].remark.forEach((r, i) => zhtw.Trigger.Remark[key][i] = r);
+        }
+    }
+
     for (const key in missionCustom) {
         if (missionCustom[key]?.remark?.length) {
-            zhtw.Trigger.Remark[key] = {};
-            missionCustom[key].remark.forEach((r, i) => zhtw.Trigger.Remark[key][i] = r);
+            zhtw.Mission.Remark[key] = {};
+            missionCustom[key].remark.forEach((r, i) => zhtw.Mission.Remark[key][i] = r);
         }
     }
 

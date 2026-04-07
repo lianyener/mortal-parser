@@ -1,7 +1,7 @@
 {
     "BL_1000": {
-        "name": "報復飛石幫",
-        "desc": "戰役教學",
+        "name": "大鬧飛石幫",
+        "desc": "戰役教學，大師兄帶你報復飛石幫",
         "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
         "keywords": ""

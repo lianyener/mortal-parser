@@ -85,7 +85,7 @@
     },
     "CL_T0001": {
         "name": "三師兄指導",
-        "desc": "決鬥教學",
+        "desc": "決鬥教學，由三師兄告訴你決鬥中各指令的用途",
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.brother3*]",
         "ref": "決鬥教學 戰唐陞",
         "keywords": ""
