@@ -18,6 +18,7 @@
         "And": "且",
         "Max": "取最大",
         "Min": "取最小",
+        "Highest": "最高",
         "HigherThan": "高於",
         "LowerThan": "低於",
         "Random": "隨機",
@@ -220,7 +221,8 @@
         "Say": "🗣️",
         "System": "⚙️",
         "Info": "💡",
-        "Perform": "🎨"
+        "Perform": "🎨",
+        "Effect": "⭐"
     },
     "LabelName": {
         "Achievement": "[*Library.Title.{0}*]",
@@ -353,7 +355,8 @@
             "No": "否",
             "Year": "[*Custom.Year*]",
             "Month": "[*Custom.Month*]",
-            "Stage": "[*Custom.Stage*]"
+            "Stage": "[*Custom.Stage*]",
+            "Cumulative": "累計"
         },
         "Label": {
             "Achievement": "[*System.Menu.LibraryAchievement*]",
@@ -425,10 +428,14 @@
         "Active": "有效",
         "InitTrigger": "起始觸發",
         "Cost": "價格",
+        "CostPerTime": "每次開發花費",
         "Level": "[*System.Level*]",
+        "MaxLevel": "[*Custom.Highest*][*System.Level*]",
         "Faction": "[*PlayerStat.faction*]",
         "Point": "點數",
         "Effect": "效果",
+        "BattleEffect": "[*System.Battle*][*Web.Effect*]",
+        "CombatEffect": "[*System.Combat*][*Web.Effect*]",
         "Evolution": "變化項目",
         "Item": "參照項目",
         "ItemInfo": "[*LabelIcon.{0}*][*Web.Label.{0}*][*Web.Item*]",

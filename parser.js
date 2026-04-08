@@ -1454,28 +1454,31 @@ export async function parseEquip(doExport = true) {
     }
 
     // Helper: 產生完整的各等級提升數值陣列
-    const generateLevelData = (target, statDesc, curveData1, curveData2, maxLevel) => {
-        let currentTotal1 = 0;
-        let currentTotal2 = 0;
+    const generateLevelData = (target, type, statDesc, curveData1, curveData2, maxLevel) => {
+
+        // 判斷數值2倍率
+        let multiplier2 = 1;
+        if (curveData2 && curveData2.length > 0) {
+            const maxValue = curveData2[curveData2.length - 1].value;
+            if (maxValue > 0 && maxValue <= 1) multiplier2 = 100;
+        }
+
+        // 修復最終值進位
+        if (curveData1.length > 0) {
+            const maxValue = curveData1[curveData1.length - 1].value;
+            if (maxValue == 0.5) curveData1[curveData1.length - 1].value = 0.501;
+        }
 
         // 等級從 1 開始遍歷到上限
         for (let level = 1; level <= maxLevel; level++) {
             const time = level / maxLevel;
             const rawValue1 = evaluateCurve(curveData1, time);
-            const rawValue2 = curveData2 ? evaluateCurve(curveData2, time) : null;
+            const rawValue2 = curveData2 ? evaluateCurve(curveData2, time) * multiplier2 : null;
             const roundedValue1 = bankersRound(rawValue1);
             const roundedValue2 = rawValue2 ? bankersRound(rawValue2) : null;
 
-            // 計算提升量
-            const gain1 = roundedValue1 - currentTotal1;
-            const gain2 = roundedValue2 ? roundedValue2 - currentTotal2 : null;
-
             // 紀錄提升量
-            target[level - 1].effect.push(`[*UpgradeItemRelationDesc.${statDesc},${gain1}${gain2 ? ',' + gain2 : ''}*]`);
-
-            // 更新當前總和供下一輪計算
-            currentTotal1 = roundedValue1;
-            if (gain2 !== null) currentTotal2 = roundedValue2;
+            target[level - 1][type].push(`[*UpgradeItemRelationDesc.${statDesc},${roundedValue1}${roundedValue2 ? `,${roundedValue2}` : ''}*]`);
         }
     };
 
@@ -1503,12 +1506,14 @@ export async function parseEquip(doExport = true) {
             for (const levelItem of data._upgradeLevels ?? []) {
                 result[id].levels.push({
                     point: levelItem._levelPoints,
+                    combat: [],
+                    battle: [],
                     effect: []
                 });
             }
 
             // 記錄影響
-            for (const relItem of (data._combatRelationItem ?? []).concat(data._battleRelationItem ?? [])) {
+            for (const relItem of data._combatRelationItem ?? []) {
 
                 const relFile1 = relItem._statConvert[0]._name;
                 const relData1 = await getGameJson(relFile1, 'UpgradeItemStatConvertData');
@@ -1517,7 +1522,18 @@ export async function parseEquip(doExport = true) {
                 const relFile2 = relItem._statConvert?.[1]?._name;
                 const relData2 = relFile2 ? await getGameJson(relFile2, 'UpgradeItemStatConvertData') : null;
 
-                generateLevelData(result[id].levels, relItem._descKey, relData1._curve, relData2?._curve, result[id].level);
+                generateLevelData(result[id].levels, 'combat', relItem._descKey, relData1._curve, relData2?._curve, result[id].level);
+            }
+            for (const relItem of data._battleRelationItem ?? []) {
+
+                const relFile1 = relItem._statConvert[0]._name;
+                const relData1 = await getGameJson(relFile1, 'UpgradeItemStatConvertData');
+                if (!isValidJson(relData1, relFile1)) continue;
+
+                const relFile2 = relItem._statConvert?.[1]?._name;
+                const relData2 = relFile2 ? await getGameJson(relFile2, 'UpgradeItemStatConvertData') : null;
+
+                generateLevelData(result[id].levels, 'battle', relItem._descKey, relData1._curve, relData2?._curve, result[id].level);
             }
 
             // 記錄生成雜物
@@ -1528,7 +1544,7 @@ export async function parseEquip(doExport = true) {
             }
 
             // 記錄重置
-            if (data._resetWhenMaxLevel) result[id].levels[result[id].level - 1].effect.push('[*Custom.ResetLevel*]');
+            if (data._resetWhenMaxLevel) result[id].levels[result[id].level - 1].effect.push('※[*Custom.ResetLevel*]');
 
             // 記錄可轉換開發項目
             for (const item of data._evolutionItems ?? []) {
@@ -4442,7 +4458,7 @@ export async function parseLocalization() {
         getGameJson('zh-cn', '../Localizations'),
         getGameJson('kr', '../Localizations')
     ]);
-    
+
     const regexParamN = /{(\d+):N0}/g;
     const regexParamP = /{(\d+):P0}/g;
     const zhcn = {};
