@@ -93,6 +93,25 @@ const LOVER_MAP = {
     7: 'girl8',
     8: 'girl4'
 };
+const COMBAT_STAT_MAP = {
+    防禦: 'combat-defence',
+    備揍防禦: 'combat-defence',
+    攻擊: 'combat-attack',
+    絕招: 'combat-ultimate',
+    爆發: 'combat-attack-dice',
+    攻擊骰子: 'combat-attack-dice',
+    暗器攻擊: 'combat-weapon',
+    暗器威力: 'combat-weapon',
+    暗器爆發: 'combat-weapon-dice',
+    暗器骰子: 'combat-weapon-dice',
+    暗器命中補正: 'combat-weapon-hit',
+    血量: 'hp',
+    抗毒: 'poison-resistance',
+    抗麻: 'paralysis-resistance',
+    毒素累積: 'poison-value',
+    毒藥累積: 'poison-value',
+    麻痺累積: 'paralysis-value'
+};
 const CACHE_PRIORITY = [
     ['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'TERM'],
     ['BOOK', 'EQUIP'],
@@ -774,8 +793,9 @@ async function getStat(statItem) {
                     }
 
                     // 主角屬性值
+                    const statName = toKebab(subId.replace(REGEX_STAT_PREFIX, ''));
                     return {
-                        name: `[*Label.Stat,${toKebab(subId.replace(REGEX_STAT_PREFIX, ''))}*]`,
+                        name: `[*Label.Stat,${COMBAT_STAT_MAP[statName] ?? statName}*]`,
                         type: 'PlayerStat'
                     };
                 }
@@ -884,6 +904,8 @@ export async function parseTerm(doExport = true) {
     // Regex常數
     const regexNewLine = /\s*\n\s*/gm;
     const regexVoice = /{size=(\d+)}(.*?){\/size}/gm;
+    const regexParamN = /{(\d+):N0}/g;
+    const regexParamP = /{(\d+):P0}/g;
     const libraryMap = {
         1: 'Dead',
         2: 'End',
@@ -912,7 +934,7 @@ export async function parseTerm(doExport = true) {
         switch (category) {
             case 'System':
                 if (keys.length >= 3) {
-                    if (['Header', 'Start'].includes(type)) break;
+                    if (['Start'].includes(type)) break;
                     safeAssign(term, [category, type, id], val);
                 }
                 else {
@@ -929,6 +951,7 @@ export async function parseTerm(doExport = true) {
             case 'CombatCharacter':
             case 'Book':
             case 'BattleSkill':
+            case 'Middle':
                 if (keys.length >= 3) {
                     if (['Dialog', 'Format', 'Brother1'].includes(type)) break;
                     safeAssign(term, [category, type, id], val);
@@ -951,16 +974,25 @@ export async function parseTerm(doExport = true) {
                 break;
             case 'StatLevel':
             case 'PlayerStat':
+            case 'PlayerStatDesc':
             case 'MiddleMenu':
-            case 'Middle':
             case 'CombatAction':
+            case 'CombatInfo':
             case 'CharacterTitle':
             case 'CharacterIntro0':
             case 'CharacterIntro1':
             case 'CharacterIntro2':
             case 'CharacterIntro3':
             case 'CharacterIntro4':
-                safeAssign(term, [category, id.toLowerCase()], val);
+            case 'MartialStatDisplay':
+            case 'MartialCondition':
+            case 'DevelopRefund':
+            case 'DevelopCondition':
+            case 'Develop':
+                safeAssign(term, [category, id], val);
+                break;
+            case 'UpgradeItemRelationDesc':
+                safeAssign(term, [category, id], val.replace(regexParamN, '{$1}').replace(regexParamP, '{$1}%'));
                 break;
             case 'Character':
                 safeAssign(term, [category, id.toLowerCase()], val);
@@ -1221,6 +1253,51 @@ export async function parseTalent(doExport = true) {
     REF_MAP.TALENT = ref;
 }
 
+// Helper: 銀行家捨入法 (四捨六入五成雙)
+function bankersRound(num) {
+    const m = num % 1;
+    if (m === 0.5 || m === -0.5) {
+        const floorStr = Math.floor(num);
+        return (floorStr % 2 === 0) ? floorStr : floorStr + 1;
+    }
+    return Math.round(num);
+}
+
+// Helper: 泛用型曲線解析器
+function evaluateCurve(curve, time) {
+    if (!curve || curve.length === 0) return 0;
+    if (time <= curve[0].time) return curve[0].value;
+    if (time >= curve[curve.length - 1].time) return curve[curve.length - 1].value;
+
+    for (let i = 0; i < curve.length - 1; i++) {
+        let k0 = curve[i];
+        let k1 = curve[i + 1];
+
+        if (time >= k0.time && time < k1.time) {
+            if (k0.outTangent === "Infinity" || k1.inTangent === "Infinity") {
+                return k0.value;
+            }
+
+            let dt = k1.time - k0.time;
+            let t_norm = (time - k0.time) / dt;
+
+            let t2 = t_norm * t_norm;
+            let t3 = t2 * t_norm;
+
+            let m0 = k0.outTangent * dt;
+            let m1 = k1.inTangent * dt;
+
+            let h00 = 2 * t3 - 3 * t2 + 1;
+            let h10 = t3 - 2 * t2 + t_norm;
+            let h01 = -2 * t3 + 3 * t2;
+            let h11 = t3 - t2;
+
+            return h00 * k0.value + h10 * m0 + h01 * k1.value + h11 * m1;
+        }
+    }
+    return 0;
+}
+
 // 解析秘笈/書籍資料 (可使用天賦/雜物Cache)
 export async function parseBook(doExport = true) {
 
@@ -1239,51 +1316,6 @@ export async function parseBook(doExport = true) {
         暗器: 'Weapon'
     };
 
-    // Helper: 銀行家捨入法 (四捨六入五成雙)
-    const bankersRound = (num) => {
-        const m = num % 1;
-        if (m === 0.5 || m === -0.5) {
-            const floorStr = Math.floor(num);
-            return (floorStr % 2 === 0) ? floorStr : floorStr + 1;
-        }
-        return Math.round(num);
-    };
-
-    // Helper: 泛用型曲線解析器
-    const evaluateCurve = (curve, time) => {
-        if (!curve || curve.length === 0) return 0;
-        if (time <= curve[0].time) return curve[0].value;
-        if (time >= curve[curve.length - 1].time) return curve[curve.length - 1].value;
-
-        for (let i = 0; i < curve.length - 1; i++) {
-            let k0 = curve[i];
-            let k1 = curve[i + 1];
-
-            if (time >= k0.time && time < k1.time) {
-                if (k0.outTangent === "Infinity" || k1.inTangent === "Infinity") {
-                    return k0.value;
-                }
-
-                let dt = k1.time - k0.time;
-                let t_norm = (time - k0.time) / dt;
-
-                let t2 = t_norm * t_norm;
-                let t3 = t2 * t_norm;
-
-                let m0 = k0.outTangent * dt;
-                let m1 = k1.inTangent * dt;
-
-                let h00 = 2 * t3 - 3 * t2 + 1;
-                let h10 = t3 - 2 * t2 + t_norm;
-                let h01 = -2 * t3 + 3 * t2;
-                let h11 = t3 - t2;
-
-                return h00 * k0.value + h10 * m0 + h01 * k1.value + h11 * m1;
-            }
-        }
-        return 0;
-    };
-
     // Helper: 產生完整的各等級提升數值陣列
     const generateLevelData = (target, statName, curveData, maxLevel) => {
         let currentTotal = 0;
@@ -1298,7 +1330,7 @@ export async function parseBook(doExport = true) {
             // 紀錄提升量
             if (gain !== 0) {
                 const sign = gain < 0 ? '' : '+';
-                target[level - 1].effect.push(`${statName}${sign}${gain}`);
+                target[level - 1].effect.unshift(`${statName}${sign}${gain}`);
             }
 
             // 更新當前總和供下一輪計算
@@ -1421,6 +1453,32 @@ export async function parseEquip(doExport = true) {
         武器: 'Melee'
     }
 
+    // Helper: 產生完整的各等級提升數值陣列
+    const generateLevelData = (target, statDesc, curveData1, curveData2, maxLevel) => {
+        let currentTotal1 = 0;
+        let currentTotal2 = 0;
+
+        // 等級從 1 開始遍歷到上限
+        for (let level = 1; level <= maxLevel; level++) {
+            const time = level / maxLevel;
+            const rawValue1 = evaluateCurve(curveData1, time);
+            const rawValue2 = curveData2 ? evaluateCurve(curveData2, time) : null;
+            const roundedValue1 = bankersRound(rawValue1);
+            const roundedValue2 = rawValue2 ? bankersRound(rawValue2) : null;
+
+            // 計算提升量
+            const gain1 = roundedValue1 - currentTotal1;
+            const gain2 = roundedValue2 ? roundedValue2 - currentTotal2 : null;
+
+            // 紀錄提升量
+            target[level - 1].effect.push(`[*UpgradeItemRelationDesc.${statDesc},${gain1}${gain2 ? ',' + gain2 : ''}*]`);
+
+            // 更新當前總和供下一輪計算
+            currentTotal1 = roundedValue1;
+            if (gain2 !== null) currentTotal2 = roundedValue2;
+        }
+    };
+
     // 主要處理流程
     const process = async (file) => {
         try {
@@ -1433,10 +1491,44 @@ export async function parseEquip(doExport = true) {
             result[id] = {
                 type: typeMap[data._itemType] ?? '',
                 faction: data._requiredSectlevel,
+                cost: data._costMoney,
+                level: data._upgradeLevels.length,
+                levels: [],
                 evolution: [],
                 rel: { pre: {}, post: {} },
             };
             ref[removeExt(file)] = id;
+
+            // 記錄等級資料
+            for (const levelItem of data._upgradeLevels ?? []) {
+                result[id].levels.push({
+                    point: levelItem._levelPoints,
+                    effect: []
+                });
+            }
+
+            // 記錄影響
+            for (const relItem of (data._combatRelationItem ?? []).concat(data._battleRelationItem ?? [])) {
+
+                const relFile1 = relItem._statConvert[0]._name;
+                const relData1 = await getGameJson(relFile1, 'UpgradeItemStatConvertData');
+                if (!isValidJson(relData1, relFile1)) continue;
+
+                const relFile2 = relItem._statConvert?.[1]?._name;
+                const relData2 = relFile2 ? await getGameJson(relFile2, 'UpgradeItemStatConvertData') : null;
+
+                generateLevelData(result[id].levels, relItem._descKey, relData1._curve, relData2?._curve, result[id].level);
+            }
+
+            // 記錄生成雜物
+            for (const item of data._itemModify ?? []) {
+                const miscId = await queryItemId(item._item._name, REF_MAP.MISC, 'Misc');
+                result[id].levels[result[id].level - 1].effect.push(`[*Label.Misc,${miscId}*]+${item._count}`);
+                mergeRelation(result[id].rel.post, { Misc: [miscId] });
+            }
+
+            // 記錄重置
+            if (data._resetWhenMaxLevel) result[id].levels[result[id].level - 1].effect.push('[*Custom.ResetLevel*]');
 
             // 記錄可轉換開發項目
             for (const item of data._evolutionItems ?? []) {
@@ -4350,9 +4442,17 @@ export async function parseLocalization() {
         getGameJson('zh-cn', '../Localizations'),
         getGameJson('kr', '../Localizations')
     ]);
-
+    
+    const regexParamN = /{(\d+):N0}/g;
+    const regexParamP = /{(\d+):P0}/g;
     const zhcn = {};
     const kr = {};
+
+    // Helper: 處理{0:N0}參數
+    const replaceParam = (prefix, text) => {
+        if (prefix !== 'UpgradeItemRelationDesc/') return text;
+        return text.replace(regexParamN, '{$1}').replace(regexParamP, '{$1}%');
+    };
 
     // Helper: 深層替換物件
     const deepReplace = async (target1, target2, source, prefix) => {
@@ -4367,8 +4467,8 @@ export async function parseLocalization() {
                 else {
                     const hasChinese = regexHan.test(source[key]);
                     const path = `${prefix}${key}`.replace(regexEnd, '');
-                    Object.assign(target1, { [key]: hasChinese ? zhcnTerm[path] ?? converter(source[key]) : source[key] });
-                    Object.assign(target2, { [key]: hasChinese ? krTerm[path] ?? '' : source[key] });
+                    Object.assign(target1, { [key]: hasChinese ? replaceParam(prefix, zhcnTerm[path]) ?? converter(source[key]) : source[key] });
+                    Object.assign(target2, { [key]: hasChinese ? replaceParam(prefix, krTerm[path]) ?? '' : source[key] });
                 }
             }
         }

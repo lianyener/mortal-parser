@@ -114,7 +114,8 @@
         "ShowCharacter": "顯示角色",
         "MoveCharacter": "移動角色",
         "HideCharacter": "隱藏角色",
-        "OnlyPerform": "僅演出變化"
+        "OnlyPerform": "僅演出變化",
+        "ResetLevel": "重置開發等級"
     },
     "Character": {
         "playerLeft": "[*Character.player*]",
@@ -268,7 +269,19 @@
         }
     },
     "Middle": {
-        "exit": "[*Middle.quit*]"
+        "exit": "[*Middle.Title.Quit*]",
+        "default": "[*Middle.Title.Default*]",
+        "move": "[*Middle.Title.Move*]",
+        "quit": "[*Middle.Title.Quit*]",
+        "event": "[*Middle.Title.Event*]",
+        "change": "[*Middle.Title.Change*]",
+        "shop": "[*Middle.Title.Shop*]",
+        "talk": "[*Middle.Title.Talk*]",
+        "battle": "[*Middle.Title.Battle*]",
+        "combat": "[*Middle.Title.Combat*]",
+        "costcontribution": "[*Middle.Title.CostContribution*]",
+        "costaction": "[*Middle.Title.CostAction*]",
+        "issue": "[*Middle.Title.Issue*]"
     },
     "PlayerStat": {
         "cook": "廚藝",
@@ -414,7 +427,8 @@
         "Cost": "價格",
         "Level": "[*System.Level*]",
         "Faction": "[*PlayerStat.faction*]",
-        "Learned": "學習效果",
+        "Point": "點數",
+        "Effect": "效果",
         "Evolution": "變化項目",
         "Item": "參照項目",
         "ItemInfo": "[*LabelIcon.{0}*][*Web.Label.{0}*][*Web.Item*]",
