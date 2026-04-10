@@ -1181,23 +1181,13 @@ export async function parseSpecial(doExport = true) {
     const process = async (file) => {
         try {
             // 讀取資料
-            const data = await getGameJson(file, 'PlayerTalentData');
+            const data = await getGameJson(file, 'SpecialItem');
             if (!isValidJson(data, file)) return;
 
             // 記錄資料
             const id = data._id;
-            result[id] = {
-                skill: data._combatSkill ? data._combatSkillKey : '',
-                level: data._displayLevel ? data._maxLevel : 0,
-                low: []
-            };
+            result[id] = { cost: data._cost };
             ref[removeExt(file)] = id;
-
-            // 紀錄下位技能
-            for (const item of data._lowLevelTalent ?? []) {
-                const lowId = await queryItemId(item._name, ref, 'PlayerTalentData');
-                result[id].low.push(lowId);
-            }
         }
         catch (err) {
             writeLog('error', `Processing file "${file}" failed.`, err);
@@ -1237,6 +1227,7 @@ export async function parseTalent(doExport = true) {
             const id = data._id;
             result[id] = {
                 skill: data._combatSkill ? data._combatSkillKey : '',
+                level: data._displayLevel ? data._maxLevel : 0,
                 low: []
             };
             ref[removeExt(file)] = id;
@@ -1244,7 +1235,7 @@ export async function parseTalent(doExport = true) {
             // 紀錄下位技能
             for (const item of data._lowLevelTalent ?? []) {
                 const lowId = await queryItemId(item._name, ref, 'PlayerTalentData');
-                result[id].low.push(`[*Talent.Name.${lowId}*]`);
+                result[id].low.push(lowId);
             }
         }
         catch (err) {
