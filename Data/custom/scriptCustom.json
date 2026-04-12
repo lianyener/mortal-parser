@@ -118,5 +118,37 @@
                 ]
             }
         }
+    },
+    "back_02_001": {
+        "remark": [
+            "※隨機事件在[*Label.Script,back_001*]已設定"
+        ],
+        "var": {
+            "var1": "[*Custom.Random*][*Label.Position,Back_Work_001*][*System.StoryEvent*]"
+        }
+    },
+    "back_02_501": {
+        "remark": [
+            "※隨機事件在[*Label.Script,back_001*]已設定"
+        ],
+        "var": {
+            "var1": "[*Custom.Random*][*Label.Position,Back_Work_001*][*System.StoryEvent*]"
+        }
+    },
+    "back_03_001": {
+        "remark": [
+            "※隨機事件在[*Label.Script,back_001*]已設定"
+        ],
+        "var": {
+            "var1": "[*Custom.Random*][*Label.Position,Back_Free_001*][*System.StoryEvent*]"
+        }
+    },
+    "back_03_501": {
+        "remark": [
+            "※隨機事件在[*Label.Script,back_001*]已設定"
+        ],
+        "var": {
+            "var1": "[*Custom.Random*][*Label.Position,Back_Free_001*][*System.StoryEvent*]"
+        }
     }
 }

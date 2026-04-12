@@ -3336,7 +3336,7 @@ export async function parseScript() {
                 }
                 // 使用變數
                 else {
-                    const name = cache?.var?.[node.arguments[0].name] ?? node.arguments[0].name;
+                    const name = cache?.var?.[node.arguments[0].name] ?? custom[script]?.var?.[node.arguments[0].name] ?? node.arguments[0].name;
                     content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*]${name}` });
                 }
                 break;
