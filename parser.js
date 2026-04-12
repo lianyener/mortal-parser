@@ -19,6 +19,7 @@ const CACHE = {
     EQUIP: null,
     FLAG: null,
     GROUP: {},
+    GROUPSTAT: {},
     CONDITION: null,
     SWITCH: null,
     DICE: null,
@@ -1614,8 +1615,10 @@ export async function parseStatGroup() {
                 if (custom[id].id) {
                     result[id].name = `[*GroupStat.${custom[id].id}*]`;
                     group[custom[id].id] = {
-                        name: result[id].name,
-                        content: custom[id].name
+                        content: custom[id].name,
+                        rel: {
+                            post: custom[id].rel
+                        }
                     };
                 }
             }
@@ -1639,11 +1642,12 @@ export async function parseStatGroup() {
     // 並行輸出結果
     await Promise.all([
         exportJson(result, 'group'),
-        exportJson(group, 'groupName'),
+        exportJson(group, 'groupStat'),
         exportJson(custom, 'groupCustom'),
         exportJson(CACHE.TIME, 'time')
     ]);
     CACHE.GROUP = result;
+    CACHE.GROUPSTAT = group;
     CACHE_FULFILL.GROUP = true;
 }
 
@@ -4282,7 +4286,7 @@ export async function organizeOutputData() {
     }
 
     // 更新json檔案
-    const exportCats = ['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'CHARACTER', 'END', 'ACHIEVEMENT', 'DEAD', 'BOOK', 'EQUIP', 'TIME', 'MISSION', 'TRIGGER', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
+    const exportCats = ['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'CHARACTER', 'END', 'ACHIEVEMENT', 'DEAD', 'BOOK', 'EQUIP', 'GROUPSTAT', 'TIME', 'MISSION', 'TRIGGER', 'POSITION', 'COMBAT', 'BATTLE', 'SCRIPT'];
     const exportPromises = [];
     for (const category of exportCats) {
         const catName = category.toLowerCase();
@@ -4436,7 +4440,12 @@ export async function parseLocalization() {
 
     for (const key in groupCustom) {
         const id = groupCustom[key].id;
-        if (id) zhtw.GroupStat[groupCustom[key].id] = groupCustom[key].text;
+        if (id) {
+            zhtw.GroupStat[groupCustom[key].id] = {
+                _: groupCustom[key].text,
+                Desc: groupCustom[key].name
+            }
+        }
     }
 
     // 處理旗標
