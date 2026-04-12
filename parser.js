@@ -2993,10 +2993,11 @@ export async function parseScript() {
 
     // 讀取檔案清單、前置Cache
     const folder = path.join(GAME_PATH, 'TextAsset', 'story', 'chinesetraditional');
-    const [files, custom, nameDraft] = await Promise.all([
+    const [files, custom, free, nameDraft] = await Promise.all([
         getLuaList(folder),
         getDataJson('scriptCustom'),
         getDataJson('scriptName'),
+        getDataJson('scriptFree'),
         loadCache(['GROUP', 'FLAG', 'TERM', 'SWITCH', 'CONDITION', 'DICE'])
     ]);
 
@@ -3333,7 +3334,15 @@ export async function parseScript() {
                 if (node.arguments[0].type == 'StringLiteral') {
                     const name = removeQuote(node.arguments[0].raw);
                     mergeRelation(rel.to, { Script: [name] });
-                    content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*][*Label.Script,${name}*]` });
+
+                    // 檢查跳轉劇本
+                    const skip = custom[name]?.skip;
+                    if (skip) {
+                        mergeRelation(rel.to, { Script: [skip] });
+                        if (free[skip]) content.push({ form: 'effect', type: 'Free', text: `◎[*Custom.Free*]:[*Label.Free,${skip}*]` });
+                        else content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*][*Label.Script,${skip}*]` });
+                    }
+                    else content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*][*Label.Script,${name}*]` });
                 }
                 // 使用變數
                 else {
