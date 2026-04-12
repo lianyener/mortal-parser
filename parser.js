@@ -3384,12 +3384,11 @@ export async function parseScript() {
             // 設定任務觸發時間
             case 'luamanager.SetMissionTime': {
                 const timeId = removeQuote(node.arguments[0].raw);
-                const year = node.arguments[1].value ? `${node.arguments[1].value}[*Custom.Year*]` : '';
-                const month = node.arguments[2].value ? `${node.arguments[2].value}[*Custom.Month*]` : '';
-                const round = node.arguments[3].value ? `${node.arguments[3].value}[*Custom.Stage*]` : '';
-                let time = `${year}${month}${round}`;
-                if (!time) time = '[*Custom.Now*]';
-                else time = `[*Custom.AfterTime,${time}*]`;
+                const year = node.arguments[1].value ? node.arguments[1].value : '';
+                const month = node.arguments[2].value ? node.arguments[2].value : '';
+                const round = node.arguments[3].value ? node.arguments[3].value : '';
+                let time = `[*Custom.AfterTime,${year},${year ? 'Custom.Year' : ''},${month},${month ? 'Custom.Month' : ''},${round},${round ? 'Custom.Stage' : ''}*]`;
+                if (time === '[*Custom.AfterTime,,,,,,*]') time = '[*Custom.Now*]';
                 const text = `◎[*Label.Time,${timeId}*][*Custom.SetTriggerTime*]:${time}`;
                 content.push({ form: 'effect', type: 'Trigger', text });
                 mergeRelation(rel.post, { Time: [timeId] });

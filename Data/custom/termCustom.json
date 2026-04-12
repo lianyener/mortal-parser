@@ -90,7 +90,7 @@
         "Year": "年",
         "Stage": "旬",
         "After": "{0}{1}後",
-        "AfterTime": "{0}後",
+        "AfterTime": "{0}{1}{2}{3}{4}{5}後",
         "Now": "當前時間",
         "SetTriggerTime": "設定觸發時間",
         "SetTrigger": "設定觸發",
