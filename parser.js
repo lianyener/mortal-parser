@@ -1613,7 +1613,7 @@ export async function parseStatGroup() {
 
                 // 檢查是否設定別名
                 if (custom[id].id) {
-                    result[id].name = `[*GroupStat.${custom[id].id}*]`;
+                    result[id].name = `[*Label.GroupStat,${custom[id].id},${custom[id].type}*]`;
                     group[custom[id].id] = {
                         content: custom[id].name,
                         rel: {

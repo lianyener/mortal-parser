@@ -367,7 +367,7 @@
     "name": "[*Label.Special,3104*]+[*Label.Special,3105*]+[*Label.Special,3106*]+[*Label.Special,3107*]+[*Label.Special,3108*]+[*Label.Special,3109*]+[*Label.Special,3110*]+[*Label.Special,3111*]+[*Label.Special,3112*]+[*Label.Special,3201*]+[*Label.Special,3202*]+[*Label.Special,3203*]+[*Label.Special,3204*]+[*Label.Special,3205*]+[*Label.Special,3206*]+[*Label.Special,3207*]+[*Label.Special,3208*]+[*Label.Special,3209*]+[*Label.Special,3210*]+[*Label.Special,3211*]+[*Label.Special,3212*]+[*Label.Special,3301*]+[*Label.Special,3302*]+[*Label.Special,3303*]+[*Label.Special,3304*]+[*Label.Special,3305*]+[*Label.Special,3306*]+[*Label.Special,3307*]+[*Label.Special,3308*]+[*Label.Special,3309*]+[*Label.Special,3310*]+[*Label.Special,3311*]+[*Label.Special,3312*]",
     "type": "Special",
     "id": "SpecialNews",
-    "text": "👑❮江湖快報❯數量"
+    "text": "❮江湖快報❯數量"
   },
   "雜物_任何酒": {
     "rel": {
@@ -383,7 +383,7 @@
     "name": "[*Label.Misc,2001*]+[*Label.Misc,2005*]+[*Label.Misc,2004*]+[*Label.Misc,2003*]+[*Label.Misc,2002*]+[*Label.Misc,2006*]",
     "type": "Misc",
     "id": "MiscWine",
-    "text": "💊❮任意酒類❯"
+    "text": "❮任意酒類❯"
   },
   "雜物_任意飲食物品": {
     "rel": {
@@ -413,7 +413,7 @@
     "name": "[*Label.Misc,2003*]+[*Label.Misc,2004*]+[*Label.Misc,2005*]+[*Label.Misc,3001*]+[*Label.Misc,3002*]+[*Label.Misc,3003*]+[*Label.Misc,5003*]+[*Label.Misc,5004*]+[*Label.Misc,5005*]+[*Label.Misc,5006*]+[*Label.Misc,5001*]+[*Label.Misc,4101*]+[*Label.Misc,4102*]+[*Label.Misc,4103*]+[*Label.Misc,4104*]+[*Label.Misc,4500*]+[*Label.Misc,5007*]+[*Label.Misc,5008*]+[*Label.Misc,5009*]+[*Label.Misc,4106*]",
     "type": "Misc",
     "id": "MiscFood",
-    "text": "💊❮任意食物❯"
+    "text": "❮任意食物❯"
   },
   "數值_Ch_3_6_4_3_001": {
     "rel": {

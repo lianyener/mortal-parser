@@ -186,7 +186,8 @@
         "Debuff": "[*LabelIcon.Debuff*][*CombatSkill.Name.{0}*]",
         "Support": "[*LabelIcon.Support*][*CombatSkill.Name.{0}*]",
         "Stat": "[*LabelIcon.Stat*][*PlayerStat.{0}*]",
-        "Story": "[*LabelIcon.Story*][*Custom.AddStory*]"
+        "Story": "[*LabelIcon.Story*][*Custom.AddStory*]",
+        "GroupStat": "[*LabelIcon.{1}*][*GroupStat.{0}*]"
     },
     "LabelIcon": {
         "Achievement": "🏆",
@@ -199,6 +200,7 @@
         "Equip": "🛡️",
         "Misc": "📦",
         "Flag": "🚩",
+        "GroupFlag": "🚩",
         "Character": "👤",
         "Relationship": "💕",
         "RelationshipFlag": "💕",
@@ -252,7 +254,8 @@
         "Debuff": "[*CombatSkill.Name.{0}*]",
         "Support": "[*CombatSkill.Name.{0}*]",
         "Stat": "[*PlayerStat.{0}*]",
-        "Story": "[*Custom.AddStory*]"
+        "Story": "[*Custom.AddStory*]",
+        "GroupStat": "[*GroupStat.{0}*]"
     },
     "MapPosition": {
         "Name": {
