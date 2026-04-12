@@ -224,7 +224,8 @@
         "System": "⚙️",
         "Info": "💡",
         "Perform": "🎨",
-        "Effect": "⭐"
+        "Effect": "⭐",
+        "GroupStat": "🏷️"
     },
     "LabelName": {
         "Achievement": "[*Library.Title.{0}*]",
@@ -396,7 +397,8 @@
             "Info": "註記",
             "System": "[*System.System*]",
             "Perform": "圖片特效",
-            "Event": "[*Web.Event*]"
+            "Event": "[*Web.Event*]",
+            "GroupStat": "群組變數"
         },
         "Msg": {
             "NotFound": "找不到[*Web.Label.{0}*]",

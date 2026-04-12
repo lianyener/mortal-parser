@@ -1615,10 +1615,7 @@ export async function parseStatGroup() {
                 if (custom[id].id) {
                     result[id].name = `[*Label.GroupStat,${custom[id].id},${custom[id].type}*]`;
                     group[custom[id].id] = {
-                        content: custom[id].name,
-                        rel: {
-                            post: custom[id].rel
-                        }
+                        content: custom[id].name
                     };
                 }
             }

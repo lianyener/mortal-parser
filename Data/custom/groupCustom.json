@@ -180,7 +180,7 @@
     },
     "name": "[*Label.Flag,M40002*]+[*Label.Flag,M40003*]+[*Label.Flag,M40004*]+[*Label.Flag,M40035*]",
     "type": "GroupFlag",
-    "id": "WarExcludeStone",
+    "id": "flag_war_excl_stone",
     "text": "飛石幫以外交戰門派數"
   },
   "旗標_攻略人數_三個高手_排除龍湘": {
@@ -194,7 +194,7 @@
     },
     "name": "[*Label.Flag,G11000*]+[*Label.Flag,G11001*]+[*Label.Flag,G11004*]+[*Label.Flag,G11006*]",
     "type": "GroupFlag",
-    "id": "BondGirl0346",
+    "id": "flag_connect_0346",
     "text": "鈴螢梅竹結緣數"
   },
   "旗標_交戰門派": {
@@ -209,7 +209,7 @@
     },
     "name": "[*Label.Flag,M40001*]+[*Label.Flag,M40002*]+[*Label.Flag,M40003*]+[*Label.Flag,M40004*]+[*Label.Flag,M40035*]",
     "type": "GroupFlag",
-    "id": "War",
+    "id": "flag_war",
     "text": "交戰門派數"
   },
   "旗標_攻略人數_排除小師妹": {
@@ -226,7 +226,7 @@
     },
     "name": "[*Label.Flag,G11001*]+[*Label.Flag,G11002*]+[*Label.Flag,G11004*]+[*Label.Flag,G11005*]+[*Label.Flag,G11006*]+[*Label.Flag,G11007*]+[*Label.Flag,G11008*]",
     "type": "GroupFlag",
-    "id": "BondExclude0",
+    "id": "flag_connect_excl_0",
     "text": "唐默鈴以外結緣數"
   },
   "旗標_攻略人數_梅竹菊": {
@@ -239,7 +239,7 @@
     },
     "name": "[*Label.Flag,G11004*]+[*Label.Flag,G11006*]+[*Label.Flag,G11007*]",
     "type": "GroupFlag",
-    "id": "BondGirl367",
+    "id": "flag_connect_367",
     "text": "梅竹菊結緣數"
   },
   "旗標_攻略人數_排除梅竹菊": {
@@ -254,7 +254,7 @@
     },
     "name": "[*Label.Flag,G11000*]+[*Label.Flag,G11001*]+[*Label.Flag,G11002*]+[*Label.Flag,G11003*]+[*Label.Flag,G11005*]",
     "type": "GroupFlag",
-    "id": "BondExclude367",
+    "id": "flag_connect_excl_367",
     "text": "梅竹菊以外結緣數"
   },
   "旗標_六道總點數": {
@@ -270,7 +270,7 @@
     },
     "name": "[*Label.Flag,H03001*]+[*Label.Flag,H03002*]+[*Label.Flag,H03003*]+[*Label.Flag,H03004*]+[*Label.Flag,H03005*]+[*Label.Flag,H03006*]",
     "type": "Relationship",
-    "id": "SixTaoism",
+    "id": "relationship_sixtaoism",
     "text": "六道"
   },
   "旗標_攻略人數": {
@@ -289,7 +289,7 @@
     },
     "name": "[*Label.Flag,G11000*]+[*Label.Flag,G11001*]+[*Label.Flag,G11002*]+[*Label.Flag,G11003*]+[*Label.Flag,G11004*]+[*Label.Flag,G11005*]+[*Label.Flag,G11006*]+[*Label.Flag,G11007*]+[*Label.Flag,G11008*]",
     "type": "GroupFlag",
-    "id": "BondGirl",
+    "id": "flag_connect",
     "text": "結緣數"
   },
   "旗標_攻略人數_排除龍湘": {
@@ -307,7 +307,7 @@
     },
     "name": "[*Label.Flag,G11000*]+[*Label.Flag,G11001*]+[*Label.Flag,G11002*]+[*Label.Flag,G11004*]+[*Label.Flag,G11005*]+[*Label.Flag,G11006*]+[*Label.Flag,G11007*]+[*Label.Flag,G11008*]",
     "type": "GroupFlag",
-    "id": "BondExclude8",
+    "id": "flag_connect_excl_8",
     "text": "龍湘以外結緣數"
   },
   "旗標_贖回任何資產": {
@@ -323,7 +323,7 @@
     },
     "name": "[*Label.Flag,Facility_001*]+[*Label.Flag,Facility_002*]+[*Label.Flag,Facility_003*]+[*Label.Flag,Facility_004*]+[*Label.Flag,Facility_005*]+[*Label.Flag,Facility_006*]",
     "type": "GroupFlag",
-    "id": "Facility",
+    "id": "flag_facility",
     "text": "贖回資產數"
   },
   "貴重品_持有江湖快報": {
@@ -366,7 +366,7 @@
     },
     "name": "[*Label.Special,3104*]+[*Label.Special,3105*]+[*Label.Special,3106*]+[*Label.Special,3107*]+[*Label.Special,3108*]+[*Label.Special,3109*]+[*Label.Special,3110*]+[*Label.Special,3111*]+[*Label.Special,3112*]+[*Label.Special,3201*]+[*Label.Special,3202*]+[*Label.Special,3203*]+[*Label.Special,3204*]+[*Label.Special,3205*]+[*Label.Special,3206*]+[*Label.Special,3207*]+[*Label.Special,3208*]+[*Label.Special,3209*]+[*Label.Special,3210*]+[*Label.Special,3211*]+[*Label.Special,3212*]+[*Label.Special,3301*]+[*Label.Special,3302*]+[*Label.Special,3303*]+[*Label.Special,3304*]+[*Label.Special,3305*]+[*Label.Special,3306*]+[*Label.Special,3307*]+[*Label.Special,3308*]+[*Label.Special,3309*]+[*Label.Special,3310*]+[*Label.Special,3311*]+[*Label.Special,3312*]",
     "type": "Special",
-    "id": "SpecialNews",
+    "id": "special_news",
     "text": "❮江湖快報❯數量"
   },
   "雜物_任何酒": {
@@ -382,7 +382,7 @@
     },
     "name": "[*Label.Misc,2001*]+[*Label.Misc,2005*]+[*Label.Misc,2004*]+[*Label.Misc,2003*]+[*Label.Misc,2002*]+[*Label.Misc,2006*]",
     "type": "Misc",
-    "id": "MiscWine",
+    "id": "misc_wine",
     "text": "❮任意酒類❯"
   },
   "雜物_任意飲食物品": {
@@ -412,7 +412,7 @@
     },
     "name": "[*Label.Misc,2003*]+[*Label.Misc,2004*]+[*Label.Misc,2005*]+[*Label.Misc,3001*]+[*Label.Misc,3002*]+[*Label.Misc,3003*]+[*Label.Misc,5003*]+[*Label.Misc,5004*]+[*Label.Misc,5005*]+[*Label.Misc,5006*]+[*Label.Misc,5001*]+[*Label.Misc,4101*]+[*Label.Misc,4102*]+[*Label.Misc,4103*]+[*Label.Misc,4104*]+[*Label.Misc,4500*]+[*Label.Misc,5007*]+[*Label.Misc,5008*]+[*Label.Misc,5009*]+[*Label.Misc,4106*]",
     "type": "Misc",
-    "id": "MiscFood",
+    "id": "misc_food",
     "text": "❮任意食物❯"
   },
   "數值_Ch_3_6_4_3_001": {
