@@ -33,6 +33,7 @@ const CACHE = {
     SCRIPT: null,
     SCRIPT_FULL: null,
     SCRIPT_INDEX: {},
+    SCRIPT_FREE: {},
     STAT: {},
     TIME: {},
     DEAD: {},
@@ -4152,7 +4153,10 @@ export async function parseScript() {
 export async function organizeOutputData() {
 
     // 載入Cache
-    await loadCache(['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'TERM', 'BOOK', 'EQUIP', 'GROUP', 'MISSION', 'TRIGGER', 'POSITION', 'CONDITION', 'SWITCH', 'DICE', 'COMBAT', 'BATTLE', 'SCRIPT']);
+    const [free] = await Promise.all([
+        getDataJson('scriptFree'),
+        loadCache(['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'TERM', 'BOOK', 'EQUIP', 'GROUP', 'MISSION', 'TRIGGER', 'POSITION', 'CONDITION', 'SWITCH', 'DICE', 'COMBAT', 'BATTLE', 'SCRIPT'])
+    ]);
 
     // 初始化
     const regexTerm = /\[\*[\s\S]+?\*\]/g;
@@ -4199,6 +4203,11 @@ export async function organizeOutputData() {
             for (const type of ['pre', 'intra', 'post', 'inter', 'from', 'to']) {
                 for (const [targetCat, targetIds] of Object.entries(data?.rel?.[type] ?? {})) {
                     for (const targetId of targetIds) {
+
+                        // 跳過自由行動類
+                        if (free[targetId] && type === 'to') continue;
+
+                        // 加入反向關聯
                         addBackRelation(sourceCat, sourceId, targetCat, targetId, reverseType[type]);
                     }
                 }
@@ -4209,8 +4218,8 @@ export async function organizeOutputData() {
     // 劇本來源深度追溯
     const traceScriptOrigin = (scriptId, triggerId, missionId, visited) => {
 
-        // 此任務觸發已處理過此劇本則跳過避免無限迴圈
-        if (visited.has(scriptId)) return;
+        // 跳過已處理及自由行動類
+        if (visited.has(scriptId) || scriptId in free) return;
         visited.add(scriptId);
 
         // 補充來源關聯
@@ -4234,10 +4243,9 @@ export async function organizeOutputData() {
         }
     }
 
-    // 製作輕量化索引
-    const indexCats = ['SCRIPT'];
-    const searchCats = ['TRIGGER', 'POSITION', 'COMBAT', 'BATTLE'];
-    for (const cat of indexCats.concat(searchCats)) {
+    // 製作搜尋/索引
+    const searchCats = ['SCRIPT', 'TRIGGER', 'POSITION', 'COMBAT', 'BATTLE'];
+    for (const cat of searchCats) {
         for (const [sourceId, data] of Object.entries(CACHE[cat])) {
             const keywords = new Set();
 
@@ -4276,7 +4284,10 @@ export async function organizeOutputData() {
 
             // 回存檢索用字串
             const searchText = Array.from(keywords).join(',');
-            if (indexCats.includes(cat)) CACHE[`${cat}_INDEX`][sourceId] = { searchText };
+            if (cat === 'SCRIPT') {
+                CACHE.SCRIPT_INDEX[sourceId] = { searchText };
+                if (free[sourceId]) CACHE.SCRIPT_FREE[sourceId] = { searchText };
+            }
             else CACHE[cat][sourceId].searchText = searchText;
         }
     }
@@ -4300,10 +4311,10 @@ export async function organizeOutputData() {
             }
         }
 
-        // 嘗試輸出索引版
-        const categoryIndex = `${category}_INDEX`;
-        if (CACHE[categoryIndex]) {
-            exportPromises.push(exportJson(CACHE[categoryIndex], 'index', `public/data/${catName}`, true, false));
+        // 劇本額外處理
+        if (category === 'SCRIPT') {
+            exportPromises.push(exportJson(CACHE.SCRIPT_INDEX, 'index', 'public/data/script', true, false));
+            exportPromises.push(exportJson(CACHE.SCRIPT_FREE, 'index_free', 'public/data/script', true, false));
         }
     }
     await Promise.all(exportPromises);
