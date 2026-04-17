@@ -1207,6 +1207,65 @@ export async function parseSpecial(doExport = true) {
     REF_MAP.SPECIAL = ref;
 }
 
+// 解析決鬥效果
+export async function parseCombatSkill(doExport = true) {
+
+    // 取得檔案清單
+    const files = await getJsonList('CombatStateEffectScriptable');
+    if (files.length === 0) return;
+
+    // 初始化
+    const result = {};
+    const typeMap = {
+        常駐: 'Resident',
+        倒數: 'Countdown'
+    };
+    
+    const getEffectUnit = async (file) => {
+        try {
+            // 讀取資料
+            const data = await getGameJson(file, 'CombatStateEffectUnitScriptable');
+            if (!isValidJson(data, file)) return;
+
+            // 記錄資料
+
+        }
+        catch (err) {
+            writeLog('error', `Processing file "${file}" failed.`, err);
+        }
+    }
+
+    // 主要處理流程
+    const process = async (file) => {
+        try {
+            // 讀取資料
+            const data = await getGameJson(file, 'CombatStateEffectScriptable');
+            if (!isValidJson(data, file)) return;
+
+            // 記錄資料
+            const id = data._key;
+            result[id] = {
+                state: data._stateType,
+                type: typeMap[data._type] ?? 'Unknown',
+                plural: data._plural,
+                noRepeat: data._noRepeat,
+                round: data._rounds,
+                show: data._show,
+                relSkill: []
+            };
+
+            // 記錄效果
+            for (const unit of data._units ?? []) {
+                const effect = getEffectUnit(unit._name);
+                result[id].relSkill.push(effect);
+            }
+        }
+        catch (err) {
+            writeLog('error', `Processing file "${file}" failed.`, err);
+        }
+    }
+}
+
 // 解析天賦/技能資料
 export async function parseTalent(doExport = true) {
 
@@ -1481,7 +1540,7 @@ export async function parseEquip(doExport = true) {
             const roundedValue2 = rawValue2 ? bankersRound(rawValue2) : null;
 
             // 紀錄提升量
-            target[level - 1][type].push(`[*UpgradeItemRelationDesc.${statDesc},${roundedValue1}${roundedValue2 ? `,${roundedValue2}` : ''}*]`);
+            target[level - 1][type].push(`[*UpgradeItemRelationDesc.${statDesc},${roundedValue1}${roundedValue2 !== null ? `,${roundedValue2}` : ''}*]`);
         }
     };
 
