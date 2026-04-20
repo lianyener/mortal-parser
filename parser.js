@@ -1101,7 +1101,7 @@ export async function parseCombatEffect(doExport = true) {
 
       // 記錄資料
       const id = data._key;
-      result[id] = { state: data._stateType, type: typeMap[data._type] ?? 'Unknown', plural: data._plural, noRepeat: data._noRepeat, round: data._rounds, show: data._show };
+      result[id] = { state: data._stateType, type: typeMap[data._type] ?? 'Unknown', plural: data._plural, noRepeat: data._noRepeat, round: data._rounds, show: data._show, rel: {} };
 
       // 記錄效果
       const skillSet = new Set();
@@ -1110,7 +1110,7 @@ export async function parseCombatEffect(doExport = true) {
           await addEffectUnit(skillSet, unit._name);
         }
       }
-      result[id].relSkill = Array.from(skillSet);
+      result[id].rel.post = { Effect: Array.from(skillSet)};
     } catch (err) {
       writeLog('error', `Processing file "${file}" failed.`, err);
     }
@@ -1151,11 +1151,11 @@ export async function parseTalent(doExport = true) {
       // 決鬥技能
       if (data._combatSkill) {
         for (let i = 1; i <= result[id].level; i++) {
-          const skillSet = new Set();
+          const skillSet = [];
           const skillId = `${data._combatSkillKey}_${i}`;
-          skillSet.add(skillId);
-          if (CACHE.EFFECT?.[skillId]?.relSkill) CACHE.EFFECT[skillId].relSkill.forEach((skill) => skillSet.add(skill));
-          result[id].skills.push(Array.from(skillSet));
+          skillSet.push(skillId);
+          if (CACHE.EFFECT?.[skillId]?.rel?.post?.Effect) skillSet.push(...CACHE.EFFECT[skillId].rel.post.Effect);
+          result[id].skills = skillSet;
         }
       }
 
@@ -3792,7 +3792,7 @@ export async function organizeOutputData() {
   // 載入Cache
   const [free] = await Promise.all([
     getDataJson('scriptFree'),
-    loadCache(['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'TERM', 'BOOK', 'EQUIP', 'GROUP', 'MISSION', 'TRIGGER', 'POSITION', 'CONDITION', 'SWITCH', 'DICE', 'COMBAT', 'BATTLE', 'SCRIPT'])
+    loadCache(['MISC', 'SPECIAL', 'EFFECT', 'TALENT', 'FLAG', 'TERM', 'BOOK', 'EQUIP', 'GROUP', 'MISSION', 'TRIGGER', 'POSITION', 'CONDITION', 'SWITCH', 'DICE', 'COMBAT', 'BATTLE', 'SCRIPT'])
   ]);
 
   // 初始化
@@ -3921,6 +3921,7 @@ export async function organizeOutputData() {
   const exportCats = [
     'MISC',
     'SPECIAL',
+    'EFFECT',
     'TALENT',
     'FLAG',
     'CHARACTER',
