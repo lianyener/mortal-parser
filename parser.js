@@ -1110,7 +1110,7 @@ export async function parseCombatEffect(doExport = true) {
           await addEffectUnit(skillSet, unit._name);
         }
       }
-      result[id].rel.post = { Effect: Array.from(skillSet)};
+      result[id].rel.post = { Effect: Array.from(skillSet) };
     } catch (err) {
       writeLog('error', `Processing file "${file}" failed.`, err);
     }
@@ -1145,17 +1145,16 @@ export async function parseTalent(doExport = true) {
 
       // 記錄資料
       const id = data._id;
-      result[id] = { level: data._displayLevel ? data._maxLevel : 1, skills: [], low: [] };
+      result[id] = { level: data._displayLevel ? data._maxLevel : 1, skills: [], low: [], rel: { post: {} } };
       ref[removeExt(file)] = id;
 
       // 決鬥技能
       if (data._combatSkill) {
         for (let i = 1; i <= result[id].level; i++) {
-          const skillSet = [];
           const skillId = `${data._combatSkillKey}_${i}`;
-          skillSet.push(skillId);
-          if (CACHE.EFFECT?.[skillId]?.rel?.post?.Effect) skillSet.push(...CACHE.EFFECT[skillId].rel.post.Effect);
-          result[id].skills = skillSet;
+          result[id].skills.push(skillId);
+          if (CACHE.EFFECT?.[skillId]?.rel?.post?.Effect) result[id].skills.push(...CACHE.EFFECT[skillId].rel.post.Effect);
+          result[id].rel.post = { Effect: result[id].skills };
         }
       }
 
@@ -2229,11 +2228,12 @@ export async function parseCombat() {
     const data = await getGameJson(name, 'CombatStateEffectScriptable');
     if (!isValidJson(data, name)) effect = { key: '[*CombatSkill.Name.Unknown*]', type: '[*Custom.Unknown*]', show: false };
     else {
+      const id = data._key;
       const type = data._stateType;
-      effect = { key: `[*Label.${type},${data._key}*]`, type: `[*Custom.${type}*]`, show: data._show ? '' : '*' };
+      effect = { key: `[*Label.${type},${id}*]`, type: `[*Custom.${type}*]`, show: data._show ? '' : '*', rel: { Effect: [id] } };
       if (type === 'Support') {
-        const charIds = queryCharacterIds(data._key);
-        if (charIds) effect.rel = { Character: charIds };
+        const charIds = queryCharacterIds(id);
+        if (charIds) effect.rel.Character = charIds;
       }
     }
 
@@ -3824,7 +3824,7 @@ export async function organizeOutputData() {
   };
 
   // 遍歷各類資料
-  const scurceCats = ['BOOK', 'EQUIP', 'MISSION', 'TRIGGER', 'POSITION', 'BATTLE', 'COMBAT', 'SCRIPT'];
+  const scurceCats = ['TALENT', 'EFFECT', 'BOOK', 'EQUIP', 'MISSION', 'TRIGGER', 'POSITION', 'BATTLE', 'COMBAT', 'SCRIPT'];
   for (const sourceCat of scurceCats) {
     for (const [sourceId, data] of Object.entries(CACHE[sourceCat])) {
       // 遍歷各類關聯
@@ -4157,6 +4157,9 @@ export async function parser(method) {
     case 'all':
       await loadCache(['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'TERM', 'BOOK', 'EQUIP', 'GROUP', 'MISSION', 'POSITION', 'CONDITION', 'SWITCH', 'DICE', 'COMBAT', 'BATTLE', 'SCRIPT'], true);
       await organizeOutputData();
+      await parseLocalization();
+      break;
+    case 'locale':
       await parseLocalization();
       break;
     case 'switch':
