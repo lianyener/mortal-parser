@@ -1145,16 +1145,32 @@ export async function parseTalent(doExport = true) {
 
       // 記錄資料
       const id = data._id;
-      result[id] = { level: data._displayLevel ? data._maxLevel : 1, skills: [], low: [], rel: { post: {} } };
+      result[id] = { level: data._displayLevel ? data._maxLevel : 0, skills: [], low: [], rel: { post: { Effect: [] } } };
       ref[removeExt(file)] = id;
 
       // 決鬥技能
       if (data._combatSkill) {
-        for (let i = 1; i <= result[id].level; i++) {
-          const skillId = `${data._combatSkillKey}_${i}`;
-          result[id].skills.push(skillId);
-          if (CACHE.EFFECT?.[skillId]?.rel?.post?.Effect) result[id].skills.push(...CACHE.EFFECT[skillId].rel.post.Effect);
-          result[id].rel.post = { Effect: result[id].skills };
+        for (let i = 0; i <= result[id].level; i++) {
+          let skillId;
+          if (i === 0) {
+            if (data._displayLevel) {
+              result[id].skills[0] = [];
+              continue;
+            } else {
+              skillId = data._combatSkillKey;
+            }
+          } else {
+            skillId = `${data._combatSkillKey}_${i}`;
+          }
+          result[id].skills[i] = [skillId];
+          result[id].rel.post.Effect.push(skillId);
+
+          // 紀錄後續效果
+          const relSkills = CACHE.EFFECT?.[skillId]?.rel?.post?.Effect;
+          if (relSkills) {
+            result[id].skills[i].push(...relSkills);
+            result[id].rel.post.Effect.push(...relSkills);
+          }
         }
       }
 

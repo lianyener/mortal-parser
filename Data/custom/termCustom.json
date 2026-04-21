@@ -130,27 +130,7 @@
         "talk": "[*CombatAction.curse*]"
     },
     "CombatSkill": {
-        "Unknown": "[*Custom.Unknown*]",
-        "Name": {
-            "B110_1": "[*CombatSkill.Name.B111_1*]",
-            "B110_2": "[*CombatSkill.Name.B111_2*]",
-            "B110_3": "[*CombatSkill.Name.B111_3*]",
-            "B110_4": "[*CombatSkill.Name.B111_4*]",
-            "B110_5": "[*CombatSkill.Name.B111_5*]",
-            "B210_1": "[*CombatSkill.Name.B211_1*]",
-            "B220_1": "[*CombatSkill.Name.B221_1*]",
-            "B230_1": "[*CombatSkill.Name.B231_1*]"
-        },
-        "Desc": {
-            "B110_1": "[*CombatSkill.Desc.B111_1*]",
-            "B110_2": "[*CombatSkill.Desc.B111_2*]",
-            "B110_3": "[*CombatSkill.Desc.B111_3*]",
-            "B110_4": "[*CombatSkill.Desc.B111_4*]",
-            "B110_5": "[*CombatSkill.Desc.B111_5*]",
-            "B210_1": "[*CombatSkill.Desc.B211_1*]",
-            "B220_1": "[*CombatSkill.Desc.B221_1*]",
-            "B230_1": "[*CombatSkill.Desc.B231_1*]"
-        }
+        "Unknown": "[*Custom.Unknown*]"
     },
     "DialogType": {
         "character": "說",
@@ -410,7 +390,7 @@
             "Combat": "[*System.Combat*]",
             "Battle": "[*System.Battle*]",
             "BattleSkill": "[*System.Battle*][*System.Title.Talent*]",
-            "Effect": "效果",
+            "Effect": "決鬥效果",
             "Buff": "[*Custom.Buff*]",
             "Debuff": "[*Custom.Debuff*]",
             "Support": "[*Custom.Support*]",
