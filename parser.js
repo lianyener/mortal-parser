@@ -1073,18 +1073,22 @@ export async function parseCombatEffect(doExport = true) {
       // 讀取Unit資料
       const unitData = await getGameJson(file, 'CombatStateEffectUnitScriptable');
       if (!isValidJson(unitData, file)) return;
-      if (!unitData._effect) return;
+      const items = unitData?._item?.[0]?._effect ? unitData._item : [unitData];
 
-      // 讀取效果資料
-      const effectFile = unitData._effect._name;
-      const effectData = await getGameJson(effectFile, 'CombatStateEffectScriptable');
-      if (!isValidJson(effectData, effectFile)) return;
+      for (const item of items) {
+        if (!item._effect) continue;
 
-      // 紀錄效果資料
-      skillSet.add(effectData._key);
-      for (const unit of effectData._units ?? []) {
-        if (unit._type.includes('Effect')) {
-          await addEffectUnit(skillSet, unit._name);
+        // 讀取效果資料
+        const effectFile = item._effect._name;
+        const effectData = await getGameJson(effectFile, 'CombatStateEffectScriptable');
+        if (!isValidJson(effectData, effectFile)) continue;
+
+        // 紀錄效果資料
+        skillSet.add(effectData._key);
+        for (const unit of effectData._units ?? []) {
+          if (unit._type.includes('Effect')) {
+            await addEffectUnit(skillSet, unit._name);
+          }
         }
       }
     } catch (err) {
