@@ -1068,7 +1068,7 @@ export async function parseCombatEffect(doExport = true) {
 
   // 初始化
   const result = {};
-  const typeMap = { 常駐: 'Resident', 倒數: 'Countdown' };
+  const typeMap = { 常駐: 'Resident', 倒數效果: 'Countdown', 次數: 'Count', 倒數觸發: 'CountdownTrigger' };
 
   // Helper: 處理子Effect
   const addEffectUnit = async (skillSet, file) => {
