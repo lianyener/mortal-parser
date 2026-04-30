@@ -80,18 +80,21 @@ const REGEX_CHAR_MAJOR = /^(dio\d+|big|girl\d+|special\d+|sister\d+|brother\d+|m
 // 參照用常數
 const STAGE_MAP = { 上旬: '1', 中旬: '2', 下旬: '3' };
 const LOVER_MAP = { 0: 'sister1', 1: 'girl1', 2: 'girl2', 3: 'girl5', 4: 'girl9', 5: 'girl6', 6: 'girl7', 7: 'girl8', 8: 'girl4' };
-const COMBAT_STAT_MAP = {
+const STAT_MAP = {
+  防禦: 'combat-defence',
   防禦: 'combat-defence',
   備揍防禦: 'combat-defence',
   攻擊: 'combat-attack',
-  絕招: 'combat-ultimate',
   爆發: 'combat-attack-dice',
+  攻擊爆擊: 'combat-attack-dice',
   攻擊骰子: 'combat-attack-dice',
   暗器攻擊: 'combat-weapon',
   暗器威力: 'combat-weapon',
   暗器爆發: 'combat-weapon-dice',
+  暗器爆擊: 'combat-weapon-dice',
   暗器骰子: 'combat-weapon-dice',
   暗器命中補正: 'combat-weapon-hit',
+  絕招: 'combat-ultimate',
   血量: 'hp',
   抗毒: 'poison-resistance',
   抗麻: 'paralysis-resistance',
@@ -701,7 +704,7 @@ async function getStat(statItem) {
 
             // 主角屬性值
             const statName = toKebab(subId.replace(REGEX_STAT_PREFIX, ''));
-            return { name: `[*Label.Stat,${COMBAT_STAT_MAP[statName] ?? statName}*]`, type: 'PlayerStat' };
+            return { name: `[*Label.Stat,${STAT_MAP[statName] ?? statName}*]`, type: 'PlayerStat' };
           }
           case '隨機值':
             return { name: key, type: 'Random' };
