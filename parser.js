@@ -3866,19 +3866,37 @@ export async function organizeOutputData() {
   }
 
   // 劇本來源深度追溯
-  const traceScriptOrigin = (scriptId, triggerId, missionId, visited) => {
-    // 跳過已處理及自由行動類
-    if (visited.has(scriptId) || scriptId in free) return;
-    visited.add(scriptId);
+  const traceOrigin = (category, itemId, triggerId, missionId, visited) => {
+    const visitKey = `${category}:${itemId}`;
 
-    // 補充來源關聯
-    addBackRelation('TRIGGER', triggerId, 'Script', scriptId, 'from');
-    if (missionId) addBackRelation('MISSION', missionId, 'Script', scriptId, 'from');
+    // 跳過已處理節點。若為 Script，還需跳過自由行動類
+    if (visited.has(visitKey) || (category === 'Script' && itemId in free)) return;
+    visited.add(visitKey);
 
-    // 尋找此腳本導向的下一個腳本，繼續遞迴往下傳遞
-    const nextScripts = CACHE.SCRIPT?.[scriptId]?.rel?.to?.Script ?? [];
-    for (const nextScript of nextScripts) {
-      traceScriptOrigin(nextScript, triggerId, missionId, visited);
+    // 補充來源關聯到當前節點 (Script, Combat 或 Battle)
+    addBackRelation('TRIGGER', triggerId, category, itemId, 'from');
+    if (missionId) addBackRelation('MISSION', missionId, category, itemId, 'from');
+
+    // 取得當前節點資料
+    const nodeData = CACHE[category.toUpperCase()]?.[itemId];
+    if (!nodeData) return;
+
+    // 尋找此節點導向的下一個節點，繼續遞迴往下傳遞
+    const toRels = nodeData.rel?.to ?? {};
+
+    // 1. 遞迴追溯後續的 Script (Script -> Script 或 Combat -> Script)
+    for (const nextScript of toRels.Script ?? []) {
+      traceOrigin('Script', nextScript, triggerId, missionId, visited);
+    }
+
+    // 2. 遞迴追溯後續的 Combat (Script -> Combat)
+    for (const nextCombat of toRels.Combat ?? []) {
+      traceOrigin('Combat', nextCombat, triggerId, missionId, visited);
+    }
+
+    // 3. 遞迴追溯後續的 Battle (Script -> Battle)
+    for (const nextBattle of toRels.Battle ?? []) {
+      traceOrigin('Battle', nextBattle, triggerId, missionId, visited);
     }
   };
 
