@@ -401,7 +401,8 @@
             "System": "[*System.System*]",
             "Perform": "圖片特效",
             "Event": "[*Web.Event*]",
-            "GroupStat": "群組變數"
+            "GroupStat": "群組變數",
+            "EventTable": "事件總表"
         },
         "Msg": {
             "NotFound": "找不到[*Web.Label.{0}*]",
