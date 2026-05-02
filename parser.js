@@ -3865,17 +3865,47 @@ export async function organizeOutputData() {
     }
   }
 
+  // 自訂排序 (無字 < 字母 < 數字)
+  const customSort = (a, b) => {
+    const partsA = a.split('_');
+    const partsB = b.split('_');
+    const len = Math.min(partsA.length, partsB.length);
+
+    for (let i = 0; i < len; i++) {
+      const pA = partsA[i];
+      const pB = partsB[i];
+
+      if (pA !== pB) {
+        const isNumA = /^\d+$/.test(pA);
+        const isNumB = /^\d+$/.test(pB);
+
+        if (isNumA && !isNumB) return 1;
+        if (!isNumA && isNumB) return -1;
+
+        // 同為數字或同為字母/字串，使用自然排序
+        return pA.localeCompare(pB, undefined, { numeric: true, sensitivity: 'base' });
+      }
+    }
+    // 長度短的排前面
+    return partsA.length - partsB.length;
+  };
+
   // 劇本來源深度追溯
-  const traceOrigin = (category, itemId, triggerId, missionId, visited) => {
+  const traceOrigin = (category, itemId, triggerId, missionId, visited, scriptSet) => {
     const visitKey = `${category}:${itemId}`;
 
-    // 跳過已處理節點。若為 Script，還需跳過自由行動類
+    // 跳過已處理節點 / 自由行動類
     if (visited.has(visitKey) || (category === 'Script' && itemId in free)) return;
     visited.add(visitKey);
 
     // 補充來源關聯到當前節點 (Script, Combat 或 Battle)
     addBackRelation('TRIGGER', triggerId, category, itemId, 'from');
     if (missionId) addBackRelation('MISSION', missionId, category, itemId, 'from');
+
+    // 收集腳本
+    if (category === 'Script') {
+      scriptSet.add(itemId);
+    }
 
     // 取得當前節點資料
     const nodeData = CACHE[category.toUpperCase()]?.[itemId];
@@ -3884,29 +3914,71 @@ export async function organizeOutputData() {
     // 尋找此節點導向的下一個節點，繼續遞迴往下傳遞
     const toRels = nodeData.rel?.to ?? {};
 
-    // 1. 遞迴追溯後續的 Script (Script -> Script 或 Combat -> Script)
     for (const nextScript of toRels.Script ?? []) {
-      traceOrigin('Script', nextScript, triggerId, missionId, visited);
+      traceOrigin('Script', nextScript, triggerId, missionId, visited, scriptSet);
     }
-
-    // 2. 遞迴追溯後續的 Combat (Script -> Combat)
     for (const nextCombat of toRels.Combat ?? []) {
-      traceOrigin('Combat', nextCombat, triggerId, missionId, visited);
+      traceOrigin('Combat', nextCombat, triggerId, missionId, visited, scriptSet);
     }
-
-    // 3. 遞迴追溯後續的 Battle (Script -> Battle)
     for (const nextBattle of toRels.Battle ?? []) {
-      traceOrigin('Battle', nextBattle, triggerId, missionId, visited);
+      traceOrigin('Battle', nextBattle, triggerId, missionId, visited, scriptSet);
     }
   };
 
-  // 遍歷任務觸發呼叫劇本來源深度追溯
+  // 遍歷任務觸發呼叫來源深度追溯，並建立排序好的 eventFlow
   for (const [triggerId, triggerData] of Object.entries(CACHE.TRIGGER ?? {})) {
     const initScripts = triggerData?.rel?.to?.Script ?? [];
     const missionId = triggerData.mission;
 
+    const scriptSet = new Set();
+
+    // 深度遍歷收集該 Trigger 相關的所有 Script
     for (const scriptId of initScripts) {
-      traceScriptOrigin(scriptId, triggerId, missionId, new Set());
+      traceOrigin('Script', scriptId, triggerId, missionId, new Set(), scriptSet);
+    }
+
+    const allScripts = Array.from(scriptSet);
+
+    // 進行全域排序 (確保 Trigger 的 initScripts 排最前面)
+    const sortedInitScripts = [...initScripts].sort(customSort);
+    const otherScripts = allScripts.filter((s) => !initScripts.includes(s)).sort(customSort);
+    const finalSortedScripts = [...sortedInitScripts, ...otherScripts];
+
+    const eventFlow = [];
+    const addedEvents = new Set();
+
+    // 依序推入 eventFlow，並在 Script 後方立刻安插其觸發的 Combat / Battle
+    for (const scriptId of finalSortedScripts) {
+      if (!addedEvents.has(scriptId)) {
+        eventFlow.push({ id: scriptId, type: 'Script' });
+        addedEvents.add(scriptId);
+      }
+
+      // 尋找這個腳本觸發的 Combat / Battle
+      const nodeData = CACHE.SCRIPT[scriptId];
+      if (nodeData) {
+        const combats = nodeData.rel?.to?.Combat ?? [];
+        const battles = nodeData.rel?.to?.Battle ?? [];
+
+        const subEvents = [];
+        combats.forEach((id) => subEvents.push({ id, type: 'Combat' }));
+        battles.forEach((id) => subEvents.push({ id, type: 'Battle' }));
+
+        // 子事件亦須依照規則排序
+        subEvents.sort((a, b) => customSort(a.id, b.id));
+
+        for (const ev of subEvents) {
+          if (!addedEvents.has(ev.id)) {
+            eventFlow.push(ev);
+            addedEvents.add(ev.id);
+          }
+        }
+      }
+    }
+
+    // 將收集並排序好的事件總表存回 Trigger 資料中
+    if (eventFlow.length > 0) {
+      triggerData.eventFlow = eventFlow;
     }
   }
 
