@@ -3752,6 +3752,8 @@ export async function parseScript() {
         rel: { pre: custom?.[id]?.rel?.pre ?? {}, post: custom?.[id]?.rel?.post ?? {}, intra: custom?.[id]?.rel?.intra ?? {}, to: custom?.[id]?.rel?.to ?? {} },
         remark: Array.from(custom?.[id]?.remark ?? [], (_, i) => `[*Script.Remark.${id}.${i}*]`)
       };
+      if (custom?.[id]?.timeCheck) script.timeCheck = custom?.[id]?.timeCheck;
+      if (custom?.[id]?.skip) script.skip = custom?.[id]?.skip;
       updateNameDraftItem(nameDraft, id);
 
       // 變數暫存
@@ -3867,13 +3869,13 @@ export async function organizeOutputData() {
 
   // 自訂排序 (無字 < 字母 < 數字)
   const customSort = (a, b) => {
-    const partsA = a.split('_');
-    const partsB = b.split('_');
+    const partsA = a.replace('_f_', '_01_00_').split('_');
+    const partsB = b.replace('_f_', '_01_00_').split('_');
     const len = Math.min(partsA.length, partsB.length);
 
     for (let i = 0; i < len; i++) {
-      const pA = partsA[i];
-      const pB = partsB[i];
+      const pA = partsA[i].replace('start', 'aa');
+      const pB = partsB[i].replace('start', 'aa');
 
       if (pA !== pB) {
         const isNumA = /^\d+$/.test(pA);
@@ -3890,12 +3892,89 @@ export async function organizeOutputData() {
     return partsA.length - partsB.length;
   };
 
+  // Helper: 轉換時間物件為比較用數值 (如 2年11月2旬 -> 21102)
+  const toTimestamp = (y, m, s) => {
+    const year = parseInt(y, 10);
+    const month = parseInt(m, 10);
+    const stage = parseInt(s, 10);
+    if (isNaN(year) || isNaN(month) || isNaN(stage)) return null;
+    return year * 10000 + month * 100 + stage;
+  };
+
+  // Helper: 檢查腳本時間與 Trigger 觸發時間是否有交集
+  const checkTimeOverlap = (triggerMin, triggerMax, timeCheck) => {
+    if (!timeCheck || timeCheck.length === 0) return true;
+
+    // Trigger 時間區間
+    const trigMin = toTimestamp(triggerMin?.year, triggerMin?.month, triggerMin?.stage) ?? 0;
+    const trigMax = toTimestamp(triggerMax?.year, triggerMax?.month, triggerMax?.stage) ?? Infinity;
+
+    // Script 條件解析為區間
+    let scriptMin = 0;
+    let scriptMax = Infinity;
+    const notEquals = [];
+
+    for (const c of timeCheck) {
+      const t = toTimestamp(c.year, c.month, c.stage);
+      if (!t) continue;
+
+      switch (c.logic) {
+        case 'GreaterEqual':
+          scriptMin = Math.max(scriptMin, t);
+          break;
+        case 'Greater':
+          scriptMin = Math.max(scriptMin, t + 1);
+          break;
+        case 'LessEqual':
+          scriptMax = Math.min(scriptMax, t);
+          break;
+        case 'Less':
+          scriptMax = Math.min(scriptMax, t - 1);
+          break;
+        case 'Equal':
+          scriptMin = Math.max(scriptMin, t);
+          scriptMax = Math.min(scriptMax, t);
+          break;
+        case 'NotEqual':
+          notEquals.push(t);
+          break;
+      }
+    }
+
+    if (scriptMin > scriptMax) return false;
+
+    // 計算兩個時間區間是否有交集
+    const overlapMin = Math.max(trigMin, scriptMin);
+    const overlapMax = Math.min(trigMax, scriptMax);
+
+    if (overlapMin > overlapMax) return false;
+
+    // 排除特殊狀況：若交集剛好只有一個確切時間點，且該時間被 NotEqual 排除，則無交集
+    if (overlapMin === overlapMax && notEquals.includes(overlapMin)) {
+      return false;
+    }
+
+    return true;
+  };
+
   // 劇本來源深度追溯
-  const traceOrigin = (category, itemId, triggerId, missionId, visited, scriptSet) => {
+  const traceOrigin = (category, itemId, triggerId, missionId, triggerMin, triggerMax, visited, scriptSet) => {
     const visitKey = `${category}:${itemId}`;
+
+    // 取得當前節點資料 (提早取得，因為判斷時間需要)
+    const nodeData = CACHE[category.toUpperCase()]?.[itemId];
+    if (!nodeData) return;
 
     // 跳過已處理節點 / 自由行動類
     if (visited.has(visitKey) || (category === 'Script' && itemId in free)) return;
+
+    // 跳過沒有時間交集的劇本，不加到 scriptSet、不建立 from 關聯、也不往下遞迴衍生物
+    if (category === 'Script' && nodeData.timeCheck) {
+      if (!checkTimeOverlap(triggerMin, triggerMax, nodeData.timeCheck)) {
+        return;
+      }
+    }
+
     visited.add(visitKey);
 
     // 補充來源關聯到當前節點 (Script, Combat 或 Battle)
@@ -3907,21 +3986,17 @@ export async function organizeOutputData() {
       scriptSet.add(itemId);
     }
 
-    // 取得當前節點資料
-    const nodeData = CACHE[category.toUpperCase()]?.[itemId];
-    if (!nodeData) return;
-
     // 尋找此節點導向的下一個節點，繼續遞迴往下傳遞
     const toRels = nodeData.rel?.to ?? {};
 
     for (const nextScript of toRels.Script ?? []) {
-      traceOrigin('Script', nextScript, triggerId, missionId, visited, scriptSet);
+      traceOrigin('Script', nextScript, triggerId, missionId, triggerMin, triggerMax, visited, scriptSet);
     }
     for (const nextCombat of toRels.Combat ?? []) {
-      traceOrigin('Combat', nextCombat, triggerId, missionId, visited, scriptSet);
+      traceOrigin('Combat', nextCombat, triggerId, missionId, triggerMin, triggerMax, visited, scriptSet);
     }
     for (const nextBattle of toRels.Battle ?? []) {
-      traceOrigin('Battle', nextBattle, triggerId, missionId, visited, scriptSet);
+      traceOrigin('Battle', nextBattle, triggerId, missionId, triggerMin, triggerMax, visited, scriptSet);
     }
   };
 
@@ -3933,7 +4008,7 @@ export async function organizeOutputData() {
 
     const scriptSet = new Set();
     if (initScript) {
-      traceOrigin('Script', initScript, triggerId, missionId, new Set(), scriptSet);
+      traceOrigin('Script', initScript, triggerId, missionId, triggerData.minTime, triggerData.maxTime, new Set(), scriptSet);
     }
 
     const allScripts = Array.from(scriptSet);
@@ -3941,7 +4016,7 @@ export async function organizeOutputData() {
     // 進行全域排序 (確保 Trigger 的 initScripts 排最前面)
     const nearScripts = allScripts.filter((s) => s.startsWith(initScriptPerfix) && s !== initScript).sort(customSort);
     const otherScripts = allScripts.filter((s) => !nearScripts.includes(s) && s !== initScript).sort(customSort);
-    const finalSortedScripts = [initScript, ...nearScripts, ...otherScripts];
+    const finalSortedScripts = [initScript, ...nearScripts, ...otherScripts].filter(Boolean);
 
     const eventFlow = [];
     const addedEvents = new Set();
@@ -3963,7 +4038,7 @@ export async function organizeOutputData() {
         // 將子事件進行全域正序排序
         subEvents.sort((a, b) => customSort(a.id, b.id));
 
-        // 為了確保 unshift 完之後依然保持正序，子事件也要「倒序」推入
+        // 子事件也要倒序推入
         for (let j = subEvents.length - 1; j >= 0; j--) {
           const ev = subEvents[j];
           if (!addedEvents.has(ev.id)) {
@@ -3973,8 +4048,8 @@ export async function organizeOutputData() {
         }
       }
 
-      // 最後才推入 Script 本身 (這樣 Script 就會排在它的子事件前面)
-      if (!addedEvents.has(scriptId)) {
+      // 推入 Script 本身
+      if (!addedEvents.has(scriptId) && (!nodeData || !nodeData.skip)) {
         eventFlow.unshift({ id: scriptId, type: 'Script' });
         addedEvents.add(scriptId);
       }
