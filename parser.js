@@ -3927,35 +3927,31 @@ export async function organizeOutputData() {
 
   // 遍歷任務觸發呼叫來源深度追溯，並建立排序好的 eventFlow
   for (const [triggerId, triggerData] of Object.entries(CACHE.TRIGGER ?? {})) {
-    const initScripts = triggerData?.rel?.to?.Script ?? [];
     const missionId = triggerData.mission;
+    const initScript = triggerData?.script ?? null;
+    const initScriptPerfix = initScript?.split('_')[0];
 
     const scriptSet = new Set();
-
-    // 深度遍歷收集該 Trigger 相關的所有 Script
-    for (const scriptId of initScripts) {
-      traceOrigin('Script', scriptId, triggerId, missionId, new Set(), scriptSet);
+    if (initScript) {
+      traceOrigin('Script', initScript, triggerId, missionId, new Set(), scriptSet);
     }
 
     const allScripts = Array.from(scriptSet);
 
     // 進行全域排序 (確保 Trigger 的 initScripts 排最前面)
-    const sortedInitScripts = [...initScripts].sort(customSort);
-    const otherScripts = allScripts.filter((s) => !initScripts.includes(s)).sort(customSort);
-    const finalSortedScripts = [...sortedInitScripts, ...otherScripts];
+    const nearScripts = allScripts.filter((s) => s.startsWith(initScriptPerfix) && s !== initScript).sort(customSort);
+    const otherScripts = allScripts.filter((s) => !nearScripts.includes(s) && s !== initScript).sort(customSort);
+    const finalSortedScripts = [initScript, ...nearScripts, ...otherScripts];
 
     const eventFlow = [];
     const addedEvents = new Set();
 
-    // 依序推入 eventFlow，並在 Script 後方立刻安插其觸發的 Combat / Battle
-    for (const scriptId of finalSortedScripts) {
-      if (!addedEvents.has(scriptId)) {
-        eventFlow.push({ id: scriptId, type: 'Script' });
-        addedEvents.add(scriptId);
-      }
-
-      // 尋找這個腳本觸發的 Combat / Battle
+    // 依序推入 eventFlow，並在 Script 後方安插其觸發的 Combat / Battle
+    for (let i = finalSortedScripts.length - 1; i >= 0; i--) {
+      const scriptId = finalSortedScripts[i];
       const nodeData = CACHE.SCRIPT[scriptId];
+
+      // 處理 Script 觸發的子事件 (Combat / Battle)
       if (nodeData) {
         const combats = nodeData.rel?.to?.Combat ?? [];
         const battles = nodeData.rel?.to?.Battle ?? [];
@@ -3964,15 +3960,23 @@ export async function organizeOutputData() {
         combats.forEach((id) => subEvents.push({ id, type: 'Combat' }));
         battles.forEach((id) => subEvents.push({ id, type: 'Battle' }));
 
-        // 子事件亦須依照規則排序
+        // 將子事件進行全域正序排序
         subEvents.sort((a, b) => customSort(a.id, b.id));
 
-        for (const ev of subEvents) {
+        // 為了確保 unshift 完之後依然保持正序，子事件也要「倒序」推入
+        for (let j = subEvents.length - 1; j >= 0; j--) {
+          const ev = subEvents[j];
           if (!addedEvents.has(ev.id)) {
-            eventFlow.push(ev);
+            eventFlow.unshift(ev);
             addedEvents.add(ev.id);
           }
         }
+      }
+
+      // 最後才推入 Script 本身 (這樣 Script 就會排在它的子事件前面)
+      if (!addedEvents.has(scriptId)) {
+        eventFlow.unshift({ id: scriptId, type: 'Script' });
+        addedEvents.add(scriptId);
       }
     }
 
