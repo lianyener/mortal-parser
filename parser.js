@@ -1910,7 +1910,7 @@ export async function parseMission() {
         rel: { pre: {}, post: {}, to: { Script: [data._defaultScript] }, from: { Mission: ['free'] } },
         type: 'Free',
         minTime: { year: '1', month: '4', stage: '1' },
-        maxTime: { year: '1', month: '4', stage: '1' },
+        maxTime: { year: '', month: '', stage: '' },
         orderKey: `1-04-1-3-${id}`
       };
       updateNameDraftItem(nameDraft.trigger, id, name);
@@ -3868,23 +3868,32 @@ export async function organizeOutputData() {
   }
 
   // 自訂排序 (無字 < 字母 < 數字)
+  const termWeight = { start: 1, option: 2, break: 3, work: 4, exit: 5 };
   const customSort = (a, b) => {
     const partsA = a.replace('_f_', '_01_00_').split('_');
     const partsB = b.replace('_f_', '_01_00_').split('_');
     const len = Math.min(partsA.length, partsB.length);
 
     for (let i = 0; i < len; i++) {
-      const pA = partsA[i].replace('start', 'aa');
-      const pB = partsB[i].replace('start', 'aa');
+      const pA = partsA[i];
+      const pB = partsB[i];
 
       if (pA !== pB) {
         const isNumA = /^\d+$/.test(pA);
         const isNumB = /^\d+$/.test(pB);
 
-        if (isNumA && !isNumB) return 1;
-        if (!isNumA && isNumB) return -1;
+        // 字母優先於數字
+        if (isNumA !== isNumB) return isNumA ? 1 : -1;
 
-        // 同為數字或同為字母/字串，使用自然排序
+        // 同為字母或字串，優先檢查特定關鍵字權重
+        if (!isNumA) {
+          const weightA = termWeight[pA] ?? 99;
+          const weightB = termWeight[pB] ?? 99;
+
+          if (weightA !== weightB) return weightA - weightB;
+        }
+
+        // 自然排序
         return pA.localeCompare(pB, undefined, { numeric: true, sensitivity: 'base' });
       }
     }
@@ -4000,23 +4009,39 @@ export async function organizeOutputData() {
     }
   };
 
+  const regexScriptPrefix = /\w+?(?=_(?:start|option|break|work|exit)|$)/;
+  const regexScriptSubPrefix = /\w+?(?=_|$)/;
+
   // 遍歷任務觸發呼叫來源深度追溯，並建立排序好的 eventFlow
   for (const [triggerId, triggerData] of Object.entries(CACHE.TRIGGER ?? {})) {
     const missionId = triggerData.mission;
     const initScript = triggerData?.script ?? null;
-    const initScriptPerfix = initScript?.split('_')[0];
+
+    // 安全取得前綴
+    const initScriptPrefix = initScript?.match(regexScriptPrefix)?.[0] ?? initScript;
+    const initScriptSubPrefix = initScript?.match(regexScriptSubPrefix)?.[0] ?? initScript;
 
     const scriptSet = new Set();
-    if (initScript) {
-      traceOrigin('Script', initScript, triggerId, missionId, triggerData.minTime, triggerData.maxTime, new Set(), scriptSet);
-    }
-
+    if (initScript) traceOrigin('Script', initScript, triggerId, missionId, triggerData.minTime, triggerData.maxTime, new Set(), scriptSet);
     const allScripts = Array.from(scriptSet);
 
-    // 進行全域排序 (確保 Trigger 的 initScripts 排最前面)
-    const nearScripts = allScripts.filter((s) => s.startsWith(initScriptPerfix) && s !== initScript).sort(customSort);
-    const otherScripts = allScripts.filter((s) => !nearScripts.includes(s) && s !== initScript).sort(customSort);
-    const finalSortedScripts = [initScript, ...nearScripts, ...otherScripts].filter(Boolean);
+    // 準備三個優先度容器
+    const nearestScripts = [];
+    const nearScripts = [];
+    const otherScripts = [];
+
+    // 進行全域分流
+    for (const s of allScripts) {
+      if (s === initScript) continue; // 排除初始腳本
+
+      // 依據相似度分發
+      if (initScriptPrefix && s.startsWith(initScriptPrefix)) nearestScripts.push(s);
+      else if (initScriptSubPrefix && s.startsWith(initScriptSubPrefix)) nearScripts.push(s);
+      else otherScripts.push(s);
+    }
+
+    // 將分流好的陣列排序後合併
+    const finalSortedScripts = [initScript, ...nearestScripts.sort(customSort), ...nearScripts.sort(customSort), ...otherScripts.sort(customSort)].filter(Boolean);
 
     const eventFlow = [];
     const addedEvents = new Set();
