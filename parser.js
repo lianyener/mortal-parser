@@ -3967,7 +3967,7 @@ export async function organizeOutputData() {
   };
 
   // 劇本來源深度追溯
-  const traceOrigin = (category, itemId, triggerId, missionId, triggerMin, triggerMax, visited, scriptSet) => {
+  const traceOrigin = (category, itemId, origins, visited, scriptSet) => {
     const visitKey = `${category}:${itemId}`;
 
     // 取得當前節點資料 (提早取得，因為判斷時間需要)
@@ -3979,7 +3979,7 @@ export async function organizeOutputData() {
 
     // 跳過沒有時間交集的劇本，不加到 scriptSet、不建立 from 關聯、也不往下遞迴衍生物
     if (category === 'Script' && nodeData.timeCheck) {
-      if (!checkTimeOverlap(triggerMin, triggerMax, nodeData.timeCheck)) {
+      if (!checkTimeOverlap(origins.minTime, origins.maxTime, nodeData.timeCheck)) {
         return;
       }
     }
@@ -3987,45 +3987,41 @@ export async function organizeOutputData() {
     visited.add(visitKey);
 
     // 補充來源關聯到當前節點 (Script, Combat 或 Battle)
-    addBackRelation('TRIGGER', triggerId, category, itemId, 'from');
-    if (missionId) addBackRelation('MISSION', missionId, category, itemId, 'from');
+    if (origins.triggerId) addBackRelation('TRIGGER', origins.triggerId, category, itemId, 'from');
+    if (origins.missionId) addBackRelation('MISSION', origins.missionId, category, itemId, 'from');
+    if (origins.positionId) addBackRelation('POSITION', origins.positionId, category, itemId, 'from');
 
     // 收集腳本
-    if (category === 'Script') {
-      scriptSet.add(itemId);
-    }
+    if (category === 'Script') scriptSet.add(itemId);
 
     // 尋找此節點導向的下一個節點，繼續遞迴往下傳遞
     const toRels = nodeData.rel?.to ?? {};
 
     for (const nextScript of toRels.Script ?? []) {
-      traceOrigin('Script', nextScript, triggerId, missionId, triggerMin, triggerMax, visited, scriptSet);
+      traceOrigin('Script', nextScript, origins, visited, scriptSet);
     }
     for (const nextCombat of toRels.Combat ?? []) {
-      traceOrigin('Combat', nextCombat, triggerId, missionId, triggerMin, triggerMax, visited, scriptSet);
+      traceOrigin('Combat', nextCombat, origins, visited, scriptSet);
     }
     for (const nextBattle of toRels.Battle ?? []) {
-      traceOrigin('Battle', nextBattle, triggerId, missionId, triggerMin, triggerMax, visited, scriptSet);
+      traceOrigin('Battle', nextBattle, origins, visited, scriptSet);
     }
   };
 
   const regexScriptPrefix = /\w+?(?=_(?:start|option|break|work|exit)|$)/;
   const regexScriptSubPrefix = /\w+?(?=_|$)/;
 
-  // 遍歷任務觸發呼叫來源深度追溯，並建立排序好的 eventFlow
-  for (const [triggerId, triggerData] of Object.entries(CACHE.TRIGGER ?? {})) {
-    const missionId = triggerData.mission;
-    const initScript = triggerData?.script ?? null;
+  // Helper: 建立事件流
+  const buildEventFlow = (initScript, scriptSet) => {
+    if (!initScript) return [];
 
     // 安全取得前綴
-    const initScriptPrefix = initScript?.match(regexScriptPrefix)?.[0] ?? initScript;
-    const initScriptSubPrefix = initScript?.match(regexScriptSubPrefix)?.[0] ?? initScript;
+    const initScriptPrefix = initScript.match(regexScriptPrefix)?.[0] ?? initScript;
+    const initScriptSubPrefix = initScript.match(regexScriptSubPrefix)?.[0] ?? initScript;
 
-    const scriptSet = new Set();
-    if (initScript) traceOrigin('Script', initScript, triggerId, missionId, triggerData.minTime, triggerData.maxTime, new Set(), scriptSet);
     const allScripts = Array.from(scriptSet);
 
-    // 準備三個優先度容器
+    // 優先度容器
     const nearestScripts = [];
     const nearScripts = [];
     const otherScripts = [];
@@ -4080,9 +4076,37 @@ export async function organizeOutputData() {
       }
     }
 
-    // 將收集並排序好的事件總表存回 Trigger 資料中
-    if (eventFlow.length > 0) {
-      triggerData.eventFlow = eventFlow;
+    return eventFlow;
+  };
+
+  // 遍歷任務觸發呼叫來源深度追溯，並建立 eventFlow
+  for (const [triggerId, triggerData] of Object.entries(CACHE.TRIGGER ?? {})) {
+    const initScript = triggerData?.script ?? null;
+    const origins = {
+      triggerId: triggerId,
+      missionId: triggerData.mission,
+      minTime: triggerData.minTime,
+      maxTime: triggerData.maxTime
+    };
+
+    const scriptSet = new Set();
+    if (initScript) traceOrigin('Script', initScript, origins, new Set(), scriptSet);
+
+    const eventFlow = buildEventFlow(initScript, scriptSet);
+    if (eventFlow.length > 0) triggerData.eventFlow = eventFlow;
+  }
+
+  // 遍歷隨機地點事件呼叫來源深度追溯，並建立 eventFlow
+  for (const [positionId, positionData] of Object.entries(CACHE.POSITION ?? {})) {
+    for (const [eventId, eventData] of Object.entries(positionData.event ?? {})) {
+      const initScript = eventData.script ?? null;
+      const origins = { positionId: positionId };
+
+      const scriptSet = new Set();
+      if (initScript) traceOrigin('Script', initScript, origins, new Set(), scriptSet);
+
+      const eventFlow = buildEventFlow(initScript, scriptSet);
+      if (eventFlow.length > 0) eventData.eventFlow = eventFlow;
     }
   }
 
