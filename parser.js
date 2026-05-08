@@ -1752,23 +1752,19 @@ export async function parseMission() {
   nameDraft.mission ??= {};
   nameDraft.trigger ??= {};
 
-  // 追加自訂觸發
-  mission['free'] = { trigger: [], init: '', remark: Array.from(missionCustom?.free?.remark ?? [], (_, i) => `[*Mission.Remark.free.${i}*]`) };
-  trigger['M0000_00'] = {
-    mission: 'main',
-    active: true,
-    minTime: { year: '1', month: '4', stage: '1' },
-    maxTime: { year: '1', month: '4', stage: '1' },
-    condition: ['※[*Custom.GameStart*]'],
-    script: 'ch1_1',
-    content: [],
-    remark: Array.from(triggerCustom?.['M0000_00']?.remark ?? [], (_, i) => `[*Trigger.Remark.M0000_00.${i}*]`),
-    rel: { pre: {}, to: { Script: ['ch1_1'] }, from: { Mission: ['main'] } },
-    type: 'Main',
-    orderKey: '1-04-1-1-M0000_00'
-  };
-  updateNameDraftItem(nameDraft.trigger, 'M0000_00');
-  updateNameDraftItem(nameDraft.mission, 'free');
+  // 追加自訂任務及觸發
+  for (const [id, item] of Object.entries(missionCustom) ?? []) {
+    if (id.startsWith('CM_')) {
+      mission[id] = { ...item, remark: Array.from(item?.remark ?? [], (_, i) => `[*Mission.Remark.${id}.${i}*]`), rel: { to: { Trigger: item?.trigger ?? [] } } };
+      updateNameDraftItem(nameDraft.mission, id);
+    }
+  }
+  for (const [id, item] of Object.entries(triggerCustom) ?? []) {
+    if (id.startsWith('CT_')) {
+      trigger[id] = { ...item, remark: Array.from(item?.remark ?? [], (_, i) => `[*Trigger.Remark.${id}.${i}*]`), rel: { to: { Script: item.script ? [item.script] : [] }, from: { Mission: [item.mission] } } };
+      updateNameDraftItem(nameDraft.trigger, id);
+    }
+  }
 
   // Helper: 生成時間字串
   const toTimeText = (timeObj) => {
@@ -1899,15 +1895,15 @@ export async function parseMission() {
       // 記錄資訊
       const name = removeUid(file).replace(regexPrefix, '');
       const id = positionMap[name] ?? name;
-      mission['free'].trigger.push(id);
+      mission['CM_Free'].trigger.push(id);
       const triggerObj = {
-        mission: 'free',
+        mission: 'CM_Free',
         active: true,
         script: data._defaultScript,
         content: [],
         remark: [],
         condition: [`[*Custom.GoTo*][*Label.Place,${id}*]`],
-        rel: { pre: {}, post: {}, to: { Script: [data._defaultScript] }, from: { Mission: ['free'] } },
+        rel: { pre: {}, post: {}, to: { Script: [data._defaultScript] }, from: { Mission: ['CM_Free'] } },
         type: 'Free',
         minTime: { year: '1', month: '4', stage: '1' },
         maxTime: { year: '', month: '', stage: '' },
@@ -1970,7 +1966,7 @@ export async function parseMission() {
 
   // 並行處理主流程
   await Promise.all(freeFiles.map(processFree).concat(missionFiles.map(processMission)));
-  mission['main'].trigger.unshift('M0000');
+  mission['main'].trigger.unshift('CT_M0000');
   writeLog('log', '"Mission" parsed successfully!');
 
   // 並行輸出結果
@@ -2752,98 +2748,15 @@ export async function parseScript() {
   const result = {};
   const logicResult = {};
 
-  // 額外自訂
-  result.free = {
-    content: [
-      {
-        form: 'branch',
-        type: 'Position',
-        text: '[*BranchType.Position*]：',
-        branches: [
-          {
-            index: 1,
-            text: '[*Middle.move*]｜[*Position.Name.Mall*]',
-            condition: '[%[*Label.Flag,P_Mall_01.0*]≠[*Flag.P_Mall_01.0.1*]%]',
-            content: [
-              {
-                form: 'branch',
-                type: 'Switch',
-                text: '[*BranchType.Switch*]：[%[*Custom.GameTime*]≥[*Custom.GameTimeText,3,10,1*]%]',
-                branches: [{ index: 1, text: '[*Custom.True*]', content: [{ form: 'effect', type: 'Flag', text: '[*Label.Flag,Talk_Brother3.0*]=[*Flag.Talk_Brother3.0.1*]' }] }]
-              },
-              { form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,mall_001*]' }
-            ]
-          },
-          {
-            index: 2,
-            text: '[*Middle.move*]｜[*Position.Name.Center*]',
-            condition: '[%[*Label.Flag,P_Center_01.0*]≠[*Flag.P_Center_01.0.1*]%]',
-            content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,center_001*]' }]
-          },
-          {
-            index: 3,
-            text: '[*Middle.move*]｜[*Position.Name.Room1*]',
-            condition: '[%[*Label.Flag,P_Room_01.0*]≠[*Flag.P_Room_01.0.1*]%]',
-            content: [
-              { form: 'effect', type: 'Flag', text: '[*Label.Flag,Talk_Brother4.0*]=[*Flag.Talk_Brother4.0.1*]' },
-              { form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,room_001*]' }
-            ]
-          },
-          {
-            index: 4,
-            text: '[*Middle.move*]｜[*Position.Name.Room2*]',
-            condition: '[%[*Label.Flag,P_GirlRoom_01.0*]≠[*Flag.P_GirlRoom_01.0.1*]%]',
-            content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,girlroom_001*]' }]
-          },
-          {
-            index: 5,
-            text: '[*Middle.move*]｜[*Position.Name.Alchemy*]',
-            condition: '[%[*Label.Flag,P_Alchemy_01.0*]≠[*Flag.P_Alchemy_01.0.1*]%]',
-            content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,alchemy_001*]' }]
-          },
-          {
-            index: 6,
-            text: '[*Middle.move*]｜[*Position.Name.Forge*]',
-            condition: '[%[*Label.Flag,P_Forge_01.0*]≠[*Flag.P_Forge_01.0.1*]%]',
-            content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,forge_001*]' }]
-          },
-          {
-            index: 7,
-            text: '[*Middle.move*]｜[*Position.Name.Kitchen*]',
-            condition: '[%[*Label.Flag,P_Kitchen_01.0*]≠[*Flag.P_Kitchen_01.0.1*]%]',
-            content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,kitchen_001*]' }]
-          },
-          {
-            index: 8,
-            text: '[*Middle.move*]｜[*Position.Name.Door*]',
-            condition: '[%[*Label.Flag,P_Door_01.0*]≠[*Flag.P_Door_01.0.1*]%]',
-            content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,door_001*]' }]
-          },
-          {
-            index: 9,
-            text: '[*Middle.move*]｜[*Position.Name.BackMountain*]',
-            condition: '[%[*Label.Flag,P_Back_01.0*]≠[*Flag.P_Back_01.0.1*]%]',
-            content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,back_001*]' }]
-          },
-          {
-            index: 10,
-            text: '[*Middle.move*]｜[*Position.Name.Study*]',
-            condition: '[%[*Label.Flag,P_Study_01.0*]≠[*Flag.P_Study_01.0.1*]%]',
-            content: [{ form: 'effect', type: 'Script', text: '◎[*Custom.NextScript*][*Label.Script,study_001*]' }]
-          }
-        ]
-      }
-    ],
-    rel: {
-      pre: { Flag: ['P_Mall_01', 'P_Center_01', 'P_Room_01', 'P_GirlRoom_01', 'P_Alchemy_01', 'P_Forge_01', 'P_Kitchen_01', 'P_Door_01', 'P_Back_01', 'P_Study_01', 'Talk_Brother3', 'Talk_Brother4'] },
-      intra: {},
-      to: { Script: ['mall_001', 'center_001', 'room_001', 'girlroom_001', 'alchemy_001', 'forge_001', 'kitchen_001', 'door_001', 'back_001', 'study_001'] }
-    },
-    remark: Array.from(custom?.free?.remark ?? [], (_, i) => `[*Script.Remark.free.${i}*]`)
-  };
-  const tmpLogic = buildLogicView(result.free.content);
-  logicResult.free = { ...result.free, content: tmpLogic.content, effects: tmpLogic.effects };
-  updateNameDraftItem(nameDraft, 'free');
+  // 加入額外自訂  
+  for (const [id, item] of Object.entries(custom) ?? []) {
+    if (id.startsWith('CS_')) {
+      result[id] = { ...item, remark: Array.from(item?.remark ?? [], (_, i) => `[*Script.Remark.${id}.${i}*]`) };
+      const tmpLogic = buildLogicView(result[id].content);
+      logicResult[id] = { ...result[id], content: tmpLogic.content, effects: tmpLogic.effects };
+      updateNameDraftItem(nameDraft, id);
+    }
+  }
 
   // Helper: 去除雙引號
   const removeQuote = (raw) => raw.replace(regexQuote, '$1');
@@ -2983,8 +2896,8 @@ export async function parseScript() {
         switch (removeQuote(node.arguments[0].raw)) {
           // 預設自由行動
           case 'Free': {
-            mergeRelation(rel.to, { Script: ['free'] });
-            content.push({ form: 'effect', type: 'Free', text: '◎[*Custom.Free*]:[*Label.Free,free*]' });
+            mergeRelation(rel.to, { Script: ['CS_free'] });
+            content.push({ form: 'effect', type: 'Free', text: '◎[*Custom.Free*]:[*Label.Free,CS_free*]' });
             break;
           }
           // 特定自由行動

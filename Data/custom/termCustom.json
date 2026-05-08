@@ -46,6 +46,7 @@
         "GameTime": "時間",
         "GameTimeText": "[*System.GameTimeText,System.Number_{0},System.Month_{1},System.Stage_{2}*]",
         "GameStart": "遊戲開始",
+        "FreeTrigger": "無其他任務觸發時可自由行動",
         "TriggerSet": "[*Custom.{0}Mission*]觸發設定",
         "TriggerTime": "觸發時間",
         "TriggerPriority": "觸發優先權[*Custom.{0}*][*Custom.MainMission*]",

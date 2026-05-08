@@ -153,10 +153,197 @@
             "stage": "2"
         }
     },
-    "M0000_00": {
+    "CT_M0000": {
+        "mission": "main",
+        "active": true,
+        "minTime": {
+            "year": "1",
+            "month": "4",
+            "stage": "1"
+        },
+        "maxTime": {
+            "year": "1",
+            "month": "4",
+            "stage": "1"
+        },
+        "condition": [
+            "※[*Custom.GameStart*]"
+        ],
+        "script": "ch1_1",
+        "content": [],
         "remark": [
-            "※本項觸發為方便呈現手動加入，實際就是開新遊戲進入點"
-        ]
+            "※本項非實際存在觸發，為方便呈現手動加入，實際就是開新遊戲進入點"
+        ],
+        "type": "Main",
+        "orderKey": "1-04-1-1-M0000"
+    },
+    "CT_Free": {
+        "mission": "CM_Free",
+        "active": true,
+        "minTime": {
+            "year": "1",
+            "month": "4",
+            "stage": "1"
+        },
+        "maxTime": {
+            "year": "",
+            "month": "",
+            "stage": ""
+        },
+        "condition": [
+            "※[*Custom.FreeTrigger*]"
+        ],
+        "script": "CS_free",
+        "content": [],
+        "remark": [
+            "※本項非實際存在觸發，為方便呈現手動加入"
+        ],
+        "type": "Free",
+        "orderKey": "1-04-1-4-Free"
+    },
+    "CT_Section_01_Free": {
+        "mission": "CM_Free",
+        "active": true,
+        "minTime": {
+            "year": "2",
+            "month": "3",
+            "stage": "1"
+        },
+        "maxTime": {
+            "year": "2",
+            "month": "7",
+            "stage": "3"
+        },
+        "condition": [
+            "※[*Custom.FreeTrigger*]"
+        ],
+        "script": "section_01_free_start_02",
+        "content": [],
+        "remark": [
+            "※本項非實際存在觸發，為方便呈現手動加入"
+        ],
+        "type": "Free",
+        "orderKey": "2-03-1-4-Section_01_Free"
+    },
+    "CT_Ch2_4_3": {
+        "mission": "CM_Free",
+        "active": true,
+        "minTime": {
+            "year": "2",
+            "month": "6",
+            "stage": "1"
+        },
+        "maxTime": {
+            "year": "2",
+            "month": "8",
+            "stage": "2"
+        },
+        "condition": [
+            "※[*Custom.FreeTrigger*]"
+        ],
+        "script": "ch2_4_3_break_start_01",
+        "content": [],
+        "remark": [
+            "※本項非實際存在觸發，為方便呈現手動加入"
+        ],
+        "type": "Free",
+        "orderKey": "2-06-1-4-Ch2_4_3"
+    },
+    "CT_Section_02_Free": {
+        "mission": "CM_Free",
+        "active": true,
+        "minTime": {
+            "year": "2",
+            "month": "8",
+            "stage": "3"
+        },
+        "maxTime": {
+            "year": "2",
+            "month": "11",
+            "stage": "2"
+        },
+        "condition": [
+            "※[*Custom.FreeTrigger*]"
+        ],
+        "script": "section_02_free_start_02",
+        "content": [],
+        "remark": [
+            "※本項非實際存在觸發，為方便呈現手動加入"
+        ],
+        "type": "Free",
+        "orderKey": "2-08-3-4-Section_02_Free"
+    },
+    "CT_Ch3_6_1": {
+        "mission": "CM_Free",
+        "active": true,
+        "minTime": {
+            "year": "2",
+            "month": "9",
+            "stage": "1"
+        },
+        "maxTime": {
+            "year": "2",
+            "month": "9",
+            "stage": "3"
+        },
+        "condition": [
+            "※[*Custom.FreeTrigger*]"
+        ],
+        "script": "ch3_6_1_break_start_01",
+        "content": [],
+        "remark": [
+            "※本項非實際存在觸發，為方便呈現手動加入"
+        ],
+        "type": "Free",
+        "orderKey": "2-09-1-4-Ch3_6_1"
+    },
+    "CT_S2503": {
+        "mission": "CM_Free",
+        "active": true,
+        "minTime": {
+            "year": "3",
+            "month": "6",
+            "stage": "3"
+        },
+        "maxTime": {
+            "year": "3",
+            "month": "6",
+            "stage": "3"
+        },
+        "condition": [
+            "※[*Custom.FreeTrigger*]"
+        ],
+        "script": "S2503_break_start_01",
+        "content": [],
+        "remark": [
+            "※本項非實際存在觸發，為方便呈現手動加入"
+        ],
+        "type": "Free",
+        "orderKey": "3-06-3-4-S2503"
+    },
+    "CT_Ch6_4_3": {
+        "mission": "CM_Free",
+        "active": true,
+        "minTime": {
+            "year": "3",
+            "month": "9",
+            "stage": "1"
+        },
+        "maxTime": {
+            "year": "3",
+            "month": "10",
+            "stage": "1"
+        },
+        "condition": [
+            "※[*Custom.FreeTrigger*]"
+        ],
+        "script": "ch6_4_3_break_start_01",
+        "content": [],
+        "remark": [
+            "※本項非實際存在觸發，為方便呈現手動加入"
+        ],
+        "type": "Free",
+        "orderKey": "3-09-1-4-Ch6_4_3"
     },
     "S0005_00": {
         "remark": [

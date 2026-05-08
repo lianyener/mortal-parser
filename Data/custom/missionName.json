@@ -1,10 +1,10 @@
 {
   "mission": {
-    "free": {
-      "ori": "free",
-      "name": "",
+    "CM_Free": {
+      "ori": "CM_Free",
+      "name": "自由行動",
       "ref": "",
-      "desc": "",
+      "desc": "各時期自由行動",
       "keywords": ""
     },
     "M2010_01": {
@@ -1276,8 +1276,8 @@
       "desc": "",
       "keywords": ""
     },
-    "M0000_00": {
-      "ori": "M0000_00",
+    "CT_M0000": {
+      "ori": "CT_M0000",
       "name": "唐門",
       "ref": "",
       "desc": "故事開始",
