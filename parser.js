@@ -1761,8 +1761,10 @@ export async function parseMission() {
   }
   for (const [id, item] of Object.entries(triggerCustom) ?? []) {
     if (id.startsWith('CT_')) {
-      trigger[id] = { ...item, remark: Array.from(item?.remark ?? [], (_, i) => `[*Trigger.Remark.${id}.${i}*]`), rel: { to: { Script: item.script ? [item.script] : [] }, from: { Mission: [item.mission] } } };
+      const tmpSheet = nameDraft?.trigger?.[id]?.sheet ?? '';
+      trigger[id] = { ...item, remark: Array.from(item?.remark ?? [], (_, i) => `[*Trigger.Remark.${id}.${i}*]`), sheet: tmpSheet, rel: { to: { Script: item.script ? [item.script] : [] }, from: { Mission: [item.mission] } } };
       updateNameDraftItem(nameDraft.trigger, id);
+      nameDraft.trigger[id].sheet = tmpSheet;
     }
   }
 
@@ -1791,6 +1793,7 @@ export async function parseMission() {
         // 記錄觸發資料
         const triggerId = triggerData._key;
         mission[missionId].trigger.push(triggerId);
+        const tmpSheet = nameDraft?.trigger?.[triggerId]?.sheet ?? '';
         const triggerObj = {
           mission: missionId,
           active: triggerData._active,
@@ -1799,12 +1802,15 @@ export async function parseMission() {
           condition: [],
           script: triggerData._startScript,
           content: [],
+          sheet: tmpSheet,
           remark: Array.from(triggerCustom?.[triggerId]?.remark ?? [], (_, i) => `[*Trigger.Remark.${triggerId}.${i}*]`),
           rel: { pre: {}, to: {}, from: { Mission: [missionId] } }
         };
         if (triggerObj.script) mergeRelation(triggerObj.rel.to, { Script: [triggerObj.script] });
         if (!triggerObj.active) triggerObj.remark.unshift('※[*Custom.TriggerDisable*]');
+
         updateNameDraftItem(nameDraft.trigger, triggerId, (triggerData._desc ?? '').trim());
+        nameDraft.trigger[triggerId].sheet = tmpSheet;
 
         // 判斷主支線
         const type = missionId == 'main' ? 'Main' : 'Sub';
@@ -1896,6 +1902,7 @@ export async function parseMission() {
       const name = removeUid(file).replace(regexPrefix, '');
       const id = positionMap[name] ?? name;
       mission['CM_Free'].trigger.push(id);
+      const tmpSheet = nameDraft?.trigger?.[id]?.sheet ?? '';
       const triggerObj = {
         mission: 'CM_Free',
         active: true,
@@ -1905,11 +1912,13 @@ export async function parseMission() {
         condition: [`[*Custom.GoTo*][*Label.Place,${id}*]`],
         rel: { pre: {}, post: {}, to: { Script: [data._defaultScript] }, from: { Mission: ['CM_Free'] } },
         type: 'Free',
+        sheet: tmpSheet,
         minTime: { year: '1', month: '4', stage: '1' },
         maxTime: { year: '', month: '', stage: '' },
         orderKey: `1-04-1-3-${id}`
       };
       updateNameDraftItem(nameDraft.trigger, id, name);
+      nameDraft.trigger[id].sheet = tmpSheet;
 
       // 處理停用條件
       const disableKey = data?._disableCondition?._name;

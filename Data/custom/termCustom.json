@@ -346,6 +346,19 @@
             "9": "其他"
         }
     },
+    "Sheet": {
+        "BeforeExternalStudy": "~留學分歧",
+        "NoExternalStudy": "不留學",
+        "KongtongStudy": "崆峒留學",
+        "QingchengStudy": "青城留學",
+        "Brother1Leave": "~飛俠出行",
+        "InviteGroom": "~招親",
+        "WulinAssembly": "~武林大會",
+        "BeforeWestWulin": "~西武林分岐",
+        "SectDestroy": "滅門線",
+        "WestWulin": "西武林線",
+        "Hopeless": "無可救藥線"
+    },
     "Story": {
         "A": "[*Custom.InvalidOption*]"
     },
