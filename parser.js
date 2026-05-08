@@ -3897,7 +3897,7 @@ export async function organizeOutputData() {
     if (!nodeData) return;
 
     // 跳過已處理節點 / 自由行動類
-    if (visited.has(visitKey) || (category === 'Script' && itemId in free)) return;
+    if (visited.has(visitKey) || (category === 'Script' && itemId in free && origins?.type !== 'Free')) return;
 
     // 跳過沒有時間交集的劇本，不加到 scriptSet、不建立 from 關聯、也不往下遞迴衍生物
     if (category === 'Script' && nodeData.timeCheck) {
@@ -4008,7 +4008,8 @@ export async function organizeOutputData() {
       triggerId: triggerId,
       missionId: triggerData.mission,
       minTime: triggerData.minTime,
-      maxTime: triggerData.maxTime
+      maxTime: triggerData.maxTime,
+      type: triggerData.type
     };
 
     const scriptSet = new Set();
