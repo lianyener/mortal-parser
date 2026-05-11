@@ -376,7 +376,8 @@
             "Year": "[*Custom.Year*]",
             "Month": "[*Custom.Month*]",
             "Stage": "[*Custom.Stage*]",
-            "Cumulative": "累計"
+            "Cumulative": "累計",
+            "Unset": "未設定"
         },
         "Label": {
             "Achievement": "[*System.Menu.LibraryAchievement*]",
@@ -415,8 +416,10 @@
             "System": "[*System.System*]",
             "Perform": "圖片特效",
             "Event": "[*Web.Event*]",
+            "Random": "[*Web.Random*]",
             "GroupStat": "群組變數",
-            "EventTable": "事件總表"
+            "EventTable": "事件總表",
+            "RandomTable": "隨機事件總表"
         },
         "Msg": {
             "NotFound": "找不到[*Web.Label.{0}*]",
@@ -436,6 +439,7 @@
         "Position": "地點",
         "Action": "動作",
         "Class": "類別",
+        "Sheet": "分期",
         "Condition": "條件",
         "Rate": "權重",
         "Init": "初始值",
@@ -446,6 +450,7 @@
         "People": "人數",
         "Team": "陣容",
         "Event": "事件",
+        "Random": "隨機事件",
         "MinTime": "最早觸發時間",
         "MaxTime": "最晚觸發時間",
         "Active": "有效",

@@ -2053,6 +2053,15 @@ export async function parsePosition() {
     Travel_601_02: { index: 812, period: '911', position: 'Map', action: 'travel3' },
     Ch_6_4_3_2_01: { index: 821, period: '912', position: '', action: 'music' }
   };
+  const classMap = {
+    正常: 0,
+    失敗: 1,
+    大失敗: 2,
+    成功: 3,
+    大成功: 4,
+    特殊: 5,
+    其他: 9
+  };
 
   // 讀取檔案清單、前置Cache
   const [files, nameDraft] = await Promise.all([getJsonList('PositionResultData'), getDataJson('scriptName'), loadCache(['GROUP', 'FLAG'])]);
@@ -2096,7 +2105,8 @@ export async function parsePosition() {
         // 記錄對應劇本資訊
         const id = mapData.Value;
         const script = `${prefix}_${id}`;
-        const event = { name: mapData.Key, condition: [], rate: [`[#${eventData._defaultRate}#]`], script, remark: [] };
+        const keys = mapData.Key.split('_');
+        const event = { name: mapData.Key, class: classMap[keys[0]] ?? 0, seq: keys[1] ?? '000', condition: [], rate: [`[#${eventData._defaultRate}#]`], script, remark: [] };
         mergeRelation(result[key].rel.to, { Script: [script] });
         updateNameDraftItem(nameDraft, script, (eventData._devNote ?? '').trim());
 
