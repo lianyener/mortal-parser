@@ -1,94 +1,85 @@
 {
-    "introduction": [
-        "這是一個《活俠傳》的非官方事件資料庫。"
-    ],
-    "guides": [
+  "introduction": ["這是一個《活俠傳》的非官方事件資料庫。"],
+  "guides": [
+    {
+      "category": "整體相關",
+      "items": [
+        { "title": "關於資料來源", "content": "主要是透過分析解包內容而來，故可能會收錄到一些目前版本走不到的分歧。" },
+        { "title": "關於暴雷或據透", "content": "不會顯示對話內容及角色演出等，但是選項、旗標名稱、劇本命名及摘要等為了方便辨識的描述難免還是會據透。" }
+      ]
+    },
+    {
+      "category": "基本操作",
+      "items": [
         {
-            "category": "整體相關",
-            "items": [
-                {
-                    "title": "關於資料來源",
-                    "content": "主要是透過分析解包內容而來，故可能會收錄到一些目前版本走不到的分歧。"
-                },
-                {
-                    "title": "關於暴雷或據透",
-                    "content": "不會顯示對話內容及角色演出等，但是選項、旗標名稱、劇本命名及摘要等為了方便辨識的描述難免還是會據透"
-                }
-            ]
+          "title": "查閱資料方式",
+          "content": "如果明確知道您想要找的項目，請直接從選單找到對應的分類，再透過篩選或搜尋找到您要查閱的內容。\n如果不太清楚，可以從[*Label.Page,Trigger*]或[*Label.Page,Event*]或遊戲開始劇本[*Label.Script,ch1_1*]開始，有可以參照的時間軸。\n"
+        },
+        { "title": "各類資訊的參照", "content": "本資料庫分成「事件」和「參照項目」兩類資料，在各頁面點選「參照項目」的標籤預設會以側邊欄方式顯示簡要內容，而點選「事件」的標籤則會直接跳轉頁面。" }
+      ]
+    },
+    {
+      "category": "事件相關",
+      "items": [
+        {
+          "title": "事件的架構",
+          "content": "本事件資料庫基本上都是遵循遊戲的資料架構，任務→任務觸發→劇本→後續劇本、決鬥、戰役、隨機事件，說明如下：\n1. 任務：決定初始的觸發\n2. 任務觸發：決定觸發條件及初始的劇本\n3. 隨機事件：決定可能的劇本及其條件和權重\n4. 劇本、決鬥、戰役：實際事件的內容"
         },
         {
-            "category": "基本操作",
-            "items": [
-                {
-                    "title": "查閱資料方式",
-                    "content": "如果明確知道您想要找的項目，請直接從選單找到對應的分類，再透過篩選或搜尋找到您要查閱的內容。\n如果不太清楚，可以從[*Label.Page,Trigger*]或[*Label.Page,Event*]開始，有可以參照的時間軸"
-                },
-                {
-                    "title": "各類資訊的參照",
-                    "content": "本資料庫分成「事件」和「參照項目」兩類資料，在各頁面點選「參照項目」的標籤預設會以側邊欄方式顯示簡要內容，而點選「事件」的標籤則會直接跳轉頁面"
-                }
-            ]
+          "title": "事件的ID、名稱、描述",
+          "content": "ID為遊戲內的唯一值；名稱部分任務及任務觸發遊戲內資料有註記會參考使用，沒有則自行命名；描述則均為方便辨認自行摘要。\n如有相關建議請透過個聯繫管道反映。"
         },
         {
-            "category": "事件相關",
-            "items": [
-                {
-                    "title": "事件的架構",
-                    "content": "本事件資料庫基本上都是遵循遊戲的資料架構，任務→任務觸發→劇本→後續劇本、決鬥、戰役、隨機事件，說明如下：\n1. 任務：決定初始的觸發以及"
-                },
-                {
-                    "title": "各類資訊的參照",
-                    "content": "本資料庫分成「事件」和「參照項目」兩類資料，在各頁面點選「參照項目」的標籤預設會以側邊欄方式顯示簡要內容，而點選「事件」的標籤則會直接跳轉頁面"
-                }
-            ]
+          "title": "本網站額外加入的事件",
+          "content": "部分事件是為了方便網站呈現及使用者理解額外加入的，這類事件ID會以CM_、CT_、CS_開頭。\n(比方說唐門自由行動，遊戲內不是以劇本呈現，本網站為了方便做成一個劇本。)"
         }
-    ],
-    "faqs": [
+      ]
+    },
+    {
+      "category": "分岐內容相關",
+      "items": [
+        { "title": "旗標的名稱", "content": "如遊戲內有描述資料則盡量參考，沒有或是表達不清楚會做調整。暫存旗標依前後劇情適當命名，部分看不出影響的可能會留著「暫存」或英數字名稱。" },
+        { "title": "數值異動前面的*", "content": "表示畫面不會顯示，部分如[*Label.Stat,change-heart*]、[*Label.Stat,cook*]等本來就不顯示的數值不論有沒有*都不會顯示。" },
         {
-            "category": "資料相關",
-            "items": [
-                {
-                    "q": "資料多久更新一次？",
-                    "a": "我們會在遊戲有重大更新（如新增劇情、調整數值）時，盡快同步並更新網站資料庫。"
-                },
-                {
-                    "q": "為什麼有些文本顯示「未知」或沒有翻譯？",
-                    "a": "這可能是因為遊戲檔案中尚未補齊該語系的文本，或是由於資料庫解析時的遺漏。如果發現嚴重錯誤，歡迎回報給我們。"
-                }
-            ]
+          "title": "數值異動後面括號內的數值(☹︎x)，如[*Label.Stat,dexterity*]+2(☹︎1)",
+          "content": "表示[*Label.Stat,mental*]過低(<20)時增減的值。[*Label.Stat,dexterity*]+2(☹︎1)表示通常[*Label.Stat,dexterity*]+2，心相過低[*Label.Stat,dexterity*]+1"
         },
         {
-            "category": "系統相關",
-            "items": [
-                {
-                    "q": "支援行動裝置（手機）瀏覽嗎？",
-                    "a": "是的，網站採用了響應式設計，但在電腦的大螢幕上瀏覽能獲得最佳的閱讀體驗（尤其是複雜的樹狀表格與側邊欄的雙開互動）。"
-                }
-            ]
+          "title": "數值異動前面的±，如[*Label.Stat,karma*]±1",
+          "content": "表示此數值增減會往中間(50)修正，可能出現在[*Label.Stat,karma*]、[*Label.Stat,training*]、[*Label.Stat,behaviour*]、[*Label.Stat,disposition*]、[*Label.Stat,internal*]等數值上。\n如±前面還有-(負號)，則表示數值會往極端(0或100)調整。"
+        },
+        { "title": "關於※[*Custom.OnlyPerform*]", "content": "該分岐僅有對話、立繪(顯示/表情/移動等)差異。" },
+        {
+          "title": "轉盤(天命骰)的資訊",
+          "content": "Dxx表示骰子的上限值，後面是屬性補正，其中[*Label.Stat,karma*]、[*Label.Stat,training*]、[*Label.Stat,behaviour*]、[*Label.Stat,disposition*]、[*Label.Stat,mental*]非直接直接加減該數值，見下(-號則相反)：\n+[*Label.Stat,karma*]：[*StatLevel.karma05*]+20 / [*StatLevel.karma04*]+10 / [*StatLevel.karma02*]-10 / [*StatLevel.karma01*]-20\n+[*Label.Stat,training*]：[*StatLevel.training05*]+20 / [*StatLevel.training04*]+10 / [*StatLevel.training02*]-10 / [*StatLevel.training01*]-20\n+[*Label.Stat,behaviour*]：[*StatLevel.behaviour05*]+20 / [*StatLevel.behaviour04*]+10 / [*StatLevel.behaviour02*]-10 / [*StatLevel.behaviour01*]-20\n+[*Label.Stat,disposition*]：[*StatLevel.disposition05*]+20 / [*StatLevel.disposition04*]+10 / [*StatLevel.disposition02*]-10 / [*StatLevel.disposition01*]-20\n+[*Label.Stat,mental*]：[*StatLevel.mental03*]+10 / [*StatLevel.mental01*]-10"
+        },
+        {
+          "title": "關於強制結束戰鬥",
+          "content": "沒特別寫就視為敗 (劇情上看起來可能是和局，程式判定跟戰敗是一樣的)"
         }
-    ],
-    "links": [
-        {
-            "icon": "",
-            "title": "GitHub 專案原始碼",
-            "url": "https://github.com/your-repo/mortal-web-database",
-            "desc": "本專案的原始碼，歡迎發送 Issue 回報問題或提出 Pull Request。"
-        },
-        {
-            "icon": "",
-            "title": "活俠傳 Steam 商店頁面",
-            "url": "https://store.steampowered.com/app/1859910/_/",
-            "desc": "支持原作者原始鳥熊，購買正版遊戲。"
-        },
-        {
-            "icon": "",
-            "title": "巴哈姆特 活俠傳 哈啦板",
-            "url": "https://forum.gamer.com.tw/A.php?bsn=73319",
-            "desc": "與其他玩家一起交流討論。"
-        }
-    ],
-    "copyright": [
-        "本網站為玩家自製的非官方資料庫，所有遊戲內文本及相關資料之版權均歸原遊戲開發商（原始鳥熊 Obb Studio）所有。",
-        "本站僅供社群交流與參考使用，請勿用於任何商業用途。若有任何疑慮，請透過 Github 聯繫。"
-    ]
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "category": "資料相關",
+      "items": [
+        { "q": "資料多久更新一次？", "a": "我們會在遊戲有重大更新（如新增劇情、調整數值）時，盡快同步並更新網站資料庫。" },
+        { "q": "為什麼有些文本顯示「未知」或沒有翻譯？", "a": "可能是遊戲本身對應不到內容(BUG或因為路線未完成刻意移除都有)，也可能是解析解包資料時有遺漏，又或是本來就是人工處理的部分(名稱、描述等)還沒處理，如果發現資料有問題歡迎回報。" }
+      ]
+    },
+    {
+      "category": "系統相關",
+      "items": [{ "q": "支援行動裝置（手機）瀏覽嗎？", "a": "姑且有支援，但部分頁面資訊較多，建議使用電腦版體驗較佳。" }]
+    }
+  ],
+  "links": [
+    { "icon": "github", "title": "GitHub 專案原始碼", "url": "https://github.com/lianyener/mortal-web-database", "desc": "本專案的原始碼，歡迎發送 Issue 回報問題。" },
+    { "icon": "steam", "title": "活俠傳 Steam 商店頁面", "url": "https://store.steampowered.com/app/1859910/_/", "desc": "支持原作者原始鳥熊，購買正版遊戲。" },
+    { "icon": "forum", "title": "巴哈姆特 活俠傳 哈啦板", "url": "https://forum.gamer.com.tw/B.php?bsn=73317", "desc": "與其他玩家一起交流討論。" }
+  ],
+  "copyright": [
+    "本網站為玩家自製的非官方資料庫，所有遊戲內文本及相關資料之版權均歸原遊戲開發商（原始鳥熊 Obb Studio）所有。",
+    "本站僅供社群交流與參考使用，請勿用於任何商業用途。若有任何疑慮，請透過 Github 聯繫。"
+  ]
 }
