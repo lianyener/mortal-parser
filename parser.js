@@ -4148,7 +4148,7 @@ export async function parseLocalization() {
   const converter = OpenCC.Converter({ from: 'twp', to: 'cn' });
 
   // 讀取來源
-  const [battleName, combatName, triggerCustom, missionCustom, missionName, scriptCustom, scriptFree, scriptName, groupCustom, option, dialog, flagCustom, termCustom, term, position] =
+  const [battleName, combatName, triggerCustom, missionCustom, missionName, scriptCustom, scriptFree, scriptName, groupCustom, option, dialog, flagCustom, termCustom, term, position, about] =
     await Promise.all([
       getDataJson('battleName'),
       getDataJson('combatName'),
@@ -4164,7 +4164,8 @@ export async function parseLocalization() {
       getDataJson('flagCustom'),
       getDataJson('termCustom'),
       getDataJson('term', ''),
-      getDataJson('position', '')
+      getDataJson('position', ''),
+      getDataJson('about')
     ]);
 
   // Helper: 檢查物件
@@ -4278,6 +4279,45 @@ export async function parseLocalization() {
       Object.assign(zhtw.Flag[key][index], flagData.value);
     });
   }
+
+  // helper: 巢狀處理用詞
+  const buildNestedI18n = (data, prefix) => {
+    if (typeof data === 'string') {
+      // 字串
+      return { indexNode: prefix, dictNode: data };
+    } 
+    else if (Array.isArray(data)) {
+      // 陣列
+      const indexNode = [];
+      const dictNode = {};
+      data.forEach((item, index) => {
+        const res = buildNestedI18n(item, `${prefix}.${index}`);
+        indexNode.push(res.indexNode);
+        dictNode[index.toString()] = res.dictNode;
+      });
+      return { indexNode, dictNode };
+    } 
+    else if (typeof data === 'object' && data !== null) {
+      // 物件
+      const indexNode = {};
+      const dictNode = {};
+      for (const key in data) {
+        const res = buildNestedI18n(data[key], `${prefix}.${key}`);
+        indexNode[key] = res.indexNode;
+        dictNode[key] = res.dictNode;
+      }
+      return { indexNode, dictNode };
+    }
+    
+    // 其他型別
+    return { indexNode: data, dictNode: data };
+  }
+
+  // 網站資訊
+  const { indexNode: aboutIndex, dictNode: aboutDict } = buildNestedI18n(about, 'About');
+  zhtw.About = aboutDict;
+  await exportJson(aboutIndex, 'about', 'public/web', true);
+
 
   // 讀取其他語系
   const [zhcnTerm, krTerm] = await Promise.all([getGameJson('zh-cn', '../Localizations'), getGameJson('kr', '../Localizations')]);

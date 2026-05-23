@@ -189,7 +189,8 @@
         "Support": "[*LabelIcon.Support*][*CombatSkill.Name.{0}*]",
         "Stat": "[*LabelIcon.Stat*][*PlayerStat.{0}*]",
         "Story": "[*LabelIcon.Story*][*Custom.AddStory*]",
-        "GroupStat": "[*LabelIcon.{1}*][*GroupStat.{0}*]"
+        "GroupStat": "[*LabelIcon.{1}*][*GroupStat.{0}*]",
+        "Page": "[*LabelIcon.{0}*][*Web.Label.{0}*]"
     },
     "LabelIcon": {
         "Achievement": "🏆",
