@@ -1911,7 +1911,7 @@ export async function parseMission() {
         remark: [],
         condition: [`[*Custom.GoTo*][*Label.Place,${id}*]`],
         rel: { pre: {}, post: {}, to: { Script: [data._defaultScript] }, from: { Mission: ['CM_Free'] } },
-        type: 'Free',
+        type: 'SubFree',
         sheet: tmpSheet,
         minTime: { year: '1', month: '4', stage: '1' },
         maxTime: { year: '', month: '', stage: '' },
