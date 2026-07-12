@@ -1762,7 +1762,12 @@ export async function parseMission() {
   for (const [id, item] of Object.entries(triggerCustom) ?? []) {
     if (id.startsWith('CT_')) {
       const tmpSheet = nameDraft?.trigger?.[id]?.sheet ?? '';
-      trigger[id] = { ...item, remark: Array.from(item?.remark ?? [], (_, i) => `[*Trigger.Remark.${id}.${i}*]`), sheet: tmpSheet, rel: { to: { Script: item.script ? [item.script] : [] }, from: { Mission: [item.mission] } } };
+      trigger[id] = {
+        ...item,
+        remark: Array.from(item?.remark ?? [], (_, i) => `[*Trigger.Remark.${id}.${i}*]`),
+        sheet: tmpSheet,
+        rel: { to: { Script: item.script ? [item.script] : [] }, from: { Mission: [item.mission] } }
+      };
       updateNameDraftItem(nameDraft.trigger, id);
       nameDraft.trigger[id].sheet = tmpSheet;
     }
@@ -2053,15 +2058,7 @@ export async function parsePosition() {
     Travel_601_02: { index: 812, period: '911', position: 'Map', action: 'travel3' },
     Ch_6_4_3_2_01: { index: 821, period: '912', position: '', action: 'music' }
   };
-  const classMap = {
-    正常: 0,
-    失敗: 1,
-    大失敗: 2,
-    成功: 3,
-    大成功: 4,
-    特殊: 5,
-    其他: 9
-  };
+  const classMap = { 正常: 0, 失敗: 1, 大失敗: 2, 成功: 3, 大成功: 4, 特殊: 5, 其他: 9 };
 
   // 讀取檔案清單、前置Cache
   const [files, nameDraft] = await Promise.all([getJsonList('PositionResultData'), getDataJson('scriptName'), loadCache(['GROUP', 'FLAG'])]);
@@ -2767,7 +2764,7 @@ export async function parseScript() {
   const result = {};
   const logicResult = {};
 
-  // 加入額外自訂  
+  // 加入額外自訂
   for (const [id, item] of Object.entries(custom) ?? []) {
     if (id.startsWith('CS_')) {
       result[id] = { ...item, remark: Array.from(item?.remark ?? [], (_, i) => `[*Script.Remark.${id}.${i}*]`) };
@@ -4014,13 +4011,7 @@ export async function organizeOutputData() {
   // 遍歷任務觸發呼叫來源深度追溯，並建立 eventFlow
   for (const [triggerId, triggerData] of Object.entries(CACHE.TRIGGER ?? {})) {
     const initScript = triggerData?.script ?? null;
-    const origins = {
-      triggerId: triggerId,
-      missionId: triggerData.mission,
-      minTime: triggerData.minTime,
-      maxTime: triggerData.maxTime,
-      type: triggerData.type
-    };
+    const origins = { triggerId: triggerId, missionId: triggerData.mission, minTime: triggerData.minTime, maxTime: triggerData.maxTime, type: triggerData.type };
 
     const scriptSet = new Set();
     if (initScript) traceOrigin('Script', initScript, origins, new Set(), scriptSet);
@@ -4145,6 +4136,7 @@ export async function parseLocalization() {
   // 初始化
   const regexHan = /\p{Script=Han}/u;
   const regexEnd = /\/_$/;
+  const regexEnd0 = /(\/0)?\/$/;
   const converter = OpenCC.Converter({ from: 'twp', to: 'cn' });
 
   // 讀取來源
@@ -4285,8 +4277,7 @@ export async function parseLocalization() {
     if (typeof data === 'string') {
       // 字串
       return { indexNode: prefix, dictNode: data };
-    } 
-    else if (Array.isArray(data)) {
+    } else if (Array.isArray(data)) {
       // 陣列
       const indexNode = [];
       const dictNode = {};
@@ -4296,8 +4287,7 @@ export async function parseLocalization() {
         dictNode[index.toString()] = res.dictNode;
       });
       return { indexNode, dictNode };
-    } 
-    else if (typeof data === 'object' && data !== null) {
+    } else if (typeof data === 'object' && data !== null) {
       // 物件
       const indexNode = {};
       const dictNode = {};
@@ -4308,24 +4298,30 @@ export async function parseLocalization() {
       }
       return { indexNode, dictNode };
     }
-    
+
     // 其他型別
     return { indexNode: data, dictNode: data };
-  }
+  };
 
   // 網站資訊
   const { indexNode: aboutIndex, dictNode: aboutDict } = buildNestedI18n(about, 'About');
   zhtw.About = aboutDict;
   await exportJson(aboutIndex, 'about', 'public/web', true);
 
-
   // 讀取其他語系
-  const [zhcnTerm, krTerm] = await Promise.all([getGameJson('zh-cn', '../Localizations'), getGameJson('kr', '../Localizations')]);
+  const [zhcnTerm, krTerm, jpTerm, krXlat, jpXlat] = await Promise.all([
+    getGameJson('zh-cn', '../Localizations'),
+    getGameJson('kr', '../Localizations'),
+    getGameJson('jp', '../Localizations'),
+    getDataJson('kr'),
+    getDataJson('jp')
+  ]);
 
   const regexParamN = /{(\d+):N0}/g;
   const regexParamP = /{(\d+):P0}/g;
   const zhcn = {};
   const kr = {};
+  const jp = {};
 
   // Helper: 處理{0:N0}參數
   const replaceParam = (prefix, text) => {
@@ -4334,26 +4330,40 @@ export async function parseLocalization() {
   };
 
   // Helper: 深層替換物件
-  const deepReplace = async (target1, target2, source, prefix) => {
+  const deepReplace = async (targetZhcn, targetKr, targetJp, targetKrXlat, targetJpXlat, source, prefix) => {
     if (isObject(source)) {
       for (const key in source) {
         if (isObject(source[key])) {
-          if (!target1[key]) Object.assign(target1, { [key]: {} });
-          if (!target2[key]) Object.assign(target2, { [key]: {} });
-          await deepReplace(target1[key], target2[key], source[key], `${prefix}${key}/`);
+          if (!targetZhcn[key]) Object.assign(targetZhcn, { [key]: {} });
+          if (!targetKr[key]) Object.assign(targetKr, { [key]: {} });
+          if (!targetKrXlat[key]) Object.assign(targetKrXlat, { [key]: {} });
+          if (!targetJp[key]) Object.assign(targetJp, { [key]: {} });
+          if (!targetJpXlat[key]) Object.assign(targetJpXlat, { [key]: {} });
+          await deepReplace(targetZhcn[key], targetKr[key], targetJp[key], targetKrXlat[key], targetJpXlat[key], source[key], `${prefix}${key}/`);
         } else {
           const hasChinese = regexHan.test(source[key]);
           const path = `${prefix}${key}`.replace(regexEnd, '');
-          Object.assign(target1, { [key]: hasChinese ? (replaceParam(prefix, zhcnTerm[path]) ?? converter(source[key])) : source[key] });
-          Object.assign(target2, { [key]: hasChinese ? (replaceParam(prefix, krTerm[path]) ?? '') : source[key] });
+          const label = key === '_' ? prefix.replace(regexEnd0, '') : key;
+          Object.assign(targetZhcn, { [key]: hasChinese ? (replaceParam(prefix, zhcnTerm[path]) ?? converter(source[key])) : source[key] });
+          Object.assign(targetKr, { [key]: hasChinese ? (replaceParam(prefix, krTerm[path]) ?? targetKrXlat[key]) || label : source[key] });
+          Object.assign(targetKrXlat, { [key]: hasChinese ? (replaceParam(prefix, krTerm[path]) ?? targetKrXlat[key] ?? '') : source[key] });
+          Object.assign(targetJp, { [key]: hasChinese ? (replaceParam(prefix, jpTerm[path]) ?? targetJpXlat[key]) || label : source[key] });
+          Object.assign(targetJpXlat, { [key]: hasChinese ? (replaceParam(prefix, jpTerm[path]) ?? targetJpXlat[key] ?? '') : source[key] });
         }
       }
     }
   };
-  await deepReplace(zhcn, kr, zhtw, '');
+  await deepReplace(zhcn, kr, jp, krXlat, jpXlat, zhtw, '');
 
   // 並行輸出結果
-  await Promise.all([exportJson(zhtw, 'zh-tw', 'public/locales', true), exportJson(zhcn, 'zh-cn', 'public/locales', true), exportJson(kr, 'kr', 'public/locales', true)]);
+  await Promise.all([
+    exportJson(zhtw, 'zh-tw', 'public/locales', true),
+    exportJson(zhcn, 'zh-cn', 'public/locales', true),
+    exportJson(kr, 'kr', 'public/locales', true),
+    exportJson(jp, 'jp', 'public/locales', true),
+    exportJson(krXlat, 'kr'),
+    exportJson(jpXlat, 'jp')
+  ]);
 
   // 額外生成完整版本
   for (const key in option.Story) {

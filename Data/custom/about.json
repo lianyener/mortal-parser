@@ -76,7 +76,8 @@
   "links": [
     { "icon": "github", "title": "GitHub 專案原始碼", "url": "https://github.com/lianyener/mortal-web-database", "desc": "本專案的原始碼，歡迎發送 Issue 回報問題。" },
     { "icon": "steam", "title": "活俠傳 Steam 商店頁面", "url": "https://store.steampowered.com/app/1859910/_/", "desc": "支持原作者原始鳥熊，購買正版遊戲。" },
-    { "icon": "forum", "title": "巴哈姆特 活俠傳 哈啦板", "url": "https://forum.gamer.com.tw/B.php?bsn=73317", "desc": "與其他玩家一起交流討論。" }
+    { "icon": "forum", "title": "巴哈姆特 活俠傳 哈啦板", "url": "https://forum.gamer.com.tw/B.php?bsn=73317", "desc": "與其他玩家一起交流討論。" },
+    { "icon": "globe", "title": "日本語化MOD", "url": "https://dlaqe2334.github.io/LOM-JPMOD/", "desc": "活俠傳日本語制作会" }
   ],
   "copyright": [
     "本網站為玩家自製的非官方資料庫，所有遊戲內文本及相關資料之版權均歸原遊戲開發商（原始鳥熊 Obb Studio）所有。",

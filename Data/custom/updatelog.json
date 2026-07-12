@@ -1,0 +1,34 @@
+{
+  "Log": [
+    { "ID": "20260523-01", "Date": "2026/05/23", "GameVersion": "1.0.5000.10", "Content": [{ "Category": "Web", "Type": "Other", "Text": "Website initialization." }] },
+    {
+      "ID": "20250928-01",
+      "Date": "2025/09/28",
+      "GameVersion": "1.0.5000.10",
+      "Content": [
+        {
+          "Category": "Script",
+          "Type": "Change",
+          "Text": "[*Label.Script,ch3_1_2_1*]、[*Label.Script,ch3_1_7_5*]、[*Label.Script,ch5_1_1*]、[*Label.Script,ch5_2_6_4*]、[*Label.Script,ch5_3_4_2*]、[*Label.Script,ch5_4_6_break_start_01*]、[*Label.Script,ch5_4_8_1*]、[*Label.Script,ch5_4_8_2*]、[*Label.Script,ch5_4_8_5_2*]、[*Label.Script,ch5_4_8_5_3*]、[*Label.Script,ch6_4_4_1*]、[*Label.Script,ch7_5_4_3*]、[*Label.Script,ch7_5_5_3*]、[*Label.Script,ch8_1_1_2*]、[*Label.Script,ch8_1_1_2_break_start_01*]、[*Label.Script,ch8_3_1_2_3*]、[*Label.Script,ch8_3_2_2*]、[*Label.Script,ch8_3_2_3_3*]、[*Label.Script,ch8_4_10_1*]、[*Label.Script,ch8_4_3_1*]、[*Label.Script,S0018_04*]、[*Label.Script,S0028_02_break_start_01*]、[*Label.Script,S0202_01*]、[*Label.Script,S0203_01*]、[*Label.Script,S0204_01_01_01*]、[*Label.Script,S0208_06_02_break_start_01*]、[*Label.Script,S0209_01_07*]、[*Label.Script,S0501_01*]、[*Label.Script,S0502_01*]、[*Label.Script,S0502_02*]、[*Label.Script,S8500_01*]、[*Label.Script,S8500_01_02*]、[*Label.Script,S8500_01_05*]、[*Label.Script,travel_result_601_902_03*]、[*Label.Script,travel_result_601_906*]、[*Label.Script,center_free_501*]、[*Label.Script,center_free_502*]、[*Label.Script,center_free_503*]"
+        }
+      ]
+    },
+    {
+      "ID": "20250913-01",
+      "Date": "2025/09/13",
+      "GameVersion": "1.0.5000.8",
+      "Content": [
+        {
+          "Category": "Script",
+          "Type": "New",
+          "Text": "[*Label.Script,S0214_01*]"
+        },
+        {
+          "Category": "Script",
+          "Type": "Change",
+          "Text": "[*Label.Script,ch6_4_4_4_2*]、[*Label.Script,ch6_9_2_3*]、[*Label.Script,ch7_5_4_8*]、[*Label.Script,S0003_03_break_01*]、[*Label.Script,S0018_02_01*]、[*Label.Script,S0208_05_05*]、[*Label.Script,S0801_02_01*]"
+        }
+      ]
+    }
+  ]
+}
