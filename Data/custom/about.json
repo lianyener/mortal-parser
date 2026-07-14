@@ -5,7 +5,8 @@
       "category": "整體相關",
       "items": [
         { "title": "關於資料來源", "content": "主要是透過分析解包內容而來，故可能會收錄到一些目前版本走不到的分歧。" },
-        { "title": "關於暴雷或據透", "content": "不會顯示對話內容及角色演出等，但是選項、旗標名稱、劇本命名及摘要等為了方便辨識的描述難免還是會據透。" }
+        { "title": "關於用詞及翻譯", "content": "遊戲中使用到的用詞直接使用遊戲中的資料，日文使用了「日本語化MOD」的翻譯，其餘中文以外用詞及網站內容則多尚未翻譯或為機器翻譯。" },
+        { "title": "關於暴雷或據透", "content": "不會顯示對話內容及角色演出等，但是選項、旗標名稱、劇本命名及摘要等為了方便辨識的描述難免還是會據透，強烈建議第一次玩不要查看事件相關的頁面。" }
       ]
     },
     {
@@ -74,7 +75,7 @@
     }
   ],
   "links": [
-    { "icon": "github", "title": "GitHub 專案原始碼", "url": "https://github.com/lianyener/mortal-web-database", "desc": "本專案的原始碼，歡迎發送 Issue 回報問題。" },
+    { "icon": "github", "title": "GitHub 專案原始碼", "url": "https://github.com/lianyener/mortal-web-database", "desc": "本專案的原始碼。" },
     { "icon": "steam", "title": "活俠傳 Steam 商店頁面", "url": "https://store.steampowered.com/app/1859910/_/", "desc": "支持原作者原始鳥熊，購買正版遊戲。" },
     { "icon": "forum", "title": "巴哈姆特 活俠傳 哈啦板", "url": "https://forum.gamer.com.tw/B.php?bsn=73317", "desc": "與其他玩家一起交流討論。" },
     { "icon": "globe", "title": "日本語化MOD", "url": "https://dlaqe2334.github.io/LOM-JPMOD/", "desc": "活俠傳日本語制作会" }
