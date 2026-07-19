@@ -2232,7 +2232,7 @@ export async function parseCombat() {
     char: { 敵方: 'Enemy', 我方: 'Player' },
     stat: { 血量: 'hp', 氣力: 'sp', 毒藥: 'poison-value', 麻痺: 'paralysis-value' },
     type: { 新增: 'Add', 移除: 'Remove', 無法動作: 'BanAction' },
-    action: { 無動作: 'idle', 絕招: 'ultimate', 備揍: 'block', 暗器: 'weapon', 捅人: 'attack', 嘴砲: 'curse', 指令: 'action' }
+    action: { 無動作: 'idle', 絕招: 'ultimate', 絕招1: 'ultimate', 絕招2: 'ultimate', 絕招3: 'ultimate', 備揍: 'block', 暗器: 'weapon', 捅人: 'attack', 嘴砲: 'curse', 指令: 'action' }
   };
   const cache = { action: {}, condition: {}, character: {}, effect: {} };
 

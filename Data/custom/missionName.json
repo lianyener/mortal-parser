@@ -403,7 +403,7 @@
       "ori": "S0005",
       "name": "雪洗泥教",
       "ref": "雪洗泥教",
-      "desc": "未實裝",
+      "desc": "※未實裝",
       "keywords": ""
     },
     "S0002": {
@@ -417,14 +417,14 @@
       "ori": "S0007",
       "name": "小動物樊嘯天",
       "ref": "小動物樊嘯天",
-      "desc": "未實裝",
+      "desc": "※未實裝",
       "keywords": ""
     },
     "S0008": {
       "ori": "S0008",
       "name": "飛石幫支線",
       "ref": "飛石幫支線",
-      "desc": "未實裝",
+      "desc": "※未實裝",
       "keywords": ""
     },
     "S0009": {
@@ -443,16 +443,16 @@
     },
     "S0010": {
       "ori": "S0010",
-      "name": "",
+      "name": "墊肩",
       "ref": "墊肩",
-      "desc": "",
+      "desc": "支持肩甲衍生事件\n※未實裝",
       "keywords": ""
     },
     "S0011": {
       "ori": "S0011",
       "name": "",
       "ref": "墊肩",
-      "desc": "",
+      "desc": "吃喝嫖賭衍生事件\n※未實裝",
       "keywords": ""
     },
     "S0012": {
@@ -1150,7 +1150,7 @@
     },
     "S8300": {
       "ori": "S8300",
-      "name": "戰役教學",
+      "name": "報復飛石幫",
       "ref": "支線「報復飛石幫(戰役教學)」",
       "desc": "戰役教學",
       "keywords": ""
@@ -1248,10 +1248,10 @@
     },
     "S9904": {
       "ori": "S9904",
-      "name": "",
+      "name": "大師兄玩樂",
       "ref": "支線：搶劫山賊",
       "desc": "",
-      "keywords": ""
+      "keywords": "搶劫山賊"
     },
     "S9905": {
       "ori": "S9905",
@@ -1283,7 +1283,7 @@
       "ref": "",
       "desc": "故事開始",
       "keywords": "你聽過唐門嗎,招生",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "M0001": {
       "ori": "M0001",
@@ -1291,7 +1291,7 @@
       "ref": "",
       "desc": "遊戲首日晚間自由行動，僅能回房",
       "keywords": "照鏡子",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "M0002": {
       "ori": "M0002",
@@ -1299,7 +1299,7 @@
       "ref": "1-2 段考",
       "desc": "遊戲中的首次段考，實際上不是第一次",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "M0003": {
       "ori": "M0003",
@@ -1307,7 +1307,7 @@
       "ref": "1-3 招喚",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "S0002_00": {
       "ori": "S0002_00",
@@ -1323,7 +1323,7 @@
       "ref": "",
       "desc": "或稱買牛事件",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "S0100_01": {
       "ori": "S0100_01",
@@ -1331,7 +1331,7 @@
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "S2001_01": {
       "ori": "S2001_01",
@@ -1339,7 +1339,7 @@
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "S8200_01": {
       "ori": "S8200_01",
@@ -1347,7 +1347,7 @@
       "ref": "",
       "desc": "決鬥教學",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "S8300_01": {
       "ori": "S8300_01",
@@ -1355,7 +1355,7 @@
       "ref": "",
       "desc": "戰役教學",
       "keywords": "伙房驚嚇指數",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "S8400_01": {
       "ori": "S8400_01",
@@ -1363,7 +1363,7 @@
       "ref": "",
       "desc": "目前版本必定會觸發",
       "keywords": "四書事件",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "S8500_01": {
       "ori": "S8500_01",
@@ -1379,7 +1379,7 @@
       "ref": "",
       "desc": "貢獻過低事件，第一階段",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "S9100_01": {
       "ori": "S9100_01",
@@ -1387,7 +1387,7 @@
       "ref": "",
       "desc": "心相過低事件",
       "keywords": "來者何人",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "S9903_01": {
       "ori": "S9903_01",
@@ -1395,7 +1395,7 @@
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "S9904_01": {
       "ori": "S9904_01",
@@ -1403,7 +1403,7 @@
       "ref": "",
       "desc": "初次大師兄介紹事件",
       "keywords": "初識唐布衣",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "Door": {
       "ori": "Door",
@@ -1411,7 +1411,7 @@
       "ref": "大門",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "Kitchen": {
       "ori": "Kitchen",
@@ -1419,7 +1419,7 @@
       "ref": "伙房",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "Mall": {
       "ori": "Mall",
@@ -1427,7 +1427,7 @@
       "ref": "正心堂",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "Room2": {
       "ori": "Room2",
@@ -1435,7 +1435,7 @@
       "ref": "女弟子房",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "Alchemy": {
       "ori": "Alchemy",
@@ -1443,23 +1443,23 @@
       "ref": "煉丹房",
       "desc": "進入煉丹房，包含初次二師兄介紹事件",
       "keywords": "初識唐錚",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "BackMountain": {
       "ori": "BackMountain",
-      "name": "",
+      "name": "後山",
       "ref": "後山",
-      "desc": "",
+      "desc": "前往後山",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "Center": {
       "ori": "Center",
-      "name": "",
+      "name": "練功場",
       "ref": "練武場",
-      "desc": "",
+      "desc": "前往練功場",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "Study": {
       "ori": "Study",
@@ -1467,7 +1467,7 @@
       "ref": "講經堂",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "Forge": {
       "ori": "Forge",
@@ -1475,7 +1475,7 @@
       "ref": "鍛冶場",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "Room1": {
       "ori": "Room1",
@@ -1483,7 +1483,7 @@
       "ref": "弟子房",
       "desc": "進入男弟子房，包含初次四師兄介紹事件及商店事件",
       "keywords": "初識四師兄,初識唐惟元",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "M2010_02_01": {
       "ori": "M2010_02_01",
@@ -1921,7 +1921,7 @@
       "ori": "S0005_00",
       "name": "雪洗泥教",
       "ref": "",
-      "desc": "未實裝",
+      "desc": "※未實裝",
       "keywords": "",
       "sheet": ""
     },
@@ -1929,7 +1929,7 @@
       "ori": "S0007_00",
       "name": "小動物樊嘯天",
       "ref": "",
-      "desc": "未實裝",
+      "desc": "※未實裝",
       "keywords": "",
       "sheet": ""
     },
@@ -1937,7 +1937,7 @@
       "ori": "S0008_00",
       "name": "飛石幫支線",
       "ref": "",
-      "desc": "未實裝",
+      "desc": "※未實裝",
       "keywords": "",
       "sheet": ""
     },
@@ -1953,7 +1953,7 @@
       "ori": "S0010_01",
       "name": "",
       "ref": "",
-      "desc": "",
+      "desc": "※未實裝",
       "keywords": "",
       "sheet": ""
     },
@@ -1961,7 +1961,7 @@
       "ori": "S0011_01",
       "name": "",
       "ref": "",
-      "desc": "",
+      "desc": "※未實裝",
       "keywords": "",
       "sheet": ""
     },

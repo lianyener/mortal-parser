@@ -113,9 +113,9 @@
     },
     "alchemy_special_01_01": {
         "ori": "alchemy_special_01_01",
-        "name": "alchemy_special_01_01",
+        "name": "葉雲舟被罵",
         "ref": "",
-        "desc": "",
+        "desc": "你看到葉雲舟被二師兄罵，決定是否相助",
         "keywords": ""
     },
     "alchemy_work_001": {
@@ -155,9 +155,9 @@
     },
     "alchemy_work_4001": {
         "ori": "alchemy_work_4001",
-        "name": "alchemy_work_4001",
+        "name": "煉丹房解毒",
         "ref": "",
-        "desc": "",
+        "desc": "臥雲崗回程有人中毒的情況，煉丹結果為固定，額外判定減少中毒值",
         "keywords": ""
     },
     "alchemy_work_401": {
@@ -10237,7 +10237,7 @@
         "ori": "S8500_01_03",
         "name": "自戀",
         "ref": "",
-        "desc": "你還不認識心上人，心上人變為自己",
+        "desc": "你還不認識選擇的對象，心上人變為自己",
         "keywords": ""
     },
     "S8500_01_04": {
