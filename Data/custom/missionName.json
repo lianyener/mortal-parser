@@ -1321,7 +1321,7 @@
       "ori": "S0003_00",
       "name": "俠影寄雲舟",
       "ref": "",
-      "desc": "或稱買牛事件",
+      "desc": "買牛事件",
       "keywords": "",
       "sheet": "BeforeExternalStudy"
     },
@@ -1361,8 +1361,8 @@
       "ori": "S8400_01",
       "name": "霸凌",
       "ref": "",
-      "desc": "目前版本必定會觸發",
-      "keywords": "四書事件",
+      "desc": "四書事件",
+      "keywords": "",
       "sheet": "BeforeExternalStudy"
     },
     "S8500_01": {
@@ -1371,7 +1371,7 @@
       "ref": "",
       "desc": "變心夢，可改變心上人",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Repeat"
     },
     "S9001_01": {
       "ori": "S9001_01",
@@ -3491,7 +3491,7 @@
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": "BeforeExternalStudy"
+      "sheet": "Repeat"
     },
     "CT_Section_01_Free": {
       "ori": "CT_Section_01_Free",

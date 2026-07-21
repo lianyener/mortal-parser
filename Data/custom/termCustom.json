@@ -310,7 +310,8 @@
     "BeforeWestWulin": "~西武林分岐",
     "SectDestroy": "滅門線",
     "WestWulin": "西武林線",
-    "Hopeless": "無可救藥線"
+    "Hopeless": "無可救藥線",
+    "Repeat": "全時期重複性"
   },
   "Story": { "A": "[*Custom.InvalidOption*]" },
   "Web": {

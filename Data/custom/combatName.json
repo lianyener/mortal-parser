@@ -1528,8 +1528,8 @@
     "CL_3001": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.brother3*]",
         "ref": "DEMO閒聊 與三師兄切磋 戰唐陞",
-        "name": "",
-        "desc": "",
+        "name": "與三師兄切磋",
+        "desc": "無可救藥線，正心堂要求和三師兄切磋",
         "keywords": ""
     },
     "CL_5000_01": {
