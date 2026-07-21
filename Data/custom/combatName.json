@@ -1486,8 +1486,8 @@
     "CL_2002_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl5*]",
         "ref": "練武場 小梅亂入 戰虞小梅",
-        "name": "",
-        "desc": "",
+        "name": "和小梅切磋",
+        "desc": "練功場接受小梅邀請和她切磋",
         "keywords": ""
     },
     "CL_2003_01": {
@@ -1521,8 +1521,8 @@
     "CL_3001_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.brother3*]",
         "ref": "與三師兄切磋 戰唐陞",
-        "name": "",
-        "desc": "",
+        "name": "與三師兄切磋",
+        "desc": "要求和三師兄切磋",
         "keywords": ""
     },
     "CL_3001": {
@@ -1548,16 +1548,16 @@
     },
     "CL_3004_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.brother4*]",
-        "ref": "四師兄切磋 全力 戰唐惟元",
+        "ref": "和四師兄切磋",
         "name": "",
-        "desc": "",
+        "desc": "要求和四師兄切磋",
         "keywords": ""
     },
     "CL_3004_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.brother4*]",
-        "ref": "四師兄切磋 戰唐惟元",
+        "ref": "和全力四師兄切磋",
         "name": "",
-        "desc": "",
+        "desc": "引出四師兄的全力",
         "keywords": ""
     },
     "CL_5000_02": {

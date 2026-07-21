@@ -108,7 +108,7 @@
         "ori": "alchemy_001",
         "name": "煉丹房",
         "ref": "",
-        "desc": "",
+        "desc": "你進入煉丹房，決定接下來的行動",
         "keywords": ""
     },
     "alchemy_special_01_01": {
@@ -199,7 +199,7 @@
         "ori": "back_001",
         "name": "後山",
         "ref": "",
-        "desc": "",
+        "desc": "你進入後山，決定接下來的行動",
         "keywords": ""
     },
     "back_02_001": {
@@ -395,7 +395,7 @@
         "ori": "center_001",
         "name": "練功場",
         "ref": "",
-        "desc": "",
+        "desc": "你進入練功場，決定接下來的行動",
         "keywords": ""
     },
     "center_free_001": {
@@ -491,16 +491,16 @@
     },
     "center_girl_03_01": {
         "ori": "center_girl_03_01",
-        "name": "center_girl_03_01",
+        "name": "小梅亂入",
         "ref": "",
-        "desc": "",
+        "desc": "小梅找你切磋",
         "keywords": ""
     },
     "center_girl_03_02": {
         "ori": "center_girl_03_02",
-        "name": "center_girl_03_02",
+        "name": "切磋結果",
         "ref": "",
-        "desc": "",
+        "desc": "你和小梅(火閃電?)的切磋結果",
         "keywords": ""
     },
     "center_work_001": {
@@ -6548,7 +6548,7 @@
         "ori": "door_001",
         "name": "大門",
         "ref": "",
-        "desc": "",
+        "desc": "你前往大門",
         "keywords": ""
     },
     "door_001_01": {
@@ -6966,16 +6966,16 @@
     },
     "food_menu_001": {
         "ori": "food_menu_001",
-        "name": "food_menu_001",
+        "name": "飲食",
         "ref": "",
-        "desc": "",
+        "desc": "※飲食選單",
         "keywords": ""
     },
     "forge_001": {
         "ori": "forge_001",
         "name": "鍛冶場",
         "ref": "",
-        "desc": "",
+        "desc": "你進入鍛冶場，決定接下來的行動",
         "keywords": ""
     },
     "forge_01_001": {
@@ -7150,7 +7150,7 @@
         "ori": "girlroom_001",
         "name": "女弟子房",
         "ref": "",
-        "desc": "",
+        "desc": "你進入女弟子房，決定接下來的行動",
         "keywords": ""
     },
     "girlroom_free_001": {
@@ -7199,14 +7199,14 @@
         "ori": "kitchen_001",
         "name": "伙房",
         "ref": "",
-        "desc": "",
+        "desc": "你進入伙房，決定接下來的行動",
         "keywords": ""
     },
     "kitchen_special_01": {
         "ori": "kitchen_special_01",
-        "name": "kitchen_special_01",
+        "name": "給四師兄接風",
         "ref": "",
-        "desc": "",
+        "desc": "你做了頓大餐給四師兄接風洗塵",
         "keywords": ""
     },
     "kitchen_work_001": {
@@ -7283,7 +7283,7 @@
         "ori": "mall_001",
         "name": "正心堂",
         "ref": "",
-        "desc": "",
+        "desc": "你進入正心堂，決定接下來的行動",
         "keywords": ""
     },
     "mall_free_001": {
@@ -7822,21 +7822,21 @@
         "ori": "room_001",
         "name": "男弟子房",
         "ref": "",
-        "desc": "",
+        "desc": "你進入男弟子房，決定接下來的行動",
         "keywords": ""
     },
     "room_001_break_option": {
         "ori": "room_001_break_option",
-        "name": "room_001_break_option",
+        "name": "休息",
         "ref": "",
-        "desc": "",
+        "desc": "你決定休息一下",
         "keywords": ""
     },
     "room_exit_01": {
         "ori": "room_exit_01",
-        "name": "room_exit_01",
+        "name": "離開男弟子房",
         "ref": "",
-        "desc": "",
+        "desc": "結束男弟子房\n※跳轉用，無劇情",
         "keywords": ""
     },
     "room_work_001": {
@@ -7848,23 +7848,23 @@
     },
     "room_work_101": {
         "ori": "room_work_101",
-        "name": "room_work_101",
+        "name": "輸了點錢",
         "ref": "",
-        "desc": "",
+        "desc": "你和師弟們聚賭，輸錢",
         "keywords": ""
     },
     "room_work_201": {
         "ori": "room_work_201",
-        "name": "",
+        "name": "room_work_201",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "room_work_301": {
         "ori": "room_work_301",
-        "name": "room_work_301",
+        "name": "發了筆財",
         "ref": "",
-        "desc": "",
+        "desc": "你和師弟們聚賭，贏錢",
         "keywords": ""
     },
     "room_work_401": {
@@ -11523,394 +11523,394 @@
     },
     "talk_brother3": {
         "ori": "talk_brother3",
-        "name": "talk_brother3",
+        "name": "和三師兄閒聊",
         "ref": "",
-        "desc": "",
+        "desc": "你和三師兄閒聊",
         "keywords": ""
     },
     "talk_brother3_01": {
         "ori": "talk_brother3_01",
-        "name": "talk_brother3_01",
+        "name": "和三師兄閒聊",
         "ref": "",
-        "desc": "",
+        "desc": "你在講經堂和三師兄閒聊",
         "keywords": ""
     },
     "talk_brother3_01_01": {
         "ori": "talk_brother3_01_01",
-        "name": "talk_brother3_01_01",
+        "name": "切磋結果",
         "ref": "",
-        "desc": "",
+        "desc": "和三師兄切磋的結果",
         "keywords": ""
     },
     "talk_brother3_02_01": {
         "ori": "talk_brother3_02_01",
-        "name": "talk_brother3_02_01",
+        "name": "點蒼派一",
         "ref": "",
-        "desc": "",
+        "desc": "你第一次聽三師兄聊點蒼派",
         "keywords": ""
     },
     "talk_brother3_02_02": {
         "ori": "talk_brother3_02_02",
-        "name": "talk_brother3_02_02",
+        "name": "點蒼派二",
         "ref": "",
-        "desc": "",
+        "desc": "你第二次聽三師兄聊點蒼派",
         "keywords": ""
     },
     "talk_brother3_02_03": {
         "ori": "talk_brother3_02_03",
-        "name": "talk_brother3_02_03",
+        "name": "點蒼派三",
         "ref": "",
-        "desc": "",
+        "desc": "你第三次聽三師兄聊點蒼派",
         "keywords": ""
     },
     "talk_brother3_03_01": {
         "ori": "talk_brother3_03_01",
-        "name": "talk_brother3_03_01",
+        "name": "青城派一",
         "ref": "",
-        "desc": "",
+        "desc": "你第一次聽三師兄聊青城派",
         "keywords": ""
     },
     "talk_brother3_03_02": {
         "ori": "talk_brother3_03_02",
-        "name": "talk_brother3_03_02",
+        "name": "青城派二",
         "ref": "",
-        "desc": "",
+        "desc": "你第二次聽三師兄聊青城派",
         "keywords": ""
     },
     "talk_brother3_03_03": {
         "ori": "talk_brother3_03_03",
-        "name": "talk_brother3_03_03",
+        "name": "青城派三",
         "ref": "",
-        "desc": "",
+        "desc": "你第三次聽三師兄聊青城派",
         "keywords": ""
     },
     "talk_brother3_03_04": {
         "ori": "talk_brother3_03_04",
-        "name": "talk_brother3_03_04",
+        "name": "極樂左使",
         "ref": "",
-        "desc": "",
+        "desc": "你聽三師兄聊極樂左使",
         "keywords": ""
     },
     "talk_brother3_04_01": {
         "ori": "talk_brother3_04_01",
-        "name": "talk_brother3_04_01",
+        "name": "峨眉派一",
         "ref": "",
-        "desc": "",
+        "desc": "你第一次聽三師兄聊峨眉派",
         "keywords": ""
     },
     "talk_brother3_04_02": {
         "ori": "talk_brother3_04_02",
-        "name": "talk_brother3_04_02",
+        "name": "峨眉派二",
         "ref": "",
-        "desc": "",
+        "desc": "你第二次聽三師兄聊峨眉派",
         "keywords": ""
     },
     "talk_brother3_04_03": {
         "ori": "talk_brother3_04_03",
-        "name": "talk_brother3_04_03",
+        "name": "峨眉派三",
         "ref": "",
-        "desc": "",
+        "desc": "你第三次聽三師兄聊峨眉派",
         "keywords": ""
     },
     "talk_brother3_05_01": {
         "ori": "talk_brother3_05_01",
-        "name": "talk_brother3_05_01",
+        "name": "全真派一",
         "ref": "",
-        "desc": "",
+        "desc": "你第一次聽三師兄聊全真派",
         "keywords": ""
     },
     "talk_brother3_05_02": {
         "ori": "talk_brother3_05_02",
-        "name": "talk_brother3_05_02",
+        "name": "全真派二",
         "ref": "",
-        "desc": "",
+        "desc": "你第二次聽三師兄聊全真派",
         "keywords": ""
     },
     "talk_brother3_05_03": {
         "ori": "talk_brother3_05_03",
-        "name": "talk_brother3_05_03",
+        "name": "全真派三",
         "ref": "",
-        "desc": "",
+        "desc": "你第三次聽三師兄聊全真派",
         "keywords": ""
     },
     "talk_brother3_06_01": {
         "ori": "talk_brother3_06_01",
-        "name": "talk_brother3_06_01",
+        "name": "崆峒派一",
         "ref": "",
-        "desc": "",
+        "desc": "你第一次聽三師兄聊全真派",
         "keywords": ""
     },
     "talk_brother3_06_02": {
         "ori": "talk_brother3_06_02",
-        "name": "talk_brother3_06_02",
+        "name": "崆峒派二",
         "ref": "",
-        "desc": "",
+        "desc": "你第二次聽三師兄聊全真派",
         "keywords": ""
     },
     "talk_brother3_06_03": {
         "ori": "talk_brother3_06_03",
-        "name": "talk_brother3_06_03",
+        "name": "崆峒派三",
         "ref": "",
-        "desc": "",
+        "desc": "你第三次聽三師兄聊全真派",
         "keywords": ""
     },
     "talk_brother3_07_01": {
         "ori": "talk_brother3_07_01",
-        "name": "talk_brother3_07_01",
+        "name": "三大世家一",
         "ref": "",
-        "desc": "",
+        "desc": "你第一次聽三師兄聊三大世家",
         "keywords": ""
     },
     "talk_brother3_07_02": {
         "ori": "talk_brother3_07_02",
-        "name": "talk_brother3_07_02",
+        "name": "三大世家二",
         "ref": "",
-        "desc": "",
+        "desc": "你第二次聽三師兄聊三大世家",
         "keywords": ""
     },
     "talk_brother3_08_01": {
         "ori": "talk_brother3_08_01",
-        "name": "talk_brother3_08_01",
+        "name": "泥教一",
         "ref": "",
-        "desc": "",
+        "desc": "你第一次聽三師兄聊泥教",
         "keywords": ""
     },
     "talk_brother3_09_01": {
         "ori": "talk_brother3_09_01",
-        "name": "talk_brother3_09_01",
+        "name": "萬靈油",
         "ref": "",
-        "desc": "",
+        "desc": "你聽三師兄聊萬靈油",
         "keywords": ""
     },
     "talk_brother3_09_02": {
         "ori": "talk_brother3_09_02",
-        "name": "talk_brother3_09_02",
+        "name": "天下第一毒",
         "ref": "",
-        "desc": "",
+        "desc": "你聽三師兄聊天下第一毒",
         "keywords": ""
     },
     "talk_brother3_10_01": {
         "ori": "talk_brother3_10_01",
-        "name": "talk_brother3_10_01",
+        "name": "嶺南派一",
         "ref": "",
-        "desc": "",
+        "desc": "你第一次聽三師兄聊嶺南派",
         "keywords": ""
     },
     "talk_brother3_10_02": {
         "ori": "talk_brother3_10_02",
-        "name": "talk_brother3_10_02",
+        "name": "嶺南派二",
         "ref": "",
-        "desc": "",
+        "desc": "你第二次聽三師兄聊嶺南派",
         "keywords": ""
     },
     "talk_brother3_10_03": {
         "ori": "talk_brother3_10_03",
-        "name": "talk_brother3_10_03",
+        "name": "嶺南派三",
         "ref": "",
-        "desc": "",
+        "desc": "你第三次聽三師兄聊嶺南派",
         "keywords": ""
     },
     "talk_brother3_11_01": {
         "ori": "talk_brother3_11_01",
-        "name": "talk_brother3_11_01",
+        "name": "千面人魔",
         "ref": "",
-        "desc": "",
+        "desc": "你聽三師兄聊千面人魔",
         "keywords": ""
     },
     "talk_brother3_option_01": {
         "ori": "talk_brother3_option_01",
-        "name": "talk_brother3_option_01",
+        "name": "掌門的情況",
         "ref": "",
-        "desc": "",
+        "desc": "三師兄和你說了掌門的病情",
         "keywords": ""
     },
     "talk_brother3_option_02": {
         "ori": "talk_brother3_option_02",
-        "name": "talk_brother3_option_02",
+        "name": "代掌門",
         "ref": "",
-        "desc": "",
+        "desc": "和三師兄聊了成為代掌門的事",
         "keywords": ""
     },
     "talk_brother3_option_03": {
         "ori": "talk_brother3_option_03",
-        "name": "talk_brother3_option_03",
+        "name": "忘記的事情",
         "ref": "",
-        "desc": "",
+        "desc": "三師兄和你聊了些往事助你恢復記憶",
         "keywords": ""
     },
     "talk_brother3_option_04": {
         "ori": "talk_brother3_option_04",
-        "name": "talk_brother3_option_04",
+        "name": "江湖",
         "ref": "",
-        "desc": "",
+        "desc": "三師兄和你說了現今江湖情勢",
         "keywords": ""
     },
     "talk_brother3_option_05": {
         "ori": "talk_brother3_option_05",
-        "name": "talk_brother3_option_05",
+        "name": "和三師兄切磋",
         "ref": "",
-        "desc": "",
+        "desc": "你提出要和三師兄切磋",
         "keywords": ""
     },
     "talk_brother3_option_05_01": {
         "ori": "talk_brother3_option_05_01",
-        "name": "talk_brother3_option_05_01",
+        "name": "切磋結果",
         "ref": "",
-        "desc": "",
+        "desc": "和三師兄切磋的結果",
         "keywords": ""
     },
     "talk_brother4": {
         "ori": "talk_brother4",
-        "name": "talk_brother4",
+        "name": "和四師兄閒聊",
         "ref": "",
-        "desc": "",
+        "desc": "男弟子房和四師兄閒聊",
         "keywords": ""
     },
     "talk_brother4_option_00_01": {
         "ori": "talk_brother4_option_00_01",
-        "name": "talk_brother4_option_00_01",
+        "name": "氣色不錯",
         "ref": "",
-        "desc": "",
+        "desc": "四師兄和你說了這趟下山的收穫",
         "keywords": ""
     },
     "talk_brother4_option_00_02": {
         "ori": "talk_brother4_option_00_02",
-        "name": "talk_brother4_option_00_02",
+        "name": "有色紙嗎",
         "ref": "",
-        "desc": "",
+        "desc": "你向四師兄詢問色紙來送小師妹",
         "keywords": ""
     },
     "talk_brother4_option_00_03": {
         "ori": "talk_brother4_option_00_03",
-        "name": "talk_brother4_option_00_03",
+        "name": "臭奸商",
         "ref": "",
-        "desc": "",
+        "desc": "你說了難聽的話",
         "keywords": ""
     },
     "talk_brother4_option_01": {
         "ori": "talk_brother4_option_01",
-        "name": "talk_brother4_option_01",
+        "name": "打聽的事(無藥線)",
         "ref": "",
-        "desc": "",
+        "desc": "四師兄要你付情報費",
         "keywords": ""
     },
     "talk_brother4_option_01_01": {
         "ori": "talk_brother4_option_01_01",
-        "name": "talk_brother4_option_01_01",
+        "name": "付錢(無藥線)",
         "ref": "",
-        "desc": "",
+        "desc": "四師兄告知你打聽的事",
         "keywords": ""
     },
     "talk_brother4_option_02": {
         "ori": "talk_brother4_option_02",
-        "name": "talk_brother4_option_02",
+        "name": "後路(無藥線)",
         "ref": "",
-        "desc": "",
+        "desc": "四師兄勸你離開唐門",
         "keywords": ""
     },
     "talk_brother4_option_02_01": {
         "ori": "talk_brother4_option_02_01",
-        "name": "talk_brother4_option_02_01",
+        "name": "打聽的事",
         "ref": "",
-        "desc": "",
+        "desc": "四師兄要你付情報費",
         "keywords": ""
     },
     "talk_brother4_option_02_01_01": {
         "ori": "talk_brother4_option_02_01_01",
-        "name": "talk_brother4_option_02_01_01",
+        "name": "支付費用",
         "ref": "",
-        "desc": "",
+        "desc": "付錢或打雜抵帳",
         "keywords": ""
     },
     "talk_brother4_option_02_01_02": {
         "ori": "talk_brother4_option_02_01_02",
-        "name": "talk_brother4_option_02_01_02",
+        "name": "小師妹情報",
         "ref": "",
-        "desc": "",
+        "desc": "四師兄告知你小師妹的情報",
         "keywords": ""
     },
     "talk_brother4_option_02_01_03": {
         "ori": "talk_brother4_option_02_01_03",
-        "name": "talk_brother4_option_02_01_03",
+        "name": "靈丹情報",
         "ref": "",
-        "desc": "",
+        "desc": "四師兄告知你靈丹的情報",
         "keywords": ""
     },
     "talk_brother4_option_02_02": {
         "ori": "talk_brother4_option_02_02",
-        "name": "talk_brother4_option_02_02",
+        "name": "後路",
         "ref": "",
-        "desc": "",
+        "desc": "四師兄勸你離開唐門",
         "keywords": ""
     },
     "talk_brother4_option_02_03": {
         "ori": "talk_brother4_option_02_03",
-        "name": "talk_brother4_option_02_03",
+        "name": "實力",
         "ref": "",
-        "desc": "",
+        "desc": "你向四師兄詢問你的實力",
         "keywords": ""
     },
     "talk_brother4_option_02_03_01": {
         "ori": "talk_brother4_option_02_03_01",
-        "name": "talk_brother4_option_02_03_01",
+        "name": "遠勝四師兄",
         "ref": "",
-        "desc": "",
+        "desc": "四師兄評價你的實力遠勝他",
         "keywords": ""
     },
     "talk_brother4_option_02_03_02": {
         "ori": "talk_brother4_option_02_03_02",
-        "name": "talk_brother4_option_02_03_02",
+        "name": "不算頂尖高手",
         "ref": "",
-        "desc": "",
+        "desc": "四師兄評價你的實力和他和三師兄差不多",
         "keywords": ""
     },
     "talk_brother4_option_02_03_03": {
         "ori": "talk_brother4_option_02_03_03",
-        "name": "talk_brother4_option_02_03_03",
+        "name": "二三流",
         "ref": "",
-        "desc": "",
+        "desc": "四師兄評價你的實力在江湖上只是二三流",
         "keywords": ""
     },
     "talk_brother4_option_02_04": {
         "ori": "talk_brother4_option_02_04",
-        "name": "talk_brother4_option_02_04",
+        "name": "挑戰四師兄",
         "ref": "",
-        "desc": "",
+        "desc": "你要求和四師兄切磋",
         "keywords": ""
     },
     "talk_brother4_option_02_04_01": {
         "ori": "talk_brother4_option_02_04_01",
-        "name": "talk_brother4_option_02_04_01",
+        "name": "切磋結果",
         "ref": "",
-        "desc": "",
+        "desc": "和四師兄切磋結果",
         "keywords": ""
     },
     "talk_brother4_option_02_05": {
         "ori": "talk_brother4_option_02_05",
-        "name": "talk_brother4_option_02_05",
+        "name": "挑戰全力四師兄",
         "ref": "",
-        "desc": "",
+        "desc": "你嘗試引出四師兄的全力",
         "keywords": ""
     },
     "talk_brother4_option_02_05_01": {
         "ori": "talk_brother4_option_02_05_01",
-        "name": "talk_brother4_option_02_05_01",
+        "name": "全力切磋結果",
         "ref": "",
-        "desc": "",
+        "desc": "和全力四師兄切磋結果",
         "keywords": ""
     },
     "talk_brother4_option_02_06": {
         "ori": "talk_brother4_option_02_06",
-        "name": "talk_brother4_option_02_06",
+        "name": "四師兄的實力",
         "ref": "",
-        "desc": "",
+        "desc": "你詢問了四師兄的實力",
         "keywords": ""
     },
     "talk_brother4_option_03": {
         "ori": "talk_brother4_option_03",
-        "name": "talk_brother4_option_03",
+        "name": "實力(無藥線)",
         "ref": "",
-        "desc": "",
+        "desc": "你向四師兄詢問你的實力",
         "keywords": ""
     },
     "talk_girl4_10": {

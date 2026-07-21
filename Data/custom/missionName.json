@@ -1409,7 +1409,7 @@
       "ori": "Door",
       "name": "",
       "ref": "大門",
-      "desc": "",
+      "desc": "前往大門",
       "keywords": "",
       "sheet": "BeforeExternalStudy"
     },
@@ -1417,7 +1417,7 @@
       "ori": "Kitchen",
       "name": "",
       "ref": "伙房",
-      "desc": "",
+      "desc": "進入伙房",
       "keywords": "",
       "sheet": "BeforeExternalStudy"
     },
@@ -1425,7 +1425,7 @@
       "ori": "Mall",
       "name": "",
       "ref": "正心堂",
-      "desc": "",
+      "desc": "進入正心堂",
       "keywords": "",
       "sheet": "BeforeExternalStudy"
     },
@@ -1433,7 +1433,7 @@
       "ori": "Room2",
       "name": "",
       "ref": "女弟子房",
-      "desc": "",
+      "desc": "前往女弟子房",
       "keywords": "",
       "sheet": "BeforeExternalStudy"
     },
@@ -1465,7 +1465,7 @@
       "ori": "Study",
       "name": "",
       "ref": "講經堂",
-      "desc": "",
+      "desc": "進入講經堂，包含三師兄介紹事件",
       "keywords": "",
       "sheet": "BeforeExternalStudy"
     },
@@ -1473,7 +1473,7 @@
       "ori": "Forge",
       "name": "",
       "ref": "鍛冶場",
-      "desc": "",
+      "desc": "進入鍛冶場",
       "keywords": "",
       "sheet": "BeforeExternalStudy"
     },
