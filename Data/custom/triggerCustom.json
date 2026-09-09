@@ -1,366 +1,342 @@
 {
-    "S9200_01": {
-        "time": {
-            "year": "1",
-            "month": "4",
-            "stage": "1"
-        }
-    },
-    "S0018_02": {
-        "time": {
-            "year": "1",
-            "month": "8",
-            "stage": "1"
-        }
-    },
-    "S8500_01": {
-        "time": {
-            "year": "1",
-            "month": "4",
-            "stage": "1"
-        }
-    },
-    "M7005_01_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7005_02_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7005_03_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7005_04_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7005_05_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7005_06_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7005_07_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7005_08_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7005_09_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7005_10_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7006_01_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7006_02_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7006_03_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7006_04_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7006_05_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7006_06_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M6002_01": {
-        "time": {
-            "year": "3",
-            "month": "12",
-            "stage": "1"
-        }
-    },
-    "M7001_01": {
-        "time": {
-            "year": "4",
-            "month": "1",
-            "stage": "2"
-        }
-    },
-    "M7002_01": {
-        "time": {
-            "year": "4",
-            "month": "2",
-            "stage": "2"
-        }
-    },
-    "CT_M0000": {
-        "mission": "main",
-        "active": true,
-        "minTime": {
-            "year": "1",
-            "month": "4",
-            "stage": "1"
-        },
-        "maxTime": {
-            "year": "1",
-            "month": "4",
-            "stage": "1"
-        },
-        "condition": [
-            "※[*Custom.GameStart*]"
-        ],
-        "script": "ch1_1",
-        "content": [],
-        "remark": [
-            "※本項非實際存在觸發，為方便呈現手動加入，實際就是開新遊戲進入點"
-        ],
-        "type": "Main",
-        "orderKey": "1-04-1-1-M0000"
-    },
-    "CT_Free": {
-        "mission": "CM_Free",
-        "active": true,
-        "minTime": {
-            "year": "1",
-            "month": "4",
-            "stage": "1"
-        },
-        "maxTime": {
-            "year": "",
-            "month": "",
-            "stage": ""
-        },
-        "condition": [
-            "※[*Custom.FreeTrigger*]"
-        ],
-        "script": "CS_free",
-        "content": [],
-        "remark": [
-            "※本項非實際存在觸發，為方便呈現手動加入"
-        ],
-        "type": "Free",
-        "orderKey": "1-04-1-4-Free"
-    },
-    "CT_Section_01_Free": {
-        "mission": "CM_Free",
-        "active": true,
-        "minTime": {
-            "year": "2",
-            "month": "3",
-            "stage": "1"
-        },
-        "maxTime": {
-            "year": "2",
-            "month": "7",
-            "stage": "3"
-        },
-        "condition": [
-            "※[*Custom.FreeTrigger*]"
-        ],
-        "script": "section_01_free_start_02",
-        "content": [],
-        "remark": [
-            "※本項非實際存在觸發，為方便呈現手動加入"
-        ],
-        "type": "Free",
-        "orderKey": "2-03-1-4-Section_01_Free"
-    },
-    "CT_Ch2_4_3": {
-        "mission": "CM_Free",
-        "active": true,
-        "minTime": {
-            "year": "2",
-            "month": "6",
-            "stage": "1"
-        },
-        "maxTime": {
-            "year": "2",
-            "month": "8",
-            "stage": "2"
-        },
-        "condition": [
-            "※[*Custom.FreeTrigger*]"
-        ],
-        "script": "ch2_4_3_break_start_01",
-        "content": [],
-        "remark": [
-            "※本項非實際存在觸發，為方便呈現手動加入"
-        ],
-        "type": "Free",
-        "orderKey": "2-06-1-4-Ch2_4_3"
-    },
-    "CT_Section_02_Free": {
-        "mission": "CM_Free",
-        "active": true,
-        "minTime": {
-            "year": "2",
-            "month": "8",
-            "stage": "3"
-        },
-        "maxTime": {
-            "year": "2",
-            "month": "11",
-            "stage": "2"
-        },
-        "condition": [
-            "※[*Custom.FreeTrigger*]"
-        ],
-        "script": "section_02_free_start_02",
-        "content": [],
-        "remark": [
-            "※本項非實際存在觸發，為方便呈現手動加入"
-        ],
-        "type": "Free",
-        "orderKey": "2-08-3-4-Section_02_Free"
-    },
-    "CT_Ch3_6_1": {
-        "mission": "CM_Free",
-        "active": true,
-        "minTime": {
-            "year": "2",
-            "month": "9",
-            "stage": "1"
-        },
-        "maxTime": {
-            "year": "2",
-            "month": "9",
-            "stage": "3"
-        },
-        "condition": [
-            "※[*Custom.FreeTrigger*]"
-        ],
-        "script": "ch3_6_1_break_start_01",
-        "content": [],
-        "remark": [
-            "※本項非實際存在觸發，為方便呈現手動加入"
-        ],
-        "type": "Free",
-        "orderKey": "2-09-1-4-Ch3_6_1"
-    },
-    "CT_S2503": {
-        "mission": "CM_Free",
-        "active": true,
-        "minTime": {
-            "year": "3",
-            "month": "6",
-            "stage": "3"
-        },
-        "maxTime": {
-            "year": "3",
-            "month": "6",
-            "stage": "3"
-        },
-        "condition": [
-            "※[*Custom.FreeTrigger*]"
-        ],
-        "script": "S2503_break_start_01",
-        "content": [],
-        "remark": [
-            "※本項非實際存在觸發，為方便呈現手動加入"
-        ],
-        "type": "Free",
-        "orderKey": "3-06-3-4-S2503"
-    },
-    "CT_Ch6_4_3": {
-        "mission": "CM_Free",
-        "active": true,
-        "minTime": {
-            "year": "3",
-            "month": "9",
-            "stage": "1"
-        },
-        "maxTime": {
-            "year": "3",
-            "month": "10",
-            "stage": "1"
-        },
-        "condition": [
-            "※[*Custom.FreeTrigger*]"
-        ],
-        "script": "ch6_4_3_break_start_01",
-        "content": [],
-        "remark": [
-            "※本項非實際存在觸發，為方便呈現手動加入"
-        ],
-        "type": "Free",
-        "orderKey": "3-09-1-4-Ch6_4_3"
-    },
-    "S0005_00": {
-        "remark": [
-            "※當前版本無法觸發",
-            "※當前版本未設定劇本"
-        ]
-    },
-    "S0007_00": {
-        "remark": [
-            "※當前版本無法觸發",
-            "※當前版本未設定劇本"
-        ]
-    },
-    "S0008_00": {
-        "remark": [
-            "※當前版本無法觸發",
-            "※當前版本未設定劇本"
-        ]
-    }
+  "S9200_01": { "time": { "year": "1", "month": "4", "stage": "1" } },
+  "S0018_02": { "time": { "year": "1", "month": "8", "stage": "1" } },
+  "S8500_01": { "time": { "year": "1", "month": "4", "stage": "1" } },
+  "M7005_01_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7005_02_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7005_03_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7005_04_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7005_05_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7005_06_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7005_07_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7005_08_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7005_09_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7005_10_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7006_01_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7006_02_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7006_03_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7006_04_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7006_05_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7006_06_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M6002_01": { "time": { "year": "3", "month": "12", "stage": "1" } },
+  "M7001_01": { "time": { "year": "4", "month": "1", "stage": "2" } },
+  "M7002_01": { "time": { "year": "4", "month": "2", "stage": "2" } },
+  "S0203_01": { "orderKey": "1-09-1-1-S0203_01" },
+  "S0202_02": { "orderKey": "1-09-2-1-S0202_02" },
+  "S0012_01": { "orderKey": "2-03-2-3-S0012_01" },
+  "M2003_01": {
+    "eventFlow": [
+      { "id": "ch2_2_3_1", "type": "Script" },
+      { "id": "ch2_2_3_1_travel", "type": "Script" },
+      { "id": "ch2_2_3_1_travel_01", "type": "Script" },
+      { "id": "ch2_2_3_1_travel_02", "type": "Script" },
+      { "id": "ch2_2_3_1_travel_03", "type": "Script" },
+      { "id": "ch2_2_3_1_travel_03_break_start_01", "type": "Script" },
+      { "id": "ch2_2_3_1_travel_03_break_start_02", "type": "Script" },
+      { "id": "ch2_2_3_1_travel_03_break_01", "type": "Script" },
+      { "id": "ch2_2_3_1_travel_04", "type": "Script" },
+      { "id": "ch2_2_3_1_travel_05", "type": "Script" },
+      { "id": "ch2_2_3_1_travel_06", "type": "Script" },
+      { "id": "ch2_2_3_1_travel_07", "type": "Script" },
+      { "id": "ch2_2_3_4", "type": "Script" },
+      { "id": "ch2_2_3_4_break", "type": "Script" },
+      { "id": "ch2_2_3_4_break_01", "type": "Script" },
+      { "id": "ch2_2_3_4_1", "type": "Script" },
+      { "id": "CL_1100_01", "type": "Combat" },
+      { "id": "ch2_2_3_4_1_1", "type": "Script" },
+      { "id": "ch2_2_3_4_2", "type": "Script" },
+      { "id": "CL_1101_01", "type": "Combat" },
+      { "id": "ch2_2_3_4_2_1", "type": "Script" },
+      { "id": "ch2_2_3_4_3", "type": "Script" },
+      { "id": "ch2_2_3_4_3_break_01", "type": "Script" },
+      { "id": "ch2_2_3_4_3_break_01_01", "type": "Script" },
+      { "id": "CL_1102_01", "type": "Combat" },
+      { "id": "ch2_2_3_4_3_break_01_01_01", "type": "Script" },
+      { "id": "ch2_2_3_4_3_break_01_01_02", "type": "Script" },
+      { "id": "ch2_2_3_4_3_break_01_02", "type": "Script" },
+      { "id": "ch2_2_3_4_3_break_01_03", "type": "Script" },
+      { "id": "CL_1103_01", "type": "Combat" },
+      { "id": "ch2_2_3_4_3_break_01_04", "type": "Script" },
+      { "id": "CL_1104_01", "type": "Combat" },
+      { "id": "ch2_2_3_4_3_break_01_04_01", "type": "Script" },
+      { "id": "ch2_2_3_4_3_break_01_04_02", "type": "Script" },
+      { "id": "BL_2000", "type": "Battle" },
+      { "id": "BL_2001", "type": "Battle" },
+      { "id": "ch2_2_3_4_3_break_01_04_02_01", "type": "Script" },
+      { "id": "ch2_2_3_4_3_break_01_04_03", "type": "Script" },
+      { "id": "ch2_2_3_4_3_Break_01_03_01", "type": "Script" },
+      { "id": "ch2_2_4_2", "type": "Script" },
+      { "id": "ch2_2_5", "type": "Script" },
+      { "id": "ch2_2_5_1", "type": "Script" },
+      { "id": "ch2_2_5_2", "type": "Script" },
+      { "id": "ch2_2_5_2_break_start_01", "type": "Script" },
+      { "id": "ch2_2_5_2_break_01", "type": "Script" },
+      { "id": "ch2_2_6", "type": "Script" },
+      { "id": "ch2_2_6_1", "type": "Script" },
+      { "id": "ch2_2_6_2", "type": "Script" },
+      { "id": "ch2_2_6_3", "type": "Script" },
+      { "id": "CL_1202_01", "type": "Combat" },
+      { "id": "ch2_2_6_4", "type": "Script" },
+      { "id": "ch2_2_6_4_break_start_01", "type": "Script" },
+      { "id": "ch2_2_6_4_break_01", "type": "Script" },
+      { "id": "ch2_2_6_5", "type": "Script" }
+    ]
+  },
+  "M2004_01": {
+    "eventFlow": [
+      { "id": "ch2_2_4_1", "type": "Script" },
+      { "id": "ch2_2_4_1_travel", "type": "Script" },
+      { "id": "ch2_2_4_1_travel_01", "type": "Script" },
+      { "id": "ch2_2_4_1_travel_02", "type": "Script" },
+      { "id": "ch2_2_4_1_travel_03", "type": "Script" },
+      { "id": "ch2_2_4_1_travel_04", "type": "Script" },
+      { "id": "ch2_2_4_2", "type": "Script" },
+      { "id": "ch2_2_5", "type": "Script" },
+      { "id": "ch2_2_5_3", "type": "Script" },
+      { "id": "CL_1201_01", "type": "Combat" },
+      { "id": "ch2_2_5_3_1", "type": "Script" },
+      { "id": "ch2_2_5_4", "type": "Script" },
+      { "id": "ch2_2_6", "type": "Script" },
+      { "id": "ch2_2_6_1", "type": "Script" },
+      { "id": "ch2_2_6_2", "type": "Script" },
+      { "id": "ch2_2_6_3", "type": "Script" },
+      { "id": "CL_1202_01", "type": "Combat" },
+      { "id": "ch2_2_6_4", "type": "Script" },
+      { "id": "ch2_2_6_4_break_start_01", "type": "Script" },
+      { "id": "ch2_2_6_4_break_01", "type": "Script" },
+      { "id": "ch2_2_6_5", "type": "Script" }
+    ]
+  },
+  "M2005_01": {
+    "eventFlow": [
+      { "id": "ch2_3_2", "type": "Script" },
+      { "id": "meeting_start_01_temp", "type": "Script" },
+      { "id": "meeting_option_01_temp", "type": "Script" },
+      { "id": "meeting_option_01_20", "type": "Script" },
+      { "id": "ch2_5_1", "type": "Script" },
+      { "id": "ch2_5_1_1", "type": "Script" },
+      { "id": "ch2_5_2_1", "type": "Script" },
+      { "id": "ch2_5_2_2", "type": "Script" },
+      { "id": "BL_2002", "type": "Battle" },
+      { "id": "ch2_5_2_2_1", "type": "Script" },
+      { "id": "ch2_5_2_2_2", "type": "Script" },
+      { "id": "ch2_5_2_3", "type": "Script" },
+      { "id": "ch2_5_2_4", "type": "Script" }
+    ]
+  },
+  "M2007_03": {
+    "eventFlow": [
+      { "id": "ch2_4_2", "type": "Script" },
+      { "id": "ch2_4_2_1", "type": "Script" },
+      { "id": "ch2_4_2_break_start_01", "type": "Script" },
+      { "id": "ch2_4_2_break_start_02", "type": "Script" }
+    ]
+  },
+  "M2007_02": {
+    "eventFlow": [
+      { "id": "ch3_2_1", "type": "Script" },
+      { "id": "ch3_2_2", "type": "Script" },
+      { "id": "ch3_2_3_1", "type": "Script" },
+      { "id": "ch3_2_3_1_break_start_01", "type": "Script" },
+      { "id": "ch3_2_3_1_travel", "type": "Script" },
+      { "id": "ch3_2_3_1_travel_01", "type": "Script" },
+      { "id": "ch3_2_3_1_travel_02", "type": "Script" },
+      { "id": "ch3_2_3_1_travel_03", "type": "Script" },
+      { "id": "ch3_2_3_1_travel_04", "type": "Script" },
+      { "id": "ch3_2_3_1_travel_05", "type": "Script" },
+      { "id": "ch3_2_3_2", "type": "Script" },
+      { "id": "ch3_2_3_2_break_start_01", "type": "Script" },
+      { "id": "CL_1303_01", "type": "Combat" },
+      { "id": "ch3_2_3_2_1", "type": "Script" },
+      { "id": "ch3_2_3_2_2", "type": "Script" },
+      { "id": "CL_1304_01", "type": "Combat" },
+      { "id": "ch3_2_3_2_2_1", "type": "Script" },
+      { "id": "ch3_2_3_2_2_2", "type": "Script" },
+      { "id": "ch3_2_3_2_3_break_start_01", "type": "Script" },
+      { "id": "CL_1304_02", "type": "Combat" },
+      { "id": "ch3_2_3_2_3_1", "type": "Script" },
+      { "id": "ch3_2_3_2_3_2", "type": "Script" },
+      { "id": "ch3_2_3_2_5", "type": "Script" },
+      { "id": "BL_1305_01", "type": "Battle" },
+      { "id": "BL_1305_02", "type": "Battle" },
+      { "id": "ch3_2_3_2_5_1", "type": "Script" },
+      { "id": "ch3_2_3_2_5_2", "type": "Script" },
+      { "id": "ch3_2_3_2_5_3", "type": "Script" },
+      { "id": "ch3_5_1", "type": "Script" },
+      { "id": "ch3_5_2", "type": "Script" },
+      { "id": "BL_3001", "type": "Battle" },
+      { "id": "BL_3002", "type": "Battle" },
+      { "id": "ch3_5_3_1", "type": "Script" },
+      { "id": "ch3_5_3_2", "type": "Script" },
+      { "id": "BL_3003", "type": "Battle" },
+      { "id": "ch3_5_3_3", "type": "Script" },
+      { "id": "ch3_5_3_4", "type": "Script" },
+      { "id": "ch3_5_3_5", "type": "Script" },
+      { "id": "ch3_5_3_7_1", "type": "Script" },
+      { "id": "ch3_5_3_7_break_start_01", "type": "Script" },
+      { "id": "BL_3005", "type": "Battle" },
+      { "id": "ch3_5_3_7_2", "type": "Script" },
+      { "id": "ch3_5_3_7_3", "type": "Script" },
+      { "id": "ch3_5_3_7_4", "type": "Script" },
+      { "id": "CL_1306_01", "type": "Combat" },
+      { "id": "ch3_5_3_7_5", "type": "Script" },
+      { "id": "ch3_6_1", "type": "Script" }
+    ]
+  },
+  "CT_S0023_01": {
+    "mission": "CM_S0023",
+    "active": true,
+    "minTime": { "year": "1", "month": "9", "stage": "2" },
+    "maxTime": { "year": "2", "month": "5", "stage": "3" },
+    "condition": ["※[*Custom.ReferTo*]:[*Label.Position,Door_02*]"],
+    "script": "S0023_01",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，實際是從[*Label.Position,Door_02*]依權重及條件隨機觸發"],
+    "type": "Sub",
+    "orderKey": "1-09-2-3-S0023_01",
+    "eventFlow": [
+      { "id": "S0023_01", "type": "Script" },
+      { "id": "S0023_01_01", "type": "Script" },
+      { "id": "S0023_01_02", "type": "Script" },
+      { "id": "CL_S0023_01", "type": "Combat" },
+      { "id": "S0023_01_02_01", "type": "Script" },
+      { "id": "S0023_01_03", "type": "Script" },
+      { "id": "S0023_01_03_01", "type": "Script" },
+      { "id": "S0023_01_03_02", "type": "Script" },
+      { "id": "S0023_01_03_03", "type": "Script" },
+      { "id": "S0023_01_03_04", "type": "Script" },
+      { "id": "S0023_01_04", "type": "Script" }
+    ]
+  },
+  "CT_M0000": {
+    "mission": "main",
+    "active": true,
+    "minTime": { "year": "1", "month": "4", "stage": "1" },
+    "maxTime": { "year": "1", "month": "4", "stage": "1" },
+    "condition": ["※[*Custom.GameStart*]"],
+    "script": "ch1_1",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，實際就是開新遊戲進入點"],
+    "type": "Main",
+    "orderKey": "1-04-1-1-M0000"
+  },
+  "CT_Free": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "1", "month": "4", "stage": "1" },
+    "maxTime": { "year": "", "month": "", "stage": "" },
+    "condition": ["※[*Custom.FreeTrigger*]"],
+    "script": "CS_free",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入"],
+    "type": "Free",
+    "orderKey": "1-04-1-4-Free",
+    "eventFlow": [{ "id": "CS_free", "type": "Script" }]
+  },
+  "CT_Section_01_Free": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "2", "month": "3", "stage": "1" },
+    "maxTime": { "year": "2", "month": "7", "stage": "3" },
+    "condition": ["※[*Custom.FreeTrigger*]"],
+    "script": "section_01_free_start_02",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入"],
+    "type": "Free",
+    "orderKey": "2-03-1-4-Section_01_Free",
+    "eventFlow": [
+      { "id": "section_01_free_start_02", "type": "Script" },
+      { "id": "section_01_free_00", "type": "Script" },
+      { "id": "section_01_free_01", "type": "Script" },
+      { "id": "section_01_free_01_01", "type": "Script" },
+      { "id": "section_01_free_01_02", "type": "Script" },
+      { "id": "section_01_free_02", "type": "Script" },
+      { "id": "section_01_free_02_01", "type": "Script" },
+      { "id": "section_01_free_03", "type": "Script" },
+      { "id": "section_01_free_03_01", "type": "Script" },
+      { "id": "CL_1204_01", "type": "Combat" },
+      { "id": "section_01_free_03_01_01", "type": "Script" },
+      { "id": "section_01_free_03_01_02", "type": "Script" },
+      { "id": "section_01_free_03_02", "type": "Script" },
+      { "id": "section_01_free_04", "type": "Script" },
+      { "id": "section_01_free_05", "type": "Script" },
+      { "id": "chess_start_01", "type": "Script" },
+      { "id": "section_01_free_06", "type": "Script" },
+      { "id": "section_01_free_06_03_01", "type": "Script" },
+      { "id": "section_01_free_06_03_02", "type": "Script" },
+      { "id": "CL_1203_01", "type": "Combat" },
+      { "id": "CL_1203_02", "type": "Combat" },
+      { "id": "CL_1203_03", "type": "Combat" },
+      { "id": "CL_1203_04", "type": "Combat" },
+      { "id": "CL_1203_05", "type": "Combat" },
+      { "id": "CL_1203_06", "type": "Combat" },
+      { "id": "CL_1203_07", "type": "Combat" },
+      { "id": "CL_1203_08", "type": "Combat" },
+      { "id": "CL_1203_09", "type": "Combat" },
+      { "id": "section_01_free_06_03_03", "type": "Script" }
+    ]
+  },
+  "CT_Ch2_4_3": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "2", "month": "6", "stage": "1" },
+    "maxTime": { "year": "2", "month": "8", "stage": "2" },
+    "condition": ["※[*Custom.FreeTrigger*]"],
+    "script": "ch2_4_3_break_start_01",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入"],
+    "type": "Free",
+    "orderKey": "2-06-1-4-Ch2_4_3"
+  },
+  "CT_Section_02_Free": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "2", "month": "8", "stage": "3" },
+    "maxTime": { "year": "2", "month": "11", "stage": "2" },
+    "condition": ["※[*Custom.FreeTrigger*]"],
+    "script": "section_02_free_start_02",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入"],
+    "type": "Free",
+    "orderKey": "2-08-3-4-Section_02_Free"
+  },
+  "CT_Ch3_6_1": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "2", "month": "9", "stage": "1" },
+    "maxTime": { "year": "2", "month": "9", "stage": "3" },
+    "condition": ["※[*Custom.FreeTrigger*]"],
+    "script": "ch3_6_1_break_start_01",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入"],
+    "type": "Free",
+    "orderKey": "2-09-1-4-Ch3_6_1"
+  },
+  "CT_S2503": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "3", "month": "6", "stage": "3" },
+    "maxTime": { "year": "3", "month": "6", "stage": "3" },
+    "condition": ["※[*Custom.FreeTrigger*]"],
+    "script": "S2503_break_start_01",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入"],
+    "type": "Free",
+    "orderKey": "3-06-3-4-S2503"
+  },
+  "CT_Ch6_4_3": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "3", "month": "9", "stage": "1" },
+    "maxTime": { "year": "3", "month": "10", "stage": "1" },
+    "condition": ["※[*Custom.FreeTrigger*]"],
+    "script": "ch6_4_3_break_start_01",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入"],
+    "type": "Free",
+    "orderKey": "3-09-1-4-Ch6_4_3"
+  },
+  "S0005_00": { "remark": ["※當前版本無法觸發", "※當前版本未設定劇本"] },
+  "S0007_00": { "remark": ["※當前版本無法觸發", "※當前版本未設定劇本"] },
+  "S0008_00": { "remark": ["※當前版本無法觸發", "※當前版本未設定劇本"] }
 }

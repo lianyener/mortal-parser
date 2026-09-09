@@ -110,7 +110,8 @@
     "MoveCharacter": "移動角色",
     "HideCharacter": "隱藏角色",
     "OnlyPerform": "僅演出變化",
-    "ResetLevel": "重置開發等級"
+    "ResetLevel": "重置開發等級",
+    "ReferTo": "參照"
   },
   "Character": {
     "playerLeft": "[*Character.player*]",

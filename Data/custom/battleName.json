@@ -65,7 +65,7 @@
     "BL_1305_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.200*]",
         "ref": "唐門 vs 天武門",
-        "name": "",
+        "name": "和天武門開打",
         "desc": "",
         "keywords": ""
     },
@@ -93,7 +93,7 @@
     "BL_1305_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.200*]",
         "ref": "唐門 vs 天武門",
-        "name": "",
+        "name": "和天武門操練",
         "desc": "",
         "keywords": ""
     },
@@ -282,8 +282,8 @@
     "BL_2000": {
         "ori": "[*System.Battle*]-[*EnemyTeam.003*]",
         "ref": "飛石幫 vs 白鯊幫",
-        "name": "",
-        "desc": "",
+        "name": "大戰白鯊幫",
+        "desc": "討伐譚霸刀事件提早到江陵，渡口打工分岐",
         "keywords": ""
     },
     "BL_1804_01": {
@@ -310,50 +310,50 @@
     "BL_2002": {
         "ori": "[*System.Battle*]-[*EnemyTeam.100*]",
         "ref": "點蒼派+青城派+全真派+峨嵋派 vs 崆峒派",
-        "name": "",
-        "desc": "",
+        "name": "鐵拳巷暴動",
+        "desc": "入崆峒事件拜入鐵拳門分岐參與暴動",
         "keywords": ""
     },
     "BL_3001": {
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
-        "name": "",
-        "desc": "",
+        "name": "大戰丐幫",
+        "desc": "江陵大戰選擇加入戰鬥",
         "keywords": ""
     },
     "BL_2001": {
         "ori": "[*System.Battle*]-[*EnemyTeam.300*]",
         "ref": "丐幫+白鯊幫 vs 官兵",
-        "name": "",
-        "desc": "",
+        "name": "幫助白鯊幫",
+        "desc": "討伐譚霸刀事件提早到江陵，渡口打工分岐，會白鯊語分岐",
         "keywords": ""
     },
     "BL_3002": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 丐幫+官兵",
-        "name": "",
-        "desc": "",
+        "name": "加入混戰",
+        "desc": "江陵大戰在別派人馬登場後加入戰鬥",
         "keywords": ""
     },
     "BL_3005": {
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
-        "name": "",
-        "desc": "",
+        "name": "鄰鎮大戰丐幫",
+        "desc": "江陵大戰退至鄰鎮分岐，客棧與丐幫開戰",
         "keywords": ""
     },
     "BL_3004": {
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫+官兵",
-        "name": "",
+        "name": "出城衝殺",
         "desc": "",
         "keywords": ""
     },
     "BL_3003": {
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
-        "name": "",
-        "desc": "",
+        "name": "中丐幫埋伏",
+        "desc": "江陵大戰高性情低戰術分岐",
         "keywords": ""
     },
     "BL_3101": {
@@ -457,15 +457,15 @@
     "BL_S0012_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 崆峒派+點蒼派+青城派+峨嵋派",
-        "name": "",
-        "desc": "",
+        "name": "和留學生衝突",
+        "desc": "留學生紛爭事件",
         "keywords": ""
     },
     "BL_S0018_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "丐幫 vs 崆峒派+點蒼派+嵩山派+全真派",
-        "name": "",
-        "desc": "",
+        "name": "大街混戰",
+        "desc": "藏寶圖事件在樓下等",
         "keywords": ""
     },
     "BL_3102": {
@@ -478,43 +478,43 @@
     "BL_S0024_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 丐幫+嵩山派",
-        "name": "",
-        "desc": "",
+        "name": "幫自己人",
+        "desc": "乞丐與和尚事件，腦衝開打或選擇幫自己人",
         "keywords": ""
     },
     "BL_S0018_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 崆峒派+嵩山派+全真派+青城派",
-        "name": "",
-        "desc": "",
+        "name": "唐門激戰",
+        "desc": "藏寶圖事件逃入唐門後開戰",
         "keywords": ""
     },
     "BL_S0024_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "丐幫+嵩山派 vs 唐門",
-        "name": "",
-        "desc": "",
+        "name": "阻止唐門",
+        "desc": "乞丐與和尚事件，選擇依三師兄指示",
         "keywords": ""
     },
     "BL_S0210_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.500*]",
         "ref": "唐門 vs 廣州唐門",
-        "name": "",
-        "desc": "",
+        "name": "被同門追殺",
+        "desc": "鬼抓人事件選擇不去捉鬼",
         "keywords": ""
     },
     "BL_S0106_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 廣州唐門",
-        "name": "",
-        "desc": "",
+        "name": "圍毆趙活",
+        "desc": "假趙活乾娘事件，骰到圍毆趙活且骰出師兄弟服從",
         "keywords": ""
     },
     "BL_S0106_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 廣州唐門",
-        "name": "",
-        "desc": "",
+        "name": "全體對練",
+        "desc": "假趙活乾娘事件，骰到全體對練",
         "keywords": ""
     },
     "BL_S9906_01": {

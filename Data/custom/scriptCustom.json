@@ -1,6 +1,7 @@
 {
   "S9100_01": { "remark": ["※未知檢定(S9100_01_01)：當前版本未設定，推測應為檢定道德"] },
   "meeting_option_704_02_02_05": { "remark": ["※未知檢定(E12006_01)：當前版本未設定，應為檢定夏侯蘭是否在唐門"] },
+  "meeting_option_01": { "remark": ["※未知條件(Meeting_Option_703_02_XXX)：當前版本未設定", "※未知條件(Meeting_Option_703_03_XXX)：當前版本未設定"] },
   "S2002_03_01": { "remark": ["※未知檢定(S2002_03_01_001)：當前版本未設定，推測應為檢定嘴力"] },
   "ch1_2_5": { "remark": ["※此劇本傳記當前版本未實裝"] },
   "ch2_2_3_4_1_1": { "remark": ["※未知檢定(Ch_2_2_3_4_1_1_004)：當前版本未設定"] },
@@ -21,6 +22,23 @@
   "talk_girl5_05": { "remark": ["※未知檢定(Talk_Girl_05_05_001)：當前版本未設定，推測應為檢定嘴力"] },
   "travel_combat_001_01": { "remark": ["※未知檢定(TC_001_01_001)：當前版本未設定"] },
   "travel_result_601_503_01": { "remark": ["※未知檢定(Travel_601_503_01_001)：當前版本未設定"] },
+  "S0101_01": {
+    "remark": [
+      "※完成[*Label.Trigger,S0100_01*]會設定[*Label.Time,S0101_01*]為一個月後，因[*Label.Trigger,S0102_01*]又需本事件一個月後，必會先觸發[*Label.Trigger,S0103_01*]或[*Label.Trigger,S0104_01*]。當前版本想觸發[*Label.Trigger,S0102_01*]，必須讓[*Label.Time,S0101_01*]維持預設值，即避免觸發[*Label.Trigger,S0100_01*]",
+      "※當前版本不可能判定出在江陵"
+    ]
+  },
+  "S0102_01": {
+    "remark": [
+      "※完成[*Label.Trigger,S0100_01*]會設定[*Label.Time,S0101_01*]為一個月後，本事件又需[*Label.Trigger,S0101_01*]一個月後，必會先觸發[*Label.Trigger,S0103_01*]或[*Label.Trigger,S0104_01*]。當前版本想觸發本事件，必須讓[*Label.Time,S0101_01*]維持預設值，即避免觸發[*Label.Trigger,S0100_01*]"
+    ]
+  },
+  "S2200_04_05": { "remark": ["※檢定：🚩暫存:對戰上官螢結果(A00005)=無(0)：當前版本設定有誤，應為=敗(2)"] },
+  "ch3_2_2": { "remark": ["※檢定：複合判定：當前版本無法觸發第4分岐(無論如何會符合第3分岐)"] },
+  "ch3_5_3_1": { "remark": ["※👥不明門人+0：當前版本設定有誤，推測應為丐幫門人-20及丐幫門人-50"] },
+  "S0105_01_01": { "remark": ["※此劇本傳記當前版本未實裝"] },
+  "S0105_01_02": { "remark": ["※此劇本傳記當前版本未實裝"] },
+  "ch2_2_3_4_break_01": { "remark": ["※此劇本部分傳記當前版本未實裝"] },
   "CS_free": {
     "content": [
       {
@@ -110,6 +128,8 @@
   },
   "section_01_free_start_01": { "skip": "section_01_free_start_02", "remark": ["※跳轉用，無劇情內容，本網站方便呈現會把大部分指向本劇本的連結轉換成跳轉後劇本"] },
   "section_02_free_start_01": { "skip": "section_02_free_start_02", "remark": ["※跳轉用，無劇情內容，本網站方便呈現會把大部分指向本劇本的連結轉換成跳轉後劇本"] },
+  "ch2_4_3_break_01": { "skip": "ch2_4_3_break_start_01", "remark": ["※跳轉用，無劇情內容，本網站方便呈現會把大部分指向本劇本的連結轉換成跳轉後劇本"] },
+  "ch2_4_3_break_start_01": { "var": { "var1": "[*Label.Script,ch2_4_3_break_01*]" } },
   "ch3_6_1_break_01": { "skip": "ch3_6_1_break_start_01", "remark": ["※跳轉用，無劇情內容，本網站方便呈現會把大部分指向本劇本的連結轉換成跳轉後劇本"] },
   "ch6_4_3_break_01": { "skip": "ch6_4_3_break_start_01", "remark": ["※跳轉用，無劇情內容，本網站方便呈現會把大部分指向本劇本的連結轉換成跳轉後劇本"] },
   "ch3_1_7_2_01_101": { "rel": { "intra": { "Character": ["girl6"] } } },
@@ -119,7 +139,8 @@
   "back_03_501": { "remark": ["※隨機事件在[*Label.Script,back_001*]已設定"], "var": { "var1": "[*Custom.Random*][*Label.Position,Back_Free_001*][*System.StoryEvent*]" } },
   "alchemy_special_01_01": { "remark": ["※隨機事件在[*Label.Script,alchemy_001*]已設定"], "var": { "var1": "[*Custom.Random*][*Label.Position,Alchemy_Work_001*][*System.StoryEvent*]" } },
   "center_girl_03_01": { "remark": ["※隨機事件在[*Label.Script,center_001*]已設定"], "var": { "var1": "[*Custom.Random*][*Label.Position,Center_Free_001*][*System.StoryEvent*]" } },
-  "mall_001": { "remark": ["※未知條件(Talk_Brother3_Prologue)：當前版本未設定，不會進入此分岐"]},
+  "mall_001": { "remark": ["※未知條件(Talk_Brother3_Prologue)：當前版本未設定，不會進入此分岐"] },
+  "section_01_free_01_01": { "var": { "var1": "[*Label.Script,section_01_free_01_02*]" } },
   "meeting_option_01_20": { "timeCheck": [{ "logic": "Equal", "year": 2, "month": 2, "stage": 1 }] },
   "meeting_option_f_01_01": { "timeCheck": [{ "logic": "NotEqual", "year": 3, "month": 8, "stage": 1 }] },
   "meeting_option_f_02_01": { "timeCheck": [{ "logic": "NotEqual", "year": 3, "month": 8, "stage": 1 }] },

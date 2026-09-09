@@ -363,9 +363,7 @@ function convertLogic(operator, inverse = false) {
 function calcProbability(statment) {
   // 例外處理
   const setError = () => {
-    statment.left = '[*Custom.Probability*]';
-    statment.right = '0%';
-    statment.symbol = ':';
+    if (statment.left.includes('~')) statment.left = `[*Custom.Random*]${statment.left}`;
   };
 
   // 解析範圍
@@ -435,6 +433,7 @@ function handleFlagStatement(flagId, val, script, symbol = '=', isEffect = false
 
       // 對應遊戲中幾個在Flag預設為0時把Flag=1寫成Flag+1的狀況
       if (symbol == '+' && val == 1) statment.symbol = '=';
+      if (val == -1) statment.symbol = '=';
     }
   };
 
@@ -1809,7 +1808,8 @@ export async function parseMission() {
           content: [],
           sheet: tmpSheet,
           remark: Array.from(triggerCustom?.[triggerId]?.remark ?? [], (_, i) => `[*Trigger.Remark.${triggerId}.${i}*]`),
-          rel: { pre: {}, to: {}, from: { Mission: [missionId] } }
+          rel: { pre: {}, to: {}, from: { Mission: [missionId] } },
+          eventFlow: triggerCustom?.[triggerId]?.eventFlow ?? undefined
         };
         if (triggerObj.script) mergeRelation(triggerObj.rel.to, { Script: [triggerObj.script] });
         if (!triggerObj.active) triggerObj.remark.unshift('※[*Custom.TriggerDisable*]');
@@ -1886,7 +1886,7 @@ export async function parseMission() {
         }
 
         // 設定排序值
-        triggerObj.orderKey = `${triggerObj.minTime.year}-${triggerObj.minTime.month.padStart(2, '0')}-${triggerObj.minTime.stage}-${priority}-${triggerId}`;
+        triggerObj.orderKey = triggerCustom?.[triggerId]?.orderKey ?? `${triggerObj.minTime.year}-${triggerObj.minTime.month.padStart(2, '0')}-${triggerObj.minTime.stage}-${priority}-${triggerId}`;
 
         // 回存結果
         trigger[triggerId] = triggerObj;
@@ -2230,7 +2230,7 @@ export async function parseCombat() {
   const logicResult = {};
   const termMap = {
     char: { 敵方: 'Enemy', 我方: 'Player' },
-    stat: { 血量: 'hp', 氣力: 'sp', 毒藥: 'poison-value', 麻痺: 'paralysis-value' },
+    stat: { 血量: 'hp', 氣力: 'sp', 血量值: 'hp', 氣力值: 'sp', 毒藥: 'poison-value', 麻痺: 'paralysis-value' },
     type: { 新增: 'Add', 移除: 'Remove', 無法動作: 'BanAction' },
     action: { 無動作: 'idle', 絕招: 'ultimate', 絕招1: 'ultimate', 絕招2: 'ultimate', 絕招3: 'ultimate', 備揍: 'block', 暗器: 'weapon', 捅人: 'attack', 嘴砲: 'curse', 指令: 'action' }
   };
@@ -2294,7 +2294,7 @@ export async function parseCombat() {
     // 取得鍵值
     const type = action._type;
     const key = action._name;
-    const cacheId = `${type}:${key}`;
+    const cacheId = `${combatId}:${type}:${key}`;
 
     // 取得Cache或解析內容
     const subResult =
@@ -2419,7 +2419,7 @@ export async function parseCombat() {
     // 取得鍵值
     const type = condition._type;
     const key = condition._name;
-    const cacheId = `${type}:${key}`;
+    const cacheId = `${combatId}:${type}:${key}`;
 
     // 取得Cache或解析內容
     const subResult =
@@ -2469,7 +2469,7 @@ export async function parseCombat() {
             // 檢定戰鬥數值
             case 'CombatEventConditionStat': {
               const match = data._type.match(regexPct);
-              const stat = getTerm('stat', match[1]);
+              const stat = getTerm('stat', match[1], 'PlayerStat');
               const unit = match[2] ? '%' : '';
               const text = `[%${getTerm('char', data._character)}${stat}${convertComparison(data._op)}${data._value}${unit}%]`;
               return { text };
@@ -2749,6 +2749,7 @@ export async function parseScript() {
   ]);
 
   // 常數
+  const regexScriptLabel = /^\[\*Label\.Script,(.*?)\*\]$/;
   const regexQuote = /^"(.+)"$/;
   const regexDice = /^"(\w+)\|([=><]+)(\d+)"$/;
   const regexGE = /^>=$/;
@@ -2779,6 +2780,14 @@ export async function parseScript() {
 
   // Helper: 加入標籤
   const addLabel = (text) => (text ? `[*Label.Script,${text}*]` : null);
+
+  // Helper: 檢查標籤
+  const checkLabel = (text) => {
+    const match = text.match(regexScriptLabel);
+
+    if (match) return match[1];
+    return null;
+  };
 
   // Helper: 取得參數值
   const getArgumentValue = (argument, cache) => {
@@ -2920,7 +2929,13 @@ export async function parseScript() {
           case 'Story': {
             const script = cache?.temp.story ?? 'Unknown';
             mergeRelation(rel.to, { Script: [script] });
-            content.push({ form: 'effect', type: 'Free', text: `◎[*Custom.Free*]:[*Label.Free,${script}*]` });
+
+            // 檢查跳轉劇本
+            const skip = custom[script]?.skip;
+            if (skip) {
+              mergeRelation(rel.to, { Script: [skip] });
+              content.push({ form: 'effect', type: 'Free', text: `◎[*Custom.Free*]:[*Label.Free,${skip}*]` });
+            } else content.push({ form: 'effect', type: 'Free', text: `◎[*Custom.Free*]:[*Label.Free,${script}*]` });
             break;
           }
           // 戰役
@@ -2979,8 +2994,19 @@ export async function parseScript() {
         }
         // 使用變數
         else {
-          const name = cache?.var?.[node.arguments[0].name] ?? custom[script]?.var?.[node.arguments[0].name] ?? node.arguments[0].name;
-          content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*]${name}` });
+          const name = custom[script]?.var?.[node.arguments[0].name] ?? cache?.var?.[node.arguments[0].name] ?? node.arguments[0].name;
+          const scriptId = checkLabel(name);
+          if (scriptId) {
+            mergeRelation(rel.to, { Script: [scriptId] });
+
+            // 檢查跳轉劇本
+            const skip = custom[scriptId]?.skip;
+            if (skip) {
+              mergeRelation(rel.to, { Script: [skip] });
+              if (free[skip]) content.push({ form: 'effect', type: 'Free', text: `◎[*Custom.Free*]:[*Label.Free,${skip}*]` });
+              else content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*][*Label.Script,${skip}*]` });
+            } else content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*][*Label.Script,${name}*]` });
+          } else content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*]${name}` });
         }
         break;
       }
@@ -3555,7 +3581,7 @@ export async function parseScript() {
               // 記錄隨機地點資訊
               case 'checkpointmanager.Position': {
                 const id = removeQuote(initNode.arguments[0].raw);
-                mergeRelation(rel.post, { Position: [id] });
+                mergeRelation(rel.to, { Position: [id] });
                 cache.var[varName] = `[*Custom.Random*][*Label.Position,${id}*][*System.StoryEvent*]`;
                 break;
               }
@@ -3578,7 +3604,7 @@ export async function parseScript() {
           }
           case 'StringLiteral': {
             // 記錄劇本ID
-            cache.var[varName] = removeQuote(initNode.raw);
+            cache.var[varName] = addLabel(removeQuote(initNode.raw));
             break;
           }
           // 忽略分類
@@ -4016,7 +4042,7 @@ export async function organizeOutputData() {
     const scriptSet = new Set();
     if (initScript) traceOrigin('Script', initScript, origins, new Set(), scriptSet);
 
-    const eventFlow = buildEventFlow(initScript, scriptSet);
+    const eventFlow = triggerData?.eventFlow ?? buildEventFlow(initScript, scriptSet);
     if (eventFlow.length > 0) triggerData.eventFlow = eventFlow;
   }
 
