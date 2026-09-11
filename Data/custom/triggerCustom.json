@@ -183,6 +183,12 @@
       { "id": "ch3_6_1", "type": "Script" }
     ]
   },
+  "M2010_01_01": {
+    "eventFlow": [{ "id": "ch2_4_8_2", "type": "Script" }]
+  },
+  "M2010_02": {
+    "orderKey": "2-08-2-4-M2010_02"
+  },
   "CT_S0023_01": {
     "mission": "CM_S0023",
     "active": true,

@@ -429,85 +429,85 @@
     "CL_1209_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee301*]",
         "ref": "破廟 點蒼弟子 戰點蒼弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰點蒼弟子",
+        "desc": "破廟密謀事件被點蒼弟子偷襲",
         "keywords": ""
     },
     "CL_1210_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ghost1*]",
         "ref": "破廟 鬼卒1 戰鬼卒",
-        "name": "",
-        "desc": "",
+        "name": "偷襲鬼卒",
+        "desc": "破廟密謀事件，遇到另一夥人時選擇裝死後起身",
         "keywords": ""
     },
     "CL_1210_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ghost1*]",
         "ref": "破廟 鬼卒2 戰鬼卒",
-        "name": "",
-        "desc": "",
+        "name": "迎戰鬼卒",
+        "desc": "破廟密謀事件，遇到另一夥人時選擇正面對抗",
         "keywords": ""
     },
     "CL_1211_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.brother2*]",
         "ref": "攻打唐門 二師兄 戰唐錚",
-        "name": "",
-        "desc": "",
+        "name": "戰唐錚",
+        "desc": "破廟密謀事件，攻打唐門分岐",
         "keywords": ""
     },
     "CL_1212_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.hero1*]",
         "ref": "跑路 江湖少俠 戰少俠",
         "name": "",
-        "desc": "",
+        "desc": "破廟密謀事件，跑路分岐",
         "keywords": ""
     },
     "CL_1211_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special832*]",
         "ref": "攻打唐門 唐芳 戰唐芳",
-        "name": "",
-        "desc": "",
+        "name": "戰唐芳",
+        "desc": "破廟密謀事件，攻打唐門分岐",
         "keywords": ""
     },
     "CL_1213_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.bandit1*]",
         "ref": "報訊 山賊 戰山賊",
-        "name": "",
-        "desc": "",
+        "name": "戰山賊",
+        "desc": "破廟密謀事件，上山報信分岐，途中遭遇斥侯",
         "keywords": ""
     },
     "CL_1214_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.big_trainee1*]",
         "ref": "報訊 唐大鯨2 戰undefined",
-        "name": "",
-        "desc": "",
+        "name": "再戰唐大鯨",
+        "desc": "破廟密謀事件，上山報信分岐，初戰唐大鯨落敗後由二師兄罩",
         "keywords": ""
     },
     "CL_1213_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.pig1*]",
         "ref": "報訊 山豬 戰野豬",
-        "name": "",
-        "desc": "",
+        "name": "戰野豬",
+        "desc": "破廟密謀事件，上山報信分岐，途中遭遇野豬",
         "keywords": ""
     },
     "CL_1214_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.big_trainee1*]",
         "ref": "報訊 唐大鯨1 戰undefined",
-        "name": "",
-        "desc": "",
+        "name": "戰唐大鯨",
+        "desc": "破廟密謀事件，上山報信分岐",
         "keywords": ""
     },
     "CL_1215_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee331*]",
         "ref": "唐門大亂鬥 伙房 嵩山弟子 戰嵩山弟子",
-        "name": "",
-        "desc": "",
+        "name": "伙房迎敵",
+        "desc": "唐門迎敵事件，伙房觸發",
         "keywords": ""
     },
     "CL_1215_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee_girl1*]",
         "ref": "唐門大亂鬥 伙房 女弟子 戰唐門女弟子",
-        "name": "",
-        "desc": "",
+        "name": "反抗不吃",
+        "desc": "唐門迎敵事件，伙房選擇不吃",
         "keywords": ""
     },
     "CL_1218_01": {

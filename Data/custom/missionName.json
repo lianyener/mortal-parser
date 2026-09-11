@@ -9,72 +9,72 @@
     },
     "M2010_01": {
       "ori": "M2010_01",
-      "name": "",
+      "name": "唐門迎敵",
       "ref": "正心堂",
-      "desc": "",
+      "desc": "正心堂",
       "keywords": ""
     },
     "M2010_02": {
       "ori": "M2010_02",
-      "name": "",
+      "name": "唐門迎敵",
       "ref": "練武場",
-      "desc": "",
+      "desc": "練功場",
       "keywords": ""
     },
     "M2010_03": {
       "ori": "M2010_03",
-      "name": "",
+      "name": "唐門迎敵",
       "ref": "伙房",
-      "desc": "",
+      "desc": "伙房",
       "keywords": ""
     },
     "M2010_04": {
       "ori": "M2010_04",
-      "name": "",
+      "name": "唐門迎敵",
       "ref": "弟子房",
-      "desc": "",
+      "desc": "男弟子房",
       "keywords": ""
     },
     "M2010_05": {
       "ori": "M2010_05",
-      "name": "",
+      "name": "唐門迎敵",
       "ref": "鍛冶場",
-      "desc": "",
+      "desc": "鍛冶場",
       "keywords": ""
     },
     "M2010_06": {
       "ori": "M2010_06",
-      "name": "",
+      "name": "唐門迎敵",
       "ref": "後山",
-      "desc": "",
+      "desc": "後山",
       "keywords": ""
     },
     "M2010_08": {
       "ori": "M2010_08",
-      "name": "",
+      "name": "唐門迎敵",
       "ref": "煉丹房",
-      "desc": "",
+      "desc": "煉丹房",
       "keywords": ""
     },
     "M2010_07": {
       "ori": "M2010_07",
-      "name": "",
+      "name": "唐門迎敵",
       "ref": "女弟子房",
-      "desc": "",
+      "desc": "女弟子房",
       "keywords": ""
     },
     "M2010_09": {
       "ori": "M2010_09",
-      "name": "",
+      "name": "唐門迎敵",
       "ref": "講經堂",
-      "desc": "",
+      "desc": "講經堂",
       "keywords": ""
     },
     "M2010_10": {
       "ori": "M2010_10",
-      "name": "",
+      "name": "唐門迎敵",
       "ref": "講經堂",
-      "desc": "",
+      "desc": "大門",
       "keywords": ""
     },
     "M6002_01": {
@@ -1494,83 +1494,83 @@
     },
     "M2010_02_01": {
       "ori": "M2010_02_01",
-      "name": "",
+      "name": "練功場",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2010_01_01": {
       "ori": "M2010_01_01",
-      "name": "",
+      "name": "正心堂",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2010_03_01": {
       "ori": "M2010_03_01",
-      "name": "",
+      "name": "伙房",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2010_04_01": {
       "ori": "M2010_04_01",
-      "name": "",
+      "name": "男弟子房",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2010_05_01": {
       "ori": "M2010_05_01",
-      "name": "",
+      "name": "鍛冶場",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2010_06_01": {
       "ori": "M2010_06_01",
-      "name": "",
+      "name": "後山",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2010_08_01": {
       "ori": "M2010_08_01",
-      "name": "",
+      "name": "煉丹房",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2010_09_01": {
       "ori": "M2010_09_01",
-      "name": "",
+      "name": "講經堂",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2010_07_01": {
       "ori": "M2010_07_01",
-      "name": "",
+      "name": "女弟子房",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2010_10_01": {
       "ori": "M2010_10_01",
-      "name": "",
+      "name": "大門",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M6002_01_01": {
       "ori": "M6002_01_01",
