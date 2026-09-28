@@ -1,0 +1,226 @@
+{
+  "ch3_1_7_4": {
+    "content": [
+      { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.trainee8*]" },
+      { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.special832*]" },
+      { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.girl2*]" },
+      { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.player*]" },
+      { "form": "perform", "type": "Say", "text": "[*Character.girl2*][*DialogType.character*]「[*Story.D_3_1_7_4_001*]」" },
+      { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_002*]」" },
+      { "form": "perform", "type": "Say", "text": "[*Character.girl2*][*DialogType.character*]「[*Story.D_3_1_7_4_003*]」" },
+      { "form": "perform", "type": "Say", "text": "[*Character.special832*][*DialogType.character*]「[*Story.D_3_1_7_4_004*]」" },
+      { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_005*]」" },
+      { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.unknown*]" },
+      { "form": "perform", "type": "Say", "text": "[*Character.unknown*][*DialogType.character*]「[*Story.D_3_1_7_4_006*]」" },
+      { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_007*]」" },
+      {
+        "form": "branch",
+        "type": "Switch",
+        "text": "[*BranchType.Switch*]：[%[*Label.Stat,disposition*]%]",
+        "branches": [
+          {
+            "index": 1,
+            "text": "≤40",
+            "content": [
+              { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_008*]」" },
+              { "form": "perform", "type": "Say", "text": "[*Character.special832*][*DialogType.character*]「[*Story.D_3_1_7_4_009*]」" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.special832*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.girl2*]" },
+              { "form": "effect", "type": "Stat", "text": "[*Label.Stat,contribution*]+10" },
+              { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.think*]「[*Story.T_3_1_7_4_001*]」" }
+            ]
+          },
+          {
+            "index": 2,
+            "text": "[*Custom.Other*]",
+            "content": [
+              { "form": "perform", "type": "Say", "text": "[*Character.special832*][*DialogType.character*]「[*Story.D_3_1_7_4_010*]」" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.special832*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.girl2*]" }
+            ]
+          }
+        ]
+      },
+      { "form": "effect", "type": "Story", "text": "[*Label.Story*]" },
+      { "form": "perform", "type": "Story", "text": "[*Custom.Story*]「[*LegendInfo.Ch_3_1_7_4_001*]」" },
+      { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.player*]" },
+      {
+        "form": "branch",
+        "type": "Dice",
+        "text": "[*BranchType.Dice*]：D99",
+        "branches": [
+          {
+            "index": 1,
+            "text": "<33 [*Story.O_3_1_7_4_001*]",
+            "content": [
+              { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.bandit1*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.bandit2*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.bandit4*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.bandit5*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.bandit1*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.bandit4*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.bandit5*]" },
+              { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_011*]」" },
+              { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_012*]」" },
+              { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_013*]」" },
+              {
+                "form": "branch",
+                "type": "Switch",
+                "text": "[*BranchType.Switch*]：[%[*Label.Stat,disposition*]%]",
+                "branches": [
+                  {
+                    "index": 1,
+                    "text": "≤40",
+                    "content": [
+                      { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_014*]」" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_015*]」" }
+                    ]
+                  },
+                  {
+                    "index": 2,
+                    "text": "[*Custom.Other*]",
+                    "content": [
+                      { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_016*]」" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_017*]」" }
+                    ]
+                  }
+                ]
+              },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.ShockCharacter*]" },
+              { "form": "perform", "type": "Say", "text": "[*Character.bandit1*][*DialogType.character*]「[*Story.D_3_1_7_4_018*]」" },
+              { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_019*]」" },
+              { "form": "perform", "type": "Say", "text": "[*Character.bandit1*][*DialogType.character*]「[*Story.D_3_1_7_4_020*]」" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.trainee020*]" },
+              { "form": "perform", "type": "Say", "text": "[*Character.trainee020*][*DialogType.character*]「[*Story.D_3_1_7_4_021*]」" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.trainee020*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.trainee024*]" },
+              { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_022*]」" },
+              { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_023*]」" },
+              { "form": "perform", "type": "Say", "text": "[*Character.bandit1*][*DialogType.character*]「[*Story.D_3_1_7_4_024*]」" },
+              { "form": "effect", "type": "Battle", "text": "★[*System.Battle*][*Label.Battle,BL_1307_01*]" },
+              { "form": "effect", "type": "Script", "text": "◎[*Custom.CombatNextScript*][*Label.Script,ch3_1_7_4_1*]" }
+            ]
+          },
+          {
+            "index": 2,
+            "text": "<66 [*Story.O_3_1_7_4_002*]",
+            "content": [
+              { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.fairy1*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.fairy1*]" },
+              { "form": "perform", "type": "Say", "text": "[*Character.fairy1*][*DialogType.character*]「[*Story.D_3_1_7_4_025*]」" },
+              { "form": "effect", "type": "Story", "text": "[*Label.Story*]" },
+              { "form": "perform", "type": "Story", "text": "[*Custom.Story*]「[*LegendInfo.Ch_3_1_7_4_002*]」" },
+              { "form": "effect", "type": "Flag", "text": "[*Label.Flag,TC0003.6*]=[*Flag.TC0003.6.0*]" },
+              { "form": "effect", "type": "Flag", "text": "[*Label.Flag,TC0002.11*]=[*Flag.TC0002.11.0*]" },
+              {
+                "form": "branch",
+                "type": "Switch",
+                "text": "[*BranchType.Switch*]：[%[*Label.Stat,behaviour*]%]",
+                "branches": [
+                  {
+                    "index": 1,
+                    "text": "<60",
+                    "content": [
+                      { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_026*]」" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.fairy1*][*DialogType.character*]「[*Story.D_3_1_7_4_027*]」" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_028*]」" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.fairy1*][*DialogType.character*]「[*Story.D_3_1_7_4_029*]」" },
+                      { "form": "effect", "type": "Story", "text": "[*Label.Story*]" },
+                      { "form": "perform", "type": "Story", "text": "[*Custom.Story*]「[*LegendInfo.Ch_3_1_7_4_003*]」" }
+                    ]
+                  },
+                  {
+                    "index": 2,
+                    "text": "[*Custom.Other*]",
+                    "content": [
+                      { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_030*]」" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.fairy1*][*DialogType.character*]「[*Story.D_3_1_7_4_031*]」" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_032*]」" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_033*]」" },
+                      { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.trainee8*]" },
+                      { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.player*]" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_034*]」" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.fairy1*][*DialogType.character*]「[*Story.D_3_1_7_4_035*]」" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_036*]」" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.fairy1*][*DialogType.character*]「[*Story.D_3_1_7_4_037*]」" },
+                      { "form": "effect", "type": "Flag", "text": "[*Label.Flag,TC0003.6*]=[*Flag.TC0003.6.1*]" },
+                      { "form": "effect", "type": "Story", "text": "[*Label.Story*]" },
+                      { "form": "perform", "type": "Story", "text": "[*Custom.Story*]「[*LegendInfo.Ch_3_1_7_4_004*]」" }
+                    ]
+                  }
+                ]
+              },
+              { "form": "perform", "type": "Say", "text": "[*Character.fairy1*][*DialogType.character*]「[*Story.D_3_1_7_4_038*]」" },
+              { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_039*]」" },
+              { "form": "effect", "type": "Story", "text": "[*Label.Story*]" },
+              { "form": "perform", "type": "Story", "text": "[*Custom.Story*]「[*LegendInfo.Ch_3_1_7_4_005*]」" },
+              { "form": "effect", "type": "Flag", "text": "[*Label.Flag,TC0001.20*]=[*Flag.TC0001.20.0*]" },
+              { "form": "effect", "type": "Flag", "text": "[*Label.Flag,TC0002.11*]=[*Flag.TC0002.11.0*]" },
+              { "form": "effect", "type": "Combat", "text": "★[*System.Combat*][*Label.Combat,CL_1325_01*]" },
+              { "form": "effect", "type": "Script", "text": "◎[*Custom.CombatNextScript*][*Label.Script,ch3_1_7_4_2*]" }
+            ]
+          },
+          {
+            "index": 3,
+            "text": "≥66 [*Story.O_3_1_7_4_003*]",
+            "content": [
+              { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.pig1*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.ShowCharacter*]:[*Character.parrot1*]" },
+              { "form": "effect", "type": "Flag", "text": "[*Label.Flag,TC0001.21*]=[*Flag.TC0001.21.0*]" },
+              { "form": "effect", "type": "Flag", "text": "[*Label.Flag,TC0002.12*]=[*Flag.TC0002.12.0*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.pig1*]" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.parrot1*]" },
+              { "form": "perform", "type": "Say", "text": "[*Character.parrot1*][*DialogType.character*]「[*Story.D_3_1_7_4_040*]」" },
+              { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_041*]」" },
+              {
+                "form": "branch",
+                "type": "Switch",
+                "text": "[*BranchType.Switch*]：[%[*Label.Stat,literacy*]%]",
+                "branches": [
+                  {
+                    "index": 1,
+                    "text": "<20",
+                    "content": [
+                      { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_042*]」" },
+                      { "form": "perform", "type": "Character", "text": "※[*Custom.ShockCharacter*]" },
+                      { "form": "perform", "type": "Character", "text": "※[*Custom.ShockCharacter*]" },
+                      { "form": "effect", "type": "Stat", "text": "[*Label.Stat,disposition*]-2" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_043*]」" },
+                      {
+                        "form": "branch",
+                        "type": "Switch",
+                        "text": "[*BranchType.Switch*]：[%[*Label.Stat,disposition*]%]",
+                        "branches": [
+                          { "index": 1, "text": "<60", "content": [{ "form": "effect", "type": "Flag", "text": "[*Label.Flag,TC0001.21*]=[*Flag.TC0001.21.1*]" }] },
+                          { "index": 2, "text": "[*Custom.Other*]", "content": [{ "form": "effect", "type": "Flag", "text": "[*Label.Flag,TC0001.21*]=[*Flag.TC0001.21.2*]" }] }
+                        ]
+                      },
+                      { "form": "effect", "type": "Story", "text": "[*Label.Story*]" },
+                      { "form": "perform", "type": "Story", "text": "[*Custom.Story*]「[*LegendInfo.Ch_3_1_7_4_006*]」" }
+                    ]
+                  },
+                  {
+                    "index": 2,
+                    "text": "[*Custom.Other*]",
+                    "content": [
+                      { "form": "perform", "type": "Say", "text": "[*Character.player*][*DialogType.character*]「[*Story.D_3_1_7_4_044*]」" },
+                      { "form": "perform", "type": "Say", "text": "[*Character.trainee8*][*DialogType.character*]「[*Story.D_3_1_7_4_045*]」" },
+                      { "form": "effect", "type": "Story", "text": "[*Label.Story*]" },
+                      { "form": "perform", "type": "Story", "text": "[*Custom.Story*]「[*LegendInfo.Ch_3_1_7_4_007*]」" }
+                    ]
+                  }
+                ]
+              },
+              { "form": "perform", "type": "Say", "text": "[*Character.parrot1*][*DialogType.character*]「[*Story.D_3_1_7_4_046*]」" },
+              { "form": "perform", "type": "Character", "text": "※[*Custom.MoveCharacter*]:[*Character.pig1*]" },
+              { "form": "effect", "type": "Story", "text": "[*Label.Story*]" },
+              { "form": "perform", "type": "Story", "text": "[*Custom.Story*]「[*LegendInfo.Ch_3_1_7_4_008*]」" },
+              { "form": "effect", "type": "Combat", "text": "★[*System.Combat*][*Label.Combat,CL_1326_01*]" },
+              { "form": "effect", "type": "Script", "text": "◎[*Custom.CombatNextScript*][*Label.Script,ch3_1_7_4_3*]" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

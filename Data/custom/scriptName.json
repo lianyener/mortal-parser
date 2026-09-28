@@ -1212,28 +1212,28 @@
     },
     "ch2_4_10_1": {
         "ori": "ch2_4_10_1",
-        "name": "ch2_4_10_1",
+        "name": "收尾",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_10_2": {
         "ori": "ch2_4_10_2",
-        "name": "ch2_4_10_2",
+        "name": "地窖情況",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_10_2_2": {
         "ori": "ch2_4_10_2_2",
-        "name": "ch2_4_10_2_2",
+        "name": "二師兄處置",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_10_3": {
         "ori": "ch2_4_10_3",
-        "name": "ch2_4_10_3",
+        "name": "傳承小劍",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -1317,58 +1317,58 @@
     },
     "ch2_4_5_1": {
         "ori": "ch2_4_5_1",
-        "name": "ch2_4_5_1",
+        "name": "千面店小二",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_5_1_break_start_01": {
         "ori": "ch2_4_5_1_break_start_01",
-        "name": "ch2_4_5_1_break_start_01",
+        "name": "和龍淵閒聊",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_5_2": {
         "ori": "ch2_4_5_2",
-        "name": "ch2_4_5_2",
+        "name": "店小二返回",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_5_2_1": {
         "ori": "ch2_4_5_2_1",
-        "name": "ch2_4_5_2_1",
+        "name": "客棧燒毀",
         "ref": "",
-        "desc": "",
+        "desc": "參與客棧大戰分岐",
         "keywords": ""
     },
     "ch2_4_5_3": {
         "ori": "ch2_4_5_3",
-        "name": "ch2_4_5_3",
+        "name": "養病",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_5_3_break_start_01": {
         "ori": "ch2_4_5_3_break_start_01",
-        "name": "ch2_4_5_3_break_start_01",
+        "name": "小師妹找你",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_5_4_1": {
         "ori": "ch2_4_5_4_1",
-        "name": "ch2_4_5_4_1",
+        "name": "綁票",
         "ref": "",
-        "desc": "",
+        "desc": "綁票分岐，目前版本無法觸發",
         "keywords": ""
     },
     "ch2_4_5_4_2": {
         "ori": "ch2_4_5_4_2",
-        "name": "ch2_4_5_4_2",
+        "name": "戰劉顎後續",
         "ref": "",
-        "desc": "",
+        "desc": "綁票且雲裳不在唐門分岐",
         "keywords": ""
     },
     "ch2_4_6_1": {
@@ -1527,42 +1527,42 @@
     },
     "ch2_4_8_10": {
         "ori": "ch2_4_8_10",
-        "name": "ch2_4_8_10",
+        "name": "進入講經堂",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_8_10_1": {
         "ori": "ch2_4_8_10_1",
-        "name": "ch2_4_8_10_1",
+        "name": "講經堂退敵",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_8_11": {
         "ori": "ch2_4_8_11",
-        "name": "ch2_4_8_11",
+        "name": "前往大門",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_8_2": {
         "ori": "ch2_4_8_2",
-        "name": "正心堂",
+        "name": "進入正心堂",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_8_3": {
         "ori": "ch2_4_8_3",
-        "name": "練功場",
+        "name": "進入練功場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_8_4": {
         "ori": "ch2_4_8_4",
-        "name": "伙房",
+        "name": "進入伙房",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -1590,70 +1590,70 @@
     },
     "ch2_4_8_5": {
         "ori": "ch2_4_8_5",
-        "name": "ch2_4_8_5",
+        "name": "進入男弟子房",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_8_6": {
         "ori": "ch2_4_8_6",
-        "name": "ch2_4_8_6",
+        "name": "進入鍛冶場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_8_6_1": {
         "ori": "ch2_4_8_6_1",
-        "name": "ch2_4_8_6_1",
+        "name": "鍛冶場迎敵後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_8_7": {
         "ori": "ch2_4_8_7",
-        "name": "ch2_4_8_7",
+        "name": "前往後山",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_8_8": {
         "ori": "ch2_4_8_8",
-        "name": "ch2_4_8_8",
+        "name": "進入女弟子房",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_8_8_1": {
         "ori": "ch2_4_8_8_1",
-        "name": "ch2_4_8_8_1",
+        "name": "被師姐趕走",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_8_9": {
         "ori": "ch2_4_8_9",
-        "name": "ch2_4_8_9",
+        "name": "進入煉丹房",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_8_9_1": {
         "ori": "ch2_4_8_9_1",
-        "name": "ch2_4_8_9_1",
+        "name": "煉丹房退敵",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_9_1": {
         "ori": "ch2_4_9_1",
-        "name": "ch2_4_9_1",
+        "name": "唐門大亂鬥",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_4_9_2": {
         "ori": "ch2_4_9_2",
-        "name": "ch2_4_9_2",
+        "name": "唐門大捷",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -1786,489 +1786,489 @@
     },
     "ch2_6_1": {
         "ori": "ch2_6_1",
-        "name": "ch2_6_1",
+        "name": "人選",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_6_1_1": {
         "ori": "ch2_6_1_1",
-        "name": "ch2_6_1_1",
+        "name": "二師兄出馬",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_6_2_1": {
         "ori": "ch2_6_2_1",
-        "name": "ch2_6_2_1",
+        "name": "趙活出馬",
         "ref": "",
-        "desc": "",
+        "desc": "選擇讓我試試，且高修養低性情分岐",
         "keywords": ""
     },
     "ch2_6_2_1_1": {
         "ori": "ch2_6_2_1_1",
-        "name": "ch2_6_2_1_1",
+        "name": "肉體摧殘結果",
         "ref": "",
-        "desc": "",
+        "desc": "趙活出馬且選擇肉體摧殘分岐",
         "keywords": ""
     },
     "ch2_6_2_2": {
         "ori": "ch2_6_2_2",
-        "name": "ch2_6_2_2",
+        "name": "說服失敗",
         "ref": "",
-        "desc": "",
+        "desc": "趙活出馬且選擇精神傷害，讓南宮巳使出南宮護心訣分岐",
         "keywords": ""
     },
     "ch2_6_2_3": {
         "ori": "ch2_6_2_3",
-        "name": "ch2_6_2_3",
+        "name": "說服成功",
         "ref": "",
-        "desc": "",
+        "desc": "趙活出馬且選擇精神傷害，高道德且骰成功分岐",
         "keywords": ""
     },
     "ch2_6_2_4": {
         "ori": "ch2_6_2_4",
-        "name": "ch2_6_2_4",
+        "name": "胡言嚇唬",
         "ref": "",
-        "desc": "",
+        "desc": "趙活出馬且選擇精神傷害，低道德且骰成功分岐",
         "keywords": ""
     },
     "ch2_6_3_1": {
         "ori": "ch2_6_3_1",
-        "name": "ch2_6_3_1",
+        "name": "南宮巳招供",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_6_3_2": {
         "ori": "ch2_6_3_2",
-        "name": "ch2_6_3_2",
+        "name": "求情的下場",
         "ref": "",
-        "desc": "",
+        "desc": "替南宮巳求情分岐",
         "keywords": ""
     },
     "ch2_6_3_3": {
         "ori": "ch2_6_3_3",
-        "name": "ch2_6_3_3",
+        "name": "南宮巳妙用",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_8_1": {
         "ori": "ch2_8_1",
-        "name": "ch2_8_1",
+        "name": "離開唐門",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch2_8_1_1": {
         "ori": "ch2_8_1_1",
-        "name": "ch2_8_1_1",
+        "name": "離開峨嵋",
         "ref": "",
-        "desc": "",
+        "desc": "選擇永遠離開並骰出改投他派，低道德分岐",
         "keywords": ""
     },
     "ch2_8_1_2": {
         "ori": "ch2_8_1_2",
-        "name": "ch2_8_1_2",
+        "name": "再投他派",
         "ref": "",
-        "desc": "",
+        "desc": "選擇永遠離開並骰出改投他派，高道德分岐",
         "keywords": ""
     },
     "ch2_8_2": {
         "ori": "ch2_8_2",
-        "name": "ch2_8_2",
+        "name": "四師兄江陵回歸",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_10_1": {
         "ori": "ch3_10_1",
-        "name": "ch3_10_1",
+        "name": "南宮家出陣",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_10_2": {
         "ori": "ch3_10_2",
-        "name": "ch3_10_2",
+        "name": "開戰",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_10_3": {
         "ori": "ch3_10_3",
-        "name": "ch3_10_3",
+        "name": "第一陣結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_10_4": {
         "ori": "ch3_10_4",
-        "name": "ch3_10_4",
+        "name": "第二陣結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_10_5": {
         "ori": "ch3_10_5",
-        "name": "ch3_10_5",
+        "name": "第三陣結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_11_1": {
         "ori": "ch3_11_1",
-        "name": "ch3_11_1",
+        "name": "唐門後撤",
         "ref": "",
-        "desc": "",
+        "desc": "第一或第二陣戰役敗北分岐",
         "keywords": ""
     },
     "ch3_11_2": {
         "ori": "ch3_11_2",
-        "name": "ch3_11_2",
+        "name": "王二壯挑群雄",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_11_3": {
         "ori": "ch3_11_3",
-        "name": "ch3_11_3",
+        "name": "魏掌門療傷",
         "ref": "",
-        "desc": "",
+        "desc": "魏菊出戰王二壯分岐",
         "keywords": ""
     },
     "ch3_11_4": {
         "ori": "ch3_11_4",
-        "name": "ch3_11_4",
+        "name": "繼續觀戰",
         "ref": "",
-        "desc": "",
+        "desc": "魏菊出戰王二壯，沒接受魏菊療傷分岐",
         "keywords": ""
     },
     "ch3_12_1": {
         "ori": "ch3_12_1",
-        "name": "ch3_12_1",
+        "name": "王幫主就義",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_12_2": {
         "ori": "ch3_12_2",
-        "name": "ch3_12_2",
+        "name": "返回南宮宅",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_13_1": {
         "ori": "ch3_13_1",
-        "name": "ch3_13_1",
+        "name": "拒入崆峒",
         "ref": "",
-        "desc": "",
+        "desc": "已接受玄功傳承但拒絕加入崆峒分岐",
         "keywords": ""
     },
     "ch3_13_break_start_01": {
         "ori": "ch3_13_break_start_01",
-        "name": "ch3_13_break_start_01",
+        "name": "準備赴宴",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_14_1": {
         "ori": "ch3_14_1",
-        "name": "ch3_14_1",
+        "name": "噩耗",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_14_2": {
         "ori": "ch3_14_2",
-        "name": "ch3_14_2",
+        "name": "南宮深送客",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_15_1": {
         "ori": "ch3_15_1",
-        "name": "ch3_15_1",
+        "name": "啟程回唐門",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_15_travel": {
         "ori": "ch3_15_travel",
-        "name": "ch3_15_travel",
+        "name": "大地圖跳轉",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_15_travel_01": {
         "ori": "ch3_15_travel_01",
-        "name": "ch3_15_travel_01",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_15_travel_02": {
         "ori": "ch3_15_travel_02",
-        "name": "ch3_15_travel_02",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_15_travel_03": {
         "ori": "ch3_15_travel_03",
-        "name": "ch3_15_travel_03",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_16_1": {
         "ori": "ch3_16_1",
-        "name": "ch3_16_1",
+        "name": "稟告掌門",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_16_2": {
         "ori": "ch3_16_2",
-        "name": "ch3_16_2",
+        "name": "回家",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_16_3_1": {
         "ori": "ch3_16_3_1",
-        "name": "ch3_16_3_1",
+        "name": "二師兄贈藥典",
         "ref": "",
-        "desc": "",
+        "desc": "選擇商議正事分岐",
         "keywords": ""
     },
     "ch3_16_3_2": {
         "ori": "ch3_16_3_2",
-        "name": "ch3_16_3_2",
+        "name": "反抗結果",
         "ref": "",
-        "desc": "",
+        "desc": "選擇商議正事並反抗二師兄贈藥典分岐",
         "keywords": ""
     },
     "ch3_16_4": {
         "ori": "ch3_16_4",
-        "name": "ch3_16_4",
+        "name": "陪小師妹",
         "ref": "",
-        "desc": "",
+        "desc": "選擇小師妹優先分岐",
         "keywords": ""
     },
     "ch3_1_1": {
         "ori": "ch3_1_1",
-        "name": "ch3_1_1",
+        "name": "鄒博歸來",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_2_1": {
         "ori": "ch3_1_2_1",
-        "name": "ch3_1_2_1",
+        "name": "比試人選",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_2_1_1": {
         "ori": "ch3_1_2_1_1",
-        "name": "ch3_1_2_1_1",
+        "name": "先打幾拳後續",
         "ref": "",
-        "desc": "",
+        "desc": "骰出先打幾拳分岐",
         "keywords": ""
     },
     "ch3_1_2_2": {
         "ori": "ch3_1_2_2",
-        "name": "ch3_1_2_2",
+        "name": "指控段智秀",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_2_3_break_start_01": {
         "ori": "ch3_1_2_3_break_start_01",
-        "name": "ch3_1_2_3_break_start_01",
+        "name": "和雲裳商議",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_3": {
         "ori": "ch3_1_3",
-        "name": "ch3_1_3",
+        "name": "江湖救急",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_4_1": {
         "ori": "ch3_1_4_1",
-        "name": "ch3_1_4_1",
+        "name": "雲裳的決心",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_4_2_break_start_01": {
         "ori": "ch3_1_4_2_break_start_01",
-        "name": "ch3_1_4_2_break_start_01",
+        "name": "段智秀問答",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_4_3_1": {
         "ori": "ch3_1_4_3_1",
-        "name": "ch3_1_4_3_1",
+        "name": "趙活問答",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_4_3_2": {
         "ori": "ch3_1_4_3_2",
-        "name": "ch3_1_4_3_2",
+        "name": "雲裳狀況",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_5_1": {
         "ori": "ch3_1_5_1",
-        "name": "ch3_1_5_1",
+        "name": "段考開始",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_5_2": {
         "ori": "ch3_1_5_2",
-        "name": "ch3_1_5_2",
+        "name": "依序比試",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_5_2_1": {
         "ori": "ch3_1_5_2_1",
-        "name": "ch3_1_5_2_1",
+        "name": "不平道長想起",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_5_2_1_1": {
         "ori": "ch3_1_5_2_1_1",
-        "name": "ch3_1_5_2_1_1",
+        "name": "高和子比試結果",
         "ref": "",
-        "desc": "",
+        "desc": "不平道長想起你分岐",
         "keywords": ""
     },
     "ch3_1_5_2_2": {
         "ori": "ch3_1_5_2_2",
-        "name": "ch3_1_5_2_2",
+        "name": "懷素道長想起",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_5_2_2_1": {
         "ori": "ch3_1_5_2_2_1",
-        "name": "ch3_1_5_2_2_1",
+        "name": "停風子比試結果",
         "ref": "",
-        "desc": "",
+        "desc": "懷素道長想起你分岐",
         "keywords": ""
     },
     "ch3_1_5_3": {
         "ori": "ch3_1_5_3",
-        "name": "ch3_1_5_3",
+        "name": "趁機下山",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_6_1": {
         "ori": "ch3_1_6_1",
-        "name": "ch3_1_6_1",
+        "name": "加入戰鬥",
         "ref": "",
-        "desc": "",
+        "desc": "選擇幫忙分岐",
         "keywords": ""
     },
     "ch3_1_6_2": {
         "ori": "ch3_1_6_2",
-        "name": "ch3_1_6_2",
+        "name": "牛頭馬面登場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_6_3": {
         "ori": "ch3_1_6_3",
-        "name": "ch3_1_6_3",
+        "name": "趙逵登場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_6_4": {
         "ori": "ch3_1_6_4",
-        "name": "ch3_1_6_4",
+        "name": "趙逵上山",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_6_4_1": {
         "ori": "ch3_1_6_4_1",
-        "name": "ch3_1_6_4_1",
+        "name": "捲入高手過招",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_6_4_2": {
         "ori": "ch3_1_6_4_2",
-        "name": "ch3_1_6_4_2",
+        "name": "趙逵論道",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_6_4_3": {
         "ori": "ch3_1_6_4_3",
-        "name": "ch3_1_6_4_3",
+        "name": "趙活的想法",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_6_4_4": {
         "ori": "ch3_1_6_4_4",
-        "name": "ch3_1_6_4_4",
+        "name": "離開青城",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_1": {
         "ori": "ch3_1_7_1",
-        "name": "ch3_1_7_1",
+        "name": "和雲裳會合",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_2": {
         "ori": "ch3_1_7_2",
-        "name": "ch3_1_7_2",
+        "name": "露宿野外",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_2_01": {
         "ori": "ch3_1_7_2_01",
-        "name": "ch3_1_7_2_01",
+        "name": "守夜",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_2_01_001": {
         "ori": "ch3_1_7_2_01_001",
-        "name": "",
+        "name": "遭遇狼群",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_2_01_001_01": {
         "ori": "ch3_1_7_2_01_001_01",
-        "name": "ch3_1_7_2_01_001_01",
+        "name": "解決狼群",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_2_01_002": {
-        "ori": "ch3_1_7_2_01_002",
+        "ori": "遭遇山賊",
         "name": "",
         "ref": "",
         "desc": "",
@@ -2276,91 +2276,91 @@
     },
     "ch3_1_7_2_01_002_01": {
         "ori": "ch3_1_7_2_01_002_01",
-        "name": "ch3_1_7_2_01_002_01",
+        "name": "解決山賊",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_2_01_101": {
         "ori": "ch3_1_7_2_01_101",
-        "name": "",
+        "name": "有鬼",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_2_01_102": {
         "ori": "ch3_1_7_2_01_102",
-        "name": "",
+        "name": "無事發生",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_3": {
         "ori": "ch3_1_7_3",
-        "name": "ch3_1_7_3",
+        "name": "與雲裳夜談",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_3_1": {
         "ori": "ch3_1_7_3_1",
-        "name": "ch3_1_7_3_1",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_4": {
         "ori": "ch3_1_7_4",
-        "name": "ch3_1_7_4",
+        "name": "攔路虎",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_4_1": {
         "ori": "ch3_1_7_4_1",
-        "name": "ch3_1_7_4_1",
+        "name": "大戰山賊結果",
         "ref": "",
-        "desc": "",
+        "desc": "骰出山賊分岐",
         "keywords": ""
     },
     "ch3_1_7_4_2": {
         "ori": "ch3_1_7_4_2",
-        "name": "ch3_1_7_4_2",
+        "name": "戰仙姑結果",
         "ref": "",
-        "desc": "",
+        "desc": "骰出仙姑分岐",
         "keywords": ""
     },
     "ch3_1_7_4_3": {
         "ori": "ch3_1_7_4_3",
-        "name": "ch3_1_7_4_3",
+        "name": "戰鸚鵡與野豬結果",
         "ref": "",
-        "desc": "",
+        "desc": "骰出森林之怒分岐",
         "keywords": ""
     },
     "ch3_1_7_5": {
         "ori": "ch3_1_7_5",
-        "name": "ch3_1_7_5",
+        "name": "搬救兵的內情",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_5_1": {
         "ori": "ch3_1_7_5_1",
-        "name": "ch3_1_7_5_1",
+        "name": "戰叛徒結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_6": {
         "ori": "ch3_1_7_6",
-        "name": "ch3_1_7_6",
+        "name": "眉山腳下",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_1_7_6_break_start_01": {
         "ori": "ch3_1_7_6_break_start_01",
-        "name": "ch3_1_7_6_break_start_01",
+        "name": "一夜過去",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -2528,91 +2528,91 @@
     },
     "ch3_3_1_1": {
         "ori": "ch3_3_1_1",
-        "name": "ch3_3_1_1",
+        "name": "重傷夢境",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_3_1_1_break_start_01": {
         "ori": "ch3_3_1_1_break_start_01",
-        "name": "ch3_3_1_1_break_start_01",
+        "name": "夢境選擇",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_3_1_2": {
         "ori": "ch3_3_1_2",
-        "name": "ch3_3_1_2",
+        "name": "醒來",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_3_1_2_1": {
         "ori": "ch3_3_1_2_1",
-        "name": "ch3_3_1_2_1",
+        "name": "抵抗把脈後續",
         "ref": "",
-        "desc": "",
+        "desc": "青城留學事件，拒絕申屠龍把脈後續",
         "keywords": ""
     },
     "ch3_3_1_2_2": {
         "ori": "ch3_3_1_2_2",
-        "name": "ch3_3_1_2_2",
+        "name": "說明原委",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_3_2_1": {
         "ori": "ch3_3_2_1",
-        "name": "ch3_3_2_1",
+        "name": "回房",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_3_2_1_break_start_01": {
         "ori": "ch3_3_2_1_break_start_01",
-        "name": "ch3_3_2_1_break_start_01",
+        "name": "準備休息",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_3_2_1_break_start_02": {
         "ori": "ch3_3_2_1_break_start_02",
-        "name": "ch3_3_2_1_break_start_02",
+        "name": "休息",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_3_2_2": {
         "ori": "ch3_3_2_2",
-        "name": "ch3_3_2_2",
+        "name": "隔日一早",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_3_2_2_1": {
         "ori": "ch3_3_2_2_1",
-        "name": "ch3_3_2_2_1",
+        "name": "貧民點心",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_3_2_2_2": {
         "ori": "ch3_3_2_2_2",
-        "name": "ch3_3_2_2_2",
+        "name": "平民點心",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_3_2_2_3": {
         "ori": "ch3_3_2_2_3",
-        "name": "ch3_3_2_2_3",
+        "name": "瀕冥點心",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_3_2_2_4": {
         "ori": "ch3_3_2_2_4",
-        "name": "ch3_3_2_2_4",
+        "name": "返回青城",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -2766,784 +2766,777 @@
     },
     "ch3_6_1_break_01": {
         "ori": "ch3_6_1_break_01",
-        "name": "ch3_6_1_break_01",
+        "name": "江陵自由行動",
         "ref": "",
-        "desc": "",
+        "desc": "跳轉用，無劇情",
         "keywords": ""
     },
     "ch3_6_1_break_start_01": {
         "ori": "ch3_6_1_break_start_01",
-        "name": "ch3_6_1_break_start_01",
+        "name": "江陵自由行動",
         "ref": "",
-        "desc": "",
+        "desc": "行動選擇",
         "keywords": ""
     },
     "ch3_6_1_break_start_02": {
         "ori": "ch3_6_1_break_start_02",
-        "name": "ch3_6_1_break_start_02",
+        "name": "情勢報告",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_6_2": {
         "ori": "ch3_6_2",
-        "name": "ch3_6_2",
+        "name": "出城衝殺結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_6_3": {
         "ori": "ch3_6_3",
-        "name": "ch3_6_3",
+        "name": "院中練武",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_6_3_1": {
         "ori": "ch3_6_3_1",
-        "name": "ch3_6_3_1",
+        "name": "交給南宮淺",
         "ref": "",
-        "desc": "",
+        "desc": "骰出南宮淺或骰出家丁並拒絕分岐",
         "keywords": ""
     },
     "ch3_6_3_1_1": {
         "ori": "ch3_6_3_1_1",
-        "name": "ch3_6_3_1_1",
+        "name": "南宮淺對練結果",
         "ref": "",
-        "desc": "",
+        "desc": "南宮淺分岐",
         "keywords": ""
     },
     "ch3_6_3_2": {
         "ori": "ch3_6_3_2",
-        "name": "ch3_6_3_2",
+        "name": "南宮乙對練結果",
         "ref": "",
-        "desc": "",
+        "desc": "南宮家丁分岐",
         "keywords": ""
     },
     "ch3_6_3_3_1": {
         "ori": "ch3_6_3_3_1",
-        "name": "ch3_6_3_3_1",
+        "name": "戰不友善南宮深後續",
         "ref": "",
-        "desc": "",
+        "desc": "首次骰出南宮深，低好感分岐",
         "keywords": ""
     },
     "ch3_6_3_3_2": {
         "ori": "ch3_6_3_3_2",
-        "name": "ch3_6_3_3_2",
+        "name": "戰友善南宮深後續",
         "ref": "",
-        "desc": "",
+        "desc": "首次骰出南宮深，高好感分岐",
         "keywords": ""
     },
     "ch3_6_3_3_3": {
         "ori": "ch3_6_3_3_3",
-        "name": "ch3_6_3_3_3",
+        "name": "南宮深對練結果",
         "ref": "",
-        "desc": "",
+        "desc": "非首次骰出南宮深分岐",
         "keywords": ""
     },
     "ch3_6_3_4": {
         "ori": "ch3_6_3_4",
-        "name": "ch3_6_3_4",
+        "name": "指點南宮淺",
         "ref": "",
-        "desc": "",
+        "desc": "首次骰出南宮深分岐",
         "keywords": ""
     },
     "ch3_6_4": {
         "ori": "ch3_6_4",
-        "name": "ch3_6_4",
+        "name": "無所事事閒晃",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_6_4_1": {
         "ori": "ch3_6_4_1",
-        "name": "ch3_6_4_1",
+        "name": "遇二公子",
         "ref": "",
-        "desc": "",
+        "desc": "無所事事首次骰出二公子分岐",
         "keywords": ""
     },
     "ch3_6_4_2": {
         "ori": "ch3_6_4_2",
-        "name": "ch3_6_4_2",
+        "name": "遇大公子",
         "ref": "",
-        "desc": "",
+        "desc": "無所事事骰出大公子且未曾接受邀請分岐",
         "keywords": ""
     },
     "ch3_6_4_3": {
         "ori": "ch3_6_4_3",
-        "name": "ch3_6_4_3",
+        "name": "南宮遠下棋",
         "ref": "",
-        "desc": "",
+        "desc": "機率觸發",
         "keywords": ""
     },
     "ch3_6_4_3_1": {
         "ori": "ch3_6_4_3_1",
-        "name": "ch3_6_4_3_1",
+        "name": "和南宮遠過招後續",
         "ref": "",
-        "desc": "",
+        "desc": "骰出不給零用錢分岐",
         "keywords": ""
     },
     "ch3_7_1": {
         "ori": "ch3_7_1",
-        "name": "ch3_7_1",
+        "name": "戰前喊話",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_8_1": {
         "ori": "ch3_8_1",
-        "name": "ch3_8_1",
+        "name": "睡不著",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_8_1_break_start_01": {
         "ori": "ch3_8_1_break_start_01",
-        "name": "ch3_8_1_break_start_01",
+        "name": "決戰前夕",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_8_2": {
         "ori": "ch3_8_2",
-        "name": "ch3_8_2",
+        "name": "林中修練",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_8_2_1": {
         "ori": "ch3_8_2_1",
-        "name": "ch3_8_2_1",
+        "name": "思想戰結果",
         "ref": "",
-        "desc": "",
+        "desc": "思想戰分岐",
         "keywords": ""
     },
     "ch3_8_2_2": {
         "ori": "ch3_8_2_2",
-        "name": "ch3_8_2_2",
+        "name": "女飛賊後續",
         "ref": "",
-        "desc": "",
+        "desc": "射中女飛賊分岐",
         "keywords": ""
     },
     "ch3_8_3": {
         "ori": "ch3_8_3",
-        "name": "ch3_8_3",
+        "name": "大院修練",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_8_4": {
         "ori": "ch3_8_4",
-        "name": "ch3_8_4",
+        "name": "堅持怒睡",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_8_4_1": {
         "ori": "ch3_8_4_1",
-        "name": "ch3_8_4_1",
+        "name": "胡思亂想",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_8_4_2": {
         "ori": "ch3_8_4_2",
-        "name": "ch3_8_4_2",
+        "name": "迷魂大盜",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_8_4_3": {
         "ori": "ch3_8_4_3",
-        "name": "ch3_8_4_3",
+        "name": "屋上夏候蘭",
         "ref": "",
-        "desc": "",
+        "desc": "心上人夏候蘭分岐",
         "keywords": ""
     },
     "ch3_9_1": {
         "ori": "ch3_9_1",
-        "name": "ch3_9_1",
+        "name": "夜訪丐幫",
         "ref": "",
-        "desc": "",
+        "desc": "戰前喊話選擇自當從命分岐",
         "keywords": ""
     },
     "ch3_9_1_break_start_01": {
         "ori": "ch3_9_1_break_start_01",
-        "name": "ch3_9_1_break_start_01",
+        "name": "釣魚",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_9_2": {
         "ori": "ch3_9_2",
-        "name": "ch3_9_2",
+        "name": "談判",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_9_2_1": {
         "ori": "ch3_9_2_1",
-        "name": "ch3_9_2_1",
+        "name": "硬接王幫主後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_9_3": {
         "ori": "ch3_9_3",
-        "name": "ch3_9_3",
+        "name": "南宮淺強化",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_1_1": {
         "ori": "ch4_1_1",
-        "name": "ch4_1_1",
+        "name": "商議對策",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_1_2": {
         "ori": "ch4_1_2",
-        "name": "ch4_1_2",
+        "name": "武林公敵",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_1_3": {
         "ori": "ch4_1_3",
-        "name": "ch4_1_3",
+        "name": "迎戰飛石幫後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_2_1": {
         "ori": "ch4_2_1",
-        "name": "ch4_2_1",
+        "name": "掌門甦醒",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_2_2": {
         "ori": "ch4_2_2",
-        "name": "ch4_2_2",
+        "name": "幫忙",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_2_3_1": {
         "ori": "ch4_2_3_1",
-        "name": "ch4_2_3_1",
+        "name": "勸說唐牛師兄",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_2_3_2": {
         "ori": "ch4_2_3_2",
-        "name": "ch4_2_3_2",
+        "name": "戰唐牛後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_2_3_3": {
         "ori": "ch4_2_3_3",
-        "name": "ch4_2_3_3",
+        "name": "勸說秀秀師姐",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_2_3_4": {
         "ori": "ch4_2_3_4",
-        "name": "ch4_2_3_4",
+        "name": "討公道後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_2_3_5": {
         "ori": "ch4_2_3_5",
-        "name": "ch4_2_3_5",
+        "name": "戰情侶後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_2_3_6": {
         "ori": "ch4_2_3_6",
-        "name": "ch4_2_3_6",
+        "name": "返回唐門",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_2_4_1": {
         "ori": "ch4_2_4_1",
-        "name": "ch4_2_4_1",
+        "name": "顧爐火",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_1": {
         "ori": "ch4_3_1",
-        "name": "ch4_3_1",
+        "name": "廣州唐門來犯",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_2": {
         "ori": "ch4_3_2",
-        "name": "ch4_3_2",
+        "name": "議論",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_3": {
         "ori": "ch4_3_3",
-        "name": "ch4_3_3",
+        "name": "包圍",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_4": {
         "ori": "ch4_3_4",
-        "name": "ch4_3_4",
+        "name": "屋頂對決",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_5_1": {
         "ori": "ch4_3_5_1",
-        "name": "ch4_3_5_1",
+        "name": "對決唐衫後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_6_1": {
         "ori": "ch4_3_6_1",
-        "name": "ch4_3_6_1",
+        "name": "戰勝掌門人",
         "ref": "",
-        "desc": "",
+        "desc": "選擇背叛分岐",
         "keywords": ""
     },
     "ch4_3_6_2": {
         "ori": "ch4_3_6_2",
-        "name": "ch4_3_6_2",
+        "name": "被煮的狗",
         "ref": "",
-        "desc": "",
+        "desc": "選擇背叛分岐",
         "keywords": ""
     },
     "ch4_3_7_1": {
         "ori": "ch4_3_7_1",
-        "name": "ch4_3_7_1",
+        "name": "夏侯蘭見掌門",
         "ref": "",
-        "desc": "",
+        "desc": "拜師夏侯蘭分岐",
         "keywords": ""
     },
     "ch4_3_8_1": {
         "ori": "ch4_3_8_1",
-        "name": "ch4_3_8_1",
+        "name": "掌門病重",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_8_2_break_start_01": {
         "ori": "ch4_3_8_2_break_start_01",
-        "name": "ch4_3_8_2_break_start_01",
+        "name": "正心堂待命",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_8_3": {
         "ori": "ch4_3_8_3",
-        "name": "ch4_3_8_3",
+        "name": "往事",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_8_4": {
         "ori": "ch4_3_8_4",
-        "name": "ch4_3_8_4",
+        "name": "唐錚叛逃",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_8_4_01": {
         "ori": "ch4_3_8_4_01",
-        "name": "ch4_3_8_4_01",
+        "name": "分崩離析",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_8_4_1": {
         "ori": "ch4_3_8_4_1",
-        "name": "ch4_3_8_4_1",
+        "name": "唐芳廢功",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_8_5_break_start_01": {
         "ori": "ch4_3_8_5_break_start_01",
-        "name": "ch4_3_8_5_break_start_01",
+        "name": "去正心堂前",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_3_9": {
         "ori": "ch4_3_9",
-        "name": "ch4_3_9",
+        "name": "收尾",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_4_1": {
         "ori": "ch4_4_1",
-        "name": "ch4_4_1",
+        "name": "大師兄歸來",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_4_2_break_start_01": {
         "ori": "ch4_4_2_break_start_01",
-        "name": "ch4_4_2_break_start_01",
+        "name": "日後方針",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_5_1": {
         "ori": "ch4_5_1",
-        "name": "ch4_5_1",
+        "name": "大師兄出行",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_5_2": {
         "ori": "ch4_5_2",
-        "name": "ch4_5_2",
+        "name": "跟隨下山",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_5_3_break_start_01": {
         "ori": "ch4_5_3_break_start_01",
-        "name": "ch4_5_3_break_start_01",
+        "name": "客棧休憩",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_5_4": {
         "ori": "ch4_5_4",
-        "name": "ch4_5_4",
+        "name": "朱嬸故事",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_5_5_1": {
         "ori": "ch4_5_5_1",
-        "name": "ch4_5_5_1",
+        "name": "打跑對手",
         "ref": "",
-        "desc": "",
+        "desc": "遇挑戰者低道德分岐",
         "keywords": ""
     },
     "ch4_5_5_2": {
         "ori": "ch4_5_5_2",
-        "name": "ch4_5_5_2",
+        "name": "打敗兩人",
         "ref": "",
-        "desc": "",
+        "desc": "遇挑戰者高嘴力分岐",
         "keywords": ""
     },
     "ch4_5_5_3": {
         "ori": "ch4_5_5_3",
-        "name": "ch4_5_5_3",
+        "name": "打退對手",
         "ref": "",
-        "desc": "",
+        "desc": "遇挑戰者一般分岐",
         "keywords": ""
     },
     "ch4_5_6_1": {
         "ori": "ch4_5_6_1",
-        "name": "ch4_5_6_1",
+        "name": "方震天求戰",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_5_6_2": {
         "ori": "ch4_5_6_2",
-        "name": "ch4_5_6_2",
+        "name": "戰方震天後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_5_7": {
         "ori": "ch4_5_7",
-        "name": "ch4_5_7",
+        "name": "次日出發",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_1": {
         "ori": "ch4_6_1",
-        "name": "ch4_6_1",
-        "ref": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "ch4_6_10": {
-        "ori": "ch4_6_10",
-        "name": "ch4_6_10",
-        "ref": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "ch4_6_11": {
-        "ori": "ch4_6_11",
-        "name": "ch4_6_11",
-        "ref": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "ch4_6_12": {
-        "ori": "ch4_6_12",
-        "name": "ch4_6_12",
-        "ref": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "ch4_6_13": {
-        "ori": "ch4_6_13",
-        "name": "ch4_6_13",
-        "ref": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "ch4_6_13_1": {
-        "ori": "ch4_6_13_1",
-        "name": "ch4_6_13_1",
-        "ref": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "ch4_6_13_2": {
-        "ori": "ch4_6_13_2",
-        "name": "ch4_6_13_2",
-        "ref": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "ch4_6_13_3": {
-        "ori": "ch4_6_13_3",
-        "name": "ch4_6_13_3",
-        "ref": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "ch4_6_14": {
-        "ori": "ch4_6_14",
-        "name": "ch4_6_14",
-        "ref": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "ch4_6_15": {
-        "ori": "ch4_6_15",
-        "name": "ch4_6_15",
-        "ref": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "ch4_6_16": {
-        "ori": "ch4_6_16",
-        "name": "ch4_6_16",
+        "name": "決戰臥雲崗",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_2": {
         "ori": "ch4_6_2",
-        "name": "ch4_6_2",
+        "name": "大師兄絕招",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_3": {
         "ori": "ch4_6_3",
-        "name": "ch4_6_3",
+        "name": "夫婦和好",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_4_1": {
         "ori": "ch4_6_4_1",
-        "name": "ch4_6_4_1",
+        "name": "不跟隨大師兄",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_4_2": {
         "ori": "ch4_6_4_2",
-        "name": "ch4_6_4_2",
+        "name": "泥教敲門",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_4_2_1": {
         "ori": "ch4_6_4_2_1",
-        "name": "ch4_6_4_2_1",
+        "name": "戰泥教後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_5_1": {
         "ori": "ch4_6_5_1",
-        "name": "ch4_6_5_1",
+        "name": "唐門外情況",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_5_2": {
         "ori": "ch4_6_5_2",
-        "name": "ch4_6_5_2",
+        "name": "決定幫誰",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_5_3": {
         "ori": "ch4_6_5_3",
-        "name": "ch4_6_5_3",
+        "name": "揍崆峒後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_5_4": {
         "ori": "ch4_6_5_4",
-        "name": "ch4_6_5_4",
+        "name": "揍青城後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_5_5": {
         "ori": "ch4_6_5_5",
-        "name": "ch4_6_5_5",
+        "name": "兩邊都揍後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_6": {
         "ori": "ch4_6_6",
-        "name": "ch4_6_6",
+        "name": "準備救治",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_7_break_start_01": {
         "ori": "ch4_6_7_break_start_01",
-        "name": "ch4_6_7_break_start_01",
+        "name": "救治前思考",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_8": {
         "ori": "ch4_6_8",
-        "name": "ch4_6_8",
+        "name": "與泥教商議",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_6_9": {
         "ori": "ch4_6_9",
-        "name": "ch4_6_9",
+        "name": "入夜",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
+    "ch4_6_10": {
+        "ori": "ch4_6_10",
+        "name": "思考成功率",
+        "ref": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "ch4_6_11": {
+        "ori": "ch4_6_11",
+        "name": "下定決心",
+        "ref": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "ch4_6_12": {
+        "ori": "ch4_6_12",
+        "name": "放棄救治",
+        "ref": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "ch4_6_13": {
+        "ori": "ch4_6_13",
+        "name": "救治大師兄",
+        "ref": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "ch4_6_13_1": {
+        "ori": "ch4_6_13_1",
+        "name": "新的刺客",
+        "ref": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "ch4_6_13_2": {
+        "ori": "ch4_6_13_2",
+        "name": "金烏登場",
+        "ref": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "ch4_6_13_3": {
+        "ori": "ch4_6_13_3",
+        "name": "戰金烏後續",
+        "ref": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "ch4_6_14": {
+        "ori": "ch4_6_14",
+        "name": "繼續救治",
+        "ref": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "ch4_6_15": {
+        "ori": "ch4_6_15",
+        "name": "埋葬後山",
+        "ref": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "ch4_6_16": {
+        "ori": "ch4_6_16",
+        "name": "梅之國",
+        "ref": "",
+        "desc": "煉丹房小梅勸說時選擇收功分岐",
+        "keywords": ""
+    },
     "ch4_7_1": {
         "ori": "ch4_7_1",
-        "name": "ch4_7_1",
+        "name": "返程",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_7_2_break_start_01": {
         "ori": "ch4_7_2_break_start_01",
-        "name": "ch4_7_2_break_start_01",
+        "name": "客棧休憩",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_7_3_1": {
         "ori": "ch4_7_3_1",
-        "name": "ch4_7_3_1",
+        "name": "大師兄哄",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_7_3_2": {
         "ori": "ch4_7_3_2",
-        "name": "ch4_7_3_2",
+        "name": "交給你",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_7_4_1": {
         "ori": "ch4_7_4_1",
-        "name": "ch4_7_4_1",
+        "name": "龍湘指教結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_7_4_2": {
         "ori": "ch4_7_4_2",
-        "name": "ch4_7_4_2",
+        "name": "福韞切磋結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_7_5_1": {
         "ori": "ch4_7_5_1",
-        "name": "ch4_7_5_1",
+        "name": "出發",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_7_6_travel": {
         "ori": "ch4_7_6_travel",
-        "name": "ch4_7_6_travel",
+        "name": "大地圖跳轉",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_7_6_travel_01": {
         "ori": "ch4_7_6_travel_01",
-        "name": "ch4_7_6_travel_01",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_7_6_travel_02": {
         "ori": "ch4_7_6_travel_02",
-        "name": "ch4_7_6_travel_02",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_1": {
         "ori": "ch4_8_1",
-        "name": "ch4_8_1",
-        "ref": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "ch4_8_10_1": {
-        "ori": "ch4_8_10_1",
-        "name": "ch4_8_10_1",
+        "name": "接近唐門",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_2": {
         "ori": "ch4_8_2",
-        "name": "ch4_8_2",
+        "name": "小梅湊對",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_3": {
         "ori": "ch4_8_3",
-        "name": "ch4_8_3",
+        "name": "大事不妙",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -3557,119 +3550,126 @@
     },
     "ch4_8_5": {
         "ori": "ch4_8_5",
-        "name": "ch4_8_5",
+        "name": "茶肆晁和",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_6": {
         "ori": "ch4_8_6",
-        "name": "ch4_8_6",
+        "name": "金烏登場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_7_1": {
         "ori": "ch4_8_7_1",
-        "name": "ch4_8_7_1",
+        "name": "對決金烏結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_7_2": {
         "ori": "ch4_8_7_2",
-        "name": "ch4_8_7_2",
+        "name": "轉入林中",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_7_3": {
         "ori": "ch4_8_7_3",
-        "name": "ch4_8_7_3",
+        "name": "對決小梅結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_7_4": {
         "ori": "ch4_8_7_4",
-        "name": "ch4_8_7_4",
+        "name": "擊退女飛賊",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_7_5": {
         "ori": "ch4_8_7_5",
-        "name": "ch4_8_7_5",
+        "name": "小梅倒戈",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_7_6": {
         "ori": "ch4_8_7_6",
-        "name": "ch4_8_7_6",
+        "name": "大師兄出絕招",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_8_1": {
         "ori": "ch4_8_8_1",
-        "name": "ch4_8_8_1",
+        "name": "大師兄出手",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_8_2": {
         "ori": "ch4_8_8_2",
-        "name": "ch4_8_8_2",
+        "name": "對決金烏後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_8_3": {
         "ori": "ch4_8_8_3",
-        "name": "ch4_8_8_3",
+        "name": "申屠龍吸內力",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_8_4": {
         "ori": "ch4_8_8_4",
-        "name": "ch4_8_8_4",
+        "name": "申屠龍真面目",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_9_1": {
         "ori": "ch4_8_9_1",
-        "name": "ch4_8_9_1",
+        "name": "龍湘出手",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_9_2": {
         "ori": "ch4_8_9_2",
-        "name": "ch4_8_9_2",
+        "name": "福韞出手",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_8_9_3": {
         "ori": "ch4_8_9_3",
-        "name": "ch4_8_9_3",
+        "name": "飛俠落地",
+        "ref": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "ch4_8_10_1": {
+        "ori": "ch4_8_10_1",
+        "name": "返回唐門",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_9_1": {
         "ori": "ch4_9_1",
-        "name": "ch4_9_1",
+        "name": "正心堂屋頂",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch4_9_2": {
         "ori": "ch4_9_2",
-        "name": "ch4_9_2",
+        "name": "臥雲崗後續",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -8562,63 +8562,63 @@
     },
     "S0028_01": {
         "ori": "S0028_01",
-        "name": "S0028_01",
+        "name": "葉雲舟歸來",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0028_02": {
         "ori": "S0028_02",
-        "name": "S0028_02",
+        "name": "報告掌門",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0028_02_01": {
         "ori": "S0028_02_01",
-        "name": "S0028_02_01",
+        "name": "爭執後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0028_02_02": {
         "ori": "S0028_02_02",
-        "name": "S0028_02_02",
+        "name": "打贏狼",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0028_02_break_start_01": {
         "ori": "S0028_02_break_start_01",
-        "name": "S0028_02_break_start_01",
+        "name": "葉雲舟閒聊",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0028_03": {
         "ori": "S0028_03",
-        "name": "S0028_03",
+        "name": "段智秀後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0029_01": {
         "ori": "S0029_01",
-        "name": "S0029_01",
+        "name": "唐守鴻處置",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0029_01_01": {
         "ori": "S0029_01_01",
-        "name": "S0029_01_01",
+        "name": "放走唐守鴻",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0029_01_02": {
         "ori": "S0029_01_02",
-        "name": "S0029_01_02",
+        "name": "放走的理由",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -8765,7 +8765,7 @@
     },
     "S0120_01": {
         "ori": "S0120_01",
-        "name": "S0120_01",
+        "name": "唐衫請罪",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -8842,70 +8842,70 @@
     },
     "S0204_01": {
         "ori": "S0204_01",
-        "name": "S0204_01",
+        "name": "女弟子房鬧劇",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0204_01_01": {
         "ori": "S0204_01_01",
-        "name": "S0204_01_01",
+        "name": "梁有詩傳聞",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0204_01_01_01": {
         "ori": "S0204_01_01_01",
-        "name": "S0204_01_01_01",
+        "name": "送行",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0204_01_02": {
         "ori": "S0204_01_02",
-        "name": "S0204_01_02",
+        "name": "葉雲裳不肯走",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0204_01_03": {
         "ori": "S0204_01_03",
-        "name": "S0204_01_03",
+        "name": "你的建議",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0204_01_03_01": {
         "ori": "S0204_01_03_01",
-        "name": "S0204_01_03_01",
+        "name": "唐芳登場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0204_01_04_01": {
         "ori": "S0204_01_04_01",
-        "name": "S0204_01_04_01",
+        "name": "無能為力",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0204_01_04_01_01": {
         "ori": "S0204_01_04_01_01",
-        "name": "S0204_01_04_01_01",
+        "name": "九轉輪迴大法",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0204_01_04_02": {
         "ori": "S0204_01_04_02",
-        "name": "S0204_01_04_02",
+        "name": "唐芳贈丹",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0204_01_04_break_start_01": {
         "ori": "S0204_01_04_break_start_01",
-        "name": "S0204_01_04_break_start_01",
+        "name": "唐芳談話",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -8926,7 +8926,7 @@
     },
     "S0207_01": {
         "ori": "S0207_01",
-        "name": "S0207_01",
+        "name": "雲裳重逢",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -9269,77 +9269,77 @@
     },
     "S0214_01": {
         "ori": "S0214_01",
-        "name": "S0214_01",
+        "name": "葉雲舟還錢",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0301_01": {
         "ori": "S0301_01",
-        "name": "S0301_01",
+        "name": "夜間閒晃",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0301_01_01": {
         "ori": "S0301_01_01",
-        "name": "S0301_01_01",
+        "name": "切磋結果",
         "ref": "",
-        "desc": "",
+        "desc": "答應和南宮淺切磋後續",
         "keywords": ""
     },
     "S0301_02": {
         "ori": "S0301_02",
-        "name": "S0301_02",
+        "name": "兩個黑衣人",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0301_02_01": {
         "ori": "S0301_02_01",
-        "name": "S0301_02_01",
+        "name": "戰王二壯後續",
         "ref": "",
-        "desc": "",
+        "desc": "選擇追上去並成功格擋，和丐幫人士好感度低分岐",
         "keywords": ""
     },
     "S0301_02_02": {
         "ori": "S0301_02_02",
-        "name": "S0301_02_02",
+        "name": "被打暈",
         "ref": "",
-        "desc": "",
+        "desc": "選擇追上去，格擋失敗或決鬥敗北分岐",
         "keywords": ""
     },
     "S0301_03": {
         "ori": "S0301_03",
-        "name": "S0301_03",
+        "name": "王幫主的策略",
         "ref": "",
-        "desc": "",
+        "desc": "選擇追上去並成功格擋，和丐幫人士好感度高或決鬥勝利分岐",
         "keywords": ""
     },
     "S0302_01": {
         "ori": "S0302_01",
-        "name": "S0302_01",
+        "name": "飛俠千里行",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0302_01_01": {
         "ori": "S0302_01_01",
-        "name": "S0302_01_01",
+        "name": "阻止大師兄後續",
         "ref": "",
-        "desc": "",
+        "desc": "選擇勸大師兄不要去分岐",
         "keywords": ""
     },
     "S0303_01": {
         "ori": "S0303_01",
-        "name": "S0303_01",
+        "name": "大師兄刺金",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0401_01": {
         "ori": "S0401_01",
-        "name": "S0401_01",
+        "name": "大師兄負傷",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -9864,7 +9864,7 @@
     },
     "S2300_01": {
         "ori": "S2300_01",
-        "name": "S2300_01",
+        "name": "阿花姑娘投靠",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -10109,56 +10109,56 @@
     },
     "S3001_01": {
         "ori": "S3001_01",
-        "name": "S3001_01",
+        "name": "習武碰壁",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S3002_01": {
         "ori": "S3002_01",
-        "name": "S3002_01",
+        "name": "雲裳的秘笈",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S3003_01": {
         "ori": "S3003_01",
-        "name": "S3003_01",
+        "name": "新的秘笈",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S3004_01": {
         "ori": "S3004_01",
-        "name": "S3004_01",
+        "name": "四師兄到訪",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S3004_01_01": {
         "ori": "S3004_01_01",
-        "name": "S3004_01_01",
+        "name": "戰唐惟元後續",
         "ref": "",
-        "desc": "",
+        "desc": "選擇讓四師兄送，骰到垃圾分岐",
         "keywords": ""
     },
     "S3004_01_02": {
         "ori": "S3004_01_02",
-        "name": "S3004_01_02",
+        "name": "四師兄離開",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S3005_01": {
         "ori": "S3005_01",
-        "name": "S3005_01",
+        "name": "雲裳逗留",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S3006_01": {
         "ori": "S3006_01",
-        "name": "S3006_01",
+        "name": "指指點點",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -10956,14 +10956,14 @@
     },
     "section_01_free_start_01": {
         "ori": "section_01_free_start_01",
-        "name": "section_01_free_start_01",
+        "name": "崆峒自由行動",
         "ref": "",
-        "desc": "",
+        "desc": "跳轉用，無劇情",
         "keywords": ""
     },
     "section_01_free_start_02": {
         "ori": "section_01_free_start_02",
-        "name": "自由行動",
+        "name": "崆峒自由行動",
         "ref": "",
         "desc": "行動選擇",
         "keywords": ""
@@ -10977,28 +10977,28 @@
     },
     "section_02_01": {
         "ori": "section_02_01",
-        "name": "section_02_01",
+        "name": "青城舊識",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_02": {
         "ori": "section_02_02",
-        "name": "section_02_02",
+        "name": "鄒掌門嘉勉",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_03": {
         "ori": "section_02_03",
-        "name": "section_02_03",
+        "name": "庸才",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_00": {
         "ori": "section_02_free_00",
-        "name": "section_02_free_00",
+        "name": "窩居",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -11040,7 +11040,7 @@
     },
     "section_02_free_01": {
         "ori": "section_02_free_01",
-        "name": "section_02_free_01",
+        "name": "常風觀",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -11180,7 +11180,7 @@
     },
     "section_02_free_02": {
         "ori": "section_02_free_02",
-        "name": "section_02_free_02",
+        "name": "上清宮",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -11285,7 +11285,7 @@
     },
     "section_02_free_03": {
         "ori": "section_02_free_03",
-        "name": "section_02_free_03",
+        "name": "青城山鎮",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -11439,16 +11439,16 @@
     },
     "section_02_free_start_01": {
         "ori": "section_02_free_start_01",
-        "name": "section_02_free_start_01",
+        "name": "青城自由行動",
         "ref": "",
-        "desc": "",
+        "desc": "跳轉用，無劇情",
         "keywords": ""
     },
     "section_02_free_start_02": {
         "ori": "section_02_free_start_02",
-        "name": "section_02_free_start_02",
+        "name": "青城自由行動",
         "ref": "",
-        "desc": "",
+        "desc": "行動選擇",
         "keywords": ""
     },
     "spa_01_01": {
@@ -12286,7 +12286,7 @@
     },
     "travel_result_310_501": {
         "ori": "travel_result_310_501",
-        "name": "",
+        "name": "大義分舵",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -12307,14 +12307,14 @@
     },
     "travel_result_310_502": {
         "ori": "travel_result_310_502",
-        "name": "",
+        "name": "馬失蹄",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_310_503": {
         "ori": "travel_result_310_503",
-        "name": "",
+        "name": "四師兄請客",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -12328,34 +12328,34 @@
     },
     "travel_result_401_501": {
         "ori": "travel_result_401_501",
-        "name": "",
+        "name": "路人俠攔路",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_401_501_01": {
         "ori": "travel_result_401_501_01",
-        "name": "travel_result_401_501_01",
+        "name": "由你出戰結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_401_502": {
         "ori": "travel_result_401_502",
-        "name": "",
+        "name": "大盜攔路",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_401_503": {
-        "ori": "travel_result_401_503",
+        "ori": "愛慕者攔路`",
         "name": "",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_401_504": {
-        "ori": "travel_result_401_504",
+        "ori": "江湖新人攔路",
         "name": "",
         "ref": "",
         "desc": "",

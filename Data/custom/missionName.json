@@ -555,14 +555,14 @@
     },
     "S0028": {
       "ori": "S0028",
-      "name": "",
+      "name": "葉雲舟歸來",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
     "S0029": {
       "ori": "S0029",
-      "name": "",
+      "name": "唐守鴻處置",
       "ref": "",
       "desc": "",
       "keywords": ""
@@ -660,7 +660,7 @@
     },
     "S0120": {
       "ori": "S0120",
-      "name": "",
+      "name": "唐衫請罪",
       "ref": "唐衫加入唐門",
       "desc": "",
       "keywords": ""
@@ -695,7 +695,7 @@
     },
     "S0204": {
       "ori": "S0204",
-      "name": "",
+      "name": "葉家兄妹去留",
       "ref": "",
       "desc": "",
       "keywords": ""
@@ -716,7 +716,7 @@
     },
     "S0207": {
       "ori": "S0207",
-      "name": "",
+      "name": "雲裳重逢",
       "ref": "",
       "desc": "",
       "keywords": ""
@@ -772,35 +772,35 @@
     },
     "S0214": {
       "ori": "S0214",
-      "name": "",
+      "name": "葉雲舟還錢",
       "ref": "劍聖傳承",
       "desc": "",
       "keywords": ""
     },
     "S0301": {
       "ori": "S0301",
-      "name": "",
+      "name": "黑衣人VS黑衣人",
       "ref": "黑衣人VS黑衣人",
       "desc": "",
       "keywords": ""
     },
     "S0302": {
       "ori": "S0302",
-      "name": "",
+      "name": "飛俠千里行",
       "ref": "飛俠千里行",
       "desc": "",
       "keywords": ""
     },
     "S0303": {
       "ori": "S0303",
-      "name": "",
+      "name": "刺金",
       "ref": "刺金",
       "desc": "",
       "keywords": ""
     },
     "S0401": {
       "ori": "S0401",
-      "name": "",
+      "name": "隱患",
       "ref": "隱患",
       "desc": "",
       "keywords": ""
@@ -1038,7 +1038,7 @@
     },
     "S1302": {
       "ori": "S1302",
-      "name": "",
+      "name": "唐門會議",
       "ref": "唐門會議",
       "desc": "",
       "keywords": ""
@@ -1052,7 +1052,7 @@
     },
     "S2300": {
       "ori": "S2300",
-      "name": "",
+      "name": "阿花姑娘",
       "ref": "",
       "desc": "",
       "keywords": ""
@@ -1094,44 +1094,44 @@
     },
     "S3002": {
       "ori": "S3002",
-      "name": "",
+      "name": "雲裳秘笈",
       "ref": "青城留學 葉雲裳秘笈2",
       "desc": "",
       "keywords": ""
     },
     "S3001": {
       "ori": "S3001",
-      "name": "",
+      "name": "排擠",
       "ref": "青城留學 排擠",
       "desc": "",
       "keywords": ""
     },
     "S3003": {
       "ori": "S3003",
-      "name": "",
+      "name": "虎嘯功",
       "ref": "青城留學 虎嘯功",
       "desc": "",
       "keywords": ""
     },
     "S3004": {
       "ori": "S3004",
-      "name": "",
+      "name": "四師兄行商",
       "ref": "青城留學 四師兄行商",
       "desc": "",
       "keywords": ""
     },
     "S3005": {
       "ori": "S3005",
-      "name": "",
+      "name": "雲裳逗留",
       "ref": "青城留學 四師兄行商",
       "desc": "",
       "keywords": ""
     },
     "S3006": {
       "ori": "S3006",
-      "name": "",
+      "name": "指指點點",
       "ref": "青城留學 指指點點",
-      "desc": "",
+      "desc": "共3次",
       "keywords": ""
     },
     "S8000": {
@@ -1494,7 +1494,7 @@
     },
     "M2010_02_01": {
       "ori": "M2010_02_01",
-      "name": "練功場",
+      "name": "練功場迎敵",
       "ref": "",
       "desc": "",
       "keywords": "",
@@ -1502,7 +1502,7 @@
     },
     "M2010_01_01": {
       "ori": "M2010_01_01",
-      "name": "正心堂",
+      "name": "正心堂迎敵",
       "ref": "",
       "desc": "",
       "keywords": "",
@@ -1510,7 +1510,7 @@
     },
     "M2010_03_01": {
       "ori": "M2010_03_01",
-      "name": "伙房",
+      "name": "伙房迎敵",
       "ref": "",
       "desc": "",
       "keywords": "",
@@ -1518,7 +1518,7 @@
     },
     "M2010_04_01": {
       "ori": "M2010_04_01",
-      "name": "男弟子房",
+      "name": "男弟子房迎敵",
       "ref": "",
       "desc": "",
       "keywords": "",
@@ -1526,7 +1526,7 @@
     },
     "M2010_05_01": {
       "ori": "M2010_05_01",
-      "name": "鍛冶場",
+      "name": "鍛冶場迎敵",
       "ref": "",
       "desc": "",
       "keywords": "",
@@ -1534,7 +1534,7 @@
     },
     "M2010_06_01": {
       "ori": "M2010_06_01",
-      "name": "後山",
+      "name": "後山迎敵",
       "ref": "",
       "desc": "",
       "keywords": "",
@@ -1542,7 +1542,7 @@
     },
     "M2010_08_01": {
       "ori": "M2010_08_01",
-      "name": "煉丹房",
+      "name": "煉丹房迎敵",
       "ref": "",
       "desc": "",
       "keywords": "",
@@ -1550,7 +1550,7 @@
     },
     "M2010_09_01": {
       "ori": "M2010_09_01",
-      "name": "講經堂",
+      "name": "講經堂迎敵",
       "ref": "",
       "desc": "",
       "keywords": "",
@@ -1558,7 +1558,7 @@
     },
     "M2010_07_01": {
       "ori": "M2010_07_01",
-      "name": "女弟子房",
+      "name": "女弟子房迎敵",
       "ref": "",
       "desc": "",
       "keywords": "",
@@ -1566,7 +1566,7 @@
     },
     "M2010_10_01": {
       "ori": "M2010_10_01",
-      "name": "大門",
+      "name": "大門離開",
       "ref": "",
       "desc": "",
       "keywords": "",
@@ -2086,19 +2086,19 @@
     },
     "S0028_01": {
       "ori": "S0028_01",
-      "name": "",
+      "name": "葉雲舟歸來",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "S0029_01": {
       "ori": "S0029_01",
-      "name": "",
+      "name": "唐守鴻處置",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "S0030_01": {
       "ori": "S0030_01",
@@ -2198,11 +2198,11 @@
     },
     "S0120_01": {
       "ori": "S0120_01",
-      "name": "",
+      "name": "唐衫請罪",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "S0200_01": {
       "ori": "S0200_01",
@@ -2254,11 +2254,11 @@
     },
     "S0207_01": {
       "ori": "S0207_01",
-      "name": "",
+      "name": "雲裳重逢",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "KongtongStudy"
     },
     "S0208_01": {
       "ori": "S0208_01",
@@ -2302,11 +2302,11 @@
     },
     "S0204_01": {
       "ori": "S0204_01",
-      "name": "",
+      "name": "葉家兄妹去留",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "S0213_01": {
       "ori": "S0213_01",
@@ -2318,43 +2318,43 @@
     },
     "S0214_01": {
       "ori": "S0214_01",
-      "name": "",
+      "name": "葉雲舟還錢",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "S0301_01": {
       "ori": "S0301_01",
-      "name": "",
+      "name": "黑衣人VS黑衣人",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "KongtongStudy"
     },
     "S0303_01": {
       "ori": "S0303_01",
-      "name": "",
+      "name": "刺金",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "S0401_01": {
       "ori": "S0401_01",
-      "name": "",
+      "name": "隱患",
       "ref": "隱患",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "S0302_01": {
       "ori": "S0302_01",
-      "name": "",
+      "name": "飛俠千里行",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "KongtongStudy"
     },
     "S0502_01": {
       "ori": "S0502_01",
@@ -2534,27 +2534,27 @@
     },
     "S1211_01": {
       "ori": "S1211_01",
-      "name": "",
+      "name": "唐門月會",
       "ref": "",
-      "desc": "",
+      "desc": "二年十一月月會",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "S1301_01": {
       "ori": "S1301_01",
-      "name": "",
+      "name": "唐門月會",
       "ref": "",
-      "desc": "",
+      "desc": "三年一月月會",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "S1212_01": {
       "ori": "S1212_01",
-      "name": "",
+      "name": "唐門月會",
       "ref": "",
-      "desc": "",
+      "desc": "二年十二月月會",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "S1307_01": {
       "ori": "S1307_01",
@@ -2614,11 +2614,11 @@
     },
     "S1302_01": {
       "ori": "S1302_01",
-      "name": "",
+      "name": "唐門月會",
       "ref": "",
-      "desc": "",
+      "desc": "三年二月月會",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "S2200_01": {
       "ori": "S2200_01",
@@ -2630,11 +2630,11 @@
     },
     "S2300_01": {
       "ori": "S2300_01",
-      "name": "",
+      "name": "阿花姑娘",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "KongtongStudy"
     },
     "S2401_01": {
       "ori": "S2401_01",
@@ -2678,43 +2678,43 @@
     },
     "S3002_01": {
       "ori": "S3002_01",
-      "name": "",
+      "name": "雲裳秘笈",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "S3001_01": {
       "ori": "S3001_01",
-      "name": "",
+      "name": "排擠",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "S3003_01": {
       "ori": "S3003_01",
-      "name": "",
+      "name": "虎嘯功",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "S3004_01": {
       "ori": "S3004_01",
-      "name": "",
+      "name": "四師兄行商",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "S3005_01": {
       "ori": "S3005_01",
-      "name": "",
+      "name": "雲裳逗留",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "S8000_01": {
       "ori": "S8000_01",
@@ -2734,11 +2734,11 @@
     },
     "S3006_01": {
       "ori": "S3006_01",
-      "name": "",
+      "name": "指指點點",
       "ref": "",
-      "desc": "",
+      "desc": "第1次",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "S9002_01": {
       "ori": "S9002_01",
@@ -2870,11 +2870,11 @@
     },
     "S3006_02": {
       "ori": "S3006_02",
-      "name": "",
+      "name": "指指點點",
       "ref": "",
-      "desc": "",
+      "desc": "第2次",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "S9001_02": {
       "ori": "S9001_02",
@@ -2934,11 +2934,11 @@
     },
     "S3006_03": {
       "ori": "S3006_03",
-      "name": "",
+      "name": "指指點點",
       "ref": "",
-      "desc": "",
+      "desc": "第3次",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "S9903_03": {
       "ori": "S9903_03",
@@ -3134,27 +3134,27 @@
     },
     "M2007_05": {
       "ori": "M2007_05",
-      "name": "",
+      "name": "客棧奇遇",
       "ref": "唐門留學 客棧 中",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2008_01": {
       "ori": "M2008_01",
-      "name": "",
+      "name": "總攻擊",
       "ref": "總攻擊",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "KongtongStudy"
     },
     "M2008_02": {
       "ori": "M2008_02",
-      "name": "",
+      "name": "每況愈下",
       "ref": "4-1每況愈下",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "M2009_01": {
       "ori": "M2009_01",
@@ -3174,67 +3174,67 @@
     },
     "M2010_02": {
       "ori": "M2010_02",
-      "name": "",
+      "name": "俘虜",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2010_03": {
       "ori": "M2010_03",
-      "name": "",
+      "name": "拷問南宮巳",
       "ref": "拷問",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2010_04": {
       "ori": "M2010_04",
-      "name": "",
+      "name": "四師兄江陵回歸",
       "ref": "四師兄歸來",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "NoExternalStudy"
     },
     "M2011_01": {
       "ori": "M2011_01",
-      "name": "",
+      "name": "鄒博歸來",
       "ref": "鄒博歸來",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "M2011_02": {
       "ori": "M2011_02",
-      "name": "",
+      "name": "比試人選",
       "ref": "比試人選",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "M2011_03": {
       "ori": "M2011_03",
-      "name": "",
+      "name": "江湖救急",
       "ref": "江湖救急",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "M2011_04": {
       "ori": "M2011_04",
-      "name": "",
+      "name": "笑著死去",
       "ref": "笑著死去",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "M2011_05": {
       "ori": "M2011_05",
-      "name": "",
+      "name": "青城段考",
       "ref": "青城段考",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "QingchengStudy"
     },
     "M2011_06": {
       "ori": "M2011_06",
@@ -3246,75 +3246,75 @@
     },
     "M3001_01": {
       "ori": "M3001_01",
-      "name": "",
+      "name": "掌門甦醒",
       "ref": "4-2 掌門甦醒",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "M3001_02": {
       "ori": "M3001_02",
-      "name": "",
+      "name": "煉丹房中優閒的一天",
       "ref": "煉丹房中優閒的一天",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "M3001_03": {
       "ori": "M3001_03",
-      "name": "",
+      "name": "下山找人",
       "ref": "下山找人",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "M3002_01": {
       "ori": "M3002_01",
-      "name": "",
+      "name": "唐門內戰",
       "ref": "4-3唐門內戰",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "M3003_01": {
       "ori": "M3003_01",
-      "name": "",
+      "name": "飛俠歸來",
       "ref": "4-4 飛俠歸來",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "M3003_02": {
       "ori": "M3003_02",
-      "name": "",
+      "name": "飛俠出行",
       "ref": "4-5 隱患 出行",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "M3004_01": {
       "ori": "M3004_01",
-      "name": "",
+      "name": "不跟隨大師兄",
       "ref": "4-6-B 不跟隨大師兄",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "M3004_02": {
       "ori": "M3004_02",
-      "name": "",
+      "name": "治療大師兄",
       "ref": "4-6-B 不跟隨大師兄",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "M3005_01": {
       "ori": "M3005_01",
-      "name": "",
+      "name": "飛俠出行尾聲",
       "ref": "4-9 尾聲",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "M3005_02": {
       "ori": "M3005_02",
@@ -3555,6 +3555,22 @@
       "desc": "",
       "keywords": "",
       "sheet": "BeforeExternalStudy"
+    },
+    "CT_M2010_11": {
+      "ori": "CT_M2010_11",
+      "name": "唐門大亂鬥",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "CT_M3000_00": {
+      "ori": "CT_M3000_00",
+      "name": "青城留學",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "QingchengStudy"
     }
   }
 }

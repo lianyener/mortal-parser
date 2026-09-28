@@ -1622,9 +1622,16 @@ export async function parseSwitch() {
         if (rules.length === 0) switchObj.check = `[*Custom.InvalidCheck,${id}*]`;
         // else if (rules.length == 1) switchObj.check = rules[0].rule.map(r => r.text).join(rules[0].op);
         else {
-          // 如果式子左邊全部相同則簡化表示
           const firstRule = rules[0].rule[0];
-          if (firstRule && rules.every((g) => g.rule.every((r) => r.left === firstRule.left))) {
+
+          // 處理機率表示
+          if (rules.length == 1 && firstRule.left == '[*Custom.Probability*]') {
+            const probability = Number(firstRule.right.slice(0, -1));
+            switchObj.check = '[%[*Custom.Probability*]%]';
+            switchObj.switch = [`${probability}%`, `${100 - probability}%`];
+          }
+          // 如果式子左邊全部相同則簡化表示
+          else if (firstRule && rules.every((g) => g.rule.every((r) => r.left === firstRule.left))) {
             switchObj.check = `[%${firstRule.left}%]`;
             switchObj.switch = rules.map((g) => g.rule.map((r) => `${r.symbol == '=' && !regexNumber.test(r.right) ? '' : r.symbol}${r.right}`).join(g.op));
           }
@@ -1847,7 +1854,7 @@ export async function parseMission() {
             // 處理變數及判斷式
             const var1 = await getStatGroup(item._value1._name);
             const var2 = await getStatGroup(item._value2._name);
-            const statment = handleStatement(var1, item._compareOp, var2);
+            const statment = handleStatement(var1, item._compareOp, var2, triggerObj.script);
             rules.push(statment.text);
             mergeRelation(triggerObj.rel.pre, statment.rel);
 
@@ -2282,7 +2289,7 @@ export async function parseCombat() {
     for (const item of results ?? []) {
       const flagId = removeUid(item._flag._name);
       const state = item._state || 0;
-      const stat = handleFlagStatement(flagId, state, combatId);
+      const stat = handleFlagStatement(flagId, state, combatId, undefined, true);
       mergeRelation(rel.post, { Flag: [flagId] });
       content.push({ form: 'effect', type: 'Flag', text: stat.text });
     }
@@ -2351,7 +2358,7 @@ export async function parseCombat() {
             // 設定旗標
             case 'CombatEventActionModifyFlag': {
               const flagId = removeUid(data._flag._name);
-              const stat = handleFlagStatement(flagId, data._state, combatId);
+              const stat = handleFlagStatement(flagId, data._state, combatId, undefined, true);
               return { content: [{ form: 'effect', type: 'Flag', text: stat.text }], rel: { post: { Flag: [flagId] } } };
             }
             // 異動角色數值
@@ -2740,11 +2747,12 @@ export async function parseScript() {
 
   // 讀取檔案清單、前置Cache
   const folder = path.join(GAME_PATH, 'TextAsset', 'story', 'chinesetraditional');
-  const [files, custom, free, nameDraft] = await Promise.all([
+  const [files, custom, free, nameDraft, fullCustom] = await Promise.all([
     getLuaList(folder),
     getDataJson('scriptCustom'),
-    getDataJson('scriptName'),
     getDataJson('scriptFree'),
+    getDataJson('scriptName'),
+    getDataJson('scriptFullCustom'),
     loadCache(['GROUP', 'FLAG', 'TERM', 'SWITCH', 'CONDITION', 'DICE'])
   ]);
 
@@ -3005,7 +3013,7 @@ export async function parseScript() {
               mergeRelation(rel.to, { Script: [skip] });
               if (free[skip]) content.push({ form: 'effect', type: 'Free', text: `◎[*Custom.Free*]:[*Label.Free,${skip}*]` });
               else content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*][*Label.Script,${skip}*]` });
-            } else content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*][*Label.Script,${name}*]` });
+            } else content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*][*Label.Script,${scriptId}*]` });
           } else content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.NextScript*]${name}` });
         }
         break;
@@ -3438,6 +3446,9 @@ export async function parseScript() {
           else text = `※[*Custom.MoveCharacter*]:${name}`;
           content.push({ form: 'perform', type: 'Character', text });
         }
+        else {
+          content.push({ form: 'perform', type: 'Character', text: `※[*Custom.AdjustCharacter*]:${name}` });
+        }
         break;
       }
       // 隱藏角色
@@ -3746,6 +3757,9 @@ export async function parseScript() {
 
       // 啟動解析
       walk(ast.body, script.content, initCache);
+
+      // 自訂內容覆蓋
+      if (fullCustom?.[id]?.content) script.content = fullCustom[id].content;
 
       // 回存結果
       const logic = buildLogicView(script.content);

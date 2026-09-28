@@ -97,12 +97,12 @@
   },
   "數值_修養x2": {
     "rel": {},
-    "name": "[*PlayerStat.training*]×2",
+    "name": "[*Label.Stat,training*]×2",
     "type": "PlayerStat"
   },
   "數值_命運x20": {
     "rel": {},
-    "name": "[*PlayerStat.fate*]×20",
+    "name": "[*Label.Stat,fate*]×20",
     "type": "PlayerStat"
   },
   "數值_南宮世家_錦香宮_上官世家": {
@@ -118,28 +118,28 @@
   },
   "數值_學問_廚藝": {
     "rel": {},
-    "name": "[*PlayerStat.literacy*]+[*PlayerStat.cook*]",
+    "name": "[*Label.Stat,literacy*]+[*Label.Stat,cook*]",
     "type": "PlayerStat"
   },
   "數值_學問x2": {
     "rel": {},
-    "name": "[*PlayerStat.literacy*]×2",
+    "name": "[*Label.Stat,literacy*]×2",
     "type": "PlayerStat"
   },
   "數值_學問+嘴力": {
     "rel": {},
-    "name": "[*PlayerStat.literacy*]+[*PlayerStat.talking*]",
+    "name": "[*Label.Stat,literacy*]+[*Label.Stat,talking*]",
     "type": "PlayerStat"
   },
   "數值_抗毒_抗麻": {
     "rel": {},
-    "name": "[*PlayerStat.paralysis-resistance*]+[*PlayerStat.poison-resistance*]",
+    "name": "[*Label.Stat,paralysis-resistance*]+[*Label.Stat,poison-resistance*]",
     "type": "PlayerStat",
-    "text": "[*PlayerStat.paralysis-resistance*]+[*PlayerStat.poison-resistance*]"
+    "text": "[*Label.Stat,paralysis-resistance*]+[*Label.Stat,poison-resistance*]"
   },
   "數值_輕功_暗器": {
     "rel": {},
-    "name": "[*PlayerStat.dexterity*]+[*PlayerStat.m-projectile*]",
+    "name": "[*Label.Stat,dexterity*]+[*Label.Stat,m-projectile*]",
     "type": "PlayerStat"
   },
   "數值_棋力": {
@@ -148,7 +148,7 @@
         "9100"
       ]
     },
-    "name": "[*PlayerStat.mental*]+[*PlayerStat.literacy*]×2+[*PlayerStat.training*]×2+[*Label.Talent,9100*]×44",
+    "name": "[*Label.Stat,mental*]+[*Label.Stat,literacy*]×2+[*Label.Stat,training*]×2+[*Label.Talent,9100*]×44",
     "type": "PlayerStat"
   },
   "旗標_H01001_x10": {
@@ -421,12 +421,12 @@
         "9100"
       ]
     },
-    "name": "[*PlayerStat.literacy*]+[*Label.Talent,9100*]×44",
+    "name": "[*Label.Stat,literacy*]+[*Label.Talent,9100*]×44",
     "type": "PlayerStat"
   },
   "數值_Max_道德_性情_命運x20": {
     "rel": {},
-    "name": "[*Custom.Max*]([*PlayerStat.karma*],[*PlayerStat.disposition*],[*PlayerStat.fate*]×20)",
+    "name": "[*Custom.Max*]([*Label.Stat,karma*],[*Label.Stat,disposition*],[*Label.Stat,fate*]×20)",
     "type": "PlayerStat"
   },
   "數值_丐幫談判": {

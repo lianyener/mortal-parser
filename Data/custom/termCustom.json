@@ -111,7 +111,9 @@
     "HideCharacter": "隱藏角色",
     "OnlyPerform": "僅演出變化",
     "ResetLevel": "重置開發等級",
-    "ReferTo": "參照"
+    "ReferTo": "參照",
+    "FromScript": "接續特定劇本",
+    "AdjustCharacter": "調整角色"
   },
   "Character": {
     "playerLeft": "[*Character.player*]",

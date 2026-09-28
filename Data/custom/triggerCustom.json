@@ -24,6 +24,10 @@
   "S0203_01": { "orderKey": "1-09-1-1-S0203_01" },
   "S0202_02": { "orderKey": "1-09-2-1-S0202_02" },
   "S0012_01": { "orderKey": "2-03-2-3-S0012_01" },
+  "M2010_02": { "orderKey": "2-08-2-4-M2010_02" },
+  "S3001_01": { "orderKey": "2-08-3-5-S3001_01" },
+  "S0301_01": { "orderKey": "2-09-1-4-S0301_01" },
+  "S0029_01": { "orderKey": "2-12-3-4-S0029_01" },
   "M2003_01": {
     "eventFlow": [
       { "id": "ch2_2_3_1", "type": "Script" },
@@ -183,11 +187,122 @@
       { "id": "ch3_6_1", "type": "Script" }
     ]
   },
-  "M2010_01_01": {
-    "eventFlow": [{ "id": "ch2_4_8_2", "type": "Script" }]
+  "M2010_01_01": { "eventFlow": [{ "id": "ch2_4_8_2", "type": "Script" }] },
+  "M2010_03_01": {
+    "eventFlow": [
+      { "id": "ch2_4_8_4", "type": "Script" },
+      { "id": "CL_1215_01", "type": "Combat" },
+      { "id": "ch2_4_8_4_1", "type": "Script" },
+      { "id": "ch2_4_8_4_2", "type": "Script" },
+      { "id": "CL_1215_02", "type": "Combat" },
+      { "id": "ch2_4_8_4_3", "type": "Script" }
+    ]
   },
-  "M2010_02": {
-    "orderKey": "2-08-2-4-M2010_02"
+  "M2010_05_01": {
+    "eventFlow": [
+      { "id": "ch2_4_8_6", "type": "Script" },
+      { "id": "CL_1216_01", "type": "Combat" },
+      { "id": "ch2_4_8_6_1", "type": "Script" }
+    ]
+  },
+  "M2010_08_01": {
+    "eventFlow": [
+      { "id": "ch2_4_8_9", "type": "Script" },
+      { "id": "CL_1218_01", "type": "Combat" },
+      { "id": "ch2_4_8_9_1", "type": "Script" }
+    ]
+  },
+  "M2010_09_01": {
+    "eventFlow": [
+      { "id": "ch2_4_8_10", "type": "Script" },
+      { "id": "CL_1219_01", "type": "Combat" },
+      { "id": "ch2_4_8_10_1", "type": "Script" }
+    ]
+  },
+  "M2010_10_01": { "eventFlow": [{ "id": "ch2_4_8_11", "type": "Script" }] },
+  "M2008_01": {
+    "eventFlow": [
+      { "id": "ch3_7_1", "type": "Script" },
+      { "id": "ch3_8_1", "type": "Script" },
+      { "id": "ch3_8_1_break_start_01", "type": "Script" },
+      { "id": "ch3_8_2", "type": "Script" },
+      { "id": "CL_1308_01", "type": "Combat" },
+      { "id": "CL_1309_01", "type": "Combat" },
+      { "id": "ch3_8_2_1", "type": "Script" },
+      { "id": "ch3_8_2_2", "type": "Script" },
+      { "id": "ch3_8_3", "type": "Script" },
+      { "id": "ch3_8_4", "type": "Script" },
+      { "id": "ch3_8_4_1", "type": "Script" },
+      { "id": "ch3_8_4_2", "type": "Script" },
+      { "id": "ch3_8_4_3", "type": "Script" },
+      { "id": "ch3_9_1", "type": "Script" },
+      { "id": "ch3_9_1_break_start_01", "type": "Script" },
+      { "id": "ch3_9_2", "type": "Script" },
+      { "id": "CL_1307_01", "type": "Combat" },
+      { "id": "ch3_9_2_1", "type": "Script" },
+      { "id": "ch3_9_3", "type": "Script" },
+      { "id": "ch3_10_1", "type": "Script" },
+      { "id": "ch3_10_2", "type": "Script" },
+      { "id": "BL_3100", "type": "Battle" },
+      { "id": "ch3_10_3", "type": "Script" },
+      { "id": "BL_3101", "type": "Battle" },
+      { "id": "ch3_10_4", "type": "Script" },
+      { "id": "BL_3102", "type": "Battle" },
+      { "id": "ch3_10_5", "type": "Script" },
+      { "id": "ch3_11_1", "type": "Script" },
+      { "id": "ch3_11_2", "type": "Script" },
+      { "id": "ch3_11_3", "type": "Script" },
+      { "id": "ch3_11_4", "type": "Script" },
+      { "id": "ch3_12_1", "type": "Script" },
+      { "id": "ch3_12_2", "type": "Script" },
+      { "id": "ch3_13_break_start_01", "type": "Script" },
+      { "id": "CL_1310_01", "type": "Combat" },
+      { "id": "ch3_13_1", "type": "Script" },
+      { "id": "ch3_14_1", "type": "Script" },
+      { "id": "ch3_14_2", "type": "Script" },
+      { "id": "ch3_15_1", "type": "Script" },
+      { "id": "ch3_15_travel", "type": "Script" },
+      { "id": "ch3_15_travel_01", "type": "Script" },
+      { "id": "ch3_15_travel_02", "type": "Script" },
+      { "id": "ch3_15_travel_03", "type": "Script" },
+      { "id": "ch3_16_1", "type": "Script" },
+      { "id": "ch3_16_2", "type": "Script" },
+      { "id": "ch3_16_3_1", "type": "Script" },
+      { "id": "CL_1311_01", "type": "Combat" },
+      { "id": "ch3_16_3_2", "type": "Script" },
+      { "id": "ch3_16_4", "type": "Script" }
+    ]
+  },
+  "CT_M2010_11": {
+    "mission": "main",
+    "active": true,
+    "minTime": { "year": "2", "month": "8", "stage": "2" },
+    "maxTime": { "year": "2", "month": "8", "stage": "2" },
+    "condition": ["※[*Custom.FromScript*]"],
+    "script": "ch2_4_9_1",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入"],
+    "type": "Main",
+    "orderKey": "2-08-2-2-M2010_11",
+    "eventFlow": [
+      { "id": "ch2_4_9_1", "type": "Script" },
+      { "id": "BL_1202_01", "type": "Battle" },
+      { "id": "BL_1202_02", "type": "Battle" },
+      { "id": "ch2_4_9_2", "type": "Script" },
+      { "id": "ch2_4_10_1", "type": "Script" }
+    ]
+  },
+  "CT_M3000_00": {
+    "mission": "main",
+    "active": true,
+    "minTime": { "year": "2", "month": "8", "stage": "2" },
+    "maxTime": { "year": "2", "month": "8", "stage": "2" },
+    "condition": ["※[*Custom.FromScript*]"],
+    "script": "ch3_3_1_1",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入"],
+    "type": "Main",
+    "orderKey": "2-08-2-4-M3000_00"
   },
   "CT_S0023_01": {
     "mission": "CM_S0023",
@@ -316,7 +431,32 @@
     "content": [],
     "remark": ["※本項非實際存在觸發，為方便呈現手動加入"],
     "type": "Free",
-    "orderKey": "2-09-1-4-Ch3_6_1"
+    "orderKey": "2-09-1-4-Ch3_6_1",
+    "eventFlow": [
+      { "id": "ch3_6_1_break_start_01", "type": "Script" },
+      { "id": "ch3_6_1_break_start_02", "type": "Script" },
+      { "id": "BL_3004", "type": "Battle" },
+      { "id": "ch3_6_2", "type": "Script" },
+      { "id": "ch3_6_3", "type": "Script" },
+      { "id": "ch3_6_3_1", "type": "Script" },
+      { "id": "CL_1312_01", "type": "Combat" },
+      { "id": "ch3_6_3_1_1", "type": "Script" },
+      { "id": "CL_1312_02", "type": "Combat" },
+      { "id": "CL_1313_01", "type": "Combat" },
+      { "id": "CL_1313_02", "type": "Combat" },
+      { "id": "CL_1313_03", "type": "Combat" },
+      { "id": "ch3_6_3_2", "type": "Script" },
+      { "id": "ch3_6_3_3_1", "type": "Script" },
+      { "id": "ch3_6_3_3_2", "type": "Script" },
+      { "id": "ch3_6_3_3_3", "type": "Script" },
+      { "id": "ch3_6_3_4", "type": "Script" },
+      { "id": "ch3_6_4", "type": "Script" },
+      { "id": "ch3_6_4_1", "type": "Script" },
+      { "id": "ch3_6_4_2", "type": "Script" },
+      { "id": "ch3_6_4_3", "type": "Script" },
+      { "id": "CL_1314_01", "type": "Combat" },
+      { "id": "ch3_6_4_3_1", "type": "Script" }
+    ]
   },
   "CT_S2503": {
     "mission": "CM_Free",
