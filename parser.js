@@ -2890,10 +2890,10 @@ export async function parseScript() {
     if (match) {
       const flagId = match[1];
       const flagIndex = match[2];
-      const flagValueCount = Object.keys(CACHE.FLAG[flagId].data[flagIndex].value).length;
+      const flagKeys = Object.keys(CACHE.FLAG[flagId].data[flagIndex].value);
 
       // 至少設定2個值才繼續
-      if (flagValueCount < 2) return null;
+      if (flagKeys.length < 2) return null;
 
       // 標籤轉成旗標值索引
       const labelIndex = cleanLabels.map((label) => {
@@ -2901,18 +2901,17 @@ export async function parseScript() {
         if (matchVal) return matchVal[3];
         return '';
       });
-      const unusedValue = [];
+      const unusedKeys = [];
 
       // 找出未設定值
-      for (let i = 0; i < flagValueCount; i++) {
-        if (!labelIndex.includes(i.toString())) {
-          unusedValue.push(i);
+      for (const key of flagKeys) {
+        if (!labelIndex.includes(key)) {
+          unusedKeys.push(key);
         }
       }
 
       // 確認潛在旗標名稱
-      if (unusedValue.length === 1) return `[*Flag.${flagId}.${flagIndex}.${unusedValue[0]}*]`;
-      else if (unusedValue.length > 1) return null;
+      if (unusedKeys.length === 1) return `[*Flag.${flagId}.${flagIndex}.${unusedKeys[0]}*]`;
     } else if (cleanLabels.length === 0) {
       return index === 1 ? '[*Custom.True*]' : index === 2 ? '[*Custom.False*]' : null;
     }

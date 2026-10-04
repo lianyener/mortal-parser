@@ -121,8 +121,8 @@
     "BL_1501_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.100*]",
         "ref": "唐門 vs 崆峒派",
-        "name": "",
-        "desc": "",
+        "name": "群毆崆峒",
+        "desc": "小師妹招親事件，迎戰崆峒選擇群毆分岐",
         "keywords": ""
     },
     "BL_1601_01": {

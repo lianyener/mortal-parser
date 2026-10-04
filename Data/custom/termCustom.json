@@ -5,6 +5,7 @@
     "False": "否",
     "Win": "[*System.BattleVictory*]",
     "Lost": "[*System.BattleLose*]",
+    "Draw": "和",
     "Own": "有",
     "Other": "其他",
     "Or": "或",
@@ -123,7 +124,7 @@
     "special213": "李元棄"
   },
   "CombatAction": { "none": "[*System.NA*]", "talk": "[*CombatAction.curse*]" },
-  "CombatSkill": { "Unknown": "[*Custom.Unknown*]" },
+  "CombatSkill": { "Name": { "S125": "[*CombatSkill.Name.S125_1*]", "Unknown": "[*Custom.Unknown*]" }, "Desc": { "S125": "[*CombatSkill.Desc.S125_1*]" } },
   "DialogType": { "character": "說", "think": "想", "narrative": "旁白", "center": "過場", "unknown": "[*Custom.Unknown*]" },
   "EnemyTeam": { "-20": "[*Custom.Unknown*]", "-50": "[*Custom.Unknown*]" },
   "Flag": { "YesNo": { "0": "[*Custom.False*]", "1": "[*Custom.True*]" }, "Own": { "0": "[*System.NA*]", "1": "[*Custom.Own*]" }, "Match": { "0": "不符", "1": "符合" } },

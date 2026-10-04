@@ -968,92 +968,92 @@
     "CL_1501_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.brother3*]",
         "ref": "談論小師妹婚事 與三師兄吵架 戰唐陞",
-        "name": "",
-        "desc": "",
+        "name": "唐門的做派",
+        "desc": "商議婚事選擇抗議分岐",
         "keywords": ""
     },
     "CL_1502_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee1*]",
         "ref": "守夜換班 跟師弟要錢 戰唐門弟子",
-        "name": "",
-        "desc": "",
+        "name": "師弟翻臉",
+        "desc": "小師妹招親事件，勒索師弟4次以上觸發",
         "keywords": ""
     },
     "CL_1503_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special808*]",
         "ref": "小師妹出嫁 拜訪解無塵 戰解無塵",
-        "name": "",
-        "desc": "",
+        "name": "和解無塵過兩招",
+        "desc": "小師妹招親事件，遇解無塵選擇先過兩招",
         "keywords": ""
     },
     "CL_1504_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee211*]",
         "ref": "金烏上人鬧場 戰役勝利後逃亡 四大護法第一關 戰鐵拳弟子",
-        "name": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "CL_1504_03": {
-        "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee221*]",
-        "ref": "金烏上人鬧場 戰役勝利後逃亡 四大護法第三關 戰奪魄弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰童大蟲",
+        "desc": "小師妹招親事件，迎戰崆峒選擇群毆，勝利後戰四大護法第一關",
         "keywords": ""
     },
     "CL_1504_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee201*]",
         "ref": "金烏上人鬧場 戰役勝利後逃亡 四大護法第二關 戰飛天弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰顏疆",
+        "desc": "小師妹招親事件，迎戰崆峒選擇群毆，勝利後戰四大護法第二關",
+        "keywords": ""
+    },
+    "CL_1504_03": {
+        "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee221*]",
+        "ref": "金烏上人鬧場 戰役勝利後逃亡 四大護法第三關 戰奪魄弟子",
+        "name": "戰余麟",
+        "desc": "小師妹招親事件，迎戰崆峒選擇群毆，勝利後戰四大護法第三關",
         "keywords": ""
     },
     "CL_1504_04": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee231*]",
         "ref": "金烏上人鬧場 戰役勝利後逃亡 四大護法第四關 戰玄功弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰鞠冬音",
+        "desc": "小師妹招親事件，迎戰崆峒選擇群毆，勝利後戰四大護法第四關",
         "keywords": ""
     },
     "CL_1505_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special207*]",
         "ref": "金烏上人鬧場 第一次決鬥金烏上人 戰金烏上人",
-        "name": "",
-        "desc": "",
+        "name": "對決金烏上人",
+        "desc": "小師妹招親事件，迎戰崆峒對決金烏上人",
         "keywords": ""
     },
     "CL_1505_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special207*]",
         "ref": "金烏上人鬧場 第二次決鬥金烏上人 戰金烏上人",
-        "name": "",
-        "desc": "",
+        "name": "再戰金烏上人",
+        "desc": "小師妹招親事件，迎戰崆峒被偷襲後再戰金烏上人",
         "keywords": ""
     },
     "CL_1506_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee1*]",
         "ref": "唐門女婿 被弟子們圍攻 戰唐門弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰唐門弟子",
+        "desc": "小師妹招親事件，決定不放棄小師妹",
         "keywords": ""
     },
     "CL_1507_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special808*]",
         "ref": "屠滅崆峒 修練 戰解無塵",
-        "name": "",
-        "desc": "",
+        "name": "和解無塵對練",
+        "desc": "小師妹招親事件屠滅崆峒分岐，和解無塵對練",
         "keywords": ""
     },
     "CL_1507_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl6*]",
         "ref": "屠滅崆峒 修練 戰夏侯蘭",
-        "name": "",
-        "desc": "",
+        "name": "和夏侯蘭對練",
+        "desc": "小師妹招親事件屠滅崆峒分岐，和夏侯蘭對練",
         "keywords": ""
     },
     "CL_1507_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special207*]",
         "ref": "屠滅崆峒 決鬥金烏上人 戰金烏上人",
-        "name": "",
-        "desc": "",
+        "name": "決戰金烏上人",
+        "desc": "小師妹招親事件屠滅崆峒分岐，決戰金烏上人",
         "keywords": ""
     },
     "CL_1611_01": {
@@ -2067,71 +2067,71 @@
     "CL_S0208_02_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special212*]",
         "ref": "無相祖師 鐵冠道人 戰鐵冠道人",
-        "name": "",
-        "desc": "",
+        "name": "戰鐵冠道人",
+        "desc": "雲裳訣別時事件，戰勝段智秀後觸發",
         "keywords": ""
     },
     "CL_S0208_02_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special834*]",
         "ref": "無相祖師 段智秀 戰段智秀",
-        "name": "",
-        "desc": "",
+        "name": "戰段智秀",
+        "desc": "雲裳訣別時事件觸發",
         "keywords": ""
     },
     "CL_S0208_05_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special201*]",
         "ref": "訣別時 鄒博 戰鄒博",
-        "name": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "CL_S0208_05_03": {
-        "ori": "[*System.Combat*]-[*CombatCharacter.Name.special834*]",
-        "ref": "訣別時 段智秀 戰段智秀",
-        "name": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "CL_S0208_05_04": {
-        "ori": "[*System.Combat*]-[*CombatCharacter.Name.special203*]",
-        "ref": "訣別時 點蒼雙尊 戰聽海生",
-        "name": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "CL_S0209_01_02": {
-        "ori": "[*System.Combat*]-[*CombatCharacter.Name.special101*]",
-        "ref": "訣別時 南宮遠 戰南宮遠",
-        "name": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "CL_S0209_01_01": {
-        "ori": "[*System.Combat*]-[*CombatCharacter.Name.special201*]",
-        "ref": "雲裳之死 鄒博 戰鄒博",
-        "name": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "CL_S0209_01_03": {
-        "ori": "[*System.Combat*]-[*CombatCharacter.Name.special834*]",
-        "ref": "訣別時 段智秀 戰段智秀",
-        "name": "",
-        "desc": "",
+        "name": "戰幻境鄒博",
+        "desc": "雲裳訣別時谷底療傷第一關",
         "keywords": ""
     },
     "CL_S0208_05_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special101*]",
         "ref": "訣別時 南宮遠 戰南宮遠",
-        "name": "",
-        "desc": "",
+        "name": "戰幻境南宮遠",
+        "desc": "雲裳訣別時谷底療傷第二關",
+        "keywords": ""
+    },
+    "CL_S0208_05_03": {
+        "ori": "[*System.Combat*]-[*CombatCharacter.Name.special834*]",
+        "ref": "訣別時 段智秀 戰段智秀",
+        "name": "戰幻境段智秀",
+        "desc": "雲裳訣別時谷底療傷第三關",
+        "keywords": ""
+    },
+    "CL_S0208_05_04": {
+        "ori": "[*System.Combat*]-[*CombatCharacter.Name.special203*]",
+        "ref": "訣別時 點蒼雙尊 戰聽海生",
+        "name": "戰幻境點蒼雙尊",
+        "desc": "雲裳訣別時谷底療傷第四關",
+        "keywords": ""
+    },
+    "CL_S0209_01_01": {
+        "ori": "[*System.Combat*]-[*CombatCharacter.Name.special201*]",
+        "ref": "雲裳之死 鄒博 戰鄒博",
+        "name": "戰幻境鄒博",
+        "desc": "雲裳之死嘗試療傷第一關",
+        "keywords": ""
+    },
+    "CL_S0209_01_02": {
+        "ori": "[*System.Combat*]-[*CombatCharacter.Name.special101*]",
+        "ref": "訣別時 南宮遠 戰南宮遠",
+        "name": "戰幻境南宮遠",
+        "desc": "雲裳之死嘗試療傷第二關",
+        "keywords": ""
+    },
+    "CL_S0209_01_03": {
+        "ori": "[*System.Combat*]-[*CombatCharacter.Name.special834*]",
+        "ref": "訣別時 段智秀 戰段智秀",
+        "name": "戰幻境段智秀",
+        "desc": "雲裳之死嘗試療傷第三關",
         "keywords": ""
     },
     "CL_S0209_01_04": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special203*]",
         "ref": "訣別時 點蒼雙尊 戰聽海生",
-        "name": "",
-        "desc": "",
+        "name": "戰幻境點蒼雙尊",
+        "desc": "雲裳之死嘗試療傷第四關",
         "keywords": ""
     },
     "CL_S0301_01": {

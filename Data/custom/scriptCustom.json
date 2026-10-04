@@ -22,6 +22,7 @@
   "talk_girl5_05": { "remark": ["※未知檢定(Talk_Girl_05_05_001)：當前版本未設定，推測應為檢定嘴力"] },
   "travel_combat_001_01": { "remark": ["※未知檢定(TC_001_01_001)：當前版本未設定"] },
   "travel_result_601_503_01": { "remark": ["※未知檢定(Travel_601_503_01_001)：當前版本未設定"] },
+  "S0208_02_02": { "remark": ["後2個🔎檢定：[*Label.Flag,TC0004*]：當前版本設定可能有誤，應為檢定保護雲裳次數([*Label.Flag,TC0005*])"] },
   "S0101_01": {
     "remark": [
       "※完成[*Label.Trigger,S0100_01*]會設定[*Label.Time,S0101_01*]為一個月後，因[*Label.Trigger,S0102_01*]又需本事件一個月後，必會先觸發[*Label.Trigger,S0103_01*]或[*Label.Trigger,S0104_01*]。當前版本想觸發[*Label.Trigger,S0102_01*]，必須讓[*Label.Time,S0101_01*]維持預設值，即避免觸發[*Label.Trigger,S0100_01*]",
@@ -153,7 +154,8 @@
     "timeCheck": [
       { "logic": "NotEqual", "year": 3, "month": 8, "stage": 1 },
       { "logic": "GreaterEqual", "year": 2, "month": 1, "stage": 1 }
-    ]
+    ],
+    "remark": ["🔎檢定：🧬道德<0：當前版本設定可能有誤，推測可能為檢定貢獻之類可以是負值的"]
   },
   "meeting_option_101_01": { "timeCheck": [{ "logic": "NotEqual", "year": 3, "month": 8, "stage": 1 }] },
   "meeting_option_102_01": { "timeCheck": [{ "logic": "NotEqual", "year": 3, "month": 8, "stage": 1 }] },
