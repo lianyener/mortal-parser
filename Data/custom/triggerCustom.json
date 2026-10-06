@@ -473,7 +473,7 @@
     "condition": ["※[*Custom.FromScript*]"],
     "script": "S2501_01_travel",
     "content": [],
-    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，[*Label.Trigger,S1306_01*]內選擇雪山行觸發"],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，由[*Label.Trigger,S1306_01*]內選擇雪山行觸發"],
     "type": "Sub",
     "orderKey": "3-06-1-3-S2501_01",
     "eventFlow": [
@@ -488,9 +488,41 @@
       { "id": "S2502_01", "type": "Script" },
       { "id": "CL_S2502_01", "type": "Combat" },
       { "id": "S2502_01_01", "type": "Script" },
-      { "id": "S2502_01_02", "type": "Script" },
-      { "id": "S2503_break_01", "type": "Script" }
+      { "id": "S2502_01_02", "type": "Script" }
     ]
+  },
+  "S2504_02": {
+    "eventFlow": [
+      { "id": "S2504_02", "type": "Script" },
+      { "id": "S2504_02_01", "type": "Script" },
+      { "id": "CL_S2504_01", "type": "Combat" },
+      { "id": "S2504_02_02", "type": "Script" },
+      { "id": "S2504_02_03", "type": "Script" },
+      { "id": "S2504_02_04", "type": "Script" },
+      { "id": "S2504_02_05", "type": "Script" },
+      { "id": "S2504_02_06", "type": "Script" },
+      { "id": "CL_S2504_02", "type": "Combat" },
+      { "id": "S2504_02_07", "type": "Script" },
+      { "id": "S2504_02_07_break_start_01", "type": "Script" },
+      { "id": "S2504_03_travel", "type": "Script" },
+      { "id": "S2504_03_travel_01", "type": "Script" },
+      { "id": "S2504_03", "type": "Script" },
+      { "id": "S2504_04_travel", "type": "Script" },
+      { "id": "S2504_04_travel_01", "type": "Script" },
+      { "id": "S2504_04", "type": "Script" }
+    ]
+  },
+  "CT_S0604": {
+    "mission": "S0604",
+    "active": true,
+    "minTime": { "year": "3", "month": "8", "stage": "3" },
+    "maxTime": { "year": "3", "month": "8", "stage": "3" },
+    "condition": ["※[*Custom.ReferTo*]:[*Label.Script,door_001_01*]"],
+    "script": "S0604_01",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，符合條件前往[*Label.Place,Door*]由[*Label.Script,door_001_01*]內選項觸發"],
+    "type": "Sub",
+    "orderKey": "3-08-3-3-S0604"
   },
   "CT_S0023_01": {
     "mission": "CM_S0023",

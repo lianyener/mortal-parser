@@ -758,7 +758,7 @@
     },
     "S0212": {
       "ori": "S0212",
-      "name": "",
+      "name": "兄妹對決",
       "ref": "兄妹對決",
       "desc": "",
       "keywords": ""
@@ -828,28 +828,28 @@
     },
     "S0601": {
       "ori": "S0601",
-      "name": "",
+      "name": "武林大會邀小梅",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
     "S0602": {
       "ori": "S0602",
-      "name": "",
+      "name": "武林大會邀郁竹",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
     "S0603": {
       "ori": "S0603",
-      "name": "",
+      "name": "武林大會邀葉雲舟",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
     "S0604": {
       "ori": "S0604",
-      "name": "",
+      "name": "武林大會邀夏侯蘭",
       "ref": "",
       "desc": "",
       "keywords": ""
@@ -1087,7 +1087,7 @@
     },
     "S2504": {
       "ori": "S2504",
-      "name": "",
+      "name": "雪山因果",
       "ref": "",
       "desc": "",
       "keywords": ""
@@ -1277,6 +1277,13 @@
     "CM_S0208": {
       "ori": "CM_S0208",
       "name": "雲裳訣別時",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "CM_S2501": {
+      "ori": "CM_S2501",
+      "name": "雪山行",
       "ref": "",
       "desc": "",
       "keywords": ""
@@ -2301,11 +2308,11 @@
     },
     "S0212_01": {
       "ori": "S0212_01",
-      "name": "",
+      "name": "兄妹對決",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "InviteGroom"
     },
     "S0204_01": {
       "ori": "S0204_01",
@@ -2389,27 +2396,27 @@
     },
     "S0601_01": {
       "ori": "S0601_01",
-      "name": "",
+      "name": "邀小梅同行",
       "ref": "邀請小梅同行",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WulinAssembly"
     },
     "S0602_01": {
       "ori": "S0602_01",
-      "name": "",
+      "name": "邀郁竹同行",
       "ref": "邀請小竹同行",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WulinAssembly"
     },
     "S0603_01": {
       "ori": "S0603_01",
-      "name": "",
+      "name": "邀葉雲舟同行",
       "ref": "邀請葉雲舟同行",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WulinAssembly"
     },
     "S0701_01_01": {
       "ori": "S0701_01_01",
@@ -2425,7 +2432,7 @@
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WulinAssembly"
     },
     "S0701_02_01": {
       "ori": "S0701_02_01",
@@ -2565,11 +2572,11 @@
     },
     "S1307_01": {
       "ori": "S1307_01",
-      "name": "",
+      "name": "唐門月會",
       "ref": "",
-      "desc": "",
+      "desc": "三年七月月會",
       "keywords": "",
-      "sheet": ""
+      "sheet": "InviteGroom"
     },
     "S1303_01": {
       "ori": "S1303_01",
@@ -2677,11 +2684,11 @@
     },
     "S2504_01": {
       "ori": "S2504_01",
-      "name": "",
+      "name": "因果",
       "ref": "因果",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "InviteGroom"
     },
     "S3002_01": {
       "ori": "S3002_01",
@@ -2869,11 +2876,11 @@
     },
     "S2504_02": {
       "ori": "S2504_02",
-      "name": "",
+      "name": "決勝日",
       "ref": "決勝日",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "InviteGroom"
     },
     "S3006_02": {
       "ori": "S3006_02",
@@ -3357,43 +3364,43 @@
     },
     "M5001_00": {
       "ori": "M5001_00",
-      "name": "",
+      "name": "四師兄道別",
       "ref": "6-1 四師兄道別",
-      "desc": "",
+      "desc": "有去雪山才需要前往正心堂觸發，否則由M5001_01觸發",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WulinAssembly"
     },
     "M5001_01": {
       "ori": "M5001_01",
-      "name": "",
+      "name": "四師兄道別",
       "ref": "6-1 四師兄道別",
-      "desc": "",
+      "desc": "沒有去雪山會自動觸發，否則由M5001_00前往正心堂觸發",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WulinAssembly"
     },
     "M5001_02": {
       "ori": "M5001_02",
-      "name": "",
+      "name": "餞別四師兄",
       "ref": "6-1 餞別四師兄",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WulinAssembly"
     },
     "M5001_03": {
       "ori": "M5001_03",
-      "name": "",
+      "name": "武林大會召開",
       "ref": "6-2.武林大會召開",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WulinAssembly"
     },
     "M5001_04": {
       "ori": "M5001_04",
-      "name": "",
+      "name": "前往武林大會",
       "ref": "前往武林大會",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WulinAssembly"
     },
     "M5001_05": {
       "ori": "M5001_05",
@@ -3594,6 +3601,14 @@
       "desc": "",
       "keywords": "",
       "sheet": "InviteGroom"
+    },
+    "CT_S0604": {
+      "ori": "CT_S0604",
+      "name": "邀夏侯蘭同行",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WulinAssembly"
     }
   }
 }

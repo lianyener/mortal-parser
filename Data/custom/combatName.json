@@ -2158,15 +2158,15 @@
     "CL_S0603_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.soldier1*]",
         "ref": "武林大會邀請葉雲舟 惹怒葉雲裳 戰官兵",
-        "name": "",
-        "desc": "",
+        "name": "被當兇手",
+        "desc": "武林大會邀請葉雲舟，惹怒葉雲裳被官兵誤認為兇手",
         "keywords": ""
     },
     "CL_S0604_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl6*]",
         "ref": "武林大會邀請小蘭 選擇襲擊 戰夏侯蘭",
-        "name": "",
-        "desc": "",
+        "name": "襲擊夏侯蘭",
+        "desc": "武林大會邀請夏侯蘭，選擇襲擊",
         "keywords": ""
     },
     "CL_S0701_01": {
@@ -2417,7 +2417,7 @@
     "CL_S2502_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.pig1*]",
         "ref": "雪山行 野豬 戰野豬",
-        "name": "",
+        "name": "野豬襲來",
         "desc": "",
         "keywords": ""
     },
@@ -2431,15 +2431,15 @@
     "CL_S2504_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special820*]",
         "ref": "雪山行 主動請纓 戰第三香",
-        "name": "",
-        "desc": "",
+        "name": "戰第三香",
+        "desc": "雪山決戰日，主動請纓成功",
         "keywords": ""
     },
     "CL_S2504_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl6*]",
         "ref": "雪山行 攻略小蘭 戰夏侯蘭",
-        "name": "",
-        "desc": "",
+        "name": "戰夏侯蘭",
+        "desc": "雪山決戰日，救活夏侯蘭分岐",
         "keywords": ""
     },
     "CL_S3004_01": {

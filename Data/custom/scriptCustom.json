@@ -10,6 +10,7 @@
   "ch4_7_3_1": { "remark": ["※未知檢定(Lover_Gir_008)：當前版本設定有誤，應為Lover_Girl_008，檢定心上人是否為龍湘"] },
   "ch4_8_9_3": { "remark": ["※未知檢定(D_4_8_9_3_001)：當前版本設定可能有誤"] },
   "ch5_4_8_8_1": { "remark": ["※未知旗標(50019)：當前版本設定有誤，應為M50019，是否發生小師妹飛踢，但重複設定故無影響"] },
+  "ch6_2_2_break_start_01": { "remark": ["※未知條件(Ch_6_2_2_Break_01_001)：當前版本未設定"] },
   "ch6_3_2_break_start_01": { "remark": ["※未知檢定(M60012_01)：當前版本未設定，應為檢定嵩山派是否同行武林大會"] },
   "ch6_4_1": { "remark": ["※未知檢定(Ch_6_4_1_006)：當前版本未設定，推測應為檢定道德"] },
   "ch7_5_4_5": { "remark": ["※未知檢定(M70028_02)：當前版本未設定，應為檢定是否指派四師兄出使崆峒"] },
@@ -135,6 +136,8 @@
   "ch2_4_3_break_start_01": { "var": { "var1": "[*Label.Script,ch2_4_3_break_01*]" } },
   "ch3_6_1_break_01": { "skip": "ch3_6_1_break_start_01", "remark": ["※跳轉用，無劇情內容，本網站方便呈現會把大部分指向本劇本的連結轉換成跳轉後劇本"] },
   "ch6_4_3_break_01": { "skip": "ch6_4_3_break_start_01", "remark": ["※跳轉用，無劇情內容，本網站方便呈現會把大部分指向本劇本的連結轉換成跳轉後劇本"] },
+  "S2503_break_01": { "skip": "S2503_break_start_01", "remark": ["※跳轉用，無劇情內容，本網站方便呈現會把大部分指向本劇本的連結轉換成跳轉後劇本"] },
+  "S2504_01": { "var": { "var1": "[*Label.Script,S2503_break_01*]" } },
   "back_02_001": { "remark": ["※隨機事件在[*Label.Script,back_001*]已設定"], "var": { "var1": "[*Custom.Random*][*Label.Position,Back_Work_001*][*System.StoryEvent*]" } },
   "back_02_501": { "remark": ["※隨機事件在[*Label.Script,back_001*]已設定"], "var": { "var1": "[*Custom.Random*][*Label.Position,Back_Work_001*][*System.StoryEvent*]" } },
   "back_03_001": { "remark": ["※隨機事件在[*Label.Script,back_001*]已設定"], "var": { "var1": "[*Custom.Random*][*Label.Position,Back_Free_001*][*System.StoryEvent*]" } },
@@ -154,8 +157,7 @@
     "timeCheck": [
       { "logic": "NotEqual", "year": 3, "month": 8, "stage": 1 },
       { "logic": "GreaterEqual", "year": 2, "month": 1, "stage": 1 }
-    ],
-    "remark": ["🔎檢定：🧬道德<0：當前版本設定可能有誤，推測可能為檢定貢獻之類可以是負值的"]
+    ]
   },
   "meeting_option_101_01": { "timeCheck": [{ "logic": "NotEqual", "year": 3, "month": 8, "stage": 1 }] },
   "meeting_option_102_01": { "timeCheck": [{ "logic": "NotEqual", "year": 3, "month": 8, "stage": 1 }] },
@@ -168,7 +170,8 @@
     "timeCheck": [
       { "logic": "GreaterEqual", "year": 3, "month": 5, "stage": 3 },
       { "logic": "Less", "year": 3, "month": 6, "stage": 2 }
-    ]
+    ],
+    "remark": ["🔎檢定：🧬道德<0：當前版本設定可能有誤，推測可能為檢定貢獻之類可以是負值的"]
   },
   "meeting_option_701_01": { "timeCheck": [{ "logic": "GreaterEqual", "year": 3, "month": 12, "stage": 1 }] },
   "meeting_option_702_01": { "timeCheck": [{ "logic": "GreaterEqual", "year": 3, "month": 12, "stage": 1 }] },
