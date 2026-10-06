@@ -2201,7 +2201,7 @@
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeExternalStudy"
     },
     "S0120_01": {
       "ori": "S0120_01",
@@ -2853,11 +2853,11 @@
     },
     "S2500_02": {
       "ori": "S2500_02",
-      "name": "",
+      "name": "夏侯蘭離開",
       "ref": "離開",
-      "desc": "",
+      "desc": "沒有在會議觸發雪山行狀況",
       "keywords": "",
-      "sheet": ""
+      "sheet": "InviteGroom"
     },
     "S0202_02": {
       "ori": "S0202_02",
@@ -3345,7 +3345,7 @@
       "ref": "5-2.小師妹出嫁",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "InviteGroom"
     },
     "M4002_02": {
       "ori": "M4002_02",
