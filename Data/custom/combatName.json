@@ -1059,15 +1059,15 @@
     "CL_1611_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special808*]",
         "ref": "前往武林大會路途 遇見峨嵋派 戰解無塵",
-        "name": "",
-        "desc": "",
+        "name": "戰解無塵",
+        "desc": "前往武林大會途中遭遇峨嵋派",
         "keywords": ""
     },
     "CL_1612_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special201*]",
         "ref": "前往武林大會路途 遇見青城派 戰鄒博",
-        "name": "",
-        "desc": "",
+        "name": "戰鄒掌門",
+        "desc": "前往武林大會途中遭遇青城派",
         "keywords": ""
     },
     "CL_1616_01": {
@@ -1087,8 +1087,8 @@
     "CL_1614_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee301*]",
         "ref": "前往武林大會路途 遇見點蒼派 戰點蒼弟子",
-        "name": "",
-        "desc": "",
+        "name": "一對一切磋",
+        "desc": "前往武林大會途中遭遇點蒼派，選擇一對一切磋",
         "keywords": ""
     },
     "CL_1616_04": {
@@ -1101,8 +1101,8 @@
     "CL_1615_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.daoshi341*]",
         "ref": "前往武林大會路途 遇見全真派 戰全真長老",
-        "name": "",
-        "desc": "",
+        "name": "挑戰全真派",
+        "desc": "前往武林大會途中遭遇全真派，門派規模小並選擇欠揍",
         "keywords": ""
     },
     "CL_1617_01": {

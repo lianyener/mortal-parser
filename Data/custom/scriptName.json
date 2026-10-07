@@ -799,9 +799,9 @@
     },
     "ch2_2_3_1_travel": {
         "ori": "ch2_2_3_1_travel",
-        "name": "大地圖跳轉",
+        "name": "前往夔州",
         "ref": "",
-        "desc": "",
+        "desc": "跳轉用",
         "keywords": ""
     },
     "ch2_2_3_1_travel_01": {
@@ -1037,9 +1037,9 @@
     },
     "ch2_2_4_1_travel": {
         "ori": "ch2_2_4_1_travel",
-        "name": "大地圖跳轉",
+        "name": "前往南宮家宴",
         "ref": "",
-        "desc": "",
+        "desc": "跳轉用",
         "keywords": ""
     },
     "ch2_2_4_1_travel_01": {
@@ -1996,9 +1996,9 @@
     },
     "ch3_15_travel": {
         "ori": "ch3_15_travel",
-        "name": "大地圖跳轉",
+        "name": "江陵回程",
         "ref": "",
-        "desc": "",
+        "desc": "跳轉用",
         "keywords": ""
     },
     "ch3_15_travel_01": {
@@ -2234,7 +2234,7 @@
     },
     "ch3_1_7_1": {
         "ori": "ch3_1_7_1",
-        "name": "和雲裳會合",
+        "name": "逃離青城",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -2395,9 +2395,9 @@
     },
     "ch3_2_3_1_travel": {
         "ori": "ch3_2_3_1_travel",
-        "name": "大地圖跳轉",
+        "name": "前往江陵大戰",
         "ref": "",
-        "desc": "",
+        "desc": "跳轉用",
         "keywords": ""
     },
     "ch3_2_3_1_travel_01": {
@@ -3501,9 +3501,9 @@
     },
     "ch4_7_6_travel": {
         "ori": "ch4_7_6_travel",
-        "name": "大地圖跳轉",
+        "name": "臥雲崗返程",
         "ref": "",
-        "desc": "",
+        "desc": "跳轉用",
         "keywords": ""
     },
     "ch4_7_6_travel_01": {
@@ -4012,7 +4012,7 @@
     },
     "ch5_4_7_4_2_travel": {
         "ori": "ch5_4_7_4_2_travel",
-        "name": "大地圖跳轉",
+        "name": "前往屠滅崆峒",
         "ref": "",
         "desc": "跳轉用，無劇情",
         "keywords": ""
@@ -4210,7 +4210,7 @@
         "ori": "ch5_4_temp_end",
         "name": "ch5_4_temp_end",
         "ref": "",
-        "desc": "",
+        "desc": "未完成路線",
         "keywords": ""
     },
     "ch5_5_1": {
@@ -4341,119 +4341,119 @@
     },
     "ch6_3_2_break_start_01": {
         "ori": "ch6_3_2_break_start_01",
-        "name": "ch6_3_2_break_start_01",
+        "name": "中途休息",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_3_2_travel": {
         "ori": "ch6_3_2_travel",
-        "name": "ch6_3_2_travel",
+        "name": "前往武林大會",
         "ref": "",
-        "desc": "",
+        "desc": "跳轉用，無劇情",
         "keywords": ""
     },
     "ch6_3_2_travel_01": {
         "ori": "ch6_3_2_travel_01",
-        "name": "ch6_3_2_travel_01",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_3_2_travel_02": {
         "ori": "ch6_3_2_travel_02",
-        "name": "ch6_3_2_travel_02",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_3_2_travel_03": {
         "ori": "ch6_3_2_travel_03",
-        "name": "ch6_3_2_travel_03",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_3_2_travel_04": {
         "ori": "ch6_3_2_travel_04",
-        "name": "ch6_3_2_travel_04",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_3_2_travel_05": {
         "ori": "ch6_3_2_travel_05",
-        "name": "ch6_3_2_travel_05",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_3_2_travel_06": {
         "ori": "ch6_3_2_travel_06",
-        "name": "ch6_3_2_travel_06",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_3_2_travel_07": {
         "ori": "ch6_3_2_travel_07",
-        "name": "ch6_3_2_travel_07",
+        "name": "大地圖移動",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_3_3": {
         "ori": "ch6_3_3",
-        "name": "ch6_3_3",
+        "name": "心力交瘁",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_3_4": {
         "ori": "ch6_3_4",
-        "name": "ch6_3_4",
+        "name": "茶鋪歇息",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_3_5": {
         "ori": "ch6_3_5",
-        "name": "ch6_3_5",
+        "name": "錦香宮邀訪",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_3_5_break_start_01": {
         "ori": "ch6_3_5_break_start_01",
-        "name": "ch6_3_5_break_start_01",
+        "name": "同行人意見",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_1": {
         "ori": "ch6_4_1",
-        "name": "ch6_4_1",
+        "name": "前往錦香宮",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_2": {
         "ori": "ch6_4_2",
-        "name": "ch6_4_2",
+        "name": "房間內",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_2_1": {
         "ori": "ch6_4_2_1",
-        "name": "ch6_4_2_1",
+        "name": "阿鶴俠",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_2_2": {
         "ori": "ch6_4_2_2",
-        "name": "ch6_4_2_2",
+        "name": "盥洗赴宴",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -9899,7 +9899,7 @@
     },
     "S2501_01_travel": {
         "ori": "S2501_01_travel",
-        "name": "大地圖跳轉",
+        "name": "前往雪山",
         "ref": "",
         "desc": "跳轉用，無劇情",
         "keywords": ""
@@ -10074,7 +10074,7 @@
     },
     "S2504_03_travel": {
         "ori": "S2504_03_travel",
-        "name": "大地圖跳轉",
+        "name": "雪山返程",
         "ref": "",
         "desc": "跳轉用，無劇情",
         "keywords": ""
@@ -10088,14 +10088,14 @@
     },
     "S2504_04": {
         "ori": "S2504_04",
-        "name": "S2504_04",
+        "name": "和夏侯蘭回唐門",
         "ref": "",
         "desc": "夏侯蘭存活分岐",
         "keywords": ""
     },
     "S2504_04_travel": {
         "ori": "S2504_04_travel",
-        "name": "大地圖跳轉",
+        "name": "雪山返程",
         "ref": "",
         "desc": "跳轉用，無劇情",
         "keywords": ""
@@ -12363,42 +12363,42 @@
     },
     "travel_result_601_101": {
         "ori": "travel_result_601_101",
-        "name": "遭遇地獄道鬼卒攔路",
+        "name": "地獄道鬼卒攔路",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_601_101_01": {
         "ori": "travel_result_601_101_01",
-        "name": "travel_result_601_101_01",
+        "name": "大戰地獄道後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_601_102": {
         "ori": "travel_result_601_102",
-        "name": "遭遇畜生道乞丐攔路",
+        "name": "畜生道乞丐攔路",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_601_102_01": {
         "ori": "travel_result_601_102_01",
-        "name": "travel_result_601_102_01",
+        "name": "大戰畜生道後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_601_103": {
         "ori": "travel_result_601_103",
-        "name": "遭遇餓鬼道海賊攔路",
+        "name": "餓鬼道海賊攔路",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_601_103_01": {
         "ori": "travel_result_601_103_01",
-        "name": "travel_result_601_103_01",
+        "name": "大戰餓鬼道後續",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -12412,7 +12412,7 @@
     },
     "travel_result_601_502": {
         "ori": "travel_result_601_502",
-        "name": "龍湘出來迎接你",
+        "name": "龍湘迎接",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -12440,14 +12440,14 @@
     },
     "travel_result_601_901_01": {
         "ori": "travel_result_601_901_01",
-        "name": "travel_result_601_901_01",
+        "name": "揍峨嵋派後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_601_901_02": {
         "ori": "travel_result_601_901_02",
-        "name": "travel_result_601_901_02",
+        "name": "戰解無塵後續",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -12461,35 +12461,35 @@
     },
     "travel_result_601_902_01": {
         "ori": "travel_result_601_902_01",
-        "name": "travel_result_601_902_01",
+        "name": "戰鄒掌門後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_601_902_02": {
         "ori": "travel_result_601_902_02",
-        "name": "travel_result_601_902_02",
+        "name": "指控申屠龍",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_601_902_03": {
         "ori": "travel_result_601_902_03",
-        "name": "travel_result_601_902_03",
+        "name": "拜候鄒掌門",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_601_902_04": {
         "ori": "travel_result_601_902_04",
-        "name": "travel_result_601_902_04",
+        "name": "指控鐵冠道人",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_601_902_05": {
         "ori": "travel_result_601_902_05",
-        "name": "travel_result_601_902_05",
+        "name": "恭送鄒掌門",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -12503,7 +12503,7 @@
     },
     "travel_result_601_903_01": {
         "ori": "travel_result_601_903_01",
-        "name": "travel_result_601_903_01",
+        "name": "大戰崆峒後續",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -12517,14 +12517,14 @@
     },
     "travel_result_601_904_01": {
         "ori": "travel_result_601_904_01",
-        "name": "travel_result_601_904_01",
+        "name": "切磋後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_601_904_02": {
         "ori": "travel_result_601_904_02",
-        "name": "travel_result_601_904_02",
+        "name": "大戰點蒼後續",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -12538,7 +12538,7 @@
     },
     "travel_result_601_905_01": {
         "ori": "travel_result_601_905_01",
-        "name": "travel_result_601_905_01",
+        "name": "挑戰全真派後續",
         "ref": "",
         "desc": "",
         "keywords": ""

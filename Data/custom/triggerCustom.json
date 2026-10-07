@@ -524,6 +524,29 @@
     "type": "Sub",
     "orderKey": "3-08-3-3-S0604"
   },
+  "M5001_04": {
+    "eventFlow": [
+      { "id": "ch6_3_1", "type": "Script" },
+      { "id": "ch6_3_2_travel", "type": "Script" },
+      { "id": "ch6_3_2_travel_01", "type": "Script" },
+      { "id": "ch6_3_2_travel_02", "type": "Script" },
+      { "id": "ch6_3_2_travel_03", "type": "Script" },
+      { "id": "ch6_3_2_travel_04", "type": "Script" },
+      { "id": "ch6_3_2_travel_05", "type": "Script" },
+      { "id": "ch6_3_2_travel_06", "type": "Script" },
+      { "id": "ch6_3_2_travel_07", "type": "Script" },
+      { "id": "ch6_3_2_break_start_01", "type": "Script" },
+      { "id": "ch6_3_3", "type": "Script" },
+      { "id": "ch6_3_4", "type": "Script" },
+      { "id": "ch6_3_5", "type": "Script" },
+      { "id": "ch6_3_5_break_start_01", "type": "Script" },
+      { "id": "ch6_4_1", "type": "Script" },
+      { "id": "ch6_4_2", "type": "Script" },
+      { "id": "ch6_4_2_1", "type": "Script" },
+      { "id": "ch6_4_2_2", "type": "Script" },
+      { "id": "ch5_4_temp_end", "type": "Script" }
+    ]
+  },
   "CT_S0023_01": {
     "mission": "CM_S0023",
     "active": true,

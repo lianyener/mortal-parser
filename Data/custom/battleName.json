@@ -114,8 +114,8 @@
     "BL_1601_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "唐門 vs 地獄道",
-        "name": "",
-        "desc": "",
+        "name": "虛應地獄道",
+        "desc": "前往武林大會途中遭遇地獄道，選擇虛應或說服",
         "keywords": ""
     },
     "BL_1501_01": {
@@ -128,64 +128,64 @@
     "BL_1601_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "唐門 vs 地獄道",
-        "name": "",
-        "desc": "",
+        "name": "迎戰地獄道",
+        "desc": "前往武林大會途中遭遇地獄道，選擇全力迎戰",
         "keywords": ""
     },
     "BL_1602_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
-        "name": "",
-        "desc": "",
+        "name": "虛應畜生道",
+        "desc": "前往武林大會途中遭遇畜生道，選擇虛應或說服",
         "keywords": ""
     },
     "BL_1603_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.003*]",
         "ref": "唐門 vs 白鯊幫",
-        "name": "",
-        "desc": "",
+        "name": "虛應餓鬼道",
+        "desc": "前往武林大會途中遭遇餓鬼道，選擇虛應或說服失敗低道德分岐",
         "keywords": ""
     },
     "BL_1603_03": {
         "ori": "[*System.Battle*]-[*EnemyTeam.003*]",
         "ref": "唐門 vs 白鯊幫",
-        "name": "",
-        "desc": "",
+        "name": "激怒餓鬼道",
+        "desc": "前往武林大會途中遭遇餓鬼道，說服失敗且高道德分岐",
         "keywords": ""
     },
     "BL_1603_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.003*]",
         "ref": "唐門 vs 白鯊幫",
-        "name": "",
-        "desc": "",
+        "name": "迎戰餓鬼道",
+        "desc": "前往武林大會途中遭遇餓鬼道，選擇全力迎戰",
         "keywords": ""
     },
     "BL_1602_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
-        "name": "",
-        "desc": "",
+        "name": "迎戰畜生道",
+        "desc": "前往武林大會途中遭遇畜生道，選擇全力迎戰",
         "keywords": ""
     },
     "BL_1613_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.100*]",
         "ref": "唐門 vs 崆峒派",
-        "name": "",
-        "desc": "",
+        "name": "大戰崆峒",
+        "desc": "前往武林大會途中遭遇崆峒派，金烏存活且宋悲未同行觸發",
         "keywords": ""
     },
     "BL_1611_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.009*]",
         "ref": "唐門 vs 峨嵋派",
-        "name": "",
-        "desc": "",
+        "name": "揍峨嵋派",
+        "desc": "前往武林大會途中遭遇峨嵋派，選擇揍他們",
         "keywords": ""
     },
     "BL_1614_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.004*]",
         "ref": "唐門 vs 點蒼派",
-        "name": "",
-        "desc": "",
+        "name": "大戰點蒼",
+        "desc": "前往武林大會途中遭遇峨嵋派，選擇戰你娘親",
         "keywords": ""
     },
     "BL_1615_01": {

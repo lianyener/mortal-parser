@@ -742,6 +742,15 @@
         "name": "暫存:問葉雲舟次數",
         "value": {},
         "desc": "武林大會邀葉雲舟，葉雲裳想同行問哥哥次數"
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "ch6_3_3"
+        ],
+        "name": "暫存:心力交瘁",
+        "value": {},
+        "desc": "前往武林大會途中心相歸零次數"
       }
     ]
   },
@@ -1162,6 +1171,21 @@
           "1": "[*Custom.True*]"
         },
         "desc": "雪山決戰日，是否由你出戰第三香"
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "ch6_3_2_travel_01",
+          "ch6_3_2_travel_02",
+          "ch6_3_2_travel_03",
+          "ch6_3_2_travel_04",
+          "ch6_3_2_travel_05",
+          "ch6_3_2_travel_06",
+          "ch6_3_2_travel_07"
+        ],
+        "name": "暫存:移動次數",
+        "value": {},
+        "desc": "前往武林大會途中移動次數"
       }
     ]
   },
@@ -1439,6 +1463,21 @@
         "name": "暫存:你的優點",
         "value": {},
         "desc": "雪山決戰日，夏侯蘭計算你的優點數量"
+      },
+      {
+        "script": [
+          "travel_result_601_101",
+          "travel_result_601_102",
+          "travel_result_601_103"
+        ],
+        "name": "暫存:對泥教行動",
+        "value": {
+          "0": "[*System.NA*]",
+          "1": "迎戰",
+          "2": "虛應",
+          "3": "說服"
+        },
+        "desc": "前往武林大會途中遭遇泥教採取的行動"
       }
     ]
   },
@@ -1821,6 +1860,19 @@
           "1": "[*Custom.True*]"
         },
         "desc": "江陵圍城自由行動，是否已與南宮乙對練過"
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "travel_result_601_101",
+          "travel_result_601_501"
+        ],
+        "name": "暫存:可觸發地獄道攔路",
+        "value": {
+          "0": "[*Custom.True*]",
+          "1": "[*Custom.False*]"
+        },
+        "desc": "前往武林大會途中是否還能觸發地獄道攔路"
       }
     ]
   },
@@ -1845,6 +1897,19 @@
           "1": "[*Custom.True*]"
         },
         "desc": "江陵圍城自由行動，院中練武是否已與南宮深對練過"
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "travel_result_601_102",
+          "travel_result_601_501"
+        ],
+        "name": "暫存:可觸發畜生道攔路",
+        "value": {
+          "0": "[*Custom.True*]",
+          "1": "[*Custom.False*]"
+        },
+        "desc": "前往武林大會途中是否還能觸發畜生道攔路"
       }
     ]
   },
@@ -1857,6 +1922,19 @@
         "name": "通用暫存03",
         "value": {},
         "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "travel_result_601_103",
+          "travel_result_601_501"
+        ],
+        "name": "暫存:可觸發餓鬼道攔路",
+        "value": {
+          "0": "[*Custom.True*]",
+          "1": "[*Custom.False*]"
+        },
+        "desc": "前往武林大會途中是否還能觸發餓鬼道攔路"
       }
     ]
   },
@@ -1882,6 +1960,18 @@
           "1": "[*Custom.True*]"
         },
         "desc": "江陵圍城自由行動，院中練武首次與南宮深對練是否客套恭維"
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "travel_result_601_501"
+        ],
+        "name": "暫存:已遭遇官兵",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": "前往武林大會途中是否已遭遇官兵"
       }
     ]
   },
@@ -1907,6 +1997,18 @@
           "1": "[*Custom.True*]"
         },
         "desc": "江陵圍城自由行動，是否已觸發無所事事碰到南宮遠"
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "travel_result_601_502"
+        ],
+        "name": "暫存:已遭遇龍湘",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": "前往武林大會途中是否已遭遇龍湘"
       }
     ]
   },
@@ -1956,6 +2058,18 @@
           "1": "[*Custom.True*]"
         },
         "desc": "江陵圍城自由行動，是否已觸發無所事事碰到南宮深"
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "travel_result_601_901"
+        ],
+        "name": "暫存:已遭遇峨嵋派",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": "前往武林大會途中是否已遭遇峨嵋派"
       }
     ]
   },
@@ -1981,6 +2095,18 @@
           "1": "[*Custom.True*]"
         },
         "desc": "江陵圍城自由行動，是否曾拒絕南宮淺邀請"
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "travel_result_601_902"
+        ],
+        "name": "暫存:已遭遇青城派",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": "前往武林大會途中是否已遭遇青城派"
       }
     ]
   },
@@ -2006,6 +2132,18 @@
           "1": "[*Custom.True*]"
         },
         "desc": "江陵圍城自由行動，是否已接受過南宮深邀請"
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "travel_result_601_903"
+        ],
+        "name": "暫存:已遭遇崆峒派",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": "前往武林大會途中是否已遭遇崆峒派"
       }
     ]
   },
@@ -2018,6 +2156,18 @@
         "name": "通用暫存10",
         "value": {},
         "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "travel_result_601_904"
+        ],
+        "name": "暫存:已遭遇點蒼派",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": "前往武林大會途中是否已遭遇點蒼派"
       }
     ]
   },
@@ -2030,6 +2180,18 @@
         "name": "通用暫存11",
         "value": {},
         "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "travel_result_601_904"
+        ],
+        "name": "暫存:已遭遇全真派",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": "前往武林大會途中是否已遭遇全真派"
       }
     ]
   },
@@ -2042,6 +2204,18 @@
         "name": "通用暫存12",
         "value": {},
         "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_1",
+          "travel_result_601_904"
+        ],
+        "name": "暫存:已遭遇嵩山派",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": "前往武林大會途中是否已遭遇嵩山派"
       }
     ]
   },
@@ -5423,7 +5597,7 @@
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
         },
-        "desc": "與龍湘姊弟相稱"
+        "desc": "是否與龍湘姊弟相稱"
       }
     ]
   },
@@ -7375,7 +7549,7 @@
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
         },
-        "desc": "龍湘全屬性強化"
+        "desc": "是否觸發龍湘全屬性強化"
       }
     ]
   },
@@ -8639,7 +8813,7 @@
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
         },
-        "desc": "福韞同行武林大會"
+        "desc": "前往武林大會途中福韞是否同行"
       }
     ]
   },
@@ -8654,7 +8828,7 @@
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
         },
-        "desc": "宋悲同行武林大會"
+        "desc": "前往武林大會途中宋悲是否同行"
       }
     ]
   },
@@ -8669,7 +8843,7 @@
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
         },
-        "desc": "嵩山派同行武林大會"
+        "desc": "前往武林大會途中是否與嵩山派同行"
       }
     ]
   },
@@ -8684,7 +8858,7 @@
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
         },
-        "desc": "龍湘同行武林大會"
+        "desc": "前往武林大會途中龍湘是否同行"
       }
     ]
   },
@@ -8714,7 +8888,7 @@
           "1": "獨行江陵",
           "2": "錦香宮作客"
         },
-        "desc": "前往武林大會路線｜1. 委任師弟帶隊，獨行江陵｜2. 前往錦香宮作客"
+        "desc": "前往武林大會路線"
       }
     ]
   },
@@ -9507,12 +9681,12 @@
     "data": [
       {
         "script": [],
-        "name": "向鄒博指控申屠龍",
+        "name": "指控申屠龍",
         "value": {
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
         },
-        "desc": "向鄒博指控申屠龍"
+        "desc": "是否向鄒博指控申屠龍"
       }
     ]
   },
@@ -9609,12 +9783,12 @@
     "data": [
       {
         "script": [],
-        "name": "向鄒博指控鐵冠道人",
+        "name": "指控鐵冠道人",
         "value": {
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
         },
-        "desc": "向鄒博指控鐵冠道人"
+        "desc": "是否向鄒博指控鐵冠道人"
       }
     ]
   },
@@ -9624,12 +9798,12 @@
     "data": [
       {
         "script": [],
-        "name": "受覺慧傳那由他劫指",
+        "name": "受傳那由他劫指",
         "value": {
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
         },
-        "desc": "曾受覺慧傳那由他劫指"
+        "desc": "前往武林大會途中是否受覺慧傳那由他劫指"
       }
     ]
   },
@@ -9954,7 +10128,7 @@
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
         },
-        "desc": "曾經在前往武林大會的旅途中答應老僧人去嵩山"
+        "desc": "前往武林大會途中是否答應老僧人去嵩山"
       }
     ]
   },
@@ -14645,6 +14819,17 @@
           "1": "[*Custom.True*]"
         },
         "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_5_break_start_01"
+        ],
+        "name": "已詢問同門意見",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": ""
       }
     ]
   },
@@ -14936,6 +15121,17 @@
           "1": "[*Custom.True*]"
         },
         "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_5_break_start_01"
+        ],
+        "name": "已詢問小師妹意見",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": ""
       }
     ]
   },
@@ -15147,6 +15343,17 @@
           "1": "[*Custom.True*]"
         },
         "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_5_break_start_01"
+        ],
+        "name": "已詢問小竹意見",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": ""
       }
     ]
   },
@@ -15283,6 +15490,17 @@
           "1": "[*Custom.True*]"
         },
         "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_5_break_start_01"
+        ],
+        "name": "已詢問小梅意見",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": ""
       }
     ]
   },
@@ -15364,6 +15582,17 @@
           "1": "[*Custom.True*]"
         },
         "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_5_break_start_01"
+        ],
+        "name": "已詢問龍湘意見",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": ""
       }
     ]
   },
@@ -15412,6 +15641,17 @@
           "1": "[*Custom.True*]"
         },
         "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_5_break_start_01"
+        ],
+        "name": "已詢問葉雲舟意見",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": ""
       }
     ]
   },
@@ -15433,6 +15673,17 @@
           "S0208_04_break_start_01"
         ],
         "name": "閒聊九泉丹",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_5_break_start_01"
+        ],
+        "name": "已詢問葉雲裳意見",
         "value": {
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
@@ -15464,6 +15715,17 @@
           "1": "[*Custom.True*]"
         },
         "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_5_break_start_01"
+        ],
+        "name": "已詢問福韞意見",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": ""
       }
     ]
   },
@@ -15490,6 +15752,17 @@
           "1": "[*Custom.True*]"
         },
         "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_5_break_start_01"
+        ],
+        "name": "已詢問宋悲意見",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": ""
       }
     ]
   },
@@ -15511,6 +15784,17 @@
           "S0208_04_break_start_01"
         ],
         "name": "閒聊小師妹",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": ""
+      },
+      {
+        "script": [
+          "ch6_3_5_break_start_01"
+        ],
+        "name": "已詢問樊嘯天意見",
         "value": {
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
@@ -15633,7 +15917,7 @@
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
         },
-        "desc": "與龍湘姊弟相稱"
+        "desc": "是否與龍湘姊弟相稱"
       },
       {
         "script": [
@@ -16008,6 +16292,19 @@
           "3": "70%"
         },
         "desc": "雲裳之死事件，救治雲裳戰幻境高手時我方血量消耗，目前版本似無實際影響"
+      },
+      {
+        "script": [
+          "travel_result_601_901",
+          "CL_1611_01",
+          "travel_result_601_901_02"
+        ],
+        "name": "決鬥:偷襲",
+        "value": {
+          "0": "[*Custom.False*]",
+          "1": "[*Custom.True*]"
+        },
+        "desc": "前往武林大會途中遭遇峨嵋派，是否偷襲解無塵"
       }
     ]
   },
