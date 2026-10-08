@@ -492,7 +492,7 @@
     },
     "S0019": {
       "ori": "S0019",
-      "name": "",
+      "name": "龍之憂鬱",
       "ref": "",
       "desc": "",
       "keywords": ""
@@ -2020,11 +2020,11 @@
     },
     "S0019_01": {
       "ori": "S0019_01",
-      "name": "",
+      "name": "龍之憂鬱",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WulinAssembly"
     },
     "S0017_01": {
       "ori": "S0017_01",
@@ -3404,11 +3404,11 @@
     },
     "M5001_05": {
       "ori": "M5001_05",
-      "name": "",
+      "name": "結束錦香宮行",
       "ref": "錦香宮行下",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WulinAssembly"
     },
     "M6001_01": {
       "ori": "M6001_01",

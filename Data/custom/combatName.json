@@ -1073,15 +1073,15 @@
     "CL_1616_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee491*]",
         "ref": "拜訪錦香宮 武英殿對手 戰錦香弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰年輕錦香弟子",
+        "desc": "錦香宮自由行動，武英殿修練骰到前途無量",
         "keywords": ""
     },
     "CL_1616_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee491*]",
         "ref": "拜訪錦香宮 武英殿對手 戰錦香弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰老成錦香弟子",
+        "desc": "錦香宮自由行動，武英殿修練骰到老成持重",
         "keywords": ""
     },
     "CL_1614_01": {
@@ -1094,8 +1094,8 @@
     "CL_1616_04": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl5*]",
         "ref": "拜訪錦香宮 武英殿決鬥 小梅病嬌 戰虞小梅",
-        "name": "",
-        "desc": "",
+        "name": "病嬌小梅",
+        "desc": "錦香宮自由行動，指導錦香弟子3次以上小梅發病",
         "keywords": ""
     },
     "CL_1615_01": {
@@ -1108,50 +1108,50 @@
     "CL_1617_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special402*]",
         "ref": "在錦香宮賴著不走 戰溫夫人",
-        "name": "",
-        "desc": "",
+        "name": "賴著不走",
+        "desc": "結束錦香宮行時被逐客選擇賴著不走",
         "keywords": ""
     },
     "CL_1616_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl7*]",
         "ref": "拜訪錦香宮 武英殿決鬥 小竹吃醋 戰郁竹",
-        "name": "",
-        "desc": "",
+        "name": "郁竹討教武功",
+        "desc": "錦香宮自由行動，指導錦香弟子3次郁竹吃醋",
         "keywords": ""
     },
     "CL_1618_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special813*]",
         "ref": "千面傳承 選擇領教 戰畫中仙",
-        "name": "",
-        "desc": "",
+        "name": "挑戰畫中仙",
+        "desc": "錦香宮挑戰畫中仙選擇由你領教",
         "keywords": ""
     },
     "CL_1617_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special402*]",
         "ref": "離開錦香宮被溫夫人留住 戰溫夫人",
-        "name": "",
-        "desc": "",
+        "name": "準備假死",
+        "desc": "結束錦香宮行時被溫夫人留住，捨身受溫夫人一擊假死",
         "keywords": ""
     },
     "CL_1619_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special407*]",
         "ref": "武林大會 挑戰上官隼 戰上官隼",
-        "name": "",
-        "desc": "",
+        "name": "戰上官隼",
+        "desc": "武林大會上挑戰上官隼",
         "keywords": ""
     },
     "CL_1619_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special999*]",
         "ref": "武林大會 遇見瑞笙 戰瑞笙",
-        "name": "",
-        "desc": "",
+        "name": "和瑞笙打架",
+        "desc": "武林大會前和瑞笙打架，小師妹在場分岐",
         "keywords": ""
     },
     "CL_1619_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special999*]",
         "ref": "武林大會 遇見瑞笙 戰瑞笙",
-        "name": "",
-        "desc": "",
+        "name": "和瑞笙打架",
+        "desc": "武林大會前和瑞笙打架，小師妹不在場分岐",
         "keywords": ""
     },
     "CL_1620_01": {

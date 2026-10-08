@@ -138,6 +138,7 @@
   "ch6_4_3_break_01": { "skip": "ch6_4_3_break_start_01", "remark": ["※跳轉用，無劇情內容，本網站方便呈現會把大部分指向本劇本的連結轉換成跳轉後劇本"] },
   "S2503_break_01": { "skip": "S2503_break_start_01", "remark": ["※跳轉用，無劇情內容，本網站方便呈現會把大部分指向本劇本的連結轉換成跳轉後劇本"] },
   "S2504_01": { "var": { "var1": "[*Label.Script,S2503_break_01*]" } },
+  "S0019_01": { "var": { "var1": "[*Label.Script,ch6_4_3_break_start_01*]" } },
   "back_02_001": { "remark": ["※隨機事件在[*Label.Script,back_001*]已設定"], "var": { "var1": "[*Custom.Random*][*Label.Position,Back_Work_001*][*System.StoryEvent*]" } },
   "back_02_501": { "remark": ["※隨機事件在[*Label.Script,back_001*]已設定"], "var": { "var1": "[*Custom.Random*][*Label.Position,Back_Work_001*][*System.StoryEvent*]" } },
   "back_03_001": { "remark": ["※隨機事件在[*Label.Script,back_001*]已設定"], "var": { "var1": "[*Custom.Random*][*Label.Position,Back_Free_001*][*System.StoryEvent*]" } },

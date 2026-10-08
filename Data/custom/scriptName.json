@@ -4460,14 +4460,14 @@
     },
     "ch6_4_3_1": {
         "ori": "ch6_4_3_1",
-        "name": "ch6_4_3_1",
+        "name": "參觀錦香宮",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_3_2": {
         "ori": "ch6_4_3_2",
-        "name": "ch6_4_3_2",
+        "name": "華音閣",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -4495,210 +4495,210 @@
     },
     "ch6_4_3_2_01_504": {
         "ori": "ch6_4_3_2_01_504",
-        "name": "龍湘吹簫小師妹崇拜",
+        "name": "小師妹崇拜",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_3_3": {
         "ori": "ch6_4_3_3",
-        "name": "ch6_4_3_3",
+        "name": "武英殿修練",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_3_3_1": {
         "ori": "ch6_4_3_3_1",
-        "name": "ch6_4_3_3_1",
+        "name": "戰年輕錦香弟子結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_3_3_2": {
-        "ori": "ch6_4_3_3_2",
-        "name": "ch6_4_3_3_2",
+        "ori": "戰老成錦香弟子結果",
+        "name": "",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_3_3_3": {
         "ori": "ch6_4_3_3_3",
-        "name": "ch6_4_3_3_3",
+        "name": "郁竹吃醋",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_3_3_3_1": {
         "ori": "ch6_4_3_3_3_1",
-        "name": "ch6_4_3_3_3_1",
+        "name": "哄郁竹",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_3_3_4": {
         "ori": "ch6_4_3_3_4",
-        "name": "ch6_4_3_3_4",
+        "name": "小梅下毒",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_3_3_4_1": {
         "ori": "ch6_4_3_3_4_1",
-        "name": "ch6_4_3_3_4_1",
+        "name": "落井下石",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_3_4": {
         "ori": "ch6_4_3_4",
-        "name": "ch6_4_3_4",
+        "name": "千面傳承",
         "ref": "",
         "desc": "",
-        "keywords": ""
+        "keywords": "挑戰畫中仙"
     },
     "ch6_4_3_4_1": {
         "ori": "ch6_4_3_4_1",
-        "name": "ch6_4_3_4_1",
+        "name": "戰勝畫中仙",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_3_4_2": {
         "ori": "ch6_4_3_4_2",
-        "name": "ch6_4_3_4_2",
+        "name": "獎賞",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_3_break_01": {
         "ori": "ch6_4_3_break_01",
-        "name": "ch6_4_3_break_01",
+        "name": "錦香宮自由行動",
         "ref": "",
-        "desc": "",
+        "desc": "跳轉用，無劇情",
         "keywords": ""
     },
     "ch6_4_3_break_start_01": {
         "ori": "ch6_4_3_break_start_01",
-        "name": "ch6_4_3_break_start_01",
+        "name": "錦香宮自由行動",
         "ref": "",
-        "desc": "",
+        "desc": "行動選擇",
         "keywords": ""
     },
     "ch6_4_4_1": {
         "ori": "ch6_4_4_1",
-        "name": "ch6_4_4_1",
+        "name": "溫夫人召見",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_4_2": {
         "ori": "ch6_4_4_2",
-        "name": "ch6_4_4_2",
+        "name": "溫夫人的想法",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_4_2_1": {
         "ori": "ch6_4_4_2_1",
-        "name": "ch6_4_4_2_1",
+        "name": "找死",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_4_3": {
         "ori": "ch6_4_4_3",
-        "name": "ch6_4_4_3",
+        "name": "溫夫人之策",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_4_4": {
         "ori": "ch6_4_4_4",
-        "name": "ch6_4_4_4",
+        "name": "不可言說之人",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_4_4_1": {
         "ori": "ch6_4_4_4_1",
-        "name": "ch6_4_4_4_1",
+        "name": "封氣上樑",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_4_4_2": {
         "ori": "ch6_4_4_4_2",
-        "name": "ch6_4_4_4_2",
+        "name": "棋局",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_5_1": {
         "ori": "ch6_5_1",
-        "name": "ch6_5_1",
+        "name": "抵達風雨山",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_5_2_1": {
         "ori": "ch6_5_2_1",
-        "name": "ch6_5_2_1",
+        "name": "和瑞笙打架後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_5_2_break_start_01": {
         "ori": "ch6_5_2_break_start_01",
-        "name": "ch6_5_2_break_start_01",
+        "name": "武林大會前",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_5_3": {
         "ori": "ch6_5_3",
-        "name": "ch6_5_3",
+        "name": "武林大會開始",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_5_3_1": {
         "ori": "ch6_5_3_1",
-        "name": "ch6_5_3_1",
+        "name": "挑戰上官隼",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_5_3_1_01": {
         "ori": "ch6_5_3_1_01",
-        "name": "ch6_5_3_1_01",
+        "name": "正攻",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_5_3_2": {
         "ori": "ch6_5_3_2",
-        "name": "ch6_5_3_2",
+        "name": "挑戰上官隼後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_5_3_3": {
         "ori": "ch6_5_3_3",
-        "name": "ch6_5_3_3",
+        "name": "確認傷勢",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_5_3_3_01": {
         "ori": "ch6_5_3_3_01",
-        "name": "ch6_5_3_3_01",
+        "name": "上官螢關心",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_5_4": {
         "ori": "ch6_5_4",
-        "name": "ch6_5_4",
+        "name": "各派角逐",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -8254,7 +8254,7 @@
     },
     "S0019_01": {
         "ori": "S0019_01",
-        "name": "S0019_01",
+        "name": "夜中談心",
         "ref": "",
         "desc": "",
         "keywords": ""
