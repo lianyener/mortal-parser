@@ -76,6 +76,7 @@ const REGEX_STAT_PREFIX = /^(Player|Faction)_/;
 const REGEX_ENEMY_STAT = /enemy_(\d{3})_(\w+)/i;
 const REGEX_CHAR_EXTRA = /^(\w+)_(\d+|young|upper|lower)$/;
 const REGEX_CHAR_MAJOR = /^(dio\d+|big|girl\d+|special\d+|sister\d+|brother\d+|master)(_\w+)*$/;
+const REGEX_CONDITION = /^\[%(.+)%\]$/;
 
 // 參照用常數
 const STAGE_MAP = { 上旬: '1', 中旬: '2', 下旬: '3' };
@@ -690,7 +691,7 @@ async function getStat(statItem) {
               return { name: `[*Custom.InvalidCondition,${key}*]`, type: 'Condition', rel: {} };
             }
             const condition = await getCondition(data, key);
-            return { name: `[*Custom.Condition*]:${condition.name}`, type: 'Condition', rel: condition.rel };
+            return { name: `[*Custom.Condition*][${condition.name.replace(REGEX_CONDITION, "$1")}]`, type: 'Condition', rel: condition.rel };
           }
           case '角色數值': {
             const subId = removeUid(key);
