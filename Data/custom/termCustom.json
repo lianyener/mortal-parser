@@ -304,18 +304,17 @@
     "Class": { "0": "正常", "1": "失敗", "2": "大失敗", "3": "成功", "4": "大成功", "5": "特殊", "9": "其他" }
   },
   "Sheet": {
-    "BeforeExternalStudy": "~留學分歧",
+    "BeforeExternalStudy": "留學分歧前",
     "NoExternalStudy": "不留學",
     "KongtongStudy": "崆峒留學",
     "QingchengStudy": "青城留學",
-    "Brother1Leave": "~飛俠出行",
-    "InviteGroom": "~招親",
-    "WulinAssembly": "~武林大會",
-    "BeforeWestWulin": "~西武林分岐",
+    "Brother1Leave": "飛俠出行",
+    "InviteGroom": "小師妹招親",
+    "WulinAssembly": "武林大會",
+    "BeforeWestWulin": "西武林分岐前",
     "SectDestroy": "滅門線",
     "WestWulin": "西武林線",
-    "Hopeless": "無可救藥線",
-    "Repeat": "全時期重複性"
+    "Hopeless": "無可救藥線"
   },
   "Story": { "A": "[*Custom.InvalidOption*]" },
   "Web": {

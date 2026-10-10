@@ -7,6 +7,27 @@
       "desc": "各時期自由行動",
       "keywords": ""
     },
+    "CM_S0023": {
+      "ori": "CM_S0023",
+      "name": "龍之反省",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "CM_S0208": {
+      "ori": "CM_S0208",
+      "name": "雲裳訣別時",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "CM_S2501": {
+      "ori": "CM_S2501",
+      "name": "雪山行",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
     "M2010_01": {
       "ori": "M2010_01",
       "name": "唐門迎敵",
@@ -49,18 +70,18 @@
       "desc": "後山",
       "keywords": ""
     },
-    "M2010_08": {
-      "ori": "M2010_08",
-      "name": "唐門迎敵",
-      "ref": "煉丹房",
-      "desc": "煉丹房",
-      "keywords": ""
-    },
     "M2010_07": {
       "ori": "M2010_07",
       "name": "唐門迎敵",
       "ref": "女弟子房",
       "desc": "女弟子房",
+      "keywords": ""
+    },
+    "M2010_08": {
+      "ori": "M2010_08",
+      "name": "唐門迎敵",
+      "ref": "煉丹房",
+      "desc": "煉丹房",
       "keywords": ""
     },
     "M2010_09": {
@@ -79,197 +100,197 @@
     },
     "M6002_01": {
       "ori": "M6002_01",
-      "name": "",
+      "name": "退隱江湖",
       "ref": "",
-      "desc": "",
+      "desc": "正心堂",
       "keywords": ""
     },
     "M6002_02": {
       "ori": "M6002_02",
-      "name": "",
+      "name": "退隱江湖",
       "ref": "",
-      "desc": "",
-      "keywords": ""
-    },
-    "M6002_04": {
-      "ori": "M6002_04",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": ""
-    },
-    "M6002_05": {
-      "ori": "M6002_05",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": ""
-    },
-    "M6002_06": {
-      "ori": "M6002_06",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": ""
-    },
-    "M6002_08": {
-      "ori": "M6002_08",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": ""
-    },
-    "M6002_07": {
-      "ori": "M6002_07",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": ""
-    },
-    "M6002_10": {
-      "ori": "M6002_10",
-      "name": "",
-      "ref": "",
-      "desc": "",
+      "desc": "伙房",
       "keywords": ""
     },
     "M6002_03": {
       "ori": "M6002_03",
-      "name": "",
+      "name": "退隱江湖",
       "ref": "",
-      "desc": "",
+      "desc": "講經堂",
+      "keywords": ""
+    },
+    "M6002_04": {
+      "ori": "M6002_04",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "男弟子房",
+      "keywords": ""
+    },
+    "M6002_05": {
+      "ori": "M6002_05",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "鍛冶場",
+      "keywords": ""
+    },
+    "M6002_06": {
+      "ori": "M6002_06",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "女弟子房",
+      "keywords": ""
+    },
+    "M6002_07": {
+      "ori": "M6002_07",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "練功場",
+      "keywords": ""
+    },
+    "M6002_08": {
+      "ori": "M6002_08",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "後山",
       "keywords": ""
     },
     "M6002_09": {
       "ori": "M6002_09",
-      "name": "",
+      "name": "退隱江湖",
       "ref": "",
-      "desc": "",
+      "desc": "大門",
+      "keywords": ""
+    },
+    "M6002_10": {
+      "ori": "M6002_10",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "煉丹房",
       "keywords": ""
     },
     "M6003_01": {
       "ori": "M6003_01",
-      "name": "",
+      "name": "慫恿四師兄",
       "ref": "慫恿四師兄",
-      "desc": "",
-      "keywords": ""
-    },
-    "M6003_03_01": {
-      "ori": "M6003_03_01",
-      "name": "",
-      "ref": "第一夫人的威信 小竹 自動",
       "desc": "",
       "keywords": ""
     },
     "M6003_02": {
       "ori": "M6003_02",
-      "name": "",
+      "name": "第一夫人的威信",
       "ref": "第一夫人的威信 小梅 自動",
-      "desc": "",
+      "desc": "虞小梅",
+      "keywords": ""
+    },
+    "M6003_03_01": {
+      "ori": "M6003_03_01",
+      "name": "第一夫人的威信",
+      "ref": "第一夫人的威信 小竹 自動",
+      "desc": "郁竹(自動)",
       "keywords": ""
     },
     "M6003_03_02": {
       "ori": "M6003_03_02",
-      "name": "",
+      "name": "第一夫人的威信",
       "ref": "第一夫人的威信 小竹",
-      "desc": "",
+      "desc": "郁竹",
       "keywords": ""
     },
     "M6003_04_01": {
       "ori": "M6003_04_01",
-      "name": "",
+      "name": "第一夫人的威信",
       "ref": "第一夫人的威信 小菊 自動",
-      "desc": "",
+      "desc": "魏菊(自動)",
       "keywords": ""
     },
     "M6003_04_02": {
       "ori": "M6003_04_02",
-      "name": "",
+      "name": "第一夫人的威信",
       "ref": "第一夫人的威信 小菊",
+      "desc": "魏菊",
+      "keywords": ""
+    },
+    "M6003_05": {
+      "ori": "M6003_05",
+      "name": "上官螢寫信",
+      "ref": "上官螢寫信 崆峒派",
       "desc": "",
       "keywords": ""
     },
     "M6003_06": {
       "ori": "M6003_06",
-      "name": "",
+      "name": "出使崆峒人選",
       "ref": "崆峒人選 唐門弟子",
-      "desc": "",
-      "keywords": ""
-    },
-    "M6003_05": {
-      "ori": "M6003_05",
-      "name": "",
-      "ref": "上官螢寫信 崆峒派",
       "desc": "",
       "keywords": ""
     },
     "M6003_07": {
       "ori": "M6003_07",
-      "name": "",
+      "name": "福韞出使峨嵋",
       "ref": "出使峨嵋派 福韞",
       "desc": "",
       "keywords": ""
     },
     "M6003_08": {
       "ori": "M6003_08",
-      "name": "",
+      "name": "出使青城人選",
       "ref": "沒人去青城",
       "desc": "",
       "keywords": ""
     },
     "M6003_09": {
       "ori": "M6003_09",
-      "name": "",
+      "name": "出使峨嵋人選",
       "ref": "沒人去峨嵋",
       "desc": "",
       "keywords": ""
     },
     "M6003_10": {
       "ori": "M6003_10",
-      "name": "",
+      "name": "收買滄幫",
       "ref": "滄幫對策",
       "desc": "",
       "keywords": ""
     },
     "M6003_11": {
       "ori": "M6003_11",
-      "name": "",
+      "name": "丐幫內情",
       "ref": "馬富貴",
       "desc": "",
       "keywords": ""
     },
     "M6004_01": {
       "ori": "M6004_01",
-      "name": "",
+      "name": "丐幫回音",
       "ref": "丐幫回音",
       "desc": "",
       "keywords": ""
     },
     "M6004_02": {
       "ori": "M6004_02",
-      "name": "",
+      "name": "峨嵋回音",
       "ref": "峨嵋回音",
+      "desc": "",
+      "keywords": ""
+    },
+    "M6004_03": {
+      "ori": "M6004_03",
+      "name": "青城回音",
+      "ref": "青城回音",
       "desc": "",
       "keywords": ""
     },
     "M6004_04": {
       "ori": "M6004_04",
-      "name": "",
+      "name": "中小門派回音",
       "ref": "中小門派回音",
       "desc": "",
       "keywords": ""
     },
     "M6004_05": {
       "ori": "M6004_05",
-      "name": "",
+      "name": "崆峒回音",
       "ref": "崆峒回音",
-      "desc": "",
-      "keywords": ""
-    },
-    "M6004_03": {
-      "ori": "M6004_03",
-      "name": "",
-      "ref": "青城回音",
       "desc": "",
       "keywords": ""
     },
@@ -282,106 +303,106 @@
     },
     "M7005_01": {
       "ori": "M7005_01",
-      "name": "",
+      "name": "修羅場",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
     "M7005_02": {
       "ori": "M7005_02",
-      "name": "",
+      "name": "修羅場",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
     "M7005_03": {
       "ori": "M7005_03",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": ""
-    },
-    "M7005_05": {
-      "ori": "M7005_05",
-      "name": "",
+      "name": "修羅場",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
     "M7005_04": {
       "ori": "M7005_04",
-      "name": "",
+      "name": "修羅場",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
-    "M7005_07": {
-      "ori": "M7005_07",
-      "name": "",
+    "M7005_05": {
+      "ori": "M7005_05",
+      "name": "修羅場",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
     "M7005_06": {
       "ori": "M7005_06",
-      "name": "",
+      "name": "修羅場",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "M7005_07": {
+      "ori": "M7005_07",
+      "name": "修羅場",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
     "M7005_08": {
       "ori": "M7005_08",
-      "name": "",
+      "name": "修羅場",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
     "M7005_09": {
       "ori": "M7005_09",
-      "name": "",
+      "name": "修羅場",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
     "M7005_10": {
       "ori": "M7005_10",
-      "name": "",
+      "name": "修羅場",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
     "M7006_01": {
       "ori": "M7006_01",
-      "name": "",
+      "name": "陪小師妹",
       "ref": "陪小師妹",
       "desc": "",
       "keywords": ""
     },
     "M7006_02": {
       "ori": "M7006_02",
-      "name": "",
+      "name": "陪葉雲裳",
       "ref": "陪葉雲裳",
       "desc": "",
       "keywords": ""
     },
     "M7006_03": {
       "ori": "M7006_03",
-      "name": "",
+      "name": "陪龍湘",
       "ref": "陪龍湘",
-      "desc": "",
-      "keywords": ""
-    },
-    "M7006_06": {
-      "ori": "M7006_06",
-      "name": "",
-      "ref": "忘記了約定",
       "desc": "",
       "keywords": ""
     },
     "M7006_04": {
       "ori": "M7006_04",
-      "name": "",
+      "name": "陪小蘭",
       "ref": "陪小蘭",
+      "desc": "",
+      "keywords": ""
+    },
+    "M7006_06": {
+      "ori": "M7006_06",
+      "name": "忘記約定",
+      "ref": "忘記了約定",
       "desc": "",
       "keywords": ""
     },
@@ -392,10 +413,24 @@
       "desc": "",
       "keywords": ""
     },
-    "main": {
-      "ori": "main",
-      "name": "主線任務",
-      "ref": "主線任務",
+    "S0002": {
+      "ori": "S0002",
+      "name": "反間諜",
+      "ref": "反間諜 - 限時",
+      "desc": "",
+      "keywords": ""
+    },
+    "S0003": {
+      "ori": "S0003",
+      "name": "俠影寄雲舟",
+      "ref": "俠影寄雲舟",
+      "desc": "",
+      "keywords": ""
+    },
+    "S0004": {
+      "ori": "S0004",
+      "name": "",
+      "ref": "",
       "desc": "",
       "keywords": ""
     },
@@ -404,13 +439,6 @@
       "name": "雪洗泥教",
       "ref": "雪洗泥教",
       "desc": "※未實裝",
-      "keywords": ""
-    },
-    "S0002": {
-      "ori": "S0002",
-      "name": "反間諜",
-      "ref": "反間諜 - 限時",
-      "desc": "",
       "keywords": ""
     },
     "S0007": {
@@ -431,13 +459,6 @@
       "ori": "S0009",
       "name": "哀夢帖",
       "ref": "哀夢帖",
-      "desc": "",
-      "keywords": ""
-    },
-    "S0003": {
-      "ori": "S0003",
-      "name": "俠影寄雲舟",
-      "ref": "俠影寄雲舟",
       "desc": "",
       "keywords": ""
     },
@@ -469,17 +490,17 @@
       "desc": "",
       "keywords": ""
     },
-    "S0017": {
-      "ori": "S0017",
-      "name": "惜花令",
-      "ref": "傳奇鐵匠",
-      "desc": "",
-      "keywords": ""
-    },
     "S0014": {
       "ori": "S0014",
       "name": "稻草人",
       "ref": "稻草人",
+      "desc": "",
+      "keywords": ""
+    },
+    "S0017": {
+      "ori": "S0017",
+      "name": "惜花令",
+      "ref": "傳奇鐵匠",
       "desc": "",
       "keywords": ""
     },
@@ -499,23 +520,23 @@
     },
     "S0020": {
       "ori": "S0020",
-      "name": "",
+      "name": "龍之覺醒",
       "ref": "龍之覺醒",
       "desc": "",
       "keywords": ""
     },
     "S0021_01_01": {
       "ori": "S0021_01_01",
-      "name": "",
+      "name": "龍之團聚",
       "ref": "",
-      "desc": "",
+      "desc": "滅門線",
       "keywords": ""
     },
     "S0021_01_02": {
       "ori": "S0021_01_02",
-      "name": "",
+      "name": "龍之團聚",
       "ref": "",
-      "desc": "",
+      "desc": "西盟線",
       "keywords": ""
     },
     "S0022": {
@@ -735,13 +756,6 @@
       "desc": "",
       "keywords": ""
     },
-    "S0004": {
-      "ori": "S0004",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": ""
-    },
     "S0210": {
       "ori": "S0210",
       "name": "鬼抓人",
@@ -856,43 +870,50 @@
     },
     "S0701_01": {
       "ori": "S0701_01",
-      "name": "",
+      "name": "小師妹歸來",
       "ref": "小師妹歸來 正常路線",
-      "desc": "",
+      "desc": "滅門線",
       "keywords": ""
     },
     "S0701_02": {
       "ori": "S0701_02",
-      "name": "",
+      "name": "小師妹歸來",
       "ref": "小師妹歸來 西武林盟",
-      "desc": "",
-      "keywords": ""
-    },
-    "S0702_02": {
-      "ori": "S0702_02",
-      "name": "",
-      "ref": "瑞笙來訪 西武林盟",
-      "desc": "",
+      "desc": "西盟線",
       "keywords": ""
     },
     "S0702_01": {
       "ori": "S0702_01",
-      "name": "",
+      "name": "瑞笙來訪",
       "ref": "瑞笙來訪 正常路線",
-      "desc": "",
+      "desc": "滅門線",
+      "keywords": ""
+    },
+    "S0702_02": {
+      "ori": "S0702_02",
+      "name": "瑞笙來訪",
+      "ref": "瑞笙來訪 西武林盟",
+      "desc": "西盟線",
       "keywords": ""
     },
     "S0703_01": {
       "ori": "S0703_01",
-      "name": "",
+      "name": "飛石幫來訪",
       "ref": "飛石幫來訪 正常路線",
-      "desc": "",
+      "desc": "滅門線",
       "keywords": ""
     },
     "S0703_02": {
       "ori": "S0703_02",
-      "name": "",
+      "name": "飛石幫來訪",
       "ref": "飛石幫來訪 西武林盟",
+      "desc": "西盟線",
+      "keywords": ""
+    },
+    "S0801": {
+      "ori": "S0801",
+      "name": "",
+      "ref": "決戰前下山",
       "desc": "",
       "keywords": ""
     },
@@ -907,13 +928,6 @@
       "ori": "S1107",
       "name": "唐門會議",
       "ref": "唐門會議",
-      "desc": "",
-      "keywords": ""
-    },
-    "S0801": {
-      "ori": "S0801",
-      "name": "",
-      "ref": "決戰前下山",
       "desc": "",
       "keywords": ""
     },
@@ -966,6 +980,13 @@
       "desc": "",
       "keywords": ""
     },
+    "S1212": {
+      "ori": "S1212",
+      "name": "唐門會議",
+      "ref": "唐門會議",
+      "desc": "",
+      "keywords": ""
+    },
     "S1301": {
       "ori": "S1301",
       "name": "唐門會議",
@@ -973,8 +994,8 @@
       "desc": "",
       "keywords": ""
     },
-    "S1212": {
-      "ori": "S1212",
+    "S1302": {
+      "ori": "S1302",
       "name": "唐門會議",
       "ref": "唐門會議",
       "desc": "",
@@ -987,15 +1008,22 @@
       "desc": "",
       "keywords": ""
     },
-    "S1307": {
-      "ori": "S1307",
-      "name": "唐門會議",
+    "S1304": {
+      "ori": "S1304",
+      "name": "",
       "ref": "唐門會議",
       "desc": "",
       "keywords": ""
     },
     "S1306": {
       "ori": "S1306",
+      "name": "唐門會議",
+      "ref": "唐門會議",
+      "desc": "",
+      "keywords": ""
+    },
+    "S1307": {
+      "ori": "S1307",
       "name": "唐門會議",
       "ref": "唐門會議",
       "desc": "",
@@ -1036,13 +1064,6 @@
       "desc": "",
       "keywords": ""
     },
-    "S1302": {
-      "ori": "S1302",
-      "name": "唐門會議",
-      "ref": "唐門會議",
-      "desc": "",
-      "keywords": ""
-    },
     "S2200": {
       "ori": "S2200",
       "name": "崆峒大試",
@@ -1061,13 +1082,6 @@
       "ori": "S2401",
       "name": "夏侯蘭提唐布衣",
       "ref": "",
-      "desc": "",
-      "keywords": ""
-    },
-    "S1304": {
-      "ori": "S1304",
-      "name": "",
-      "ref": "唐門會議",
       "desc": "",
       "keywords": ""
     },
@@ -1092,17 +1106,17 @@
       "desc": "",
       "keywords": ""
     },
-    "S3002": {
-      "ori": "S3002",
-      "name": "雲裳秘笈",
-      "ref": "青城留學 葉雲裳秘笈2",
-      "desc": "",
-      "keywords": ""
-    },
     "S3001": {
       "ori": "S3001",
       "name": "排擠",
       "ref": "青城留學 排擠",
+      "desc": "",
+      "keywords": ""
+    },
+    "S3002": {
+      "ori": "S3002",
+      "name": "雲裳秘笈",
+      "ref": "青城留學 葉雲裳秘笈2",
       "desc": "",
       "keywords": ""
     },
@@ -1148,18 +1162,18 @@
       "desc": "",
       "keywords": ""
     },
-    "S8300": {
-      "ori": "S8300",
-      "name": "報復飛石幫",
-      "ref": "支線「報復飛石幫(戰役教學)」",
-      "desc": "戰役教學",
-      "keywords": ""
-    },
     "S8200": {
       "ori": "S8200",
       "name": "早操",
       "ref": "支線「早操」",
       "desc": "決鬥教學",
+      "keywords": ""
+    },
+    "S8300": {
+      "ori": "S8300",
+      "name": "報復飛石幫",
+      "ref": "支線「報復飛石幫(戰役教學)」",
+      "desc": "戰役教學",
       "keywords": ""
     },
     "S8400": {
@@ -1197,18 +1211,18 @@
       "desc": "",
       "keywords": ""
     },
-    "S9101": {
-      "ori": "S9101",
-      "name": "",
-      "ref": "支線「睡過頭」",
-      "desc": "",
-      "keywords": ""
-    },
     "S9100": {
       "ori": "S9100",
       "name": "同門關懷",
       "ref": "支線「同門關懷」",
       "desc": "心相過低事件",
+      "keywords": ""
+    },
+    "S9101": {
+      "ori": "S9101",
+      "name": "",
+      "ref": "支線「睡過頭」",
+      "desc": "",
       "keywords": ""
     },
     "S9200": {
@@ -1220,23 +1234,23 @@
     },
     "S9900": {
       "ori": "S9900",
-      "name": "",
+      "name": "心相低下",
       "ref": "心相低下的懲罰劇情",
       "desc": "",
       "keywords": ""
     },
     "S9901": {
       "ori": "S9901",
-      "name": "",
+      "name": "回憶過往",
       "ref": "第一次去女弟子房的事件",
       "desc": "",
       "keywords": ""
     },
     "S9902": {
       "ori": "S9902",
-      "name": "",
+      "name": "唐門會議",
       "ref": "序章兩年後的唐門會議",
-      "desc": "",
+      "desc": "無可救藥線",
       "keywords": ""
     },
     "S9903": {
@@ -1255,48 +1269,88 @@
     },
     "S9905": {
       "ori": "S9905",
-      "name": "",
+      "name": "情書",
       "ref": "情書",
       "desc": "",
       "keywords": ""
     },
     "S9907": {
       "ori": "S9907",
-      "name": "",
+      "name": "通緝犯葉雲舟",
       "ref": "通緝犯．葉雲舟",
       "desc": "",
       "keywords": ""
     },
-    "CM_S0023": {
-      "ori": "CM_S0023",
-      "name": "龍之反省",
+    "main": {
+      "ori": "main",
+      "name": "主線任務",
+      "ref": "主線任務",
+      "desc": "",
+      "keywords": ""
+    },
+    "CM_S9906": {
+      "ori": "CM_S9906",
+      "name": "決戰菜市場",
       "ref": "",
       "desc": "",
       "keywords": ""
     },
-    "CM_S0208": {
-      "ori": "CM_S0208",
-      "name": "雲裳訣別時",
-      "ref": "",
-      "desc": "",
-      "keywords": ""
-    },
-    "CM_S2501": {
-      "ori": "CM_S2501",
-      "name": "雪山行",
+    "CM_S0105": {
+      "ori": "CM_S0105",
+      "name": "假趙活審判",
       "ref": "",
       "desc": "",
       "keywords": ""
     }
   },
   "trigger": {
-    "M0000": {
-      "ori": "M0000",
-      "name": "",
+    "Alchemy": {
+      "ori": "Alchemy",
+      "name": "煉丹房",
+      "ref": "煉丹房",
+      "desc": "進入煉丹房，包含初次二師兄介紹事件",
+      "keywords": "初識唐錚",
+      "sheet": "BeforeExternalStudy"
+    },
+    "BackMountain": {
+      "ori": "BackMountain",
+      "name": "後山",
+      "ref": "後山",
+      "desc": "前往後山",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "CT_Ch2_4_3": {
+      "ori": "CT_Ch2_4_3",
+      "name": "離家出走自由行動",
+      "ref": "",
+      "desc": "離家出走期間無事件時觸發",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "CT_Ch3_6_1": {
+      "ori": "CT_Ch3_6_1",
+      "name": "江陵圍城自由行動",
+      "ref": "",
+      "desc": "江陵圍城期間無事件時觸發",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_Ch6_4_3": {
+      "ori": "CT_Ch6_4_3",
+      "name": "錦香宮自由行動",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WulinAssembly"
+    },
+    "CT_Free": {
+      "ori": "CT_Free",
+      "name": "唐門自由行動",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Repeat"
     },
     "CT_M0000": {
       "ori": "CT_M0000",
@@ -1305,6 +1359,158 @@
       "desc": "故事開始",
       "keywords": "你聽過唐門嗎,招生",
       "sheet": "BeforeExternalStudy"
+    },
+    "CT_M2010_11": {
+      "ori": "CT_M2010_11",
+      "name": "唐門大亂鬥",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "CT_M3000_00": {
+      "ori": "CT_M3000_00",
+      "name": "青城留學",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "QingchengStudy"
+    },
+    "CT_M6001_00": {
+      "ori": "CT_M6001_00",
+      "name": "招親大敗後",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
+    },
+    "CT_S0023_01": {
+      "ori": "CT_S0023_01",
+      "name": "龍之反省",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "CT_S0208": {
+      "ori": "CT_S0208",
+      "name": "雲裳訣別時",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "CT_S0604": {
+      "ori": "CT_S0604",
+      "name": "邀夏侯蘭同行",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WulinAssembly"
+    },
+    "CT_S2501_01": {
+      "ori": "CT_S2501_01",
+      "name": "雪山行",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "CT_S2503": {
+      "ori": "CT_S2503",
+      "name": "雪山自由行動",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WulinAssembly"
+    },
+    "CT_Section_01_Free": {
+      "ori": "CT_Section_01_Free",
+      "name": "崆峒自由行動",
+      "ref": "",
+      "desc": "崆峒留學期間無事件時觸發",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_Section_02_Free": {
+      "ori": "CT_Section_02_Free",
+      "name": "青城自由行動",
+      "ref": "",
+      "desc": "青城留學期間無事件時觸發",
+      "keywords": "",
+      "sheet": "QingchengStudy"
+    },
+    "Center": {
+      "ori": "Center",
+      "name": "練功場",
+      "ref": "練武場",
+      "desc": "前往練功場",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "Door": {
+      "ori": "Door",
+      "name": "大門",
+      "ref": "大門",
+      "desc": "前往大門",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "Forge": {
+      "ori": "Forge",
+      "name": "鍛冶場",
+      "ref": "鍛冶場",
+      "desc": "進入鍛冶場",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "Kitchen": {
+      "ori": "Kitchen",
+      "name": "伙房",
+      "ref": "伙房",
+      "desc": "進入伙房",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "M0000": {
+      "ori": "M0000",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "M0000_01": {
+      "ori": "M0000_01",
+      "name": "無可救藥的故事",
+      "ref": "",
+      "desc": "僅設定主線，無劇本",
+      "keywords": "",
+      "sheet": "Hopeless"
+    },
+    "M0000_02": {
+      "ori": "M0000_02",
+      "name": "唐門會議",
+      "ref": "唐門會議",
+      "desc": "無可救藥線",
+      "keywords": "",
+      "sheet": "Hopeless"
+    },
+    "M0000_03": {
+      "ori": "M0000_03",
+      "name": "小師妹歸來",
+      "ref": "小師妹歸來",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Hopeless"
+    },
+    "M0000_04": {
+      "ori": "M0000_04",
+      "name": "結末",
+      "ref": "結末",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Hopeless"
     },
     "M0001": {
       "ori": "M0001",
@@ -1329,1718 +1535,6 @@
       "desc": "",
       "keywords": "",
       "sheet": "BeforeExternalStudy"
-    },
-    "S0002_00": {
-      "ori": "S0002_00",
-      "name": "反間諜",
-      "ref": "",
-      "desc": "無劇本，無法觸發",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0003_00": {
-      "ori": "S0003_00",
-      "name": "俠影寄雲舟",
-      "ref": "",
-      "desc": "買牛事件",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0100_01": {
-      "ori": "S0100_01",
-      "name": "假趙活風聲",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S2001_01": {
-      "ori": "S2001_01",
-      "name": "呂翁收債",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S8200_01": {
-      "ori": "S8200_01",
-      "name": "早操",
-      "ref": "",
-      "desc": "決鬥教學",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S8300_01": {
-      "ori": "S8300_01",
-      "name": "報復飛石幫",
-      "ref": "",
-      "desc": "戰役教學",
-      "keywords": "伙房驚嚇指數",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S8400_01": {
-      "ori": "S8400_01",
-      "name": "霸凌",
-      "ref": "",
-      "desc": "四書事件",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S8500_01": {
-      "ori": "S8500_01",
-      "name": "夢境",
-      "ref": "",
-      "desc": "變心夢，可改變心上人",
-      "keywords": "",
-      "sheet": "Repeat"
-    },
-    "S9001_01": {
-      "ori": "S9001_01",
-      "name": "偷懶怪1",
-      "ref": "",
-      "desc": "貢獻過低事件，第一階段",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S9100_01": {
-      "ori": "S9100_01",
-      "name": "同門關懷",
-      "ref": "",
-      "desc": "心相過低事件",
-      "keywords": "來者何人",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S9903_01": {
-      "ori": "S9903_01",
-      "name": "貢獻點評",
-      "ref": "",
-      "desc": "第一次貢獻點評",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S9904_01": {
-      "ori": "S9904_01",
-      "name": "大師兄玩樂",
-      "ref": "",
-      "desc": "初次大師兄介紹事件",
-      "keywords": "初識唐布衣",
-      "sheet": "BeforeExternalStudy"
-    },
-    "Door": {
-      "ori": "Door",
-      "name": "",
-      "ref": "大門",
-      "desc": "前往大門",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "Kitchen": {
-      "ori": "Kitchen",
-      "name": "",
-      "ref": "伙房",
-      "desc": "進入伙房",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "Mall": {
-      "ori": "Mall",
-      "name": "",
-      "ref": "正心堂",
-      "desc": "進入正心堂",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "Room2": {
-      "ori": "Room2",
-      "name": "",
-      "ref": "女弟子房",
-      "desc": "前往女弟子房",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "Alchemy": {
-      "ori": "Alchemy",
-      "name": "煉丹房",
-      "ref": "煉丹房",
-      "desc": "進入煉丹房，包含初次二師兄介紹事件",
-      "keywords": "初識唐錚",
-      "sheet": "BeforeExternalStudy"
-    },
-    "BackMountain": {
-      "ori": "BackMountain",
-      "name": "後山",
-      "ref": "後山",
-      "desc": "前往後山",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "Center": {
-      "ori": "Center",
-      "name": "練功場",
-      "ref": "練武場",
-      "desc": "前往練功場",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "Study": {
-      "ori": "Study",
-      "name": "",
-      "ref": "講經堂",
-      "desc": "進入講經堂，包含三師兄介紹事件",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "Forge": {
-      "ori": "Forge",
-      "name": "",
-      "ref": "鍛冶場",
-      "desc": "進入鍛冶場",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "Room1": {
-      "ori": "Room1",
-      "name": "男弟子房",
-      "ref": "弟子房",
-      "desc": "進入男弟子房，包含初次四師兄介紹事件及商店事件",
-      "keywords": "初識四師兄,初識唐惟元",
-      "sheet": "BeforeExternalStudy"
-    },
-    "M2010_02_01": {
-      "ori": "M2010_02_01",
-      "name": "練功場迎敵",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "M2010_01_01": {
-      "ori": "M2010_01_01",
-      "name": "正心堂迎敵",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "M2010_03_01": {
-      "ori": "M2010_03_01",
-      "name": "伙房迎敵",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "M2010_04_01": {
-      "ori": "M2010_04_01",
-      "name": "男弟子房迎敵",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "M2010_05_01": {
-      "ori": "M2010_05_01",
-      "name": "鍛冶場迎敵",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "M2010_06_01": {
-      "ori": "M2010_06_01",
-      "name": "後山迎敵",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "M2010_08_01": {
-      "ori": "M2010_08_01",
-      "name": "煉丹房迎敵",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "M2010_09_01": {
-      "ori": "M2010_09_01",
-      "name": "講經堂迎敵",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "M2010_07_01": {
-      "ori": "M2010_07_01",
-      "name": "女弟子房迎敵",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "M2010_10_01": {
-      "ori": "M2010_10_01",
-      "name": "大門離開",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "M6002_01_01": {
-      "ori": "M6002_01_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6002_02_01": {
-      "ori": "M6002_02_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6002_04_01": {
-      "ori": "M6002_04_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6002_05_01": {
-      "ori": "M6002_05_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6002_06_01": {
-      "ori": "M6002_06_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6002_08_01": {
-      "ori": "M6002_08_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6002_07_01": {
-      "ori": "M6002_07_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6002_03_01": {
-      "ori": "M6002_03_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6002_10_01": {
-      "ori": "M6002_10_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6002_09_01": {
-      "ori": "M6002_09_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_01_01": {
-      "ori": "M6003_01_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_03_01_01": {
-      "ori": "M6003_03_01_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_02_01": {
-      "ori": "M6003_02_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_04_01_01": {
-      "ori": "M6003_04_01_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_03_02_01": {
-      "ori": "M6003_03_02_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_06_01": {
-      "ori": "M6003_06_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_04_02_01": {
-      "ori": "M6003_04_02_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_05_01": {
-      "ori": "M6003_05_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_07_01": {
-      "ori": "M6003_07_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_08_01": {
-      "ori": "M6003_08_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_09_01": {
-      "ori": "M6003_09_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_11_01": {
-      "ori": "M6003_11_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6003_10_01": {
-      "ori": "M6003_10_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6004_01_01": {
-      "ori": "M6004_01_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6004_04_01": {
-      "ori": "M6004_04_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6004_05_01": {
-      "ori": "M6004_05_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6004_03_01": {
-      "ori": "M6004_03_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7001_02_01": {
-      "ori": "M7001_02_01",
-      "name": "",
-      "ref": "圍攻唐門 強制發生",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M6004_02_01": {
-      "ori": "M6004_02_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7005_01_01": {
-      "ori": "M7005_01_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7005_02_01": {
-      "ori": "M7005_02_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7005_03_01": {
-      "ori": "M7005_03_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7005_04_01": {
-      "ori": "M7005_04_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7005_07_01": {
-      "ori": "M7005_07_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7005_05_01": {
-      "ori": "M7005_05_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7005_06_01": {
-      "ori": "M7005_06_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7005_08_01": {
-      "ori": "M7005_08_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7005_10_01": {
-      "ori": "M7005_10_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7005_09_01": {
-      "ori": "M7005_09_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7006_02_01": {
-      "ori": "M7006_02_01",
-      "name": "",
-      "ref": "陪葉雲裳",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7006_01_01": {
-      "ori": "M7006_01_01",
-      "name": "",
-      "ref": "陪小師妹",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7006_03_01": {
-      "ori": "M7006_03_01",
-      "name": "",
-      "ref": "陪龍湘",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7006_04_01": {
-      "ori": "M7006_04_01",
-      "name": "",
-      "ref": "陪龍湘",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M7006_06_01": {
-      "ori": "M7006_06_01",
-      "name": "",
-      "ref": "陪龍湘",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0005_00": {
-      "ori": "S0005_00",
-      "name": "雪洗泥教",
-      "ref": "",
-      "desc": "※未實裝",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0007_00": {
-      "ori": "S0007_00",
-      "name": "小動物樊嘯天",
-      "ref": "",
-      "desc": "※未實裝",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0008_00": {
-      "ori": "S0008_00",
-      "name": "飛石幫支線",
-      "ref": "",
-      "desc": "※未實裝",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0009_00": {
-      "ori": "S0009_00",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0010_01": {
-      "ori": "S0010_01",
-      "name": "",
-      "ref": "",
-      "desc": "※未實裝",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0011_01": {
-      "ori": "S0011_01",
-      "name": "",
-      "ref": "",
-      "desc": "※未實裝",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0012_01": {
-      "ori": "S0012_01",
-      "name": "留學生紛爭",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "S0013_01": {
-      "ori": "S0013_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0018_01": {
-      "ori": "S0018_01",
-      "name": "寶藏傳言",
-      "ref": "",
-      "desc": "藏寶圖第一階段",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0014_01": {
-      "ori": "S0014_01",
-      "name": "稻草人",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "KongtongStudy"
-    },
-    "S0019_01": {
-      "ori": "S0019_01",
-      "name": "龍之憂鬱",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "WulinAssembly"
-    },
-    "S0017_01": {
-      "ori": "S0017_01",
-      "name": "惜花令",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0020_01": {
-      "ori": "S0020_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0021_01_01_01": {
-      "ori": "S0021_01_01_01",
-      "name": "",
-      "ref": "龍之團聚 正常路線",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0022_01": {
-      "ori": "S0022_01",
-      "name": "龍之挑戰",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0021_01_02_01": {
-      "ori": "S0021_01_02_01",
-      "name": "",
-      "ref": "龍之團聚 東西武林盟",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0024_01": {
-      "ori": "S0024_01",
-      "name": "乞丐與和尚",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0025_01": {
-      "ori": "S0025_01",
-      "name": "市街遇李富貴",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0026_01": {
-      "ori": "S0026_01",
-      "name": "市街遇福韞",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0027_01": {
-      "ori": "S0027_01",
-      "name": "重回外堡",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "S0028_01": {
-      "ori": "S0028_01",
-      "name": "葉雲舟歸來",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "Brother1Leave"
-    },
-    "S0029_01": {
-      "ori": "S0029_01",
-      "name": "唐守鴻處置",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "Brother1Leave"
-    },
-    "S0030_01": {
-      "ori": "S0030_01",
-      "name": "運功療傷",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0101_01": {
-      "ori": "S0101_01",
-      "name": "假趙活借錢",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0102_01": {
-      "ori": "S0102_01",
-      "name": "滄幫抓晁和",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0103_01": {
-      "ori": "S0103_01",
-      "name": "官府抓晁和",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0104_01": {
-      "ori": "S0104_01",
-      "name": "丐幫抓晁和",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0105_01": {
-      "ori": "S0105_01",
-      "name": "丐幫抓晁和(強制)",
-      "ref": "",
-      "desc": "已觸發廣州傳聞的情況時間到強制觸發",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0108_01": {
-      "ori": "S0108_01",
-      "name": "爆炸",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0106_01": {
-      "ori": "S0106_01",
-      "name": "假趙活乾娘",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0109_01": {
-      "ori": "S0109_01",
-      "name": "偷懶睡覺",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0107_01": {
-      "ori": "S0107_01",
-      "name": "偷天換日",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0110_01": {
-      "ori": "S0110_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0111_01": {
-      "ori": "S0111_01",
-      "name": "路怒症",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0120_01": {
-      "ori": "S0120_01",
-      "name": "唐衫請罪",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "Brother1Leave"
-    },
-    "S0200_01": {
-      "ori": "S0200_01",
-      "name": "兩個師妹",
-      "ref": "",
-      "desc": "藏寶圖事件一旬後可觸發",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0121_01": {
-      "ori": "S0121_01",
-      "name": "唐嬌嬌入唐門",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "S0202_01": {
-      "ori": "S0202_01",
-      "name": "醫治葉雲裳",
-      "ref": "",
-      "desc": "藏寶圖事件一個月後可觸發",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0205_01": {
-      "ori": "S0205_01",
-      "name": "決鬥者",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0206_01": {
-      "ori": "S0206_01",
-      "name": "溪邊玩水",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "S0203_01": {
-      "ori": "S0203_01",
-      "name": "唐芳歸來",
-      "ref": "",
-      "desc": "",
-      "keywords": "醫治葉雲裳事件一旬後可觸發",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0207_01": {
-      "ori": "S0207_01",
-      "name": "雲裳重逢",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "KongtongStudy"
-    },
-    "S0208_01": {
-      "ori": "S0208_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0209_01": {
-      "ori": "S0209_01",
-      "name": "雲裳之死",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S0210_01": {
-      "ori": "S0210_01",
-      "name": "鬼抓人",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "S0211_01": {
-      "ori": "S0211_01",
-      "name": "雲裳心事",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S0212_01": {
-      "ori": "S0212_01",
-      "name": "兄妹對決",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S0204_01": {
-      "ori": "S0204_01",
-      "name": "葉家兄妹去留",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "Brother1Leave"
-    },
-    "S0213_01": {
-      "ori": "S0213_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0214_01": {
-      "ori": "S0214_01",
-      "name": "葉雲舟還錢",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "Brother1Leave"
-    },
-    "S0301_01": {
-      "ori": "S0301_01",
-      "name": "黑衣人VS黑衣人",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "KongtongStudy"
-    },
-    "S0303_01": {
-      "ori": "S0303_01",
-      "name": "刺金",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "Brother1Leave"
-    },
-    "S0401_01": {
-      "ori": "S0401_01",
-      "name": "隱患",
-      "ref": "隱患",
-      "desc": "",
-      "keywords": "",
-      "sheet": "Brother1Leave"
-    },
-    "S0302_01": {
-      "ori": "S0302_01",
-      "name": "飛俠千里行",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "KongtongStudy"
-    },
-    "S0502_01": {
-      "ori": "S0502_01",
-      "name": "猴兒酒",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S0503_01": {
-      "ori": "S0503_01",
-      "name": "提示打坐",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "Brother1Leave"
-    },
-    "S0501_01": {
-      "ori": "S0501_01",
-      "name": "四師兄勸離",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S0601_01": {
-      "ori": "S0601_01",
-      "name": "邀小梅同行",
-      "ref": "邀請小梅同行",
-      "desc": "",
-      "keywords": "",
-      "sheet": "WulinAssembly"
-    },
-    "S0602_01": {
-      "ori": "S0602_01",
-      "name": "邀郁竹同行",
-      "ref": "邀請小竹同行",
-      "desc": "",
-      "keywords": "",
-      "sheet": "WulinAssembly"
-    },
-    "S0603_01": {
-      "ori": "S0603_01",
-      "name": "邀葉雲舟同行",
-      "ref": "邀請葉雲舟同行",
-      "desc": "",
-      "keywords": "",
-      "sheet": "WulinAssembly"
-    },
-    "S0701_01_01": {
-      "ori": "S0701_01_01",
-      "name": "",
-      "ref": "小師妹歸來 頑抗路線",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0604_01": {
-      "ori": "S0604_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "WulinAssembly"
-    },
-    "S0701_02_01": {
-      "ori": "S0701_02_01",
-      "name": "",
-      "ref": "小師妹歸來 西武林盟",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0702_01_01": {
-      "ori": "S0702_01_01",
-      "name": "",
-      "ref": "瑞笙來訪 頑抗路線",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0702_02_01": {
-      "ori": "S0702_02_01",
-      "name": "",
-      "ref": "瑞笙來訪 西武林盟",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0703_01_01": {
-      "ori": "S0703_01_01",
-      "name": "",
-      "ref": "飛石幫來訪 正常路線",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0703_02_01": {
-      "ori": "S0703_02_01",
-      "name": "",
-      "ref": "飛石幫來訪 西武林盟",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0802_01_01": {
-      "ori": "S0802_01_01",
-      "name": "",
-      "ref": "決戰前下山",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S1107_01": {
-      "ori": "S1107_01",
-      "name": "首次參加月會",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0801_01_01": {
-      "ori": "S0801_01_01",
-      "name": "",
-      "ref": "決戰前下山",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S1108_01": {
-      "ori": "S1108_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "一年八月月會",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S1201_01": {
-      "ori": "S1201_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "二年一月月會",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S1109_01": {
-      "ori": "S1109_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "一年九月月會",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S1204_01": {
-      "ori": "S1204_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "二年四月月會",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "S1203_01": {
-      "ori": "S1203_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "二年三月月會",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "S1205_01": {
-      "ori": "S1205_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "二年五月月會",
-      "keywords": "",
-      "sheet": "NoExternalStudy"
-    },
-    "S1211_01": {
-      "ori": "S1211_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "二年十一月月會",
-      "keywords": "",
-      "sheet": "Brother1Leave"
-    },
-    "S1301_01": {
-      "ori": "S1301_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "三年一月月會",
-      "keywords": "",
-      "sheet": "Brother1Leave"
-    },
-    "S1212_01": {
-      "ori": "S1212_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "二年十二月月會",
-      "keywords": "",
-      "sheet": "Brother1Leave"
-    },
-    "S1307_01": {
-      "ori": "S1307_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "三年七月月會",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S1303_01": {
-      "ori": "S1303_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "三年三月月會",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S2002_01": {
-      "ori": "S2002_01",
-      "name": "上官螢訪唐門",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S1306_01": {
-      "ori": "S1306_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "三年六月月會",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S2100_01": {
-      "ori": "S2100_01",
-      "name": "第二次段考",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S2101_01": {
-      "ori": "S2101_01",
-      "name": "第三次段考",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S2102_01": {
-      "ori": "S2102_01",
-      "name": "第四次段考",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S1302_01": {
-      "ori": "S1302_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "三年二月月會",
-      "keywords": "",
-      "sheet": "Brother1Leave"
-    },
-    "S1304_01": {
-      "ori": "S1304_01",
-      "name": "唐門月會",
-      "ref": "",
-      "desc": "三年四月月會",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S2200_01": {
-      "ori": "S2200_01",
-      "name": "宣布季試",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "KongtongStudy"
-    },
-    "S2300_01": {
-      "ori": "S2300_01",
-      "name": "阿花姑娘",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "KongtongStudy"
-    },
-    "S2401_01": {
-      "ori": "S2401_01",
-      "name": "夏侯蘭提唐布衣",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "KongtongStudy"
-    },
-    "S2402_01": {
-      "ori": "S2402_01",
-      "name": "修練分心後續",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "KongtongStudy"
-    },
-    "S2500_01": {
-      "ori": "S2500_01",
-      "name": "雪山行前置",
-      "ref": "雪山行前置",
-      "desc": "",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S2504_01": {
-      "ori": "S2504_01",
-      "name": "因果",
-      "ref": "因果",
-      "desc": "",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S3002_01": {
-      "ori": "S3002_01",
-      "name": "雲裳秘笈",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "QingchengStudy"
-    },
-    "S3001_01": {
-      "ori": "S3001_01",
-      "name": "排擠",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "QingchengStudy"
-    },
-    "S3003_01": {
-      "ori": "S3003_01",
-      "name": "虎嘯功",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "QingchengStudy"
-    },
-    "S3004_01": {
-      "ori": "S3004_01",
-      "name": "四師兄行商",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "QingchengStudy"
-    },
-    "S3005_01": {
-      "ori": "S3005_01",
-      "name": "雲裳逗留",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "QingchengStudy"
-    },
-    "S8000_01": {
-      "ori": "S8000_01",
-      "name": "",
-      "ref": "二師兄離開唐門之前",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S8100_01": {
-      "ori": "S8100_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S3006_01": {
-      "ori": "S3006_01",
-      "name": "指指點點",
-      "ref": "",
-      "desc": "第1次",
-      "keywords": "",
-      "sheet": "QingchengStudy"
-    },
-    "S9002_01": {
-      "ori": "S9002_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S9003_01": {
-      "ori": "S9003_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S9101_01": {
-      "ori": "S9101_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S9200_01": {
-      "ori": "S9200_01",
-      "name": "下雨",
-      "ref": "",
-      "desc": "機率發生天氣變化，對劇情無影響",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S9900_01": {
-      "ori": "S9900_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S9901_01": {
-      "ori": "S9901_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S9902_01": {
-      "ori": "S9902_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S9905_01": {
-      "ori": "S9905_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S9907_01": {
-      "ori": "S9907_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0018_02": {
-      "ori": "S0018_02",
-      "name": "客棧圍葉",
-      "ref": "",
-      "desc": "藏寶圖第二階段，寶藏傳言發生後一個月內下山觸發",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "M0000_01": {
-      "ori": "M0000_01",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0002_01": {
-      "ori": "S0002_01",
-      "name": "",
-      "ref": "",
-      "desc": "無劇本，無法觸發",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S2200_02": {
-      "ori": "S2200_02",
-      "name": "季試開始",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "KongtongStudy"
-    },
-    "S2500_02": {
-      "ori": "S2500_02",
-      "name": "夏侯蘭離開",
-      "ref": "離開",
-      "desc": "沒有在會議觸發雪山行狀況",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S0202_02": {
-      "ori": "S0202_02",
-      "name": "默鈴雲裳下山",
-      "ref": "",
-      "desc": "冰糖葫蘆事件，唐芳歸來事件一旬後可觸發",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S2504_02": {
-      "ori": "S2504_02",
-      "name": "決勝日",
-      "ref": "決勝日",
-      "desc": "",
-      "keywords": "",
-      "sheet": "InviteGroom"
-    },
-    "S3006_02": {
-      "ori": "S3006_02",
-      "name": "指指點點",
-      "ref": "",
-      "desc": "第2次",
-      "keywords": "",
-      "sheet": "QingchengStudy"
-    },
-    "S9001_02": {
-      "ori": "S9001_02",
-      "name": "偷懶怪2",
-      "ref": "",
-      "desc": "貢獻過低事件，第二階段",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S9900_02": {
-      "ori": "S9900_02",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S9903_02": {
-      "ori": "S9903_02",
-      "name": "貢獻點評",
-      "ref": "",
-      "desc": "第二次貢獻點評",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S9902_02": {
-      "ori": "S9902_02",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S2001_02": {
-      "ori": "S2001_02",
-      "name": "",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M0000_02": {
-      "ori": "M0000_02",
-      "name": "",
-      "ref": "唐門會議",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0002_02": {
-      "ori": "S0002_02",
-      "name": "",
-      "ref": "",
-      "desc": "無劇本，無法觸發",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S3006_03": {
-      "ori": "S3006_03",
-      "name": "指指點點",
-      "ref": "",
-      "desc": "第3次",
-      "keywords": "",
-      "sheet": "QingchengStudy"
-    },
-    "S9903_03": {
-      "ori": "S9903_03",
-      "name": "",
-      "ref": "",
-      "desc": "第三次貢獻點評",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S9001_03": {
-      "ori": "S9001_03",
-      "name": "偷懶怪3",
-      "ref": "",
-      "desc": "貢獻過低事件，第三階段",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "M0000_03": {
-      "ori": "M0000_03",
-      "name": "",
-      "ref": "小師妹歸來",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0002_03": {
-      "ori": "S0002_03",
-      "name": "",
-      "ref": "",
-      "desc": "無劇本，無法觸發",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S9001_04": {
-      "ori": "S9001_04",
-      "name": "偷懶怪4",
-      "ref": "",
-      "desc": "貢獻過低事件，第四階段",
-      "keywords": "",
-      "sheet": "BeforeExternalStudy"
-    },
-    "S0002_04": {
-      "ori": "S0002_04",
-      "name": "",
-      "ref": "",
-      "desc": "無劇本，無法觸發",
-      "keywords": "",
-      "sheet": ""
-    },
-    "M0000_04": {
-      "ori": "M0000_04",
-      "name": "",
-      "ref": "結末",
-      "desc": "",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0002_05": {
-      "ori": "S0002_05",
-      "name": "",
-      "ref": "",
-      "desc": "無劇本，無法觸發",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0002_06": {
-      "ori": "S0002_06",
-      "name": "",
-      "ref": "",
-      "desc": "無劇本，無法觸發",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0002_07": {
-      "ori": "S0002_07",
-      "name": "",
-      "ref": "",
-      "desc": "無劇本，無法觸發",
-      "keywords": "",
-      "sheet": ""
-    },
-    "S0002_08": {
-      "ori": "S0002_08",
-      "name": "",
-      "ref": "",
-      "desc": "無劇本，無法觸發",
-      "keywords": "",
-      "sheet": ""
     },
     "M2000_01": {
       "ori": "M2000_01",
@@ -3186,9 +1680,25 @@
       "keywords": "",
       "sheet": ""
     },
+    "M2010_01_01": {
+      "ori": "M2010_01_01",
+      "name": "正心堂迎敵",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
     "M2010_02": {
       "ori": "M2010_02",
       "name": "俘虜",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "M2010_02_01": {
+      "ori": "M2010_02_01",
+      "name": "練功場迎敵",
       "ref": "",
       "desc": "",
       "keywords": "",
@@ -3202,10 +1712,74 @@
       "keywords": "",
       "sheet": "NoExternalStudy"
     },
+    "M2010_03_01": {
+      "ori": "M2010_03_01",
+      "name": "伙房迎敵",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
     "M2010_04": {
       "ori": "M2010_04",
       "name": "四師兄江陵回歸",
       "ref": "四師兄歸來",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "M2010_04_01": {
+      "ori": "M2010_04_01",
+      "name": "男弟子房迎敵",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "M2010_05_01": {
+      "ori": "M2010_05_01",
+      "name": "鍛冶場迎敵",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "M2010_06_01": {
+      "ori": "M2010_06_01",
+      "name": "後山迎敵",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "M2010_07_01": {
+      "ori": "M2010_07_01",
+      "name": "女弟子房迎敵",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "M2010_08_01": {
+      "ori": "M2010_08_01",
+      "name": "煉丹房迎敵",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "M2010_09_01": {
+      "ori": "M2010_09_01",
+      "name": "講經堂迎敵",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "M2010_10_01": {
+      "ori": "M2010_10_01",
+      "name": "大門離開",
+      "ref": "",
       "desc": "",
       "keywords": "",
       "sheet": "NoExternalStudy"
@@ -3412,80 +1986,312 @@
     },
     "M6001_01": {
       "ori": "M6001_01",
-      "name": "",
+      "name": "不離的決心",
       "ref": "不離的決心",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeWestWulin"
     },
     "M6001_02": {
       "ori": "M6001_02",
-      "name": "",
+      "name": "檄文",
       "ref": "檄文",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeWestWulin"
     },
     "M6001_03": {
       "ori": "M6001_03",
-      "name": "",
+      "name": "集思廣益",
       "ref": "集思廣益",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeWestWulin"
     },
     "M6002_01": {
       "ori": "M6002_01",
-      "name": "",
+      "name": "退隱江湖",
       "ref": "退隱江湖",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "BeforeWestWulin"
+    },
+    "M6002_01_01": {
+      "ori": "M6002_01_01",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "正心堂",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
     },
     "M6002_02": {
       "ori": "M6002_02",
-      "name": "",
+      "name": "決戰前夜",
       "ref": "頑抗路線 決戰前夜",
-      "desc": "",
+      "desc": "滅門線",
       "keywords": "",
-      "sheet": ""
+      "sheet": "SectDestroy"
+    },
+    "M6002_02_01": {
+      "ori": "M6002_02_01",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "講經堂",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
+    },
+    "M6002_03_01": {
+      "ori": "M6002_03_01",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "伙房",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
+    },
+    "M6002_04_01": {
+      "ori": "M6002_04_01",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "弟子房",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
+    },
+    "M6002_05_01": {
+      "ori": "M6002_05_01",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "鍛冶場",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
+    },
+    "M6002_06_01": {
+      "ori": "M6002_06_01",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "女弟子房",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
+    },
+    "M6002_07_01": {
+      "ori": "M6002_07_01",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "練功場",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
+    },
+    "M6002_08_01": {
+      "ori": "M6002_08_01",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "後山",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
+    },
+    "M6002_09_01": {
+      "ori": "M6002_09_01",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "大門",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
+    },
+    "M6002_10_01": {
+      "ori": "M6002_10_01",
+      "name": "退隱江湖",
+      "ref": "",
+      "desc": "煉丹房",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
     },
     "M6003_01": {
       "ori": "M6003_01",
-      "name": "",
+      "name": "西武林盟前置",
       "ref": "西武林盟 前置",
+      "desc": "僅設定主線，無劇本",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6003_01_01": {
+      "ori": "M6003_01_01",
+      "name": "慫恿四師兄",
+      "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WestWulin"
     },
     "M6003_02": {
       "ori": "M6003_02",
-      "name": "",
+      "name": "西武林盟",
       "ref": "西武林盟",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WestWulin"
+    },
+    "M6003_02_01": {
+      "ori": "M6003_02_01",
+      "name": "第一夫人的威信",
+      "ref": "",
+      "desc": "虞小梅",
+      "keywords": "",
+      "sheet": "WestWulin"
     },
     "M6003_03": {
       "ori": "M6003_03",
-      "name": "",
+      "name": "該做的事",
       "ref": "西武林盟 該做的事",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WestWulin"
+    },
+    "M6003_03_01_01": {
+      "ori": "M6003_03_01_01",
+      "name": "第一夫人的威信",
+      "ref": "",
+      "desc": "郁竹(自動)",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6003_03_02_01": {
+      "ori": "M6003_03_02_01",
+      "name": "第一夫人的威信",
+      "ref": "",
+      "desc": "郁竹",
+      "keywords": "",
+      "sheet": "WestWulin"
     },
     "M6003_04": {
       "ori": "M6003_04",
-      "name": "",
+      "name": "決戰前夜",
       "ref": "西武林盟 決戰前夜",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WestWulin"
+    },
+    "M6003_04_01_01": {
+      "ori": "M6003_04_01_01",
+      "name": "第一夫人的威信",
+      "ref": "",
+      "desc": "魏菊(自動)",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6003_04_02_01": {
+      "ori": "M6003_04_02_01",
+      "name": "第一夫人的威信",
+      "ref": "",
+      "desc": "魏菊",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6003_05_01": {
+      "ori": "M6003_05_01",
+      "name": "上官螢寫信",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6003_06_01": {
+      "ori": "M6003_06_01",
+      "name": "出使崆峒人選",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6003_07_01": {
+      "ori": "M6003_07_01",
+      "name": "福韞出使峨嵋",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6003_08_01": {
+      "ori": "M6003_08_01",
+      "name": "出使青城人選",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6003_09_01": {
+      "ori": "M6003_09_01",
+      "name": "出使峨嵋人選",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6003_10_01": {
+      "ori": "M6003_10_01",
+      "name": "收買滄幫",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6003_11_01": {
+      "ori": "M6003_11_01",
+      "name": "丐幫內情",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6004_01_01": {
+      "ori": "M6004_01_01",
+      "name": "丐幫回音",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6004_02_01": {
+      "ori": "M6004_02_01",
+      "name": "峨嵋回音",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6004_03_01": {
+      "ori": "M6004_03_01",
+      "name": "青城回音",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6004_04_01": {
+      "ori": "M6004_04_01",
+      "name": "中小門派回音",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "M6004_05_01": {
+      "ori": "M6004_05_01",
+      "name": "崆峒回音",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WestWulin"
     },
     "M7001_01": {
       "ori": "M7001_01",
-      "name": "",
+      "name": "圍攻唐門",
       "ref": "圍攻唐門",
+      "desc": "",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "M7001_02_01": {
+      "ori": "M7001_02_01",
+      "name": "",
+      "ref": "圍攻唐門 強制發生",
       "desc": "",
       "keywords": "",
       "sheet": ""
@@ -3506,109 +2312,1357 @@
       "keywords": "",
       "sheet": ""
     },
-    "CT_Free": {
-      "ori": "CT_Free",
-      "name": "唐門自由行動",
+    "M7005_01_01": {
+      "ori": "M7005_01_01",
+      "name": "修羅場",
+      "ref": "",
+      "desc": "進入正心堂",
+      "keywords": "",
+      "sheet": ""
+    },
+    "M7005_02_01": {
+      "ori": "M7005_02_01",
+      "name": "修羅場",
+      "ref": "",
+      "desc": "進入練功場",
+      "keywords": "",
+      "sheet": ""
+    },
+    "M7005_03_01": {
+      "ori": "M7005_03_01",
+      "name": "修羅場",
+      "ref": "",
+      "desc": "進入煉丹房",
+      "keywords": "",
+      "sheet": ""
+    },
+    "M7005_04_01": {
+      "ori": "M7005_04_01",
+      "name": "修羅場",
+      "ref": "",
+      "desc": "進入鍛冶場",
+      "keywords": "",
+      "sheet": ""
+    },
+    "M7005_05_01": {
+      "ori": "M7005_05_01",
+      "name": "修羅場",
+      "ref": "",
+      "desc": "前往後山",
+      "keywords": "",
+      "sheet": ""
+    },
+    "M7005_06_01": {
+      "ori": "M7005_06_01",
+      "name": "修羅場",
+      "ref": "",
+      "desc": "進入男弟子房",
+      "keywords": "",
+      "sheet": ""
+    },
+    "M7005_07_01": {
+      "ori": "M7005_07_01",
+      "name": "修羅場",
+      "ref": "",
+      "desc": "前往大門",
+      "keywords": "",
+      "sheet": ""
+    },
+    "M7005_08_01": {
+      "ori": "M7005_08_01",
+      "name": "修羅場",
+      "ref": "",
+      "desc": "進入講經堂",
+      "keywords": "",
+      "sheet": ""
+    },
+    "M7005_09_01": {
+      "ori": "M7005_09_01",
+      "name": "修羅場",
+      "ref": "",
+      "desc": "進入伙房",
+      "keywords": "",
+      "sheet": ""
+    },
+    "M7005_10_01": {
+      "ori": "M7005_10_01",
+      "name": "修羅場",
+      "ref": "",
+      "desc": "進入女弟子房",
+      "keywords": "",
+      "sheet": ""
+    },
+    "M7006_01_01": {
+      "ori": "M7006_01_01",
+      "name": "陪小師妹",
+      "ref": "陪小師妹",
+      "desc": "",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "M7006_02_01": {
+      "ori": "M7006_02_01",
+      "name": "陪葉雲裳",
+      "ref": "陪葉雲裳",
+      "desc": "",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "M7006_03_01": {
+      "ori": "M7006_03_01",
+      "name": "陪龍湘",
+      "ref": "陪龍湘",
+      "desc": "",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "M7006_04_01": {
+      "ori": "M7006_04_01",
+      "name": "陪夏侯蘭",
+      "ref": "陪龍湘",
+      "desc": "",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "M7006_06_01": {
+      "ori": "M7006_06_01",
+      "name": "失約",
+      "ref": "陪龍湘",
+      "desc": "",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "Mall": {
+      "ori": "Mall",
+      "name": "正心堂",
+      "ref": "正心堂",
+      "desc": "進入正心堂",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "Room1": {
+      "ori": "Room1",
+      "name": "男弟子房",
+      "ref": "弟子房",
+      "desc": "進入男弟子房，包含初次四師兄介紹事件及商店事件",
+      "keywords": "初識四師兄,初識唐惟元",
+      "sheet": "BeforeExternalStudy"
+    },
+    "Room2": {
+      "ori": "Room2",
+      "name": "女弟子房",
+      "ref": "女弟子房",
+      "desc": "前往女弟子房",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0002_00": {
+      "ori": "S0002_00",
+      "name": "反間諜",
+      "ref": "",
+      "desc": "無劇本，無法觸發",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0002_01": {
+      "ori": "S0002_01",
+      "name": "",
+      "ref": "",
+      "desc": "無劇本，無法觸發",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0002_02": {
+      "ori": "S0002_02",
+      "name": "",
+      "ref": "",
+      "desc": "無劇本，無法觸發",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0002_03": {
+      "ori": "S0002_03",
+      "name": "",
+      "ref": "",
+      "desc": "無劇本，無法觸發",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0002_04": {
+      "ori": "S0002_04",
+      "name": "",
+      "ref": "",
+      "desc": "無劇本，無法觸發",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0002_05": {
+      "ori": "S0002_05",
+      "name": "",
+      "ref": "",
+      "desc": "無劇本，無法觸發",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0002_06": {
+      "ori": "S0002_06",
+      "name": "",
+      "ref": "",
+      "desc": "無劇本，無法觸發",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0002_07": {
+      "ori": "S0002_07",
+      "name": "",
+      "ref": "",
+      "desc": "無劇本，無法觸發",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0002_08": {
+      "ori": "S0002_08",
+      "name": "",
+      "ref": "",
+      "desc": "無劇本，無法觸發",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0003_00": {
+      "ori": "S0003_00",
+      "name": "俠影寄雲舟",
+      "ref": "",
+      "desc": "",
+      "keywords": "買牛事件",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0005_00": {
+      "ori": "S0005_00",
+      "name": "雪洗泥教",
+      "ref": "",
+      "desc": "※未實裝",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0007_00": {
+      "ori": "S0007_00",
+      "name": "小動物樊嘯天",
+      "ref": "",
+      "desc": "※未實裝",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0008_00": {
+      "ori": "S0008_00",
+      "name": "飛石幫支線",
+      "ref": "",
+      "desc": "※未實裝",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0009_00": {
+      "ori": "S0009_00",
+      "name": "",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": "Repeat"
+      "sheet": ""
     },
-    "CT_Section_01_Free": {
-      "ori": "CT_Section_01_Free",
-      "name": "崆峒自由行動",
+    "S0010_01": {
+      "ori": "S0010_01",
+      "name": "",
       "ref": "",
-      "desc": "崆峒留學期間無事件時觸發",
+      "desc": "※未實裝",
       "keywords": "",
-      "sheet": "KongtongStudy"
+      "sheet": ""
     },
-    "CT_Ch2_4_3": {
-      "ori": "CT_Ch2_4_3",
-      "name": "離家出走自由行動",
+    "S0011_01": {
+      "ori": "S0011_01",
+      "name": "",
       "ref": "",
-      "desc": "離家出走期間無事件時觸發",
+      "desc": "※未實裝",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0012_01": {
+      "ori": "S0012_01",
+      "name": "留學生紛爭",
+      "ref": "",
+      "desc": "",
       "keywords": "",
       "sheet": "NoExternalStudy"
     },
-    "CT_Section_02_Free": {
-      "ori": "CT_Section_02_Free",
-      "name": "青城自由行動",
+    "S0013_01": {
+      "ori": "S0013_01",
+      "name": "",
       "ref": "",
-      "desc": "青城留學期間無事件時觸發",
+      "desc": "",
       "keywords": "",
-      "sheet": "QingchengStudy"
+      "sheet": ""
     },
-    "CT_Ch3_6_1": {
-      "ori": "CT_Ch3_6_1",
-      "name": "江陵圍城自由行動",
+    "S0014_01": {
+      "ori": "S0014_01",
+      "name": "稻草人",
       "ref": "",
-      "desc": "江陵圍城期間無事件時觸發",
+      "desc": "",
       "keywords": "",
       "sheet": "KongtongStudy"
     },
-    "CT_S2503": {
-      "ori": "CT_S2503",
-      "name": "雪山自由行動",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "WulinAssembly"
-    },
-    "CT_Ch6_4_3": {
-      "ori": "CT_Ch6_4_3",
-      "name": "錦香宮自由行動",
-      "ref": "",
-      "desc": "",
-      "keywords": "",
-      "sheet": "WulinAssembly"
-    },
-    "CT_S0023_01": {
-      "ori": "CT_S0023_01",
-      "name": "龍之反省",
+    "S0017_01": {
+      "ori": "S0017_01",
+      "name": "惜花令",
       "ref": "",
       "desc": "",
       "keywords": "",
       "sheet": "BeforeExternalStudy"
     },
-    "CT_M2010_11": {
-      "ori": "CT_M2010_11",
-      "name": "唐門大亂鬥",
+    "S0018_01": {
+      "ori": "S0018_01",
+      "name": "寶藏傳言",
+      "ref": "",
+      "desc": "藏寶圖第一階段",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0018_02": {
+      "ori": "S0018_02",
+      "name": "客棧圍葉",
+      "ref": "",
+      "desc": "藏寶圖第二階段，寶藏傳言發生後一個月內下山觸發",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0019_01": {
+      "ori": "S0019_01",
+      "name": "龍之憂鬱",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WulinAssembly"
+    },
+    "S0020_01": {
+      "ori": "S0020_01",
+      "name": "龍之覺醒",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
+    },
+    "S0021_01_01_01": {
+      "ori": "S0021_01_01_01",
+      "name": "龍之團聚",
+      "ref": "龍之團聚 正常路線",
+      "desc": "滅門線",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "S0021_01_02_01": {
+      "ori": "S0021_01_02_01",
+      "name": "龍之團聚",
+      "ref": "龍之團聚 東西武林盟",
+      "desc": "西盟線",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "S0022_01": {
+      "ori": "S0022_01",
+      "name": "龍之挑戰",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0024_01": {
+      "ori": "S0024_01",
+      "name": "乞丐與和尚",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0025_01": {
+      "ori": "S0025_01",
+      "name": "市街遇李富貴",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0026_01": {
+      "ori": "S0026_01",
+      "name": "市街遇福韞",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0027_01": {
+      "ori": "S0027_01",
+      "name": "重回外堡",
       "ref": "",
       "desc": "",
       "keywords": "",
       "sheet": "NoExternalStudy"
     },
-    "CT_M3000_00": {
-      "ori": "CT_M3000_00",
-      "name": "青城留學",
+    "S0028_01": {
+      "ori": "S0028_01",
+      "name": "葉雲舟歸來",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Brother1Leave"
+    },
+    "S0029_01": {
+      "ori": "S0029_01",
+      "name": "唐守鴻處置",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Brother1Leave"
+    },
+    "S0030_01": {
+      "ori": "S0030_01",
+      "name": "運功療傷",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0100_01": {
+      "ori": "S0100_01",
+      "name": "假趙活風聲",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0101_01": {
+      "ori": "S0101_01",
+      "name": "假趙活借錢",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0102_01": {
+      "ori": "S0102_01",
+      "name": "滄幫抓晁和",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0103_01": {
+      "ori": "S0103_01",
+      "name": "官府抓晁和",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0104_01": {
+      "ori": "S0104_01",
+      "name": "丐幫抓晁和",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0105_01": {
+      "ori": "S0105_01",
+      "name": "丐幫抓晁和(強制)",
+      "ref": "",
+      "desc": "已觸發廣州傳聞的情況時間到強制觸發",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0106_01": {
+      "ori": "S0106_01",
+      "name": "假趙活乾娘",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0107_01": {
+      "ori": "S0107_01",
+      "name": "偷天換日",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0108_01": {
+      "ori": "S0108_01",
+      "name": "爆炸",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0109_01": {
+      "ori": "S0109_01",
+      "name": "偷懶睡覺",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0110_01": {
+      "ori": "S0110_01",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0111_01": {
+      "ori": "S0111_01",
+      "name": "路怒症",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0120_01": {
+      "ori": "S0120_01",
+      "name": "唐衫請罪",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Brother1Leave"
+    },
+    "S0121_01": {
+      "ori": "S0121_01",
+      "name": "唐嬌嬌入唐門",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "S0200_01": {
+      "ori": "S0200_01",
+      "name": "兩個師妹",
+      "ref": "",
+      "desc": "藏寶圖事件一旬後可觸發",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0202_01": {
+      "ori": "S0202_01",
+      "name": "醫治葉雲裳",
+      "ref": "",
+      "desc": "藏寶圖事件一個月後可觸發",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0202_02": {
+      "ori": "S0202_02",
+      "name": "默鈴雲裳下山",
+      "ref": "",
+      "desc": "冰糖葫蘆事件，唐芳歸來事件一旬後可觸發",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0203_01": {
+      "ori": "S0203_01",
+      "name": "唐芳歸來",
+      "ref": "",
+      "desc": "",
+      "keywords": "醫治葉雲裳事件一旬後可觸發",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0204_01": {
+      "ori": "S0204_01",
+      "name": "葉家兄妹去留",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Brother1Leave"
+    },
+    "S0205_01": {
+      "ori": "S0205_01",
+      "name": "決鬥者",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0206_01": {
+      "ori": "S0206_01",
+      "name": "溪邊玩水",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "S0207_01": {
+      "ori": "S0207_01",
+      "name": "雲裳重逢",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S0208_01": {
+      "ori": "S0208_01",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0209_01": {
+      "ori": "S0209_01",
+      "name": "雲裳之死",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S0210_01": {
+      "ori": "S0210_01",
+      "name": "鬼抓人",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "S0211_01": {
+      "ori": "S0211_01",
+      "name": "雲裳心事",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S0212_01": {
+      "ori": "S0212_01",
+      "name": "兄妹對決",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S0213_01": {
+      "ori": "S0213_01",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0214_01": {
+      "ori": "S0214_01",
+      "name": "葉雲舟還錢",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Brother1Leave"
+    },
+    "S0301_01": {
+      "ori": "S0301_01",
+      "name": "黑衣人VS黑衣人",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S0302_01": {
+      "ori": "S0302_01",
+      "name": "飛俠千里行",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S0303_01": {
+      "ori": "S0303_01",
+      "name": "刺金",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Brother1Leave"
+    },
+    "S0401_01": {
+      "ori": "S0401_01",
+      "name": "隱患",
+      "ref": "隱患",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Brother1Leave"
+    },
+    "S0501_01": {
+      "ori": "S0501_01",
+      "name": "四師兄勸離",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S0502_01": {
+      "ori": "S0502_01",
+      "name": "猴兒酒",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S0503_01": {
+      "ori": "S0503_01",
+      "name": "提示打坐",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Brother1Leave"
+    },
+    "S0601_01": {
+      "ori": "S0601_01",
+      "name": "邀小梅同行",
+      "ref": "邀請小梅同行",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WulinAssembly"
+    },
+    "S0602_01": {
+      "ori": "S0602_01",
+      "name": "邀郁竹同行",
+      "ref": "邀請小竹同行",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WulinAssembly"
+    },
+    "S0603_01": {
+      "ori": "S0603_01",
+      "name": "邀葉雲舟同行",
+      "ref": "邀請葉雲舟同行",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WulinAssembly"
+    },
+    "S0604_01": {
+      "ori": "S0604_01",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "WulinAssembly"
+    },
+    "S0701_01_01": {
+      "ori": "S0701_01_01",
+      "name": "小師妹歸來",
+      "ref": "小師妹歸來 頑抗路線",
+      "desc": "滅門線",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "S0701_02_01": {
+      "ori": "S0701_02_01",
+      "name": "小師妹歸來",
+      "ref": "小師妹歸來 西武林盟",
+      "desc": "西盟線",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "S0702_01_01": {
+      "ori": "S0702_01_01",
+      "name": "瑞笙來訪",
+      "ref": "瑞笙來訪 頑抗路線",
+      "desc": "滅門線",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "S0702_02_01": {
+      "ori": "S0702_02_01",
+      "name": "瑞笙來訪",
+      "ref": "瑞笙來訪 西武林盟",
+      "desc": "西盟線",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "S0703_01_01": {
+      "ori": "S0703_01_01",
+      "name": "飛石幫來訪",
+      "ref": "飛石幫來訪 正常路線",
+      "desc": "滅門線",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "S0703_02_01": {
+      "ori": "S0703_02_01",
+      "name": "飛石幫來訪",
+      "ref": "飛石幫來訪 西武林盟",
+      "desc": "西盟線",
+      "keywords": "",
+      "sheet": "WestWulin"
+    },
+    "S0801_01_01": {
+      "ori": "S0801_01_01",
+      "name": "",
+      "ref": "決戰前下山",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0802_01_01": {
+      "ori": "S0802_01_01",
+      "name": "",
+      "ref": "決戰前下山",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S1107_01": {
+      "ori": "S1107_01",
+      "name": "首次參加月會",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S1108_01": {
+      "ori": "S1108_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "一年八月月會",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S1109_01": {
+      "ori": "S1109_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "一年九月月會",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S1201_01": {
+      "ori": "S1201_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "二年一月月會",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S1203_01": {
+      "ori": "S1203_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "二年三月月會",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "S1204_01": {
+      "ori": "S1204_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "二年四月月會",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "S1205_01": {
+      "ori": "S1205_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "二年五月月會",
+      "keywords": "",
+      "sheet": "NoExternalStudy"
+    },
+    "S1211_01": {
+      "ori": "S1211_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "二年十一月月會",
+      "keywords": "",
+      "sheet": "Brother1Leave"
+    },
+    "S1212_01": {
+      "ori": "S1212_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "二年十二月月會",
+      "keywords": "",
+      "sheet": "Brother1Leave"
+    },
+    "S1301_01": {
+      "ori": "S1301_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "三年一月月會",
+      "keywords": "",
+      "sheet": "Brother1Leave"
+    },
+    "S1302_01": {
+      "ori": "S1302_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "三年二月月會",
+      "keywords": "",
+      "sheet": "Brother1Leave"
+    },
+    "S1303_01": {
+      "ori": "S1303_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "三年三月月會",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S1304_01": {
+      "ori": "S1304_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "三年四月月會",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S1306_01": {
+      "ori": "S1306_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "三年六月月會",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S1307_01": {
+      "ori": "S1307_01",
+      "name": "唐門月會",
+      "ref": "",
+      "desc": "三年七月月會",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S2001_01": {
+      "ori": "S2001_01",
+      "name": "呂翁收債",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S2001_02": {
+      "ori": "S2001_02",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2002_01": {
+      "ori": "S2002_01",
+      "name": "上官螢訪唐門",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S2100_01": {
+      "ori": "S2100_01",
+      "name": "第二次段考",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S2101_01": {
+      "ori": "S2101_01",
+      "name": "第三次段考",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S2102_01": {
+      "ori": "S2102_01",
+      "name": "第四次段考",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S2200_01": {
+      "ori": "S2200_01",
+      "name": "宣布季試",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2200_02": {
+      "ori": "S2200_02",
+      "name": "季試開始",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2300_01": {
+      "ori": "S2300_01",
+      "name": "阿花姑娘",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2401_01": {
+      "ori": "S2401_01",
+      "name": "夏侯蘭提唐布衣",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2402_01": {
+      "ori": "S2402_01",
+      "name": "修練分心後續",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2500_01": {
+      "ori": "S2500_01",
+      "name": "雪山行前置",
+      "ref": "雪山行前置",
+      "desc": "",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S2500_02": {
+      "ori": "S2500_02",
+      "name": "夏侯蘭離開",
+      "ref": "離開",
+      "desc": "沒有在會議觸發雪山行狀況",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S2504_01": {
+      "ori": "S2504_01",
+      "name": "因果",
+      "ref": "因果",
+      "desc": "",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S2504_02": {
+      "ori": "S2504_02",
+      "name": "決勝日",
+      "ref": "決勝日",
+      "desc": "",
+      "keywords": "",
+      "sheet": "InviteGroom"
+    },
+    "S3001_01": {
+      "ori": "S3001_01",
+      "name": "排擠",
       "ref": "",
       "desc": "",
       "keywords": "",
       "sheet": "QingchengStudy"
     },
-    "CT_S0208": {
-      "ori": "CT_S0208",
-      "name": "雲裳訣別時",
+    "S3002_01": {
+      "ori": "S3002_01",
+      "name": "雲裳秘笈",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": "InviteGroom"
+      "sheet": "QingchengStudy"
     },
-    "CT_S2501_01": {
-      "ori": "CT_S2501_01",
-      "name": "雪山行",
+    "S3003_01": {
+      "ori": "S3003_01",
+      "name": "虎嘯功",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": "InviteGroom"
+      "sheet": "QingchengStudy"
     },
-    "CT_S0604": {
-      "ori": "CT_S0604",
-      "name": "邀夏侯蘭同行",
+    "S3004_01": {
+      "ori": "S3004_01",
+      "name": "四師兄行商",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": "WulinAssembly"
+      "sheet": "QingchengStudy"
+    },
+    "S3005_01": {
+      "ori": "S3005_01",
+      "name": "雲裳逗留",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "QingchengStudy"
+    },
+    "S3006_01": {
+      "ori": "S3006_01",
+      "name": "指指點點",
+      "ref": "",
+      "desc": "第1次",
+      "keywords": "",
+      "sheet": "QingchengStudy"
+    },
+    "S3006_02": {
+      "ori": "S3006_02",
+      "name": "指指點點",
+      "ref": "",
+      "desc": "第2次",
+      "keywords": "",
+      "sheet": "QingchengStudy"
+    },
+    "S3006_03": {
+      "ori": "S3006_03",
+      "name": "指指點點",
+      "ref": "",
+      "desc": "第3次",
+      "keywords": "",
+      "sheet": "QingchengStudy"
+    },
+    "S8000_01": {
+      "ori": "S8000_01",
+      "name": "",
+      "ref": "二師兄離開唐門之前",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S8100_01": {
+      "ori": "S8100_01",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S8200_01": {
+      "ori": "S8200_01",
+      "name": "早操",
+      "ref": "",
+      "desc": "決鬥教學",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S8300_01": {
+      "ori": "S8300_01",
+      "name": "報復飛石幫",
+      "ref": "",
+      "desc": "戰役教學",
+      "keywords": "伙房驚嚇指數",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S8400_01": {
+      "ori": "S8400_01",
+      "name": "霸凌",
+      "ref": "",
+      "desc": "四書事件",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S8500_01": {
+      "ori": "S8500_01",
+      "name": "夢境",
+      "ref": "",
+      "desc": "變心夢，可改變心上人",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S9001_01": {
+      "ori": "S9001_01",
+      "name": "偷懶怪1",
+      "ref": "",
+      "desc": "貢獻過低事件，第一階段",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S9001_02": {
+      "ori": "S9001_02",
+      "name": "偷懶怪2",
+      "ref": "",
+      "desc": "貢獻過低事件，第二階段",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S9001_03": {
+      "ori": "S9001_03",
+      "name": "偷懶怪3",
+      "ref": "",
+      "desc": "貢獻過低事件，第三階段",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S9001_04": {
+      "ori": "S9001_04",
+      "name": "偷懶怪4",
+      "ref": "",
+      "desc": "貢獻過低事件，第四階段",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S9002_01": {
+      "ori": "S9002_01",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S9003_01": {
+      "ori": "S9003_01",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S9100_01": {
+      "ori": "S9100_01",
+      "name": "同門關懷",
+      "ref": "",
+      "desc": "心相過低事件",
+      "keywords": "來者何人",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S9101_01": {
+      "ori": "S9101_01",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S9200_01": {
+      "ori": "S9200_01",
+      "name": "下雨",
+      "ref": "",
+      "desc": "機率發生天氣變化，對劇情無影響",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S9900_01": {
+      "ori": "S9900_01",
+      "name": "心相低下",
+      "ref": "",
+      "desc": "無可救藥線",
+      "keywords": "",
+      "sheet": "Hopeless"
+    },
+    "S9900_02": {
+      "ori": "S9900_02",
+      "name": "",
+      "ref": "",
+      "desc": "無可救藥線，未啟用",
+      "keywords": "",
+      "sheet": "Hopeless"
+    },
+    "S9901_01": {
+      "ori": "S9901_01",
+      "name": "回憶過往",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Hopeless"
+    },
+    "S9902_01": {
+      "ori": "S9902_01",
+      "name": "唐門會議",
+      "ref": "",
+      "desc": "無可救藥線",
+      "keywords": "",
+      "sheet": "Hopeless"
+    },
+    "S9902_02": {
+      "ori": "S9902_02",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S9903_01": {
+      "ori": "S9903_01",
+      "name": "貢獻點評",
+      "ref": "",
+      "desc": "第一次貢獻點評",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S9903_02": {
+      "ori": "S9903_02",
+      "name": "貢獻點評",
+      "ref": "",
+      "desc": "第二次貢獻點評",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S9903_03": {
+      "ori": "S9903_03",
+      "name": "",
+      "ref": "",
+      "desc": "第三次貢獻點評",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S9904_01": {
+      "ori": "S9904_01",
+      "name": "大師兄玩樂",
+      "ref": "",
+      "desc": "初次大師兄介紹事件",
+      "keywords": "初識唐布衣",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S9905_01": {
+      "ori": "S9905_01",
+      "name": "情書",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Hopeless"
+    },
+    "S9907_01": {
+      "ori": "S9907_01",
+      "name": "通緝犯葉雲舟",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Hopeless"
+    },
+    "Study": {
+      "ori": "Study",
+      "name": "講經堂",
+      "ref": "講經堂",
+      "desc": "進入講經堂，包含三師兄介紹事件",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "CT_S9906_01": {
+      "ori": "CT_S9906_01",
+      "name": "決戰菜市場",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Hopeless"
+    },
+    "CT_M0000_00": {
+      "ori": "CT_M0000_00",
+      "name": "無可救藥的故事",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "Hopeless"
+    },
+    "CT_S0105_02": {
+      "ori": "CT_S0105_02",
+      "name": "假趙活審判",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "CT_M7005_00_01": {
+      "ori": "CT_M7005_00_01",
+      "name": "修羅場",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "SectDestroy"
     }
   }
 }

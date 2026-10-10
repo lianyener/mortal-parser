@@ -1,9 +1,9 @@
 {
-    "BL_1000": {
-        "name": "大鬧飛石幫",
-        "desc": "戰役教學，大師兄帶你報復飛石幫",
+    "BL_0000": {
         "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
+        "name": "",
+        "desc": "",
         "keywords": ""
     },
     "BL_0000_2": {
@@ -13,7 +13,7 @@
         "desc": "",
         "keywords": ""
     },
-    "BL_0000": {
+    "BL_0000_3": {
         "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
         "name": "",
@@ -30,15 +30,15 @@
     "BL_0001": {
         "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
-        "name": "",
-        "desc": "",
+        "name": "進攻飛石幫",
+        "desc": "無可救藥線月會選擇反客為主攻擊飛石幫",
         "keywords": ""
     },
-    "BL_0000_3": {
+    "BL_1000": {
         "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
-        "name": "",
-        "desc": "",
+        "name": "大鬧飛石幫",
+        "desc": "戰役教學，大師兄帶你報復飛石幫",
         "keywords": ""
     },
     "BL_1201_01": {
@@ -69,6 +69,13 @@
         "desc": "",
         "keywords": ""
     },
+    "BL_1305_02": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.200*]",
+        "ref": "唐門 vs 天武門",
+        "name": "和天武門操練",
+        "desc": "",
+        "keywords": ""
+    },
     "BL_1306_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "青城派 vs 地獄道",
@@ -81,13 +88,6 @@
         "ref": "唐門 vs 山賊",
         "name": "大戰山賊",
         "desc": "逃離青城遭遇攔路骰出山賊",
-        "keywords": ""
-    },
-    "BL_1305_02": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.200*]",
-        "ref": "唐門 vs 天武門",
-        "name": "和天武門操練",
-        "desc": "",
         "keywords": ""
     },
     "BL_1401_01": {
@@ -111,13 +111,6 @@
         "desc": "治療大師兄事件，選擇兩邊都揍",
         "keywords": ""
     },
-    "BL_1601_02": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
-        "ref": "唐門 vs 地獄道",
-        "name": "虛應地獄道",
-        "desc": "前往武林大會途中遭遇地獄道，選擇虛應或說服",
-        "keywords": ""
-    },
     "BL_1501_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.100*]",
         "ref": "唐門 vs 崆峒派",
@@ -132,11 +125,32 @@
         "desc": "前往武林大會途中遭遇地獄道，選擇全力迎戰",
         "keywords": ""
     },
+    "BL_1601_02": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
+        "ref": "唐門 vs 地獄道",
+        "name": "虛應地獄道",
+        "desc": "前往武林大會途中遭遇地獄道，選擇虛應或說服",
+        "keywords": ""
+    },
+    "BL_1602_01": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
+        "ref": "唐門 vs 丐幫",
+        "name": "迎戰畜生道",
+        "desc": "前往武林大會途中遭遇畜生道，選擇全力迎戰",
+        "keywords": ""
+    },
     "BL_1602_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
         "name": "虛應畜生道",
         "desc": "前往武林大會途中遭遇畜生道，選擇虛應或說服",
+        "keywords": ""
+    },
+    "BL_1603_01": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.003*]",
+        "ref": "唐門 vs 白鯊幫",
+        "name": "迎戰餓鬼道",
+        "desc": "前往武林大會途中遭遇餓鬼道，選擇全力迎戰",
         "keywords": ""
     },
     "BL_1603_02": {
@@ -153,18 +167,11 @@
         "desc": "前往武林大會途中遭遇餓鬼道，說服失敗且高道德分岐",
         "keywords": ""
     },
-    "BL_1603_01": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.003*]",
-        "ref": "唐門 vs 白鯊幫",
-        "name": "迎戰餓鬼道",
-        "desc": "前往武林大會途中遭遇餓鬼道，選擇全力迎戰",
-        "keywords": ""
-    },
-    "BL_1602_01": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
-        "ref": "唐門 vs 丐幫",
-        "name": "迎戰畜生道",
-        "desc": "前往武林大會途中遭遇畜生道，選擇全力迎戰",
+    "BL_1611_01": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.009*]",
+        "ref": "唐門 vs 峨嵋派",
+        "name": "揍峨嵋派",
+        "desc": "前往武林大會途中遭遇峨嵋派，選擇揍他們",
         "keywords": ""
     },
     "BL_1613_01": {
@@ -172,13 +179,6 @@
         "ref": "唐門 vs 崆峒派",
         "name": "大戰崆峒",
         "desc": "前往武林大會途中遭遇崆峒派，金烏存活且宋悲未同行觸發",
-        "keywords": ""
-    },
-    "BL_1611_01": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.009*]",
-        "ref": "唐門 vs 峨嵋派",
-        "name": "揍峨嵋派",
-        "desc": "前往武林大會途中遭遇峨嵋派，選擇揍他們",
         "keywords": ""
     },
     "BL_1614_01": {
@@ -191,62 +191,76 @@
     "BL_1615_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+崆峒派 vs 點蒼派+青城派+全真派+峨嵋派+嵩山派+丐幫+南宮世家+官兵+飛石幫",
-        "name": "",
-        "desc": "",
+        "name": "大戰正道",
+        "desc": "武林大會錦香宮事變時支持錦香宮，成為崆峒掌派人分岐",
         "keywords": ""
     },
     "BL_1615_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 點蒼派+峨嵋派+丐幫+青城派+嵩山派+崆峒派+全真派+南宮世家+官兵+飛石幫",
-        "name": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "BL_1616_01": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
-        "ref": "唐門+飛石幫+崆峒派 vs 地獄道+白鯊幫",
-        "name": "",
-        "desc": "",
+        "name": "大戰正道",
+        "desc": "武林大會錦香宮事變時支持錦香宮，非崆峒掌派人分岐",
         "keywords": ""
     },
     "BL_1615_03": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+青城派+點蒼派+全真派+峨嵋派+嵩山派+崆峒派+飛石幫+丐幫+南宮世家 vs 錦香宮",
-        "name": "",
-        "desc": "",
+        "name": "和正道同陣線",
+        "desc": "武林大會錦香宮事變時支持正道",
+        "keywords": ""
+    },
+    "BL_1616_01": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
+        "ref": "唐門+飛石幫+崆峒派 vs 地獄道+白鯊幫",
+        "name": "迎戰泥教",
+        "desc": "武林大會尾聲迎戰泥教，崆峒掌派人且飛石幫協助分岐",
         "keywords": ""
     },
     "BL_1616_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "唐門+飛石幫 vs 地獄道+白鯊幫",
-        "name": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "BL_1616_04": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
-        "ref": "唐門 vs 地獄道+白鯊幫",
-        "name": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "BL_1702_01": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
-        "ref": "唐門 vs 廣州唐門",
-        "name": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "BL_1701_01": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
-        "ref": "唐門 vs 飛石幫",
-        "name": "",
-        "desc": "",
+        "name": "迎戰泥教",
+        "desc": "武林大會尾聲迎戰泥教，飛石幫協助分岐",
         "keywords": ""
     },
     "BL_1616_03": {
         "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "唐門+崆峒派 vs 地獄道+白鯊幫",
+        "name": "迎戰泥教",
+        "desc": "武林大會尾聲迎戰泥教，崆峒掌派人分岐",
+        "keywords": ""
+    },
+    "BL_1616_04": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
+        "ref": "唐門 vs 地獄道+白鯊幫",
+        "name": "迎戰泥教",
+        "desc": "武林大會尾聲迎戰泥教，一般分岐",
+        "keywords": ""
+    },
+    "BL_1701_01": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
+        "ref": "唐門 vs 飛石幫",
+        "name": "進攻飛石幫",
+        "desc": "收到檄文後月會選擇反客為主攻擊飛石幫",
+        "keywords": ""
+    },
+    "BL_1702_01": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
+        "ref": "唐門 vs 廣州唐門",
+        "name": "戰前特訓",
+        "desc": "東西大戰準備工作，選擇特訓",
+        "keywords": ""
+    },
+    "BL_1801_01": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
+        "ref": "唐門+峨嵋派+青城派+丐幫+飛石幫 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+天武門+峨嵋派+青城派+崆峒派",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
+    "BL_1801_02": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
+        "ref": "唐門+峨嵋派+青城派+丐幫+飛石幫 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+天武門+峨嵋派+青城派+崆峒派",
         "name": "",
         "desc": "",
         "keywords": ""
@@ -265,6 +279,13 @@
         "desc": "",
         "keywords": ""
     },
+    "BL_1803_01": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
+        "ref": "唐門 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+天武門+峨嵋派+青城派+崆峒派",
+        "name": "",
+        "desc": "",
+        "keywords": ""
+    },
     "BL_1803_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+飛石幫+錦香宮 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+峨嵋派+青城派+崆峒派+官兵",
@@ -272,9 +293,9 @@
         "desc": "",
         "keywords": ""
     },
-    "BL_1803_01": {
+    "BL_1804_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
-        "ref": "唐門 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+天武門+峨嵋派+青城派+崆峒派",
+        "ref": "唐門 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派",
         "name": "",
         "desc": "",
         "keywords": ""
@@ -286,25 +307,11 @@
         "desc": "討伐譚霸刀事件提早到江陵，渡口打工分岐",
         "keywords": ""
     },
-    "BL_1804_01": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
-        "ref": "唐門 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派",
-        "name": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "BL_1801_01": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
-        "ref": "唐門+峨嵋派+青城派+丐幫+飛石幫 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+天武門+峨嵋派+青城派+崆峒派",
-        "name": "",
-        "desc": "",
-        "keywords": ""
-    },
-    "BL_1801_02": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
-        "ref": "唐門+峨嵋派+青城派+丐幫+飛石幫 vs 全真派+丐幫+南宮世家+嵩山派+點蒼派+天武門+峨嵋派+青城派+崆峒派",
-        "name": "",
-        "desc": "",
+    "BL_2001": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.300*]",
+        "ref": "丐幫+白鯊幫 vs 官兵",
+        "name": "幫助白鯊幫",
+        "desc": "討伐譚霸刀事件提早到江陵，渡口打工分岐，會白鯊語分岐",
         "keywords": ""
     },
     "BL_2002": {
@@ -321,32 +328,11 @@
         "desc": "江陵大戰選擇加入戰鬥",
         "keywords": ""
     },
-    "BL_2001": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.300*]",
-        "ref": "丐幫+白鯊幫 vs 官兵",
-        "name": "幫助白鯊幫",
-        "desc": "討伐譚霸刀事件提早到江陵，渡口打工分岐，會白鯊語分岐",
-        "keywords": ""
-    },
     "BL_3002": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門 vs 丐幫+官兵",
         "name": "加入混戰",
         "desc": "江陵大戰在別派人馬登場後加入戰鬥",
-        "keywords": ""
-    },
-    "BL_3005": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
-        "ref": "唐門 vs 丐幫",
-        "name": "鄰鎮大戰丐幫",
-        "desc": "江陵大戰退至鄰鎮分岐，客棧與丐幫開戰",
-        "keywords": ""
-    },
-    "BL_3004": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
-        "ref": "唐門 vs 丐幫+官兵",
-        "name": "出城衝殺",
-        "desc": "",
         "keywords": ""
     },
     "BL_3003": {
@@ -356,11 +342,18 @@
         "desc": "江陵大戰高性情低戰術分岐",
         "keywords": ""
     },
-    "BL_3101": {
+    "BL_3004": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
+        "ref": "唐門 vs 丐幫+官兵",
+        "name": "出城衝殺",
+        "desc": "",
+        "keywords": ""
+    },
+    "BL_3005": {
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
-        "name": "第二陣",
-        "desc": "江陵圍城總攻擊第二陣",
+        "name": "鄰鎮大戰丐幫",
+        "desc": "江陵大戰退至鄰鎮分岐，客棧與丐幫開戰",
         "keywords": ""
     },
     "BL_3100": {
@@ -370,11 +363,18 @@
         "desc": "江陵圍城總攻擊第一陣",
         "keywords": ""
     },
-    "BL_3300": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
-        "ref": "唐門 vs 飛石幫",
-        "name": "迎戰飛石幫",
-        "desc": "每況愈下事件觸發",
+    "BL_3101": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
+        "ref": "唐門 vs 丐幫",
+        "name": "第二陣",
+        "desc": "江陵圍城總攻擊第二陣",
+        "keywords": ""
+    },
+    "BL_3102": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
+        "ref": "唐門+崆峒派+點蒼派+南宮世家+嵩山派+全真派+青城派 vs 丐幫+官兵",
+        "name": "第三陣",
+        "desc": "江陵圍城總攻擊第三陣",
         "keywords": ""
     },
     "BL_3200": {
@@ -382,6 +382,13 @@
         "ref": "唐門 vs 丐幫",
         "name": "",
         "desc": "",
+        "keywords": ""
+    },
+    "BL_3300": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
+        "ref": "唐門 vs 飛石幫",
+        "name": "迎戰飛石幫",
+        "desc": "每況愈下事件觸發",
         "keywords": ""
     },
     "BL_4001": {
@@ -468,11 +475,11 @@
         "desc": "藏寶圖事件在樓下等",
         "keywords": ""
     },
-    "BL_3102": {
+    "BL_S0018_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
-        "ref": "唐門+崆峒派+點蒼派+南宮世家+嵩山派+全真派+青城派 vs 丐幫+官兵",
-        "name": "第三陣",
-        "desc": "江陵圍城總攻擊第三陣",
+        "ref": "唐門 vs 崆峒派+嵩山派+全真派+青城派",
+        "name": "唐門激戰",
+        "desc": "藏寶圖事件逃入唐門後開戰",
         "keywords": ""
     },
     "BL_S0024_01": {
@@ -482,25 +489,11 @@
         "desc": "乞丐與和尚事件，腦衝開打或選擇幫自己人",
         "keywords": ""
     },
-    "BL_S0018_02": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
-        "ref": "唐門 vs 崆峒派+嵩山派+全真派+青城派",
-        "name": "唐門激戰",
-        "desc": "藏寶圖事件逃入唐門後開戰",
-        "keywords": ""
-    },
     "BL_S0024_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "丐幫+嵩山派 vs 唐門",
         "name": "阻止唐門",
         "desc": "乞丐與和尚事件，選擇依三師兄指示",
-        "keywords": ""
-    },
-    "BL_S0210_01": {
-        "ori": "[*System.Battle*]-[*EnemyTeam.500*]",
-        "ref": "唐門 vs 廣州唐門",
-        "name": "被同門追殺",
-        "desc": "鬼抓人事件選擇不去捉鬼",
         "keywords": ""
     },
     "BL_S0106_01": {
@@ -515,6 +508,13 @@
         "ref": "唐門 vs 廣州唐門",
         "name": "全體對練",
         "desc": "假趙活乾娘事件，骰到全體對練",
+        "keywords": ""
+    },
+    "BL_S0210_01": {
+        "ori": "[*System.Battle*]-[*EnemyTeam.500*]",
+        "ref": "唐門 vs 廣州唐門",
+        "name": "被同門追殺",
+        "desc": "鬼抓人事件選擇不去捉鬼",
         "keywords": ""
     },
     "BL_S9906_01": {

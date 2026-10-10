@@ -1859,9 +1859,11 @@ export async function parseMission() {
             mergeRelation(triggerObj.rel.pre, statment.rel);
 
             // 有時間條件則更新最早最晚觸發時間
-            const match = statment.text.match(regexTime);
-            if (match && regexMinTime.test(match[1])) triggerObj.minTime = { year: match[2], month: match[3], stage: match[4] };
-            if (match && regexMaxTime.test(match[1])) triggerObj.maxTime = { year: match[2], month: match[3], stage: match[4] };
+            if (!triggerData._dayCheck || triggerData._timeCheckType !== '特定') {
+              const match = statment.text.match(regexTime);
+              if (match && regexMinTime.test(match[1])) triggerObj.minTime = { year: match[2], month: match[3], stage: match[4] };
+              if (match && regexMaxTime.test(match[1])) triggerObj.maxTime = { year: match[2], month: match[3], stage: match[4] };
+            }
           }
 
           // 加入條件
@@ -1873,9 +1875,10 @@ export async function parseMission() {
 
         // 確認是否為地點觸發並判斷非地點觸發之優先權
         const position = triggerData._position;
-        const priority = type == 'Main' ? 1 : triggerData._beforeMainMission ? 0 : 2;
+        let priority = type == 'Main' ? 1 : triggerData._beforeMainMission ? 0 : 2;
         if (position != '無') {
           triggerObj.condition.push(`[*Custom.GoTo*][*Label.Place,${positionMap[position] ?? 'Unknown'}*]`);
+          priority = 4;
         } else if (priority != 1) {
           triggerObj.condition.push(`※[*Custom.TriggerPriority,${priority ? 'LowerThan' : 'HigherThan'}*]`);
         }
