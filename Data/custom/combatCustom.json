@@ -1,3 +1,4 @@
 {
-  "CL_1814_01": { "remark": ["※[*Label.Flag,TC0001*]=3：當前版本設定可能有誤，應為[*Label.Flag,TC0003*]=1"] }
+  "CL_1814_01": { "remark": ["※[*Label.Flag,TC0001*]=3：當前版本設定可能有誤，應為[*Label.Flag,TC0003*]=1"] },
+  "CL_1811_01": { "remark": ["※[*Label.Flag,TC0005*]=2：當前版本設定可能有誤，應為[*Label.Flag,TC0006*]=1"] }
 }

@@ -1360,15 +1360,15 @@
     "CL_1810_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special407*]",
         "ref": "在山上等 上官隼 戰上官隼",
-        "name": "",
-        "desc": "",
+        "name": "援護小梅",
+        "desc": "東西大戰武林盟攻上山，小梅線",
         "keywords": ""
     },
     "CL_1811_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special408*]",
         "ref": "在山上等 向無憂 戰向無憂",
-        "name": "",
-        "desc": "",
+        "name": "援護三師兄",
+        "desc": "東西大戰武林盟攻上山，無人出戰向無憂",
         "keywords": ""
     },
     "CL_1812_01": {
@@ -1403,7 +1403,7 @@
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special212_1*]",
         "ref": "護衛三師兄 無相祖師 戰無相祖師",
         "name": "再戰無相祖師",
-        "desc": "東西大戰護衛三師兄，遇無相祖師",
+        "desc": "東西大戰護衛三師兄，初戰無相祖師撐8回合",
         "keywords": ""
     },
     "CL_2001_01": {
