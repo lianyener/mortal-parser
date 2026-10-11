@@ -1248,57 +1248,57 @@
     "CL_1801_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.brother1*]",
         "ref": "小梅 大師兄 戰唐布衣",
-        "name": "",
-        "desc": "",
+        "name": "戰假大師兄",
+        "desc": "東西大戰前，沒看出假大師兄真身",
         "keywords": ""
     },
     "CL_1802_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special801*]",
         "ref": "護衛三師兄 譚霸刀 戰譚霸刀",
-        "name": "",
-        "desc": "",
+        "name": "戰譚霸刀",
+        "desc": "東西大戰護衛三師兄，第一個刺客骰到罪犯",
         "keywords": ""
     },
     "CL_1802_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.hero1*]",
         "ref": "護衛三師兄 方震天 戰少俠",
-        "name": "",
-        "desc": "",
+        "name": "戰方震天",
+        "desc": "東西大戰護衛三師兄，第一個刺客骰到少俠",
         "keywords": ""
     },
     "CL_1802_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special811*]",
         "ref": "護衛三師兄 唐衫 戰唐衫",
-        "name": "",
-        "desc": "",
+        "name": "戰唐衫",
+        "desc": "東西大戰護衛三師兄，第一個刺客骰到叛徒",
         "keywords": ""
     },
     "CL_1803_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special207*]",
         "ref": "護衛三師兄 金烏上人 戰金烏上人",
-        "name": "",
-        "desc": "",
+        "name": "戰金烏上人",
+        "desc": "東西大戰護衛三師兄，第二個刺客骰到陰謀家",
         "keywords": ""
     },
     "CL_1803_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special204*]",
         "ref": "護衛三師兄 火龍仙君 戰火龍仙君",
-        "name": "",
-        "desc": "",
+        "name": "戰火龍仙君",
+        "desc": "東西大戰護衛三師兄，第二個刺客骰到陰謀家",
         "keywords": ""
     },
     "CL_1803_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special826*]",
         "ref": "護衛三師兄 釋明 戰釋明",
-        "name": "",
-        "desc": "",
+        "name": "戰釋明",
+        "desc": "東西大戰護衛三師兄，第二個刺客骰到謝頂客",
         "keywords": ""
     },
     "CL_1803_04": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.waiter1*]",
         "ref": "護衛三師兄 店小二 戰店小二",
-        "name": "",
-        "desc": "",
+        "name": "戰楊玄奇",
+        "desc": "東西大戰護衛三師兄，第二個刺客骰到路人甲",
         "keywords": ""
     },
     "CL_1804_01": {
@@ -1311,50 +1311,50 @@
     "CL_1805_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger_group*]",
         "ref": "圍攻唐門 武林盟群俠 戰武林盟群俠",
-        "name": "",
-        "desc": "",
+        "name": "戰武林盟群俠",
+        "desc": "圍攻唐門時首波敵人一百人，菁英出戰",
         "keywords": ""
     },
     "CL_1806_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special801*]",
         "ref": "圍攻唐門 譚霸刀 戰譚霸刀",
-        "name": "",
-        "desc": "",
+        "name": "譚霸刀帶頭",
+        "desc": "圍攻唐門時首波敵人3高手，骰到譚霸刀",
         "keywords": ""
     },
     "CL_1806_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special828*]",
         "ref": "圍攻唐門 余公子 戰余公子",
-        "name": "",
-        "desc": "",
+        "name": "余公子帶頭",
+        "desc": "圍攻唐門時首波敵人3高手，骰到余公子",
         "keywords": ""
     },
     "CL_1806_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.fairy1*]",
         "ref": "圍攻唐門 木仙姑 戰仙姑",
-        "name": "",
-        "desc": "",
+        "name": "木仙姑帶頭",
+        "desc": "圍攻唐門時首波敵人3高手，骰到木仙姑",
         "keywords": ""
     },
     "CL_1807_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special6*]",
         "ref": "圍攻唐門 萬里鵬程 戰萬里鵬程",
-        "name": "",
-        "desc": "",
+        "name": "戰萬里鵬程",
+        "desc": "圍攻唐門時首波敵人絕世高手",
         "keywords": ""
     },
     "CL_1808_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger_group*]",
         "ref": "刺殺盟主 武林群俠 戰武林盟群俠",
-        "name": "",
-        "desc": "",
+        "name": "戰武林盟群俠",
+        "desc": "嘗試刺殺盟主，反攻下山時沒有其他門人",
         "keywords": ""
     },
     "CL_1809_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special999*]",
         "ref": "刺殺盟主 瑞笙 戰瑞笙",
-        "name": "",
-        "desc": "",
+        "name": "決戰瑞笙",
+        "desc": "嘗試刺殺盟主，決戰瑞笙",
         "keywords": ""
     },
     "CL_1810_01": {
@@ -1395,15 +1395,15 @@
     "CL_1814_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special212_1*]",
         "ref": "護衛三師兄 無相祖師 戰無相祖師",
-        "name": "",
-        "desc": "",
+        "name": "戰無相祖師",
+        "desc": "東西大戰護衛三師兄，遇無相祖師",
         "keywords": ""
     },
     "CL_1814_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special212_1*]",
         "ref": "護衛三師兄 無相祖師 戰無相祖師",
-        "name": "",
-        "desc": "",
+        "name": "再戰無相祖師",
+        "desc": "東西大戰護衛三師兄，遇無相祖師",
         "keywords": ""
     },
     "CL_2001_01": {

@@ -2290,19 +2290,19 @@
     },
     "M7001_02_01": {
       "ori": "M7001_02_01",
-      "name": "",
+      "name": "圍攻唐門(強制)",
       "ref": "圍攻唐門 強制發生",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "SectDestroy"
     },
     "M7002_01": {
       "ori": "M7002_01",
-      "name": "",
+      "name": "東西武林盟",
       "ref": "東西武林盟",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WestWulin"
     },
     "M7003_01": {
       "ori": "M7003_01",

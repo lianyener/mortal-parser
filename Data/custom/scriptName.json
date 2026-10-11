@@ -5622,133 +5622,133 @@
     },
     "ch8_1_1_2_1": {
         "ori": "ch8_1_1_2_1",
-        "name": "ch8_1_1_2_1",
+        "name": "戰百人結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_1_1_2_2": {
         "ori": "ch8_1_1_2_2",
-        "name": "ch8_1_1_2_2",
+        "name": "三個高手",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_1_1_2_2_1": {
         "ori": "ch8_1_1_2_2_1",
-        "name": "ch8_1_1_2_2_1",
+        "name": "戰三高手結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_1_1_2_3": {
         "ori": "ch8_1_1_2_3",
-        "name": "ch8_1_1_2_3",
+        "name": "戰萬里鵬程結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_1_1_2_4": {
         "ori": "ch8_1_1_2_4",
-        "name": "ch8_1_1_2_4",
+        "name": "大戰百人結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_1_1_2_break_start_01": {
         "ori": "ch8_1_1_2_break_start_01",
-        "name": "ch8_1_1_2_break_start_01",
+        "name": "出陣人選",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_1_1_4": {
         "ori": "ch8_1_1_4",
-        "name": "ch8_1_1_4",
+        "name": "成功退敵",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_1_2": {
         "ori": "ch8_1_2",
-        "name": "ch8_1_2",
+        "name": "東西武林盟",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_1_2_1": {
         "ori": "ch8_1_2_1",
-        "name": "ch8_1_2_1",
+        "name": "福韞出嘴",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_1_2_2": {
         "ori": "ch8_1_2_2",
-        "name": "ch8_1_2_2",
+        "name": "你的反論",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_1_2_3": {
         "ori": "ch8_1_2_3",
-        "name": "ch8_1_2_3",
+        "name": "沒話好說",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_1_2_4": {
         "ori": "ch8_1_2_4",
-        "name": "ch8_1_2_4",
+        "name": "交涉破局",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_1": {
         "ori": "ch8_2_1",
-        "name": "ch8_2_1",
+        "name": "迎戰對策",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_1_1": {
         "ori": "ch8_2_1_1",
-        "name": "ch8_2_1_1",
+        "name": "假大師兄真身",
         "ref": "",
-        "desc": "",
+        "desc": "小梅分岐",
         "keywords": ""
     },
     "ch8_2_1_2": {
         "ori": "ch8_2_1_2",
-        "name": "ch8_2_1_2",
+        "name": "和小梅重逢",
         "ref": "",
-        "desc": "",
+        "desc": "小梅分岐",
         "keywords": ""
     },
     "ch8_2_2": {
         "ori": "ch8_2_2",
-        "name": "ch8_2_2",
+        "name": "小梅守山",
         "ref": "",
-        "desc": "",
+        "desc": "小梅分岐",
         "keywords": ""
     },
     "ch8_2_3": {
         "ori": "ch8_2_3",
-        "name": "ch8_2_3",
+        "name": "大家的任務",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_4_break_start_01": {
         "ori": "ch8_2_4_break_start_01",
-        "name": "ch8_2_4_break_start_01",
+        "name": "大戰決策",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_1": {
         "ori": "ch8_2_5_1",
-        "name": "ch8_2_5_1",
+        "name": "護衛三師兄",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -5762,112 +5762,112 @@
     },
     "ch8_2_5_1_1": {
         "ori": "ch8_2_5_1_1",
-        "name": "ch8_2_5_1_1",
+        "name": "殉志而死",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_2": {
         "ori": "ch8_2_5_2",
-        "name": "ch8_2_5_2",
+        "name": "罪犯登場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_2_1": {
         "ori": "ch8_2_5_2_1",
-        "name": "ch8_2_5_2_1",
+        "name": "戰譚霸刀後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_3": {
         "ori": "ch8_2_5_3",
-        "name": "ch8_2_5_3",
+        "name": "少俠登場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_3_1": {
         "ori": "ch8_2_5_3_1",
-        "name": "ch8_2_5_3_1",
+        "name": "戰方震天後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_4": {
         "ori": "ch8_2_5_4",
-        "name": "ch8_2_5_4",
+        "name": "叛徒登場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_4_1": {
         "ori": "ch8_2_5_4_1",
-        "name": "ch8_2_5_4_1",
+        "name": "戰唐衫後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_5": {
         "ori": "ch8_2_5_5",
-        "name": "ch8_2_5_5",
+        "name": "第二波刺客",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_6": {
         "ori": "ch8_2_5_6",
-        "name": "ch8_2_5_6",
+        "name": "陰謀家登場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_6_1": {
         "ori": "ch8_2_5_6_1",
-        "name": "ch8_2_5_6_1",
+        "name": "戰金烏上人後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_6_2": {
         "ori": "ch8_2_5_6_2",
-        "name": "ch8_2_5_6_2",
+        "name": "戰火龍仙君後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_7": {
         "ori": "ch8_2_5_7",
-        "name": "ch8_2_5_7",
+        "name": "謝頂客登場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_7_1": {
         "ori": "ch8_2_5_7_1",
-        "name": "ch8_2_5_7_1",
+        "name": "戰釋明後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_8": {
         "ori": "ch8_2_5_8",
-        "name": "ch8_2_5_8",
+        "name": "路人甲登場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_8_1": {
         "ori": "ch8_2_5_8_1",
-        "name": "ch8_2_5_8_1",
+        "name": "戰楊玄奇後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_2_5_9": {
         "ori": "ch8_2_5_9",
-        "name": "ch8_2_5_9",
+        "name": "暫無動靜",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -6336,56 +6336,56 @@
     },
     "ch8_5_1": {
         "ori": "ch8_5_1",
-        "name": "ch8_5_1",
+        "name": "戰至力竭",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_5_2": {
         "ori": "ch8_5_2",
-        "name": "ch8_5_2",
+        "name": "最後一人",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_5_3": {
         "ori": "ch8_5_3",
-        "name": "ch8_5_3",
+        "name": "慷慨就義",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_6_1": {
         "ori": "ch8_6_1",
-        "name": "ch8_6_1",
+        "name": "反攻下山",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_6_1_1": {
         "ori": "ch8_6_1_1",
-        "name": "ch8_6_1_1",
+        "name": "全力突圍",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_6_1_1_1": {
         "ori": "ch8_6_1_1_1",
-        "name": "ch8_6_1_1_1",
+        "name": "突圍結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_6_1_2": {
         "ori": "ch8_6_1_2",
-        "name": "ch8_6_1_2",
+        "name": "片甲不留",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_6_1_2_1": {
         "ori": "ch8_6_1_2_1",
-        "name": "ch8_6_1_2_1",
+        "name": "第一戰結果",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -6399,42 +6399,42 @@
     },
     "ch8_6_2": {
         "ori": "ch8_6_2",
-        "name": "ch8_6_2",
+        "name": "殺到山下",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_6_2_1": {
         "ori": "ch8_6_2_1",
-        "name": "ch8_6_2_1",
+        "name": "第二戰結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_6_2_2": {
         "ori": "ch8_6_2_2",
-        "name": "ch8_6_2_2",
+        "name": "殺出血路",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_6_3": {
         "ori": "ch8_6_3",
-        "name": "ch8_6_3",
+        "name": "刺殺盟主",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_6_3_1": {
         "ori": "ch8_6_3_1",
-        "name": "ch8_6_3_1",
+        "name": "決戰結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch8_6_3_2": {
         "ori": "ch8_6_3_2",
-        "name": "ch8_6_3_2",
+        "name": "改朝換代",
         "ref": "",
         "desc": "",
         "keywords": ""

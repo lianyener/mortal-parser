@@ -2233,7 +2233,7 @@ function buildLogicView(content) {
 // 解析戰鬥事件
 export async function parseCombat() {
   // 讀取檔案清單、前置Cache
-  const [files, supportCustom, nameDraft] = await Promise.all([getJsonList('CombatLevel'), getDataJson('supportCustom'), getDataJson('combatName'), loadCache(['GROUP', 'FLAG', 'TERM'])]);
+  const [files, custom, supportCustom, nameDraft] = await Promise.all([getJsonList('CombatLevel'), getDataJson('combatCustom'), getDataJson('supportCustom'), getDataJson('combatName'), loadCache(['GROUP', 'FLAG', 'TERM'])]);
 
   // 初始化
   const regexPct = /^(.+?)(百分比)?$/;
@@ -2517,7 +2517,7 @@ export async function parseCombat() {
       const id = removeUid(file);
       const enemyName = `[*CombatCharacter.Name.${enemyData.Name}*]`;
       const branch = { form: 'branch', type: 'Combat', text: '', branches: [] };
-      const combat = { enemy: enemyName, content: [branch], rel: { pre: {}, post: {}, intra: {}, to: {} } };
+      const combat = { enemy: enemyName, content: [branch], rel: { pre: {}, post: {}, intra: {}, to: {} }, remark: Array.from(custom?.[id]?.remark ?? [], (_, i) => `[*Combat.Remark.${id}.${i}*]`) };
       mergeCharacterRelation(combat.rel.intra, enemyData.Name);
       updateNameDraftItem(nameDraft, id, `${data._desc} 戰${CACHE.TERM.CHARACTER?.[enemyData.Name]}`, `[*System.Combat*]-${enemyName}`);
 
@@ -4183,10 +4183,11 @@ export async function parseLocalization() {
   const converter = OpenCC.Converter({ from: 'twp', to: 'cn' });
 
   // 讀取來源
-  const [battleName, combatName, triggerCustom, missionCustom, missionName, scriptCustom, scriptFree, scriptName, groupCustom, option, dialog, flagCustom, termCustom, term, position, about] =
+  const [battleName, combatName, combatCustom, triggerCustom, missionCustom, missionName, scriptCustom, scriptFree, scriptName, groupCustom, option, dialog, flagCustom, termCustom, term, position, about] =
     await Promise.all([
       getDataJson('battleName'),
       getDataJson('combatName'),
+      getDataJson('combatCustom'),
       getDataJson('triggerCustom'),
       getDataJson('missionCustom'),
       getDataJson('missionName'),
@@ -4292,6 +4293,13 @@ export async function parseLocalization() {
     if (scriptCustom[key]?.remark?.length) {
       zhtw.Script.Remark[key] = {};
       scriptCustom[key].remark.forEach((r, i) => (zhtw.Script.Remark[key][i] = r));
+    }
+  }
+
+  for (const key in combatCustom) {
+    if (combatCustom[key]?.remark?.length) {
+      zhtw.Combat.Remark[key] = {};
+      combatCustom[key].remark.forEach((r, i) => (zhtw.Combat.Remark[key][i] = r));
     }
   }
 
