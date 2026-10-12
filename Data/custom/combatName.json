@@ -1374,15 +1374,15 @@
     "CL_1812_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special102*]",
         "ref": "趕回山上 南宮深 戰南宮深",
-        "name": "",
-        "desc": "",
+        "name": "對決南宮深",
+        "desc": "東西大戰出擊後回防，對決南宮深",
         "keywords": ""
     },
     "CL_1812_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special407*]",
         "ref": "趕回山上 上官隼 戰上官隼",
-        "name": "",
-        "desc": "",
+        "name": "對決上官隼",
+        "desc": "東西大戰出擊後回防，對決上官隼",
         "keywords": ""
     },
     "CL_1813_01": {
