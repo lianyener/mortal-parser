@@ -1803,5 +1803,174 @@
         "effects": ["Story", "Flag", "Combat", "Script", "Relationship", "Info"]
       }
     ]
+  },
+  "S0802_02_break_start_01": {
+    "content": [
+    {
+      "form": "branch",
+      "type": "Talk",
+      "text": "[*BranchType.Talk*]：",
+      "branches": [
+        {
+          "index": 1,
+          "text": "[*Middle.exit*]｜[*Story.x*]",
+          "content": [{ "form": "effect", "type": "Info", "text": "※[*System.NA*]" }],
+          "condition": "[*Custom.InvalidOption*]",
+          "effects": ["Info"]
+        },
+        {
+          "index": 2,
+          "text": "[*Middle.event*]｜[*Story.O_S0802_02_Break_01_001*]",
+          "content": [
+            { "form": "effect", "text": "[*Label.Flag,TC0001.52*]=[*Flag.TC0001.52.0*]" },
+            {
+              "form": "branch",
+              "type": "Option",
+              "text": "[*BranchType.Option*]：",
+              "branches": [
+                {
+                  "index": 1,
+                  "text": "[*Story.O_S0802_02_Break_01_002*]",
+                  "content": [
+                    {
+                      "form": "effect",
+                      "text": "[*Label.Flag,TC0001.52*]=[*Flag.TC0001.52.1*] / ★[*System.Combat*][*Label.Combat,CL_S0802_02_01_01*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_01*]"
+                    }
+                  ],
+                  "effects": ["Flag", "Combat", "Script"]
+                },
+                {
+                  "index": 2,
+                  "text": "[*Story.O_S0802_02_Break_01_003*]",
+                  "content": [{ "form": "effect", "text": "★[*System.Combat*][*Label.Combat,CL_S0802_02_01_02*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_01*]" }],
+                  "effects": ["Combat", "Script"]
+                }
+              ],
+              "effects": ["Flag", "Combat", "Script"]
+            }
+          ],
+          "condition": "[%[*Label.Flag,G11000.0*]=[*Flag.G11000.0.1*]%]",
+          "effects": ["Flag", "Combat", "Script"]
+        },
+        {
+          "index": 3,
+          "text": "[*Middle.event*]｜[*Story.O_S0802_02_Break_01_004*]",
+          "content": [{ "form": "effect", "text": "★[*System.Combat*][*Label.Combat,CL_S0802_02_02*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_02*]" }],
+          "condition": "[%[*Label.Flag,E10000.0*]=[*Flag.E10000.0.0*]%]",
+          "effects": ["Combat", "Script"]
+        },
+        {
+          "index": 4,
+          "text": "[*Middle.event*]｜[*Story.O_S0802_02_Break_01_005*]",
+          "content": [
+            { "form": "effect", "text": "[*Label.Flag,TC0001.53*]=0 / [*Label.Flag,TC0002.39*]=0" },
+            {
+              "form": "branch",
+              "type": "Switch",
+              "text": "[*BranchType.Switch*]：[%[*Label.Flag,M80029.0*]%]",
+              "branches": [
+                {
+                  "index": 1,
+                  "text": "[*Flag.M80029.0.1*]",
+                  "content": [
+                    {
+                      "form": "effect",
+                      "text": "[*Label.Flag,TC0001.53*]=1 / ★[*System.Combat*][*Label.Combat,CL_S0802_02_03_01*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_03*]"
+                    }
+                  ],
+                  "effects": ["Flag", "Combat", "Script"]
+                },
+                {
+                  "index": 2,
+                  "text": "[*Flag.M80029.0.0*]",
+                  "content": [
+                    {
+                      "form": "branch",
+                      "type": "Switch",
+                      "text": "[*BranchType.Switch*]：[%[*Label.Flag,G11003.0*]%]",
+                      "branches": [
+                        {
+                          "index": 1,
+                          "text": "[*Flag.G11003.0.1*]",
+                          "content": [
+                            {
+                              "form": "effect",
+                              "text": "[*Label.Flag,TC0001.53*]=1 / [*Label.Flag,TC0002.39*]=1 / ★[*System.Combat*][*Label.Combat,CL_S0802_02_03_02*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_03*]"
+                            }
+                          ],
+                          "effects": ["Flag", "Combat", "Script"]
+                        },
+                        {
+                          "index": 2,
+                          "text": "[*Custom.Other*]",
+                          "content": [{ "form": "effect", "text": "★[*System.Combat*][*Label.Combat,CL_S0802_02_03_03*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_03*]" }],
+                          "effects": ["Combat", "Script"]
+                        }
+                      ],
+                      "effects": ["Flag", "Combat", "Script"]
+                    }
+                  ],
+                  "effects": ["Flag", "Combat", "Script"]
+                }
+              ],
+              "effects": ["Flag", "Combat", "Script"]
+            }
+          ],
+          "condition": "[%[*Label.Flag,E12005.0*]=[*Flag.E12005.0.1*]%][*Custom.Or*][%[*Label.Flag,G11003.0*]=[*Flag.G11003.0.1*]%]",
+          "effects": ["Flag", "Combat", "Script"]
+        },
+        {
+          "index": 5,
+          "text": "[*Middle.event*]｜[*Story.O_S0802_02_Break_01_006*]",
+          "content": [{ "form": "effect", "text": "★[*System.Combat*][*Label.Combat,CL_S0802_02_04*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_04*]" }],
+          "condition": "[%[*Label.Flag,G11005.0*]=[*Flag.G11005.0.1*]%]",
+          "effects": ["Combat", "Script"]
+        },
+        {
+          "index": 6,
+          "text": "[*Middle.event*]｜[*Story.O_S0802_02_Break_01_007*]",
+          "content": [{ "form": "effect", "text": "★[*System.Combat*][*Label.Combat,CL_S0802_02_05*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_05*]" }],
+          "condition": "[%[*Label.Flag,E12100.0*]=[*Flag.E12100.0.1*]%]",
+          "effects": ["Combat", "Script"]
+        },
+        {
+          "index": 7,
+          "text": "[*Middle.event*]｜[*Story.O_S0802_02_Break_01_008*]",
+          "content": [{ "form": "effect", "text": "★[*System.Combat*][*Label.Combat,CL_S0802_02_06*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_06*]" }],
+          "condition": "[%[*Label.Flag,M80043.0*]=[*Flag.M80043.0.1*]%]",
+          "effects": ["Combat", "Script"]
+        },
+        {
+          "index": 8,
+          "text": "[*Middle.event*]｜[*Story.O_S0802_02_Break_01_009*]",
+          "content": [{ "form": "effect", "text": "★[*System.Combat*][*Label.Combat,CL_S0802_02_07*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_07*]" }],
+          "condition": "[%[*Label.Flag,M80068.0*]=[*Flag.M80068.0.1*]%]",
+          "effects": ["Combat", "Script"]
+        },
+        {
+          "index": 9,
+          "text": "[*Middle.event*]｜[*Story.O_S0802_02_Break_01_010*]",
+          "content": [{ "form": "effect", "text": "★[*System.Combat*][*Label.Combat,CL_S0802_02_08*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_08*]" }],
+          "condition": "[%[*Label.Flag,M80069.0*]=[*Flag.M80069.0.1*]%]",
+          "effects": ["Combat", "Script"]
+        },
+        {
+          "index": 10,
+          "text": "[*Middle.event*]｜[*Story.O_S0802_02_Break_01_011*]",
+          "content": [{ "form": "effect", "text": "★[*System.Combat*][*Label.Combat,CL_S0802_02_09*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_09*]" }],
+          "condition": "[%[*Label.Flag,M80070.0*]=[*Flag.M80070.0.1*]%][*Custom.And*][%[*Label.Flag,M80059.0*]=[*Flag.M80059.0.1*]%]",
+          "effects": ["Combat", "Script"]
+        },
+        {
+          "index": 11,
+          "text": "[*Middle.event*]｜[*Story.O_S0802_02_Break_01_012*]",
+          "content": [{ "form": "effect", "text": "★[*System.Combat*][*Label.Combat,CL_S0802_02_10*] / ◎[*Custom.CombatNextScript*][*Label.Script,S0802_02_10*]" }],
+          "condition": "[%[*Label.Flag,M80071.0*]=[*Flag.M80071.0.1*]%][*Custom.And*][%[*Label.Flag,M80058.0*]=[*Flag.M80058.0.1*]%]",
+          "effects": ["Combat", "Script"]
+        }
+      ],
+      "effects": ["Info", "Flag", "Combat", "Script"]
+    }
+  ]
   }
 }

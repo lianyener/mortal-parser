@@ -1388,8 +1388,8 @@
     "CL_1813_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special999*]",
         "ref": "眉山之顛 瑞笙 戰瑞笙",
-        "name": "",
-        "desc": "",
+        "name": "決戰瑞笙",
+        "desc": "決戰眉山之顛觸發",
         "keywords": ""
     },
     "CL_1814_01": {
@@ -1640,8 +1640,8 @@
     "CL_5102_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl4*]",
         "ref": "後山挑戰龍湘 戰龍湘",
-        "name": "",
-        "desc": "",
+        "name": "戰龍湘",
+        "desc": "龍湘的挑戰",
         "keywords": ""
     },
     "CL_5103_01": {
@@ -2116,92 +2116,92 @@
     "CL_S0802_02_01_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.sister1*]",
         "ref": "決戰前後山 小師妹1 戰唐默鈴",
-        "name": "",
-        "desc": "",
+        "name": "和全力小師妹切磋",
+        "desc": "決戰前後山選擇和小師妹切磋，要求全力分岐",
         "keywords": ""
     },
     "CL_S0802_02_01_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.sister1*]",
         "ref": "決戰前後山 小師妹2 戰唐默鈴",
-        "name": "",
-        "desc": "",
+        "name": "和小師妹切磋",
+        "desc": "決戰前後山選擇和小師妹切磋",
         "keywords": ""
     },
     "CL_S0802_02_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.brother1*]",
         "ref": "決戰前後山 大師兄 戰唐布衣",
-        "name": "",
-        "desc": "",
+        "name": "和大師兄切磋",
+        "desc": "決戰前後山選擇",
         "keywords": ""
     },
     "CL_S0802_02_03_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl4*]",
         "ref": "決戰前後山 龍湘1 戰龍湘",
-        "name": "",
-        "desc": "",
+        "name": "與覺醒龍湘切磋",
+        "desc": "決戰前後山選擇與龍湘切磋，龍湘覺醒分岐",
         "keywords": ""
     },
     "CL_S0802_02_03_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl4*]",
         "ref": "決戰前後山 龍湘2 戰龍湘",
-        "name": "",
-        "desc": "",
+        "name": "與結緣龍湘切磋",
+        "desc": "決戰前後山選擇與龍湘切磋，和龍湘結緣分岐",
         "keywords": ""
     },
     "CL_S0802_02_03_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl4*]",
         "ref": "決戰前後山 龍湘3 戰龍湘",
-        "name": "",
-        "desc": "",
+        "name": "與龍湘切磋",
+        "desc": "決戰前後山選擇與龍湘切磋",
         "keywords": ""
     },
     "CL_S0802_02_04": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl6*]",
         "ref": "決戰前後山 小蘭 戰夏侯蘭",
-        "name": "",
-        "desc": "",
+        "name": "請師傅指點",
+        "desc": "決戰前後山選擇請師傅指點",
         "keywords": ""
     },
     "CL_S0802_02_05": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special3*]",
         "ref": "決戰前後山 葉雲舟 戰葉雲舟",
-        "name": "",
-        "desc": "",
+        "name": "與葉雲舟切磋",
+        "desc": "決戰前後山選擇與葉雲舟切磋",
         "keywords": ""
     },
     "CL_S0802_02_06": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special829*]",
         "ref": "決戰前後山 南溪 戰南溪",
-        "name": "",
-        "desc": "",
+        "name": "與南溪切磋",
+        "desc": "決戰前後山選擇與南溪切磋",
         "keywords": ""
     },
     "CL_S0802_02_07": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special201*]",
         "ref": "決戰前後山 鄒博 戰鄒博",
-        "name": "",
-        "desc": "",
+        "name": "與鄒博請教",
+        "desc": "決戰前後山選擇與鄒博請教",
         "keywords": ""
     },
     "CL_S0802_02_08": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special808*]",
         "ref": "決戰前後山 解無塵 戰解無塵",
-        "name": "",
-        "desc": "",
+        "name": "與解無塵切磋",
+        "desc": "決戰前後山選擇與解無塵切磋",
         "keywords": ""
     },
     "CL_S0802_02_09": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special408*]",
         "ref": "決戰前後山 向無憂 戰向無憂",
-        "name": "",
-        "desc": "",
+        "name": "請向無憂請教",
+        "desc": "決戰前後山選擇請向無憂請教",
         "keywords": ""
     },
     "CL_S0802_02_10": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special405*]",
         "ref": "決戰前後山 申屠龍 戰申屠龍",
-        "name": "",
-        "desc": "",
+        "name": "向申屠龍請教",
+        "desc": "決戰前後山選擇向申屠龍請教",
         "keywords": ""
     },
     "CL_S2001_01": {
