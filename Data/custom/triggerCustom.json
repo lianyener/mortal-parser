@@ -727,6 +727,76 @@
     "type": "Sub",
     "orderKey": "4-01-2-4-M7005_00_01"
   },
+  "CT_BW902": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "1", "month": "4", "stage": "1" },
+    "maxTime": { "year": "1", "month": "5", "stage": "3" },
+    "condition": ["※[*Custom.ReferTo*]:[*Label.Position,Back_Work_001*]"],
+    "script": "back_work_902",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，實際是從[*Label.Position,Back_Work_001*]依權重及條件隨機觸發"],
+    "type": "Free",
+    "orderKey": "1-04-1-5-BW902"
+  },
+  "CT_BW501": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "1", "month": "8", "stage": "2" },
+    "condition": ["※[*Custom.ReferTo*]:[*Label.Position,Back_Work_001*]"],
+    "script": "back_work_501",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，實際是從[*Label.Position,Back_Work_001*]依權重及條件隨機觸發"],
+    "type": "Free",
+    "orderKey": "1-08-2-5-BW501"
+  },
+  "CT_BF901": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "2", "month": "10", "stage": "3" },
+    "condition": ["※[*Custom.ReferTo*]:[*Label.Position,Back_Free_001*]"],
+    "script": "back_free_901",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，實際是從[*Label.Position,Back_Free_001*]依權重及條件隨機觸發"],
+    "type": "Free",
+    "orderKey": "2-10-3-5-BF901"
+  },
+  "CT_AW901": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "2", "month": "10", "stage": "3" },
+    "maxTime": { "year": "2", "month": "12", "stage": "3" },
+    "condition": ["※[*Custom.ReferTo*]:[*Label.Position,Alchemy_Work_001*]"],
+    "script": "alchemy_work_901",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，實際是從[*Label.Position,Alchemy_Work_001*]依權重及條件隨機觸發"],
+    "type": "Free",
+    "orderKey": "2-10-3-5-AW901"
+  },
+  "CT_KW902": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "2", "month": "10", "stage": "3" },
+    "maxTime": { "year": "2", "month": "12", "stage": "3" },
+    "condition": ["※[*Custom.ReferTo*]:[*Label.Position,Kitchen_Work_001*]"],
+    "script": "kitchen_work_902",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，實際是從[*Label.Position,Kitchen_Work_001*]依權重及條件隨機觸發"],
+    "type": "Free",
+    "orderKey": "2-10-3-5-KW902"
+  },
+  "CT_KW903": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "1", "month": "8", "stage": "3" },
+    "maxTime": { "year": "2", "month": "10", "stage": "3" },
+    "condition": ["※[*Custom.ReferTo*]:[*Label.Position,Kitchen_Work_001*]"],
+    "script": "kitchen_work_902",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，實際是從[*Label.Position,Kitchen_Work_001*]依權重及條件隨機觸發"],
+    "type": "Free",
+    "orderKey": "1-08-3-5-KW903"
+  },
   "CT_S0023_01": {
     "mission": "CM_S0023",
     "active": true,

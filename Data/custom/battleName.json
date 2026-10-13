@@ -401,8 +401,8 @@
     "BL_5001": {
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
-        "name": "",
-        "desc": "",
+        "name": "丐幫襲擊",
+        "desc": "鬧市逛街和丐幫搶菜觸發",
         "keywords": ""
     },
     "BL_5002": {

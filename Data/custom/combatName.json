@@ -1423,8 +1423,8 @@
     "CL_2003_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl5*]",
         "ref": "小梅事件 關於四師兄 戰虞小梅",
-        "name": "",
-        "desc": "",
+        "name": "阻止小梅",
+        "desc": "小梅下藥事件，嘗試阻止小梅",
         "keywords": ""
     },
     "CL_3001": {
@@ -1556,22 +1556,22 @@
     "CL_5001_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.stone1*]",
         "ref": "大門 門市 遇見飛石幫 戰undefined",
-        "name": "",
-        "desc": "",
+        "name": "和飛石幫打架",
+        "desc": "鬧市逛街飛石幫尋釁，骰出打架",
         "keywords": ""
     },
     "CL_5002_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee491*]",
         "ref": "大門 門市 遇見錦香宮 戰錦香弟子",
-        "name": "",
-        "desc": "",
+        "name": "錦香弟子開砍",
+        "desc": "鬧市逛街錦香宮誤會",
         "keywords": ""
     },
     "CL_5003_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.artist1*]",
         "ref": "大門 門市 看武師表演 戰武師",
-        "name": "",
-        "desc": "",
+        "name": "和賣藝人爭執",
+        "desc": "鬧市逛街賣藝人冤你，選擇雙倍錢砸他",
         "keywords": ""
     },
     "CL_5004_01": {
@@ -1591,8 +1591,8 @@
     "CL_5006_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.artist1*]",
         "ref": "姜記肉包 砸店 江湖拳師 戰武師",
-        "name": "",
-        "desc": "",
+        "name": "砸店",
+        "desc": "姜記肉包事件選擇砸店",
         "keywords": ""
     },
     "CL_5100_01": {
@@ -1731,43 +1731,43 @@
     "CL_B0001_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger1*]",
         "ref": "後山 挑柴遇敵 第一年上半 戰路人俠",
-        "name": "",
-        "desc": "",
+        "name": "戰路人俠",
+        "desc": "後山挑柴遇不速之客，第一年上半",
         "keywords": ""
     },
     "CL_B0001_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger1*]",
         "ref": "後山 挑柴遇敵 第一年下半 戰路人俠",
-        "name": "",
-        "desc": "",
+        "name": "戰路人俠",
+        "desc": "後山挑柴遇不速之客，第一年下半",
         "keywords": ""
     },
     "CL_B0001_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger1*]",
         "ref": "後山 挑柴遇敵 第二年上半 戰路人俠",
-        "name": "",
-        "desc": "",
+        "name": "戰路人俠",
+        "desc": "後山挑柴遇不速之客，第二年上半",
         "keywords": ""
     },
     "CL_B0001_04": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger1*]",
         "ref": "後山 挑柴遇敵 第二年下半 戰路人俠",
-        "name": "",
-        "desc": "",
+        "name": "戰路人俠",
+        "desc": "後山挑柴遇不速之客，第二年下半",
         "keywords": ""
     },
     "CL_B0001_05": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.hero1*]",
         "ref": "後山 挑柴遇敵 第三年上半 戰少俠",
-        "name": "",
-        "desc": "",
+        "name": "戰少俠",
+        "desc": "後山挑柴遇不速之客，第三年上半",
         "keywords": ""
     },
     "CL_B0001_06": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.hero1*]",
         "ref": "後山 挑柴遇敵 第三年下半 戰少俠",
-        "name": "",
-        "desc": "",
+        "name": "戰少俠",
+        "desc": "後山挑柴遇不速之客，第三年下半",
         "keywords": ""
     },
     "CL_G0005_02_01": {

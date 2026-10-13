@@ -434,7 +434,7 @@ function handleFlagStatement(flagId, val, script, symbol = '=', isEffect = false
 
       // 對應遊戲中幾個在Flag預設為0時把Flag=1寫成Flag+1的狀況
       if (symbol == '+' && val == 1) statment.symbol = '=';
-      if (val == -1) statment.symbol = '=';
+      if (symbol == '+' && val == -1) statment.symbol = '=';
     }
   };
 
@@ -2124,6 +2124,9 @@ export async function parsePosition() {
             const var1 = await getStatGroup(subItem._value1._name);
             const var2 = await getStatGroup(subItem._value2._name);
             const statment = handleStatement(var1, subItem._compareOp, var2, script);
+            if (script == 'door_free_504') {
+              console.log(statment);
+            }
             event.condition.push(statment.text);
             mergeRelation(result[key].rel.pre, statment.rel);
           }
