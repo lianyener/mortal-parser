@@ -1409,8 +1409,8 @@
     "CL_2001_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.artist1*]",
         "ref": "釣魚事件 戰武師",
-        "name": "",
-        "desc": "",
+        "name": "拿你見官",
+        "desc": "離家出走釣魚，掉到女式衣裙",
         "keywords": ""
     },
     "CL_2002_01": {
@@ -1577,15 +1577,15 @@
     "CL_5004_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger1*]",
         "ref": "外堡 被襲擊 戰路人俠",
-        "name": "",
-        "desc": "",
+        "name": "被襲擊",
+        "desc": "外堡管家遇欠租住客",
         "keywords": ""
     },
     "CL_5005_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger1*]",
         "ref": "茶舖 被挑釁 戰路人俠",
-        "name": "",
-        "desc": "",
+        "name": "揍客人",
+        "desc": "茶肆茶博士遇客人挑釁，選擇揍他",
         "keywords": ""
     },
     "CL_5006_01": {
@@ -1641,35 +1641,35 @@
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl4*]",
         "ref": "後山挑戰龍湘 戰龍湘",
         "name": "戰龍湘",
-        "desc": "龍湘的挑戰",
+        "desc": "後山龍湘的挑戰觸發",
         "keywords": ""
     },
     "CL_5103_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.snake1*]",
         "ref": "馬富貴 弄蛇失敗 戰蛇",
-        "name": "",
-        "desc": "",
+        "name": "幫忙捉蛇",
+        "desc": "鬧市逛街遇李富貴弄蛇失敗，第一年",
         "keywords": ""
     },
     "CL_5103_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.snake1*]",
         "ref": "馬富貴 弄蛇失敗 戰蛇",
-        "name": "",
-        "desc": "",
+        "name": "幫忙捉蛇",
+        "desc": "鬧市逛街遇李富貴弄蛇失敗，第二年",
         "keywords": ""
     },
     "CL_5103_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.snake1*]",
         "ref": "馬富貴 弄蛇失敗 戰蛇",
-        "name": "",
-        "desc": "",
+        "name": "幫忙捉蛇",
+        "desc": "鬧市逛街遇李富貴弄蛇失敗，第三年",
         "keywords": ""
     },
     "CL_5104_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special206*]",
         "ref": "福韞 化緣 戰福韞",
-        "name": "",
-        "desc": "",
+        "name": "拒絕化緣",
+        "desc": "鬧市逛街遇福韞化緣，選擇偏不給",
         "keywords": ""
     },
     "CL_9000_01": {

@@ -408,29 +408,29 @@
     "BL_5002": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "唐門+飛石幫+丐幫+點蒼派 vs 丐幫+飛石幫+崆峒派+官兵",
-        "name": "",
-        "desc": "",
+        "name": "捲入風波",
+        "desc": "外堡管家遇住客亂鬥",
         "keywords": ""
     },
     "BL_5003_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.000*]",
         "ref": "崆峒派 vs 飛石幫",
-        "name": "",
-        "desc": "",
+        "name": "捲入亂戰",
+        "desc": "茶肆茶博士遇店前打鬥",
         "keywords": ""
     },
     "BL_5003_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.001*]",
         "ref": "唐門 vs 飛石幫",
-        "name": "",
-        "desc": "",
+        "name": "教訓飛石幫",
+        "desc": "茶肆茶博士遇飛石幫找碴",
         "keywords": ""
     },
     "BL_5003_03": {
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
-        "name": "",
-        "desc": "",
+        "name": "教訓丐幫",
+        "desc": "茶肆茶博士遇丐幫丟泥",
         "keywords": ""
     },
     "BL_A0001_01": {
