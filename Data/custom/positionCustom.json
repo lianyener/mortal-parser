@@ -1,0 +1,59 @@
+{
+  "Door_02": {
+    "event": {
+      "501": {
+        "eventFlow": [
+          { "id": "door_02_501", "type": "Script" },
+          { "id": "door_girl_03_01", "type": "Script" }
+        ]
+      },
+      "502": {
+        "eventFlow": [
+          { "id": "door_02_502", "type": "Script" },
+          { "id": "door_special_01_01", "type": "Script" }
+        ]
+      },
+      "503": {
+        "eventFlow": [
+          { "id": "door_02_503", "type": "Script" },
+          { "id": "S0023_01", "type": "Script" },
+          { "id": "S0023_01_01", "type": "Script" },
+          { "id": "S0023_01_02", "type": "Script" },
+          { "id": "CL_S0023_01", "type": "Combat" },
+          { "id": "S0023_01_02_01", "type": "Script" },
+          { "id": "S0023_01_03", "type": "Script" },
+          { "id": "S0023_01_03_01", "type": "Script" },
+          { "id": "S0023_01_03_02", "type": "Script" },
+          { "id": "S0023_01_03_03", "type": "Script" },
+          { "id": "S0023_01_03_04", "type": "Script" },
+          { "id": "S0023_01_04", "type": "Script" }
+        ]
+      },
+      "504": {
+        "eventFlow": [
+          { "id": "door_02_504", "type": "Script" },
+          { "id": "CL_5006_01", "type": "Combat" },
+          { "id": "door_02_504_01", "type": "Script" }
+        ]
+      },
+      "505": { "eventFlow": [{ "id": "door_02_505", "type": "Script" }] },
+      "506": { "eventFlow": [{ "id": "door_02_506", "type": "Script" }] },
+      "001": {
+        "eventFlow": [
+          { "id": "door_02_001", "type": "Script" },
+          { "id": "door_001_01", "type": "Script" },
+          { "id": "door_01_01", "type": "Script" },
+          { "id": "fortress_01_01", "type": "Script" },
+          { "id": "teashop_01_01", "type": "Script" },
+          { "id": "pharmacy_01_01", "type": "Script" },
+          { "id": "pharmacy_special_01_01", "type": "Script" },
+          { "id": "spa_01_01", "type": "Script" },
+          { "id": "farm_01_01", "type": "Script" },
+          { "id": "S0604_01", "type": "Script" },
+          { "id": "CL_S0604_01", "type": "Combat" },
+          { "id": "S0604_01_01", "type": "Script" }
+        ]
+      }
+    }
+  }
+}

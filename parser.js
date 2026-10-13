@@ -2072,7 +2072,7 @@ export async function parsePosition() {
   const classMap = { 正常: 0, 失敗: 1, 大失敗: 2, 成功: 3, 大成功: 4, 特殊: 5, 其他: 9 };
 
   // 讀取檔案清單、前置Cache
-  const [files, nameDraft] = await Promise.all([getJsonList('PositionResultData'), getDataJson('scriptName'), loadCache(['GROUP', 'FLAG'])]);
+  const [files, custom, nameDraft] = await Promise.all([getJsonList('PositionResultData'), getDataJson('positionCustom'), getDataJson('scriptName'), loadCache(['GROUP', 'FLAG'])]);
 
   // 初始化
   const result = {};
@@ -2114,7 +2114,7 @@ export async function parsePosition() {
         const id = mapData.Value;
         const script = `${prefix}_${id}`;
         const keys = mapData.Key.split('_');
-        const event = { name: mapData.Key, class: classMap[keys[0]] ?? 0, seq: keys[1] ?? '000', condition: [], rate: [`[#${eventData._defaultRate}#]`], script, remark: [] };
+        const event = { name: mapData.Key, class: classMap[keys[0]] ?? 0, seq: keys[1] ?? '000', condition: [], rate: [`[#${eventData._defaultRate}#]`], script, remark: [], eventFlow: custom?.[key]?.event?.[id]?.eventFlow ?? undefined };
         mergeRelation(result[key].rel.to, { Script: [script] });
         updateNameDraftItem(nameDraft, script, (eventData._devNote ?? '').trim());
 
@@ -2124,9 +2124,6 @@ export async function parsePosition() {
             const var1 = await getStatGroup(subItem._value1._name);
             const var2 = await getStatGroup(subItem._value2._name);
             const statment = handleStatement(var1, subItem._compareOp, var2, script);
-            if (script == 'door_free_504') {
-              console.log(statment);
-            }
             event.condition.push(statment.text);
             mergeRelation(result[key].rel.pre, statment.rel);
           }
@@ -4075,7 +4072,7 @@ export async function organizeOutputData() {
       const scriptSet = new Set();
       if (initScript) traceOrigin('Script', initScript, origins, new Set(), scriptSet);
 
-      const eventFlow = buildEventFlow(initScript, scriptSet);
+      const eventFlow = eventData?.eventFlow ?? buildEventFlow(initScript, scriptSet);
       if (eventFlow.length > 0) eventData.eventFlow = eventFlow;
     }
   }
