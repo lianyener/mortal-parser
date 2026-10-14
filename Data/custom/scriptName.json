@@ -3,7 +3,7 @@
         "ori": "free",
         "name": "唐門自由行動",
         "ref": "",
-        "desc": "",
+        "desc": "地圖選擇",
         "keywords": "養成"
     },
     "act1": {
@@ -190,7 +190,7 @@
     },
     "alchemy_work_901_01": {
         "ori": "alchemy_work_901_01",
-        "name": "嘗試阻止後續",
+        "name": "阻止結果",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -267,7 +267,7 @@
     },
     "back_work_101": {
         "ori": "back_work_101",
-        "name": "扭傷了腳",
+        "name": "扭傷腳",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -302,7 +302,7 @@
     },
     "back_work_502": {
         "ori": "back_work_502",
-        "name": "李富貴獵人",
+        "name": "李富貴打獵",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -2724,42 +2724,42 @@
     },
     "ch3_6_1_01_501": {
         "ori": "ch3_6_1_01_501",
-        "name": "",
+        "name": "閒逛整日",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_6_1_01_502": {
         "ori": "ch3_6_1_01_502",
-        "name": "",
+        "name": "登上高樓",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_6_1_01_503": {
         "ori": "ch3_6_1_01_503",
-        "name": "",
+        "name": "茶坊被挑釁",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_6_1_01_503_01": {
         "ori": "ch3_6_1_01_503_01",
-        "name": "ch3_6_1_01_503_01",
+        "name": "決鬥結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_6_1_01_504": {
         "ori": "ch3_6_1_01_504",
-        "name": "",
+        "name": "巷中被攔路",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch3_6_1_01_504_01": {
         "ori": "ch3_6_1_01_504_01",
-        "name": "ch3_6_1_01_504_01",
+        "name": "誤會後續",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -4509,13 +4509,13 @@
     },
     "ch6_4_3_3_1": {
         "ori": "ch6_4_3_3_1",
-        "name": "戰年輕錦香弟子結果",
+        "name": "戰年輕弟子結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "ch6_4_3_3_2": {
-        "ori": "戰老成錦香弟子結果",
+        "ori": "戰老成弟子結果",
         "name": "",
         "ref": "",
         "desc": "",
@@ -5279,7 +5279,7 @@
     },
     "ch7_5_4_1": {
         "ori": "ch7_5_4_1",
-        "name": "ch7_5_4_1",
+        "name": "趙活出使",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -6616,14 +6616,14 @@
     },
     "door_02_506": {
         "ori": "door_02_506",
-        "name": "李富貴喝涼水",
+        "name": "李富貴口渴",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "door_02_507": {
         "ori": "door_02_507",
-        "name": "福韞強制淨化",
+        "name": "福韞超渡",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -6700,14 +6700,14 @@
     },
     "door_free_301": {
         "ori": "door_free_301",
-        "name": "花錢填飽胃",
+        "name": "填飽胃",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "door_free_302": {
         "ori": "door_free_302",
-        "name": "摺紙藝人",
+        "name": "紙藝人",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -6721,14 +6721,14 @@
     },
     "door_free_401": {
         "ori": "door_free_401",
-        "name": "街坊送蔬果",
+        "name": "獲贈蔬果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "door_free_501": {
         "ori": "door_free_501",
-        "name": "護衛工作爭議",
+        "name": "護衛爭議",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -6924,14 +6924,14 @@
     },
     "farm_work_201": {
         "ori": "farm_work_201",
-        "name": "剷掉魏菊白菜",
+        "name": "誤鏟魏菊白菜",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "farm_work_301": {
         "ori": "farm_work_301",
-        "name": "魏菊一起耕田",
+        "name": "魏菊一起",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -7260,7 +7260,7 @@
     },
     "kitchen_work_901": {
         "ori": "kitchen_work_901",
-        "name": "不一樣的花招",
+        "name": "整點花招",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -7365,7 +7365,7 @@
     },
     "mall_work_103": {
         "ori": "mall_work_103",
-        "name": "馬虎工作",
+        "name": "偷懶馬虎",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -7400,21 +7400,21 @@
     },
     "mall_work_903": {
         "ori": "mall_work_903",
-        "name": "三師兄與掌門論古今",
+        "name": "三師兄請安",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "mall_work_904": {
         "ori": "mall_work_904",
-        "name": "四師兄塞甘蔗",
+        "name": "四師兄請安",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "mall_work_905": {
         "ori": "mall_work_905",
-        "name": "三師兄和你論古今",
+        "name": "三師兄論古今",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -7694,14 +7694,14 @@
     },
     "pharmacy_work_001": {
         "ori": "pharmacy_work_001",
-        "name": "帶水果報恩",
+        "name": "攜果報恩",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "pharmacy_work_002": {
         "ori": "pharmacy_work_002",
-        "name": "獲大夫們認同",
+        "name": "醫好難症",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -7722,7 +7722,7 @@
     },
     "pharmacy_work_103": {
         "ori": "pharmacy_work_103",
-        "name": "家屬索賠",
+        "name": "醫療糾紛",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -7757,7 +7757,7 @@
     },
     "pharmacy_work_401": {
         "ori": "pharmacy_work_401",
-        "name": "富人投桃報李",
+        "name": "富人回饋",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -7792,7 +7792,7 @@
     },
     "pharmacy_work_502": {
         "ori": "pharmacy_work_502",
-        "name": "丐幫弟子求診",
+        "name": "乞丐求診",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -8450,14 +8450,14 @@
     },
     "S0023_01_03_02": {
         "ori": "S0023_01_03_02",
-        "name": "召喚成功",
+        "name": "召喚失敗",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "S0023_01_03_03": {
         "ori": "S0023_01_03_03",
-        "name": "召喚失敗",
+        "name": "召喚成功",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -8492,7 +8492,7 @@
     },
     "S0024_01_02": {
         "ori": "S0024_01_02",
-        "name": "外保大戰後續",
+        "name": "外堡大戰後續",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -10508,7 +10508,7 @@
     },
     "section_01_free_01_401": {
         "ori": "section_01_free_01_401",
-        "name": "氣功掃平山",
+        "name": "氣功平山",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -10557,7 +10557,7 @@
     },
     "section_01_free_02_301": {
         "ori": "section_01_free_02_301",
-        "name": "鋤草",
+        "name": "鋤草功",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -10879,21 +10879,21 @@
     },
     "section_01_free_07_01_501": {
         "ori": "section_01_free_07_01_501",
-        "name": "鐵拳弟子竄出",
+        "name": "鐵拳弟子出現",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_01_free_07_01_502": {
         "ori": "section_01_free_07_01_502",
-        "name": "奪魄弟子竄出",
+        "name": "奪魄弟子出現",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_01_free_07_01_503": {
         "ori": "section_01_free_07_01_503",
-        "name": "飛天弟子竄出",
+        "name": "飛天弟子出現",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -11012,7 +11012,7 @@
     },
     "section_02_free_00_002": {
         "ori": "section_02_free_00_002",
-        "name": "青城弟子走錯",
+        "name": "青城弟子誤入",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -11047,133 +11047,133 @@
     },
     "section_02_free_01_01_001": {
         "ori": "section_02_free_01_01_001",
-        "name": "",
+        "name": "長老傳功",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_01_501": {
         "ori": "section_02_free_01_01_501",
-        "name": "",
+        "name": "申屠龍引導",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_001": {
         "ori": "section_02_free_01_02_001",
-        "name": "",
+        "name": "烤魚",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_002": {
         "ori": "section_02_free_01_02_002",
-        "name": "",
+        "name": "和雲裳烤魚",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_301": {
         "ori": "section_02_free_01_02_301",
-        "name": "",
+        "name": "吟嘯徐行",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_302": {
         "ori": "section_02_free_01_02_302",
-        "name": "",
+        "name": "三人散步",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_303": {
         "ori": "section_02_free_01_02_303",
-        "name": "",
+        "name": "和申屠龍散步",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_401": {
         "ori": "section_02_free_01_02_401",
-        "name": "",
+        "name": "似有所悟",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_501": {
         "ori": "section_02_free_01_02_501",
-        "name": "",
+        "name": "遭遇野豬",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_501_01": {
         "ori": "section_02_free_01_02_501_01",
-        "name": "section_02_free_01_02_501_01",
+        "name": "山豬的下場",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_502": {
         "ori": "section_02_free_01_02_502",
-        "name": "",
+        "name": "遭遇武林人",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_502_01": {
         "ori": "section_02_free_01_02_502_01",
-        "name": "section_02_free_01_02_502_01",
+        "name": "決鬥後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_901": {
         "ori": "section_02_free_01_02_901",
-        "name": "",
+        "name": "申屠龍遇襲",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_901_01": {
         "ori": "section_02_free_01_02_901_01",
-        "name": "section_02_free_01_02_901_01",
+        "name": "戰武師後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_901_02": {
         "ori": "section_02_free_01_02_901_02",
-        "name": "section_02_free_01_02_901_02",
+        "name": "申屠龍解釋",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_902": {
         "ori": "section_02_free_01_02_902",
-        "name": "",
+        "name": "道長的地位",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_902_01": {
         "ori": "section_02_free_01_02_902_01",
-        "name": "section_02_free_01_02_902_01",
+        "name": "戰野豬後續",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_902_02": {
         "ori": "section_02_free_01_02_902_02",
-        "name": "section_02_free_01_02_902_02",
+        "name": "申屠龍出手",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_01_02_902_03": {
         "ori": "section_02_free_01_02_902_03",
-        "name": "section_02_free_01_02_902_03",
+        "name": "鐵冠道長",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -11194,91 +11194,91 @@
     },
     "section_02_free_02_01_101": {
         "ori": "section_02_free_02_01_101",
-        "name": "",
+        "name": "無法靜下",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_02_01_102": {
         "ori": "section_02_free_02_01_102",
-        "name": "",
+        "name": "誦經忘詞",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_02_01_201": {
         "ori": "section_02_free_02_01_201",
-        "name": "",
+        "name": "風捲符紙",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_02_01_301": {
         "ori": "section_02_free_02_01_301",
-        "name": "",
+        "name": "心緒沉澱",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_02_01_302": {
         "ori": "section_02_free_02_01_302",
-        "name": "",
+        "name": "依樣畫葫蘆",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_02_01_401": {
         "ori": "section_02_free_02_01_401",
-        "name": "",
+        "name": "感悟道門",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_02_01_402": {
         "ori": "section_02_free_02_01_402",
-        "name": "",
+        "name": "鬼神之相",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_02_02_101": {
         "ori": "section_02_free_02_02_101",
-        "name": "",
+        "name": "祭品消失",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_02_02_301": {
         "ori": "section_02_free_02_02_301",
-        "name": "",
+        "name": "高功號令",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_02_02_501": {
         "ori": "section_02_free_02_02_501",
-        "name": "",
+        "name": "地獄道上門",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_02_02_501_01": {
         "ori": "section_02_free_02_02_501_01",
-        "name": "section_02_free_02_02_501_01",
+        "name": "打跑地獄道",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_02_02_502": {
         "ori": "section_02_free_02_02_502",
-        "name": "",
+        "name": "誤認地獄道",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_02_02_502_01": {
         "ori": "section_02_free_02_02_502_01",
-        "name": "section_02_free_02_02_502_01",
+        "name": "誤會後續",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -11292,147 +11292,147 @@
     },
     "section_02_free_03_01_001": {
         "ori": "section_02_free_03_01_001",
-        "name": "",
+        "name": "花不起錢",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_01_101": {
         "ori": "section_02_free_03_01_101",
-        "name": "",
+        "name": "包袱被割",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_01_102": {
         "ori": "section_02_free_03_01_102",
-        "name": "",
+        "name": "混世魔王",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_01_301": {
         "ori": "section_02_free_03_01_301",
-        "name": "",
+        "name": "填飽胃",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_01_302": {
         "ori": "section_02_free_03_01_302",
-        "name": "",
+        "name": "替雲裳買單",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_01_401": {
         "ori": "section_02_free_03_01_401",
-        "name": "",
+        "name": "投餵蔬果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_02_001": {
         "ori": "section_02_free_03_02_001",
-        "name": "",
+        "name": "滿意成果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_02_101": {
         "ori": "section_02_free_03_02_101",
-        "name": "",
+        "name": "差強人意",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_02_201": {
         "ori": "section_02_free_03_02_201",
-        "name": "",
+        "name": "敲到自己",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_02_301": {
         "ori": "section_02_free_03_02_301",
-        "name": "",
+        "name": "品質良好",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_02_401": {
         "ori": "section_02_free_03_02_401",
-        "name": "",
+        "name": "人盡垂涎",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_03_001": {
         "ori": "section_02_free_03_03_001",
-        "name": "",
+        "name": "攜果報恩",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_03_002": {
         "ori": "section_02_free_03_03_002",
-        "name": "",
+        "name": "醫好難症",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_03_101": {
         "ori": "section_02_free_03_03_101",
-        "name": "",
+        "name": "妓女嫌棄",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_03_301": {
         "ori": "section_02_free_03_03_301",
-        "name": "",
+        "name": "無償醫老人",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_03_302": {
         "ori": "section_02_free_03_03_302",
-        "name": "",
+        "name": "無償醫瞎子",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_03_303": {
         "ori": "section_02_free_03_03_303",
-        "name": "",
+        "name": "無償醫瘸子",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_03_501": {
         "ori": "section_02_free_03_03_501",
-        "name": "",
+        "name": "青城派求診",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_03_502": {
         "ori": "section_02_free_03_03_502",
-        "name": "",
+        "name": "地獄道求診",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_03_901": {
         "ori": "section_02_free_03_03_901",
-        "name": "",
+        "name": "一籌莫展",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "section_02_free_03_03_902": {
         "ori": "section_02_free_03_03_902",
-        "name": "",
+        "name": "日漸可控",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -11460,7 +11460,7 @@
     },
     "spa_free_001": {
         "ori": "spa_free_001",
-        "name": "疲勞一掃而空",
+        "name": "一掃疲勞",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -11721,49 +11721,49 @@
         "ori": "talk_brother3_option_01",
         "name": "掌門的情況",
         "ref": "",
-        "desc": "目前版本無法觸發",
+        "desc": "",
         "keywords": ""
     },
     "talk_brother3_option_02": {
         "ori": "talk_brother3_option_02",
         "name": "代掌門",
         "ref": "",
-        "desc": "目前版本無法觸發，三師兄成為代掌門的事",
+        "desc": "",
         "keywords": ""
     },
     "talk_brother3_option_03": {
         "ori": "talk_brother3_option_03",
         "name": "忘記的事情",
         "ref": "",
-        "desc": "目前版本無法觸發",
+        "desc": "",
         "keywords": ""
     },
     "talk_brother3_option_04": {
         "ori": "talk_brother3_option_04",
         "name": "江湖",
         "ref": "",
-        "desc": "目前版本無法觸發，現今江湖情勢",
+        "desc": "",
         "keywords": ""
     },
     "talk_brother3_option_05": {
         "ori": "talk_brother3_option_05",
         "name": "和三師兄切磋",
         "ref": "",
-        "desc": "目前版本無法觸發",
+        "desc": "",
         "keywords": ""
     },
     "talk_brother3_option_05_01": {
         "ori": "talk_brother3_option_05_01",
         "name": "切磋結果",
         "ref": "",
-        "desc": "目前版本無法觸發，和三師兄切磋的結果",
+        "desc": "",
         "keywords": ""
     },
     "talk_brother4": {
         "ori": "talk_brother4",
         "name": "和四師兄閒聊",
         "ref": "",
-        "desc": "男弟子房和四師兄閒聊",
+        "desc": "",
         "keywords": ""
     },
     "talk_brother4_option_00_01": {
@@ -11943,7 +11943,7 @@
     },
     "talk_girl5_02_01": {
         "ori": "talk_girl5_02_01",
-        "name": "拒絕成家",
+        "name": "樹屋與蚊子",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -12174,112 +12174,112 @@
     },
     "travel_result_001_001": {
         "ori": "travel_result_001_001",
-        "name": "",
+        "name": "吃飽喝足",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_001_101": {
         "ori": "travel_result_001_101",
-        "name": "",
+        "name": "露宿野外",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_001_102": {
         "ori": "travel_result_001_102",
-        "name": "",
+        "name": "迷路",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_001_103": {
         "ori": "travel_result_001_103",
-        "name": "",
+        "name": "馬逃跑",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_001_901": {
         "ori": "travel_result_001_901",
-        "name": "",
+        "name": "綠林好漢",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_002_001": {
         "ori": "travel_result_002_001",
-        "name": "",
+        "name": "一路順風",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_002_002": {
         "ori": "travel_result_002_002",
-        "name": "",
+        "name": "自己騎馬",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_002_101": {
         "ori": "travel_result_002_101",
-        "name": "",
+        "name": "輪陷水漥",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_002_901": {
         "ori": "travel_result_002_901",
-        "name": "",
+        "name": "山賊從良",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_002_902": {
         "ori": "travel_result_002_902",
-        "name": "",
+        "name": "爆買色紙",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_302_001": {
         "ori": "travel_result_302_001",
-        "name": "",
+        "name": "吃飽喝足",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_302_101": {
         "ori": "travel_result_302_101",
-        "name": "",
+        "name": "露宿野外",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_302_102": {
         "ori": "travel_result_302_102",
-        "name": "",
+        "name": "迷路",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_302_103": {
         "ori": "travel_result_302_103",
-        "name": "",
+        "name": "馬逃跑",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_302_901": {
         "ori": "travel_result_302_901",
-        "name": "",
+        "name": "綠林好漢",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_302_902": {
         "ori": "travel_result_302_902",
-        "name": "",
+        "name": "護衛商隊",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -12293,16 +12293,16 @@
     },
     "travel_result_310_501_01": {
         "ori": "travel_result_310_501_01",
-        "name": "travel_result_310_501_01",
+        "name": "清除殘黨結果",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_310_501_02": {
         "ori": "travel_result_310_501_02",
-        "name": "travel_result_310_501_02",
+        "name": "清除殘黨結果",
         "ref": "",
-        "desc": "",
+        "desc": "和丐幫有交情仍選擇開戰分岐",
         "keywords": ""
     },
     "travel_result_310_502": {
@@ -12314,14 +12314,14 @@
     },
     "travel_result_310_503": {
         "ori": "travel_result_310_503",
-        "name": "四師兄請客",
+        "name": "山店避雨",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_310_503_break_start_01": {
         "ori": "travel_result_310_503_break_start_01",
-        "name": "travel_result_310_503_break_start_01",
+        "name": "四師兄請客",
         "ref": "",
         "desc": "",
         "keywords": ""
@@ -12348,7 +12348,7 @@
         "keywords": ""
     },
     "travel_result_401_503": {
-        "ori": "愛慕者攔路`",
+        "ori": "愛慕者攔路",
         "name": "",
         "ref": "",
         "desc": "",
@@ -12552,63 +12552,63 @@
     },
     "travel_result_S2501_01_501": {
         "ori": "travel_result_S2501_01_501",
-        "name": "",
+        "name": "得心應手",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_S2501_01_502": {
         "ori": "travel_result_S2501_01_502",
-        "name": "",
+        "name": "流轉如意",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_S2501_01_503": {
         "ori": "travel_result_S2501_01_503",
-        "name": "",
+        "name": "必殺心得",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_S2501_01_901": {
         "ori": "travel_result_S2501_01_901",
-        "name": "",
+        "name": "遭遇仇家",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_S2501_01_901_01": {
         "ori": "travel_result_S2501_01_901_01",
-        "name": "travel_result_S2501_01_901_01",
+        "name": "處置仇家",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_S2501_01_902": {
         "ori": "travel_result_S2501_01_902",
-        "name": "",
+        "name": "遭遇淫賊",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_S2501_01_902_01": {
         "ori": "travel_result_S2501_01_902_01",
-        "name": "travel_result_S2501_01_902_01",
+        "name": "處置淫賊",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_S2501_01_903": {
         "ori": "travel_result_S2501_01_903",
-        "name": "",
+        "name": "遭遇情敵",
         "ref": "",
         "desc": "",
         "keywords": ""
     },
     "travel_result_S2501_01_903_01": {
         "ori": "travel_result_S2501_01_903_01",
-        "name": "travel_result_S2501_01_903_01",
+        "name": "處置情敵",
         "ref": "",
         "desc": "",
         "keywords": ""

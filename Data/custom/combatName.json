@@ -248,63 +248,63 @@
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.beggar1*]",
         "ref": "崆峒擂臺 難度1 戰乞丐",
         "name": "對戰丐幫弟子(弱)",
-        "desc": "",
+        "desc": "崆峒擂台難度1",
         "keywords": ""
     },
     "CL_1203_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.artist1*]",
         "ref": "崆峒擂臺 難度1 戰武師",
         "name": "對戰江湖拳師(弱)",
-        "desc": "",
+        "desc": "崆峒擂台難度1",
         "keywords": ""
     },
     "CL_1203_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger1*]",
         "ref": "崆峒擂臺 難度1 戰路人俠",
         "name": "對戰路人俠(弱)",
-        "desc": "",
+        "desc": "崆峒擂台難度1",
         "keywords": ""
     },
     "CL_1203_04": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.beggar1*]",
         "ref": "崆峒擂臺 難度2 戰乞丐",
         "name": "對戰丐幫弟子(普)",
-        "desc": "",
+        "desc": "崆峒擂台難度2",
         "keywords": ""
     },
     "CL_1203_05": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.artist1*]",
         "ref": "崆峒擂臺 難度2 戰武師",
         "name": "對戰江湖拳師(普)",
-        "desc": "",
+        "desc": "崆峒擂台難度2",
         "keywords": ""
     },
     "CL_1203_06": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger1*]",
         "ref": "崆峒擂臺 難度2 戰路人俠",
         "name": "對戰路人俠(普)",
-        "desc": "",
+        "desc": "崆峒擂台難度2",
         "keywords": ""
     },
     "CL_1203_07": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.beggar1*]",
         "ref": "崆峒擂臺 難度3 戰乞丐",
         "name": "對戰丐幫弟子(強)",
-        "desc": "",
+        "desc": "崆峒擂台難度3",
         "keywords": ""
     },
     "CL_1203_08": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.artist1*]",
         "ref": "崆峒擂臺 難度3 戰武師",
         "name": "對戰江湖拳師(強)",
-        "desc": "",
+        "desc": "崆峒擂台難度3",
         "keywords": ""
     },
     "CL_1203_09": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger1*]",
         "ref": "崆峒擂臺 難度3 戰路人俠",
         "name": "對戰路人俠(強)",
-        "desc": "",
+        "desc": "崆峒擂台難度3",
         "keywords": ""
     },
     "CL_1204_01": {
@@ -499,15 +499,15 @@
     "CL_1305_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.artist1*]",
         "ref": "江陵閒逛 戰武師",
-        "name": "",
-        "desc": "",
+        "name": "戰武師",
+        "desc": "江陵圍城上街消遣，茶坊被挑釁選擇嗆聲",
         "keywords": ""
     },
     "CL_1305_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee321*]",
         "ref": "江陵閒逛 戰峨嵋弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰峨嵋弟子",
+        "desc": "江陵圍城上街消遣，巷中被攔路",
         "keywords": ""
     },
     "CL_1306_01": {
@@ -598,28 +598,28 @@
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special405*]",
         "ref": "留學青城 申屠龍 戰申屠龍",
         "name": "抵抗把脈",
-        "desc": "青城留學事件，拒絕申屠龍把脈",
+        "desc": "青城留學，拒絕申屠龍把脈",
         "keywords": ""
     },
     "CL_1316_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.pig1*]",
         "ref": "留學青城 野豬 戰野豬",
-        "name": "",
-        "desc": "",
+        "name": "戰野豬",
+        "desc": "青城留學散步遭遇野豬",
         "keywords": ""
     },
     "CL_1317_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger1*]",
         "ref": "留學青城 武林人 戰路人俠",
-        "name": "",
-        "desc": "",
+        "name": "妖孽受死",
+        "desc": "青城留學散步遭遇武林人",
         "keywords": ""
     },
     "CL_1318_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee311*]",
         "ref": "留學青城 青城弟子 戰青城弟子",
-        "name": "",
-        "desc": "",
+        "name": "妖孽受死",
+        "desc": "青城上清宮道士下山，被誤認為地獄道",
         "keywords": ""
     },
     "CL_1319_01": {
@@ -632,8 +632,8 @@
     "CL_1320_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.artist1*]",
         "ref": "留學青城 武師 戰武師",
-        "name": "",
-        "desc": "",
+        "name": "金光神拳",
+        "desc": "青城留學散步申屠龍遇襲，被誣陷",
         "keywords": ""
     },
     "CL_1321_01": {
@@ -709,8 +709,8 @@
     "CL_1329_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.pig1*]",
         "ref": "青城道長的地位 山豬 戰野豬",
-        "name": "",
-        "desc": "",
+        "name": "野豬交給你",
+        "desc": "青城道長的地位事件，選擇交給你",
         "keywords": ""
     },
     "CL_1330_01": {
@@ -1304,8 +1304,8 @@
     "CL_1804_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special6*]",
         "ref": "唐門出擊 萬里鵬程 戰萬里鵬程",
-        "name": "",
-        "desc": "",
+        "name": "戰萬里鵬程",
+        "desc": "東西大戰唐門出擊，遇音波功緊閉大門",
         "keywords": ""
     },
     "CL_1805_01": {
@@ -1599,21 +1599,21 @@
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee211*]",
         "ref": "崆峒 與小梅跑步 遇敵 戰鐵拳弟子",
         "name": "戰鐵拳弟子",
-        "desc": "崆峒陪小梅跑步遭遇情敵，鐵拳弟子竄出",
+        "desc": "崆峒陪小梅跑步遭遇鐵拳弟子情敵",
         "keywords": ""
     },
     "CL_5100_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee221*]",
         "ref": "崆峒 與小梅跑步 遇敵 戰奪魄弟子",
         "name": "戰奪魄弟子",
-        "desc": "崆峒陪小梅跑步遭遇情敵，奪魄弟子竄出",
+        "desc": "崆峒陪小梅跑步遭遇奪魄弟子情敵",
         "keywords": ""
     },
     "CL_5100_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee201*]",
         "ref": "崆峒 與小梅跑步 遇敵 戰飛天弟子",
         "name": "戰飛天弟子",
-        "desc": "崆峒陪小梅跑步遭遇情敵，飛天弟子竄出",
+        "desc": "崆峒陪小梅跑步遭遇飛天弟子情敵",
         "keywords": ""
     },
     "CL_5101_01": {
@@ -1675,8 +1675,8 @@
     "CL_9000_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.bandit1*]",
         "ref": "外出路途 遇見綠林好漢 戰山賊",
-        "name": "",
-        "desc": "",
+        "name": "戰山賊",
+        "desc": "前往夔州途中遇綠林好漢",
         "keywords": ""
     },
     "CL_A0001_01": {
@@ -1942,7 +1942,7 @@
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.big_shock1*]",
         "ref": "上街偶遇 許大鯨 戰許大鯨",
         "name": "黑吃黑",
-        "desc": "",
+        "desc": "市街遇福韞事件幫許大鯨後選擇黑吃黑",
         "keywords": ""
     },
     "CL_S0100_01": {
@@ -2236,35 +2236,35 @@
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee1*]",
         "ref": "段考 第一關 戰唐門弟子",
         "name": "戰新入弟子",
-        "desc": "",
+        "desc": "段考第一關",
         "keywords": ""
     },
     "CL_S2100_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee1*]",
         "ref": "段考 第一關弱化 戰唐門弟子",
         "name": "戰弱化新入弟子",
-        "desc": "",
+        "desc": "段考第一關弱化",
         "keywords": ""
     },
     "CL_S2100_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee_girl1*]",
         "ref": "段考 第二關 戰唐門女弟子",
         "name": "戰女弟子",
-        "desc": "",
+        "desc": "段考第二關",
         "keywords": ""
     },
     "CL_S2100_04": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee_girl1*]",
         "ref": "段考 第二關弱化 戰唐門女弟子",
         "name": "戰弱化女弟子",
-        "desc": "",
+        "desc": "段考第二關弱化",
         "keywords": ""
     },
     "CL_S2100_05": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee1*]",
         "ref": "段考 第三關 戰唐門弟子",
         "name": "戰資深弟子",
-        "desc": "",
+        "desc": "段考第三關",
         "keywords": ""
     },
     "CL_S2200_02_01": {
@@ -2333,43 +2333,43 @@
     "CL_S2501_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee491*]",
         "ref": "雪山行 回程 遇見情敵 戰錦香弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰錦香弟子",
+        "desc": "雪山行遭遇仇家",
         "keywords": ""
     },
     "CL_S2501_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger_girl1*]",
         "ref": "雪山行 回程 遇見情敵 戰女俠",
-        "name": "",
-        "desc": "",
+        "name": "戰女俠",
+        "desc": "雪山行遭遇仇家",
         "keywords": ""
     },
     "CL_S2501_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger1*]",
         "ref": "雪山行 回程 遇見強姦犯 戰路人俠",
-        "name": "",
-        "desc": "",
+        "name": "上前擋刀",
+        "desc": "雪山行遭遇淫賊",
         "keywords": ""
     },
     "CL_S2501_04": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.hero1*]",
         "ref": "雪山行 回程 遇見少俠 戰少俠",
-        "name": "",
-        "desc": "",
+        "name": "戰少俠",
+        "desc": "雪山行遭遇情敵",
         "keywords": ""
     },
     "CL_S2501_05": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.ranger4*]",
         "ref": "雪山行 回程 遇見少俠 戰公子俠",
-        "name": "",
-        "desc": "",
+        "name": "戰公子俠",
+        "desc": "雪山行遭遇情敵",
         "keywords": ""
     },
     "CL_S2502_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.pig1*]",
         "ref": "雪山行 野豬 戰野豬",
         "name": "野豬襲來",
-        "desc": "",
+        "desc": "雪山上遭遇野豬",
         "keywords": ""
     },
     "CL_S2504_01": {

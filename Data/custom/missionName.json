@@ -296,7 +296,7 @@
     },
     "M7001_02": {
       "ori": "M7001_02",
-      "name": "",
+      "name": "圍攻唐門",
       "ref": "",
       "desc": "",
       "keywords": ""
@@ -438,21 +438,21 @@
       "ori": "S0005",
       "name": "雪洗泥教",
       "ref": "雪洗泥教",
-      "desc": "※未實裝",
+      "desc": "未實裝",
       "keywords": ""
     },
     "S0007": {
       "ori": "S0007",
       "name": "小動物樊嘯天",
       "ref": "小動物樊嘯天",
-      "desc": "※未實裝",
+      "desc": "未實裝",
       "keywords": ""
     },
     "S0008": {
       "ori": "S0008",
       "name": "飛石幫支線",
       "ref": "飛石幫支線",
-      "desc": "※未實裝",
+      "desc": "未實裝",
       "keywords": ""
     },
     "S0009": {
@@ -466,14 +466,14 @@
       "ori": "S0010",
       "name": "墊肩",
       "ref": "墊肩",
-      "desc": "支持肩甲衍生事件\n※未實裝",
+      "desc": "支持肩甲衍生事件，未實裝",
       "keywords": ""
     },
     "S0011": {
       "ori": "S0011",
       "name": "",
       "ref": "墊肩",
-      "desc": "吃喝嫖賭衍生事件\n※未實裝",
+      "desc": "吃喝嫖賭衍生事件，未實裝",
       "keywords": ""
     },
     "S0012": {
@@ -1010,7 +1010,7 @@
     },
     "S1304": {
       "ori": "S1304",
-      "name": "",
+      "name": "唐門會議",
       "ref": "唐門會議",
       "desc": "",
       "keywords": ""
@@ -1038,7 +1038,7 @@
     },
     "S2002": {
       "ori": "S2002",
-      "name": "欠債還錢2",
+      "name": "欠債還錢",
       "ref": "",
       "desc": "",
       "keywords": ""
@@ -2540,7 +2540,7 @@
       "ori": "S0005_00",
       "name": "雪洗泥教",
       "ref": "",
-      "desc": "※未實裝",
+      "desc": "未實裝",
       "keywords": "",
       "sheet": ""
     },
@@ -2548,7 +2548,7 @@
       "ori": "S0007_00",
       "name": "小動物樊嘯天",
       "ref": "",
-      "desc": "※未實裝",
+      "desc": "未實裝",
       "keywords": "",
       "sheet": ""
     },
@@ -2556,7 +2556,7 @@
       "ori": "S0008_00",
       "name": "飛石幫支線",
       "ref": "",
-      "desc": "※未實裝",
+      "desc": "未實裝",
       "keywords": "",
       "sheet": ""
     },
@@ -2572,7 +2572,7 @@
       "ori": "S0010_01",
       "name": "",
       "ref": "",
-      "desc": "※未實裝",
+      "desc": "未實裝",
       "keywords": "",
       "sheet": ""
     },
@@ -2580,7 +2580,7 @@
       "ori": "S0011_01",
       "name": "",
       "ref": "",
-      "desc": "※未實裝",
+      "desc": "未實裝",
       "keywords": "",
       "sheet": ""
     },
@@ -2860,8 +2860,8 @@
       "ori": "S0202_02",
       "name": "默鈴雲裳下山",
       "ref": "",
-      "desc": "冰糖葫蘆事件，唐芳歸來事件一旬後可觸發",
-      "keywords": "",
+      "desc": "唐芳歸來事件一旬後可觸發",
+      "keywords": "冰糖葫蘆",
       "sheet": "BeforeExternalStudy"
     },
     "S0203_01": {
@@ -3452,8 +3452,8 @@
       "ori": "S8400_01",
       "name": "霸凌",
       "ref": "",
-      "desc": "四書事件",
-      "keywords": "",
+      "desc": "",
+      "keywords": "四書事件",
       "sheet": "BeforeExternalStudy"
     },
     "S8500_01": {
@@ -3663,6 +3663,86 @@
       "desc": "",
       "keywords": "",
       "sheet": "SectDestroy"
+    },
+    "CT_BW902": {
+      "ori": "CT_BW902",
+      "name": "登崖眺望",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "CT_BW501": {
+      "ori": "CT_BW501",
+      "name": "無敵號與一團廢紙",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "CT_BF901": {
+      "ori": "CT_BF901",
+      "name": "小梅亂入",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_AW901": {
+      "ori": "CT_AW901",
+      "name": "小梅下藥",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_KW902": {
+      "ori": "CT_KW902",
+      "name": "小梅果子",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_KW903": {
+      "ori": "CT_KW903",
+      "name": "晁和請客",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "CT_S12502": {
+      "ori": "CT_S12502",
+      "name": "師父想辦法",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_S21901": {
+      "ori": "CT_S21901",
+      "name": "申屠龍散步遇襲",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "QingchengStudy"
+    },
+    "CT_S21902": {
+      "ori": "CT_S21902",
+      "name": "道長的地位",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "QingchengStudy"
+    },
+    "CT_M2006_00": {
+      "ori": "CT_M2006_00",
+      "name": "崆峒留學",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
     }
   }
 }

@@ -292,7 +292,7 @@
       "casino2": "[*Story.O_2_4_3_Break_01_005*]",
       "sleep2": "[*Story.O_Section_01_Free_Start_02_001*]",
       "sleep3": "[*Story.O_Section_02_Free_Start_02_001*]",
-      "walk3": "[*Story.O_2_4_3_Break_01_004*]",
+      "walk3": "散步",
       "walk4": "[*Story.O_3_6_1_Break_Start_01_001*]",
       "robbed": "再次被搶",
       "run": "跑步",

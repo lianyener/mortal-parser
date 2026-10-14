@@ -66,21 +66,21 @@
         "ori": "[*System.Battle*]-[*EnemyTeam.200*]",
         "ref": "唐門 vs 天武門",
         "name": "和天武門開打",
-        "desc": "",
+        "desc": "前往江陵大戰荊州暫歇和天武門開打",
         "keywords": ""
     },
     "BL_1305_02": {
         "ori": "[*System.Battle*]-[*EnemyTeam.200*]",
         "ref": "唐門 vs 天武門",
         "name": "和天武門操練",
-        "desc": "",
+        "desc": "前往江陵大戰荊州暫歇和天武門操練",
         "keywords": ""
     },
     "BL_1306_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.010*]",
         "ref": "青城派 vs 地獄道",
-        "name": "",
-        "desc": "",
+        "name": "迎戰地獄道",
+        "desc": "青城上清宮道士下山，地獄道上門",
         "keywords": ""
     },
     "BL_1307_01": {
@@ -346,7 +346,7 @@
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫+官兵",
         "name": "出城衝殺",
-        "desc": "",
+        "desc": "江陵大戰自由行動選擇出城衝殺",
         "keywords": ""
     },
     "BL_3005": {
@@ -380,8 +380,8 @@
     "BL_3200": {
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
-        "name": "",
-        "desc": "",
+        "name": "清除殘黨",
+        "desc": "江陵回程遭遇大義分舵，清除泥教殘黨",
         "keywords": ""
     },
     "BL_3300": {
@@ -520,8 +520,8 @@
     "BL_S9906_01": {
         "ori": "[*System.Battle*]-[*EnemyTeam.002*]",
         "ref": "唐門 vs 丐幫",
-        "name": "",
-        "desc": "",
+        "name": "和丐幫搶菜",
+        "desc": "決戰菜市場事件觸發",
         "keywords": ""
     }
 }
