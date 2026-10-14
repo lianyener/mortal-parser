@@ -1598,22 +1598,22 @@
     "CL_5100_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee211*]",
         "ref": "崆峒 與小梅跑步 遇敵 戰鐵拳弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰鐵拳弟子",
+        "desc": "崆峒陪小梅跑步遭遇情敵，鐵拳弟子竄出",
         "keywords": ""
     },
     "CL_5100_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee221*]",
         "ref": "崆峒 與小梅跑步 遇敵 戰奪魄弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰奪魄弟子",
+        "desc": "崆峒陪小梅跑步遭遇情敵，奪魄弟子竄出",
         "keywords": ""
     },
     "CL_5100_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee201*]",
         "ref": "崆峒 與小梅跑步 遇敵 戰飛天弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰飛天弟子",
+        "desc": "崆峒陪小梅跑步遭遇情敵，飛天弟子竄出",
         "keywords": ""
     },
     "CL_5101_01": {
