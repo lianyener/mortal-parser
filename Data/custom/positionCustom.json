@@ -61,7 +61,36 @@
       "501": {
         "eventFlow": [
           { "id": "section_01_free_02_start_501", "type": "Script" },
-          { "id": "talk_girl5_01", "type": "Script" }
+          { "id": "talk_girl5_01", "type": "Script" },
+          { "id": "section_01_free_02_start_001", "type": "Script" }
+        ]
+      },
+      "503": {
+        "eventFlow": [
+          { "id": "section_01_free_02_start_503", "type": "Script" },
+          { "id": "talk_girl5_03", "type": "Script" },
+          { "id": "section_01_free_02_start_001", "type": "Script" }
+        ]
+      },
+      "504": {
+        "eventFlow": [
+          { "id": "section_01_free_02_start_504", "type": "Script" },
+          { "id": "talk_girl5_04", "type": "Script" },
+          { "id": "section_01_free_02_start_001", "type": "Script" }
+        ]
+      },
+      "505": {
+        "eventFlow": [
+          { "id": "section_01_free_02_start_505", "type": "Script" },
+          { "id": "talk_girl5_05", "type": "Script" },
+          { "id": "section_01_free_02_start_001", "type": "Script" }
+        ]
+      },
+      "506": {
+        "eventFlow": [
+          { "id": "section_01_free_02_start_506", "type": "Script" },
+          { "id": "talk_girl5_12", "type": "Script" },
+          { "id": "section_01_free_02_start_001", "type": "Script" }
         ]
       }
     }

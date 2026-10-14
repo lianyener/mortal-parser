@@ -10620,14 +10620,14 @@
     },
     "section_01_free_02_start_504": {
         "ori": "section_01_free_02_start_504",
-        "name": "師父聊雨傘",
+        "name": "師父聊傘",
         "ref": "",
         "desc": "僅跳轉，無內容",
         "keywords": ""
     },
     "section_01_free_02_start_505": {
         "ori": "section_01_free_02_start_505",
-        "name": "師父聊三國",
+        "name": "師父聊名字",
         "ref": "",
         "desc": "僅跳轉，無內容",
         "keywords": ""
@@ -11999,10 +11999,10 @@
     },
     "talk_girl5_05": {
         "ori": "talk_girl5_05",
-        "name": "三國夏侯蘭",
+        "name": "關於名字",
         "ref": "",
         "desc": "",
-        "keywords": ""
+        "keywords": "三國"
     },
     "talk_girl5_10": {
         "ori": "talk_girl5_10",

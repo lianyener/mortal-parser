@@ -822,6 +822,18 @@
       { "id": "S0023_01_04", "type": "Script" }
     ]
   },
+  "CT_S12502": {
+    "mission": "CM_Free",
+    "active": true,
+    "minTime": { "year": "2", "month": "4", "stage": "1" },
+    "maxTime": { "year": "2", "month": "7", "stage": "3" },
+    "condition": ["※[*Custom.ReferTo*]:[*Label.Position,Section_01_02_Start*]"],
+    "script": "section_01_free_02_start_502",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，實際是從[*Label.Position,Section_01_02_Start*]依權重及條件隨機觸發"],
+    "type": "Free",
+    "orderKey": "2-04-1-5-S12502"
+  },
   "CT_M0000": {
     "mission": "main",
     "active": true,

@@ -15310,12 +15310,12 @@
 		"data": [
 			{
 				"script": [],
-				"name": "閒聊住所",
+				"name": "觸發師父聊住所",
 				"value": {
 					"0": "[*Custom.False*]",
 					"1": "[*Custom.True*]"
 				},
-				"desc": ""
+				"desc": "已觸發事件：師父聊住所"
 			}
 		]
 	},
@@ -15385,12 +15385,12 @@
 		"data": [
 			{
 				"script": [],
-				"name": "閒聊三國夏侯蘭",
+				"name": "觸發師父聊名字",
 				"value": {
 					"0": "[*Custom.False*]",
 					"1": "[*Custom.True*]"
 				},
-				"desc": ""
+				"desc": "是否已觸發事件：師父聊名字"
 			}
 		]
 	},
@@ -15520,12 +15520,12 @@
 		"data": [
 			{
 				"script": [],
-				"name": "閒聊雪山派",
+				"name": "觸發師父聊雪山派",
 				"value": {
 					"0": "[*Custom.False*]",
 					"1": "[*Custom.True*]"
 				},
-				"desc": ""
+				"desc": "是否已觸發事件：師父聊雪山派"
 			}
 		]
 	},
@@ -15580,12 +15580,12 @@
 		"data": [
 			{
 				"script": [],
-				"name": "閒聊雨傘",
+				"name": "觸發師父聊傘",
 				"value": {
 					"0": "[*Custom.False*]",
 					"1": "[*Custom.True*]"
 				},
-				"desc": ""
+				"desc": "是否已觸發事件：師父聊傘"
 			}
 		]
 	},
