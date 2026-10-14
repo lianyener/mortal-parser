@@ -1479,78 +1479,78 @@
     "CL_5000_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee341*]",
         "ref": "崆峒留學 休息 和別派打架 難度1 戰全真弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰全真弟子",
+        "desc": "崆峒窩居別派聚眾嘲笑，骰出全真弟子",
         "keywords": ""
     },
     "CL_5000_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee301*]",
         "ref": "崆峒留學 休息 和別派打架 難度1 戰點蒼弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰點蒼弟子",
+        "desc": "崆峒窩居別派聚眾嘲笑，骰出點蒼弟子",
         "keywords": ""
     },
     "CL_5000_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee201*]",
         "ref": "崆峒留學 休息 和別派打架 難度1 戰飛天弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰飛天弟子",
+        "desc": "崆峒窩居別派聚眾嘲笑，骰出飛天弟子",
         "keywords": ""
     },
     "CL_5000_04": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.beggar1*]",
         "ref": "崆峒留學 休息 和別派打架 難度1 戰乞丐",
-        "name": "",
-        "desc": "",
+        "name": "戰丐幫弟子",
+        "desc": "崆峒窩居別派聚眾嘲笑，骰出丐幫弟子",
         "keywords": ""
     },
     "CL_5000_05": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee331*]",
         "ref": "崆峒留學 休息 和別派打架 難度2 戰嵩山弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰嵩山弟子",
+        "desc": "崆峒窩居別派聚眾嘲笑，骰出嵩山弟子",
         "keywords": ""
     },
     "CL_5000_06": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee311*]",
         "ref": "崆峒留學 休息 和別派打架 難度2 戰青城弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰青城弟子",
+        "desc": "崆峒窩居別派聚眾嘲笑，骰出青城弟子",
         "keywords": ""
     },
     "CL_5000_07": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee221*]",
         "ref": "崆峒留學 休息 和別派打架 難度2 戰奪魄弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰奪魄弟子",
+        "desc": "崆峒窩居別派聚眾嘲笑，骰出奪魄弟子",
         "keywords": ""
     },
     "CL_5000_08": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee321*]",
         "ref": "崆峒留學 休息 和別派打架 難度2 戰峨嵋弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰峨嵋弟子",
+        "desc": "崆峒窩居別派聚眾嘲笑，骰出峨嵋弟子",
         "keywords": ""
     },
     "CL_5000_50": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.hero1*]",
         "ref": "崆峒留學 休息 和別派打架 難度3 戰少俠",
-        "name": "",
-        "desc": "",
+        "name": "戰江湖俠侶",
+        "desc": "崆峒窩居別派聚眾嘲笑，骰出江湖俠侶",
         "keywords": ""
     },
     "CL_5000_51": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.soldier1*]",
         "ref": "崆峒留學 休息 和別派打架 難度3 戰官兵",
-        "name": "",
-        "desc": "",
+        "name": "戰宋兵",
+        "desc": "崆峒窩居別派聚眾嘲笑，骰出宋兵",
         "keywords": ""
     },
     "CL_5000_52": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee_group_211*]",
         "ref": "崆峒留學 休息 和別派打架 難度3 戰undefined",
-        "name": "",
-        "desc": "",
+        "name": "戰崆峒戰隊",
+        "desc": "崆峒窩居別派聚眾嘲笑，骰出崆峒戰隊",
         "keywords": ""
     },
     "CL_5001_01": {
@@ -1619,22 +1619,22 @@
     "CL_5101_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee211*]",
         "ref": "崆峒 賭博被搶 戰鐵拳弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰鐵拳弟子",
+        "desc": "崆峒賭坊被搶",
         "keywords": ""
     },
     "CL_5101_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee221*]",
         "ref": "崆峒 賭博被搶 戰奪魄弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰奪魄弟子",
+        "desc": "崆峒賭坊被搶",
         "keywords": ""
     },
     "CL_5101_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee201*]",
         "ref": "崆峒 賭博被搶 戰飛天弟子",
-        "name": "",
-        "desc": "",
+        "name": "戰飛天弟子",
+        "desc": "崆峒賭坊被搶",
         "keywords": ""
     },
     "CL_5102_01": {
@@ -1773,22 +1773,22 @@
     "CL_G0005_02_01": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl6*]",
         "ref": "閒聊 小蘭 捍衛魏掌門 戰夏侯蘭",
-        "name": "",
-        "desc": "",
+        "name": "師父教訓你",
+        "desc": "師父想辦法事件綁架魏菊，選擇捍衛魏掌門",
         "keywords": ""
     },
     "CL_G0005_02_02": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.special4*]",
         "ref": "閒聊 小蘭 綁架樊嘯天 戰樊嘯天",
-        "name": "",
-        "desc": "",
+        "name": "狂犬襲來",
+        "desc": "師父想辦法事件綁架樊嘯天，骰到狂犬襲來",
         "keywords": ""
     },
     "CL_G0005_02_03": {
         "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl6*]",
         "ref": "閒聊 小蘭 綁架上官螢 戰夏侯蘭",
-        "name": "",
-        "desc": "",
+        "name": "反抗師父",
+        "desc": "師父想辦法事件綁架上官螢",
         "keywords": ""
     },
     "CL_G0005_10_01": {

@@ -2037,7 +2037,7 @@ export async function parsePosition() {
     Section_01_00: { index: 310, period: '006', position: '', action: 'sleep2' },
     Section_01_06_01: { index: 321, period: '006', position: 'Section_01_06', action: 'walk' },
     Section_01_06_02: { index: 322, period: '006', position: 'Section_01_06', action: 'casino' },
-    Section_01_06_02_01: { index: 322, period: '006', position: 'Section_01_06', action: 'robbed' },
+    Section_01_06_02_01: { index: 323, period: '006', position: 'Section_01_06', action: 'robbed' },
     Section_01_01: { index: 331, period: '006', position: 'Section_01_01', action: 'immortal' },
     Section_01_02_Start: { index: 340, period: '006', position: 'Section_01_02', action: 'before-training' },
     Section_01_02: { index: 341, period: '006', position: 'Section_01_02', action: 'training2' },

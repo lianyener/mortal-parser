@@ -287,7 +287,7 @@
       "before-training": "[*Position.title.training*]前",
       "before-forge": "[*Position.Name.Forge*]",
       "door": "出門",
-      "fortress": "工作前",
+      "fortress": "[*Position.title.housekeeper*]前",
       "fish": "[*Story.O_2_4_3_Break_01_003*]",
       "casino2": "[*Story.O_2_4_3_Break_01_005*]",
       "sleep2": "[*Story.O_Section_01_Free_Start_02_001*]",

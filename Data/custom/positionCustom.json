@@ -55,5 +55,15 @@
         ]
       }
     }
+  },
+  "Section_01_02_Start": {
+    "event": {
+      "501": {
+        "eventFlow": [
+          { "id": "section_01_free_02_start_501", "type": "Script" },
+          { "id": "talk_girl5_01", "type": "Script" }
+        ]
+      }
+    }
   }
 }
