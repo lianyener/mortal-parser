@@ -1075,7 +1075,7 @@
       "ori": "S2300",
       "name": "阿花姑娘",
       "ref": "",
-      "desc": "",
+      "desc": "小梅線",
       "keywords": ""
     },
     "S2401": {
@@ -1298,6 +1298,244 @@
     "CM_S0105": {
       "ori": "CM_S0105",
       "name": "假趙活審判",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "M7006_07": {
+      "ori": "M7006_07",
+      "name": "",
+      "ref": "陪小梅",
+      "desc": "",
+      "keywords": ""
+    },
+    "M7006_08": {
+      "ori": "M7006_08",
+      "name": "",
+      "ref": "陪小竹",
+      "desc": "",
+      "keywords": ""
+    },
+    "S0031": {
+      "ori": "S0031",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S0033": {
+      "ori": "S0033",
+      "name": "修理彈珠檯",
+      "ref": "彈珠台",
+      "desc": "",
+      "keywords": ""
+    },
+    "S0032": {
+      "ori": "S0032",
+      "name": "彈珠檯",
+      "ref": "彈珠台",
+      "desc": "",
+      "keywords": ""
+    },
+    "S0304": {
+      "ori": "S0304",
+      "name": "崆峒援兵",
+      "ref": "崆峒派到江陵",
+      "desc": "",
+      "keywords": ""
+    },
+    "S0305": {
+      "ori": "S0305",
+      "name": "小竹在江陵",
+      "ref": "小竹在江陵",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2201": {
+      "ori": "S2201",
+      "name": "",
+      "ref": "崆峒掌派人",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2300_1": {
+      "ori": "S2300_1",
+      "name": "阿花姑娘",
+      "ref": "",
+      "desc": "郁竹線",
+      "keywords": ""
+    },
+    "S2310": {
+      "ori": "S2310",
+      "name": "崆峒惡霸虞小梅",
+      "ref": "崆峒惡霸虞小梅",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2301": {
+      "ori": "S2301",
+      "name": "",
+      "ref": "燒烤山味",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2320": {
+      "ori": "S2320",
+      "name": "崆峒探險隊",
+      "ref": "崆峒探險隊",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2321": {
+      "ori": "S2321",
+      "name": "襄陽行",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2600": {
+      "ori": "S2600",
+      "name": "飛天門拜碼頭",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2510": {
+      "ori": "S2510",
+      "name": "",
+      "ref": "夏侯蘭鍛鍊唐門弟子",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2700": {
+      "ori": "S2700",
+      "name": "鐵拳門不速之客",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2900": {
+      "ori": "S2900",
+      "name": "小竹回家前置",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2901": {
+      "ori": "S2901",
+      "name": "小竹回家",
+      "ref": "小竹回家",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2902": {
+      "ori": "S2902",
+      "name": "好多錢",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2910": {
+      "ori": "S2910",
+      "name": "神兵帖1",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2911": {
+      "ori": "S2911",
+      "name": "小竹的煩惱",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2914_01": {
+      "ori": "S2914_01",
+      "name": "",
+      "ref": "神兵帖4",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2912": {
+      "ori": "S2912",
+      "name": "神雷劍",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2913": {
+      "ori": "S2913",
+      "name": "神兵帖3",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2914_02": {
+      "ori": "S2914_02",
+      "name": "",
+      "ref": "神兵帖4鍛冶場",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2915": {
+      "ori": "S2915",
+      "name": "可疑的行蹤",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2917": {
+      "ori": "S2917",
+      "name": "小竹受歡迎",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2916": {
+      "ori": "S2916",
+      "name": "梅竹重逢",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2918": {
+      "ori": "S2918",
+      "name": "工欲善其事",
+      "ref": "工欲善其事",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2921": {
+      "ori": "S2921",
+      "name": "",
+      "ref": "小竹的家書",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2920": {
+      "ori": "S2920",
+      "name": "竹之心",
+      "ref": "竹之心",
+      "desc": "",
+      "keywords": ""
+    },
+    "S2919": {
+      "ori": "S2919",
+      "name": "小竹學武功",
+      "ref": "小竹學武功",
+      "desc": "",
+      "keywords": ""
+    },
+    "CM_S2800": {
+      "ori": "CM_S2800",
+      "name": "鎮魂獄",
+      "ref": "",
+      "desc": "",
+      "keywords": ""
+    },
+    "CM_S2922": {
+      "ori": "CM_S2922",
+      "name": "",
       "ref": "",
       "desc": "",
       "keywords": ""
@@ -1578,7 +1816,7 @@
     },
     "M2005_02": {
       "ori": "M2005_02",
-      "name": "",
+      "name": "交換學生",
       "ref": "交換學生",
       "desc": "",
       "keywords": "",
@@ -3300,7 +3538,7 @@
       "ori": "S2300_01",
       "name": "阿花姑娘",
       "ref": "",
-      "desc": "",
+      "desc": "小梅線",
       "keywords": "",
       "sheet": "KongtongStudy"
     },
@@ -3743,6 +3981,398 @@
       "desc": "",
       "keywords": "",
       "sheet": "KongtongStudy"
+    },
+    "M7006_07_01": {
+      "ori": "M7006_07_01",
+      "name": "陪小梅",
+      "ref": "陪小梅",
+      "desc": "",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "M7006_08_01": {
+      "ori": "M7006_08_01",
+      "name": "陪小竹",
+      "ref": "陪小竹",
+      "desc": "",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "S0031_01": {
+      "ori": "S0031_01",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "SectDestroy"
+    },
+    "S0032_01": {
+      "ori": "S0032_01",
+      "name": "介紹彈珠檯",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "S0033_01": {
+      "ori": "S0033_01",
+      "name": "首次修理彈珠檯",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S0304_01": {
+      "ori": "S0304_01",
+      "name": "崆峒援兵",
+      "ref": "崆峒派到江陵",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S0305_01": {
+      "ori": "S0305_01",
+      "name": "小竹在江陵",
+      "ref": "小竹在江陵",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2201_01": {
+      "ori": "S2201_01",
+      "name": "",
+      "ref": "崆峒掌派人",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2300_1_01": {
+      "ori": "S2300_1_01",
+      "name": "阿花姑娘",
+      "ref": "",
+      "desc": "郁竹線",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2310_01": {
+      "ori": "S2310_01",
+      "name": "崆峒惡霸虞小梅",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2301_01": {
+      "ori": "S2301_01",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2320_01": {
+      "ori": "S2320_01",
+      "name": "崆峒探險隊",
+      "ref": "崆峒探險隊",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2321_01": {
+      "ori": "S2321_01",
+      "name": "襄陽行",
+      "ref": "崆峒探險隊",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2600_01": {
+      "ori": "S2600_01",
+      "name": "飛天門拜碼頭",
+      "ref": "飛天門事件：拜碼頭",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2510_01": {
+      "ori": "S2510_01",
+      "name": "",
+      "ref": "夏侯蘭鍛鍊唐門弟子",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2700_01": {
+      "ori": "S2700_01",
+      "name": "鐵拳門不速之客",
+      "ref": "鐵拳門事件II.不速之客",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2900_01": {
+      "ori": "S2900_01",
+      "name": "小竹回家前置",
+      "ref": "小竹回家 小竹觸發",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2901_01": {
+      "ori": "S2901_01",
+      "name": "小竹回家",
+      "ref": "小竹回家",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2902_01": {
+      "ori": "S2902_01",
+      "name": "好多錢",
+      "ref": "好多錢",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2910_01": {
+      "ori": "S2910_01",
+      "name": "神兵帖1",
+      "ref": "神兵帖（1）",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2911_01": {
+      "ori": "S2911_01",
+      "name": "小竹的煩惱",
+      "ref": "小竹的煩惱",
+      "desc": "神兵帖2",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2914_01_01": {
+      "ori": "S2914_01_01",
+      "name": "",
+      "ref": "神兵帖4",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2912_01": {
+      "ori": "S2912_01",
+      "name": "神雷劍",
+      "ref": "神雷劍",
+      "desc": "神兵帖2",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2913_01": {
+      "ori": "S2913_01",
+      "name": "神兵帖3",
+      "ref": "神兵帖3",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2914_02_01": {
+      "ori": "S2914_02_01",
+      "name": "",
+      "ref": "神兵帖4鍛冶場",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2915_01": {
+      "ori": "S2915_01",
+      "name": "",
+      "ref": "神兵帖3",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2917_01": {
+      "ori": "S2917_01",
+      "name": "小竹受歡迎",
+      "ref": "小竹受歡迎",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2916_01": {
+      "ori": "S2916_01",
+      "name": "梅竹重逢",
+      "ref": "梅竹重逢",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2918_01": {
+      "ori": "S2918_01",
+      "name": "工欲善其事",
+      "ref": "神兵帖3",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2921_01": {
+      "ori": "S2921_01",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2920_01": {
+      "ori": "S2920_01",
+      "name": "竹之心",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S2919_01": {
+      "ori": "S2919_01",
+      "name": "小竹學武功",
+      "ref": "小竹學武功",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "S0033_02": {
+      "ori": "S0033_02",
+      "name": "修理彈珠檯",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "S2914_01_02": {
+      "ori": "S2914_01_02",
+      "name": "",
+      "ref": "神兵帖4 第二節",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
+    },
+    "CT_S2600_01": {
+      "ori": "CT_S2600_01",
+      "name": "飛天門拜碼頭",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_S2700_01": {
+      "ori": "CT_S2700_01",
+      "name": "鐵拳門不速之客",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_S2900_01": {
+      "ori": "CT_S2900_01",
+      "name": "小竹回家前置",
+      "ref": "",
+      "desc": "小竹觸發",
+      "keywords": "",
+      "sheet": ""
+    },
+    "CT_S2900_02": {
+      "ori": "CT_S2900_02",
+      "name": "小竹回家前置",
+      "ref": "",
+      "desc": "小梅觸發",
+      "keywords": "",
+      "sheet": ""
+    },
+    "CT_S2910_01": {
+      "ori": "CT_S2910_01",
+      "name": "神兵帖1",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_S2911_01": {
+      "ori": "CT_S2911_01",
+      "name": "小竹的煩惱",
+      "ref": "",
+      "desc": "神兵帖2",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_S2800_01": {
+      "ori": "CT_S2800_01",
+      "name": "鎮魂獄",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_S2915_01": {
+      "ori": "CT_S2915_01",
+      "name": "可疑的行蹤",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_S2321_01": {
+      "ori": "CT_S2321_01",
+      "name": "襄陽行",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_S2919_01": {
+      "ori": "CT_S2919_01",
+      "name": "小竹學武功",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_S0305_01": {
+      "ori": "CT_S0305_01",
+      "name": "小竹在江陵",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_S2920_01": {
+      "ori": "CT_S2920_01",
+      "name": "竹之心",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_S2918_01": {
+      "ori": "CT_S2918_01",
+      "name": "工欲善其事",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "KongtongStudy"
+    },
+    "CT_KS01": {
+      "ori": "CT_KS01",
+      "name": "給四師兄接風",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeWestWulin"
+    },
+    "CT_S2922_01": {
+      "ori": "CT_S2922_01",
+      "name": "",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": ""
     }
   }
 }

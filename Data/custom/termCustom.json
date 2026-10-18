@@ -58,6 +58,7 @@
     "Remove": "移除",
     "Add": "新增",
     "RemoveAllState": "[*Custom.Remove*]所有狀態",
+    "RemoveAllSupport": "[*Custom.Remove*]所有輔助",
     "BanAction": "無法動作",
     "Use": "使用",
     "Have": "存在",
@@ -77,6 +78,7 @@
     "Lose": "失去",
     "DemoEnd": "結束試玩版",
     "CombatNextScript": "戰鬥後接續",
+    "GameNextScript": "小遊戲後接續",
     "NextScript": "接續",
     "TempScript": "預存事件",
     "TravelScript": "預存地圖事件",
@@ -94,6 +96,7 @@
     "SetTitlePartner": "設定標題畫面",
     "AddStory": "添加傳記",
     "ShowPicture": "顯示插圖",
+    "ShowImage": "顯示圖片",
     "ShowCG": "顯示CG",
     "ShowTree": "顯示系譜表",
     "ShowMap": "地圖移動",
@@ -114,22 +117,45 @@
     "ResetLevel": "重置開發等級",
     "ReferTo": "參照",
     "FromScript": "接續特定劇本",
-    "AdjustCharacter": "調整角色"
+    "AdjustCharacter": "調整角色",
+    "Pinball": "進入彈珠台",
+    "Counter": "應對",
+    "Reduce": "減少{0}層",
+    "SetupEffect": "設定特效"
   },
   "Character": {
     "playerLeft": "[*Character.player*]",
     "playerRight": "[*Character.player*]",
     "brother1_upper": "[*Character.brother1*]",
     "brother1_lower": "[*Character.brother1*]",
+    "sister1_look": "[*Character.sister1*]",
+    "girl5_hand": "[*Character.girl5*]",
+    "girl5_10": "[*Character.girl5_10_1*]",
+    "special214": "[*Character.special214_1*]",
+    "special215": "[*Character.special215_1*]",
     "special213": "李元棄"
   },
   "CombatAction": { "none": "[*System.NA*]", "talk": "[*CombatAction.curse*]" },
   "CombatSkill": {
-    "Name": { "D030": "[*CombatSkill.Name.D030_1*]", "S125": "[*CombatSkill.Name.S125_1*]", "Unknown": "[*Custom.Unknown*]" },
-    "Desc": { "D030": "[*CombatSkill.Desc.D030_1*]", "S125": "[*CombatSkill.Desc.S125_1*]" }
+    "Name": {
+      "B113": "不動如山",
+      "D030": "[*CombatSkill.Name.D030_1*]",
+      "S125": "[*CombatSkill.Name.S125_1*]",
+      "S133": "[*CombatSkill.Name.S133_1*]",
+      "S134": "[*CombatSkill.Name.S134_1*]",
+      "S143": "[*CombatSkill.Name.S143_1*]",
+      "Unknown": "[*Custom.Unknown*]"
+    },
+    "Desc": {
+      "D030": "[*CombatSkill.Desc.D030_1*]",
+      "S125": "[*CombatSkill.Desc.S125_1*]",
+      "S133": "[*CombatSkill.Desc.S133_1*]",
+      "S134": "[*CombatSkill.Desc.S134_1*]",
+      "S143": "[*CombatSkill.Desc.S143_1*]"
+    }
   },
   "DialogType": { "character": "說", "think": "想", "narrative": "旁白", "center": "過場", "unknown": "[*Custom.Unknown*]" },
-  "EnemyTeam": { "-20": "[*Custom.Unknown*]", "-50": "[*Custom.Unknown*]", "202": "十八銅人" },
+  "EnemyTeam": { "-20": "[*Custom.Unknown*]", "-50": "[*Custom.Unknown*]", "202": "十八銅人", "302": "孤雲山" },
   "Flag": { "YesNo": { "0": "[*Custom.False*]", "1": "[*Custom.True*]" }, "Own": { "0": "[*System.NA*]", "1": "[*Custom.Own*]" }, "Match": { "0": "不符", "1": "符合" } },
   "Label": {
     "Achievement": "[*LabelIcon.Achievement*][*Library.Title.{0}*]",
@@ -249,7 +275,10 @@
       "909": "[*Script.Name.S2501_01_travel*]",
       "910": "[*Script.Name.S2503_break_01*]",
       "911": "[*Script.Name.ch6_3_2_travel*]",
-      "912": "[*Script.Name.ch6_4_3_break_01*]"
+      "912": "[*Script.Name.ch6_4_3_break_01*]",
+      "913": "[*Script.Name.S2901_02_travel*]",
+      "914": "[*Script.Name.S2901_05_travel*]",
+      "915": "[*Script.Name.S2321_04_03_break_01*]"
     }
   },
   "Middle": {
@@ -281,7 +310,7 @@
     "npcs": "人數"
   },
   "Position": {
-    "Name": { "Map": "大地圖", "Run": "[*Story.O_Door_Girl_03_01_001*]" },
+    "Name": { "Map": "大地圖", "Run": "[*Story.O_Door_Girl_03_01_001*]", "Section_01_08": "[*Story.O_Section_01_Free_Start_02_008*]", "S2800_02": "鎮魂獄" },
     "title": {
       "before-pickwood": "[*Position.title.pickwood*]前",
       "before-training": "[*Position.title.training*]前",
@@ -292,6 +321,7 @@
       "casino2": "[*Story.O_2_4_3_Break_01_005*]",
       "sleep2": "[*Story.O_Section_01_Free_Start_02_001*]",
       "sleep3": "[*Story.O_Section_02_Free_Start_02_001*]",
+      "sleep4": "[*Story.O_S2321_04_03_Break_01_003*]",
       "walk3": "散步",
       "walk4": "[*Story.O_3_6_1_Break_Start_01_001*]",
       "robbed": "再次被搶",
@@ -301,7 +331,9 @@
       "travel2": "前半移動",
       "travel3": "後半移動",
       "night": "守夜",
-      "music": "[*Story.O_6_4_3_Break_01_003*]"
+      "music": "[*Story.O_6_4_3_Break_01_003*]",
+      "firebird1": "[*Character.firebird1*]",
+      "jail": "[*Story.O_S2800_02_Break_01_007*]"
     },
     "Remark": { "Common": { "0": "觸發清單列了2次，實際權重應視為2倍" } },
     "Class": { "0": "正常", "1": "失敗", "2": "大失敗", "3": "成功", "4": "大成功", "5": "特殊", "9": "其他" }

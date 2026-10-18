@@ -1,6 +1,61 @@
 {
   "Log": [
-    { "ID": "20261015-01", "Date": "2026/10/15", "GameVersion": "1.0.5000.10", "Content": [{ "Category": "Web", "Type": "Other", "Text": "Website initialization." }] },
+    {
+      "ID": "20261018-01",
+      "Date": "2026/10/18",
+      "GameVersion": "1.0.6000.2",
+      "Content": [
+        {
+          "Category": "Trigger",
+          "Type": "New",
+          "Text": [
+            "以下新增任務觸發已整理：", 
+            "[*Label.Trigger,S0032_01*]、[*Label.Trigger,S0033_01*]、[*Label.Trigger,S0033_02*]", 
+            "[*Label.Trigger,CT_S2600_01*]、[*Label.Trigger,CT_S2700_01*]、[*Label.Trigger,CT_S2800_01*]、[*Label.Trigger,CT_S2915_01*]、[*Label.Trigger,S2320_01*]、[*Label.Trigger,CT_S2900_01*]、[*Label.Trigger,CT_S2900_02*]、[*Label.Trigger,S2901_01*]、[*Label.Trigger,CT_S2910_01*]、[*Label.Trigger,CT_S2911_01*]、[*Label.Trigger,S2912_01*]、[*Label.Trigger,S2310_01*]、[*Label.Trigger,S2913_01*]", 
+            "[*Label.Trigger,S0304_01*]、[*Label.Trigger,CT_S0305_01*]、[*Label.Trigger,CT_S2321_01*]、[*Label.Trigger,CT_S2919_01*]、[*Label.Trigger,S2300_1_01*]"
+          ]
+        },
+        {
+          "Category": "Position",
+          "Type": "New",
+          "Text": [
+            "以下新增隨機事件已整理：", 
+            "[*Label.Position,Section_01_08_06*]、[*Label.Position,S2800_02_Break_01*]、[*Label.Position,Travel_S2901_02*]、[*Label.Position,Travel_S2901_05*]、[*Label.Position,S2321_04_03_02*]、[*Label.Position,S2321_04_03_03*]"
+          ]
+        },
+        {
+          "Category": "Script",
+          "Type": "New",
+          "Text": [
+            "以下新增劇本已整理：",
+            "[*Label.Trigger,Room1*]：[*Label.Script,talk_brother4_option_04*]",
+            "[*Label.Trigger,CT_Section_01_Free*]：[*Label.Script,section_01_free_08*]及後續",
+            "[*Label.Trigger,M2007_02*]：[*Label.Script,ch3_2_2_1*]",
+            "[*Label.Trigger,M2008_01*]：[*Label.Script,ch3_8_2_3*]、[*Label.Script,ch3_8_3_1*]、[*Label.Script,ch3_8_3_01*]、[*Label.Script,ch3_8_3_2*]、[*Label.Script,ch3_16_5*]",
+            "[*Label.Trigger,S2300_01*]：[*Label.Script,S2300_01_part_2*]",
+            "[*Label.Position,Back_03*]：[*Label.Script,back_03_502*]、[*Label.Script,back_03_503*]",
+            "[*Label.Position,Back_Work_001*]：[*Label.Script,back_work_505*]、[*Label.Script,back_work_506*]",
+            "[*Label.Position,Mall_Work_001*]：[*Label.Script,mall_work_502*]、[*Label.Script,mall_work_503*]",
+            "[*Label.Position,Study_Work_001*]：[*Label.Script,study_work_501*]、[*Label.Script,study_work_502*]",
+            "[*Label.Position,Alchemy_Work_001*]：[*Label.Script,alchemy_work_503*]",
+            "[*Label.Position,Center_Work_001*]：[*Label.Script,center_work_501*]、[*Label.Script,center_work_502*]",
+            "[*Label.Position,Center_Free_001*]：[*Label.Script,center_free_904*]、[*Label.Script,center_free_905*]",
+            "[*Label.Position,Kitchen_Work_001*]：[*Label.Script,kitchen_work_502*]、[*Label.Script,kitchen_work_503*]、[*Label.Script,kitchen_work_504*]",
+            "[*Label.Position,Door_Free_001*]：[*Label.Script,door_free_513*]、[*Label.Script,door_free_514*]及後續、[*Label.Script,door_free_515*]、[*Label.Script,door_free_516*]、[*Label.Script,door_free_517*]",
+            "[*Label.Position,Spa_Free_001*]：[*Label.Script,spa_free_502*]",
+            "[*Label.Position,Section_01_01*]：[*Label.Script,section_01_free_01_501*]及後續",
+            "[*Label.Position,Section_01_03*]：[*Label.Script,section_01_free_03_501*]",
+            "[*Label.Position,Section_01_07*]：[*Label.Script,section_01_free_07_403*]",
+            "[*Label.Position,Ch_3_6_1_01*]：[*Label.Script,ch3_6_1_01_506*]",
+            "[*Label.Position,Travel_310*]：[*Label.Script,travel_result_310_503_02*]",
+            "特定期間唐門月會：[*Label.Script,meeting_option_705_01*]"
+          ]
+        }
+      ]
+    },
+    { "ID": "20261017-01", "Date": "2026/10/17", "GameVersion": "1.0.6000.2", "Content": [{ "Category": "Web", "Type": "Other", "Text": ["調整總表事件跳轉的方式以改善效能"] }] },
+    { "ID": "20261016-01", "Date": "2026/10/16", "GameVersion": "1.0.6000.2", "Content": [{ "Category": "Web", "Type": "Other", "Text": ["更新資料已匯入，整理中；更新紀錄之後補"] }] },
+    { "ID": "20261015-01", "Date": "2026/10/15", "GameVersion": "1.0.5000.10", "Content": [{ "Category": "Web", "Type": "Other", "Text": ["Website initialization."] }] },
     {
       "ID": "20250928-01",
       "Date": "2025/09/28",
@@ -9,7 +64,9 @@
         {
           "Category": "Script",
           "Type": "Change",
-          "Text": "[*Label.Script,ch3_1_2_1*]、[*Label.Script,ch3_1_7_5*]、[*Label.Script,ch5_1_1*]、[*Label.Script,ch5_2_6_4*]、[*Label.Script,ch5_3_4_2*]、[*Label.Script,ch5_4_6_break_start_01*]、[*Label.Script,ch5_4_8_1*]、[*Label.Script,ch5_4_8_2*]、[*Label.Script,ch5_4_8_5_2*]、[*Label.Script,ch5_4_8_5_3*]、[*Label.Script,ch6_4_4_1*]、[*Label.Script,ch7_5_4_3*]、[*Label.Script,ch7_5_5_3*]、[*Label.Script,ch8_1_1_2*]、[*Label.Script,ch8_1_1_2_break_start_01*]、[*Label.Script,ch8_3_1_2_3*]、[*Label.Script,ch8_3_2_2*]、[*Label.Script,ch8_3_2_3_3*]、[*Label.Script,ch8_4_10_1*]、[*Label.Script,ch8_4_3_1*]、[*Label.Script,S0018_04*]、[*Label.Script,S0028_02_break_start_01*]、[*Label.Script,S0202_01*]、[*Label.Script,S0203_01*]、[*Label.Script,S0204_01_01_01*]、[*Label.Script,S0208_06_02_break_start_01*]、[*Label.Script,S0209_01_07*]、[*Label.Script,S0501_01*]、[*Label.Script,S0502_01*]、[*Label.Script,S0502_02*]、[*Label.Script,S8500_01*]、[*Label.Script,S8500_01_02*]、[*Label.Script,S8500_01_05*]、[*Label.Script,travel_result_601_902_03*]、[*Label.Script,travel_result_601_906*]、[*Label.Script,center_free_501*]、[*Label.Script,center_free_502*]、[*Label.Script,center_free_503*]"
+          "Text": [
+            "[*Label.Script,ch3_1_2_1*]、[*Label.Script,ch3_1_7_5*]、[*Label.Script,ch5_1_1*]、[*Label.Script,ch5_2_6_4*]、[*Label.Script,ch5_3_4_2*]、[*Label.Script,ch5_4_6_break_start_01*]、[*Label.Script,ch5_4_8_1*]、[*Label.Script,ch5_4_8_2*]、[*Label.Script,ch5_4_8_5_2*]、[*Label.Script,ch5_4_8_5_3*]、[*Label.Script,ch6_4_4_1*]、[*Label.Script,ch7_5_4_3*]、[*Label.Script,ch7_5_5_3*]、[*Label.Script,ch8_1_1_2*]、[*Label.Script,ch8_1_1_2_break_start_01*]、[*Label.Script,ch8_3_1_2_3*]、[*Label.Script,ch8_3_2_2*]、[*Label.Script,ch8_3_2_3_3*]、[*Label.Script,ch8_4_10_1*]、[*Label.Script,ch8_4_3_1*]、[*Label.Script,S0018_04*]、[*Label.Script,S0028_02_break_start_01*]、[*Label.Script,S0202_01*]、[*Label.Script,S0203_01*]、[*Label.Script,S0204_01_01_01*]、[*Label.Script,S0208_06_02_break_start_01*]、[*Label.Script,S0209_01_07*]、[*Label.Script,S0501_01*]、[*Label.Script,S0502_01*]、[*Label.Script,S0502_02*]、[*Label.Script,S8500_01*]、[*Label.Script,S8500_01_02*]、[*Label.Script,S8500_01_05*]、[*Label.Script,travel_result_601_902_03*]、[*Label.Script,travel_result_601_906*]、[*Label.Script,center_free_501*]、[*Label.Script,center_free_502*]、[*Label.Script,center_free_503*]"
+          ]
         }
       ]
     },
@@ -18,15 +75,13 @@
       "Date": "2025/09/13",
       "GameVersion": "1.0.5000.8",
       "Content": [
-        {
-          "Category": "Script",
-          "Type": "New",
-          "Text": "[*Label.Script,S0214_01*]"
-        },
+        { "Category": "Script", "Type": "New", "Text": "[*Label.Script,S0214_01*]" },
         {
           "Category": "Script",
           "Type": "Change",
-          "Text": "[*Label.Script,ch6_4_4_4_2*]、[*Label.Script,ch6_9_2_3*]、[*Label.Script,ch7_5_4_8*]、[*Label.Script,S0003_03_break_01*]、[*Label.Script,S0018_02_01*]、[*Label.Script,S0208_05_05*]、[*Label.Script,S0801_02_01*]"
+          "Text": [
+            "[*Label.Script,ch6_4_4_4_2*]、[*Label.Script,ch6_9_2_3*]、[*Label.Script,ch7_5_4_8*]、[*Label.Script,S0003_03_break_01*]、[*Label.Script,S0018_02_01*]、[*Label.Script,S0208_05_05*]、[*Label.Script,S0801_02_01*]"
+          ]
         }
       ]
     }

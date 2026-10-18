@@ -442,5 +442,38 @@
     },
     "name": "[*Label.Relationship,special103*]+[*Label.Relationship,special4*]+[*Label.Flag,H01001*]×10+[*Label.Flag,H02001*]×10",
     "type": "Relationship"
+  },
+  "數值_體力_輕功": {
+    "rel": {},
+    "name": "[*Label.Stat,life*]+[*Label.Stat,dexterity*]",
+    "type": "PlayerStat"
+  },
+  "旗標_攻略人數_排除梅": {
+    "rel": {
+      "Flag": [
+        "G11000",
+        "G11001",
+        "G11002",
+        "G11003",
+        "G11005",
+        "G11006",
+        "G11007"
+      ]
+    },
+    "name": "[*Label.Flag,G11000*]+[*Label.Flag,G11001*]+[*Label.Flag,G11002*]+[*Label.Flag,G11003*]+[*Label.Flag,G11005*]+[*Label.Flag,G11006*]+[*Label.Flag,G11007*]",
+    "type": "GroupFlag",
+    "id": "flag_connect_excl_4",
+    "text": "小梅以外結緣數"
+  },
+  "雜物_任何木劍": {
+    "rel": {
+      "Misc": [
+        "7102",
+        "7101",
+        "7100"
+      ]
+    },
+    "name": "[*Label.Misc,7102*]+[*Label.Misc,7101*]+[*Label.Misc,7100*]",
+    "type": "Misc"
   }
 }

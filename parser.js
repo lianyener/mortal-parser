@@ -74,7 +74,7 @@ const REGEX_UNDERSCORE = /_/g;
 const REGEX_RELATIONSHIP = /^relationship_(.+?)(?:_[^_]+)?_\d+$/i;
 const REGEX_STAT_PREFIX = /^(Player|Faction)_/;
 const REGEX_ENEMY_STAT = /enemy_(\d{3})_(\w+)/i;
-const REGEX_CHAR_EXTRA = /^(\w+)_(\d+|young|upper|lower)$/;
+const REGEX_CHAR_EXTRA = /^(\w+)_(\d+|young|upper|lower|look|hand)(_\d+)?$/;
 const REGEX_CHAR_MAJOR = /^(dio\d+|big|girl\d+|special\d+|sister\d+|brother\d+|master)(_\w+)*$/;
 const REGEX_CONDITION = /^\[%(.+)%\]$/;
 
@@ -918,8 +918,10 @@ export async function parseTerm(doExport = true) {
       CACHE.CHARACTER[majorNpc] ??= {};
     }
   }
-  // 補充缺失角色(李元棄)
+  // 補充缺失角色
   CACHE.CHARACTER.special213 = {};
+  CACHE.CHARACTER.special214 = {};
+  CACHE.CHARACTER.special215 = {};
 
   // 並行輸出結果
   if (doExport)
@@ -1626,7 +1628,7 @@ export async function parseSwitch() {
           const firstRule = rules[0].rule[0];
 
           // 處理機率表示
-          if (rules.length == 1 && firstRule.left == '[*Custom.Probability*]') {
+          if (rules.length == 1 && rules[0].rule.length == 1 && firstRule.left == '[*Custom.Probability*]') {
             const probability = Number(firstRule.right.slice(0, -1));
             switchObj.check = '[%[*Custom.Probability*]%]';
             switchObj.switch = [`${probability}%`, `${100 - probability}%`];
@@ -1687,7 +1689,7 @@ export async function parseDice() {
       // 紀錄屬性加成
       for (const item of data._propertyItems ?? []) {
         const stat = await getStat(item);
-        const rate = item._rate == 1.0 ? '' : `×${item._rate}`;
+        const rate = (item._rate == 1.0 || item._rate == null) ? '' : `×${item._rate}`;
         const op = item._negative ? '-' : '+';
         result[id].bonus.push(`[%${op}${stat.name}${rate}%]`);
         mergeRelation(result[id].rel.pre, stat.rel);
@@ -1931,7 +1933,8 @@ export async function parseMission() {
         sheet: tmpSheet,
         minTime: { year: '1', month: '4', stage: '1' },
         maxTime: { year: '', month: '', stage: '' },
-        orderKey: `1-04-1-3-${id}`
+        orderKey: `1-04-1-3-${id}`,
+        eventFlow: triggerCustom?.[id]?.eventFlow ?? undefined
       };
       updateNameDraftItem(nameDraft.trigger, id, name);
       nameDraft.trigger[id].sheet = tmpSheet;
@@ -2042,12 +2045,15 @@ export async function parsePosition() {
     Section_01_02_Start: { index: 340, period: '006', position: 'Section_01_02', action: 'before-training' },
     Section_01_02: { index: 341, period: '006', position: 'Section_01_02', action: 'training2' },
     Section_01_03: { index: 351, period: '006', position: 'Section_01_03', action: 'forge2' },
+    Craft_Work_001: { index: 352, period: '006', position: 'Section_01_03', action: 'craft1' },
     Section_01_04: { index: 361, period: '006', position: 'Section_01_04', action: 'write' },
     Chess_01: { index: 371, period: '006', position: 'Section_01_05', action: 'chess' },
     Chess_02: { index: 372, period: '006', position: 'Section_01_05', action: 'chess' },
     Chess_03: { index: 373, period: '006', position: 'Section_01_05', action: 'chess' },
     Section_01_07: { index: 381, period: '006', position: 'Run', action: 'run' },
     Section_01_07_01: { index: 382, period: '006', position: 'Run', action: 'rival' },
+    Section_01_08_06: { index: 391, period: '006', position: 'Section_01_08', action: 'firebird1' },
+    S2800_02_Break_01: { index: 399, period: '006', position: 'S2800_02', action: 'jail' },
     Section_02_00: { index: 410, period: '003', position: '', action: 'sleep3' },
     Section_02_01_01: { index: 421, period: '003', position: 'Section_02_01', action: 'training3' },
     Section_02_01_02: { index: 422, period: '003', position: 'Section_02_01', action: 'walk3' },
@@ -2058,9 +2064,13 @@ export async function parsePosition() {
     Section_02_03_03: { index: 443, period: '003', position: 'Section_02_03', action: 'doctor2' },
     Travel_001: { index: 501, period: '902', position: 'Map', action: 'travel' },
     Travel_002: { index: 501, period: '903', position: 'Map', action: 'travel' },
+    Travel_S2901_02: { index: 521, period: '913', position: 'Map', action: 'travel' },
+    Travel_S2901_05: { index: 522, period: '914', position: 'Map', action: 'travel' },
     Travel_302: { index: 601, period: '904', position: 'Map', action: 'travel' },
     Ch_3_6_1_01: { index: 602, period: '905', position: '', action: 'walk4' },
-    Travel_310: { index: 603, period: '906', position: 'Map', action: 'travel' },
+    S2321_04_03_02: { index: 603, period: '915', position: '', action: 'walk4' },
+    S2321_04_03_03: { index: 604, period: '915', position: '', action: 'sleep4' },
+    Travel_310: { index: 605, period: '906', position: 'Map', action: 'travel' },
     Ch_3_1_7_2_01: { index: 611, period: '907', position: '', action: 'night' },
     Travel_401: { index: 701, period: '908', position: 'Map', action: 'travel' },
     Travel_S2501_01: { index: 801, period: '909', position: 'Map', action: 'travel' },
@@ -2302,6 +2312,7 @@ export async function parseCombat() {
 
   // 行動處理流程
   const processAction = async (action, enemyName, rel, combatId) => {
+
     // 取得鍵值
     const type = action._type;
     const key = action._name;
@@ -2392,6 +2403,11 @@ export async function parseCombat() {
               const text = `${getTerm('char', data._character)}[*Custom.RemoveAllState*]`;
               return { content: [{ form: 'effect', type: 'State', text }] };
             }
+            // 移除所有輔助
+            case 'CombatEventActionRemoveAllSupport': {
+              const text = `${getTerm('char', data._character)}[*Custom.RemoveAllSupport*]`;
+              return { content: [{ form: 'effect', type: 'State', text }] };
+            }
             // 設定戰鬥後接續劇本
             case 'CombatEventActionSetStoryScript': {
               return { content: [{ form: 'effect', type: 'System', text: `◎[*Custom.CombatNextScript*][*Label.Script,${data._name}*]` }], rel: { to: { Script: [data._name] } } };
@@ -2402,9 +2418,30 @@ export async function parseCombat() {
               const text = `${effect.show}${getTerm('char', data._character)}${getTerm('type', data._type)}${effect.key}`;
               return { content: [{ form: 'effect', type: 'State', text }], rel: data._type === '新增' ? { intra: effect.rel } : null };
             }
+            case 'CombatEventActionReduceEffectCount': {
+              const effect = await getCombatEffect(data._effect._name);
+              const text = `${effect.show}${getTerm('char', data._character)}${effect.key}[*Custom.Reduce,${data._amount}*]`;
+              return { content: [{ form: 'effect', type: 'State', text }] };
+            }
+            // 顯示特效
+            case 'CombatEventActionShowImage': {
+              return { content: [{ form: 'effect', type: 'Perform', text: '◇[*Custom.ShowImage*]' }] };
+            }
             // 顯示特效
             case 'CombatEventActionVFX': {
               return { content: [{ form: 'effect', type: 'Perform', text: '◇[*Custom.VFX*]' }] };
+            }
+            // 計數事件
+            case 'CombatEventActionCount': {
+              const branches = [];
+              for (const item of data._items ?? []) {
+                const actions = [];
+                for (const action of item.Actions ?? []) {
+                  actions.push(await processAction(action, enemyName, rel, combatId));
+                }
+                branches.push({ index: 0, text: `[*Custom.Count*]=${item.Count}`, content: actions.flat() });
+              }
+              return { content: [{ form: 'branch', type: 'Count', text: '', branches }] };
             }
             // 無對應
             default:
@@ -2412,7 +2449,7 @@ export async function parseCombat() {
               return { content: [] };
           }
         } catch (err) {
-          writeLog('error', `Parsing combat action "${cacheId}" failed.`, err.stack);
+          writeLog('error', `Parsing combat action "${cacheId}" failed.`, err);
           return { content: [] };
         }
       })());
@@ -2485,13 +2522,20 @@ export async function parseCombat() {
               const text = `[%${getTerm('char', data._character)}${stat}${convertComparison(data._op)}${data._value}${unit}%]`;
               return { text };
             }
+            // 檢定防禦攻擊
+            case 'CombatEventConditionBlockCounterAttack': {
+              const typesText = [...new Set(data._attackActionType.map((a) => getTerm('action', a, 'CombatAction')))].join('[*Custom.Or*]');
+              const actionResult = data._blockResult == '招架成功' ? '[*CombatInfo.parrySuccess*]' : '';
+              const text = `[%${getTerm('char', data._character)}[*CombatAction.block*][*Custom.Counter*]${typesText}${actionResult}%]`;
+              return { text };
+            }
             // 無對應
             default:
               writeLog('error', `Parsing combat condition "${cacheId}" failed.`);
               return { text: 'Error' };
           }
         } catch (err) {
-          writeLog('error', `Parsing combat condition "${cacheId}" failed.`, err.stack);
+          writeLog('error', `Parsing combat condition "${cacheId}" failed.`, err);
           return { text: 'Error' };
         }
       })());
@@ -2541,7 +2585,7 @@ export async function parseCombat() {
 
           // 初始化變數
           const conditionPromises = (subData._conditions ?? []).map((c) => processCondition(c, combat.rel, id));
-          const actionItems = [...(subData._actions ?? []), ...(subData._afterActions ?? []), ...(subData._afterResult ?? [])];
+          const actionItems = [...(subData._actions ?? []), ...(subData._afterActions ?? []), ...(subData._afterResult ?? [])].filter(item => item != null);
           const actionPromises = actionItems.map((a) => processAction(a, enemyName, combat.rel, id));
 
           // 並行等待結果
@@ -2965,6 +3009,13 @@ export async function parseScript() {
             mergeRelation(rel.to, { Script: [script], Combat: [name] });
             content.push({ form: 'effect', type: 'Combat', text: `★[*System.Combat*][*Label.Combat,${name}*]` });
             content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.CombatNextScript*][*Label.Script,${script}*]` });
+            break;
+          }
+          // 彈珠台
+          case 'Pinball': {
+            const script = cache?.temp?.story ?? 'Unknown';
+            content.push({ form: 'effect', type: 'System', text: '◎[*Custom.Pinball*]' });
+            content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.GameNextScript*][*Label.Script,${script}*]` });
             break;
           }
           // 生死簿結局
@@ -3466,6 +3517,10 @@ export async function parseScript() {
         content.push({ form: 'perform', type: 'Character', text: `※[*Custom.HideCharacter*]:[*Character.${name}*]` });
         break;
       }
+      case 'effects.SetupEffect': {
+        content.push({ form: 'perform', type: 'Effect', text: `※[*Custom.SetupEffect*]` });
+        break;
+      }
       // 忽略函式
       case 'luamanager.PlayMusic':
       case 'luamanager.StopMusic':
@@ -3480,6 +3535,7 @@ export async function parseScript() {
       case 'luamanager.AutoFreeSave':
       case 'luamanager.ResetBattleSkill':
       case 'luamanager.SetEnableActions':
+      case 'luamanager.SwapUpgradeItem':
       case 'luamanager.CloseDialog':
       case 'luamanager.Init':
       case 'statmodifymanager.IsTriggerSubMission':
@@ -3495,6 +3551,7 @@ export async function parseScript() {
       case 'mainui.HideMap':
       case 'mainui.HidePicture':
       case 'mainui.ShowItemPicture':
+      case 'mainui.DisplayItemMessage':
       case 'anim.Stop':
       case 'shoppanel.NewShop':
       case 'characters.LoadCharacterAsset':
@@ -3505,13 +3562,16 @@ export async function parseScript() {
       case 'characters.Rotate':
       case 'characters.Shake':
       case 'characters.TestLoadCharacter':
+      case 'characters.RestoreRotation':
+      case 'characters.ResetRotation':
       case 'dicemenudialog.SetRandom':
       case 'dicemenudialog.Setup':
       case 'dicemenudialog.ExecuteRoll':
-      case 'effects.SetupEffect':
       case 'flowcharts.LoadView':
+      case 'flowcharts.SetViewScrollSpeed':
       case 'intropanel.Show':
       case 'maincamera.ActiveVolume':
+      case 'maincamera.FadeVolume':
       case 'menudialogs.SetActive':
       case 'movieblack.FadeIn':
       case 'movieblack.FadeOut':
@@ -4060,6 +4120,7 @@ export async function organizeOutputData() {
     if (initScript) traceOrigin('Script', initScript, origins, new Set(), scriptSet);
 
     const eventFlow = triggerData?.eventFlow ?? buildEventFlow(initScript, scriptSet);
+
     if (eventFlow.length > 0) triggerData.eventFlow = eventFlow;
   }
 
@@ -4147,8 +4208,8 @@ export async function organizeOutputData() {
     'BATTLE',
     'SCRIPT'
   ];
-  const exportPromises = [];
   for (const category of exportCats) {
+    const exportPromises = [];
     const catName = category.toLowerCase();
     exportPromises.push(exportJson(CACHE[category], 'all', `public/data/${catName}`, true, false));
     for (const [itemId, itemData] of Object.entries(CACHE[category] ?? {})) {
@@ -4169,8 +4230,8 @@ export async function organizeOutputData() {
       exportPromises.push(exportJson(CACHE.SCRIPT_INDEX, 'index', 'public/data/script', true, false));
       exportPromises.push(exportJson(CACHE.SCRIPT_FREE, 'index_free', 'public/data/script', true, false));
     }
+    await Promise.all(exportPromises);
   }
-  await Promise.all(exportPromises);
   writeLog('log', '"Data" organized successfully!');
 }
 
@@ -4316,9 +4377,9 @@ export async function parseLocalization() {
 
   // 處理旗標
   for (const key in flagCustom) {
-    zhtw.Flag[key] = { _: flagCustom[key].data[0].name, Desc: flagCustom[key].data[0].desc };
+    zhtw.Flag[key] = { _: flagCustom[key].data[0].name || key, Desc: flagCustom[key].data[0].desc };
     flagCustom[key].data.forEach((flagData, index) => {
-      zhtw.Flag[key][index] = { _: flagData.name, Desc: flagData.desc };
+      zhtw.Flag[key][index] = { _: flagData.name || key, Desc: flagData.desc };
       Object.assign(zhtw.Flag[key][index], flagData.value);
     });
   }
