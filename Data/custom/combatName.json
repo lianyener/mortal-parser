@@ -2683,8 +2683,8 @@
   "CL_S2914_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.blacksmith1*]",
     "ref": "神兵帖4 鐵匠 戰鐵匠",
-    "name": "",
-    "desc": "",
+    "name": "戰鐵飛龍",
+    "desc": "神兵帖4事件，火炎山劍閣拜見，選擇開戰",
     "keywords": ""
   },
   "CL_S2915_01": {

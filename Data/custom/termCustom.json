@@ -152,6 +152,7 @@
       "B113": "不動如山",
       "D030": "[*CombatSkill.Name.D030_1*]",
       "S125": "[*CombatSkill.Name.S125_1*]",
+      "S132": "(無名稱)",
       "S133": "[*CombatSkill.Name.S133_1*]",
       "S134": "[*CombatSkill.Name.S134_1*]",
       "S143": "[*CombatSkill.Name.S143_1*]",
@@ -160,6 +161,7 @@
     "Desc": {
       "D030": "[*CombatSkill.Desc.D030_1*]",
       "S125": "[*CombatSkill.Desc.S125_1*]",
+      "S132": "(傷害吸收100)",
       "S133": "[*CombatSkill.Desc.S133_1*]",
       "S134": "[*CombatSkill.Desc.S134_1*]",
       "S143": "[*CombatSkill.Desc.S143_1*]"
