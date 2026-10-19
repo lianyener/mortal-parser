@@ -2487,8 +2487,8 @@
   "CL_S2300_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl5*]",
     "ref": "小梅在唐門  戰虞小梅",
-    "name": "",
-    "desc": "",
+    "name": "戰小梅",
+    "desc": "阿花姑娘事件，小梅問罪時惹怒小梅",
     "keywords": ""
   },
   "CL_S2310_01": {

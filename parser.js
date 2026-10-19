@@ -18,6 +18,7 @@ const CACHE = {
   EFFECT: null,
   BOOK: null,
   EQUIP: null,
+  SKILL: null,
   FLAG: null,
   GROUP: {},
   GROUPSTAT: {},
@@ -50,6 +51,7 @@ const CACHE_FULFILL = {
   EFFECT: false,
   BOOK: false,
   EQUIP: false,
+  SKILL: false,
   FLAG: false,
   GROUP: false,
   CONDITION: false,
@@ -75,7 +77,7 @@ const REGEX_RELATIONSHIP = /^relationship_(.+?)(?:_[^_]+)?_\d+$/i;
 const REGEX_STAT_PREFIX = /^(Player|Faction)_/;
 const REGEX_ENEMY_STAT = /enemy_(\d{3})_(\w+)/i;
 const REGEX_CHAR_EXTRA = /^(\w+)_(\d+|young|upper|lower|look|hand)(_\d+)?$/;
-const REGEX_CHAR_MAJOR = /^(dio\d+|big|girl\d+|special\d+|sister\d+|brother\d+|master)(_\w+)*$/;
+const REGEX_CHAR_MAJOR = /^(dio\d+|big|girl\d+|special\d+|sister\d+|brother\d+|master|player)(_\w+)*$/;
 const REGEX_CONDITION = /^\[%(.+)%\]$/;
 
 // 參照用常數
@@ -104,7 +106,7 @@ const STAT_MAP = {
   麻痺累積: 'paralysis-value'
 };
 const CACHE_PRIORITY = [
-  ['MISC', 'SPECIAL', 'EFFECT', 'FLAG', 'TERM'],
+  ['MISC', 'SPECIAL', 'EFFECT', 'FLAG', 'TERM', 'SKILL'],
   ['TALENT'],
   ['BOOK', 'EQUIP'],
   ['GROUP'],
@@ -255,6 +257,7 @@ async function loadCache(inputTypes, doUpdate = false) {
     EQUIP: [executeDirectly, parseEquip],
     EFFECT: [executeDirectly, parseCombatEffect],
     // 非強制解析
+    SKILL: [executeOptionally, parseBattleSkill],
     FLAG: [executeOptionally, parseFlag],
     GROUP: [executeOptionally, parseStatGroup],
     MISSION: [executeOptionally, parseMission],
@@ -691,7 +694,7 @@ async function getStat(statItem) {
               return { name: `[*Custom.InvalidCondition,${key}*]`, type: 'Condition', rel: {} };
             }
             const condition = await getCondition(data, key);
-            return { name: `[*Custom.Condition*][${condition.name.replace(REGEX_CONDITION, "$1")}]`, type: 'Condition', rel: condition.rel };
+            return { name: `[*Custom.Condition*][${condition.name.replace(REGEX_CONDITION, '$1')}]`, type: 'Condition', rel: condition.rel };
           }
           case '角色數值': {
             const subId = removeUid(key);
@@ -1495,6 +1498,52 @@ export async function parseEquip(doExport = true) {
   REF_MAP.EQUIP = ref;
 }
 
+// 解析戰役技能
+export async function parseBattleSkill(doExport = true) {
+  // 取得檔案清單
+  const files = await getJsonList('BattleSkillData');
+  if (files.length === 0) return;
+  
+  // 初始化
+  const regexCharIcon = /Sprite\/icon_(?:head|headframe)_(\w+)\.png/;
+  const regexPostfix = /_\w+/;
+  const result = {};
+
+  // 主要處理流程
+  const process = async (file) => {
+    try {
+      // 讀取資料
+      const data = await getGameJson(file, 'BattleSkillData');
+      if (!isValidJson(data, file)) return;
+
+      // 記錄資料
+      const id = data._key;
+      result[id] = {
+        cooldown: data._cooldownTime
+      };
+
+      const matched = data._icon.match(regexCharIcon);
+      if (matched) {
+        result[id].character = extractMainCharacter(matched[1]);
+      }
+      if (!result[id].character) {
+        result[id].character = extractMainCharacter(id.replace(regexPostfix, ''));
+      }
+    } catch (err) {
+      writeLog('error', `Processing file "${file}" failed.`, err.stack);
+    }
+  };
+
+  // 並行處理所有檔案
+  await Promise.all(files.map(process));
+  writeLog('log', '"BattleSkill" parsed successfully!');
+
+  // 輸出結果
+  if (doExport) await exportJson(result, 'skill');
+  CACHE.SKILL = result;
+  CACHE_FULFILL.SKILL = true;
+}
+
 // 解析屬性值變數群組
 export async function parseStatGroup() {
   // 確認前置Cache
@@ -1689,7 +1738,7 @@ export async function parseDice() {
       // 紀錄屬性加成
       for (const item of data._propertyItems ?? []) {
         const stat = await getStat(item);
-        const rate = (item._rate == 1.0 || item._rate == null) ? '' : `×${item._rate}`;
+        const rate = item._rate == 1.0 || item._rate == null ? '' : `×${item._rate}`;
         const op = item._negative ? '-' : '+';
         result[id].bonus.push(`[%${op}${stat.name}${rate}%]`);
         mergeRelation(result[id].rel.pre, stat.rel);
@@ -2255,7 +2304,13 @@ function buildLogicView(content) {
 // 解析戰鬥事件
 export async function parseCombat() {
   // 讀取檔案清單、前置Cache
-  const [files, custom, supportCustom, nameDraft] = await Promise.all([getJsonList('CombatLevel'), getDataJson('combatCustom'), getDataJson('supportCustom'), getDataJson('combatName'), loadCache(['GROUP', 'FLAG', 'TERM'])]);
+  const [files, custom, supportCustom, nameDraft] = await Promise.all([
+    getJsonList('CombatLevel'),
+    getDataJson('combatCustom'),
+    getDataJson('supportCustom'),
+    getDataJson('combatName'),
+    loadCache(['GROUP', 'FLAG', 'TERM'])
+  ]);
 
   // 初始化
   const regexPct = /^(.+?)(百分比)?$/;
@@ -2324,7 +2379,6 @@ export async function parseCombat() {
 
   // 行動處理流程
   const processAction = async (action, enemyName, rel, combatId) => {
-
     // 取得鍵值
     const type = action._type;
     const key = action._name;
@@ -2597,7 +2651,7 @@ export async function parseCombat() {
 
           // 初始化變數
           const conditionPromises = (subData._conditions ?? []).map((c) => processCondition(c, combat.rel, id));
-          const actionItems = [...(subData._actions ?? []), ...(subData._afterActions ?? []), ...(subData._afterResult ?? [])].filter(item => item != null);
+          const actionItems = [...(subData._actions ?? []), ...(subData._afterActions ?? []), ...(subData._afterResult ?? [])].filter((item) => item != null);
           const actionPromises = actionItems.map((a) => processAction(a, enemyName, combat.rel, id));
 
           // 並行等待結果
@@ -2813,7 +2867,7 @@ export async function parseScript() {
     getDataJson('scriptFree'),
     getDataJson('scriptName'),
     getDataJson('scriptFullCustom'),
-    loadCache(['GROUP', 'FLAG', 'TERM', 'SWITCH', 'CONDITION', 'DICE'])
+    loadCache(['GROUP', 'SKILL', 'FLAG', 'TERM', 'SWITCH', 'CONDITION', 'DICE'])
   ]);
 
   // 常數
@@ -3141,7 +3195,7 @@ export async function parseScript() {
       case 'luamanager.SetBattleSkillActive':
       case 'luamanager.SetPlayerBattleSkill': {
         const id = removeQuote(node.arguments[0].raw);
-        const charId = extractMainCharacter(id);
+        const charId = CACHE.SKILL[id].character;
         const text = `◎[*Custom.SetBattleSkill*][*Label.BattleSkill,${id},${charId}*]`;
         if (content.every((c) => c.text != text)) {
           content.push({ form: 'effect', type: 'BattleSkill', text });
@@ -3511,8 +3565,7 @@ export async function parseScript() {
           if (fromPosition == toPosition) text = `※[*Custom.ShowCharacter*]:${name}`;
           else text = `※[*Custom.MoveCharacter*]:${name}`;
           content.push({ form: 'perform', type: 'Character', text });
-        }
-        else {
+        } else {
           content.push({ form: 'perform', type: 'Character', text: `※[*Custom.AdjustCharacter*]:${name}` });
         }
         break;
@@ -4013,15 +4066,13 @@ export async function organizeOutputData() {
   // 劇本來源深度追溯
   const traceOrigin = (category, itemId, origins, relVisited, flowVisited, scriptSet, canCollectFlow = true) => {
     const visitKey = `${category}:${itemId}`;
-
-    // 取得當前節點資料 (提早取得，因為判斷時間需要)
     const nodeData = CACHE[category.toUpperCase()]?.[itemId];
     if (!nodeData) return;
 
-    // 跳過自由行動類（非 Free 觸發不追蹤自由行動腳本）
+    // 跳過自由行動類
     if (category === 'Script' && itemId in free && origins?.type !== 'Free') return;
 
-    // 跳過沒有時間交集的劇本（不建關聯、不進 Flow、不往下走訪）
+    // 跳過無時間交集的劇本
     if (category === 'Script' && nodeData.timeCheck) {
       if (!checkTimeOverlap(origins.minTime, origins.maxTime, nodeData.timeCheck)) {
         return;
@@ -4031,30 +4082,31 @@ export async function organizeOutputData() {
     // --- DAG 訪問剪枝判斷 ---
     const alreadyRel = relVisited.has(visitKey);
     const alreadyFlow = flowVisited.has(visitKey);
+
     if (!canCollectFlow && alreadyRel) return;
     if (canCollectFlow && alreadyFlow) return;
 
-    // 補充來源關聯到當前節點 (Script, Combat 或 Battle)
+    // --- 建立反向關聯 (保證每條路徑節點至少建過一次) ---
     if (!alreadyRel) {
       relVisited.add(visitKey);
       if (origins.triggerId) addBackRelation('TRIGGER', origins.triggerId, category, itemId, 'from');
       if (origins.missionId) addBackRelation('MISSION', origins.missionId, category, itemId, 'from');
       if (origins.positionId) addBackRelation('POSITION', origins.positionId, category, itemId, 'from');
     }
-    // --- 判斷終止節點與 Flow 收集 ---
-    const isTerminated = origins.stopFlow?.has(itemId);
+
+    // --- 判斷 Script 終止與 Flow 收集 ---
+    const isTerminated = category === 'Script' && origins.stopFlow?.has(itemId);
     const nextCanCollect = canCollectFlow && !isTerminated;
 
-    // 收集腳本
     if (canCollectFlow) {
       flowVisited.add(visitKey);
-      // 只有未被終止的 Script 才加入 scriptSet
+      // 只有未終止的 Script 才加入流程集合
       if (!isTerminated && category === 'Script') {
         scriptSet.add(itemId);
       }
     }
 
-    // 繼續遞迴往下傳遞
+    // --- 遞迴後續節點 ---
     const toRels = nodeData.rel?.to ?? {};
     for (const nextScript of toRels.Script ?? []) {
       traceOrigin('Script', nextScript, origins, relVisited, flowVisited, scriptSet, nextCanCollect);
@@ -4071,7 +4123,7 @@ export async function organizeOutputData() {
   const regexScriptSubPrefix = /\w+?(?=_|$)/;
 
   // Helper: 建立事件流
-  const buildEventFlow = (initScript, scriptSet, stopFlow) => {
+  const buildEventFlow = (initScript, scriptSet) => {
     if (!initScript) return [];
 
     // 安全取得前綴
@@ -4111,12 +4163,8 @@ export async function organizeOutputData() {
         const battles = nodeData.rel?.to?.Battle ?? [];
 
         const subEvents = [];
-        combats.forEach((id) => {
-          if (!stopFlow?.has(id)) subEvents.push({ id, type: 'Combat' });
-        });
-        battles.forEach((id) => {
-          if (!stopFlow?.has(id)) subEvents.push({ id, type: 'Battle' });
-        });
+        combats.forEach((id) => subEvents.push({ id, type: 'Combat' }));
+        battles.forEach((id) => subEvents.push({ id, type: 'Battle' }));
 
         // 將子事件進行全域正序排序
         subEvents.sort((a, b) => customSort(a.id, b.id));
@@ -4168,10 +4216,7 @@ export async function organizeOutputData() {
   for (const [positionId, positionData] of Object.entries(CACHE.POSITION ?? {})) {
     for (const [eventId, eventData] of Object.entries(positionData.event ?? {})) {
       const initScript = eventData.script ?? null;
-      const origins = {
-        positionId: positionId,
-        stopFlow: new Set(eventData?.stopFlow ?? [])
-      };
+      const origins = { positionId: positionId, stopFlow: new Set(eventData?.stopFlow ?? []) };
 
       const scriptSet = new Set();
       const relVisited = new Set();
@@ -4290,26 +4335,43 @@ export async function parseLocalization() {
   const converter = OpenCC.Converter({ from: 'twp', to: 'cn' });
 
   // 讀取來源
-  const [battleName, combatName, combatCustom, triggerCustom, missionCustom, missionName, scriptCustom, scriptFree, scriptName, groupCustom, option, dialog, flagCustom, termCustom, term, position, about] =
-    await Promise.all([
-      getDataJson('battleName'),
-      getDataJson('combatName'),
-      getDataJson('combatCustom'),
-      getDataJson('triggerCustom'),
-      getDataJson('missionCustom'),
-      getDataJson('missionName'),
-      getDataJson('scriptCustom'),
-      getDataJson('scriptFree'),
-      getDataJson('scriptName'),
-      getDataJson('groupCustom'),
-      getDataJson('option'),
-      getDataJson('dialog', ''),
-      getDataJson('flagCustom'),
-      getDataJson('termCustom'),
-      getDataJson('term', ''),
-      getDataJson('position', ''),
-      getDataJson('about')
-    ]);
+  const [
+    battleName,
+    combatName,
+    combatCustom,
+    triggerCustom,
+    missionCustom,
+    missionName,
+    scriptCustom,
+    scriptFree,
+    scriptName,
+    groupCustom,
+    option,
+    dialog,
+    flagCustom,
+    termCustom,
+    term,
+    position,
+    about
+  ] = await Promise.all([
+    getDataJson('battleName'),
+    getDataJson('combatName'),
+    getDataJson('combatCustom'),
+    getDataJson('triggerCustom'),
+    getDataJson('missionCustom'),
+    getDataJson('missionName'),
+    getDataJson('scriptCustom'),
+    getDataJson('scriptFree'),
+    getDataJson('scriptName'),
+    getDataJson('groupCustom'),
+    getDataJson('option'),
+    getDataJson('dialog', ''),
+    getDataJson('flagCustom'),
+    getDataJson('termCustom'),
+    getDataJson('term', ''),
+    getDataJson('position', ''),
+    getDataJson('about')
+  ]);
 
   // Helper: 檢查物件
   const isObject = (item) => item && typeof item === 'object' && !Array.isArray(item);
@@ -4534,10 +4596,10 @@ export async function parseLocalization() {
 export async function parser(method) {
   switch (method.toLowerCase()) {
     case 'test':
-      await parseTalent();
+      await parseBattleSkill();
       break;
     case 'all':
-      await loadCache(['MISC', 'SPECIAL', 'TALENT', 'FLAG', 'TERM', 'BOOK', 'EQUIP', 'GROUP', 'MISSION', 'POSITION', 'CONDITION', 'SWITCH', 'DICE', 'COMBAT', 'BATTLE', 'SCRIPT'], true);
+      await loadCache(['MISC', 'SPECIAL', 'TALENT', 'SKILL', 'FLAG', 'TERM', 'BOOK', 'EQUIP', 'GROUP', 'MISSION', 'POSITION', 'CONDITION', 'SWITCH', 'DICE', 'COMBAT', 'BATTLE', 'SCRIPT'], true);
       await organizeOutputData();
       await parseLocalization();
       break;
