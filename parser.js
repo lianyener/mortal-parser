@@ -1819,7 +1819,8 @@ export async function parseMission() {
           sheet: tmpSheet,
           remark: Array.from(triggerCustom?.[triggerId]?.remark ?? [], (_, i) => `[*Trigger.Remark.${triggerId}.${i}*]`),
           rel: { pre: {}, to: {}, from: { Mission: [missionId] } },
-          eventFlow: triggerCustom?.[triggerId]?.eventFlow ?? undefined
+          eventFlow: triggerCustom?.[triggerId]?.eventFlow ?? undefined,
+          stopFlow: triggerCustom?.[triggerId]?.stopFlow ?? []
         };
         if (triggerObj.script) mergeRelation(triggerObj.rel.to, { Script: [triggerObj.script] });
         if (!triggerObj.active) triggerObj.remark.unshift('※[*Custom.TriggerDisable*]');
@@ -1934,7 +1935,8 @@ export async function parseMission() {
         minTime: { year: '1', month: '4', stage: '1' },
         maxTime: { year: '', month: '', stage: '' },
         orderKey: `1-04-1-3-${id}`,
-        eventFlow: triggerCustom?.[id]?.eventFlow ?? undefined
+        eventFlow: triggerCustom?.[id]?.eventFlow ?? undefined,
+        stopFlow: triggerCustom?.[id]?.stopFlow ?? []
       };
       updateNameDraftItem(nameDraft.trigger, id, name);
       nameDraft.trigger[id].sheet = tmpSheet;
@@ -2124,7 +2126,17 @@ export async function parsePosition() {
         const id = mapData.Value;
         const script = `${prefix}_${id}`;
         const keys = mapData.Key.split('_');
-        const event = { name: mapData.Key, class: classMap[keys[0]] ?? 0, seq: keys[1] ?? '000', condition: [], rate: [`[#${eventData._defaultRate}#]`], script, remark: [], eventFlow: custom?.[key]?.event?.[id]?.eventFlow ?? undefined };
+        const event = {
+          name: mapData.Key,
+          class: classMap[keys[0]] ?? 0,
+          seq: keys[1] ?? '000',
+          condition: [],
+          rate: [`[#${eventData._defaultRate}#]`],
+          script,
+          remark: [],
+          eventFlow: custom?.[key]?.event?.[id]?.eventFlow ?? undefined,
+          stopFlow: custom?.[key]?.event?.[id]?.stopFlow ?? []
+        };
         mergeRelation(result[key].rel.to, { Script: [script] });
         updateNameDraftItem(nameDraft, script, (eventData._devNote ?? '').trim());
 
@@ -3999,44 +4011,59 @@ export async function organizeOutputData() {
   };
 
   // 劇本來源深度追溯
-  const traceOrigin = (category, itemId, origins, visited, scriptSet) => {
+  const traceOrigin = (category, itemId, origins, relVisited, flowVisited, scriptSet, canCollectFlow = true) => {
     const visitKey = `${category}:${itemId}`;
 
     // 取得當前節點資料 (提早取得，因為判斷時間需要)
     const nodeData = CACHE[category.toUpperCase()]?.[itemId];
     if (!nodeData) return;
 
-    // 跳過已處理節點 / 自由行動類
-    if (visited.has(visitKey) || (category === 'Script' && itemId in free && origins?.type !== 'Free')) return;
+    // 跳過自由行動類（非 Free 觸發不追蹤自由行動腳本）
+    if (category === 'Script' && itemId in free && origins?.type !== 'Free') return;
 
-    // 跳過沒有時間交集的劇本，不加到 scriptSet、不建立 from 關聯、也不往下遞迴衍生物
+    // 跳過沒有時間交集的劇本（不建關聯、不進 Flow、不往下走訪）
     if (category === 'Script' && nodeData.timeCheck) {
       if (!checkTimeOverlap(origins.minTime, origins.maxTime, nodeData.timeCheck)) {
         return;
       }
     }
 
-    visited.add(visitKey);
+    // --- DAG 訪問剪枝判斷 ---
+    const alreadyRel = relVisited.has(visitKey);
+    const alreadyFlow = flowVisited.has(visitKey);
+    if (!canCollectFlow && alreadyRel) return;
+    if (canCollectFlow && alreadyFlow) return;
 
     // 補充來源關聯到當前節點 (Script, Combat 或 Battle)
-    if (origins.triggerId) addBackRelation('TRIGGER', origins.triggerId, category, itemId, 'from');
-    if (origins.missionId) addBackRelation('MISSION', origins.missionId, category, itemId, 'from');
-    if (origins.positionId) addBackRelation('POSITION', origins.positionId, category, itemId, 'from');
+    if (!alreadyRel) {
+      relVisited.add(visitKey);
+      if (origins.triggerId) addBackRelation('TRIGGER', origins.triggerId, category, itemId, 'from');
+      if (origins.missionId) addBackRelation('MISSION', origins.missionId, category, itemId, 'from');
+      if (origins.positionId) addBackRelation('POSITION', origins.positionId, category, itemId, 'from');
+    }
+    // --- 判斷終止節點與 Flow 收集 ---
+    const isTerminated = origins.stopFlow?.has(itemId);
+    const nextCanCollect = canCollectFlow && !isTerminated;
 
     // 收集腳本
-    if (category === 'Script') scriptSet.add(itemId);
+    if (canCollectFlow) {
+      flowVisited.add(visitKey);
+      // 只有未被終止的 Script 才加入 scriptSet
+      if (!isTerminated && category === 'Script') {
+        scriptSet.add(itemId);
+      }
+    }
 
-    // 尋找此節點導向的下一個節點，繼續遞迴往下傳遞
+    // 繼續遞迴往下傳遞
     const toRels = nodeData.rel?.to ?? {};
-
     for (const nextScript of toRels.Script ?? []) {
-      traceOrigin('Script', nextScript, origins, visited, scriptSet);
+      traceOrigin('Script', nextScript, origins, relVisited, flowVisited, scriptSet, nextCanCollect);
     }
     for (const nextCombat of toRels.Combat ?? []) {
-      traceOrigin('Combat', nextCombat, origins, visited, scriptSet);
+      traceOrigin('Combat', nextCombat, origins, relVisited, flowVisited, scriptSet, nextCanCollect);
     }
     for (const nextBattle of toRels.Battle ?? []) {
-      traceOrigin('Battle', nextBattle, origins, visited, scriptSet);
+      traceOrigin('Battle', nextBattle, origins, relVisited, flowVisited, scriptSet, nextCanCollect);
     }
   };
 
@@ -4044,13 +4071,12 @@ export async function organizeOutputData() {
   const regexScriptSubPrefix = /\w+?(?=_|$)/;
 
   // Helper: 建立事件流
-  const buildEventFlow = (initScript, scriptSet) => {
+  const buildEventFlow = (initScript, scriptSet, stopFlow) => {
     if (!initScript) return [];
 
     // 安全取得前綴
     const initScriptPrefix = initScript.match(regexScriptPrefix)?.[0] ?? initScript;
     const initScriptSubPrefix = initScript.match(regexScriptSubPrefix)?.[0] ?? initScript;
-
     const allScripts = Array.from(scriptSet);
 
     // 優先度容器
@@ -4085,8 +4111,12 @@ export async function organizeOutputData() {
         const battles = nodeData.rel?.to?.Battle ?? [];
 
         const subEvents = [];
-        combats.forEach((id) => subEvents.push({ id, type: 'Combat' }));
-        battles.forEach((id) => subEvents.push({ id, type: 'Battle' }));
+        combats.forEach((id) => {
+          if (!stopFlow?.has(id)) subEvents.push({ id, type: 'Combat' });
+        });
+        battles.forEach((id) => {
+          if (!stopFlow?.has(id)) subEvents.push({ id, type: 'Battle' });
+        });
 
         // 將子事件進行全域正序排序
         subEvents.sort((a, b) => customSort(a.id, b.id));
@@ -4114,10 +4144,20 @@ export async function organizeOutputData() {
   // 遍歷任務觸發呼叫來源深度追溯，並建立 eventFlow
   for (const [triggerId, triggerData] of Object.entries(CACHE.TRIGGER ?? {})) {
     const initScript = triggerData?.script ?? null;
-    const origins = { triggerId: triggerId, missionId: triggerData.mission, minTime: triggerData.minTime, maxTime: triggerData.maxTime, type: triggerData.type };
+    const origins = {
+      triggerId: triggerId,
+      missionId: triggerData.mission,
+      minTime: triggerData.minTime,
+      maxTime: triggerData.maxTime,
+      type: triggerData.type,
+      stopFlow: new Set(triggerData.stopFlow ?? [])
+    };
 
     const scriptSet = new Set();
-    if (initScript) traceOrigin('Script', initScript, origins, new Set(), scriptSet);
+    const relVisited = new Set();
+    const flowVisited = new Set();
+
+    if (initScript) traceOrigin('Script', initScript, origins, relVisited, flowVisited, scriptSet, true);
 
     const eventFlow = triggerData?.eventFlow ?? buildEventFlow(initScript, scriptSet);
 
@@ -4128,10 +4168,16 @@ export async function organizeOutputData() {
   for (const [positionId, positionData] of Object.entries(CACHE.POSITION ?? {})) {
     for (const [eventId, eventData] of Object.entries(positionData.event ?? {})) {
       const initScript = eventData.script ?? null;
-      const origins = { positionId: positionId };
+      const origins = {
+        positionId: positionId,
+        stopFlow: new Set(eventData?.stopFlow ?? [])
+      };
 
       const scriptSet = new Set();
-      if (initScript) traceOrigin('Script', initScript, origins, new Set(), scriptSet);
+      const relVisited = new Set();
+      const flowVisited = new Set();
+
+      if (initScript) traceOrigin('Script', initScript, origins, relVisited, flowVisited, scriptSet, true);
 
       const eventFlow = eventData?.eventFlow ?? buildEventFlow(initScript, scriptSet);
       if (eventFlow.length > 0) eventData.eventFlow = eventFlow;

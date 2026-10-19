@@ -1,5 +1,12 @@
 {
-  "BranchType": { "Switch": "🔎 檢定", "Option": "🎯 選項", "Dice": "🎲 轉盤", "Talk": "💬 議題", "Position": "🗺️ 地點指令", "Unknown": "❔ [*Custom.Unknown*]" },
+  "BranchType": {
+    "Switch": "🔎 檢定",
+    "Option": "🎯 選項",
+    "Dice": "🎲 轉盤",
+    "Talk": "💬 議題",
+    "Position": "🗺️ 地點指令",
+    "Unknown": "❔ [*Custom.Unknown*]"
+  },
   "Custom": {
     "True": "是",
     "False": "否",
@@ -17,6 +24,7 @@
     "LowerThan": "低於",
     "Random": "隨機",
     "Probability": "機率",
+    "Count": "次數",
     "Unknown": "不明",
     "Total": "總計",
     "Buff": "增益",
@@ -135,7 +143,10 @@
     "special215": "[*Character.special215_1*]",
     "special213": "李元棄"
   },
-  "CombatAction": { "none": "[*System.NA*]", "talk": "[*CombatAction.curse*]" },
+  "CombatAction": {
+    "none": "[*System.NA*]",
+    "talk": "[*CombatAction.curse*]"
+  },
   "CombatSkill": {
     "Name": {
       "B113": "不動如山",
@@ -154,9 +165,33 @@
       "S143": "[*CombatSkill.Desc.S143_1*]"
     }
   },
-  "DialogType": { "character": "說", "think": "想", "narrative": "旁白", "center": "過場", "unknown": "[*Custom.Unknown*]" },
-  "EnemyTeam": { "-20": "[*Custom.Unknown*]", "-50": "[*Custom.Unknown*]", "202": "十八銅人", "302": "孤雲山" },
-  "Flag": { "YesNo": { "0": "[*Custom.False*]", "1": "[*Custom.True*]" }, "Own": { "0": "[*System.NA*]", "1": "[*Custom.Own*]" }, "Match": { "0": "不符", "1": "符合" } },
+  "DialogType": {
+    "character": "說",
+    "think": "想",
+    "narrative": "旁白",
+    "center": "過場",
+    "unknown": "[*Custom.Unknown*]"
+  },
+  "EnemyTeam": {
+    "-20": "[*Custom.Unknown*]",
+    "-50": "[*Custom.Unknown*]",
+    "202": "十八銅人",
+    "302": "孤雲山"
+  },
+  "Flag": {
+    "YesNo": {
+      "0": "[*Custom.False*]",
+      "1": "[*Custom.True*]"
+    },
+    "Own": {
+      "0": "[*System.NA*]",
+      "1": "[*Custom.Own*]"
+    },
+    "Match": {
+      "0": "不符",
+      "1": "符合"
+    }
+  },
   "Label": {
     "Achievement": "[*LabelIcon.Achievement*][*Library.Title.{0}*]",
     "Dead": "[*LabelIcon.Dead*][*Library.Title.{0}*]",
@@ -310,7 +345,12 @@
     "npcs": "人數"
   },
   "Position": {
-    "Name": { "Map": "大地圖", "Run": "[*Story.O_Door_Girl_03_01_001*]", "Section_01_08": "[*Story.O_Section_01_Free_Start_02_008*]", "S2800_02": "鎮魂獄" },
+    "Name": {
+      "Map": "大地圖",
+      "Run": "[*Story.O_Door_Girl_03_01_001*]",
+      "Section_01_08": "[*Story.O_Section_01_Free_Start_02_008*]",
+      "S2800_02": "鎮魂獄"
+    },
     "title": {
       "before-pickwood": "[*Position.title.pickwood*]前",
       "before-training": "[*Position.title.training*]前",
@@ -335,8 +375,20 @@
       "firebird1": "[*Character.firebird1*]",
       "jail": "[*Story.O_S2800_02_Break_01_007*]"
     },
-    "Remark": { "Common": { "0": "觸發清單列了2次，實際權重應視為2倍" } },
-    "Class": { "0": "正常", "1": "失敗", "2": "大失敗", "3": "成功", "4": "大成功", "5": "特殊", "9": "其他" }
+    "Remark": {
+      "Common": {
+        "0": "觸發清單列了2次，實際權重應視為2倍"
+      }
+    },
+    "Class": {
+      "0": "正常",
+      "1": "失敗",
+      "2": "大失敗",
+      "3": "成功",
+      "4": "大成功",
+      "5": "特殊",
+      "9": "其他"
+    }
   },
   "Sheet": {
     "BeforeExternalStudy": "留學分歧前",
@@ -351,7 +403,9 @@
     "WestWulin": "西武林線",
     "Hopeless": "無可救藥線"
   },
-  "Story": { "A": "[*Custom.InvalidOption*]" },
+  "Story": {
+    "A": "[*Custom.InvalidOption*]"
+  },
   "Web": {
     "SiteTitle": "活俠傳事件分岐資料庫",
     "SiteDescription": "提供檢視遊戲劇本、事件、分歧與其關聯資訊的資料庫",
@@ -441,7 +495,12 @@
       "EmailPlaceholder": "",
       "Category": "問題類別",
       "CategoryPlaceholder": "請選擇類別",
-      "Cat": { "Data": "📊數值錯漏 / 資料更新", "Text": "💬文本錯別字 / 翻譯建議", "Bug": "🐛網頁功能異常 / 顯示錯誤", "Other": "💡功能建議 / 其他討論" },
+      "Cat": {
+        "Data": "📊數值錯漏 / 資料更新",
+        "Text": "💬文本錯別字 / 翻譯建議",
+        "Bug": "🐛網頁功能異常 / 顯示錯誤",
+        "Other": "💡功能建議 / 其他討論"
+      },
       "ContentLabel": "問題或建議描述",
       "ContentPlaceholder": "請盡可能詳細描述你遇到的狀況或建議內容...",
       "ErrEmptyContent": "請填寫具體的問題或建議描述！",
@@ -493,7 +552,7 @@
     "Resident": "常駐",
     "Countdown": "倒數效果",
     "CountdownTrigger": "倒數觸發",
-    "Count": "次數",
+    "Count": "[*Custom.Count*]",
     "Award": "獎勵",
     "Item": "參照項目",
     "ItemInfo": "[*LabelIcon.{0}*][*Web.Label.{0}*][*Web.Item*]",
@@ -504,6 +563,8 @@
     "CollapseAll": "全部收合",
     "LoadMore": "載入更多",
     "ReturnList": "返回清單",
+    "OpenInEventTable": "事件總表",
+    "OpenInRandomTable": "隨機事件總表",
     "Info": "[*Web.Label.{0}*][*Web.Term.Info*]",
     "List": "[*Web.Label.{0}*][*Web.Term.List*]",
     "Data": "[*Web.Label.{0}*][*Web.Term.Data*]",
@@ -511,7 +572,14 @@
     "BranchContent": "分岐內容",
     "End": "結束分岐",
     "Relations": "關聯項目",
-    "Rel": { "pre": "受到影響", "post": "造成影響", "intra": "登場", "inter": "登場於", "to": "後續", "from": "來源" },
+    "Rel": {
+      "pre": "受到影響",
+      "post": "造成影響",
+      "intra": "登場",
+      "inter": "登場於",
+      "to": "後續",
+      "from": "來源"
+    },
     "BasicInfo": "基本資訊",
     "Scenario": "對應場景",
     "DefaultScenario": "無設定場景(預設)",

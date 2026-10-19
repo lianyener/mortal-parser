@@ -575,6 +575,8 @@
       { "id": "ch5_4_8_7_1", "type": "Script" },
       { "id": "ch5_4_8_7_2", "type": "Script" },
       { "id": "ch5_4_8_8_1", "type": "Script" },
+      { "id": "ch5_4_8_8_5", "type": "Script" },
+      { "id": "ch5_4_8_8_1_01", "type": "Script" },
       { "id": "ch5_4_8_8_2", "type": "Script" },
       { "id": "ch5_4_8_8_3", "type": "Script" },
       { "id": "ch5_4_8_8_4", "type": "Script" },
@@ -585,7 +587,9 @@
       { "id": "ch5_5_1_1", "type": "Script" },
       { "id": "ch5_5_1_2", "type": "Script" },
       { "id": "ch5_5_2_break_start_01", "type": "Script" },
-      { "id": "ch5_5_3", "type": "Script" }
+      { "id": "ch5_5_3", "type": "Script" },
+      { "id": "ch5_6_1", "type": "Script" },
+      { "id": "ch5_6_2_break_start_01", "type": "Script" }
     ]
   },
   "CT_S0208": {
