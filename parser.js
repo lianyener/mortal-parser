@@ -1503,7 +1503,7 @@ export async function parseBattleSkill(doExport = true) {
   // 取得檔案清單
   const files = await getJsonList('BattleSkillData');
   if (files.length === 0) return;
-  
+
   // 初始化
   const regexCharIcon = /Sprite\/icon_(?:head|headframe)_(\w+)\.png/;
   const regexPostfix = /_\w+/;
@@ -1869,7 +1869,8 @@ export async function parseMission() {
           remark: Array.from(triggerCustom?.[triggerId]?.remark ?? [], (_, i) => `[*Trigger.Remark.${triggerId}.${i}*]`),
           rel: { pre: {}, to: {}, from: { Mission: [missionId] } },
           eventFlow: triggerCustom?.[triggerId]?.eventFlow ?? undefined,
-          stopFlow: triggerCustom?.[triggerId]?.stopFlow ?? []
+          stopFlow: triggerCustom?.[triggerId]?.stopFlow ?? [],
+          flowOrder: triggerCustom?.[triggerId]?.flowOrder ?? undefined
         };
         if (triggerObj.script) mergeRelation(triggerObj.rel.to, { Script: [triggerObj.script] });
         if (!triggerObj.active) triggerObj.remark.unshift('※[*Custom.TriggerDisable*]');
@@ -1985,7 +1986,8 @@ export async function parseMission() {
         maxTime: { year: '', month: '', stage: '' },
         orderKey: `1-04-1-3-${id}`,
         eventFlow: triggerCustom?.[id]?.eventFlow ?? undefined,
-        stopFlow: triggerCustom?.[id]?.stopFlow ?? []
+        stopFlow: triggerCustom?.[id]?.stopFlow ?? [],
+        flowOrder: triggerCustom?.[id]?.flowOrder ?? undefined
       };
       updateNameDraftItem(nameDraft.trigger, id, name);
       nameDraft.trigger[id].sheet = tmpSheet;
@@ -2184,7 +2186,8 @@ export async function parsePosition() {
           script,
           remark: [],
           eventFlow: custom?.[key]?.event?.[id]?.eventFlow ?? undefined,
-          stopFlow: custom?.[key]?.event?.[id]?.stopFlow ?? []
+          stopFlow: custom?.[key]?.event?.[id]?.stopFlow ?? [],
+          flowOrder: custom?.[key]?.event?.[id]?.flowOrder ?? undefined
         };
         mergeRelation(result[key].rel.to, { Script: [script] });
         updateNameDraftItem(nameDraft, script, (eventData._devNote ?? '').trim());
@@ -2753,7 +2756,7 @@ export async function parseBattle() {
           { condition: '[%[*Custom.GiveUp*]%]', result: '[*Label.Flag,BattleResult_001.0*]=[*Flag.BattleResult_001.0.0*]' },
           { condition: '[%[*Custom.PlayerDie*]%]', result: '[*Custom.BattleDie*]' }
         ],
-        rel: { pre: {} }
+        rel: { pre: {}, to: {} }
       };
 
       // 取得敵我中立方陣容資料
@@ -2867,7 +2870,7 @@ export async function parseScript() {
     getDataJson('scriptFree'),
     getDataJson('scriptName'),
     getDataJson('scriptFullCustom'),
-    loadCache(['GROUP', 'SKILL', 'FLAG', 'TERM', 'SWITCH', 'CONDITION', 'DICE'])
+    loadCache(['GROUP', 'SKILL', 'FLAG', 'TERM', 'SWITCH', 'CONDITION', 'DICE', 'COMBAT', 'BATTLE'])
   ]);
 
   // 常數
@@ -3064,6 +3067,11 @@ export async function parseScript() {
             const name = `BL_${removeQuote(node.arguments[1].raw)}`;
             const script = cache?.temp?.story ?? 'Unknown';
             mergeRelation(rel.to, { Script: [script], Battle: [name] });
+            if (script && script !== 'Unknown' && CACHE.BATTLE?.[name]) {
+              CACHE.BATTLE[name].rel ??= {};
+              CACHE.BATTLE[name].rel.to ??= {};
+              mergeRelation(CACHE.BATTLE?.[name]?.rel.to, { Script: [script] });
+            }
             content.push({ form: 'effect', type: 'Battle', text: `★[*System.Battle*][*Label.Battle,${name}*]` });
             content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.CombatNextScript*][*Label.Script,${script}*]` });
             break;
@@ -3073,6 +3081,18 @@ export async function parseScript() {
             const name = `CL_${removeQuote(node.arguments[1].raw)}`;
             const script = cache?.temp?.story ?? 'Unknown';
             mergeRelation(rel.to, { Script: [script], Combat: [name] });
+            if (script && script !== 'Unknown') {
+              if (CACHE.COMBAT?.[name]) {
+                CACHE.COMBAT[name].rel ??= {};
+                CACHE.COMBAT[name].rel.to ??= {};
+                mergeRelation(CACHE.COMBAT[name].rel.to, { Script: [script] });
+              }
+              if (CACHE.COMBAT_FULL?.[name]) {
+                CACHE.COMBAT_FULL[name].rel ??= {};
+                CACHE.COMBAT_FULL[name].rel.to ??= {};
+                mergeRelation(CACHE.COMBAT_FULL[name].rel.to, { Script: [script] });
+              }
+            }
             content.push({ form: 'effect', type: 'Combat', text: `★[*System.Combat*][*Label.Combat,${name}*]` });
             content.push({ form: 'effect', type: 'Script', text: `◎[*Custom.CombatNextScript*][*Label.Script,${script}*]` });
             break;
@@ -3903,7 +3923,7 @@ export async function parseScript() {
   writeLog('log', '"Script" parsed successfully!');
 
   // 並行輸出結果
-  await Promise.all([exportJson(result, 'scriptFull'), exportJson(logicResult, 'script'), exportJson(nameDraft, 'scriptName')]);
+  await Promise.all([exportJson(result, 'scriptFull'), exportJson(logicResult, 'script'), exportJson(nameDraft, 'scriptName'), exportJson(CACHE.BATTLE, 'battle'), exportJson(CACHE.COMBAT, 'combat'), exportJson(CACHE.COMBAT_FULL, 'combatFull')]);
   CACHE.SCRIPT = logicResult;
   CACHE.SCRIPT_FULL = result;
   CACHE_FULFILL.SCRIPT = true;
@@ -4064,7 +4084,7 @@ export async function organizeOutputData() {
   };
 
   // 劇本來源深度追溯
-  const traceOrigin = (category, itemId, origins, relVisited, flowVisited, scriptSet, canCollectFlow = true) => {
+  const traceOrigin = (category, itemId, origins, relVisited, flowVisited, scriptSet, subEventMap, canCollectFlow = true) => {
     const visitKey = `${category}:${itemId}`;
     const nodeData = CACHE[category.toUpperCase()]?.[itemId];
     if (!nodeData) return;
@@ -4079,14 +4099,14 @@ export async function organizeOutputData() {
       }
     }
 
-    // --- DAG 訪問剪枝判斷 ---
+    // DAG 訪問剪枝判斷
     const alreadyRel = relVisited.has(visitKey);
     const alreadyFlow = flowVisited.has(visitKey);
 
     if (!canCollectFlow && alreadyRel) return;
     if (canCollectFlow && alreadyFlow) return;
 
-    // --- 建立反向關聯 (保證每條路徑節點至少建過一次) ---
+    // 建立反向關聯
     if (!alreadyRel) {
       relVisited.add(visitKey);
       if (origins.triggerId) addBackRelation('TRIGGER', origins.triggerId, category, itemId, 'from');
@@ -4094,28 +4114,31 @@ export async function organizeOutputData() {
       if (origins.positionId) addBackRelation('POSITION', origins.positionId, category, itemId, 'from');
     }
 
-    // --- 判斷 Script 終止與 Flow 收集 ---
-    const isTerminated = category === 'Script' && origins.stopFlow?.has(itemId);
+    // 判斷終止節點與 Flow 收集
+    const isTerminated = origins.stopFlow?.has(itemId);
     const nextCanCollect = canCollectFlow && !isTerminated;
 
     if (canCollectFlow) {
       flowVisited.add(visitKey);
-      // 只有未終止的 Script 才加入流程集合
-      if (!isTerminated && category === 'Script') {
-        scriptSet.add(itemId);
+      if (!isTerminated) {
+        if (category === 'Script') {
+          scriptSet.add(itemId);
+        } else if (category === 'Combat' || category === 'Battle') {
+          subEventMap.set(itemId, { id: itemId, type: category });
+        }
       }
     }
 
-    // --- 遞迴後續節點 ---
+    // 遞迴後續節點
     const toRels = nodeData.rel?.to ?? {};
     for (const nextScript of toRels.Script ?? []) {
-      traceOrigin('Script', nextScript, origins, relVisited, flowVisited, scriptSet, nextCanCollect);
+      traceOrigin('Script', nextScript, origins, relVisited, flowVisited, scriptSet, subEventMap, nextCanCollect);
     }
     for (const nextCombat of toRels.Combat ?? []) {
-      traceOrigin('Combat', nextCombat, origins, relVisited, flowVisited, scriptSet, nextCanCollect);
+      traceOrigin('Combat', nextCombat, origins, relVisited, flowVisited, scriptSet, subEventMap, nextCanCollect);
     }
     for (const nextBattle of toRels.Battle ?? []) {
-      traceOrigin('Battle', nextBattle, origins, relVisited, flowVisited, scriptSet, nextCanCollect);
+      traceOrigin('Battle', nextBattle, origins, relVisited, flowVisited, scriptSet, subEventMap, nextCanCollect);
     }
   };
 
@@ -4123,66 +4146,87 @@ export async function organizeOutputData() {
   const regexScriptSubPrefix = /\w+?(?=_|$)/;
 
   // Helper: 建立事件流
-  const buildEventFlow = (initScript, scriptSet) => {
+  const buildEventFlow = (initScript, scriptSet, subEventMap, flowOrder = {}) => {
     if (!initScript) return [];
 
-    // 安全取得前綴
     const initScriptPrefix = initScript.match(regexScriptPrefix)?.[0] ?? initScript;
     const initScriptSubPrefix = initScript.match(regexScriptSubPrefix)?.[0] ?? initScript;
-    const allScripts = Array.from(scriptSet);
 
-    // 優先度容器
+    // 全域分流
     const nearestScripts = [];
     const nearScripts = [];
     const otherScripts = [];
+    for (const s of scriptSet) {
+      if (s === initScript) continue;
+      if (s in flowOrder) continue;
 
-    // 進行全域分流
-    for (const s of allScripts) {
-      if (s === initScript) continue; // 排除初始腳本
-
-      // 依據相似度分發
       if (initScriptPrefix && s.startsWith(initScriptPrefix)) nearestScripts.push(s);
       else if (initScriptSubPrefix && s.startsWith(initScriptSubPrefix)) nearScripts.push(s);
       else otherScripts.push(s);
     }
 
-    // 將分流好的陣列排序後合併
-    const finalSortedScripts = [initScript, ...nearestScripts.sort(customSort), ...nearScripts.sort(customSort), ...otherScripts.sort(customSort)].filter(Boolean);
+    // 基礎 Script 骨幹排序
+    const sortedScripts = [initScript, ...nearestScripts.sort(customSort), ...nearScripts.sort(customSort), ...otherScripts.sort(customSort)].filter(Boolean);
 
+    // 循序檢查並插入自訂 flowOrder 腳本
+    for (const [scriptId, rule] of Object.entries(flowOrder)) {
+      if (!scriptSet.has(scriptId)) continue;
+
+      const anchor = rule.after ?? rule.before;
+      const isAfter = 'after' in rule;
+
+      // 防呆：先移除避免重複存在
+      const existIdx = sortedScripts.indexOf(scriptId);
+      if (existIdx !== -1) sortedScripts.splice(existIdx, 1);
+
+      const anchorIdx = sortedScripts.indexOf(anchor);
+      if (anchorIdx !== -1) {
+        sortedScripts.splice(isAfter ? anchorIdx + 1 : anchorIdx, 0, scriptId);
+      } else {
+        // 找不到錨點時安全追加至末尾
+        sortedScripts.push(scriptId);
+      }
+    }
+
+    // 生成純 Script 的事件流基礎陣列 (過濾 skip 腳本)
     const eventFlow = [];
-    const addedEvents = new Set();
+    for (const s of sortedScripts) {
+      const nodeData = CACHE.SCRIPT[s];
+      if (!nodeData || !nodeData.skip) {
+        eventFlow.push({ id: s, type: 'Script' });
+      }
+    }
 
-    // 依序推入 eventFlow，並在 Script 後方安插其觸發的 Combat / Battle
-    for (let i = finalSortedScripts.length - 1; i >= 0; i--) {
-      const scriptId = finalSortedScripts[i];
-      const nodeData = CACHE.SCRIPT[scriptId];
+    // 將 Combat / Battle 插入至接續 Script 前面
+    const subEvents = Array.from(subEventMap.values()).sort((a, b) => customSort(a.id, b.id));
+    for (const ev of subEvents) {
+      const cat = ev.type.toUpperCase();
+      const node = CACHE[cat]?.[ev.id];
 
-      // 處理 Script 觸發的子事件 (Combat / Battle)
-      if (nodeData) {
-        const combats = nodeData.rel?.to?.Combat ?? [];
-        const battles = nodeData.rel?.to?.Battle ?? [];
+      // 優先從自身 rel.to 尋找屬於當前事件流的接續腳本
+      const nextScripts = node?.rel?.to?.Script ?? [];
+      let targetScript = nextScripts.find((s) => scriptSet.has(s));
 
-        const subEvents = [];
-        combats.forEach((id) => subEvents.push({ id, type: 'Combat' }));
-        battles.forEach((id) => subEvents.push({ id, type: 'Battle' }));
-
-        // 將子事件進行全域正序排序
-        subEvents.sort((a, b) => customSort(a.id, b.id));
-
-        // 子事件也要倒序推入
-        for (let j = subEvents.length - 1; j >= 0; j--) {
-          const ev = subEvents[j];
-          if (!addedEvents.has(ev.id)) {
-            eventFlow.unshift(ev);
-            addedEvents.add(ev.id);
-          }
-        }
+      // 若自身未記錄，退回從觸發的前置腳本 rel.to 尋找
+      const fromScriptId = node?.rel?.from?.Script?.[0];
+      if (!targetScript && fromScriptId) {
+        const fromNextScripts = CACHE.SCRIPT[fromScriptId]?.rel?.to?.Script ?? [];
+        targetScript = fromNextScripts.find((s) => scriptSet.has(s));
       }
 
-      // 推入 Script 本身
-      if (!addedEvents.has(scriptId) && (!nodeData || !nodeData.skip)) {
-        eventFlow.unshift({ id: scriptId, type: 'Script' });
-        addedEvents.add(scriptId);
+      const targetIdx = targetScript ? eventFlow.findIndex((item) => item.id === targetScript && item.type === 'Script') : -1;
+
+      if (targetIdx !== -1) {
+        // 插在接續 Script 前面
+        eventFlow.splice(targetIdx, 0, ev);
+      } else {
+        // 安全插在觸發該戰鬥的前置腳本後面
+        const fromIdx = fromScriptId ? eventFlow.findIndex((item) => item.id === fromScriptId && item.type === 'Script') : -1;
+        if (fromIdx !== -1) {
+          eventFlow.splice(fromIdx + 1, 0, ev);
+        } else {
+          eventFlow.push(ev);
+        }
       }
     }
 
@@ -4202,13 +4246,12 @@ export async function organizeOutputData() {
     };
 
     const scriptSet = new Set();
+    const subEventMap = new Map();
     const relVisited = new Set();
     const flowVisited = new Set();
 
-    if (initScript) traceOrigin('Script', initScript, origins, relVisited, flowVisited, scriptSet, true);
-
-    const eventFlow = triggerData?.eventFlow ?? buildEventFlow(initScript, scriptSet);
-
+    if (initScript) traceOrigin('Script', initScript, origins, relVisited, flowVisited, scriptSet, subEventMap, true);
+    const eventFlow = triggerData?.eventFlow ?? buildEventFlow(initScript, scriptSet, subEventMap, triggerData?.flowOrder ?? {});
     if (eventFlow.length > 0) triggerData.eventFlow = eventFlow;
   }
 
@@ -4219,12 +4262,13 @@ export async function organizeOutputData() {
       const origins = { positionId: positionId, stopFlow: new Set(eventData?.stopFlow ?? []) };
 
       const scriptSet = new Set();
+      const subEventMap = new Map();
       const relVisited = new Set();
       const flowVisited = new Set();
 
-      if (initScript) traceOrigin('Script', initScript, origins, relVisited, flowVisited, scriptSet, true);
+      if (initScript) traceOrigin('Script', initScript, origins, relVisited, flowVisited, scriptSet, subEventMap, true);
 
-      const eventFlow = eventData?.eventFlow ?? buildEventFlow(initScript, scriptSet);
+      const eventFlow = eventData?.eventFlow ?? buildEventFlow(initScript, scriptSet, subEventMap, eventData?.flowOrder ?? {});
       if (eventFlow.length > 0) eventData.eventFlow = eventFlow;
     }
   }

@@ -92,14 +92,7 @@
   "M6003_08_01": { "orderKey": "3-12-3-5-02-M6003_08_01" },
   "M6003_10_01": { "orderKey": "3-12-3-5-03-M6003_10_01" },
   "M6003_03": { "orderKey": "4-01-1-5-M6003_03" },
-  "M0003": {
-    "eventFlow": [
-      { "id": "ch1_1_1", "type": "Script" },
-      { "id": "ch1_1_2", "type": "Script" },
-      { "id": "ch1_2_4", "type": "Script" },
-      { "id": "ch1_2_5", "type": "Script" }
-    ]
-  },
+  "M0003": { "stopFlow": ["ch0_1"] },
   "CT_M0000_00": {
     "mission": "main",
     "active": true,
@@ -112,119 +105,38 @@
     "type": "Main",
     "orderKey": "3-11-1-1-M0000_00"
   },
-  "S0102_01": { "eventFlow": [{ "id": "S0102_01", "type": "Script" }] },
-  "S0103_01": { "eventFlow": [{ "id": "S0103_01", "type": "Script" }] },
-  "S0104_01": { "eventFlow": [{ "id": "S0104_01", "type": "Script" }] },
-  "S0105_01": { "eventFlow": [{ "id": "S0104_01", "type": "Script" }] },
+  "S0102_01": { "stopFlow": ["S0105_01"] },
+  "S0103_01": { "stopFlow": ["S0105_01"] },
+  "S0104_01": { "stopFlow": ["S0105_01"] },
+  "S0105_01": { "stopFlow": ["S0105_01"] },
   "CT_S0105_02": {
     "mission": "CM_S0105",
     "active": true,
     "minTime": { "year": "1", "month": "8", "stage": "2" },
     "maxTime": { "year": "2", "month": "10", "stage": "3" },
-    "condition": ["※[*Custom.FromScript*]"],
+    "condition": ["※[*Custom.FromScript*]", "※[*Custom.ReferTo*]:[*Label.Script,S0102_01*]、[*Label.Script,S0103_01*]、[*Label.Script,S0104_01*]"],
     "script": "S0105_01",
     "content": [],
     "remark": ["※本項非實際存在觸發，為方便呈現手動加入，實際由各種抓到晁和事件接續觸發"],
     "type": "Sub",
-    "orderKey": "1-08-2-0-S0105_02",
-    "eventFlow": [
-      { "id": "S0105_01", "type": "Script" },
-      { "id": "CL_S0105_01", "type": "Combat" },
-      { "id": "S0105_01_01", "type": "Script" },
-      { "id": "CL_S0105_02", "type": "Combat" },
-      { "id": "S0105_01_02", "type": "Script" }
-    ]
+    "orderKey": "1-08-2-0-S0105_02"
   },
-  "M2003_01": {
-    "eventFlow": [
-      { "id": "ch2_2_3_1", "type": "Script" },
-      { "id": "ch2_2_3_1_travel", "type": "Script" },
-      { "id": "ch2_2_3_1_travel_01", "type": "Script" },
-      { "id": "ch2_2_3_1_travel_02", "type": "Script" },
-      { "id": "ch2_2_3_1_travel_03", "type": "Script" },
-      { "id": "ch2_2_3_1_travel_03_break_start_01", "type": "Script" },
-      { "id": "ch2_2_3_1_travel_03_break_start_02", "type": "Script" },
-      { "id": "ch2_2_3_1_travel_03_break_01", "type": "Script" },
-      { "id": "ch2_2_3_1_travel_04", "type": "Script" },
-      { "id": "ch2_2_3_1_travel_05", "type": "Script" },
-      { "id": "ch2_2_3_1_travel_06", "type": "Script" },
-      { "id": "ch2_2_3_1_travel_07", "type": "Script" },
-      { "id": "ch2_2_3_4", "type": "Script" },
-      { "id": "ch2_2_3_4_break", "type": "Script" },
-      { "id": "ch2_2_3_4_break_01", "type": "Script" },
-      { "id": "ch2_2_3_4_1", "type": "Script" },
-      { "id": "CL_1100_01", "type": "Combat" },
-      { "id": "ch2_2_3_4_1_1", "type": "Script" },
-      { "id": "ch2_2_3_4_2", "type": "Script" },
-      { "id": "CL_1101_01", "type": "Combat" },
-      { "id": "ch2_2_3_4_2_1", "type": "Script" },
-      { "id": "ch2_2_3_4_3", "type": "Script" },
-      { "id": "ch2_2_3_4_3_break_01", "type": "Script" },
-      { "id": "ch2_2_3_4_3_break_01_01", "type": "Script" },
-      { "id": "CL_1102_01", "type": "Combat" },
-      { "id": "ch2_2_3_4_3_break_01_01_01", "type": "Script" },
-      { "id": "ch2_2_3_4_3_break_01_01_02", "type": "Script" },
-      { "id": "ch2_2_3_4_3_break_01_02", "type": "Script" },
-      { "id": "ch2_2_3_4_3_break_01_03", "type": "Script" },
-      { "id": "CL_1103_01", "type": "Combat" },
-      { "id": "ch2_2_3_4_3_break_01_04", "type": "Script" },
-      { "id": "CL_1104_01", "type": "Combat" },
-      { "id": "ch2_2_3_4_3_break_01_04_01", "type": "Script" },
-      { "id": "ch2_2_3_4_3_break_01_04_02", "type": "Script" },
-      { "id": "BL_2000", "type": "Battle" },
-      { "id": "BL_2001", "type": "Battle" },
-      { "id": "ch2_2_3_4_3_break_01_04_02_01", "type": "Script" },
-      { "id": "ch2_2_3_4_3_break_01_04_03", "type": "Script" },
-      { "id": "ch2_2_3_4_3_Break_01_03_01", "type": "Script" },
-      { "id": "ch2_2_4_2", "type": "Script" },
-      { "id": "ch2_2_5", "type": "Script" },
-      { "id": "ch2_2_5_1", "type": "Script" },
-      { "id": "ch2_2_5_2", "type": "Script" },
-      { "id": "ch2_2_5_2_break_start_01", "type": "Script" },
-      { "id": "ch2_2_5_2_break_01", "type": "Script" },
-      { "id": "ch2_2_6", "type": "Script" },
-      { "id": "ch2_2_6_1", "type": "Script" },
-      { "id": "ch2_2_6_2", "type": "Script" },
-      { "id": "ch2_2_6_3", "type": "Script" },
-      { "id": "CL_1202_01", "type": "Combat" },
-      { "id": "ch2_2_6_4", "type": "Script" },
-      { "id": "ch2_2_6_4_break_start_01", "type": "Script" },
-      { "id": "ch2_2_6_4_break_01", "type": "Script" },
-      { "id": "ch2_2_6_5", "type": "Script" }
-    ]
-  },
-  "M2004_01": {
-    "eventFlow": [
-      { "id": "ch2_2_4_1", "type": "Script" },
-      { "id": "ch2_2_4_1_travel", "type": "Script" },
-      { "id": "ch2_2_4_1_travel_01", "type": "Script" },
-      { "id": "ch2_2_4_1_travel_02", "type": "Script" },
-      { "id": "ch2_2_4_1_travel_03", "type": "Script" },
-      { "id": "ch2_2_4_1_travel_04", "type": "Script" },
-      { "id": "ch2_2_4_2", "type": "Script" },
-      { "id": "ch2_2_5", "type": "Script" },
-      { "id": "ch2_2_5_3", "type": "Script" },
-      { "id": "CL_1201_01", "type": "Combat" },
-      { "id": "ch2_2_5_3_1", "type": "Script" },
-      { "id": "ch2_2_5_4", "type": "Script" },
-      { "id": "ch2_2_6", "type": "Script" },
-      { "id": "ch2_2_6_1", "type": "Script" },
-      { "id": "ch2_2_6_2", "type": "Script" },
-      { "id": "ch2_2_6_3", "type": "Script" },
-      { "id": "CL_1202_01", "type": "Combat" },
-      { "id": "ch2_2_6_4", "type": "Script" },
-      { "id": "ch2_2_6_4_break_start_01", "type": "Script" },
-      { "id": "ch2_2_6_4_break_01", "type": "Script" },
-      { "id": "ch2_2_6_5", "type": "Script" }
-    ]
+  "M2003_01": { "stopFlow": ["ch2_2_4_2"] },
+  "M2004_01": { "stopFlow": ["ch2_2_4_2"] },
+  "CT_M2004_02": {
+    "mission": "main",
+    "active": true,
+    "minTime": { "year": "1", "month": "12", "stage": "1" },
+    "maxTime": { "year": "1", "month": "12", "stage": "1" },
+    "condition": ["※[*Custom.FromScript*]", "※[*Custom.ReferTo*]:[*Label.Trigger,M2003_01*]、[*Label.Trigger,M2004_01*]"],
+    "script": "ch2_2_4_2",
+    "content": [],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，實際由[*Label.Trigger,M2003_01*]或[*Label.Trigger,M2004_01*]接續觸發"],
+    "type": "Main",
+    "orderKey": "1-12-1-0-M2004_02"
   },
   "M2005_01": {
-    "eventFlow": [
-      { "id": "ch2_3_2", "type": "Script" },
-      { "id": "meeting_start_01_temp", "type": "Script" },
-      { "id": "meeting_option_01_temp", "type": "Script" },
-      { "id": "meeting_option_01_20", "type": "Script" }
-    ]
+    "stopFlow": ["ch2_5_1"]
   },
   "CT_M2006_00": {
     "mission": "main",
@@ -234,17 +146,12 @@
     "condition": ["※[*Custom.FromScript*]", "※[*Custom.ReferTo*]:[*Label.Script,meeting_option_01_20*]"],
     "script": "ch2_5_1",
     "content": [],
-    "remark": ["※本項非實際存在觸發，為方便呈現手動加入"],
+    "remark": ["※本項非實際存在觸發，為方便呈現手動加入，實際由[*Label.Trigger,M2005_01*]內[*Label.Script,meeting_option_01_20*]接續觸發"],
     "type": "Main",
     "orderKey": "2-02-1-5-M2006_00"
   },
   "M2007_03": {
-    "eventFlow": [
-      { "id": "ch2_4_2", "type": "Script" },
-      { "id": "ch2_4_2_1", "type": "Script" },
-      { "id": "ch2_4_2_break_start_01", "type": "Script" },
-      { "id": "ch2_4_2_break_start_02", "type": "Script" }
-    ]
+    "flowOrder": { "ch2_4_2_1": { "after": "ch2_4_2" } }
   },
   "M2007_02": {
     "eventFlow": [

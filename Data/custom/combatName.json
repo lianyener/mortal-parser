@@ -1584,14 +1584,14 @@
   "CL_3004_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.brother4*]",
     "ref": "四師兄切磋 全力 戰唐惟元",
-    "name": "",
+    "name": "戰四師兄",
     "desc": "要求和四師兄切磋",
     "keywords": ""
   },
   "CL_3004_02": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.brother4*]",
     "ref": "四師兄切磋 戰唐惟元",
-    "name": "",
+    "name": "戰全力四師兄",
     "desc": "引出四師兄的全力",
     "keywords": ""
   },
