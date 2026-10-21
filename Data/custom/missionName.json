@@ -1507,7 +1507,7 @@
     },
     "S2921": {
       "ori": "S2921",
-      "name": "",
+      "name": "小竹的家書",
       "ref": "小竹的家書",
       "desc": "",
       "keywords": ""
@@ -4216,11 +4216,11 @@
     },
     "S2921_01": {
       "ori": "S2921_01",
-      "name": "",
+      "name": "小竹的家書",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "Brother1Leave"
     },
     "S2920_01": {
       "ori": "S2920_01",
@@ -4373,6 +4373,22 @@
       "desc": "",
       "keywords": "",
       "sheet": ""
+    },
+    "CT_M2004_02": {
+      "ori": "CT_M2004_02",
+      "name": "南宮家宴",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "BeforeExternalStudy"
+    },
+    "CT_M4002_03": {
+      "ori": "CT_M4002_03",
+      "name": "崆峒神威",
+      "ref": "",
+      "desc": "",
+      "keywords": "",
+      "sheet": "InviteGroom"
     }
   }
 }

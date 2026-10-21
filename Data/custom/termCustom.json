@@ -129,7 +129,8 @@
     "Pinball": "進入彈珠台",
     "Counter": "應對",
     "Reduce": "減少{0}層",
-    "SetupEffect": "設定特效"
+    "SetupEffect": "設定特效",
+    "LoadView": "載入場景"
   },
   "Character": {
     "playerLeft": "[*Character.player*]",
@@ -156,6 +157,9 @@
       "S133": "[*CombatSkill.Name.S133_1*]",
       "S134": "[*CombatSkill.Name.S134_1*]",
       "S143": "[*CombatSkill.Name.S143_1*]",
+      "S152": "喚醒小梅",
+      "S157": "[*CombatSkill.Name.S157_1*]",
+      "T100": "對丹霞子特殊行動",
       "Unknown": "[*Custom.Unknown*]"
     },
     "Desc": {
@@ -164,7 +168,10 @@
       "S132": "(傷害吸收100)",
       "S133": "[*CombatSkill.Desc.S133_1*]",
       "S134": "[*CombatSkill.Desc.S134_1*]",
-      "S143": "[*CombatSkill.Desc.S143_1*]"
+      "S143": "[*CombatSkill.Desc.S143_1*]",
+      "S152": "(嘴攻成功觸發劇情對話並增加[*Label.Flag,M50044*])",
+      "S157": "[*CombatSkill.Desc.S157_1*]",
+      "T100": "(指令變更為回應丹霞子的行動：嘴攻[才不要]/捅人[反偷襲]/備揍[好]，選擇[好]額外獲得減益[封印慣用手])"
     }
   },
   "DialogType": {
@@ -178,6 +185,7 @@
     "-20": "[*Custom.Unknown*]",
     "-50": "[*Custom.Unknown*]",
     "202": "十八銅人",
+    "203": "千燈樓",
     "302": "孤雲山"
   },
   "Flag": {
@@ -315,7 +323,8 @@
       "912": "[*Script.Name.ch6_4_3_break_01*]",
       "913": "[*Script.Name.S2901_02_travel*]",
       "914": "[*Script.Name.S2901_05_travel*]",
-      "915": "[*Script.Name.S2321_04_03_break_01*]"
+      "915": "[*Script.Name.S2321_04_03_break_01*]",
+      "916": "[*Script.Name.ch5_6_2_7_travel*]"
     }
   },
   "Middle": {

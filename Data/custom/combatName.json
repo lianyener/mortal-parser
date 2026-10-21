@@ -982,57 +982,57 @@
   "CL_1508_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.special404*]",
     "ref": "崆峒行前置 丹霞子 戰丹霞子",
-    "name": "",
-    "desc": "",
+    "name": "和丹霞子切磋",
+    "desc": "崆峒神威前往崆峒途中，丹霞子要求切磋",
     "keywords": ""
   },
   "CL_1509_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.bandit1*]",
     "ref": "崆峒行前置 大山賊 戰山賊",
-    "name": "",
-    "desc": "",
+    "name": "迎戰山賊",
+    "desc": "崆峒神威前往崆峒路上，遭遇山賊",
     "keywords": ""
   },
   "CL_1510_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.assassin1*]",
     "ref": "崆峒神威 刺客 戰刺客",
-    "name": "",
-    "desc": "",
+    "name": "保護郁城",
+    "desc": "崆峒神威前往崆峒行經崆峒地界，被千燈樓刺客包圍負責保護郁城",
     "keywords": ""
   },
   "CL_1511_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.special824*]",
     "ref": "崆峒神威 荊紅 戰荊紅",
-    "name": "",
-    "desc": "",
+    "name": "戰荊紅",
+    "desc": "崆峒神威鎮魂獄，戰荊紅",
     "keywords": ""
   },
   "CL_1512_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee214*]",
     "ref": "崆峒神威 童大蟲 戰童大蟲",
-    "name": "",
-    "desc": "",
+    "name": "護法阻擋",
+    "desc": "崆峒神威半雨屏介入戰局被阻擋",
     "keywords": ""
   },
   "CL_1513_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl5*]",
     "ref": "小梅之章 魔小梅 戰虞小梅",
-    "name": "",
-    "desc": "",
+    "name": "戰魔小梅",
+    "desc": "崆峒神威半雨屏小梅入魔後迎向小梅",
     "keywords": ""
   },
   "CL_1513_02": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl5*]",
     "ref": "小梅之章 魔小梅2 戰虞小梅",
-    "name": "",
-    "desc": "",
+    "name": "再戰魔小梅",
+    "desc": "崆峒神威半雨屏小梅入魔後第二次戰小梅",
     "keywords": ""
   },
   "CL_1514_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee_group_212*]",
     "ref": "小竹之章 崆峒弟子眾 戰undefined",
-    "name": "",
-    "desc": "",
+    "name": "戰崆峒弟子眾",
+    "desc": "崆峒神威半雨屏金烏自封掌派人下令殺你",
     "keywords": ""
   },
   "CL_1515_01": {

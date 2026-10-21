@@ -2126,6 +2126,7 @@ export async function parsePosition() {
     Travel_310: { index: 605, period: '906', position: 'Map', action: 'travel' },
     Ch_3_1_7_2_01: { index: 611, period: '907', position: '', action: 'night' },
     Travel_401: { index: 701, period: '908', position: 'Map', action: 'travel' },
+    Travel_501: { index: 721, period: '916', position: 'Map', action: 'travel' },
     Travel_S2501_01: { index: 801, period: '909', position: 'Map', action: 'travel' },
     Travel_S2503_01: { index: 802, period: '016', position: '', action: 'training4' },
     Travel_601_01: { index: 811, period: '911', position: 'Map', action: 'travel2' },
@@ -3606,6 +3607,10 @@ export async function parseScript() {
         content.push({ form: 'perform', type: 'Effect', text: `※[*Custom.SetupEffect*]` });
         break;
       }
+      case 'flowcharts.LoadView': {
+        content.push({ form: 'perform', type: 'Effect', text: `※[*Custom.LoadView*]` });
+        break;
+      }
       // 忽略函式
       case 'luamanager.PlayMusic':
       case 'luamanager.StopMusic':
@@ -3652,7 +3657,6 @@ export async function parseScript() {
       case 'dicemenudialog.SetRandom':
       case 'dicemenudialog.Setup':
       case 'dicemenudialog.ExecuteRoll':
-      case 'flowcharts.LoadView':
       case 'flowcharts.SetViewScrollSpeed':
       case 'intropanel.Show':
       case 'maincamera.ActiveVolume':

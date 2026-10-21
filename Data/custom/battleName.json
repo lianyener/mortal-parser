@@ -121,15 +121,15 @@
   "BL_1510_01": {
     "ori": "[*System.Battle*]-[*EnemyTeam.202*]",
     "ref": "唐門+崆峒派 vs ",
-    "name": "",
-    "desc": "",
+    "name": "千燈樓圍殺",
+    "desc": "崆峒神威前往崆峒行經崆峒地界，被千燈樓刺客圍殺",
     "keywords": ""
   },
   "BL_1510_02": {
     "ori": "[*System.Battle*]-[*EnemyTeam.100*]",
     "ref": "崆峒派 vs 崆峒派",
-    "name": "",
-    "desc": "",
+    "name": "崆峒內戰",
+    "desc": "崆峒神威事件，與丹霞子返抵崆峒派加入無色廣場大戰",
     "keywords": ""
   },
   "BL_1601_01": {
