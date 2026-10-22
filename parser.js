@@ -2105,6 +2105,7 @@ export async function parsePosition() {
     Chess_03: { index: 373, period: '006', position: 'Section_01_05', action: 'chess' },
     Section_01_07: { index: 381, period: '006', position: 'Run', action: 'run' },
     Section_01_07_01: { index: 382, period: '006', position: 'Run', action: 'rival' },
+    Section_01_07_02: { index: 383, period: '006', position: 'Run', action: 'adventure' },
     Section_01_08_06: { index: 391, period: '006', position: 'Section_01_08', action: 'firebird1' },
     S2800_02_Break_01: { index: 399, period: '006', position: 'S2800_02', action: 'jail' },
     Section_02_00: { index: 410, period: '003', position: '', action: 'sleep3' },
@@ -2885,6 +2886,7 @@ export async function parseScript() {
   const regexXFull = /\[%\[\*Flag\.(\w+)\.X\*\]([<>=≤≥≠])\[\*Flag\.\w+\.X\.(-?\d+)\*\]%\]/g;
   const regexXName = /\[\*Flag\.(\w+)\.X\*\]/g;
   const regexXValue = /\[\*Flag\.(\w+)\.X\.(-?\d+)\*\]/g;
+  const regexTempScript = /$\[\*Custom\.(TravelScript|TempScript)\*\]/;
   const positionList = ['Alchemy', 'Center', 'Back', 'Mall', 'Study', 'Forge', 'Kitchen', 'GirlRoom', 'Room', 'Door', 'Downtown', 'Fortress', 'Teashop', 'Pharmacy', 'Farm', 'Spa'];
 
   // 初始化
@@ -3143,7 +3145,10 @@ export async function parseScript() {
         }
         // 使用變數
         else {
-          const name = custom[script]?.var?.[node.arguments[0].name] ?? cache?.var?.[node.arguments[0].name] ?? node.arguments[0].name;
+          const varName = node.arguments[0].name;
+          const cached = cache?.var?.[varName];
+          const name = (!cached || regexTempScript.test(cached)) ? (custom[script]?.var?.[varName] ?? cached ?? varName) : cached;
+
           const scriptId = checkLabel(name);
           if (scriptId) {
             mergeRelation(rel.to, { Script: [scriptId] });
