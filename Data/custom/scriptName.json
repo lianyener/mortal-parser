@@ -792,7 +792,7 @@
   },
   "S0033_01": {
     "ori": "S0033_01",
-    "name": "小竹修彈珠檯",
+    "name": "小竹修彈珠台",
     "ref": "",
     "desc": "",
     "keywords": ""
@@ -1779,7 +1779,7 @@
   },
   "S0802_02_04": {
     "ori": "S0802_02_04",
-    "name": "師傅指點結果",
+    "name": "師父指點結果",
     "ref": "",
     "desc": "",
     "keywords": ""
@@ -11726,42 +11726,42 @@
   },
   "door_girl_05_501_01": {
     "ori": "door_girl_05_501_01",
-    "name": "",
+    "name": "指點結果",
     "ref": "",
     "desc": "",
     "keywords": ""
   },
   "door_girl_05_502": {
     "ori": "door_girl_05_502",
-    "name": "",
+    "name": "打弟子出氣",
     "ref": "",
     "desc": "",
     "keywords": ""
   },
   "door_girl_05_502_01": {
     "ori": "door_girl_05_502_01",
-    "name": "",
+    "name": "出氣結果",
     "ref": "",
     "desc": "",
     "keywords": ""
   },
   "door_girl_05_503": {
     "ori": "door_girl_05_503",
-    "name": "",
+    "name": "一日保母",
     "ref": "",
     "desc": "",
     "keywords": ""
   },
   "door_girl_05_504": {
     "ori": "door_girl_05_504",
-    "name": "",
+    "name": "好色之徒",
     "ref": "",
     "desc": "",
     "keywords": ""
   },
   "door_girl_05_504_01": {
     "ori": "door_girl_05_504_01",
-    "name": "",
+    "name": "打發結果",
     "ref": "",
     "desc": "",
     "keywords": ""
@@ -12909,7 +12909,7 @@
   },
   "section_01_free_01_01": {
     "ori": "section_01_free_01_01",
-    "name": "小梅跑步",
+    "name": "小梅揪玩耍",
     "ref": "",
     "desc": "修練時機率觸發",
     "keywords": ""
@@ -14596,7 +14596,7 @@
   },
   "talk_brother4_option_04": {
     "ori": "talk_brother4_option_04",
-    "name": "彈珠檯結果",
+    "name": "彈珠台結果",
     "ref": "",
     "desc": "",
     "keywords": ""
@@ -15408,14 +15408,14 @@
   },
   "S0032_04": {
     "ori": "S0032_04",
-    "name": "",
+    "name": "玩壞彈珠台",
     "ref": "",
     "desc": "",
     "keywords": ""
   },
   "section_01_free_08_07": {
     "ori": "section_01_free_08_07",
-    "name": "",
+    "name": "大試後鶴崖",
     "ref": "",
     "desc": "",
     "keywords": ""

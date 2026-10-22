@@ -358,7 +358,7 @@
   "Position": {
     "Name": {
       "Map": "大地圖",
-      "Run": "[*Story.O_Door_Girl_03_01_001*]",
+      "Run": "和小梅玩",
       "Section_01_08": "[*Story.O_Section_01_Free_Start_02_008*]",
       "S2800_02": "鎮魂獄"
     },

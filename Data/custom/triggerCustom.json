@@ -709,6 +709,15 @@
   "Door": { "eventFlow": [{ "id": "door_001", "type": "Script" }] },
   "Forge": { "eventFlow": [{ "id": "forge_001", "type": "Script" }] },
   "Kitchen": { "eventFlow": [{ "id": "kitchen_001", "type": "Script" }] },
+  "Room1": {
+    "flowOrder": {
+      "S0033_01": { "after": "talk_brother4_option_04" },
+      "S0033_02": { "after": "S0033_01" },
+      "S0032_04": { "after": "S0032_04" },
+      "food_menu_001": { "after": "S0032_04" },
+      "room_exit_01": { "after": "food_menu_001" }
+    }
+  },
   "S0005_00": { "remark": ["※當前版本無法觸發", "※當前版本未設定劇本"] },
   "S0007_00": { "remark": ["※當前版本無法觸發", "※當前版本未設定劇本"] },
   "S0008_00": { "remark": ["※當前版本無法觸發", "※當前版本未設定劇本"] }
