@@ -1,54 +1,14 @@
 {
-  "Back_Free_001": {
-    "event": {
-      "001": {
-        "eventFlow": [
-          { "id": "back_free_001", "type": "Script" }
-        ]
-      }
-    }
-  },
+  "Back_Free_001": { "event": { "001": { "stopFlow": ["S2919_01"] } } },
   "Door_02": {
     "event": {
-      "501": {
-        "eventFlow": [
-          { "id": "door_02_501", "type": "Script" },
-          { "id": "door_girl_03_01", "type": "Script" }
-        ]
-      },
-      "502": {
-        "eventFlow": [
-          { "id": "door_02_502", "type": "Script" },
-          { "id": "door_special_01_01", "type": "Script" }
-        ]
-      },
-      "503": {
-        "eventFlow": [
-          { "id": "door_02_503", "type": "Script" }
-        ]
-      },
-      "504": {
-        "eventFlow": [
-          { "id": "door_02_504", "type": "Script" },
-          { "id": "CL_5006_01", "type": "Combat" },
-          { "id": "door_02_504_01", "type": "Script" }
-        ]
-      },
-      "505": { "eventFlow": [{ "id": "door_02_505", "type": "Script" }] },
-      "506": { "eventFlow": [{ "id": "door_02_506", "type": "Script" }] },
-      "001": {
-        "eventFlow": [
-          { "id": "door_02_001", "type": "Script" },
-          { "id": "door_001_01", "type": "Script" },
-          { "id": "door_01_01", "type": "Script" },
-          { "id": "fortress_01_01", "type": "Script" },
-          { "id": "teashop_01_01", "type": "Script" },
-          { "id": "pharmacy_01_01", "type": "Script" },
-          { "id": "pharmacy_special_01_01", "type": "Script" },
-          { "id": "spa_01_01", "type": "Script" },
-          { "id": "farm_01_01", "type": "Script" }
-        ]
-      }
+      "001": { "stopFlow": ["S0604_01"] },
+      "501": { "stopFlow": ["door_001_01"] },
+      "502": { "stopFlow": ["door_001_01"] },
+      "503": { "stopFlow": ["S0023_01"] },
+      "504": { "stopFlow": ["door_001_01"] },
+      "505": { "stopFlow": ["door_001_01"] },
+      "506": { "stopFlow": ["door_001_01"] }
     }
   },
   "Section_01_02_Start": {
@@ -60,11 +20,7 @@
           { "id": "section_01_free_02_start_001", "type": "Script" }
         ]
       },
-      "502": {
-        "eventFlow": [
-          { "id": "section_01_free_02_start_502", "type": "Script" }
-        ]
-      },
+      "502": { "eventFlow": [{ "id": "section_01_free_02_start_502", "type": "Script" }] },
       "503": {
         "eventFlow": [
           { "id": "section_01_free_02_start_503", "type": "Script" },
@@ -97,11 +53,7 @@
   },
   "S2321_04_03_02": {
     "event": {
-      "001": {
-        "eventFlow": [
-          { "id": "S2321_04_03_02_001", "type": "Script" }
-        ]
-      },
+      "001": { "eventFlow": [{ "id": "S2321_04_03_02_001", "type": "Script" }] },
       "101": {
         "eventFlow": [
           { "id": "S2321_04_03_02_101", "type": "Script" },
@@ -109,69 +61,20 @@
           { "id": "S2321_04_03_02_101_01", "type": "Script" }
         ]
       },
-      "401": {
-        "eventFlow": [
-          { "id": "S2321_04_03_02_401", "type": "Script" }
-        ]
-      },
-      "402": {
-        "eventFlow": [
-          { "id": "S2321_04_03_02_402", "type": "Script" }
-        ]
-      }
+      "401": { "eventFlow": [{ "id": "S2321_04_03_02_401", "type": "Script" }] },
+      "402": { "eventFlow": [{ "id": "S2321_04_03_02_402", "type": "Script" }] }
     }
   },
-  "S2321_04_03_03": {
-    "event": {
-      "301": {
-        "eventFlow": [
-          { "id": "S2321_04_03_03_301", "type": "Script" }
-        ]
-      },
-      "401": {
-        "eventFlow": [
-          { "id": "S2321_04_03_03_401", "type": "Script" }
-        ]
-      }
-    }
-  },
+  "S2321_04_03_03": { "event": { "301": { "eventFlow": [{ "id": "S2321_04_03_03_301", "type": "Script" }] }, "401": { "eventFlow": [{ "id": "S2321_04_03_03_401", "type": "Script" }] } } },
   "S2800_02_Break_01": {
     "event": {
-      "001": {
-        "eventFlow": [
-          { "id": "S2800_02_break_01_001", "type": "Script" }
-        ]
-      },
-      "002": {
-        "eventFlow": [
-          { "id": "S2800_02_break_01_002", "type": "Script" }
-        ]
-      },
-      "101": {
-        "eventFlow": [
-          { "id": "S2800_02_break_01_101", "type": "Script" }
-        ]
-      },
-      "501": {
-        "eventFlow": [
-          { "id": "S2800_02_break_01_501", "type": "Script" }
-        ]
-      },
-      "502": {
-        "eventFlow": [
-          { "id": "S2800_02_break_01_502", "type": "Script" }
-        ]
-      },
-      "503": {
-        "eventFlow": [
-          { "id": "S2800_02_break_01_503", "type": "Script" }
-        ]
-      },
-      "504": {
-        "eventFlow": [
-          { "id": "S2800_02_break_01_504", "type": "Script" }
-        ]
-      }
+      "001": { "eventFlow": [{ "id": "S2800_02_break_01_001", "type": "Script" }] },
+      "002": { "eventFlow": [{ "id": "S2800_02_break_01_002", "type": "Script" }] },
+      "101": { "eventFlow": [{ "id": "S2800_02_break_01_101", "type": "Script" }] },
+      "501": { "eventFlow": [{ "id": "S2800_02_break_01_501", "type": "Script" }] },
+      "502": { "eventFlow": [{ "id": "S2800_02_break_01_502", "type": "Script" }] },
+      "503": { "eventFlow": [{ "id": "S2800_02_break_01_503", "type": "Script" }] },
+      "504": { "eventFlow": [{ "id": "S2800_02_break_01_504", "type": "Script" }] }
     }
   }
 }

@@ -1598,8 +1598,8 @@
   "CL_3005_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl6*]",
     "ref": "夏侯蘭唐門養成 切磋 戰夏侯蘭",
-    "name": "",
-    "desc": "",
+    "name": "師父指點你",
+    "desc": "唐門外出向師父請安，夏侯蘭指點武功",
     "keywords": ""
   },
   "CL_3005_02": {
