@@ -1518,9 +1518,7 @@ export async function parseBattleSkill(doExport = true) {
 
       // 記錄資料
       const id = data._key;
-      result[id] = {
-        cooldown: data._cooldownTime
-      };
+      result[id] = { cooldown: data._cooldownTime };
 
       const matched = data._icon.match(regexCharIcon);
       if (matched) {
@@ -3149,7 +3147,7 @@ export async function parseScript() {
         else {
           const varName = node.arguments[0].name;
           const cached = cache?.var?.[varName];
-          const name = (!cached || regexTempScript.test(cached)) ? (custom[script]?.var?.[varName] ?? cached ?? varName) : cached;
+          const name = !cached || regexTempScript.test(cached) ? (custom[script]?.var?.[varName] ?? cached ?? varName) : cached;
 
           const scriptId = checkLabel(name);
           if (scriptId) {
@@ -3934,7 +3932,14 @@ export async function parseScript() {
   writeLog('log', '"Script" parsed successfully!');
 
   // 並行輸出結果
-  await Promise.all([exportJson(result, 'scriptFull'), exportJson(logicResult, 'script'), exportJson(nameDraft, 'scriptName'), exportJson(CACHE.BATTLE, 'battle'), exportJson(CACHE.COMBAT, 'combat'), exportJson(CACHE.COMBAT_FULL, 'combatFull')]);
+  await Promise.all([
+    exportJson(result, 'scriptFull'),
+    exportJson(logicResult, 'script'),
+    exportJson(nameDraft, 'scriptName'),
+    exportJson(CACHE.BATTLE, 'battle'),
+    exportJson(CACHE.COMBAT, 'combat'),
+    exportJson(CACHE.COMBAT_FULL, 'combatFull')
+  ]);
   CACHE.SCRIPT = logicResult;
   CACHE.SCRIPT_FULL = result;
   CACHE_FULFILL.SCRIPT = true;
@@ -4095,61 +4100,67 @@ export async function organizeOutputData() {
   };
 
   // 劇本來源深度追溯
-  const traceOrigin = (category, itemId, origins, relVisited, flowVisited, scriptSet, subEventMap, canCollectFlow = true) => {
-    const visitKey = `${category}:${itemId}`;
-    const nodeData = CACHE[category.toUpperCase()]?.[itemId];
+  const traceOrigin = (scriptId, origins, relVisited, flowVisited, scriptSet, subEventMap, canCollectFlow = true) => {
+    const nodeData = CACHE.SCRIPT?.[scriptId];
     if (!nodeData) return;
 
     // 跳過自由行動類
-    if (category === 'Script' && itemId in free && origins?.type !== 'Free') return;
+    if (scriptId in free && origins?.type !== 'Free') return;
 
     // 跳過無時間交集的劇本
-    if (category === 'Script' && nodeData.timeCheck) {
-      if (!checkTimeOverlap(origins.minTime, origins.maxTime, nodeData.timeCheck)) {
-        return;
-      }
-    }
+    if (nodeData.timeCheck && !checkTimeOverlap(origins.minTime, origins.maxTime, nodeData.timeCheck)) return;
 
     // DAG 訪問剪枝判斷
-    const alreadyRel = relVisited.has(visitKey);
-    const alreadyFlow = flowVisited.has(visitKey);
+    const alreadyRel = relVisited.has(scriptId);
+    const alreadyFlow = flowVisited.has(scriptId);
 
     if (!canCollectFlow && alreadyRel) return;
     if (canCollectFlow && alreadyFlow) return;
 
     // 建立反向關聯
     if (!alreadyRel) {
-      relVisited.add(visitKey);
-      if (origins.triggerId) addBackRelation('TRIGGER', origins.triggerId, category, itemId, 'from');
-      if (origins.missionId) addBackRelation('MISSION', origins.missionId, category, itemId, 'from');
-      if (origins.positionId) addBackRelation('POSITION', origins.positionId, category, itemId, 'from');
+      relVisited.add(scriptId);
+      if (origins.triggerId) addBackRelation('TRIGGER', origins.triggerId, 'Script', scriptId, 'from');
+      if (origins.missionId) addBackRelation('MISSION', origins.missionId, 'Script', scriptId, 'from');
+      if (origins.positionId) addBackRelation('POSITION', origins.positionId, 'Script', scriptId, 'from');
     }
 
     // 判斷終止節點與 Flow 收集
-    const isTerminated = origins.stopFlow?.has(itemId);
+    const isTerminated = origins.stopFlow?.has(scriptId);
     const nextCanCollect = canCollectFlow && !isTerminated;
 
     if (canCollectFlow) {
-      flowVisited.add(visitKey);
+      flowVisited.add(scriptId);
       if (!isTerminated) {
-        if (category === 'Script') {
-          scriptSet.add(itemId);
-        } else if (category === 'Combat' || category === 'Battle') {
-          subEventMap.set(itemId, { id: itemId, type: category });
+        scriptSet.add(scriptId);
+
+        // 由當前 Script 收集其直接觸發的 Combat 與 Battle，並建立單向反向關聯
+        const toCombats = nodeData.rel?.to?.Combat ?? [];
+        for (const combatId of toCombats) {
+          if (!origins.stopFlow?.has(combatId)) {
+            subEventMap.set(combatId, { id: combatId, type: 'Combat' });
+          }
+          if (origins.triggerId) addBackRelation('TRIGGER', origins.triggerId, 'Combat', combatId, 'from');
+          if (origins.missionId) addBackRelation('MISSION', origins.missionId, 'Combat', combatId, 'from');
+          if (origins.positionId) addBackRelation('POSITION', origins.positionId, 'Combat', combatId, 'from');
+        }
+
+        const toBattles = nodeData.rel?.to?.Battle ?? [];
+        for (const battleId of toBattles) {
+          if (!origins.stopFlow?.has(battleId)) {
+            subEventMap.set(battleId, { id: battleId, type: 'Battle' });
+          }
+          if (origins.triggerId) addBackRelation('TRIGGER', origins.triggerId, 'Battle', battleId, 'from');
+          if (origins.missionId) addBackRelation('MISSION', origins.missionId, 'Battle', battleId, 'from');
+          if (origins.positionId) addBackRelation('POSITION', origins.positionId, 'Battle', battleId, 'from');
         }
       }
     }
 
-    // 遞迴後續節點
-    const toRels = nodeData.rel?.to ?? {};
-    for (const nextScript of toRels.Script ?? []) {
-      traceOrigin('Script', nextScript, origins, relVisited, flowVisited, scriptSet, subEventMap, nextCanCollect);
-    }
-    for (const nextCombat of toRels.Combat ?? []) {
-      traceOrigin('Combat', nextCombat, origins, relVisited, flowVisited, scriptSet, subEventMap, nextCanCollect);
-    }
-    for (const nextBattle of toRels.Battle ?? []) {
-      traceOrigin('Battle', nextBattle, origins, relVisited, flowVisited, scriptSet, subEventMap, nextCanCollect);
+    // 遞迴後續 Script
+    const toScripts = nodeData.rel?.to?.Script ?? [];
+    for (const nextScript of toScripts) {
+      traceOrigin(nextScript, origins, relVisited, flowVisited, scriptSet, subEventMap, nextCanCollect);
     }
   };
 
@@ -4261,7 +4272,7 @@ export async function organizeOutputData() {
     const relVisited = new Set();
     const flowVisited = new Set();
 
-    if (initScript) traceOrigin('Script', initScript, origins, relVisited, flowVisited, scriptSet, subEventMap, true);
+    if (initScript) traceOrigin(initScript, origins, relVisited, flowVisited, scriptSet, subEventMap, true);
     const eventFlow = triggerData?.eventFlow ?? buildEventFlow(initScript, scriptSet, subEventMap, triggerData?.flowOrder ?? {});
     if (eventFlow.length > 0) triggerData.eventFlow = eventFlow;
   }
@@ -4277,7 +4288,7 @@ export async function organizeOutputData() {
       const relVisited = new Set();
       const flowVisited = new Set();
 
-      if (initScript) traceOrigin('Script', initScript, origins, relVisited, flowVisited, scriptSet, subEventMap, true);
+      if (initScript) traceOrigin(initScript, origins, relVisited, flowVisited, scriptSet, subEventMap, true);
 
       const eventFlow = eventData?.eventFlow ?? buildEventFlow(initScript, scriptSet, subEventMap, eventData?.flowOrder ?? {});
       if (eventFlow.length > 0) eventData.eventFlow = eventFlow;
@@ -4357,25 +4368,31 @@ export async function organizeOutputData() {
   for (const category of exportCats) {
     const exportPromises = [];
     const catName = category.toLowerCase();
-    exportPromises.push(exportJson(CACHE[category], 'all', `public/data/${catName}`, true, false));
-    for (const [itemId, itemData] of Object.entries(CACHE[category] ?? {})) {
+    const normalData = CACHE[category] ?? {};
+
+    // 輸出一般版 (public/data/{catName}/)
+    exportPromises.push(exportJson(normalData, 'all', `public/data/${catName}`, true, false));
+    for (const [itemId, itemData] of Object.entries(normalData)) {
       exportPromises.push(exportJson(itemData, itemId, `public/data/${catName}`, true, false));
     }
 
-    // 嘗試輸出完整版
+    // 輸出完整版 (public/full/data/{catName}/)
     const categoryFull = `${category}_FULL`;
-    if (CACHE[categoryFull]) {
-      exportPromises.push(exportJson(CACHE[categoryFull], 'all', `public/full/data/${catName}`, true, false));
-      for (const [itemId, itemData] of Object.entries(CACHE[categoryFull])) {
-        exportPromises.push(exportJson(itemData, itemId, `public/full/data/${catName}`, true, false));
-      }
+    const fullData = CACHE[categoryFull] ?? normalData;
+
+    exportPromises.push(exportJson(fullData, 'all', `public/full/data/${catName}`, true, false));
+    for (const [itemId, itemData] of Object.entries(fullData)) {
+      exportPromises.push(exportJson(itemData, itemId, `public/full/data/${catName}`, true, false));
     }
 
-    // 劇本額外處理
+    // 劇本索引額外處理 (一般版與完整版一併產出)
     if (category === 'SCRIPT') {
       exportPromises.push(exportJson(CACHE.SCRIPT_INDEX, 'index', 'public/data/script', true, false));
       exportPromises.push(exportJson(CACHE.SCRIPT_FREE, 'index_free', 'public/data/script', true, false));
+      exportPromises.push(exportJson(CACHE.SCRIPT_INDEX, 'index', 'public/full/data/script', true, false));
+      exportPromises.push(exportJson(CACHE.SCRIPT_FREE, 'index_free', 'public/full/data/script', true, false));
     }
+
     await Promise.all(exportPromises);
   }
   writeLog('log', '"Data" organized successfully!');
