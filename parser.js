@@ -2670,6 +2670,19 @@ export async function parseCombat() {
         }
       }
 
+      // 解析條件結果
+      for (const item of data._conditionResult ?? []) {
+        const conditionResults = processResult(item._flags, combat.rel, id);
+        const conditionPromises = (item._conditions ?? []).map((c) => processCondition(c, combat.rel, id));
+        const conditions = await Promise.all(conditionPromises);
+        
+        // 記錄結果
+        if (conditions.length > 0) {
+          const text = conditions.join(convertLogic(item._logic ?? 'AND'));
+          branch.branches.push({ index: 0, text, content: conditionResults });
+        }
+      }
+
       // 解析勝利影響
       const winResults = processResult(data._winResult, combat.rel, id);
       branch.branches.push({ index: 0, text: '[*Custom.Win*]', content: winResults });
