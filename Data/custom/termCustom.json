@@ -32,6 +32,7 @@
     "Support": "輔助",
     "Enemy": "敵方",
     "Player": "我方",
+    "Friend": "我方",
     "Init": "初始",
     "MainMission": "主線",
     "SubMission": "支線",
@@ -75,6 +76,7 @@
     "Success": "成功",
     "Failed": "失敗",
     "GiveUp": "投降",
+    "Time": "時間",
     "Timeout": "時間結束({0}[*Custom.Second*])",
     "EnemyDefeat": "[*Custom.Enemy*]全滅",
     "FriendDefeat": "[*Custom.Player*]全滅",
@@ -130,7 +132,10 @@
     "Counter": "應對",
     "Reduce": "減少{0}層",
     "SetupEffect": "設定特效",
-    "LoadView": "載入場景"
+    "LoadView": "載入場景",
+    "Reinforcement": "援軍",
+    "Cinematic": "劇院模式",
+    "CallSupport": "呼叫支援"
   },
   "Character": {
     "playerLeft": "[*Character.player*]",

@@ -2723,7 +2723,7 @@ export async function parseBattle() {
 
   // 初始化
   const result = {};
-  const cache = { npc: {} };
+  const cache = { npc: {}, action: {}, condition: {} };
 
   // Helper: 取得NPC資訊
   const getNpcStat = async (name) => {
@@ -2750,6 +2750,102 @@ export async function parseBattle() {
 
     // 寫入Cache並回傳
     return (cache.npc[name] = npc);
+  };
+
+  // 行動處理流程
+  const processAction = async (action, rel, battleId) => {
+    // 取得鍵值
+    const type = action._type;
+    const key = action._name;
+    const cacheId = `${battleId}:${type}:${key}`;
+
+    // 取得Cache或解析內容
+    const subResult =
+      cache.action?.[cacheId] ??
+      (await (async () => {
+        try {
+          // 載入行動
+          const data = await getGameJson(key, type);
+          if (!isValidJson(data, key)) {
+            return { content: [{ form: 'effect', type: 'System', text: '※[*Custom.Unknown*]' }] };
+          }
+
+          // 解析行動
+          switch (type) {
+            // 援軍
+            case 'BattleEventActionSpawnReinforcement': {
+              const text = `[*Custom.${data._team}*][*Custom.Add*]${data._count}[*Custom.Reinforcement*]`;
+              return { content: [{ form: 'effect', type: 'Action', text }] };
+            }
+            // 劇院
+            case 'BattleEventActionCinematic': {
+              return { content: [{ form: 'effect', type: 'Perform', text: '◇[*Custom.Cinematic*]' }] };
+            }
+            // 呼叫支援
+            case 'BattleEventActionCallSupport': {
+              return { content: [{ form: 'effect', type: 'Perform', text: '◇[*Custom.CallSupport*]' }] };
+            }
+            // 結束戰鬥
+            case 'BattleEventActionFlashGameOver': {
+              const text = data._result === 'FriendWin' ? '[*Label.Flag,BattleResult_001.0*]=[*Flag.BattleResult_001.0.1*]' : '[*Label.Flag,BattleResult_001.0*]=[*Flag.BattleResult_001.0.0*]';
+              return { content: [{ form: 'effect', type: 'Flag', text }, { form: 'effect', type: 'System', text: '◎[*Custom.EndCombat*]' }] };
+            }
+            // 無對應
+            default:
+              writeLog('error', `Parsing battle action "${cacheId}" failed.`);
+              return { content: [] };
+          }
+        } catch (err) {
+          writeLog('error', `Parsing battle action "${cacheId}" failed.`, err);
+          return { content: [] };
+        }
+      })());
+
+    // 寫入Cache並回傳
+    cache.action[cacheId] ??= subResult;
+    if (subResult?.rel?.intra) mergeRelation(rel.intra, subResult.rel.intra);
+    if (subResult?.rel?.post) mergeRelation(rel.post, subResult.rel.post);
+    if (subResult?.rel?.to) mergeRelation(rel.to, subResult.rel.to);
+    return subResult.content;
+  };
+
+  // 條件式處理
+  const processCondition = async (condition, rel, battleId) => {
+    // 取得鍵值
+    const type = condition._type;
+    const key = condition._name;
+    const cacheId = `${battleId}:${type}:${key}`;
+
+    // 取得Cache或解析內容
+    const subResult =
+      cache.condition?.[cacheId] ??
+      (await (async () => {
+        try {
+          // 讀取檔案
+          const data = await getGameJson(key, type);
+          if (!isValidJson(data, key)) return `[*Custom.InvalidCondition,${key}*]`;
+
+          switch (type) {
+            // 條件結果
+            case 'ConditionResultData': {
+              const condition = await getCondition(data, key);
+              return { text: condition.name, rel: condition.rel };
+            }
+            // 無對應
+            default:
+              writeLog('error', `Parsing battle condition "${cacheId}" failed.`);
+              return { text: 'Error' };
+          }
+        } catch (err) {
+          writeLog('error', `Parsing battle condition "${cacheId}" failed.`, err);
+          return { text: 'Error' };
+        }
+      })());
+
+    // 寫入Cache並回傳
+    cache.condition[cacheId] ??= subResult;
+    if (subResult?.rel) mergeRelation(rel.pre, subResult.rel);
+    return subResult.text;
   };
 
   // 主流程
@@ -2836,6 +2932,26 @@ export async function parseBattle() {
         result[id].end.unshift({
           condition: `[%[*Custom.Timeout,${data._time}*]%][*Custom.And*][%[*Custom.Player*][*PlayerStat.npcs*]≥[*Custom.Enemy*][*PlayerStat.npcs*]%]`,
           result: '[*Label.Flag,BattleResult_001.0*]=[*Flag.BattleResult_001.0.1*]'
+        });
+      }
+
+      // 事件
+      for (const item of data._events ?? []) {
+        // 事件資料
+        const eventData = await getGameJson(item._name, 'BattleEventData');
+        if (!isValidJson(eventData, item._name)) continue;
+
+        const conditions = [];
+        if (eventData._checkTriggerSecond) conditions.push(`[%[*Custom.Time*]=${eventData._triggerSecond}[*Custom.Second*]%]`);
+        if (eventData._checkCountThreshold) conditions.push(`[%[*Custom.${eventData._thresholdTeam}*][*PlayerStat.npcs*]=${eventData._countThreshold}%]`);
+        if (eventData._checkCondition) conditions.push(await processCondition(eventData._condition, result[id].rel, id));
+        
+        const actionPromises = (eventData._actions ?? []).map((a) => processAction(a, result[id].rel, id));
+        const actions = await Promise.all(actionPromises);
+
+        result[id].end.unshift({
+          condition: conditions.join(convertLogic('AND')),
+          result: actions.flat().reduce((a, c) => a ? `${a} / ${c.text}` : c.text, '')
         });
       }
 
