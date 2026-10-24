@@ -2675,7 +2675,7 @@ export async function parseCombat() {
         const conditionResults = processResult(item._flags, combat.rel, id);
         const conditionPromises = (item._conditions ?? []).map((c) => processCondition(c, combat.rel, id));
         const conditions = await Promise.all(conditionPromises);
-        
+
         // 記錄結果
         if (conditions.length > 0) {
           const text = conditions.join(convertLogic(item._logic ?? 'AND'));
@@ -2891,7 +2891,7 @@ export async function parseScript() {
   // 常數
   const regexScriptLabel = /^\[\*Label\.Script,(.*?)\*\]$/;
   const regexQuote = /^"(.+)"$/;
-  const regexDice = /^"(\w+)\|([=><]+)(\d+)"$/;
+  const regexDice = /^"(\w+)\|([=><]+)?(\d+)"$/;
   const regexGE = /^>=$/;
   const regexLE = /^<=$/;
   const regexFlagCheck = /^\[%\[\*Label\.Flag,(\w+)\.(\d+)\*\]%\]$/;
@@ -3811,7 +3811,7 @@ export async function parseScript() {
           case 'Dice': {
             const matched = raw.match(regexDice);
             if (matched) {
-              const symbol = matched[2].replace(regexGE, '≥').replace(regexLE, '≤');
+              const symbol = matched[2] ? matched[2].replace(regexGE, '≥').replace(regexLE, '≤') : '<';
               cache.branch.label[index] = `${symbol}${matched[3]} [*Story.${matched[1]}*]`;
             }
             break;
@@ -3928,8 +3928,119 @@ export async function parseScript() {
       // 啟動解析
       walk(ast.body, script.content, initCache);
 
-      // 自訂內容覆蓋
+      // Helper: 替換 Flag 序號並自動將語境套用至子分支
+      function applyReplaceFlags(content, replaceFlags) {
+        if (!content || !replaceFlags || Object.keys(replaceFlags).length === 0) return content;
+
+        // 逐一處理各 FlagId 設定
+        for (const [flagId, targetConfigs] of Object.entries(replaceFlags)) {
+          // 建立出現次數對照表: count -> { newIndex, value }
+          const occurrenceMap = new Map();
+          for (const [newIndex, cfg] of Object.entries(targetConfigs)) {
+            for (const occ of cfg.target ?? []) {
+              occurrenceMap.set(occ, { newIndex, value: cfg.value ?? 'text' });
+            }
+          }
+
+          let count = 0;
+
+          // 替換單一字串中相連的 Label 與 Value (如 Label=Value 或 [%Label=Value%])
+          const replaceInlineText = (text, onMatch) => {
+            if (!text || typeof text !== 'string') return text;
+
+            const regex = new RegExp(`(\\[\\*Label\\.[\\w]*Flag,${flagId}\\.)(\\d+)(\\*\\])(?:([=+\\-≠≤≥<>]+)(?:\\[\\*Flag\\.${flagId}\\.\\d+\\.(-?\\d+)\\*\\]|(-?\\d+)))?`, 'g');
+
+            return text.replace(regex, (match, prefix, oldIndex, labelSuffix, operator, textVal, numVal) => {
+              count++;
+              const target = occurrenceMap.get(count);
+              if (!target) return match;
+
+              if (onMatch) onMatch(target);
+
+              let replaced = `${prefix}${target.newIndex}${labelSuffix}`;
+
+              if (operator) {
+                const val = textVal ?? numVal;
+                if (val !== undefined) {
+                  if (target.value === 'number') {
+                    replaced += `${operator}${val}`;
+                  } else {
+                    const op = operator === '+' || operator === '-' ? '=' : operator;
+                    replaced += `${op}[*Flag.${flagId}.${target.newIndex}.${val}*]`;
+                  }
+                }
+              }
+              return replaced;
+            });
+          };
+
+          // 遞迴走訪節點
+          const traverse = (nodes) => {
+            if (!Array.isArray(nodes)) return;
+
+            for (const node of nodes) {
+              if (!node || typeof node !== 'object') continue;
+
+              let matchedBranchTarget = null;
+
+              // 替換當前節點文字 (Effect 或 Switch Header)
+              if (node.text) {
+                node.text = replaceInlineText(node.text, (target) => {
+                  matchedBranchTarget = target;
+                });
+              }
+
+              // 若為分歧節點且當前 Header 命中替換目標，連帶更新其子分支
+              if (node.form === 'branch' && Array.isArray(node.branches)) {
+                if (matchedBranchTarget) {
+                  const { newIndex, value: valType } = matchedBranchTarget;
+                  const flagValRegex = new RegExp(`\\[\\*Flag\\.${flagId}\\.\\d+\\.(-?\\d+)\\*\\]`, 'g');
+
+                  for (const b of node.branches) {
+                    if (typeof b.text !== 'string') continue;
+
+                    if (valType === 'text') {
+                      // 原本已有 Flag 標籤 -> 替換為新序號
+                      if (flagValRegex.test(b.text)) {
+                        b.text = b.text.replace(flagValRegex, `[*Flag.${flagId}.${newIndex}.$1*]`);
+                      } else {
+                        // 原本為純數字或運算符+數字 -> 擴展為文字標籤
+                        const numMatch = b.text.match(/^([=≠≤≥<>]*)(-?\d+)$/);
+                        if (numMatch) {
+                          const op = numMatch[1] === '=' || numMatch[1] === '' ? '' : numMatch[1];
+                          b.text = `${op}[*Flag.${flagId}.${newIndex}.${numMatch[2]}*]`;
+                        }
+                      }
+                    } else if (valType === 'number') {
+                      // 壓平為數字
+                      b.text = b.text.replace(flagValRegex, '$1');
+                    }
+                  }
+                }
+
+                // 對子分支內容繼續遞迴走訪
+                for (const b of node.branches) {
+                  if (b.condition) b.condition = replaceInlineText(b.condition);
+                  if (Array.isArray(b.content)) traverse(b.content);
+                }
+              } else if (Array.isArray(node.content)) {
+                // 一般節點內容遞迴
+                traverse(node.content);
+              }
+            }
+          };
+
+          traverse(content);
+        }
+
+        return content;
+      }
+
+      // 自訂內容覆蓋 或 指定替代 Flag 序號
       if (fullCustom?.[id]?.content) script.content = fullCustom[id].content;
+      else if (fullCustom?.[id]?.replaceFlags) {
+        script.content = applyReplaceFlags(script.content, fullCustom[id].replaceFlags);
+      }
 
       // 回存結果
       const logic = buildLogicView(script.content);

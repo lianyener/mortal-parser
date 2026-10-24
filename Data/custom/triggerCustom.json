@@ -282,42 +282,11 @@
   "M7006_06_01": { "time": { "year": "4", "month": "1", "stage": "2" }, "orderKey": "4-01-2-5-M7006_06_01" },
   "M7001_01": {
     "time": { "year": "4", "month": "1", "stage": "2" },
-    "eventFlow": [
-      { "id": "ch8_1_1_1", "type": "Script" },
-      { "id": "ch8_1_1_2", "type": "Script" },
-      { "id": "BL_1802_01", "type": "Battle" },
-      { "id": "CL_1805_01", "type": "Combat" },
-      { "id": "CL_1807_01", "type": "Combat" },
-      { "id": "ch8_1_1_2_1", "type": "Script" },
-      { "id": "ch8_1_1_2_break_start_01", "type": "Script" },
-      { "id": "ch8_1_1_2_2", "type": "Script" },
-      { "id": "CL_1806_01", "type": "Combat" },
-      { "id": "CL_1806_02", "type": "Combat" },
-      { "id": "CL_1806_03", "type": "Combat" },
-      { "id": "ch8_1_1_2_2_1", "type": "Script" },
-      { "id": "ch8_1_1_2_3", "type": "Script" },
-      { "id": "ch8_1_1_2_4", "type": "Script" },
-      { "id": "ch8_1_1_4", "type": "Script" },
-      { "id": "ch8_5_1", "type": "Script" },
-      { "id": "ch8_5_2", "type": "Script" },
-      { "id": "ch8_5_3", "type": "Script" },
-      { "id": "ch8_6_1", "type": "Script" },
-      { "id": "ch8_6_1_1", "type": "Script" },
-      { "id": "CL_1808_01", "type": "Combat" },
-      { "id": "ch8_6_1_1_1", "type": "Script" },
-      { "id": "ch8_6_1_2", "type": "Script" },
-      { "id": "BL_1803_01", "type": "Battle" },
-      { "id": "ch8_6_1_2_1", "type": "Script" },
-      { "id": "ch8_6_2", "type": "Script" },
-      { "id": "BL_1803_02", "type": "Battle" },
-      { "id": "ch8_6_2_1", "type": "Script" },
-      { "id": "ch8_6_2_2", "type": "Script" },
-      { "id": "ch8_6_3", "type": "Script" },
-      { "id": "CL_1809_01", "type": "Combat" },
-      { "id": "ch8_6_3_1", "type": "Script" },
-      { "id": "ch8_6_3_2", "type": "Script" }
-    ],
-    "orderKey": "4-01-2-6-M7001_01"
+    "orderKey": "4-01-2-6-M7001_01",
+    "flowOrder": { "ch8_1_1_2_break_start_01": { "before": "ch8_1_1_2_2" }}
+  },
+  "M7001_02_01": {
+    "flowOrder": { "ch8_1_1_2_break_start_01": { "before": "ch8_1_1_2_2" }}
   },
   "M7002_01": { "time": { "year": "4", "month": "2", "stage": "2" } },
 
@@ -614,8 +583,9 @@
     "content": [],
     "remark": ["※本項非實際存在觸發，為方便呈現手動加入，符合條件前往[*Label.Place,Forge*]由[*Label.Script,forge_001*]內分岐觸發"],
     "type": "Sub",
-    "orderKey": "4-2-2-5-S2922_01"
+    "orderKey": "4-02-2-5-S2922_01"
   },
+  "S2510_01": { "orderKey": "3-12-1-4-S2510_01" },
 
   "CT_Free": {
     "mission": "CM_Free",

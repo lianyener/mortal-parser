@@ -1403,14 +1403,14 @@
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.special6*]",
     "ref": "圍攻唐門 萬里鵬程 戰萬里鵬程",
     "name": "戰萬里鵬程",
-    "desc": "圍攻唐門時首波敵人絕世高手",
+    "desc": "圍攻唐門時首波敵人絕世高手，一般分岐",
     "keywords": ""
   },
   "CL_1807_02": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.special6*]",
     "ref": "圍攻唐門 萬里鵬程 戰萬里鵬程",
-    "name": "",
-    "desc": "",
+    "name": "戰全力萬里鵬程",
+    "desc": "圍攻唐門時首波敵人絕世高手，崆峒掌派人高好感分岐",
     "keywords": ""
   },
   "CL_1808_01": {
@@ -2585,15 +2585,15 @@
   "CL_S2510_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.girl6*]",
     "ref": "夏侯蘭鍛鍊唐門弟子 小蘭 戰夏侯蘭",
-    "name": "",
-    "desc": "",
+    "name": "揍你解氣",
+    "desc": "夏侯蘭鍛鍊唐門弟子，透過打你來講解",
     "keywords": ""
   },
   "CL_S2510_02": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.trainee1*]",
     "ref": "夏侯蘭鍛鍊唐門弟子 弟子 戰唐門弟子",
-    "name": "",
-    "desc": "",
+    "name": "揍師弟",
+    "desc": "夏侯蘭鍛鍊唐門弟子，師弟偷襲看你如何破招",
     "keywords": ""
   },
   "CL_S2600_01_01": {
