@@ -925,6 +925,7 @@ export async function parseTerm(doExport = true) {
   CACHE.CHARACTER.special213 = {};
   CACHE.CHARACTER.special214 = {};
   CACHE.CHARACTER.special215 = {};
+  CACHE.CHARACTER.special998 = {};
 
   // 並行輸出結果
   if (doExport)
@@ -2951,7 +2952,7 @@ export async function parseBattle() {
 
         result[id].end.unshift({
           condition: conditions.join(convertLogic('AND')),
-          result: actions.flat().reduce((a, c) => a ? `${a} / ${c.text}` : c.text, '')
+          result: actions.flat().reduce((a, c) => a ? `${a}  / ${c.text}` : c.text, '')
         });
       }
 

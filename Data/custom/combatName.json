@@ -1479,8 +1479,8 @@
   "CL_1815_01": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.oldbeggar1*]",
     "ref": "護衛三師兄 丐幫長老 戰老乞丐",
-    "name": "",
-    "desc": "",
+    "name": "多人圍殺",
+    "desc": "東西大戰唐門出擊，被南宮偉、青蛇老怪、江瀾圍殺",
     "keywords": ""
   },
   "CL_2001_01": {
@@ -2354,8 +2354,8 @@
   "CL_S0802_02_11": {
     "ori": "[*System.Combat*]-[*CombatCharacter.Name.special404*]",
     "ref": "決戰前後山 丹霞子 戰丹霞子",
-    "name": "",
-    "desc": "",
+    "name": "與丹霞子切磋",
+    "desc": "決戰前後山選擇與丹霞子切磋",
     "keywords": ""
   },
   "CL_S2001_01": {

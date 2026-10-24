@@ -1535,7 +1535,7 @@
     },
     "CM_S2922": {
       "ori": "CM_S2922",
-      "name": "",
+      "name": "鍛冶場見小竹",
       "ref": "",
       "desc": "",
       "keywords": ""
@@ -4368,11 +4368,11 @@
     },
     "CT_S2922_01": {
       "ori": "CT_S2922_01",
-      "name": "",
+      "name": "鍛冶場見小竹",
       "ref": "",
       "desc": "",
       "keywords": "",
-      "sheet": ""
+      "sheet": "WestWulin"
     },
     "CT_M2004_02": {
       "ori": "CT_M2004_02",

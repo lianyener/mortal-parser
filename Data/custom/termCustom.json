@@ -147,7 +147,8 @@
     "girl5_10": "[*Character.girl5_10_1*]",
     "special214": "[*Character.special214_1*]",
     "special215": "[*Character.special215_1*]",
-    "special213": "李元棄"
+    "special213": "李元棄",
+    "special998": "呼延掌派"
   },
   "CombatAction": {
     "none": "[*System.NA*]",
