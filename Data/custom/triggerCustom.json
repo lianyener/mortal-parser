@@ -475,7 +475,7 @@
     "type": "Sub",
     "orderKey": "2-04-1-5-S2900_02"
   },
-  "S2901_01": { "time": { "year": "2", "month": "4", "stage": "3" }, "flowOrder": { "S2901_03_01_break_start_02": { "after": "S2901_03_01_05" } } },
+  "S2901_01": { "time": { "year": "2", "month": "4", "stage": "2" }, "flowOrder": { "S2901_03_01_break_start_02": { "after": "S2901_03_01_05" } } },
   "S2902_01": { "time": { "year": "2", "month": "5", "stage": "1" } },
   "CT_S2910_01": {
     "mission": "S2910",
