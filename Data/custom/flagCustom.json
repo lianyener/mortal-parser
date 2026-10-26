@@ -24825,7 +24825,7 @@
     "data": [
       {
         "script": [],
-        "name": "已觸發崆峒各門事件",
+        "name": "觸發崆峒各門事件",
         "value": {
           "0": "[*Custom.False*]",
           "1": "[*Custom.True*]"
